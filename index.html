@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Powvy makes things.</title>
+<meta name="description" content="Powvy的个人网站：产品、开源 Skills、文章与交流。">
+<!-- 字体：Dela Gothic One（日漫粗黑，用于英文/片假名） + 站酷庆科黄油体（中文标题） -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   1. 设计变量 —— 电锯人风格：纸张白 + 墨黑 + 血红 + 波奇塔橙
+   ========================================================= */
+:root{
+  --ink:#0d0d0d;      /* 墨黑 */
+  --red:#D7261E;      /* 血红（主强调色） */
+  --orange:#F07A22;   /* 电锯恶魔狗的橙 */
+  --paper:#EFEAE0;    /* 漫画纸底色 */
+  --muted:#4a4a4a;
+  --max:1200px;
+  --nav-h:60px;
+  --display:"Dela Gothic One","ZCOOL QingKe HuangYou",sans-serif;   /* 英文大字 */
+  --cn:"ZCOOL QingKe HuangYou","Dela Gothic One",sans-serif;        /* 中文标题 */
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  /* 网点纸（screentone）纹理 */
+  --tone:radial-gradient(rgba(0,0,0,.13) 1px,transparent 1.5px) 0 0/6px 6px;
+  --tone-w:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1.5px) 0 0/6px 6px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--tone),var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lock{overflow:hidden}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+::selection{background:var(--red);color:#fff}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+
+/* =========================================================
+   2. 导航：黑色漫画条，当前模块红色斜切高亮
+   ========================================================= */
+.nav{position:fixed;inset:0 0 auto;height:var(--nav-h);z-index:50;background:var(--ink);color:#fff;border-bottom:4px solid var(--red)}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:var(--display);font-size:24px;letter-spacing:.02em}
+.logo span{color:var(--red)}
+.nav ul{display:flex;gap:2px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav ul a{display:block;padding:4px 14px;font-family:var(--cn);font-size:19px;color:#bbb;white-space:nowrap;transition:background .15s,color .15s}
+.nav ul a:hover{color:#fff}
+.nav-r{display:flex;align-items:center;gap:10px;min-width:0}
+.lang{flex:none;border:2px solid #fff;color:#fff;font-weight:900;font-size:14px;padding:2px 10px;transition:background .15s}
+.lang:hover{background:var(--red)}
+.nav ul a.active{background:var(--red);color:#fff;transform:skew(-12deg)}
+@media (max-width:600px){.nav ul a{padding:4px 9px;font-size:17px}}
+
+/* =========================================================
+   3. 首屏：集中线 + 大字 + 拟声词
+   ========================================================= */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding-top:var(--nav-h);overflow:hidden;border-bottom:6px solid var(--ink)}
+/* 漫画集中线（speed lines），中心对准插画 */
+.hero::before{content:"";position:absolute;inset:-20%;pointer-events:none;
+  background:repeating-conic-gradient(from 0deg at 68% 55%,var(--ink) 0deg .5deg,transparent .5deg 4.5deg);
+  -webkit-mask:radial-gradient(circle at 68% 55%,transparent 18%,#000 62%);mask:radial-gradient(circle at 68% 55%,transparent 18%,#000 62%);
+  opacity:.16}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:center;width:100%}
+.hero .wrap>*{min-width:0}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(54px,8.6vw,116px);line-height:1;letter-spacing:-.01em;transform:rotate(-2deg)}
+.hero h1 em{font-style:normal;color:var(--red);-webkit-text-stroke:2px var(--ink);text-shadow:5px 5px 0 var(--ink)}
+.hero p{margin-top:28px;font-size:clamp(16px,1.6vw,19px);max-width:30em;background:#fff;border:3px solid var(--ink);padding:12px 16px;position:relative}
+/* 对话框小尾巴 */
+.hero p::after{content:"";position:absolute;left:36px;top:-14px;width:22px;height:14px;background:#fff;border:3px solid var(--ink);border-bottom:0;clip-path:polygon(0 100%,30% 0,100% 100%)}
+.hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag{display:inline-block;border:2px solid var(--ink);padding:1px 10px;font-size:13px;font-weight:800;background:#fff}
+.tag.red{background:var(--red);color:#fff;border-color:var(--ink)}
+.kana{position:absolute;right:16px;top:calc(var(--nav-h) + 28px);writing-mode:vertical-rl;font-family:var(--display);font-size:15px;letter-spacing:.35em;color:var(--red)}
+.art{position:relative}
+#heroArt{display:block;padding:10px;width:100%;max-width:540px;margin-left:auto;will-change:transform;transition:transform .15s ease-out;cursor:pointer}
+#heroArt img{width:100%;height:auto;pointer-events:none}
+/* 拟声词 */
+.sfx{position:absolute;font-family:var(--display);color:var(--red);-webkit-text-stroke:2px var(--ink);text-shadow:4px 4px 0 var(--ink);pointer-events:none;line-height:1}
+.sfx.a{top:-12%;right:0;font-size:clamp(36px,5vw,64px);transform:rotate(12deg);animation:shake .18s infinite}
+.sfx.b{bottom:30%;left:-2%;font-size:clamp(20px,2.4vw,30px);transform:rotate(-14deg);color:#fff}
+@keyframes shake{50%{translate:2px -2px}}
+.scroll-hint{display:inline-flex;align-items:center;gap:8px;margin-top:32px;font-family:var(--cn);font-size:20px}
+.scroll-hint b{color:var(--red);animation:shake .3s infinite}
+/* 点击插画：整幅画短暂震动 */
+.hero.rev #heroArt img{animation:buzz .05s infinite}
+@keyframes buzz{50%{transform:translate(1px,-1px)}}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  #heroArt{max-width:400px;margin:0 auto}
+  .hero::before{background:repeating-conic-gradient(from 0deg at 50% 75%,var(--ink) 0deg .5deg,transparent .5deg 4.5deg);
+    -webkit-mask:radial-gradient(circle at 50% 75%,transparent 15%,#000 60%);mask:radial-gradient(circle at 50% 75%,transparent 15%,#000 60%)}
+  .kana{display:none}
+}
+
+/* =========================================================
+   4. 模块 & 漫画格卡片
+   ========================================================= */
+section{padding:96px 0;scroll-margin-top:var(--nav-h);position:relative}
+section.dark{background:var(--tone-w),var(--ink);color:#fff}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:44px;flex-wrap:wrap}
+.sec-head h2{font-family:var(--cn);font-weight:400;font-size:clamp(40px,5.5vw,64px);line-height:1.05}
+.sec-head h2 small{display:table;font-family:var(--display);font-size:14px;letter-spacing:.12em;background:var(--red);color:#fff;padding:3px 12px;margin-bottom:10px;transform:skew(-12deg)}
+.sec-head p{max-width:28em;font-weight:600}
+.dark .sec-head p{color:#ccc}
+
+.grid{display:grid;gap:28px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+
+/* 卡片 = 漫画分格：粗黑框、轻微歪斜，hover 回正上浮 + 血红投影 */
+.card{--r:-.8deg;display:flex;flex-direction:column;border:3px solid var(--ink);background:#fff;color:var(--ink);overflow:hidden;rotate:var(--r);
+  transition:transform .2s cubic-bezier(.2,.8,.2,1),box-shadow .2s,rotate .2s,opacity .6s,translate .6s cubic-bezier(.2,.8,.2,1)}
+.card:nth-child(even){--r:.7deg}
+.card:nth-child(3n){--r:-.3deg}
+.card:hover,.card:focus-visible{rotate:0deg;transform:translateY(-8px);box-shadow:8px 8px 0 var(--red),8px 8px 0 3px var(--ink)}
+.card .cover{position:relative;aspect-ratio:16/10;border-bottom:3px solid var(--ink);overflow:hidden;background:var(--paper)}
+.card .cover svg{width:100%;height:100%}
+.card .cover::after,#dCover::after,.m-art::after{content:"";position:absolute;inset:0;background:var(--tone);mix-blend-mode:multiply;pointer-events:none}
+.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-family:var(--cn);font-weight:400;font-size:25px;line-height:1.2}
+.card p{color:var(--muted);font-size:14.5px}
+.card .row{margin-top:auto;padding-top:12px}
+.btn{display:inline-flex;align-items:center;gap:6px;border:3px solid var(--ink);padding:5px 16px;font-family:var(--cn);font-size:18px;background:var(--ink);color:#fff;transition:background .15s,transform .15s}
+.btn:hover{background:var(--red);transform:skew(-8deg)}
+.btn.ghost{background:#fff;color:var(--ink)}
+.btn.ghost:hover{background:var(--red);color:#fff}
+
+#products .grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+@media (min-width:980px){#products .card:first-child{grid-column:span 2}#products .card:first-child .cover{aspect-ratio:16/7.6}}
+
+.skill{position:relative}
+.card h3{overflow-wrap:anywhere}
+.repo-links{display:grid;gap:8px;margin-top:12px}
+.repo-links a{display:flex;justify-content:space-between;align-items:center;gap:8px;border:2px solid var(--ink);padding:5px 8px;font-weight:800}
+.repo-links a:hover{background:var(--paper)}
+.repo-links .stars{position:static;transform:none;flex:none}
+.product-links{display:flex;flex-wrap:wrap;gap:10px}
+.stars{position:absolute;top:10px;right:10px;z-index:2;background:var(--red);color:#fff;border:2px solid var(--ink);padding:1px 10px;font-family:var(--display);font-size:13px;font-variant-numeric:tabular-nums;transform:skew(-10deg)}
+.skill .cover,.talk .cover{aspect-ratio:200/130}
+.post .meta{font-size:13px;color:var(--muted);display:flex;gap:10px;font-weight:700}
+.post .meta span:first-child{color:var(--red)}
+
+/* 关于我 */
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
+.about .intro{position:sticky;top:calc(var(--nav-h) + 24px);background:#fff;border:3px solid var(--ink);padding:24px;box-shadow:8px 8px 0 var(--ink)}
+.about .intro h3{font-family:var(--cn);font-weight:400;font-size:34px;line-height:1.2;margin-bottom:8px}
+.about-portrait{margin:-24px -24px 20px;padding:16px 16px 0;background:var(--tone),var(--paper);border-bottom:3px solid var(--ink)}
+.about-portrait img{width:100%;height:280px;object-fit:contain}
+.about .intro p{color:var(--muted);margin-bottom:12px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}
+.timeline{display:flex;flex-direction:column;gap:22px}
+.job{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center;padding:14px;background:#fff;border:3px solid var(--ink);rotate:-.5deg;
+  transition:transform .2s,box-shadow .2s,rotate .2s,opacity .6s,translate .6s}
+.job:nth-child(even){rotate:.5deg}
+.job:hover{rotate:0deg;transform:translateY(-6px);box-shadow:8px 8px 0 var(--red),8px 8px 0 3px var(--ink)}
+.job svg{position:relative;border:2px solid var(--ink)}
+.job h4{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.2}
+.job .when{font-size:13px;font-weight:800;color:var(--red)}
+.job p{font-size:14.5px;color:var(--muted);margin-top:4px}
+@media (max-width:860px){.about{grid-template-columns:1fr}.about .intro{position:static}}
+@media (max-width:480px){.job{grid-template-columns:1fr}.job svg{max-width:240px}}
+
+.talk{cursor:pointer;text-align:left}
+.contact-status{font-weight:800;border-left:4px solid var(--red);padding-left:10px;margin-top:10px}
+#contact .grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+
+/* =========================================================
+   5. 页脚：整块血红
+   ========================================================= */
+footer{background:var(--tone),var(--red);color:var(--ink);padding:72px 0 40px;border-top:6px solid var(--ink)}
+footer .big{font-family:var(--display);font-size:clamp(38px,6.5vw,84px);line-height:1;color:#fff;-webkit-text-stroke:2px var(--ink);text-shadow:6px 6px 0 var(--ink);transform:rotate(-1.5deg)}
+.socials{display:flex;flex-wrap:wrap;gap:12px;margin:40px 0 32px}
+.socials a{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border:3px solid var(--ink);padding:6px 16px;font-weight:800;transition:background .15s,color .15s,transform .15s}
+.socials a:hover{background:#fff;color:var(--ink);transform:skew(-8deg)}
+.socials svg{width:18px;height:18px}
+footer small{font-weight:700}
+
+/* =========================================================
+   6. 详情页（覆盖层 + View Transitions 一镜到底）
+   ========================================================= */
+#detail{position:fixed;inset:0;z-index:80;background:var(--tone),var(--paper);overflow-y:auto;overscroll-behavior:contain}
+#detail[hidden]{display:none}
+.d-bar{position:sticky;top:0;z-index:2;background:var(--ink);border-bottom:4px solid var(--red)}
+.d-bar .wrap{max-width:820px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:8px}
+.d-bar .btn{border-color:#fff;padding:2px 14px;font-size:16px}
+.d-bar .acts{display:flex;gap:8px}
+.d-main{max-width:820px;padding-top:32px;padding-bottom:96px}
+#dCover{position:relative;border:4px solid var(--ink);overflow:hidden;aspect-ratio:16/9;box-shadow:10px 10px 0 var(--red)}
+#dCover svg{width:100%;height:100%}
+#dTitle{font-family:var(--cn);font-weight:400;font-size:clamp(34px,5.5vw,54px);line-height:1.15;margin:36px 0 10px}
+#dMeta{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-weight:700}
+.prose{margin-top:28px;font-size:17px;background:#fff;border:3px solid var(--ink);padding:28px}
+@media (max-width:600px){.prose{padding:18px}}
+.prose > *+*{margin-top:1em}
+.prose h2{font-family:var(--cn);font-weight:400;font-size:28px;margin-top:1.6em}
+.prose h2::before{content:"■ ";color:var(--red)}
+.prose ul,.prose ol{padding-left:1.4em}
+.prose li+li{margin-top:.4em}
+.prose li::marker{color:var(--red);font-weight:900}
+.prose code{background:var(--paper);border:1px solid #ccc;padding:1px 6px;font-size:.9em}
+.prose pre{background:var(--ink);color:#f5f5f5;padding:18px;overflow-x:auto;font-size:14px;line-height:1.6;border-left:6px solid var(--red)}
+.prose pre code{background:none;border:0;padding:0;color:inherit}
+.prose blockquote{border-left:6px solid var(--red);padding:6px 16px;background:var(--paper);font-weight:700}
+.prose figure svg{border:3px solid var(--ink)}
+.prose figcaption{font-size:13px;color:var(--muted);text-align:center;margin-top:6px}
+
+::view-transition-group(hero-cover),::view-transition-group(hero-title){animation-duration:.45s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.3s}
+
+/* =========================================================
+   7. 弹窗 / 提示 / 血溅
+   ========================================================= */
+dialog{border:4px solid var(--ink);padding:0;width:min(520px,calc(100% - 32px));margin:auto;box-shadow:10px 10px 0 var(--red);background:#fff}
+dialog::backdrop{background:rgba(13,13,13,.6)}
+dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
+@keyframes slam{from{transform:scale(1.15) rotate(-3deg);opacity:0}}
+.m-art{position:relative;background:var(--red);border-bottom:4px solid var(--ink)}
+.m-body{padding:22px 24px 24px}
+.m-body h3{font-family:var(--cn);font-weight:400;font-size:32px}
+.m-body p,.m-body li{color:var(--muted);font-size:15px}
+.m-body ul{padding-left:1.2em;margin:10px 0 18px}
+.m-body li::marker{color:var(--red)}
+.m-x{position:absolute;top:10px;right:10px;z-index:2;width:38px;height:38px;background:var(--ink);color:#fff;font-size:20px;font-weight:900}
+.m-x:hover{background:var(--red)}
+#toast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,20px);opacity:0;z-index:100;background:var(--red);color:#fff;border:3px solid var(--ink);padding:8px 20px;font-weight:800;pointer-events:none;transition:.25s}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.splat{position:fixed;z-index:90;pointer-events:none;width:140px;height:140px;margin:-70px 0 0 -70px;animation:splat 1.1s forwards}
+.splat span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-10deg);font-family:var(--display);font-size:26px;color:#fff;-webkit-text-stroke:2px var(--ink);white-space:nowrap}
+@keyframes splat{0%{transform:scale(.3)}15%{transform:scale(1.1)}70%{opacity:1}100%{opacity:0;transform:scale(1) translateY(12px)}}
+
+/* 滚动进入：用独立的 translate 属性，避免和 hover 的 transform 冲突 */
+.reveal{opacity:0;translate:0 28px}
+.reveal.in{opacity:1;translate:0 0}
+.sec-head.reveal,.intro.reveal{transition:opacity .6s,translate .6s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;translate:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= 导航 ================= -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">POWVY<span>!</span></a>
+    <div class="nav-r">
+    <ul>
+      <li><a href="#products" data-i18n="nav1">产品</a></li>
+      <li><a href="#skills" data-i18n="nav2">开源</a></li>
+      <li><a href="#articles" data-i18n="nav3">文章</a></li>
+      <li><a href="#about" data-i18n="nav4">关于我</a></li>
+      <li><a href="#contact" data-i18n="nav5">交流</a></li>
+    </ul>
+    <!-- 中 / EN 切换 -->
+    <button class="lang" id="langBtn" aria-label="切换语言 / Switch language">EN</button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<!-- ================= 首屏 ================= -->
+<header class="hero" id="hero">
+  <div class="kana" aria-hidden="true">パウビー・メイクス・シングス</div>
+  <div class="wrap">
+    <div>
+      <h1>Powvy makes<br><em>things.</em></h1>
+      <p data-i18n="heroP">Hi，我是 Lucas，也叫 Powvy。我在迪拜读书，喜欢用 AI 把想法做成能用的工具，探索技术与商业如何解决真实问题。</p>
+      <div class="tags" data-i18n="heroTags"><span class="tag red">学生 · 创作者</span><span class="tag">AI &amp; Business</span><span class="tag">Dubai</span></div>
+      <a class="scroll-hint" href="#products" data-i18n="heroHint"><b>▼</b>往下看看我做了什么</a>
+    </div>
+
+    <!-- 首屏透明插画：鼠标视差，点击或键盘激活震动与墨点 -->
+    <div class="art">
+      <span class="sfx a" aria-hidden="true">ブゥゥン!!</span>
+      <span class="sfx b" aria-hidden="true">ギャリ</span>
+      <button id="heroArt" type="button" data-i18n="heroArtwork"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="电锯人与波奇塔同人插画，点击启动电锯效果"></button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 产品 ================= -->
+<section id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="hProducts"><small>第01話 · PRODUCTS</small>我做的产品</h2>
+      <p data-i18n="pProducts">都是先解决自己的问题，再顺手分享出来的小东西。</p>
+    </div>
+    <div class="grid" id="productList"></div>
+  </div>
+</section>
+
+<!-- ================= Skills ================= -->
+<section id="skills" class="dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="hSkills"><small>第02話 · OPEN SOURCE</small>开源项目</h2>
+      <p data-i18n="pSkills">我放在 GitHub 上的开源仓库，点卡片直达，右上角星标实时更新。</p>
+    </div>
+    <div class="grid" id="skillList"></div>
+  </div>
+</section>
+
+<!-- ================= 文章 ================= -->
+<section id="articles">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="hArticles"><small>第03話 · WRITING</small>文章</h2>
+      <p data-i18n="pArticles">项目的功能、设计与当前边界，点开即读。</p>
+    </div>
+    <div class="grid" id="postList"></div>
+  </div>
+</section>
+
+<!-- ================= 关于我 ================= -->
+<section id="about" class="dark">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 data-i18n="hAbout"><small>第04話 · ABOUT</small>关于我</h2></div>
+    <div class="about">
+      <div class="intro reveal" style="color:var(--ink)">
+        <div class="about-portrait"><img src="csm.png" width="1254" height="1254" loading="lazy" decoding="async" alt=""></div>
+        <div data-i18n="aboutIntro">
+        <h3>Lucas · Powvy</h3>
+        <div class="facts"><span class="tag red">Jumeirah College</span><span class="tag">迪拜</span><span class="tag">AI · 商业 · 创作</span></div>
+        <p>我是 Zhixuan Lucas Feng，通常叫 Lucas。目前在 Jumeirah College 学习 A-Level 数学、进阶数学、计算机科学和经济学。</p>
+        <p>我喜欢把 AI 用在真实问题上。为面向非洲市场的家族业务开发网站，涵盖 AI 客服、人工客服和产品管理；员工已经开始使用后台更新产品。</p>
+        <p>课外，我喜欢打羽毛球、音乐和写作，也持续探索 AI 工具与商业的结合。</p>
+      </div>
+      </div>
+      <div class="timeline" id="jobList" style="color:var(--ink)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 交流 ================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="hContact"><small>第05話 · SAY HI</small>来交流</h2>
+      <p data-i18n="pContact">想聊产品、聊 AI、或者只是唠唠嗑，都欢迎。</p>
+    </div>
+    <div class="grid" id="talkList"></div>
+  </div>
+</section>
+</main>
+
+<!-- ================= 页脚 ================= -->
+<footer>
+  <div class="wrap">
+    <div class="big">Let's make<br>things together!</div>
+    <div class="socials" id="socialList"></div>
+    <small>© <span id="year"></span> Powvy · Made with Vibe Coding · 次回に続く…</small>
+  </div>
+</footer>
+
+<!-- ================= 详情页覆盖层 ================= -->
+<div id="detail" hidden role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <div class="d-bar">
+    <div class="wrap">
+      <button class="btn" id="dBack" data-i18n="dBack">← 返回</button>
+      <div class="acts">
+        <button class="btn" id="dSave" data-i18n="dSave">保存</button>
+        <button class="btn" id="dShare" data-i18n="dShare" style="background:var(--red)">分享</button>
+      </div>
+    </div>
+  </div>
+  <article class="wrap d-main">
+    <div id="dCover"></div>
+    <h1 id="dTitle"></h1>
+    <div id="dMeta"></div>
+    <div class="prose" id="dBody"></div>
+  </article>
+</div>
+
+<!-- ================= 弹窗 ================= -->
+<dialog id="modal">
+  <button class="m-x" id="mClose" aria-label="关闭">×</button>
+  <div class="m-art" id="mArt"></div>
+  <div class="m-body" id="mBody"></div>
+</dialog>
+<div id="toast" role="status"></div>
+
+<script>
+/* =========================================================
+   A. 插画工具：电锯人 + 波奇塔（所有卡片共用，引用首屏 SVG）
+   buddy(prop, bg) —— prop 是角色旁边的道具，见 PROPS
+   ========================================================= */
+const INK = '#0d0d0d', RED = '#D7261E', ORG = '#F07A22', PAPER = '#EFEAE0';
+
+const PROPS = {
+  cover:  `<rect x="-14" y="-18" width="28" height="36" rx="2" fill="${RED}"/><path d="M-8 -8h16M-8 0h10M-8 8h6" stroke="#fff"/>`,
+  icon:   `<rect x="-16" y="-16" width="32" height="32" rx="6" fill="${RED}"/><path d="M0 -9l3 6 6.5 1-4.7 4.5 1.2 6.5L0 6 -6 9l1.2-6.5L-9.5 -2l6.5-1z" fill="#fff" stroke-width="2"/>`,
+  visual: `<path d="M0 -16a16 16 0 1 0 4 31c4-1 2-7 6-8 6-1 10-3 10-9 0-8-9-14-20-14z" fill="#fff"/><circle cx="-6" cy="-6" r="3" fill="${RED}"/><circle cx="5" cy="-8" r="3" fill="${ORG}"/><circle cx="-8" cy="5" r="3" fill="${INK}"/>`,
+  slides: `<rect x="-18" y="-18" width="36" height="24" fill="#fff"/><path d="M-11 0l6-7 5 4 8-9" fill="none" stroke="${RED}"/><path d="M0 6v12M-8 18h16"/>`,
+  poster: `<rect x="-14" y="-18" width="28" height="36" fill="${INK}"/><circle cx="0" cy="-4" r="7" fill="${RED}" stroke="${RED}"/><path d="M-7 10h14" stroke="#fff"/>`,
+  chat:   `<path d="M-18 -16h36v24h-20l-8 8v-8h-8z" fill="#fff"/><path d="M-10 -6h20M-10 0h12" stroke="${RED}"/>`,
+  group:  `<circle cx="-11" cy="-4" r="7" fill="#fff"/><circle cx="11" cy="-4" r="7" fill="#fff"/><circle cx="0" cy="-10" r="8" fill="${ORG}"/><path d="M-20 16q20-16 40 0"/>`,
+  coffee: `<path d="M-12 -6h22v14a8 8 0 0 1-8 8h-6a8 8 0 0 1-8-8z" fill="#fff"/><path d="M10 -2h4a4 4 0 0 1 0 8h-4" fill="none"/><path d="M-6 -18q3 4 0 8M2 -18q3 4 0 8" fill="none" stroke-width="2"/>`,
+  mic:    `<rect x="-6" y="-18" width="12" height="22" rx="6" fill="${INK}"/><path d="M-11 -2a11 11 0 0 0 22 0M0 9v9M-7 18h14" fill="none"/>`,
+  api:    `<rect x="-12" y="-6" width="24" height="18" rx="3" fill="${ORG}"/><path d="M-5 -6v-10M5 -6v-10M0 12v8"/>`,
+  magic:  `<path d="M-14 16L4 -2"/><path d="M8 -18l3 6 6.5 1-4.7 4.5 1.2 6.5L8 -3 2 0l1.2-6.5L-1.5 -11l6.5-1z" fill="#fff" stroke-width="2"/>`,
+  brush:  `<path d="M-14 16l16-16 6 6-16 16z" fill="#fff"/><path d="M4 -2l8-12 6 6-12 8" fill="${INK}"/>`,
+  note:   `<path d="M-6 12V-14l16-4v22" fill="none"/><circle cx="-10" cy="12" r="5" fill="#fff"/><circle cx="6" cy="6" r="5" fill="#fff"/>`,
+  code:   `<rect x="-18" y="-16" width="36" height="26" rx="2" fill="${INK}"/><path d="M-8 -7l-5 4 5 4M8 -7l5 4-5 4" stroke="${RED}" fill="none"/><path d="M-22 14h44"/>`,
+  card:   `<rect x="-18" y="-12" width="36" height="24" rx="3" fill="#fff"/><path d="M-18 -4h36" stroke-width="5"/><path d="M-10 6h8" stroke="${RED}"/>`,
+  bulb:   `<path d="M0 -18a12 12 0 0 0-7 22v5h14v-5a12 12 0 0 0-7-22z" fill="#fff"/><path d="M-5 14h10M-14 -20l3 3M14 -20l-3 3"/>`,
+  rocket: `<path d="M0 -20q12 10 6 28h-12q-6-18 6-28z" fill="#fff"/><circle cx="0" cy="-4" r="3" fill="${RED}"/><path d="M-6 8l-6 8M6 8l6 8M0 10v8"/>`
+};
+
+function buddy(prop, bg = PAPER) {
+  return `<svg viewBox="0 0 200 130" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+  <rect width="200" height="130" fill="${bg}"/>
+  <!-- 背景集中线 -->
+  <g stroke="${INK}" stroke-width="1" opacity=".18">${Array.from({length: 24}, (_, i) => {
+    const a = i / 24 * Math.PI * 2; return `<path d="M${100 + Math.cos(a) * 70} ${65 + Math.sin(a) * 50}L${100 + Math.cos(a) * 160} ${65 + Math.sin(a) * 120}"/>`;
+  }).join('')}</g>
+  <ellipse cx="100" cy="122" rx="80" ry="5" fill="${INK}" opacity=".15"/>
+  <!-- 电锯人 + 波奇塔：直接引用首屏插画里的 #csm / #dog -->
+  <g stroke="${INK}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <use href="#csm" transform="translate(8 6) scale(.4)"/>
+    <use href="#dog" transform="translate(-10 -40) scale(.55)"/>
+  </g>
+  <g transform="translate(150 34)" stroke="${INK}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">${PROPS[prop] || ''}</g>
+</svg>`;
+}
+
+/* 产品演示图：统一的“窗口”外框 */
+function windowArt(inner) {
+  return `<svg viewBox="0 0 320 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+  <rect width="320" height="200" fill="${PAPER}"/>
+  <g stroke="${INK}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="16" y="16" width="288" height="176" fill="#fff"/>
+    <path d="M16 40h288"/>
+    <circle cx="32" cy="28" r="3.5" fill="${RED}"/><circle cx="44" cy="28" r="3.5" fill="${INK}"/><circle cx="56" cy="28" r="3.5" fill="#fff"/>
+    ${inner}
+  </g></svg>`;
+}
+const ART = {
+  liangli: windowArt(`
+    <rect x="34" y="56" width="150" height="116" fill="${PAPER}"/>
+    ${[0,1,2].map(i=>`<rect x="46" y="${70+i*30}" width="16" height="16" fill="${i===0?RED:PAPER}"/><path d="M74 ${78+i*30}h92"/>`).join('')}
+    <circle cx="238" cy="110" r="40" fill="${ORG}"/>
+    <path d="M238 82v28l18 12M226 58h24" fill="none"/>
+    <path d="M208 168h60" stroke="${RED}"/>`),
+  bsr: windowArt(`
+    <path d="M38 92l14-34h216l14 34z" fill="${RED}"/>
+    <path d="M60 92v82h200V92" fill="${PAPER}"/>
+    <rect x="82" y="114" width="58" height="60" fill="${ORG}"/>
+    <rect x="164" y="114" width="72" height="36" fill="${PAPER}"/>
+    <path d="M200 114v36M164 132h72M52 76h216"/>
+    <circle cx="124" cy="144" r="3" fill="${INK}"/>`),
+  philosophy: windowArt(`
+    <path d="M160 70q-48-24-116-8v104q68-16 116 8q48-24 116-8V62q-68-16-116 8z" fill="${PAPER}"/>
+    <path d="M160 70v104M62 90h70M62 108h58M62 126h66M62 144h42"/>
+    <circle cx="218" cy="110" r="30" fill="${ORG}"/>
+    <path d="M218 60v44l-8 10h16l-8 12" fill="${RED}"/>
+    <path d="M202 153h32"/>`),
+  solarhub: windowArt(`
+    <circle cx="160" cy="78" r="24" fill="${ORG}"/>
+    <path d="M160 102v20M68 140v-18h184v18M160 122v18" fill="none"/>
+    ${[68,160,252].map(x=>`<path d="M${x-24} 142h48l10 30h-68z" fill="${RED}"/><path d="M${x} 144v28M${x-28} 157h56"/>`).join('')}`),
+  'solar-countries': windowArt(`
+    ${['NG','SD','ML'].map((n,i)=>`<g transform="translate(${36+i*86} 60)"><path d="M0 18l33-18 33 18v94H0z" fill="${PAPER}"/><circle cx="33" cy="38" r="13" fill="${ORG}"/><path d="M8 64h50l6 24H2z" fill="${RED}"/><path d="M33 64v24M5 76h56"/><text x="33" y="106" text-anchor="middle" font-size="13" font-weight="900" stroke="none" fill="${INK}">${n}</text></g>`).join('')}`),
+  alevel: windowArt(`
+    <rect x="40" y="58" width="142" height="116" fill="${PAPER}"/>
+    <path d="M40 86h142M74 86v88M110 86v88M146 86v88M40 116h142M40 146h142"/>
+    <path d="M62 50v16M160 50v16"/>
+    <path d="M82 103l8 6 12-16M118 133l8 6 12-16" fill="none" stroke="${RED}"/>
+    <path d="M218 60h56v84h-56z" fill="${ORG}"/>
+    <path d="M230 82h32M230 98h24M230 114h28M210 160h72"/>`),
+
+  // Power：多 Agent 桌面应用，左侧角色列表 + 群聊
+  power: windowArt(`
+    <rect x="18" y="42" width="72" height="148" fill="${INK}" stroke="none"/>
+    ${['帕','蕾','玛','秋'].map((k,i)=>`<rect x="28" y="${52+i*34}" width="26" height="26" fill="${i===0?RED:'#fff'}" stroke="#fff" stroke-width="2"/><text x="41" y="${70+i*34}" text-anchor="middle" font-size="13" font-weight="900" stroke="none" fill="${i===0?'#fff':INK}">${k}</text><path d="M60 ${60+i*34}h22" stroke="#666" stroke-width="4"/>`).join('')}
+    <rect x="104" y="54" width="150" height="30" fill="#fff"/>
+    <text x="114" y="74" font-size="11" font-weight="700" stroke="none" fill="${INK}">@蕾塞 帮我回一下微信</text>
+    <rect x="140" y="96" width="150" height="44" fill="${RED}"/>
+    <text x="150" y="114" font-size="11" font-weight="800" stroke="none" fill="#fff">好的电次～草稿已写好</text>
+    <text x="150" y="130" font-size="10" stroke="none" fill="#fff">等你确认后发送 ✓</text>
+    <rect x="104" y="156" width="186" height="24" fill="#fff"/>
+    <path d="M276 162l6 6-6 6" fill="none"/>`),
+  // DryRun：CIE 计算机追踪表
+  dryrun: windowArt(`
+    <text x="36" y="64" font-size="12" font-weight="800" stroke="none" fill="${INK}">FOR i ← 1 TO 3</text>
+    <text x="36" y="80" font-size="12" stroke="none" fill="${INK}">  Total ← Total + i</text>
+    <rect x="36" y="94" width="248" height="86" fill="#fff"/>
+    <path d="M36 116h248M118 94v86M200 94v86M36 138h248M36 160h248" stroke-width="2"/>
+    ${['i','Total','OUTPUT'].map((t,i)=>`<text x="${77+i*82}" y="110" text-anchor="middle" font-size="11" font-weight="900" stroke="none" fill="${INK}">${t}</text>`).join('')}
+    ${[[1,1],[2,3],[3,6]].map((r,j)=>`<text x="77" y="${131+j*22}" text-anchor="middle" font-size="11" stroke="none" fill="${INK}">${r[0]}</text><text x="159" y="${131+j*22}" text-anchor="middle" font-size="11" stroke="none" fill="${j===2?RED:INK}" font-weight="${j===2?900:400}">${r[1]}</text>`).join('')}
+    <text x="241" y="175" text-anchor="middle" font-size="11" font-weight="900" stroke="none" fill="${RED}">6</text>`),
+  // Rest Solar：喀麦隆光伏 AI 客服
+  restsolar: windowArt(`
+    <circle cx="60" cy="74" r="14" fill="${ORG}"/>
+    <path d="M60 52v-6M60 102v-6M38 74h-6M88 74h-6M44 58l-4-4M76 58l4-4" stroke-width="2.5"/>
+    <rect x="86" y="56" width="190" height="34" fill="#fff"/>
+    <text x="96" y="78" font-size="11" font-weight="700" stroke="none" fill="${INK}">Bonjour ! Prix du panneau 450W ?</text>
+    <rect x="44" y="102" width="232" height="44" fill="${INK}"/>
+    <text x="54" y="120" font-size="11" font-weight="800" stroke="none" fill="${ORG}">☀ Rest Solar AI</text>
+    <text x="54" y="136" font-size="10.5" stroke="none" fill="#fff">En stock à Douala · TVA 19,25 % incluse</text>
+    <rect x="164" y="156" width="112" height="24" fill="${RED}"/>
+    <text x="220" y="172" text-anchor="middle" font-size="11" font-weight="800" stroke="none" fill="#fff">转人工客服 →</text>`),
+  // Claude Usage：token 柱状图
+  usage: windowArt(`
+    <text x="36" y="66" font-size="11" font-weight="700" stroke="none" fill="#666">TODAY</text>
+    <text x="36" y="92" font-size="26" font-weight="900" stroke="none" fill="${INK}">$4.20</text>
+    <text x="36" y="110" font-size="11" stroke="none" fill="${RED}" font-weight="800">1.8M tokens</text>
+    ${[40,62,30,78,52,90,68].map((h,i)=>`<rect x="${150+i*20}" y="${176-h}" width="14" height="${h}" fill="${i===6?RED:'#fff'}" stroke-width="2.5"/>`).join('')}
+    <path d="M144 178h146" />
+    <rect x="36" y="130" width="90" height="10" fill="#fff" stroke-width="2"/><rect x="36" y="130" width="62" height="10" fill="${ORG}" stroke-width="2"/>
+    <text x="36" y="158" font-size="10" stroke="none" fill="#666">Claude · Codex · DeepSeek</text>`),
+  // Colorbook：像素数字填色
+  colorbook: windowArt(`
+    ${Array.from({length: 6 * 11}, (_, n) => { const r = n / 11 | 0, c = n % 11, v = (r * 3 + c * 5) % 4 + 1, done = c < 6;
+      return `<rect x="${44 + c * 22}" y="${50 + r * 22}" width="22" height="22" fill="${done ? [RED, ORG, INK, '#fff'][v - 1] : '#fff'}" stroke-width="1.5"/>${done ? '' : `<text x="${55 + c * 22}" y="${65 + r * 22}" text-anchor="middle" font-size="10" stroke="none" fill="#999">${v}</text>`}`; }).join('')}
+    <path d="M190 80l40 40" stroke-width="5"/><path d="M228 118l8 8" stroke="${RED}" stroke-width="6"/>`),
+  // Contract：一把 Key → 多个服务商
+  contract: windowArt(`
+    <rect x="36" y="94" width="86" height="32" fill="${INK}"/>
+    <text x="79" y="115" text-anchor="middle" font-size="13" font-weight="900" stroke="none" fill="${RED}">ct_••••</text>
+    ${['search','scrape','finance','social'].map((t,i)=>`<path d="M122 110 C150 110 150 ${62+i*34} 176 ${62+i*34}" fill="none" stroke-width="2.5"/><rect x="176" y="${50+i*34}" width="104" height="24" fill="${i===1?RED:'#fff'}"/><text x="228" y="${66+i*34}" text-anchor="middle" font-size="11" font-weight="800" stroke="none" fill="${i===1?'#fff':INK}">${t}</text>`).join('')}
+    <text x="36" y="150" font-size="10" stroke="none" fill="#666">15 tools · 39 providers</text>
+    <text x="36" y="166" font-size="10" stroke="none" fill="${RED}" font-weight="800">auto failover ↻</text>`),
+  // Legend of 4P Vedundi：暗黑小说
+  vedundi: `<svg viewBox="0 0 320 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <rect width="320" height="200" fill="${INK}"/>
+    <g stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M160 40q-40-12-96 0v130q56-12 96 0z" fill="#1d1d1d"/>
+      <path d="M160 40q40-12 96 0v130q-56-12-96 0z" fill="#1d1d1d"/>
+      <path d="M160 40v130"/>
+      <text x="112" y="104" text-anchor="middle" font-size="40" font-weight="900" stroke="none" fill="${RED}">4P</text>
+      <text x="112" y="128" text-anchor="middle" font-size="10" stroke="none" fill="#aaa" letter-spacing="2">VEDUNDI</text>
+      <path d="M180 76h56M180 92h50M180 108h58M180 124h40" stroke="#555" stroke-width="4"/>
+      <path d="M232 140q6 10 0 22q-4-8-10-6" fill="${RED}" stroke="${RED}" stroke-width="2"/>
+    </g></svg>`,
+  // Camaroom：企业官网 + 图库
+  camaroom: windowArt(`
+    <rect x="18" y="42" width="284" height="40" fill="${ORG}" stroke="none"/>
+    <text x="34" y="67" font-size="13" font-weight="900" stroke="none" fill="${INK}">Rest Solar · Cameroon</text>
+    ${[0,1,2,3].map(i=>`<rect x="${34+i*66}" y="96" width="56" height="44" fill="${i===1?RED:'#fff'}"/><path d="M${38+i*66} 134l14-16 10 10 8-6 16 12" fill="none" stroke-width="2"/>`).join('')}
+    <path d="M34 156h160M34 170h110" stroke="#ccc" stroke-width="7"/>
+    <rect x="224" y="152" width="62" height="24" fill="${INK}"/>
+    <text x="255" y="168" text-anchor="middle" font-size="10.5" font-weight="800" stroke="none" fill="#fff">Contact</text>`)
+};
+
+/* =========================================================
+   B. 内容数据（改内容只需改这里）
+   url 为空（'#'）的项目还没有公开地址
+   ========================================================= */
+const GH = 'https://github.com/zhixuanlucasfeng-cmyk/';
+const products = [
+{
+  "id": "liangli",
+  "name": "Powy",
+  "tag": "个人成长 PWA",
+  "url": "https://zhixuanlucasfeng-cmyk.github.io/liangli/",
+  "desc": "反假性自律的个人成长工具：从任务负荷到专注与生活记录，把计划放回真实的一天。",
+  "features": [
+    "任务、成长池与长期目标",
+    "番茄钟、离线学习卡片、营养与钱包记录",
+    "默认本地优先，可选账号同步核心任务与卡片"
+  ]
+},
+{
+  "id": "bsr",
+  "name": "BSR Hub",
+  "tag": "校园交易演示",
+  "url": "https://zhixuanlucasfeng-cmyk.github.io/bsr-hub/",
+  "desc": "Babson 夏校团队的交易与本地跑腿项目。公开演示使用虚构数据，可以体验 BSR Hub 和 BSR Runner。",
+  "features": [
+    "买卖、租赁与工作空间预订",
+    "BSR Runner 本地跑腿流程演示",
+    "公开演示不处理真实付款或私人地址"
+  ]
+},
+{
+  "id": "philosophy",
+  "name": "Chainsaw Man Philosophy",
+  "tag": "角色与哲学",
+  "url": "https://zhixuanlucasfeng-cmyk.github.io/Chainsaw-man-philosophy/",
+  "desc": "围绕《电锯人》的中文角色百科与藤本树作品哲学解读网站。",
+  "features": [
+    "《电锯人》角色内容",
+    "藤本树作品的哲学解读",
+    "中文网站"
+  ]
+},
+{
+  "id": "solarhub",
+  "name": "Restar Solar Hub",
+  "tag": "国家选择入口",
+  "url": "https://zhixuanlucasfeng-cmyk.github.io/restar-solar-hub/",
+  "desc": "Restar Solar 的国家选择入口，帮助访客找到对应地区的网站。",
+  "features": [
+    "统一的国家选择入口",
+    "按地区访问企业网站"
+  ]
+},
+{
+  "id": "solar-countries",
+  "name": "Restar Solar · 三个国家",
+  "tag": "企业网站系列",
+  "url": "https://restarsolar.net/?country=NG",
+  "desc": "为尼日利亚、苏丹和马里制作的 Restar Solar 网站，现已迁移到统一网站的国家入口。",
+  "features": [
+    "尼日利亚、苏丹、马里三个国家入口",
+    "三个公开仓库集中展示"
+  ],
+  "links": [
+    {
+      "name": "尼日利亚",
+      "url": "https://restarsolar.net/?country=NG"
+    },
+    {
+      "name": "苏丹",
+      "url": "https://restarsolar.net/?country=SD"
+    },
+    {
+      "name": "马里",
+      "url": "https://restarsolar.net/?country=ML"
+    }
+  ]
+},
+{
+  "id": "alevel",
+  "name": "A-Level Survival Bureau",
+  "tag": "A-Level 学习工具",
+  "url": "https://alevel-survival-bureau.vercel.app",
+  "desc": "本地优先的 A-Level 学习工作台，记录练习证据、安排学习时间并追踪复习。",
+  "features": [
+    "数学、进阶数学、经济与计算机科学学习分区",
+    "根据练习记录安排复习与学习计划",
+    "学习记录支持 JSON 导入导出"
+  ]
+},
+  { id:'power', name:'Power', tag:'个人 AI Agent', url: GH + 'power',
+    desc:'把 Claude Code、Codex、Hermes、opencode 等本机 Agent 放进同一个桌面 App，组成一支会记事、会学技能的 AI 小队。',
+    features:['多角色小队 + 群聊，@ 谁谁回答，还能自动路由','记忆存进 Obsidian，跨会话自动回忆；技能自动沉淀','Mac App + Telegram 远程控制，发消息前先让我确认'] },
+  { id:'dryrun', name:'DryRun', tag:'CIE 计算机复习', url:'https://dryruncs.com',
+    desc:'Cambridge 计算机科学复习工具：追踪表、逻辑门、伪代码转换，单文件、零依赖、可离线。',
+    features:['伪代码追踪表模拟器 + 逻辑门真值表与电路图','结构化英语 / 追踪表 / 流程图 → 伪代码','练习模式：自动出题、自动批改'] },
+  { id:'restsolar', name:'Rest Solar Agent', tag:'AI 客服', url:'https://rest-solar-agent.onrender.com',
+    desc:'给喀麦隆光伏公司做的中英法三语 AI 客服，能查库存报价，也能一键转人工。',
+    features:['规则引擎护栏：不乱报价、自动算 19.25% 增值税','四国多租户后台：喀麦隆 / 尼日利亚 / 苏丹 / 马里','真人坐席接管：等待队列 + 实时对话'] },
+  { id:'usage', name:'Claude Usage', tag:'Token 可视化', url: GH + 'claude-usage',
+    desc:'看清今天在 Claude Code、Codex、DeepSeek 上花了多少 token 和多少钱。',
+    features:['CLI + 本地仪表盘 + macOS 桌面小组件','套餐额度提醒、7 天趋势图','电锯人 / 蕾塞主题皮肤'] },
+  { id:'colorbook', name:'Colorbook', tag:'iPad 数字填色', url:'https://zhixuanlucasfeng-cmyk.github.io/colorbook/',
+    desc:'没有广告的数字填色 App：任意照片一键变成像素填色画。',
+    features:['照片 → 像素网格 + 自动配色（最多 64 色）','Apple Pencil 拖动涂色、油漆桶一键填充','离线可用的 PWA，还有微信小程序版'] },
+  { id:'contract', name:'Contract', tag:'Agent 工具网关', url: GH + 'contract',
+    desc:'一把主密钥调用所有 Agent 工具：搜索、抓取、金融、社交数据，服务商挂了自动切换。',
+    features:['统一 ct_ 主密钥，自带 MCP Server','15 种工具、39 家服务商，流式中途也能故障切换','Docker 一键部署 + 管理后台'] },
+  { id:'vedundi', name:'Legend of 4P Vedundi', tag:'暗黑小说', url:'https://zhixuanlucasfeng-cmyk.github.io/legend-of-4p-vedundi/',
+    desc:'我写的中英双语暗黑文学网络小说《4p维敦帝的故事》，附带阅读站。',
+    features:['中英双语一键切换','深色阅读模式','连载中'] },
+  { id:'camaroom', name:'Camaroom Web', tag:'企业官网', url:'https://zhixuanlucasfeng-cmyk.github.io/camaroom-web/',
+    desc:'Rest Solar 喀麦隆公司官网：产品介绍、项目图库和联系方式。',
+    features:['产品与服务介绍','项目实拍图库','尼日利亚 / 苏丹 / 马里多国站点'] }
+];
+
+// 开源仓库：repo 填 "用户名/仓库名"，用于实时拉取 GitHub 星标
+const skills = [
+{
+  "name": "liangli",
+  "prop": "bulb",
+  "repo": "zhixuanlucasfeng-cmyk/liangli",
+  "desc": "Powy 的源码：任务、专注、学习卡片与生活记录，本地优先的个人成长 PWA。"
+},
+{
+  "name": "bsr-hub",
+  "prop": "card",
+  "repo": "zhixuanlucasfeng-cmyk/bsr-hub",
+  "desc": "校园交易与本地跑腿演示；仓库包含 Rust 核心 API 与网页应用。"
+},
+{
+  "name": "hayakawa-mentality",
+  "prop": "coffee",
+  "repo": "zhixuanlucasfeng-cmyk/hayakawa-mentality",
+  "desc": "把目标变成平静、持续行动的 Codex skill：准备、执行、承诺与反思。"
+},
+{
+  "name": "Chainsaw-man-philosophy",
+  "prop": "poster",
+  "repo": "zhixuanlucasfeng-cmyk/Chainsaw-man-philosophy",
+  "desc": "《电锯人》中文角色百科与藤本树作品哲学解读网站。"
+},
+{
+  "name": "restar-solar-hub",
+  "prop": "api",
+  "repo": "zhixuanlucasfeng-cmyk/restar-solar-hub",
+  "desc": "Restar Solar 国家选择入口的网站源码。"
+},
+{
+  "name": "Restar Solar · 三个国家",
+  "prop": "group",
+  "desc": "尼日利亚、苏丹、马里企业网站的三个公开仓库。",
+  "repos": [
+    {
+      "name": "尼日利亚",
+      "repo": "zhixuanlucasfeng-cmyk/Nigeria-website"
+    },
+    {
+      "name": "苏丹",
+      "repo": "zhixuanlucasfeng-cmyk/Sudan-website"
+    },
+    {
+      "name": "马里",
+      "repo": "zhixuanlucasfeng-cmyk/Mali-website"
+    }
+  ]
+},
+  { name:'power',            prop:'group',  repo:'zhixuanlucasfeng-cmyk/power',            desc:'你的所有 Agent，一个房间。群聊、角色包、Obsidian 记忆。' },
+  { name:'contract',         prop:'api',    repo:'zhixuanlucasfeng-cmyk/contract',         desc:'一把主密钥调用所有 Agent 工具，自动故障切换，自带 MCP。' },
+  { name:'claude-usage',     prop:'slides', repo:'zhixuanlucasfeng-cmyk/claude-usage',     desc:'Claude Code / Codex / DeepSeek token 用量 CLI + 桌面小组件。' },
+  { name:'cie-cs-toolkit',   prop:'code',   repo:'zhixuanlucasfeng-cmyk/cie-cs-toolkit',   desc:'DryRun 的源码：CIE 计算机复习工具，单文件零依赖。' },
+  { name:'rest-solar-agent', prop:'chat',   repo:'zhixuanlucasfeng-cmyk/rest-solar-agent', desc:'光伏公司 AI 客服：FastAPI + 规则引擎 + 真人接管。' },
+  { name:'jc-sports-day',    prop:'rocket', repo:'zhixuanlucasfeng-cmyk/jc-sports-day',    desc:'开源运动会计分系统：项目、成绩、学院实时排名、导出。' },
+  { name:'colorbook',        prop:'visual', repo:'zhixuanlucasfeng-cmyk/colorbook',        desc:'Colorbook 的源码：把照片变成像素数字填色，本机处理、离线可用。' }
+];
+
+const posts = [
+  {
+    "id": "power",
+    "prop": "group",
+    "bg": "#D7261E",
+    "tag": "项目介绍",
+    "date": "2026-10-16",
+    "title": "Power：让本机 AI Agents 在同一个房间协作",
+    "summary": "从多个 Agent CLI 到一个桌面工作区：群聊、角色包与可编辑的记忆。",
+    "body": "<p>Power 是一个把本机 AI Agents 放进同一桌面界面的项目。Claude Code、Codex、Hermes 和 opencode 等工具仍通过各自的 CLI 工作，Power 提供统一的聊天与项目入口。</p>\n<h2>把不同工具组织在一起</h2><p>可以单独与一个 Agent 对话，也可以把多个 Agent 放进群聊。群聊支持 @ 指定成员、自动选择负责成员，以及按轮次讨论。角色包定义成员的表达方式和默认配置，项目文件夹则为对话提供工作上下文。</p>\n<h2>记忆可以直接查看和修改</h2><p>Power 将记忆保存成 Obsidian 中的 Markdown 笔记，并在后续消息中回忆相关内容。记忆不必藏在看不见的状态里：可以直接编辑或删除对应笔记。</p>\n<h2>使用前需要什么</h2><p>各个 Agent 需要按自己的方式安装和登录。Power 负责组织这些工具，不代替它们的账号或服务。Telegram 远程控制属于可选配置；发送消息或发布内容前的确认卡片，让用户有机会检查待发送内容。</p>\n<p><a href=\"https://github.com/zhixuanlucasfeng-cmyk/power\" target=\"_blank\" rel=\"noopener\">查看 Power 源码与安装说明 →</a></p>"
+  },
+  {
+    "id": "powy",
+    "prop": "bulb",
+    "bg": "#EFEAE0",
+    "tag": "项目介绍",
+    "date": "2026-10-16",
+    "title": "Powy：把任务、专注与生活放回同一天",
+    "summary": "一个反假性自律的个人成长 PWA，默认本地优先，也支持有限范围的可选同步。",
+    "body": "<p>Powy 的公开仓库名是 liangli。它是一款反假性自律的个人成长 PWA，把任务、精力负荷、目标、专注与生活记录放在同一个工具中。</p>\n<h2>想法不必立刻成为任务</h2><p>“今日”用于安排任务并显示负荷，超载时提醒而不强行阻止。“成长池”暂存想法，不计入当天负荷，需要时再转成任务。长期目标的进度由使用者手动推进。</p>\n<h2>专注和学习的辅助工具</h2><p>专注模块提供番茄钟与记录看板。学习助手还包含离线卡片，支持牌组管理、到期复习以及 JSON、CSV 导入导出。卡片采用简化的复习间隔，不宣称兼容 FSRS。</p>\n<h2>本地数据与可选同步</h2><p>生活页包含营养、钱包和日常记录。默认情况下数据留在设备上；启用账号同步后，可以同步核心任务与学习卡片，生活页数据仍保留在本机。界面支持中文与英文。</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/liangli/\" target=\"_blank\" rel=\"noopener\">打开 Powy →</a></p>"
+  },
+  {
+    "id": "restar-solar",
+    "prop": "chat",
+    "bg": "#D7261E",
+    "tag": "项目介绍",
+    "date": "2026-10-16",
+    "title": "Restar Solar：连接企业网站、客服与产品管理",
+    "summary": "面向非洲市场的家族业务项目，员工已开始使用后台更新产品。",
+    "body": "<p>我为面向非洲市场的家族业务开发了网站及配套工具。这个项目包括企业网站、AI 客服、员工线上客服，以及产品管理和更新功能。</p>\n<h2>网站之外，还有日常维护</h2><p>访客需要了解产品并提出问题，员工则需要维护产品信息。项目把对外展示与后台管理连接起来；目前已确认的实际使用情况是，员工已经开始通过后台更新产品。</p>\n<h2>AI 与人工客服并存</h2><p>项目既包含 AI 客服，也提供员工线上客服能力。它的范围不止是一个自动回答问题的聊天窗口，还包括业务人员参与服务和维护内容的入口。</p>\n<h2>多个国家的网站入口</h2><p>网站系列包括喀麦隆网站，以及尼日利亚、苏丹和马里的国家站点。后三者现已迁移到统一网站的对应国家入口，Restar Solar Hub 提供国家选择页面。</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/restar-solar-hub/\" target=\"_blank\" rel=\"noopener\">打开国家选择入口 →</a></p>"
+  },
+  {
+    "id": "alevel",
+    "prop": "code",
+    "bg": "#EFEAE0",
+    "tag": "项目介绍",
+    "date": "2026-10-16",
+    "title": "A-Level：让学习计划有练习记录可依",
+    "summary": "A-Level Survival Bureau 用练习证据组织复习与计划，区分未知状态和已记录的表现。",
+    "body": "<p>A-Level Survival Bureau 是本地优先的学习工作台，面向数学、进阶数学、经济学与计算机科学。漫画式界面将学习时段称为 Hunts、计划称为 Contracts，底层则围绕实际练习记录组织学习信息。</p>\n<h2>没有记录，就保留未知</h2><p>练习尝试以事件形式记录在浏览器数据库中。系统结合 FSRS 可回忆概率、正确率和证据量呈现学习状态；没有练习记录的主题标为 UNSCOUTED，而不是直接判为零分。</p>\n<h2>按可用时间安排学习</h2><p>计划器使用用户声明的空闲时间，为学习时段提供安排理由。历年试卷的成绩比较需要用户提供相应分数线，不能把应用中的估计当成官方预测成绩。</p>\n<h2>课程范围与备份</h2><p>内容包按考试局和年份限定，尚未验证的科目内容保持锁定。学习事件记录支持 JSON 导入导出；网页数据保存在当前浏览器中，并不自动跨设备同步。</p>\n<p><a href=\"https://alevel-survival-bureau.vercel.app\" target=\"_blank\" rel=\"noopener\">打开 A-Level Survival Bureau →</a></p>"
+  }
+];
+
+const jobs = [
+  { name:'Jumeirah College', prop:'code', when:'现在', role:'A-Level 学生', desc:'在迪拜学习数学、进阶数学、计算机科学与经济学。' },
+  { name:'Restar Solar', prop:'chat', when:'项目实践', role:'网站与 AI 客服开发', desc:'为面向非洲市场的家族业务开发网站与管理工具，员工已开始使用后台更新产品。' }
+];
+
+const talks = [
+  { id:'consult', name:'咨询', prop:'chat',   desc:'一对一技术 / 产品咨询',
+    detail:['AI 产品从 0 到 1 怎么做','Vibe Coding 入门与工具选择','把 AI 工具用在实际项目中'], cta:'预约咨询', href:'' },
+  { id:'group',   name:'社群', prop:'group',  desc:'加入用户社群',
+    detail:['第一时间体验新产品','和同样爱折腾的人交流','不定期分享资源与模板'], cta:'申请加入', href:'' },
+  { id:'chat',    name:'唠嗑', prop:'coffee', desc:'日常交流板块',
+    detail:['不聊工作也可以','分享你最近在做的东西','随缘回复，但都会看'], cta:'去唠嗑', href:'' },
+  { id:'live',    name:'直播 / 线下分享', prop:'mic', desc:'合作邀请入口',
+    detail:['技术 / 产品主题直播','高校、社区线下分享','品牌合作请附上简介'], cta:'发送邀请', href:'' }
+];
+
+// 仅列出已确认的公开社交入口。
+const socials = [
+  { name:'GitHub', href:'https://github.com/zhixuanlucasfeng-cmyk', icon:'<path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z" fill="currentColor"/>' }
+];
+
+/* =========================================================
+   B2. 英文版（中/EN 切换）
+   - 静态文字：HTML 里带 data-i18n 的元素，英文写在 EN.ui
+   - 动态数据：EN.<模块>[id] 只写需要覆盖的字段，没写的沿用中文
+   ========================================================= */
+const EN = {
+  ui: {
+    nav1: 'Products', nav2: 'Open Source', nav3: 'Writing', nav4: 'About', nav5: 'Contact',
+    heroP: "Hi, I'm Lucas, also known as Powvy. I'm a student in Dubai building useful tools with AI and exploring how technology and business can solve real problems.",
+    heroTags: '<span class="tag red">Student · Builder</span><span class="tag">AI &amp; Business</span><span class="tag">Dubai</span>',
+    heroArtwork: '<img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="Chainsaw Man and Pochita fan art. Activate for a chainsaw effect.">',
+    heroHint: "<b>▼</b>See what I've made",
+    hProducts: "<small>EP.01 · PRODUCTS</small>Things I've made",
+    pProducts: 'Each one started as a fix for my own problem, then got shared.',
+    hSkills: '<small>EP.02 · OPEN SOURCE</small>Open source',
+    pSkills: 'My public repos on GitHub. Click a card to open it — stars update live.',
+    hArticles: '<small>EP.03 · WRITING</small>Writing',
+    pArticles: 'Project features, design choices and current boundaries.',
+    hAbout: '<small>EP.04 · ABOUT</small>About me',
+    aboutIntro: `<h3>Lucas · Powvy</h3>
+        <div class="facts"><span class="tag red">Jumeirah College</span><span class="tag">Dubai</span><span class="tag">AI · Business · Making</span></div>
+        <p>I'm Zhixuan Lucas Feng, usually Lucas. I study A-Level Mathematics, Further Mathematics, Computer Science and Economics at Jumeirah College.</p>
+        <p>I enjoy applying AI to real problems. I developed a website for my family's business serving African markets, with AI support, human customer service and product management. Staff have started using the admin tools to update products.</p>
+        <p>Outside my projects, I enjoy badminton, music and writing, and exploring where AI tools and business meet.</p>`,
+    hContact: "<small>EP.05 · SAY HI</small>Let's talk",
+    pContact: 'Products, AI, or just a chat — all welcome.',
+    dBack: '← Back', dSave: 'Save', dShare: 'Share'
+  },
+  products: {
+
+  "liangli": {
+    "tag": "Personal growth PWA",
+    "desc": "A personal growth tool that challenges performative discipline, connecting task load, focus and everyday life.",
+    "features": [
+      "Tasks, an idea pool and long-term goals",
+      "Pomodoro timer, offline flashcards, nutrition and wallet records",
+      "Local-first by default, with optional account sync for core tasks and cards"
+    ]
+  },
+  "bsr": {
+    "tag": "Campus marketplace demo",
+    "desc": "A Babson summer-school team project for trading and local errands. Explore BSR Hub and BSR Runner using fictional public demo data.",
+    "features": [
+      "Buying, selling, rentals and workspace bookings",
+      "Local errand journeys in the BSR Runner demo",
+      "The public demo handles no real payments or private addresses"
+    ]
+  },
+  "philosophy": {
+    "tag": "Characters & philosophy",
+    "desc": "A Chinese-language character encyclopedia and philosophical reading of Chainsaw Man and Tatsuki Fujimoto’s work.",
+    "features": [
+      "Chainsaw Man character content",
+      "Philosophical readings of Fujimoto’s work",
+      "Chinese-language website"
+    ]
+  },
+  "solarhub": {
+    "tag": "Country selector",
+    "desc": "The Restar Solar country selector helps visitors find the website for their region.",
+    "features": [
+      "One country-selection entry point",
+      "Access company websites by region"
+    ]
+  },
+  "solar-countries": {
+    "name": "Restar Solar · Three Countries",
+    "tag": "Company website series",
+    "desc": "Restar Solar websites made for Nigeria, Sudan and Mali, now moved to country entry points on the unified website.",
+    "features": [
+      "Nigeria, Sudan and Mali country entry points",
+      "Three public repositories presented together"
+    ],
+    "links": [
+      {
+        "name": "Nigeria",
+        "url": "https://restarsolar.net/?country=NG"
+      },
+      {
+        "name": "Sudan",
+        "url": "https://restarsolar.net/?country=SD"
+      },
+      {
+        "name": "Mali",
+        "url": "https://restarsolar.net/?country=ML"
+      }
+    ]
+  },
+  "alevel": {
+    "tag": "A-Level study tools",
+    "desc": "A local-first A-Level study workspace for recording practice evidence, planning study time and tracking reviews.",
+    "features": [
+      "Mathematics, Further Mathematics, Economics and Computer Science divisions",
+      "Reviews and study plans informed by recorded practice",
+      "JSON import and export of study records"
+    ]
+  },
+    power: { tag:'Personal AI agent', desc:'Claude Code, Codex, Hermes, opencode and every other agent CLI on my Mac in one desktop app — an AI crew that remembers and learns skills.',
+      features:['Multi-character crew with group chat: @mention someone, or let it route automatically','Memory lives in Obsidian and is recalled across sessions; skills accumulate on their own','Mac app + Telegram remote control, and it asks me before sending any message'] },
+    dryrun: { tag:'CIE CS revision', desc:'A Cambridge Computer Science revision tool: trace tables, logic gates and pseudocode conversion. One file, zero dependencies, works offline.',
+      features:['Pseudocode trace-table simulator + logic-gate truth tables and circuits','Structured English / trace table / flowchart → pseudocode','Practice mode with generated, auto-marked questions'] },
+    restsolar: { tag:'AI customer service', desc:'A trilingual (EN / FR / ZH) AI support agent for a solar company in Cameroon. It answers stock and price questions and hands off to a human in one tap.',
+      features:['Rule-engine guardrails: never invents prices, adds 19.25% VAT automatically','Multi-country admin: Cameroon / Nigeria / Sudan / Mali','Live-agent takeover with a waiting queue and real-time chat'] },
+    usage: { tag:'Token dashboard', desc:'See exactly how many tokens — and how much money — you spent today on Claude Code, Codex and DeepSeek.',
+      features:['CLI + local dashboard + macOS desktop widget','Plan-limit alerts and a 7-day trend chart','Chainsaw Man / Reze themes'] },
+    colorbook: { tag:'iPad color-by-number', desc:'An ad-free color-by-number app: turn any photo into a pixel paint-by-number picture.',
+      features:['Photo → pixel grid with automatic palette (up to 64 colors)','Drag-paint with Apple Pencil, bucket-fill a whole number','Offline-capable PWA, plus a WeChat mini-program version'] },
+    contract: { tag:'Agent tool gateway', desc:'One master key for every agent tool — search, scraping, finance and social data — with automatic failover when a provider goes down.',
+      features:['One ct_ master key, ships an MCP server','15 tools, 39 providers, failover even mid-stream','One-command Docker deploy + admin dashboard'] },
+    vedundi: { tag:'Dark fiction', desc:'My bilingual (EN / ZH) dark literary web novel, with its own reader site.',
+      features:['Switch between English and Chinese in one tap','Dark reading mode','Ongoing serial'] },
+    camaroom: { tag:'Company website', desc:"Rest Solar Cameroon's company site: products, project gallery and contacts.",
+      features:['Products and services','Photo gallery of real installations','Sister sites for Nigeria / Sudan / Mali'] }
+  },
+  skills: {
+
+  "liangli": {
+    "desc": "Source of Powy: a local-first growth PWA with tasks, focus, flashcards and life records."
+  },
+  "bsr-hub": {
+    "desc": "Campus marketplace and local errand demos, with the Rust core API and web apps."
+  },
+  "hayakawa-mentality": {
+    "desc": "A Codex skill for calm, sustained action: preparation, execution, commitments and reflection."
+  },
+  "Chainsaw-man-philosophy": {
+    "desc": "A Chinese-language Chainsaw Man character encyclopedia and philosophical readings of Fujimoto’s work."
+  },
+  "restar-solar-hub": {
+    "desc": "Source of the Restar Solar country-selection website."
+  },
+  "Restar Solar · 三个国家": {
+    "name": "Restar Solar · Three Countries",
+    "desc": "Three public repositories for the Nigeria, Sudan and Mali company websites.",
+    "repos": [
+      {
+        "name": "Nigeria",
+        "repo": "zhixuanlucasfeng-cmyk/Nigeria-website"
+      },
+      {
+        "name": "Sudan",
+        "repo": "zhixuanlucasfeng-cmyk/Sudan-website"
+      },
+      {
+        "name": "Mali",
+        "repo": "zhixuanlucasfeng-cmyk/Mali-website"
+      }
+    ]
+  },
+    'power':            { desc:'Your agents, one room. Group chat, persona packs and Obsidian memory.' },
+    'contract':         { desc:'One master key for every agent tool, with automatic failover and an MCP server.' },
+    'claude-usage':     { desc:'Claude Code / Codex / DeepSeek token usage: CLI + desktop widget.' },
+    'cie-cs-toolkit':   { desc:'Source of DryRun: a CIE Computer Science revision tool, single file, zero deps.' },
+    'rest-solar-agent': { desc:'Solar-company AI support: FastAPI + rule engine + human takeover.' },
+    'jc-sports-day':    { desc:'Open-source sports-day scoring: events, results, live house standings, exports.' },
+    'colorbook':        { desc:'Source of Colorbook: turn photos into pixel color-by-number, processed on-device, works offline.' }
+  },
+  posts: {
+  "power": {
+    "tag": "Project notes",
+    "title": "Power: a shared room for local AI agents",
+    "summary": "One desktop workspace for agent CLIs, with group chat, persona packs and editable memory.",
+    "body": "<p>Power brings local AI agents into one desktop interface. Tools such as Claude Code, Codex, Hermes and opencode still run through their own CLIs; Power provides a shared entry point for chats and projects.</p>\n<h2>Organizing different tools</h2><p>Chat with one agent or bring several into a group. Groups support @mentions, automatic selection of a lead, and rounds of discussion. Persona packs define how members speak and their default settings, while project folders give conversations a working context.</p>\n<h2>Memory you can inspect and edit</h2><p>Power stores memories as Markdown notes in Obsidian and recalls relevant information in later messages. Those notes can be edited or deleted directly, rather than remaining hidden in an inaccessible state.</p>\n<h2>What setup involves</h2><p>Each agent needs its own installation and sign-in. Power organizes the tools; it does not replace their accounts or services. Telegram remote control is optional. Confirmation cards let users review outgoing messages or posts before sending.</p>\n<p><a href=\"https://github.com/zhixuanlucasfeng-cmyk/power\" target=\"_blank\" rel=\"noopener\">Power source and setup instructions →</a></p>"
+  },
+  "powy": {
+    "tag": "Project notes",
+    "title": "Powy: tasks, focus and everyday life",
+    "summary": "A personal growth PWA that challenges performative discipline, with local-first storage and optional, limited sync.",
+    "body": "<p>Powy, published in the liangli repository, is a personal growth PWA that challenges performative discipline. It brings tasks, workload, goals, focus and life records into one tool.</p>\n<h2>An idea does not have to become a task immediately</h2><p>Today schedules tasks and displays workload, warning about overload without blocking it. The Growth Pool holds ideas outside the daily load until they are ready to become tasks. Users advance long-term goal progress manually.</p>\n<h2>Tools for focus and study</h2><p>The focus module provides a Pomodoro timer and a record dashboard. Offline flashcards support decks, due reviews, and JSON and CSV import and export. Their simplified review intervals do not claim FSRS compatibility.</p>\n<h2>Local data and optional sync</h2><p>The Life page contains nutrition, wallet and daily records. Data stays on the device by default. Optional account sync covers core tasks and flashcards; Life data remains local. The interface supports Chinese and English.</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/liangli/\" target=\"_blank\" rel=\"noopener\">Open Powy →</a></p>"
+  },
+  "restar-solar": {
+    "tag": "Project notes",
+    "title": "Restar Solar: websites, support and product management",
+    "summary": "A project for my family’s business serving African markets, with staff now using the admin tools to update products.",
+    "body": "<p>I developed a website and supporting tools for my family's business serving African markets. The project includes company websites, AI support, online support from staff, and product management and updates.</p>\n<h2>Ongoing maintenance behind the website</h2><p>Visitors need product information and a way to ask questions; staff need to maintain that information. The project connects the public website with admin tools. Staff have started using the admin interface to update products.</p>\n<h2>AI and human support together</h2><p>The project includes both AI support and online customer service from employees. Its scope extends beyond an automated chat window to the tools business staff use to participate in service and maintain content.</p>\n<h2>Country website entry points</h2><p>The website series includes Cameroon and country sites for Nigeria, Sudan and Mali. The latter three have moved to country entry points on a unified website. Restar Solar Hub provides a country-selection page.</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/restar-solar-hub/\" target=\"_blank\" rel=\"noopener\">Open the country selector →</a></p>"
+  },
+  "alevel": {
+    "tag": "Project notes",
+    "title": "A-Level: study plans grounded in practice records",
+    "summary": "A-Level Survival Bureau organizes reviews and plans around practice evidence, distinguishing unknown topics from recorded performance.",
+    "body": "<p>A-Level Survival Bureau is a local-first study workspace for Mathematics, Further Mathematics, Economics and Computer Science. Its manga-inspired interface calls study sessions Hunts and plans Contracts, while the underlying system organizes learning around actual practice records.</p>\n<h2>No records means unknown</h2><p>Practice attempts are stored as events in the browser database. The system combines FSRS retrievability, accuracy and evidence volume to represent learning state. Topics without attempts are marked UNSCOUTED rather than assigned a zero score.</p>\n<h2>Planning around available time</h2><p>The planner uses the free time declared by the user and explains its study allocations. Past-paper grade comparisons require the relevant boundaries from the user. Estimates in the app are not official predicted grades.</p>\n<h2>Content scope and backups</h2><p>Content packs are scoped to exam boards and years; unverified subject content stays locked. Learning event records support JSON import and export. Web data stays in the current browser, without automatic cross-device sync.</p>\n<p><a href=\"https://alevel-survival-bureau.vercel.app\" target=\"_blank\" rel=\"noopener\">Open A-Level Survival Bureau →</a></p>"
+  }
+},
+  jobs: {
+    'Jumeirah College': { when:'Now', role:'A-Level student', desc:'Studying Mathematics, Further Mathematics, Computer Science and Economics in Dubai.' },
+    'Restar Solar': { when:'Project work', role:'Website & AI support development', desc:'Developed a website and admin tools for my family’s business serving African markets. Staff have started using the tools to update products.' }
+  },
+  talks: {
+    consult: { name:'Consulting', desc:'One-on-one tech / product consulting', cta:'Book a session',
+      detail:['Taking an AI product from zero to one','Getting started with Vibe Coding and choosing tools','Applying AI tools to real projects'] },
+    group:   { name:'Community', desc:'Join the user community', cta:'Ask to join',
+      detail:['Try new products first','Meet people who love tinkering too','Resources and templates, now and then'] },
+    chat:    { name:'Hang out', desc:'Casual chat', cta:'Say hi',
+      detail:["Doesn't have to be about work","Tell me what you're building","I read everything, reply when I can"] },
+    live:    { name:'Talks & live streams', desc:'Invite me to collaborate', cta:'Send an invite',
+      detail:['Live streams on tech / product topics','Talks at schools and communities','For brand partnerships, include a short intro'] }
+  },
+  socials: {}
+};
+
+// 界面上零散的提示文字
+const UI = {
+  zh: { enter:'进入 →', open:'进入', features:'核心功能', saved:'已保存到本地', copied:'链接已复制', copyFail:'复制失败，请手动复制地址栏', contactUnavailable:'暂未开放', contactPending:'联系方式尚未公开，请稍后再来。', close:'关闭', starsLoading:'加载中', starsUnavailable:'暂不可用', starsCached:'缓存', original:'原文链接', langBtn:'EN' },
+  en: { enter:'Enter →', open:'Open', features:'Key features', saved:'Saved to your device', copied:'Link copied', copyFail:"Couldn't copy — please copy the address bar", contactUnavailable:'Not available yet', contactPending:'Contact details are not available yet. Please check back later.', close:'Close', starsLoading:'Loading', starsUnavailable:'Unavailable', starsCached:'Cached', original:'Original link', langBtn:'中' }
+};
+
+const EN_ART = {
+  power: ART.power.replace('@蕾塞 帮我回一下微信', '@Reze Draft a WeChat reply')
+    .replace('好的电次～草稿已写好', 'Draft ready, Denji!').replace('等你确认后发送 ✓', 'Send after your approval ✓'),
+  restsolar: ART.restsolar.replace('转人工客服 →', 'Talk to an agent →')
+};
+const productArt = id => lang === 'en' && EN_ART[id] ? EN_ART[id] : ART[id];
+let lang = 'zh';
+try { lang = localStorage.getItem('powvy-lang') || (navigator.language.startsWith('zh') ? 'zh' : 'en'); } catch (e) {}
+const t = k => UI[lang][k];
+const tr = (kind, key, item) => lang === 'en' ? { ...item, ...(EN[kind][key] || {}) } : item;
+
+// 静态文字：首次运行时记下中文原文，切换时整体替换
+const ZH_UI = {};
+document.querySelectorAll('[data-i18n]').forEach(el => { ZH_UI[el.dataset.i18n] = el.innerHTML; });
+function applyStatic() {
+  document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.innerHTML = (lang === 'en' ? EN.ui : ZH_UI)[el.dataset.i18n];
+  });
+  document.getElementById('langBtn').textContent = t('langBtn');
+  document.getElementById('mClose').setAttribute('aria-label', t('close'));
+}
+applyStatic();
+
+/* =========================================================
+   C. 渲染各模块
+   ========================================================= */
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+let STARS = {}; // 仅保存本次打开页面时成功获取的数值，不存储凭据。
+let starsState = 'loading', starsLoading = false, nextStarsAttempt = 0;
+const fmt = n => n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n);
+function starLabel(repo) {
+  if (Object.hasOwn(STARS, repo)) return '★ ' + fmt(STARS[repo]) + (starsState === 'unavailable' ? ' · ' + t('starsCached') : '');
+  return '★ ' + t(starsState === 'loading' ? 'starsLoading' : 'starsUnavailable');
+}
+function renderStars() {
+  document.querySelectorAll('.stars').forEach(el => { el.textContent = starLabel(el.dataset.repo); });
+}
+function render() {
+$('#productList').innerHTML = products.map(x => tr('products', x.id, x)).map(p => `
+  <a class="card reveal" href="#/product/${p.id}" data-product="${p.id}">
+    <div class="cover">${productArt(p.id)}</div>
+    <div class="body">
+      <span class="tag red" style="align-self:flex-start">${p.tag}</span>
+      <h3 class="title">${p.name}</h3>
+      <p>${p.desc}</p>
+      <div class="row"><span class="btn">${t('enter')}</span></div>
+    </div>
+  </a>`).join('');
+
+$('#skillList').innerHTML = skills.map(x => tr('skills', x.name, x)).map((s, i) => s.repos ? `
+  <div class="card skill reveal">
+    <div class="cover">${buddy(s.prop, i % 2 ? PAPER : RED)}</div>
+    <div class="body"><h3>${s.name}</h3><p>${s.desc}</p>
+      <div class="repo-links">${s.repos.map(r => `<a href="https://github.com/${r.repo}" target="_blank" rel="noopener">${r.name}<span class="stars" data-repo="${r.repo}">${starLabel(r.repo)}</span></a>`).join('')}</div>
+    </div>
+  </div>` : `
+  <a class="card skill reveal" href="https://github.com/${s.repo}" target="_blank" rel="noopener">
+    <span class="stars" data-repo="${s.repo}">${starLabel(s.repo)}</span>
+    <div class="cover">${buddy(s.prop, i % 2 ? PAPER : RED)}</div>
+    <div class="body"><h3>${s.name}</h3><p>${s.desc}</p></div>
+  </a>`).join('');
+
+$('#postList').innerHTML = posts.map(x => tr('posts', x.id, x)).map(p => `
+  <a class="card post reveal" href="#/post/${p.id}" data-post="${p.id}">
+    <div class="cover">${buddy(p.prop, p.bg)}</div>
+    <div class="body">
+      <div class="meta"><span>#${p.tag}</span><span>${p.date}</span></div>
+      <h3 class="title">${p.title}</h3>
+      <p>${p.summary}</p>
+    </div>
+  </a>`).join('');
+
+$('#jobList').innerHTML = jobs.map(x => tr('jobs', x.name, x)).map((j, i) => `
+  <div class="job reveal">
+    ${buddy(j.prop, i % 2 ? PAPER : RED)}
+    <div><div class="when">${j.when} · ${j.role}</div><h4>${j.name}</h4><p>${j.desc}</p></div>
+  </div>`).join('');
+
+$('#talkList').innerHTML = talks.map(x => tr('talks', x.id, x)).map((c, i) => `
+  <button class="card talk reveal" data-talk="${c.id}">
+    <div class="cover">${buddy(c.prop, i % 2 ? PAPER : RED)}</div>
+    <div class="body"><h3>${c.name}</h3><p>${c.desc}</p>${c.href ? '' : `<p class="contact-status">${t('contactUnavailable')}</p>`}</div>
+  </button>`).join('');
+
+$('#socialList').innerHTML = socials.map(x => tr('socials', x.name, x)).map(s => `
+  <a href="${s.href}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true">${s.icon}</svg>${s.name}</a>`).join('');
+}
+render();
+$('#year').textContent = new Date().getFullYear();
+
+/* =========================================================
+   D. 首屏互动：透明图片视差 + 点击震动
+   ========================================================= */
+const hero = $('#hero'), heroArt = $('#heroArt');
+let mx = innerWidth * .5, my = innerHeight * .4, ticking = false;
+
+function updateHero() {
+  ticking = false;
+  if (matchMedia('(prefers-reduced-motion: reduce), (pointer: coarse)').matches) {
+    heroArt.style.transform = '';
+    return;
+  }
+  const nx = Math.max(-.5, Math.min(.5, mx / innerWidth - .5));
+  const ny = Math.max(-.5, Math.min(.5, my / innerHeight - .5));
+  heroArt.style.transform = `translate(${nx * 12}px, ${ny * 8}px)`;
+}
+const queue = () => { if (!ticking) { ticking = true; requestAnimationFrame(updateHero); } };
+addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; queue(); }, { passive: true });
+addEventListener('scroll', queue, { passive: true });
+queue();
+
+// 点击或键盘激活：震动 1 秒 + 墨点拟声词
+let revTimer;
+heroArt.addEventListener('click', e => {
+  hero.classList.add('rev');
+  clearTimeout(revTimer); revTimer = setTimeout(() => hero.classList.remove('rev'), 1000);
+  const rect = heroArt.getBoundingClientRect();
+  splat(e.detail ? e.clientX : rect.left + rect.width / 2,
+        e.detail ? e.clientY : rect.top + rect.height / 2);
+});
+
+/* 血溅效果：随机红色墨点 + 随机拟声词 */
+const SFX = ['ブン!!', 'ギャリギャリ', 'ドッ', 'ヴヴン!', 'ザシュ'];
+function splat(x, y) {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const dots = Array.from({ length: 14 }, () => {
+    const a = Math.random() * Math.PI * 2, d = 10 + Math.random() * 55, r = 3 + Math.random() * 10;
+    return `<circle cx="${70 + Math.cos(a) * d}" cy="${70 + Math.sin(a) * d}" r="${r * (1 - d / 90)}"/>`;
+  }).join('');
+  const el = document.createElement('div');
+  el.className = 'splat';
+  el.style.left = x + 'px'; el.style.top = y + 'px';
+  el.innerHTML = `<svg viewBox="0 0 140 140" fill="${RED}"><circle cx="70" cy="70" r="20"/>${dots}</svg><span>${SFX[Math.random() * SFX.length | 0]}</span>`;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 1100);
+}
+
+/* =========================================================
+   E. 导航：当前模块高亮 + 进入视口淡入
+   ========================================================= */
+const navLinks = [...document.querySelectorAll('.nav ul a')];
+const spy = new IntersectionObserver(entries => {
+  for (const en of entries) if (en.isIntersecting)
+    navLinks.forEach(a => a.classList.toggle('active', a.hash === '#' + en.target.id && en.target.id !== 'hero'));
+}, { rootMargin: '-45% 0px -50% 0px' });          // 视口中线所在的模块即“当前模块”
+document.querySelectorAll('main section, #hero').forEach(s => spy.observe(s));
+
+const rv = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => rv.observe(el));
+
+/* =========================================================
+   F. GitHub 星标：加载时拉取，之后每 10 分钟刷新
+   （未登录 API 限额 60 次/小时）
+   ========================================================= */
+async function loadStars() {
+  if (starsLoading || Date.now() < nextStarsAttempt) return;
+  starsLoading = true;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 10000);
+  try {
+    // ponytail: one page covers current public repos; paginate if the account exceeds 100.
+    const response = await fetch('https://api.github.com/users/zhixuanlucasfeng-cmyk/repos?per_page=100', { signal: controller.signal });
+    if (!response.ok) {
+      if (response.status === 403 || response.status === 429) {
+        const retry = response.headers.get('Retry-After');
+        const retryAt = retry === null ? 0 : (/^\d+$/.test(retry) ? Date.now() + Number(retry) * 1000 : Date.parse(retry));
+        const resetAt = Number(response.headers.get('X-RateLimit-Reset')) * 1000;
+        nextStarsAttempt = Math.max(Date.now() + 60000, retryAt || resetAt || Date.now() + 3600000);
+      }
+      throw new Error('GitHub stars unavailable');
+    }
+    const repos = await response.json();
+    if (!Array.isArray(repos) || repos.some(r => !r || typeof r.full_name !== 'string' || !Number.isSafeInteger(r.stargazers_count) || r.stargazers_count < 0)) throw new Error('Invalid star counts');
+    STARS = Object.fromEntries(repos.map(r => [r.full_name, r.stargazers_count]));
+    starsState = 'ready';
+  } catch {
+    starsState = 'unavailable';
+  } finally {
+    clearTimeout(timeout);
+    starsLoading = false;
+    nextStarsAttempt = Math.max(nextStarsAttempt, Date.now() + 10 * 60 * 1000);
+    renderStars();
+  }
+}
+loadStars();
+setInterval(loadStars, 10 * 60 * 1000);
+
+/* =========================================================
+   G. 详情页路由 + “一镜到底”过渡
+   hash：#/post/xxx 或 #/product/xxx，可直接分享
+   ========================================================= */
+const detail = $('#detail'), dCover = $('#dCover'), dTitle = $('#dTitle');
+let current = null, fromList = false;
+
+const transition = fn => (document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches)
+  ? document.startViewTransition(fn) : (fn(), null);
+const named = (el, on) => { if (!el) return;
+  el.querySelector('.cover').style.viewTransitionName = on ? 'hero-cover' : '';
+  el.querySelector('.title').style.viewTransitionName = on ? 'hero-title' : ''; };
+const cardOf = c => c && document.querySelector(`[data-${c.kind}="${c.id}"]`);
+
+function fillDetail(kind, item) {
+  item = tr(kind === 'post' ? 'posts' : 'products', item.id, item);
+  if (kind === 'post') {
+    dCover.innerHTML = buddy(item.prop, item.bg);
+    dTitle.textContent = item.title;
+    $('#dMeta').innerHTML = `<span class="tag red">${item.tag}</span><span>${item.date}</span><span>Powvy</span>`;
+    $('#dBody').innerHTML = item.body;
+  } else {
+    dCover.innerHTML = productArt(item.id);
+    dTitle.textContent = item.name;
+    $('#dMeta').innerHTML = `<span class="tag red">${item.tag}</span>`;
+    $('#dBody').innerHTML = `<p>${item.desc}</p><h2>${t('features')}</h2><ul>${item.features.map(f => `<li>${f}</li>`).join('')}</ul>
+      <p class="product-links">${(item.links || [{ name:item.name, url:item.url }]).map(link => `<a class="btn" href="${link.url}" target="_blank" rel="noopener">${t('open')} ${link.name} →</a>`).join('')}</p>`;
+  }
+  document.title = dTitle.textContent + ' · Powvy';
+}
+
+function openDetail(kind, id) {
+  const item = (kind === 'post' ? posts : products).find(x => x.id === id);
+  if (!item) return;
+  const card = cardOf({ kind, id });
+  named(card, true);                        // 旧画面：卡片带共享名
+  transition(() => {
+    named(card, false);                     // 新画面：共享名转移到详情页
+    fillDetail(kind, item);
+    detail.hidden = false; detail.scrollTop = 0;
+    document.body.classList.add('lock');
+    dCover.style.viewTransitionName = 'hero-cover';
+    dTitle.style.viewTransitionName = 'hero-title';
+  });
+  current = { kind, id };
+}
+
+function closeDetail() {
+  const card = cardOf(current);
+  const t = transition(() => {
+    dCover.style.viewTransitionName = dTitle.style.viewTransitionName = '';
+    detail.hidden = true;
+    document.body.classList.remove('lock');
+    named(card, true);                      // 共享名回到卡片，形成“缩回”
+    document.title = 'Powvy makes things.';
+  });
+  const clear = () => named(card, false);
+  t ? t.finished.finally(clear) : clear();
+  current = null;
+}
+
+function route() {
+  const m = location.hash.match(/^#\/(post|product)\/([\w-]+)$/);
+  if (m) openDetail(m[1], m[2]);
+  else if (current) closeDetail();
+}
+addEventListener('hashchange', route);
+document.addEventListener('click', e => { if (e.target.closest('[data-post],[data-product]')) fromList = true; });
+
+$('#dBack').onclick = () => {
+  if (fromList) { fromList = false; history.back(); }
+  else { history.replaceState(null, '', location.pathname + location.search); closeDetail(); }
+};
+addEventListener('keydown', e => { if (e.key === 'Escape' && current && !$('#modal').open) $('#dBack').click(); });
+
+// 保存：导出当前详情为独立 HTML 文件
+$('#dSave').onclick = () => {
+  const html = `<!doctype html><meta charset="utf-8"><title>${esc(dTitle.textContent)}</title>
+<style>body{max-width:760px;margin:40px auto;padding:0 16px;font-family:-apple-system,"PingFang SC",sans-serif;line-height:1.7;background:#EFEAE0}
+pre{background:#0d0d0d;color:#fff;padding:16px;overflow:auto;border-left:6px solid #D7261E}code{background:#fff;padding:1px 5px}
+pre code{background:none}blockquote{border-left:6px solid #D7261E;margin:0;padding:4px 16px;background:#fff}svg{max-width:100%;border:3px solid #0d0d0d}</style>
+${dCover.innerHTML}<h1>${esc(dTitle.textContent)}</h1><p>${$('#dMeta').textContent}</p>${$('#dBody').innerHTML}
+<p><a href="${esc(location.href)}">${t('original')}</a></p>`;
+  const a = Object.assign(document.createElement('a'), {
+    href: URL.createObjectURL(new Blob([html], { type: 'text/html' })),
+    download: (current ? current.id : 'powvy') + '.html'
+  });
+  a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  toast(t('saved'));
+};
+
+// 分享：优先系统分享面板，否则复制链接
+$('#dShare').onclick = async () => {
+  const data = { title: dTitle.textContent, url: location.href };
+  try {
+    if (navigator.share) await navigator.share(data);
+    else { await navigator.clipboard.writeText(data.url); toast(t('copied')); }
+  } catch (err) { if (err.name !== 'AbortError') toast(t('copyFail')); }
+};
+
+/* =========================================================
+   H. 交流模块弹窗
+   ========================================================= */
+const modal = $('#modal');
+$('#talkList').addEventListener('click', e => {
+  const btn = e.target.closest('[data-talk]'); if (!btn) return;
+  const c = tr('talks', btn.dataset.talk, talks.find(x => x.id === btn.dataset.talk));
+  $('#mArt').innerHTML = buddy(c.prop, RED);
+  $('#mBody').innerHTML = `<h3>${c.name}</h3><p>${c.desc}</p>
+    <ul>${c.detail.map(d => `<li>${d}</li>`).join('')}</ul>
+    ${c.href ? `<a class="btn" href="${c.href}">${c.cta} →</a>` : `<p class="contact-status">${t('contactUnavailable')}</p><p>${t('contactPending')}</p>`}`;
+  modal.showModal();
+});
+$('#mClose').onclick = () => modal.close();
+modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
+
+let toastTimer;
+function toast(msg) {
+  const el = $('#toast'); el.textContent = msg; el.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 1800);
+}
+
+/* =========================================================
+   I. 中 / EN 切换：替换静态文字 + 重新渲染卡片 / 详情页
+   ========================================================= */
+$('#langBtn').onclick = () => {
+  lang = lang === 'en' ? 'zh' : 'en';
+  try { localStorage.setItem('powvy-lang', lang); } catch (e) {}
+  applyStatic();
+  $('#year').textContent = new Date().getFullYear();
+  render();
+  document.querySelectorAll('.reveal:not(.in)').forEach(el => rv.observe(el));
+  if (current) fillDetail(current.kind, (current.kind === 'post' ? posts : products).find(x => x.id === current.id));
+  if (modal.open) modal.close();
+};
+
+route();   // 直接打开分享链接（带 #/post/xxx）时首屏就进入详情
+</script>
+</body>
+</html>
