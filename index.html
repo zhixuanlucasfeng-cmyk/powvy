@@ -515,6 +515,7 @@ const ART = {
     ${[40,62,30,78,52,90,68].map((h,i)=>`<rect x="${150+i*20}" y="${176-h}" width="14" height="${h}" fill="${i===6?RED:'#fff'}" stroke-width="2.5"/>`).join('')}
     <path d="M144 178h146" />
     <rect x="36" y="130" width="90" height="10" fill="#fff" stroke-width="2"/><rect x="36" y="130" width="62" height="10" fill="${ORG}" stroke-width="2"/>
+    <text x="36" y="125" font-size="9" stroke="none" fill="#666">5h 预计 68%</text>
     <text x="36" y="158" font-size="10" stroke="none" fill="#666">Claude · Codex · DeepSeek</text>`),
   // Colorbook：像素数字填色
   colorbook: windowArt(`
@@ -651,7 +652,7 @@ const products = [
     features:['规则引擎护栏：不乱报价、自动算 19.25% 增值税','四国多租户后台：喀麦隆 / 尼日利亚 / 苏丹 / 马里','真人坐席接管：等待队列 + 实时对话'] },
   { id:'usage', name:'Claude Usage', tag:'Token 可视化', url: GH + 'claude-usage',
     desc:'看清今天在 Claude Code、Codex、DeepSeek 上花了多少 token 和多少钱。',
-    features:['CLI + 本地仪表盘 + macOS 桌面小组件','套餐额度提醒、7 天趋势图','电锯人 / 蕾塞主题皮肤'] },
+    features:['CLI + 本地仪表盘 + macOS 桌面小组件','额度预测：按当前速度算出重置时用到多少，快超时提醒几点用完','7 天趋势图 + 电锯人 / 蕾塞主题皮肤'] },
   { id:'colorbook', name:'Colorbook', tag:'iPad 数字填色', url:'https://zhixuanlucasfeng-cmyk.github.io/colorbook/',
     desc:'没有广告的数字填色 App：任意照片一键变成像素填色画。',
     features:['照片 → 像素网格 + 自动配色（最多 64 色）','Apple Pencil 拖动涂色、油漆桶一键填充','离线可用的 PWA，还有微信小程序版'] },
@@ -894,7 +895,7 @@ const EN = {
     restsolar: { tag:'AI customer service', desc:'A trilingual (EN / FR / ZH) AI support agent for a solar company in Cameroon. It answers stock and price questions and hands off to a human in one tap.',
       features:['Rule-engine guardrails: never invents prices, adds 19.25% VAT automatically','Multi-country admin: Cameroon / Nigeria / Sudan / Mali','Live-agent takeover with a waiting queue and real-time chat'] },
     usage: { tag:'Token dashboard', desc:'See exactly how many tokens — and how much money — you spent today on Claude Code, Codex and DeepSeek.',
-      features:['CLI + local dashboard + macOS desktop widget','Plan-limit alerts and a 7-day trend chart','Chainsaw Man / Reze themes'] },
+      features:['CLI + local dashboard + macOS desktop widget','Limit forecast: where your plan limits land at reset at today\'s pace, and when you\'d run out','7-day trend chart + Chainsaw Man / Reze themes'] },
     colorbook: { tag:'iPad color-by-number', desc:'An ad-free color-by-number app: turn any photo into a pixel paint-by-number picture.',
       features:['Photo → pixel grid with automatic palette (up to 64 colors)','Drag-paint with Apple Pencil, bucket-fill a whole number','Offline-capable PWA, plus a WeChat mini-program version'] },
     contract: { tag:'Agent tool gateway', desc:'One master key for every agent tool — search, scraping, finance and social data — with automatic failover when a provider goes down.',
