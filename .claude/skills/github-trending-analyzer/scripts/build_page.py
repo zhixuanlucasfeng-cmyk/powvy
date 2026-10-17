@@ -12,7 +12,7 @@ def build(raw, ana):
         r["overall"] = round(sum(a["scores"][k] * w for k, w in W.items()), 1)
         passed.append(r)
     passed.sort(key=lambda r: (-r["overall"], -r["stars_today"]))
-    excluded = [{"name": n, "reason": why, "stars_today": raw.get(n, {}).get("stars_today"), "url": f"https://github.com/{n}"}
+    excluded = [{"name": n, "reason": why if isinstance(why, dict) else {"zh": why, "en": why}, "stars_today": raw.get(n, {}).get("stars_today"), "url": f"https://github.com/{n}"}
                 for n, why in ana["excluded"].items()]
     return {"date": ana["date"], "weights": W, "total_fetched": len(raw), "projects": passed, "excluded": excluded}
 

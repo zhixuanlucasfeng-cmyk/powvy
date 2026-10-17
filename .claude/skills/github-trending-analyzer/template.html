@@ -26,6 +26,9 @@ a { color: inherit; }
 .nav .wrap { height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .logo { font-family: var(--display); font-size: 22px; letter-spacing: .02em; text-decoration: none; }
 .logo span { color: var(--red); }
+.nav-r { display: flex; align-items: center; gap: 12px; }
+.lang { flex: none; border: 2px solid #fff; color: #fff; background: none; font: 900 14px var(--font); padding: 2px 10px; cursor: pointer; }
+.lang:hover { background: var(--red); }
 .nav .date { font-family: var(--display); font-size: 13px; background: var(--red); padding: 2px 12px; transform: skew(-12deg); white-space: nowrap; font-variant-numeric: tabular-nums; }
 
 /* hero with speed lines */
@@ -138,18 +141,18 @@ footer small { display: block; font-weight: 800; margin-top: 10px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
-<nav class="nav"><div class="wrap"><a class="logo" href="../index.html">POWVY<span>!</span> TRENDING</a><span class="date" id="date"></span></div></nav>
+<nav class="nav"><div class="wrap"><a class="logo" href="../index.html">POWVY<span>!</span> TRENDING</a><span class="nav-r"><span class="date" id="date"></span><button class="lang" id="lang" type="button"></button></span></div></nav>
 
 <section class="hero">
   <div class="wrap">
     <div>
-      <h1>今日 GitHub<br><em>热门</em>速报</h1>
+      <h1 data-i18n="h1">今日 GitHub<br><em>热门</em>速报</h1>
       <p class="bubble" id="lede"></p>
       <div class="stats" id="stats"></div>
     </div>
     <div class="panel">
       <span class="sfx a">ドン!</span>
-      <h2>综合分排行</h2>
+      <h2 data-i18n="chart">综合分排行</h2>
       <svg id="overview" viewBox="0 0 560 250" role="img" aria-label="各项目综合分柱状图"></svg>
     </div>
   </div>
@@ -157,11 +160,11 @@ footer small { display: block; font-weight: 800; margin-top: 10px; }
 
 <div class="wrap">
   <div class="toolbar">
-    <div class="search"><input type="search" id="q" placeholder="搜索名称、类型、技术栈…" aria-label="搜索项目"></div>
-    <label><input type="checkbox" class="box" id="f-all" checked> 全语言榜</label>
-    <label><input type="checkbox" class="box" id="f-zh" checked> 中文榜</label>
-    <label><input type="checkbox" class="box" id="f-picked"> 只看我挑的</label>
-    <label>排序 <select id="sort" aria-label="排序方式"><option value="overall">综合分</option><option value="stars_today">今日新增</option><option value="stars">总 Star</option></select></label>
+    <div class="search"><input type="search" id="q" placeholder="搜索名称、类型、技术栈…" aria-label="Search" data-i18n-ph="search"></div>
+    <label><input type="checkbox" class="box" id="f-all" checked> <span data-i18n="all">全语言榜</span></label>
+    <label><input type="checkbox" class="box" id="f-zh" checked> <span data-i18n="zh">中文榜</span></label>
+    <label><input type="checkbox" class="box" id="f-picked"> <span data-i18n="picked">只看我挑的</span></label>
+    <label><span data-i18n="sort">排序</span> <select id="sort" aria-label="Sort"><option value="overall" data-i18n="o1">综合分</option><option value="stars_today" data-i18n="o2">今日新增</option><option value="stars" data-i18n="o3">总 Star</option></select></label>
   </div>
 
   <main class="list" id="list"></main>
@@ -174,7 +177,7 @@ footer small { display: block; font-weight: 800; margin-top: 10px; }
 
 <footer>
   <div class="wrap">
-    <div><div class="big">挑一个，开干!</div><small id="rule"></small></div>
+    <div><div class="big" data-i18n="big">挑一个，开干!</div><small id="rule"></small></div>
     <button class="btn" id="copy" type="button">复制结构化 JSON</button>
   </div>
 </footer>
@@ -184,7 +187,25 @@ const DATA = /*__DATA__*/null;
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const fmt = n => n >= 1000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1) + "k" : String(n);
-const DIMS = [["popularity","受欢迎"],["maintenance","活跃度"],["usability","易用性"],["virality","传播性"]];
+let lang = "zh";
+try { lang = localStorage.getItem("powvy-lang") || (navigator.language.startsWith("zh") ? "zh" : "en"); } catch {}
+const T = {
+  zh: { h1: "今日 GitHub<br><em>热门</em>速报", chart: "综合分排行", search: "搜索名称、类型、技术栈…", all: "全语言榜", zh: "中文榜", picked: "只看我挑的",
+    sort: "排序", o1: "综合分", o2: "今日新增", o3: "总 Star", big: "挑一个，开干!", copy: "复制结构化 JSON", copied: "已复制 ✓", selected: "已选中，按 ⌘C 复制",
+    today: "今日", stack: "技术栈", usage: "怎么用", hl: "亮点", warn: "注意", meta: "综合分 · 最近提交", pick: "挑这个", empty: "……什么都没有。换个筛选条件试试。",
+    lede: (t, n) => `扫了全语言榜和中文榜共 ${t} 个项目。今日新增不足 100 星、一年没更新、合集教程类全部砍掉，剩下 ${n} 个，按综合分排好了。`,
+    stats: ["入选", "被砍", "单日最高"], excl: n => `被砍掉的 ${n} 个项目`, dims: ["受欢迎", "活跃度", "易用性", "传播性"],
+    rule: w => `综合分 = 受欢迎 ×${w.popularity} + 活跃度 ×${w.maintenance} + 易用性 ×${w.usability} + 传播性 ×${w.virality}`, title: "POWVY 热榜", toggle: "EN" },
+  en: { h1: "GitHub<br><em>Trending</em> Today", chart: "Overall score ranking", search: "Search name, type, stack…", all: "All languages", zh: "Chinese", picked: "My picks only",
+    sort: "Sort", o1: "Overall", o2: "Stars today", o3: "Total stars", big: "Pick one. Ship it!", copy: "Copy JSON", copied: "Copied ✓", selected: "Selected, press ⌘C",
+    today: "today", stack: "Stack", usage: "How to use", hl: "Highlights", warn: "Watch out", meta: "Overall · last push", pick: "Pick this", empty: "…nothing here. Try another filter.",
+    lede: (t, n) => `Scanned ${t} repos from the all-language and Chinese boards. Dropped anything under 100 stars today, stale for a year, or just a collection or tutorial. ${n} left, ranked by overall score.`,
+    stats: ["picked", "cut", "top day"], excl: n => `${n} repos that got cut`, dims: ["Popular", "Active", "Easy", "Viral"],
+    rule: w => `Overall = popularity ×${w.popularity} + activity ×${w.maintenance} + ease ×${w.usability} + virality ×${w.virality}`, title: "POWVY Trending", toggle: "中" },
+};
+const t = k => T[lang][k];
+const f = (p, k) => (lang === "en" && p.en && p.en[k]) || p[k];
+const DIMS = ["popularity", "maintenance", "usability", "virality"];
 let picked = new Set();
 try { picked = new Set(JSON.parse(localStorage.getItem("gta-picked") || "[]")); } catch {}
 const savePicked = () => { try { localStorage.setItem("gta-picked", JSON.stringify([...picked])); } catch {} };
@@ -192,7 +213,8 @@ const savePicked = () => { try { localStorage.setItem("gta-picked", JSON.stringi
 // halftone pattern + four ink bars (scores 1-10)
 function bars(s) {
   const W = 240, rowH = 26, lab = 54, max = W - lab - 26;
-  const rows = DIMS.map(([k, label], i) => {
+  const rows = DIMS.map((k, i) => {
+    const label = t("dims")[i];
     const y = i * rowH + 3, w = Math.max(4, max * s[k] / 10), hot = s[k] >= 9;
     return `<text x="0" y="${y + 15}" font-size="15" fill="#0d0d0d" font-family="ZCOOL QingKe HuangYou, PingFang SC, sans-serif">${label}</text>
       <rect x="${lab}" y="${y + 2}" width="${max}" height="16" fill="url(#dots)" stroke="#0d0d0d" stroke-width="2"/>
@@ -220,26 +242,26 @@ function overview(ps) {
 
 function card(p, rank) {
   const [owner, repo] = p.name.split("/");
-  const boards = p.boards.map(b => `<span class="tag ${b === "zh" ? "orange" : ""}">${b === "zh" ? "中文榜" : "全语言榜"}</span>`).join("");
+  const boards = p.boards.map(b => `<span class="tag ${b === "zh" ? "orange" : ""}">${t(b)}</span>`).join("");
   const li = a => `<ul>${a.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
-  const usage = esc(p.usage).replace(/`([^`]+)`/g, "<code>$1</code>");
+  const usage = esc(f(p, "usage")).replace(/`([^`]+)`/g, "<code>$1</code>");
   return `<article class="card ${picked.has(p.name) ? "picked" : ""}">
     <div class="rankbox ${rank <= 3 ? "top" : ""}"><small>No.</small><b>${rank}</b></div>
     <div class="main">
       <div class="title"><a href="${esc(p.url)}" target="_blank" rel="noopener"><span class="owner">${esc(owner)}/</span>${esc(repo)}</a></div>
       <p class="desc">${esc(p.description)}</p>
-      <div class="tags"><span class="tag red">+${fmt(p.stars_today)} 今日</span><span class="tag">★ ${fmt(p.stars)}</span>${p.language ? `<span class="tag ink">${esc(p.language)}</span>` : ""}<span class="tag">${esc(p.type)}</span>${boards}${p.license ? `<span class="tag">${esc(p.license)}</span>` : ""}</div>
+      <div class="tags"><span class="tag red">+${fmt(p.stars_today)} ${t("today")}</span><span class="tag">★ ${fmt(p.stars)}</span>${p.language ? `<span class="tag ink">${esc(p.language)}</span>` : ""}<span class="tag">${esc(f(p, "type"))}</span>${boards}${p.license ? `<span class="tag">${esc(p.license)}</span>` : ""}</div>
       <dl class="facts">
-        <dt>技术栈</dt><dd>${esc(p.stack)}</dd>
-        <dt>怎么用</dt><dd>${usage}</dd>
-        <dt>亮点</dt><dd>${li(p.highlights)}</dd>
-        <dt>注意</dt><dd class="warn">${li(p.cautions)}</dd>
+        <dt>${t("stack")}</dt><dd>${esc(f(p, "stack"))}</dd>
+        <dt>${t("usage")}</dt><dd>${usage}</dd>
+        <dt>${t("hl")}</dt><dd>${li(f(p, "highlights"))}</dd>
+        <dt>${t("warn")}</dt><dd class="warn">${li(f(p, "cautions"))}</dd>
       </dl>
     </div>
     <div class="side">
-      <div class="score"><div class="big"><b>${p.overall.toFixed(1)}</b></div><div><small>综合分 · 最近提交</small><span class="pushed">${esc((p.pushed_at || "").slice(0, 10))}</span></div></div>
+      <div class="score"><div class="big"><b>${p.overall.toFixed(1)}</b></div><div><small>${t("meta")}</small><span class="pushed">${esc((p.pushed_at || "").slice(0, 10))}</span></div></div>
       <div class="bars">${bars(p.scores)}</div>
-      <label class="pick"><input type="checkbox" class="box" data-pick="${esc(p.name)}" ${picked.has(p.name) ? "checked" : ""}> 挑这个</label>
+      <label class="pick"><input type="checkbox" class="box" data-pick="${esc(p.name)}" ${picked.has(p.name) ? "checked" : ""}> ${t("pick")}</label>
     </div>
   </article>`;
 }
@@ -251,25 +273,40 @@ function render() {
   const ps = DATA.projects
     .filter(p => p.boards.some(b => boards.has(b)))
     .filter(p => !$("#f-picked").checked || picked.has(p.name))
-    .filter(p => !q || [p.name, p.description, p.type, p.stack, p.language].join(" ").toLowerCase().includes(q))
+    .filter(p => !q || [p.name, p.description, f(p, "type"), f(p, "stack"), p.language].join(" ").toLowerCase().includes(q))
     .sort((a, b) => b[key] - a[key]);
   $("#list").innerHTML = ps.length ? ps.map(p => card(p, rankOf.get(p.name))).join("")
-    : `<div class="empty">……什么都没有。换个筛选条件试试。</div>`;
+    : `<div class="empty">${t("empty")}</div>`;
+}
+
+function applyLang() {
+  const d = DATA, n = d.projects.length;
+  document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+  document.title = t("title");
+  document.querySelectorAll("[data-i18n]").forEach(el => el.innerHTML = t(el.dataset.i18n));
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => el.placeholder = t(el.dataset.i18nPh));
+  $("#lang").textContent = t("toggle");
+  $("#copy").textContent = t("copy");
+  $("#lede").textContent = T[lang].lede(d.total_fetched, n);
+  const top = d.projects.reduce((a, p) => p.stars_today > a.stars_today ? p : a, d.projects[0] || { stars_today: 0 });
+  $("#stats").innerHTML = [n, d.excluded.length, "+" + fmt(top.stars_today)]
+    .map((v, i) => `<div class="stat"><b>${v}</b><span>${t("stats")[i]}</span></div>`).join("");
+  $("#rule").textContent = T[lang].rule(d.weights);
+  $("#excl-sum").textContent = T[lang].excl(d.excluded.length);
+  $("#excl").innerHTML = d.excluded.map(e => `<div><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)}</a> <span>${esc(e.reason[lang] || e.reason.zh)}</span></div>`).join("");
+  render();
 }
 
 function init() {
-  const d = DATA, n = d.projects.length;
+  const d = DATA;
   $("#date").textContent = d.date;
-  $("#lede").textContent = `扫了全语言榜和中文榜共 ${d.total_fetched} 个项目。今日新增不足 100 星、一年没更新、合集教程类全部砍掉，剩下 ${n} 个，按综合分排好了。`;
-  const top = d.projects.reduce((a, p) => p.stars_today > a.stars_today ? p : a, d.projects[0] || { stars_today: 0 });
-  $("#stats").innerHTML = [[n, "入选"], [d.excluded.length, "被砍"], ["+" + fmt(top.stars_today), "单日最高"]]
-    .map(([v, l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
-  const w = d.weights;
-  $("#rule").textContent = `综合分 = 受欢迎 ×${w.popularity} + 活跃度 ×${w.maintenance} + 易用性 ×${w.usability} + 传播性 ×${w.virality}`;
-  $("#excl-sum").textContent = `被砍掉的 ${d.excluded.length} 个项目`;
-  $("#excl").innerHTML = d.excluded.map(e => `<div><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)}</a> <span>${esc(e.reason)}</span></div>`).join("");
   overview(d.projects);
-  render();
+  applyLang();
+  $("#lang").addEventListener("click", () => {
+    lang = lang === "en" ? "zh" : "en";
+    try { localStorage.setItem("powvy-lang", lang); } catch {}
+    applyLang();
+  });
   ["#q", "#sort", "#f-all", "#f-zh", "#f-picked"].forEach(s => $(s).addEventListener("input", render));
   $("#list").addEventListener("change", e => {
     const name = e.target.dataset.pick; if (!name) return;
@@ -279,9 +316,9 @@ function init() {
   });
   $("#copy").addEventListener("click", async () => {
     const txt = JSON.stringify(d, null, 2), btn = $("#copy");
-    try { await navigator.clipboard.writeText(txt); btn.textContent = "已复制 ✓"; }
-    catch { const t = document.createElement("textarea"); t.value = txt; document.body.append(t); t.select(); btn.textContent = "已选中，按 ⌘C 复制"; }
-    setTimeout(() => btn.textContent = "复制结构化 JSON", 2400);
+    try { await navigator.clipboard.writeText(txt); btn.textContent = t("copied"); }
+    catch { const ta = document.createElement("textarea"); ta.value = txt; document.body.append(ta); ta.select(); btn.textContent = t("selected"); }
+    setTimeout(() => btn.textContent = t("copy"), 2400);
   });
 }
 init();

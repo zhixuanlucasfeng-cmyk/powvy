@@ -5,7 +5,7 @@ description: Use when the user says "分析今日GitHub热门项目", asks to an
 
 # GitHub Trending Analyzer
 
-Lives in the Powvy site repo (`zhixuanlucasfeng-cmyk/powvy`). Output goes to `trending/` in that repo, served at https://zhixuanlucasfeng-cmyk.github.io/powvy/trending/. Write all report prose in Chinese.
+Lives in the Powvy site repo (`zhixuanlucasfeng-cmyk/powvy`). Output goes to `trending/` in that repo, served at https://zhixuanlucasfeng-cmyk.github.io/powvy/trending/. The page is bilingual (follows the site's 中/EN toggle via `powvy-lang`), so every text field is written in Chinese and English.
 
 `$SKILL` = this directory. `$W` = a scratch dir outside the repo (e.g. `/tmp/gt`).
 
@@ -30,10 +30,11 @@ Write `$W/analysis.json`:
 {"date": "YYYY-MM-DD",
  "passed": {"owner/repo": {"scores": {"popularity": 9, "maintenance": 9, "usability": 8, "virality": 9},
    "stack": "技术栈", "type": "项目类型", "usage": "使用方式（可用 `code`）",
-   "highlights": ["核心亮点"], "cautions": ["注意事项"]}},
- "excluded": {"owner/repo": "今日新增 62 < 100；且为教程"}}
+   "highlights": ["核心亮点"], "cautions": ["注意事项"],
+   "en": {"stack": "...", "type": "...", "usage": "...", "highlights": ["..."], "cautions": ["..."]}}},
+ "excluded": {"owner/repo": {"zh": "今日新增 62 < 100；且为教程", "en": "62 stars today < 100; tutorial"}}}
 ```
-Facts come from the README only, no invented claims. Use today's UTC date.
+Facts come from the README only, no invented claims. The `en` block is a faithful English version of the same facts. Use today's UTC date.
 
 ## 4. Build
 ```bash

@@ -44,6 +44,20 @@
     "需要自备模型 API Key 或订阅",
     "安装前先卸载 0.1.x 以下旧版本"
    ],
+   "en": {
+    "stack": "TypeScript (Bun) terminal TUI + desktop app",
+    "type": "Open-source AI coding agent",
+    "usage": "`curl -fsSL https://opencode.ai/install | bash`, or install via brew / npm / scoop, then run `opencode` in your project",
+    "highlights": [
+     "An open-source Claude Code–style tool that works with many model providers",
+     "Available from almost every package manager (brew, scoop, pacman, nix, mise)",
+     "Desktop app (beta) and a README in 21 languages"
+    ],
+    "cautions": [
+     "Bring your own model API key or subscription",
+     "Remove versions older than 0.1.x before installing"
+    ]
+   },
    "overall": 9.1
   },
   {
@@ -103,6 +117,21 @@
     "声音克隆需取得本人授权，注意合规",
     "CPU 版也要约 5GB 磁盘；Intel Mac 只能连远程后端"
    ],
+   "en": {
+    "stack": "Electron + Python backend (PyTorch) + Rust; default engine k2-fsa/OmniVoice",
+    "type": "Desktop app · AI voice",
+    "usage": "One-line install (`curl -fsSL https://voicestudio.sh/install | sh`, or `irm | iex` on Windows), or download the dmg/exe/AppImage; a coding agent can also install it via docs/install/agent.md",
+    "highlights": [
+     "Fully local ElevenLabs alternative: voice cloning, voice design, video dubbing, dictation, audiobooks",
+     "646 languages; CUDA / Apple Silicon acceleration, still usable without a GPU",
+     "Built-in local API and MCP so agents can call it"
+    ],
+    "cautions": [
+     "AGPL-3.0: redistributing it commercially means open-sourcing your changes",
+     "Only clone voices with the speaker's consent",
+     "Even the CPU build needs ~5 GB of disk; Intel Macs can only connect to a remote backend"
+    ]
+   },
    "overall": 8.8
   },
   {
@@ -162,6 +191,20 @@
     "多 Agent 并行会成倍消耗额度",
     "迭代极快（每日发版），功能文档常滞后于 changelog"
    ],
+   "en": {
+    "stack": "TypeScript · desktop IDE (VS Code editor core + WebGL terminals)",
+    "type": "Multi-agent orchestration IDE",
+    "usage": "Download the desktop app from the website; iOS / Android companion apps; script it with the `orca` CLI",
+    "highlights": [
+     "Run Claude Code / Codex / OpenCode side by side, each in its own git worktree, then merge the best result",
+     "Monitor agents and get finish notifications on your phone",
+     "Design Mode: click any page element to send its HTML/CSS and a screenshot into the prompt"
+    ],
+    "cautions": [
+     "Running agents in parallel multiplies your usage",
+     "Ships daily, so the docs often lag behind the changelog"
+    ]
+   },
    "overall": 8.8
   },
   {
@@ -201,6 +244,21 @@
     "需要 Claude 订阅或 API 额度",
     "npm 安装方式已弃用"
    ],
+   "en": {
+    "stack": "TypeScript / Node 18+ (the repo is mostly plugins and issues)",
+    "type": "Official AI coding CLI",
+    "usage": "`curl -fsSL https://claude.ai/install.sh | bash` or `brew install --cask claude-code`, then run `claude` in your project",
+    "highlights": [
+     "Anthropic's official tool: understands your codebase, runs tasks, handles git from the terminal",
+     "Repo ships several official example plugins",
+     "One-line install on macOS / Linux / Windows"
+    ],
+    "cautions": [
+     "No open-source license; the repo is not the full source",
+     "Needs a Claude subscription or API credits",
+     "The npm install method is deprecated"
+    ]
+   },
    "overall": 8.4
   },
   {
@@ -249,6 +307,21 @@
     "有付费 Pro 版（私有仓库 $19/席/月）",
     "README 提醒存在冒名包，只从官方渠道安装"
    ],
+   "en": {
+    "stack": "JavaScript / Node 18+, Claude Code plugin + npm package",
+    "type": "Agent workflow toolkit",
+    "usage": "Install the `ecc@ecc` plugin inside Claude Code, or use the `ecc-universal` npm package's guided setup",
+    "highlights": [
+     "71 agents, 311 skills, hooks, memory and continuous learning in one install",
+     "AgentShield scans prompts, hooks, MCP config and secrets",
+     "Works with 7 harnesses including Claude Code, Codex and Kimi"
+    ],
+    "cautions": [
+     "Very large; enabling everything eats context, so pick what you need",
+     "Has a paid Pro tier ($19/seat/month for private repos)",
+     "README warns about impostor packages; install only from official channels"
+    ]
+   },
    "overall": 8.3
   },
   {
@@ -301,6 +374,21 @@
     "需要付费 Claude；还要装 LaTeX（lualatex/xelatex）",
     "与 Anthropic 无关，项目方声明无任何代币"
    ],
+   "en": {
+    "stack": "Python 3.10+ · Bun job-board CLIs · LaTeX CV templates · Claude Code slash commands",
+    "type": "Job-search automation framework",
+    "usage": "Clone, run `tools/install_portal_clis.py`, then use `/setup`, `/scrape`, `/apply`, `/interview` in Claude Code",
+    "highlights": [
+     "Battle-tested by the author: 69 tailored applications, 20 interviews, one job offer",
+     "Fit scoring + tailored CV and cover letter + a reviewer agent that critiques drafts",
+     "Country- and language-agnostic; you can add your own job portals"
+    ],
+    "cautions": [
+     "Forks are always public and your profile lands in tracked files, so use a private repo",
+     "Needs paid Claude plus a LaTeX install (lualatex/xelatex)",
+     "Not affiliated with Anthropic; the project has no token"
+    ]
+   },
    "overall": 8.0
   },
   {
@@ -358,6 +446,21 @@
     "部分数据库需注册或授权",
     "技能多，按领域挑选安装更省上下文"
    ],
+   "en": {
+    "stack": "Python · open Agent Skills standard (SKILL.md + helper scripts)",
+    "type": "Research agent skill library",
+    "usage": "Install per the Agent Skills standard into Claude Code, Cursor, Codex, etc.; the agent picks skills up automatically for research tasks",
+    "highlights": [
+     "177 research skills across biology, chemistry, medicine, physics, earth science and more",
+     "Versioned workflows for 80 scientific databases and 70+ Python packages",
+     "Backed by an arXiv paper and video tutorials"
+    ],
+    "cautions": [
+     "Research use only, explicitly not for clinical diagnosis",
+     "Some databases require registration or a license",
+     "Install by domain to save context"
+    ]
+   },
    "overall": 7.8
   },
   {
@@ -418,6 +521,21 @@
     "项目仅 3 个半月，watcher 只有 20，增速数据宜谨慎看待",
     "社区要求用户提交 PR 形式的使用报告"
    ],
+   "en": {
+    "stack": "Rust single binary · MCP + skill integration",
+    "type": "Local code search engine for agents",
+    "usage": "`curl -fsSL https://xerj.org/get | sh`, `xerj init` to wire into Claude Code/Cursor, `xerj autoindex` to index",
+    "highlights": [
+     "Auto-indexes any folder so agents fetch passages instead of reading whole files",
+     "Reference coding: clones similar open-source repos and searches how they solved it",
+     "Their controlled study: 2.7x fewer output tokens at the same solve rate"
+    ],
+    "cautions": [
+     "`--insecure` disables TLS and auth; single-user local only",
+     "Only 3.5 months old with 20 watchers; treat the growth numbers with care",
+     "The community asks users to file a field-report PR"
+    ]
+   },
    "overall": 7.5
   },
   {
@@ -457,6 +575,21 @@
     "目标软件本体仍需自行安装",
     "最近一次提交约 3 周前，节奏比前期放缓"
    ],
+   "en": {
+    "stack": "Python · CLI-Hub package manager (pip) · SKILL.md generation",
+    "type": "Software-to-agent CLI framework",
+    "usage": "`pip install cli-anything-hub`, then `cli-hub install <tool>`; or generate a CLI for new software with `/cli-anything`",
+    "highlights": [
+     "Wraps desktop software like GIMP, Blender, FreeCAD and Zotero as agent-ready CLIs",
+     "Community registry keeps adding CLIs, each with a SKILL.md",
+     "From the HKU Data Intelligence Lab (HKUDS)"
+    ],
+    "cautions": [
+     "Generated CLIs vary in quality; check their tests",
+     "You still need the target software installed",
+     "Last commit was ~3 weeks ago; pace has slowed"
+    ]
+   },
    "overall": 7.5
   },
   {
@@ -517,6 +650,21 @@
     "概念宣传多，学习曲线陡",
     "需要 Claude Code 2.1.287 以上"
    ],
+   "en": {
+    "stack": "TypeScript · MCP server (314 tools) · Claude Code plugins",
+    "type": "Multi-agent swarm framework",
+    "usage": "In Claude Code: `/plugin marketplace add ruvnet/ruflo`, then install core/console/mods; other clients: `npx ruflo@latest init wizard`",
+    "highlights": [
+     "Formerly Claude Flow: agent swarms, cross-session memory and federation",
+     "Visual console for cost, swarms and missions",
+     "14-chapter guide in English and Chinese"
+    ],
+    "cautions": [
+     "Mods run with your account's permissions and are not sandboxed; read the code first",
+     "Lots of conceptual marketing; steep learning curve",
+     "Needs Claude Code 2.1.287 or later"
+    ]
+   },
    "overall": 7.2
   },
   {
@@ -557,6 +705,20 @@
     "仅对 Android 开发者有用",
     "不接受外部贡献"
    ],
+   "en": {
+    "stack": "Markdown SKILL.md · Android CLI",
+    "type": "Official Android agent skills",
+    "usage": "`android skills add --all`, or in Claude Code `/plugin install android-skills --marketplace android/skills`",
+    "highlights": [
+     "Official from Google, focused on Android tasks where LLMs score poorly in evals",
+     "One command installs into every detected agent",
+     "Available in the Claude Code, Codex and Gemini plugin marketplaces"
+    ],
+    "cautions": [
+     "Only useful for Android developers",
+     "No outside contributions accepted"
+    ]
+   },
    "overall": 6.8
   },
   {
@@ -595,133 +757,210 @@
     "需要自己运维一个服务端",
     "团队共享时注意哪些内容进了共享记忆"
    ],
+   "en": {
+    "stack": "Rust server · git-versioned Markdown wiki · lifecycle hooks",
+    "type": "Cross-agent long-term memory",
+    "usage": "Self-host the ai-memory server (laptop or homelab), then launch agents with `ai-memory run <agent>` to hand off",
+    "highlights": [
+     "20+ agents (Claude Code, Codex, Cursor…) share one memory; switch tools mid-task without losing context",
+     "Memory is plain Markdown you can grep or open in Obsidian",
+     "Zero LLM calls by default; memory decays by usage"
+    ],
+    "cautions": [
+     "You have to run and maintain a server",
+     "On a team, watch what ends up in shared memory"
+    ]
+   },
    "overall": 6.8
   }
  ],
  "excluded": [
   {
    "name": "anthropics/claude-plugins-official",
-   "reason": "插件目录（资源合集）",
+   "reason": {
+    "zh": "插件目录（资源合集）",
+    "en": "plugin directory (collection)"
+   },
    "stars_today": 1383,
    "url": "https://github.com/anthropics/claude-plugins-official"
   },
   {
    "name": "krahets/hello-algo",
-   "reason": "今日新增 62 < 100；且为教程",
+   "reason": {
+    "zh": "今日新增 62 < 100；且为教程",
+    "en": "62 stars today < 100; tutorial"
+   },
    "stars_today": 62,
    "url": "https://github.com/krahets/hello-algo"
   },
   {
    "name": "maotoumao/MusicFree",
-   "reason": "今日新增 35 < 100",
+   "reason": {
+    "zh": "今日新增 35 < 100",
+    "en": "35 stars today < 100"
+   },
    "stars_today": 35,
    "url": "https://github.com/maotoumao/MusicFree"
   },
   {
    "name": "Evil0ctal/Douyin_TikTok_Download_API",
-   "reason": "今日新增 37 < 100",
+   "reason": {
+    "zh": "今日新增 37 < 100",
+    "en": "37 stars today < 100"
+   },
    "stars_today": 37,
    "url": "https://github.com/Evil0ctal/Douyin_TikTok_Download_API"
   },
   {
    "name": "hiroi-sora/Umi-OCR",
-   "reason": "今日新增 38 < 100",
+   "reason": {
+    "zh": "今日新增 38 < 100",
+    "en": "38 stars today < 100"
+   },
    "stars_today": 38,
    "url": "https://github.com/hiroi-sora/Umi-OCR"
   },
   {
    "name": "aoaostar/legado",
-   "reason": "今日新增 32 < 100；且为书源合集",
+   "reason": {
+    "zh": "今日新增 32 < 100；且为书源合集",
+    "en": "32 stars today < 100; book-source collection"
+   },
    "stars_today": 32,
    "url": "https://github.com/aoaostar/legado"
   },
   {
    "name": "forthespada/CS-Books",
-   "reason": "今日新增 13 < 100；且为资源合集",
+   "reason": {
+    "zh": "今日新增 13 < 100；且为资源合集",
+    "en": "13 stars today < 100; resource collection"
+   },
    "stars_today": 13,
    "url": "https://github.com/forthespada/CS-Books"
   },
   {
    "name": "ruanyf/weekly",
-   "reason": "今日新增 64 < 100；且为周刊内容",
+   "reason": {
+    "zh": "今日新增 64 < 100；且为周刊内容",
+    "en": "64 stars today < 100; weekly newsletter"
+   },
    "stars_today": 64,
    "url": "https://github.com/ruanyf/weekly"
   },
   {
    "name": "jeequan/jeepay",
-   "reason": "今日新增 5 < 100",
+   "reason": {
+    "zh": "今日新增 5 < 100",
+    "en": "5 stars today < 100"
+   },
    "stars_today": 5,
    "url": "https://github.com/jeequan/jeepay"
   },
   {
    "name": "easzlab/kubeasz",
-   "reason": "今日新增 0 < 100",
+   "reason": {
+    "zh": "今日新增 0 < 100",
+    "en": "0 stars today < 100"
+   },
    "stars_today": 0,
    "url": "https://github.com/easzlab/kubeasz"
   },
   {
    "name": "langbot-app/LangBot",
-   "reason": "今日新增 29 < 100",
+   "reason": {
+    "zh": "今日新增 29 < 100",
+    "en": "29 stars today < 100"
+   },
    "stars_today": 29,
    "url": "https://github.com/langbot-app/LangBot"
   },
   {
    "name": "fanmingming/live",
-   "reason": "今日新增 12 < 100；且为资源合集",
+   "reason": {
+    "zh": "今日新增 12 < 100；且为资源合集",
+    "en": "12 stars today < 100; resource collection"
+   },
    "stars_today": 12,
    "url": "https://github.com/fanmingming/live"
   },
   {
    "name": "ProletRevDicta/Prolet",
-   "reason": "今日新增 3 < 100；且为文献合集",
+   "reason": {
+    "zh": "今日新增 3 < 100；且为文献合集",
+    "en": "3 stars today < 100; document collection"
+   },
    "stars_today": 3,
    "url": "https://github.com/ProletRevDicta/Prolet"
   },
   {
    "name": "Moriafly/SaltPlayerSource",
-   "reason": "今日新增 8 < 100",
+   "reason": {
+    "zh": "今日新增 8 < 100",
+    "en": "8 stars today < 100"
+   },
    "stars_today": 8,
    "url": "https://github.com/Moriafly/SaltPlayerSource"
   },
   {
    "name": "zizifn/edgetunnel",
-   "reason": "今日新增 7 < 100；且超过一年未更新",
+   "reason": {
+    "zh": "今日新增 7 < 100；且超过一年未更新",
+    "en": "7 stars today < 100; no updates for over a year"
+   },
    "stars_today": 7,
    "url": "https://github.com/zizifn/edgetunnel"
   },
   {
    "name": "XIU2/CloudflareSpeedTest",
-   "reason": "今日新增 15 < 100",
+   "reason": {
+    "zh": "今日新增 15 < 100",
+    "en": "15 stars today < 100"
+   },
    "stars_today": 15,
    "url": "https://github.com/XIU2/CloudflareSpeedTest"
   },
   {
    "name": "OI-wiki/OI-wiki",
-   "reason": "今日新增 10 < 100；且为教程",
+   "reason": {
+    "zh": "今日新增 10 < 100；且为教程",
+    "en": "10 stars today < 100; tutorial"
+   },
    "stars_today": 10,
    "url": "https://github.com/OI-wiki/OI-wiki"
   },
   {
    "name": "xiaojieonly/Ehviewer_CN_SXJ",
-   "reason": "今日新增 29 < 100",
+   "reason": {
+    "zh": "今日新增 29 < 100",
+    "en": "29 stars today < 100"
+   },
    "stars_today": 29,
    "url": "https://github.com/xiaojieonly/Ehviewer_CN_SXJ"
   },
   {
    "name": "rebase-network/who-is-hiring",
-   "reason": "今日新增 0 < 100",
+   "reason": {
+    "zh": "今日新增 0 < 100",
+    "en": "0 stars today < 100"
+   },
    "stars_today": 0,
    "url": "https://github.com/rebase-network/who-is-hiring"
   },
   {
    "name": "YSGStudyHards/DotNetGuide",
-   "reason": "今日新增 7 < 100；且为面试指南",
+   "reason": {
+    "zh": "今日新增 7 < 100；且为面试指南",
+    "en": "7 stars today < 100; interview guide"
+   },
    "stars_today": 7,
    "url": "https://github.com/YSGStudyHards/DotNetGuide"
   },
   {
    "name": "coolsnowwolf/lede",
-   "reason": "今日新增 3 < 100",
+   "reason": {
+    "zh": "今日新增 3 < 100",
+    "en": "3 stars today < 100"
+   },
    "stars_today": 3,
    "url": "https://github.com/coolsnowwolf/lede"
   }
