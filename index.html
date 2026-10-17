@@ -82,13 +82,9 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 #heroArt{display:block;padding:10px;width:100%;max-width:540px;margin-left:auto;will-change:transform;transition:transform .15s ease-out;cursor:pointer}
 #heroArt img{width:100%;height:auto;pointer-events:none}
 .saw-art{display:block;position:relative}
-.saw-blade{position:absolute;inset:0;pointer-events:none;background:url('hero.png') center/100% 100% no-repeat;animation:saw-idle .12s steps(2,end) infinite}
-.saw-blade.left{clip-path:polygon(9% 0,18% 0,31% 35%,22% 38%,12% 14%)}
-.saw-blade.head{clip-path:polygon(48% 16%,65% 3%,70% 3%,69% 9%,51% 23%);animation-delay:-.04s}
-.saw-blade.right{clip-path:polygon(67% 39%,85% 26%,91% 27%,88% 34%,70% 46%);animation-delay:-.08s}
-@keyframes saw-idle{0%,100%{transform:translate(0,0)}50%{transform:translate(.8px,-.8px)}}
-@keyframes saw-rev{0%,100%{transform:translate(-1px,1px)}50%{transform:translate(1.5px,-1.5px)}}
-.hero.rev .saw-blade{animation-name:saw-rev;animation-duration:.05s}
+.saw-chains{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.chain-tooth{offset-rotate:auto;animation:chain-travel 3s linear infinite}
+@keyframes chain-travel{from{offset-distance:0%}to{offset-distance:100%}}
 /* 拟声词 */
 .sfx{position:absolute;font-family:var(--display);color:var(--red);-webkit-text-stroke:2px var(--ink);text-shadow:4px 4px 0 var(--ink);pointer-events:none;line-height:1}
 .sfx.a{top:-12%;right:0;font-size:clamp(36px,5vw,64px);transform:rotate(12deg);animation:shake .18s infinite}
@@ -96,9 +92,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 @keyframes shake{50%{translate:2px -2px}}
 .scroll-hint{display:inline-flex;align-items:center;gap:8px;margin-top:32px;font-family:var(--cn);font-size:20px}
 .scroll-hint b{color:var(--red);animation:shake .3s infinite}
-/* 点击插画：整幅画短暂震动 */
-.hero.rev .saw-art{animation:buzz .05s infinite}
-@keyframes buzz{50%{transform:translate(1px,-1px)}}
+/* 锯齿沿闭合轨道运行；点击通过播放速率平滑加速。 */
 @media (max-width:860px){
   .hero .wrap{grid-template-columns:1fr}
   #heroArt{max-width:400px;margin:0 auto}
@@ -289,7 +283,7 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
     <div class="art">
       <span class="sfx a" aria-hidden="true">ブゥゥン!!</span>
       <span class="sfx b" aria-hidden="true">ギャリ</span>
-      <button id="heroArt" type="button" data-i18n="heroArtwork"><span class="saw-art"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="电锯人与波奇塔同人插画，电锯运转中，点击加速"><span class="saw-blade left" aria-hidden="true"></span><span class="saw-blade head" aria-hidden="true"></span><span class="saw-blade right" aria-hidden="true"></span></span></button>
+      <button id="heroArt" type="button" data-i18n="heroArtwork"><span class="saw-art"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="电锯人与波奇塔同人插画，电锯运转中，点击加速"></span></button>
     </div>
   </div>
 </header>
@@ -809,7 +803,7 @@ const EN = {
     nav1: 'Products', nav2: 'Open Source', nav3: 'Writing', nav4: 'About', nav5: 'Contact',
     heroP: "Hi, I'm Lucas, also known as Powvy. I'm a student in Dubai building useful tools with AI and exploring how technology and business can solve real problems.",
     heroTags: '<span class="tag red">Student · Builder</span><span class="tag">AI &amp; Business</span><span class="tag">Dubai</span>',
-    heroArtwork: '<span class="saw-art"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="Chainsaw Man and Pochita fan art. Chainsaws running. Activate to rev them up."><span class="saw-blade left" aria-hidden="true"></span><span class="saw-blade head" aria-hidden="true"></span><span class="saw-blade right" aria-hidden="true"></span></span>',
+    heroArtwork: '<span class="saw-art"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="Chainsaw Man and Pochita fan art. Chainsaws running. Activate to rev them up."></span>',
     heroHint: "<b>▼</b>See what I've made",
     hProducts: "<small>EP.01 · PRODUCTS</small>Things I've made",
     pProducts: 'Each one started as a fix for my own problem, then got shared.',
@@ -1019,6 +1013,47 @@ const tr = (kind, key, item) => lang === 'en' ? { ...item, ...(EN[kind][key] || 
 // 静态文字：首次运行时记下中文原文，切换时整体替换
 const ZH_UI = {};
 document.querySelectorAll('[data-i18n]').forEach(el => { ZH_UI[el.dataset.i18n] = el.innerHTML; });
+// 轨道使用 hero.png 的原始像素坐标，随 SVG viewBox 一起缩放。
+function addSawChains() {
+  const paths = [
+    'M298 381 L145 109 Q120 58 155 30 Q183 14 208 60 L346 333 Q361 363 335 385 Z',
+    'M675 175 L879 59 Q917 35 932 63 Q950 86 919 109 L707 235 Z',
+    'M890 516 L1151 344 Q1186 314 1216 340 Q1240 365 1207 393 L950 563 Z'
+  ];
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', '0 0 1374 1145');
+  svg.setAttribute('class', 'saw-chains');
+  svg.setAttribute('aria-hidden', 'true');
+  paths.forEach(d => {
+    const rail = document.createElementNS(ns, 'path');
+    rail.setAttribute('d', d);
+    rail.setAttribute('fill', 'none');
+    rail.setAttribute('stroke', '#0d0d0d');
+    rail.setAttribute('stroke-width', '6');
+    svg.appendChild(rail);
+    const length = rail.getTotalLength(), count = Math.round(length / 24), duration = length / 180;
+    for (let i = 0; i < count; i++) {
+      const tooth = document.createElementNS(ns, 'path');
+      tooth.setAttribute('class', 'chain-tooth');
+      tooth.setAttribute('d', 'M-7 3 L-4 -8 L6 -8 L2 0 L7 3 Z');
+      tooth.setAttribute('fill', '#EFEAE0');
+      tooth.setAttribute('stroke', '#0d0d0d');
+      tooth.setAttribute('stroke-width', '2');
+      tooth.style.offsetPath = `path("${d}")`;
+      tooth.style.offsetDistance = `${i / count * 100}%`;
+      tooth.style.animationDuration = `${duration}s`;
+      tooth.style.animationDelay = `${-i / count * duration}s`;
+      svg.appendChild(tooth);
+    }
+  });
+  document.querySelector('.saw-art').appendChild(svg);
+}
+function setChainSpeed(rate) {
+  document.querySelectorAll('.chain-tooth').forEach(tooth => {
+    tooth.getAnimations().forEach(animation => animation.updatePlaybackRate(rate));
+  });
+}
 function applyStatic() {
   document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -1026,6 +1061,8 @@ function applyStatic() {
   });
   document.getElementById('langBtn').textContent = t('langBtn');
   document.getElementById('mClose').setAttribute('aria-label', t('close'));
+  addSawChains();
+  if (document.getElementById('hero').classList.contains('rev')) setChainSpeed(4);
 }
 applyStatic();
 
@@ -1123,7 +1160,11 @@ queue();
 let revTimer;
 heroArt.addEventListener('click', e => {
   hero.classList.add('rev');
-  clearTimeout(revTimer); revTimer = setTimeout(() => hero.classList.remove('rev'), 1000);
+  setChainSpeed(4);
+  clearTimeout(revTimer); revTimer = setTimeout(() => {
+    hero.classList.remove('rev');
+    setChainSpeed(1);
+  }, 1000);
   const rect = heroArt.getBoundingClientRect();
   splat(e.detail ? e.clientX : rect.left + rect.width / 2,
         e.detail ? e.clientY : rect.top + rect.height / 2);
