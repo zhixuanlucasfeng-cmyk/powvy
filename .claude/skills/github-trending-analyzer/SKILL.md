@@ -37,7 +37,7 @@ Write `$W/analysis.json`:
  "excluded": {"owner/repo": {"zh": "今日新增 62 < 100；且为教程", "en": "62 stars today < 100; tutorial"}}}
 ```
 `cats`: 1–3 of `agent` (AI agents), `claude` (Claude Code ecosystem / skills / plugins), `coding` (coding tools), `memory` (memory, RAG), `llm` (models, inference), `media` (audio, video, image), `data` (data, scraping, trading), `infra` (infra, DevOps), `security`, `app` (apps, productivity). The page filters by these and by `language`.
-Facts come from the README only, no invented claims. The `en` block is a faithful English version of the same facts. Use today's UTC date.
+Facts come from the README only, no invented claims. The `en` block is a faithful English version of the same facts. Use today's date in Dubai: `TZ=Asia/Dubai date +%F`.
 
 ## 4. Build
 ```bash
