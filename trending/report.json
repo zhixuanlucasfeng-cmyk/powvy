@@ -1,0 +1,729 @@
+{
+ "date": "2026-10-17",
+ "weights": {
+  "popularity": 0.3,
+  "maintenance": 0.25,
+  "usability": 0.25,
+  "virality": 0.2
+ },
+ "total_fetched": 33,
+ "projects": [
+  {
+   "name": "anomalyco/opencode",
+   "description": "The open source coding agent.",
+   "language": "TypeScript",
+   "stars": 214757,
+   "stars_today": 576,
+   "url": "https://github.com/anomalyco/opencode",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-17T14:58:58Z",
+   "created_at": "2025-04-30T20:08:00Z",
+   "topics": [],
+   "license": "MIT",
+   "forks": 28817,
+   "open_issues": 4550,
+   "archived": false,
+   "homepage": "https://opencode.ai",
+   "scores": {
+    "popularity": 9,
+    "maintenance": 10,
+    "usability": 9,
+    "virality": 8
+   },
+   "stack": "TypeScript（Bun）终端 TUI + 桌面端",
+   "type": "开源 AI 编码 Agent",
+   "usage": "curl -fsSL https://opencode.ai/install | bash，或 brew / npm / scoop 安装后在项目目录运行 opencode",
+   "highlights": [
+    "开源版 Claude Code 类工具，可接多家模型",
+    "安装渠道极全（brew、scoop、pacman、nix、mise）",
+    "提供桌面版（Beta），21 种语言 README"
+   ],
+   "cautions": [
+    "需要自备模型 API Key 或订阅",
+    "安装前先卸载 0.1.x 以下旧版本"
+   ],
+   "overall": 9.1
+  },
+  {
+   "name": "debpalash/VoiceStudio",
+   "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+   "language": "Python",
+   "stars": 72489,
+   "stars_today": 2135,
+   "url": "https://github.com/debpalash/VoiceStudio",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-17T13:47:53Z",
+   "created_at": "2026-04-09T21:40:26Z",
+   "topics": [
+    "ai",
+    "audiobook",
+    "cuda",
+    "dubbing",
+    "elevenlabs-alternative",
+    "huggingface",
+    "local-first",
+    "mlx",
+    "omnivoice-studio",
+    "speech-to-text",
+    "text-to-speech",
+    "transcription",
+    "translate",
+    "tts",
+    "voice-ai",
+    "voice-cloning",
+    "voice-generation",
+    "voicestudio",
+    "workflow"
+   ],
+   "license": "AGPL-3.0",
+   "forks": 7929,
+   "open_issues": 202,
+   "archived": false,
+   "homepage": "https://voicestudio.sh",
+   "scores": {
+    "popularity": 9,
+    "maintenance": 9,
+    "usability": 8,
+    "virality": 9
+   },
+   "stack": "Electron + Python 后端（PyTorch）+ Rust，默认引擎 k2-fsa/OmniVoice",
+   "type": "桌面应用 · AI 语音",
+   "usage": "一行命令安装（curl voicestudio.sh/install | sh，Windows 用 irm|iex），或下载 dmg/exe/AppImage；也可让编码 Agent 按 docs/install/agent.md 自动装",
+   "highlights": [
+    "完全本地的 ElevenLabs 替代：克隆声音、设计声音、视频配音、听写、有声书",
+    "支持 646 种语言，CUDA / Apple Silicon 加速，无独显也能跑",
+    "自带本地 API 与 MCP，可被 Agent 调用"
+   ],
+   "cautions": [
+    "AGPL-3.0，商用二次分发要开源",
+    "声音克隆需取得本人授权，注意合规",
+    "CPU 版也要约 5GB 磁盘；Intel Mac 只能连远程后端"
+   ],
+   "overall": 8.8
+  },
+  {
+   "name": "stablyai/orca",
+   "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Codex). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+   "language": "TypeScript",
+   "stars": 94996,
+   "stars_today": 829,
+   "url": "https://github.com/stablyai/orca",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-17T14:54:42Z",
+   "created_at": "2026-03-17T03:28:57Z",
+   "topics": [
+    "ade",
+    "agent-ide",
+    "ai-agents",
+    "automation",
+    "bot",
+    "claude-code",
+    "codex",
+    "ghostty",
+    "grok-bot",
+    "hermes-agent",
+    "mobile-app",
+    "muse",
+    "openclaw",
+    "opencode",
+    "orchestration",
+    "pi",
+    "runtime",
+    "terminal",
+    "worktrees",
+    "yc-backed"
+   ],
+   "license": "MIT",
+   "forks": 6083,
+   "open_issues": 8523,
+   "archived": false,
+   "homepage": "https://orca.dev",
+   "scores": {
+    "popularity": 8,
+    "maintenance": 10,
+    "usability": 9,
+    "virality": 8
+   },
+   "stack": "TypeScript · 桌面 IDE（VS Code 编辑器内核 + WebGL 终端）",
+   "type": "多 Agent 编排 IDE",
+   "usage": "官网下载桌面应用，另有 iOS / Android 伴侣 App；也可用 orca CLI 脚本化",
+   "highlights": [
+    "并排跑 Claude Code / Codex / OpenCode 等，每个 Agent 独立 git worktree，择优合并",
+    "手机端监控 Agent、接收完成通知",
+    "Design Mode：点选网页元素直接把 HTML/CSS/截图送进提示词"
+   ],
+   "cautions": [
+    "多 Agent 并行会成倍消耗额度",
+    "迭代极快（每日发版），功能文档常滞后于 changelog"
+   ],
+   "overall": 8.8
+  },
+  {
+   "name": "anthropics/claude-code",
+   "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+   "language": "TypeScript",
+   "stars": 151452,
+   "stars_today": 168,
+   "url": "https://github.com/anthropics/claude-code",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-16T20:53:06Z",
+   "created_at": "2025-02-22T17:41:21Z",
+   "topics": [],
+   "license": null,
+   "forks": 26864,
+   "open_issues": 15165,
+   "archived": false,
+   "homepage": "https://code.claude.com/docs/en/overview",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 9,
+    "usability": 10,
+    "virality": 8
+   },
+   "stack": "TypeScript / Node 18+（仓库主要是插件与 issue）",
+   "type": "官方 AI 编码终端工具",
+   "usage": "curl -fsSL https://claude.ai/install.sh | bash 或 brew install --cask claude-code，进入项目目录运行 claude",
+   "highlights": [
+    "Anthropic 官方，终端内理解代码库、执行任务、处理 git",
+    "仓库附带多个官方插件示例",
+    "安装一行搞定，跨 macOS / Linux / Windows"
+   ],
+   "cautions": [
+    "无开源许可证，仓库不是完整源码",
+    "需要 Claude 订阅或 API 额度",
+    "npm 安装方式已弃用"
+   ],
+   "overall": 8.4
+  },
+  {
+   "name": "affaan-m/ECC",
+   "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+   "language": "JavaScript",
+   "stars": 282068,
+   "stars_today": 1145,
+   "url": "https://github.com/affaan-m/ECC",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-15T19:17:01Z",
+   "created_at": "2026-01-18T00:51:51Z",
+   "topics": [
+    "ai-agents",
+    "anthropic",
+    "claude",
+    "claude-code",
+    "developer-tools",
+    "llm",
+    "mcp",
+    "productivity"
+   ],
+   "license": "MIT",
+   "forks": 41945,
+   "open_issues": 237,
+   "archived": false,
+   "homepage": "https://ecc.tools",
+   "scores": {
+    "popularity": 10,
+    "maintenance": 9,
+    "usability": 6,
+    "virality": 8
+   },
+   "stack": "JavaScript / Node 18+，Claude Code 插件 + npm 包",
+   "type": "Agent 工作流增强套件",
+   "usage": "Claude Code 内用插件命令安装 ecc@ecc，或 npm 包 ecc-universal 走引导式安装",
+   "highlights": [
+    "71 个 Agent、311 个 Skill、Hooks、记忆与持续学习一次装好",
+    "内置 AgentShield 扫描提示词、Hooks、MCP 配置与密钥",
+    "支持 Claude Code、Codex、Kimi 等 7 种 Agent 环境"
+   ],
+   "cautions": [
+    "体量巨大，全部启用会占用上下文，建议按需挑选",
+    "有付费 Pro 版（私有仓库 $19/席/月）",
+    "README 提醒存在冒名包，只从官方渠道安装"
+   ],
+   "overall": 8.3
+  },
+  {
+   "name": "MadsLorentzen/ai-job-search",
+   "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+   "language": "Python",
+   "stars": 49544,
+   "stars_today": 1397,
+   "url": "https://github.com/MadsLorentzen/ai-job-search",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-15T16:16:00Z",
+   "created_at": "2026-03-18T14:33:04Z",
+   "topics": [
+    "ai",
+    "ai-agents",
+    "career",
+    "claude-code",
+    "cover-letter",
+    "cv",
+    "interview-preparation",
+    "job-application",
+    "job-hunting",
+    "job-search",
+    "latex",
+    "resume"
+   ],
+   "license": "MIT",
+   "forks": 16810,
+   "open_issues": 50,
+   "archived": false,
+   "homepage": null,
+   "scores": {
+    "popularity": 9,
+    "maintenance": 8,
+    "usability": 6,
+    "virality": 9
+   },
+   "stack": "Python 3.10+ · Bun 招聘爬取 CLI · LaTeX 简历模板 · Claude Code 斜杠命令",
+   "type": "求职自动化框架",
+   "usage": "克隆后运行 tools/install_portal_clis.py，在 Claude Code 里依次用 /setup、/scrape、/apply、/interview",
+   "highlights": [
+    "作者亲测：69 份定制申请、20 次面试、拿到 offer",
+    "岗位匹配打分 + 定制简历/求职信 + 审稿 Agent 互评",
+    "流程与国家、语言无关，可扩展招聘门户"
+   ],
+   "cautions": [
+    "Fork 永远公开，个人资料会进仓库，应改用私有仓库",
+    "需要付费 Claude；还要装 LaTeX（lualatex/xelatex）",
+    "与 Anthropic 无关，项目方声明无任何代币"
+   ],
+   "overall": 8.0
+  },
+  {
+   "name": "K-Dense-AI/scientific-agent-skills",
+   "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+   "language": "Python",
+   "stars": 52027,
+   "stars_today": 879,
+   "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-15T23:57:39Z",
+   "created_at": "2025-10-19T20:54:15Z",
+   "topics": [
+    "agent-skills",
+    "ai-scientist",
+    "bioinformatics",
+    "chemoinformatics",
+    "claude",
+    "claude-skills",
+    "claudecode",
+    "clinical-research",
+    "computational-biology",
+    "data-analysis",
+    "drug-discovery",
+    "genomics",
+    "materials-science",
+    "metabolomics",
+    "proteomics",
+    "scientific-computing",
+    "scientific-visualization"
+   ],
+   "license": "MIT",
+   "forks": 4605,
+   "open_issues": 49,
+   "archived": false,
+   "homepage": "https://arxiv.org/abs/2609.00065",
+   "scores": {
+    "popularity": 8,
+    "maintenance": 9,
+    "usability": 7,
+    "virality": 7
+   },
+   "stack": "Python · Agent Skills 开放标准（SKILL.md + 辅助脚本）",
+   "type": "科研 Agent 技能库",
+   "usage": "按 Agent Skills 标准安装到 Claude Code、Cursor、Codex 等，向 Agent 提科研任务即可自动调用",
+   "highlights": [
+    "177 个科研技能：生信、化学、医学、物理、地学等",
+    "覆盖 80 个科学数据库与 70+ Python 科研包的版本化流程",
+    "配套 arXiv 论文与视频教程"
+   ],
+   "cautions": [
+    "仅限科研用途，明确不用于临床诊断",
+    "部分数据库需注册或授权",
+    "技能多，按领域挑选安装更省上下文"
+   ],
+   "overall": 7.8
+  },
+  {
+   "name": "xerj-org/xerj",
+   "description": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
+   "language": "Rust",
+   "stars": 7482,
+   "stars_today": 1102,
+   "url": "https://github.com/xerj-org/xerj",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-17T15:03:07Z",
+   "created_at": "2026-06-30T04:32:45Z",
+   "topics": [
+    "ai-search",
+    "ai-search-algorithms",
+    "ai-search-engine",
+    "ai-search-free",
+    "ai-search-module",
+    "ai-search-optimization",
+    "ai-searchengine",
+    "bm25-search",
+    "elastic-search",
+    "elasticsearch",
+    "elasticstack",
+    "graph-search",
+    "graph-semantic-search",
+    "hybrid-search",
+    "hybrid-semantic-search",
+    "search-api",
+    "search-engine",
+    "semantic-search",
+    "vector-database",
+    "vector-search"
+   ],
+   "license": "Apache-2.0",
+   "forks": 388,
+   "open_issues": 21,
+   "archived": false,
+   "homepage": "https://xerj.org",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 9,
+    "usability": 7,
+    "virality": 7
+   },
+   "stack": "Rust 单二进制 · MCP + Skill 接入",
+   "type": "本地代码搜索引擎（给 Agent 用）",
+   "usage": "curl -fsSL https://xerj.org/get | sh，xerj init 接入 Claude Code/Cursor，xerj autoindex 建索引",
+   "highlights": [
+    "自动索引任意目录，Agent 直接取段落而非整文件读取",
+    "参考编码：先克隆相近开源仓库再检索解法",
+    "官方对照实验：输出 token 降 2.7 倍，解题率不变"
+   ],
+   "cautions": [
+    "--insecure 会关闭 TLS 与鉴权，只能本机单人使用",
+    "项目仅 3 个半月，watcher 只有 20，增速数据宜谨慎看待",
+    "社区要求用户提交 PR 形式的使用报告"
+   ],
+   "overall": 7.5
+  },
+  {
+   "name": "HKUDS/CLI-Anything",
+   "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+   "language": "Python",
+   "stars": 53858,
+   "stars_today": 580,
+   "url": "https://github.com/HKUDS/CLI-Anything",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-09-22T02:01:29Z",
+   "created_at": "2026-03-08T13:52:57Z",
+   "topics": [],
+   "license": "Apache-2.0",
+   "forks": 4888,
+   "open_issues": 183,
+   "archived": false,
+   "homepage": "https://clianything.cc/",
+   "scores": {
+    "popularity": 8,
+    "maintenance": 7,
+    "usability": 7,
+    "virality": 8
+   },
+   "stack": "Python · CLI-Hub 包管理（pip）· SKILL.md 生成",
+   "type": "软件 → Agent CLI 转换框架",
+   "usage": "pip install cli-anything-hub，然后 cli-hub install <工具名>；或用 /cli-anything 命令为新软件生成 CLI",
+   "highlights": [
+    "把 GIMP、Blender、FreeCAD、Zotero 等桌面软件包装成 Agent 可用的 CLI",
+    "社区注册表持续收录新 CLI，每个都附 SKILL.md",
+    "港大 HKUDS 团队出品"
+   ],
+   "cautions": [
+    "生成的 CLI 质量参差，需看测试覆盖",
+    "目标软件本体仍需自行安装",
+    "最近一次提交约 3 周前，节奏比前期放缓"
+   ],
+   "overall": 7.5
+  },
+  {
+   "name": "ruvnet/ruflo",
+   "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+   "language": "TypeScript",
+   "stars": 75881,
+   "stars_today": 406,
+   "url": "https://github.com/ruvnet/ruflo",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-17T14:48:45Z",
+   "created_at": "2025-06-02T21:24:20Z",
+   "topics": [
+    "agentic-ai",
+    "agentic-framework",
+    "agentic-workflow",
+    "agents",
+    "ai-agents",
+    "ai-assistant",
+    "ai-skills",
+    "autonomous-agents",
+    "claude",
+    "codex",
+    "dsh-plugin",
+    "harness",
+    "mcp-server",
+    "multi-agent",
+    "multi-agent-systems",
+    "npm",
+    "skills",
+    "swarm",
+    "swarm-intelligence",
+    "typescript"
+   ],
+   "license": "MIT",
+   "forks": 8990,
+   "open_issues": 1057,
+   "archived": false,
+   "homepage": "https://Cognitum.One",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 9,
+    "usability": 6,
+    "virality": 7
+   },
+   "stack": "TypeScript · MCP 服务器（314 个工具）· Claude Code 插件",
+   "type": "多 Agent 蜂群编排框架",
+   "usage": "Claude Code 内 /plugin marketplace add ruvnet/ruflo 后安装 core/console/mods；其他客户端用 npx ruflo@latest init wizard",
+   "highlights": [
+    "前身 Claude Flow，提供 Agent 蜂群、跨会话记忆与联邦",
+    "可视化控制台：成本、蜂群、任务全程可查",
+    "有 14 章中文/英文入门指南"
+   ],
+   "cautions": [
+    "mods 以你的账户权限运行、未沙盒化，安装前读代码",
+    "概念宣传多，学习曲线陡",
+    "需要 Claude Code 2.1.287 以上"
+   ],
+   "overall": 7.2
+  },
+  {
+   "name": "android/skills",
+   "description": "",
+   "language": "Kotlin",
+   "stars": 8300,
+   "stars_today": 368,
+   "url": "https://github.com/android/skills",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-16T10:07:27Z",
+   "created_at": "2026-03-16T12:41:46Z",
+   "topics": [
+    "skills"
+   ],
+   "license": "Apache-2.0",
+   "forks": 548,
+   "open_issues": 37,
+   "archived": false,
+   "homepage": "",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 8,
+    "usability": 8,
+    "virality": 5
+   },
+   "stack": "Markdown SKILL.md · Android CLI",
+   "type": "官方 Android 开发 Agent 技能",
+   "usage": "android skills add --all，或在 Claude Code 中 /plugin install android-skills --marketplace android/skills",
+   "highlights": [
+    "Google 官方出品，只覆盖 LLM 评测中表现差的 Android 场景",
+    "一条命令装到所有已检测到的 Agent",
+    "支持 Claude Code、Codex、Gemini 插件市场"
+   ],
+   "cautions": [
+    "仅对 Android 开发者有用",
+    "不接受外部贡献"
+   ],
+   "overall": 6.8
+  },
+  {
+   "name": "akitaonrails/ai-memory",
+   "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+   "language": "Rust",
+   "stars": 9755,
+   "stars_today": 208,
+   "url": "https://github.com/akitaonrails/ai-memory",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-10-16T16:57:33Z",
+   "created_at": "2026-05-21T23:23:51Z",
+   "topics": [],
+   "license": "MIT",
+   "forks": 703,
+   "open_issues": 36,
+   "archived": false,
+   "homepage": "",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 9,
+    "usability": 6,
+    "virality": 6
+   },
+   "stack": "Rust 服务端 · git 版本化 Markdown wiki · 生命周期 Hooks",
+   "type": "跨 Agent 长期记忆",
+   "usage": "自建 ai-memory 服务（本机或家庭服务器），用 ai-memory run <agent> 启动 Agent 即可交接",
+   "highlights": [
+    "Claude Code、Codex、Cursor 等 20+ Agent 共用一份记忆，中途换工具不丢上下文",
+    "记忆是纯 Markdown，可 grep、可用 Obsidian 打开",
+    "默认零 LLM 调用，记忆按使用频率自动衰减"
+   ],
+   "cautions": [
+    "需要自己运维一个服务端",
+    "团队共享时注意哪些内容进了共享记忆"
+   ],
+   "overall": 6.8
+  }
+ ],
+ "excluded": [
+  {
+   "name": "anthropics/claude-plugins-official",
+   "reason": "插件目录（资源合集）",
+   "stars_today": 1383,
+   "url": "https://github.com/anthropics/claude-plugins-official"
+  },
+  {
+   "name": "krahets/hello-algo",
+   "reason": "今日新增 62 < 100；且为教程",
+   "stars_today": 62,
+   "url": "https://github.com/krahets/hello-algo"
+  },
+  {
+   "name": "maotoumao/MusicFree",
+   "reason": "今日新增 35 < 100",
+   "stars_today": 35,
+   "url": "https://github.com/maotoumao/MusicFree"
+  },
+  {
+   "name": "Evil0ctal/Douyin_TikTok_Download_API",
+   "reason": "今日新增 37 < 100",
+   "stars_today": 37,
+   "url": "https://github.com/Evil0ctal/Douyin_TikTok_Download_API"
+  },
+  {
+   "name": "hiroi-sora/Umi-OCR",
+   "reason": "今日新增 38 < 100",
+   "stars_today": 38,
+   "url": "https://github.com/hiroi-sora/Umi-OCR"
+  },
+  {
+   "name": "aoaostar/legado",
+   "reason": "今日新增 32 < 100；且为书源合集",
+   "stars_today": 32,
+   "url": "https://github.com/aoaostar/legado"
+  },
+  {
+   "name": "forthespada/CS-Books",
+   "reason": "今日新增 13 < 100；且为资源合集",
+   "stars_today": 13,
+   "url": "https://github.com/forthespada/CS-Books"
+  },
+  {
+   "name": "ruanyf/weekly",
+   "reason": "今日新增 64 < 100；且为周刊内容",
+   "stars_today": 64,
+   "url": "https://github.com/ruanyf/weekly"
+  },
+  {
+   "name": "jeequan/jeepay",
+   "reason": "今日新增 5 < 100",
+   "stars_today": 5,
+   "url": "https://github.com/jeequan/jeepay"
+  },
+  {
+   "name": "easzlab/kubeasz",
+   "reason": "今日新增 0 < 100",
+   "stars_today": 0,
+   "url": "https://github.com/easzlab/kubeasz"
+  },
+  {
+   "name": "langbot-app/LangBot",
+   "reason": "今日新增 29 < 100",
+   "stars_today": 29,
+   "url": "https://github.com/langbot-app/LangBot"
+  },
+  {
+   "name": "fanmingming/live",
+   "reason": "今日新增 12 < 100；且为资源合集",
+   "stars_today": 12,
+   "url": "https://github.com/fanmingming/live"
+  },
+  {
+   "name": "ProletRevDicta/Prolet",
+   "reason": "今日新增 3 < 100；且为文献合集",
+   "stars_today": 3,
+   "url": "https://github.com/ProletRevDicta/Prolet"
+  },
+  {
+   "name": "Moriafly/SaltPlayerSource",
+   "reason": "今日新增 8 < 100",
+   "stars_today": 8,
+   "url": "https://github.com/Moriafly/SaltPlayerSource"
+  },
+  {
+   "name": "zizifn/edgetunnel",
+   "reason": "今日新增 7 < 100；且超过一年未更新",
+   "stars_today": 7,
+   "url": "https://github.com/zizifn/edgetunnel"
+  },
+  {
+   "name": "XIU2/CloudflareSpeedTest",
+   "reason": "今日新增 15 < 100",
+   "stars_today": 15,
+   "url": "https://github.com/XIU2/CloudflareSpeedTest"
+  },
+  {
+   "name": "OI-wiki/OI-wiki",
+   "reason": "今日新增 10 < 100；且为教程",
+   "stars_today": 10,
+   "url": "https://github.com/OI-wiki/OI-wiki"
+  },
+  {
+   "name": "xiaojieonly/Ehviewer_CN_SXJ",
+   "reason": "今日新增 29 < 100",
+   "stars_today": 29,
+   "url": "https://github.com/xiaojieonly/Ehviewer_CN_SXJ"
+  },
+  {
+   "name": "rebase-network/who-is-hiring",
+   "reason": "今日新增 0 < 100",
+   "stars_today": 0,
+   "url": "https://github.com/rebase-network/who-is-hiring"
+  },
+  {
+   "name": "YSGStudyHards/DotNetGuide",
+   "reason": "今日新增 7 < 100；且为面试指南",
+   "stars_today": 7,
+   "url": "https://github.com/YSGStudyHards/DotNetGuide"
+  },
+  {
+   "name": "coolsnowwolf/lede",
+   "reason": "今日新增 3 < 100",
+   "stars_today": 3,
+   "url": "https://github.com/coolsnowwolf/lede"
+  }
+ ]
+}
