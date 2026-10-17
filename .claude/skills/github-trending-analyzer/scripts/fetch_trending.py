@@ -1,9 +1,13 @@
 """Fetch GitHub Trending (all + zh + per-language boards), merge, enrich candidates via GitHub API.
 Usage: python3 fetch_trending.py out.json"""
-import html, json, re, subprocess, sys, urllib.request
+import html, json, os, re, subprocess, sys, urllib.request
 
 def get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "application/vnd.github+json"})
+    h = {"User-Agent": "Mozilla/5.0", "Accept": "application/vnd.github+json"}
+    tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if tok and url.startswith("https://api.github.com/"):
+        h["Authorization"] = "Bearer " + tok
+    req = urllib.request.Request(url, headers=h)
     return urllib.request.urlopen(req, timeout=30).read().decode()
 
 def num(s):

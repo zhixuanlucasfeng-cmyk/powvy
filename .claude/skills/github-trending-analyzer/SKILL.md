@@ -13,7 +13,7 @@ Lives in the Powvy site repo (`zhixuanlucasfeng-cmyk/powvy`). Output goes to `tr
 ```bash
 python3 $SKILL/scripts/fetch_trending.py $W/raw.json
 ```
-Parses the daily all-language board, the Chinese board (`zh`) and 14 language boards (python, typescript, rust, go…), merges duplicates (`boards: ["all","zh","python"]`), and enriches repos with ≥ 50 stars today via `gh api` or the anonymous GitHub API (pushed_at, license, forks, topics). Takes 2–4 min.
+Parses the daily all-language board, the Chinese board (`zh`) and 14 language boards (python, typescript, rust, go…), merges duplicates (`boards: ["all","zh","python"]`), and enriches repos with ≥ 50 stars today via `gh api`, or the GitHub API with `$GITHUB_TOKEN` if set, else anonymously (60 requests/h; repos past the limit get `api_error` and no pushed_at, so judge maintenance from the README) (pushed_at, license, forks, topics). Takes 2–4 min.
 
 ## 2. Filter (record every exclusion with a zh + en reason)
 - `stars_today < 50` → not a candidate, drop silently (not listed as excluded)
@@ -23,7 +23,7 @@ Parses the daily all-language board, the Chinese board (`zh`) and 14 language bo
 - Analyses from earlier days can be reused for repos that are still trending (copy from the previous `trending/data/<date>.json`).
 
 ## 3. Read READMEs and score
-For each survivor read the top ~150 lines of the README:
+For each survivor read the top ~150 lines of the README. Prefer the raw file, which has no API rate limit: `curl -sL https://raw.githubusercontent.com/<name>/HEAD/README.md` (try `readme.md` / `README.rst` if 404). Otherwise:
 `curl -sL -H "Accept: application/vnd.github.raw" https://api.github.com/repos/<name>/readme` (or `gh api repos/<name>/readme -H "Accept: application/vnd.github.raw"`).
 Score 1–10: `popularity` (today's stars, total, forks/watchers sanity), `maintenance` (last push, cadence), `usability` (install effort, prerequisites, paid deps), `virality` (story, demo, appeal). The build script computes overall (weights .3/.25/.25/.2).
 
