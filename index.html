@@ -520,6 +520,11 @@ const ART = {
     <rect x="36" y="130" width="90" height="10" fill="#fff" stroke-width="2"/><rect x="36" y="130" width="62" height="10" fill="${ORG}" stroke-width="2"/>
     <text x="36" y="125" font-size="9" stroke="none" fill="#666">5h 预计 68%</text>
     <text x="36" y="158" font-size="10" stroke="none" fill="#666">Claude · Codex · DeepSeek</text>`),
+  // 热榜：柱状图 + 星星
+  trending: windowArt(`
+    ${[96, 74, 62, 48, 40, 30].map((h, i) => `<rect x="${48 + i * 36}" y="${170 - h}" width="24" height="${h}" fill="${i < 1 ? RED : i < 3 ? ORG : '#fff'}"/>`).join('')}
+    <path d="M40 170h228"/>
+    <path d="M246 46l7 15 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2z" fill="${RED}"/>`),
   // Colorbook：像素数字填色
   colorbook: windowArt(`
     ${Array.from({length: 6 * 11}, (_, n) => { const r = n / 11 | 0, c = n % 11, v = (r * 3 + c * 5) % 4 + 1, done = c < 6;
@@ -560,6 +565,9 @@ const ART = {
    ========================================================= */
 const GH = 'https://github.com/zhixuanlucasfeng-cmyk/';
 const products = [
+  { id:'trending', name:'Powvy 热榜', tag:'每日 GitHub 热门', url:'trending/index.html',
+    desc:'每天自动扫 GitHub Trending，筛掉合集和刷星项目，读完 README 给 50 个项目打分、分类。',
+    features:['综合分排名 + 新增 Star 排名一键切换','按 AI Agent、Claude Code、记忆、编程工具、语言等分类筛选','可以翻看之前每天的榜单'] },
 {
   "id": "liangli",
   "name": "Powy",
@@ -893,6 +901,8 @@ const EN = {
   },
     power: { tag:'Personal AI agent', desc:'Claude Code, Codex, Hermes, opencode and every other agent CLI on my Mac in one desktop app — an AI crew that remembers and learns skills.',
       features:['Multi-character crew with group chat: @mention someone, or let it route automatically','Memory lives in Obsidian and is recalled across sessions; skills accumulate on their own','Mac app + Telegram remote control, and it asks me before sending any message'] },
+    trending: { name:'Powvy Trending', tag:'Daily GitHub trending', desc:'Scans GitHub Trending every day, drops collections and star-farmed repos, then reads the READMEs to score and sort 50 projects.',
+      features:['Switch between overall score and stars-gained rankings','Filter by AI agents, Claude Code, memory, coding tools, language and more','Browse the rankings from previous days'] },
     dryrun: { tag:'CIE CS revision', desc:'A Cambridge Computer Science revision tool: trace tables, logic gates and pseudocode conversion. One file, zero dependencies, works offline.',
       features:['Pseudocode trace-table simulator + logic-gate truth tables and circuits','Structured English / trace table / flowchart → pseudocode','Practice mode with generated, auto-marked questions'] },
     restsolar: { tag:'AI customer service', desc:'A trilingual (EN / FR / ZH) AI support agent for a solar company in Cameroon. It answers stock and price questions and hands off to a human in one tap.',

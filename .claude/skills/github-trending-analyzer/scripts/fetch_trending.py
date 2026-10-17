@@ -1,4 +1,5 @@
-"""Fetch GitHub Trending (all + zh), merge, enrich via GitHub API. Usage: python3 fetch_trending.py out.json"""
+"""Fetch GitHub Trending (all + zh + per-language boards), merge, enrich candidates via GitHub API.
+Usage: python3 fetch_trending.py out.json"""
 import html, json, re, subprocess, sys, urllib.request
 
 def get(url):
@@ -27,14 +28,25 @@ def gh_api(path):
     except Exception:
         return json.loads(get("https://api.github.com/" + path))
 
+MIN_TODAY = 50  # below this a repo is not a candidate and is not enriched
+LANGS = ["python", "typescript", "javascript", "rust", "go", "jupyter-notebook", "c++", "java", "swift", "kotlin", "c", "c%23", "shell", "dart"]
+T = "https://github.com/trending"
+BOARDS = [("all", T + "?since=daily"), ("zh", T + "?since=daily&spoken_language_code=zh")] + [(l, f"{T}/{l}?since=daily") for l in LANGS]
+
 merged = {}
-for board, q in [("all", ""), ("zh", "&spoken_language_code=zh")]:
-    for r in parse(get("https://github.com/trending?since=daily" + q), board):
+for board, url in BOARDS:
+    try:
+        rows = parse(get(url), board)
+    except Exception as e:
+        print(f"skip {board}: {e}", file=sys.stderr); continue
+    for r in rows:
         if r["name"] in merged:
             merged[r["name"]]["boards"].append(board)
         else:
             merged[r["name"]] = r
 for r in merged.values():
+    if r["stars_today"] < MIN_TODAY:
+        continue
     try:
         m = gh_api(f"repos/{r['name']}")
         r.update(pushed_at=m.get("pushed_at"), created_at=m.get("created_at"), topics=m.get("topics", []),
@@ -43,4 +55,4 @@ for r in merged.values():
     except Exception as e:
         r["api_error"] = str(e)
 json.dump(list(merged.values()), open(sys.argv[1], "w"), ensure_ascii=False, indent=1)
-print(f"{len(merged)} unique repos -> {sys.argv[1]}")
+print(f"{len(merged)} unique repos, {sum(r['stars_today'] >= MIN_TODAY for r in merged.values())} with >= {MIN_TODAY} stars today -> {sys.argv[1]}")

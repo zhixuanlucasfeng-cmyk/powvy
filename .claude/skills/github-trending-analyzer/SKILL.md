@@ -13,12 +13,14 @@ Lives in the Powvy site repo (`zhixuanlucasfeng-cmyk/powvy`). Output goes to `tr
 ```bash
 python3 $SKILL/scripts/fetch_trending.py $W/raw.json
 ```
-Parses `github.com/trending?since=daily` and `&spoken_language_code=zh`, merges duplicates (`boards: ["all","zh"]`), enriches via `gh api` or the anonymous GitHub API (pushed_at, license, forks, topics). Takes 1–2 min.
+Parses the daily all-language board, the Chinese board (`zh`) and 14 language boards (python, typescript, rust, go…), merges duplicates (`boards: ["all","zh","python"]`), and enriches repos with ≥ 50 stars today via `gh api` or the anonymous GitHub API (pushed_at, license, forks, topics). Takes 2–4 min.
 
-## 2. Filter (record every exclusion with a Chinese reason)
-- `stars_today < 100` → exclude
+## 2. Filter (record every exclusion with a zh + en reason)
+- `stars_today < 50` → not a candidate, drop silently (not listed as excluded)
 - `pushed_at` older than one year, or `archived` → exclude
 - Exclude by README/description: resource collections / awesome lists / plugin directories, interview questions, tutorials & config collections, pure low-level libraries, translations, obvious star-farmed marketing shells (very new + huge stars + tiny watchers/forks + empty README). Borderline → keep, note the doubt in `cautions`, lower `popularity`.
+- Keep at most **50**: the survivors with the most stars today. The rest are excluded with reason `今日新增 N，未进前 50` / `N stars today, outside the top 50`.
+- Analyses from earlier days can be reused for repos that are still trending (copy from the previous `trending/data/<date>.json`).
 
 ## 3. Read READMEs and score
 For each survivor read the top ~150 lines of the README:
@@ -29,18 +31,19 @@ Write `$W/analysis.json`:
 ```json
 {"date": "YYYY-MM-DD",
  "passed": {"owner/repo": {"scores": {"popularity": 9, "maintenance": 9, "usability": 8, "virality": 9},
-   "stack": "技术栈", "type": "项目类型", "usage": "使用方式（可用 `code`）",
+   "cats": ["agent", "claude"], "stack": "技术栈", "type": "项目类型", "usage": "使用方式（可用 `code`）",
    "highlights": ["核心亮点"], "cautions": ["注意事项"],
    "en": {"stack": "...", "type": "...", "usage": "...", "highlights": ["..."], "cautions": ["..."]}}},
  "excluded": {"owner/repo": {"zh": "今日新增 62 < 100；且为教程", "en": "62 stars today < 100; tutorial"}}}
 ```
+`cats`: 1–3 of `agent` (AI agents), `claude` (Claude Code ecosystem / skills / plugins), `coding` (coding tools), `memory` (memory, RAG), `llm` (models, inference), `media` (audio, video, image), `data` (data, scraping, trading), `infra` (infra, DevOps), `security`, `app` (apps, productivity). The page filters by these and by `language`.
 Facts come from the README only, no invented claims. The `en` block is a faithful English version of the same facts. Use today's UTC date.
 
 ## 4. Build
 ```bash
 python3 $SKILL/scripts/build_page.py $W/raw.json $W/analysis.json trending
 ```
-Writes `trending/index.html` (standalone page, Powvy manga style from `template.html`), `trending/report.json` (structured JSON), and `trending/trending.html` (Artifact fragment, gitignored). Don't edit the template per run.
+Writes `trending/index.html` (standalone page, Powvy manga style from `template.html`), `trending/report.json` (structured JSON), `trending/data/<date>.json` (daily archive; the page's day picker lists every file there), and `trending/trending.html` (Artifact fragment, gitignored). Don't edit the template per run.
 
 ## 5. Publish
-Commit only `trending/index.html` and `trending/report.json` with message `trending: YYYY-MM-DD`, and push to `main` (GitHub Pages deploys from main). No Co-Authored-By / Claude attribution lines. When run interactively, also reply with a top-5 table (综合分 / 今日新增 / 一句话亮点) and the page URL.
+Commit only `trending/index.html`, `trending/report.json` and `trending/data/` with message `trending: YYYY-MM-DD`, and push to `main` (GitHub Pages deploys from main). No Co-Authored-By / Claude attribution lines. When run interactively, also reply with a top-5 table (综合分 / 今日新增 / 一句话亮点) and the page URL.

@@ -66,6 +66,14 @@ select { width: auto; cursor: pointer; }
 .box { appearance: none; -webkit-appearance: none; width: 22px; height: 22px; flex: none; border: 3px solid #fff; background: transparent; cursor: pointer; display: grid; place-items: center; transform: skew(-8deg); }
 .box:checked { background: var(--red); }
 .box:checked::after { content: "✕"; color: #fff; font: 900 14px/1 var(--font); }
+.tabs { display: flex; flex-wrap: wrap; gap: 0; }
+.tabs button { font: 400 19px var(--cn); color: #fff; background: none; border: 3px solid #fff; padding: 3px 14px; cursor: pointer; }
+.tabs button + button { border-left: 0; }
+.tabs button[aria-pressed=true] { background: var(--red); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: -12px 0 26px; }
+.chip { font: 800 13.5px var(--font); border: 2px solid var(--ink); background: #fff; color: var(--ink); padding: 2px 10px; cursor: pointer; }
+.chip b { font-family: var(--display); font-weight: 400; color: var(--red); margin-left: 4px; }
+.chip[aria-pressed=true] { background: var(--ink); color: #fff; transform: skew(-8deg); }
 .card .box { border-color: var(--ink); background: #fff; }
 .card .box:checked { background: var(--red); }
 
@@ -165,11 +173,12 @@ footer small { display: block; font-weight: 800; margin-top: 10px; }
 <div class="wrap">
   <div class="toolbar">
     <div class="search"><input type="search" id="q" placeholder="搜索名称、类型、技术栈…" aria-label="Search" data-i18n-ph="search"></div>
-    <label><input type="checkbox" class="box" id="f-all" checked> <span data-i18n="all">全语言榜</span></label>
-    <label><input type="checkbox" class="box" id="f-zh" checked> <span data-i18n="zh">中文榜</span></label>
+    <div class="tabs" id="sort" role="group" aria-label="Ranking"><button type="button" data-k="overall" data-i18n="o1" aria-pressed="true">综合分排名</button><button type="button" data-k="stars_today" data-i18n="o2" aria-pressed="false">新增 Star 排名</button></div>
+    <label><select id="lng" aria-label="Language"></select></label>
+    <label><span data-i18n="day">日期</span> <select id="day" aria-label="Day"></select></label>
     <label><input type="checkbox" class="box" id="f-picked"> <span data-i18n="picked">只看我挑的</span></label>
-    <label><span data-i18n="sort">排序</span> <select id="sort" aria-label="Sort"><option value="overall" data-i18n="o1">综合分</option><option value="stars_today" data-i18n="o2">今日新增</option><option value="stars" data-i18n="o3">总 Star</option></select></label>
   </div>
+  <div class="chips" id="cats"></div>
 
   <main class="list" id="list"></main>
 
@@ -187,23 +196,30 @@ footer small { display: block; font-weight: 800; margin-top: 10px; }
 </footer>
 
 <script>
-const DATA = /*__DATA__*/null;
+let DATA = /*__DATA__*/null;
+const DAYS = DATA.days || [DATA.date];
+let sortKey = "overall", cat = "";
+const CATS = {
+  agent: ["AI Agent", "AI agents"], claude: ["Claude Code", "Claude Code"], coding: ["编程工具", "Coding tools"],
+  memory: ["记忆 / 知识库", "Memory & RAG"], llm: ["大模型 / 推理", "LLMs & inference"], media: ["音视频 / 图像", "Audio, video & image"],
+  data: ["数据 / 爬虫", "Data & scraping"], infra: ["基础设施 / 运维", "Infra & DevOps"], security: ["安全", "Security"], app: ["应用 / 效率", "Apps & productivity"],
+};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const fmt = n => n >= 1000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1) + "k" : String(n);
 let lang = "zh";
 try { lang = localStorage.getItem("powvy-lang") || (navigator.language.startsWith("zh") ? "zh" : "en"); } catch {}
 const T = {
-  zh: { h1: "今日 GitHub<br><em>热门</em>速报", chart: "综合分排行", search: "搜索名称、类型、技术栈…", all: "全语言榜", zh: "中文榜", picked: "只看我挑的",
-    sort: "排序", o1: "综合分", o2: "今日新增", o3: "总 Star", big: "挑一个，开干!", copy: "复制结构化 JSON", copied: "已复制 ✓", selected: "已选中，按 ⌘C 复制",
+  zh: { h1: "今日 GitHub<br><em>热门</em>速报", chart: "综合分 Top 15", search: "搜索名称、类型、技术栈…", zh: "中文榜", picked: "只看我挑的",
+    o1: "综合分排名", o2: "新增 Star 排名", day: "日期", allCats: "全部", allLangs: "全部语言", loadErr: "这一天的数据加载失败", big: "挑一个，开干!", copy: "复制结构化 JSON", copied: "已复制 ✓", selected: "已选中，按 ⌘C 复制",
     today: "今日", stack: "技术栈", usage: "怎么用", hl: "亮点", warn: "注意", meta: "综合分 · 最近提交", pick: "挑这个", empty: "……什么都没有。换个筛选条件试试。",
-    lede: (t, n) => `扫了全语言榜和中文榜共 ${t} 个项目。今日新增不足 100 星、一年没更新、合集教程类全部砍掉，剩下 ${n} 个，按综合分排好了。`,
+    lede: (t, n, m) => `扫了全语言榜、中文榜和各语言榜共 ${t} 个项目，今日新增不足 ${m} 星、一年没更新、合集教程类全部砍掉，剩下 ${n} 个，读完 README 打分分类。`,
     stats: ["入选", "被砍", "单日最高"], excl: n => `被砍掉的 ${n} 个项目`, dims: ["受欢迎", "活跃度", "易用性", "传播性"],
     rule: w => `综合分 = 受欢迎 ×${w.popularity} + 活跃度 ×${w.maintenance} + 易用性 ×${w.usability} + 传播性 ×${w.virality}`, title: "POWVY 热榜", toggle: "English", back: "← 返回首页" },
-  en: { h1: "GitHub<br><em>Trending</em> Today", chart: "Overall score ranking", search: "Search name, type, stack…", all: "All languages", zh: "Chinese", picked: "My picks only",
-    sort: "Sort", o1: "Overall", o2: "Stars today", o3: "Total stars", big: "Pick one. Ship it!", copy: "Copy JSON", copied: "Copied ✓", selected: "Selected, press ⌘C",
+  en: { h1: "GitHub<br><em>Trending</em> Today", chart: "Overall score · top 15", search: "Search name, type, stack…", zh: "Chinese", picked: "My picks only",
+    o1: "Overall ranking", o2: "Stars gained ranking", day: "Day", allCats: "All", allLangs: "All languages", loadErr: "Couldn't load that day", big: "Pick one. Ship it!", copy: "Copy JSON", copied: "Copied ✓", selected: "Selected, press ⌘C",
     today: "today", stack: "Stack", usage: "How to use", hl: "Highlights", warn: "Watch out", meta: "Overall · last push", pick: "Pick this", empty: "…nothing here. Try another filter.",
-    lede: (t, n) => `Scanned ${t} repos from the all-language and Chinese boards. Dropped anything under 100 stars today, stale for a year, or just a collection or tutorial. ${n} left, ranked by overall score.`,
+    lede: (t, n, m) => `Scanned ${t} repos from the all-language, Chinese and per-language boards. Dropped anything under ${m} stars today, stale for a year, or just a collection or tutorial. ${n} left, scored and sorted from their READMEs.`,
     stats: ["picked", "cut", "top day"], excl: n => `${n} repos that got cut`, dims: ["Popular", "Active", "Easy", "Viral"],
     rule: w => `Overall = popularity ×${w.popularity} + activity ×${w.maintenance} + ease ×${w.usability} + virality ×${w.virality}`, title: "POWVY Trending", toggle: "中文", back: "← Home" },
 };
@@ -246,7 +262,8 @@ function overview(ps) {
 
 function card(p, rank) {
   const [owner, repo] = p.name.split("/");
-  const boards = p.boards.map(b => `<span class="tag ${b === "zh" ? "orange" : ""}">${t(b)}</span>`).join("");
+  const boards = p.boards.includes("zh") ? `<span class="tag orange">${t("zh")}</span>` : "";
+  const cats = (p.cats || []).filter(c => CATS[c]).map(c => `<span class="tag ink">${CATS[c][lang === "en" ? 1 : 0]}</span>`).join("");
   const li = a => `<ul>${a.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
   const usage = esc(f(p, "usage")).replace(/`([^`]+)`/g, "<code>$1</code>");
   return `<article class="card ${picked.has(p.name) ? "picked" : ""}">
@@ -254,7 +271,7 @@ function card(p, rank) {
     <div class="main">
       <div class="title"><a href="${esc(p.url)}" target="_blank" rel="noopener"><span class="owner">${esc(owner)}/</span>${esc(repo)}</a></div>
       <p class="desc">${esc(p.description)}</p>
-      <div class="tags"><span class="tag red">+${fmt(p.stars_today)} ${t("today")}</span><span class="tag">★ ${fmt(p.stars)}</span>${p.language ? `<span class="tag ink">${esc(p.language)}</span>` : ""}<span class="tag">${esc(f(p, "type"))}</span>${boards}${p.license ? `<span class="tag">${esc(p.license)}</span>` : ""}</div>
+      <div class="tags"><span class="tag red">+${fmt(p.stars_today)} ${t("today")}</span><span class="tag">★ ${fmt(p.stars)}</span>${p.language ? `<span class="tag">${esc(p.language)}</span>` : ""}${cats}<span class="tag">${esc(f(p, "type"))}</span>${boards}${p.license ? `<span class="tag">${esc(p.license)}</span>` : ""}</div>
       <dl class="facts">
         <dt>${t("stack")}</dt><dd>${esc(f(p, "stack"))}</dd>
         <dt>${t("usage")}</dt><dd>${usage}</dd>
@@ -271,14 +288,14 @@ function card(p, rank) {
 }
 
 function render() {
-  const q = $("#q").value.trim().toLowerCase(), key = $("#sort").value;
-  const boards = new Set([$("#f-all").checked && "all", $("#f-zh").checked && "zh"].filter(Boolean));
-  const rankOf = new Map(DATA.projects.map((p, i) => [p.name, i + 1]));
-  const ps = DATA.projects
-    .filter(p => p.boards.some(b => boards.has(b)))
+  const q = $("#q").value.trim().toLowerCase(), key = sortKey, lng = $("#lng").value;
+  const sorted = [...DATA.projects].sort((a, b) => b[key] - a[key] || b.overall - a.overall);
+  const rankOf = new Map(sorted.map((p, i) => [p.name, i + 1]));
+  const ps = sorted
+    .filter(p => !cat || (p.cats || []).includes(cat))
+    .filter(p => !lng || p.language === lng)
     .filter(p => !$("#f-picked").checked || picked.has(p.name))
-    .filter(p => !q || [p.name, p.description, f(p, "type"), f(p, "stack"), p.language].join(" ").toLowerCase().includes(q))
-    .sort((a, b) => b[key] - a[key]);
+    .filter(p => !q || [p.name, p.description, f(p, "type"), f(p, "stack"), p.language].join(" ").toLowerCase().includes(q));
   $("#list").innerHTML = ps.length ? ps.map(p => card(p, rankOf.get(p.name))).join("")
     : `<div class="empty">${t("empty")}</div>`;
 }
@@ -292,7 +309,14 @@ function applyLang() {
   $("#lang").textContent = t("toggle");
   $("#back").textContent = t("back");
   $("#copy").textContent = t("copy");
-  $("#lede").textContent = T[lang].lede(d.total_fetched, n);
+  $("#lede").textContent = T[lang].lede(d.total_fetched, n, d.min_today || 100);
+  const count = k => d.projects.filter(p => (p.cats || []).includes(k)).length;
+  $("#cats").innerHTML = [["", t("allCats"), n], ...Object.keys(CATS).map(k => [k, CATS[k][lang === "en" ? 1 : 0], count(k)]).filter(c => c[2])]
+    .map(([k, label, c]) => `<button type="button" class="chip" data-cat="${k}" aria-pressed="${k === cat}">${esc(label)}<b>${c}</b></button>`).join("");
+  const langs = {}; d.projects.forEach(p => p.language && (langs[p.language] = (langs[p.language] || 0) + 1));
+  const cur = $("#lng").value;
+  $("#lng").innerHTML = `<option value="">${t("allLangs")}</option>` + Object.entries(langs).sort((a, b) => b[1] - a[1])
+    .map(([l, c]) => `<option value="${esc(l)}" ${l === cur ? "selected" : ""}>${esc(l)} (${c})</option>`).join("");
   const top = d.projects.reduce((a, p) => p.stars_today > a.stars_today ? p : a, d.projects[0] || { stars_today: 0 });
   $("#stats").innerHTML = [n, d.excluded.length, "+" + fmt(top.stars_today)]
     .map((v, i) => `<div class="stat"><b>${v}</b><span>${t("stats")[i]}</span></div>`).join("");
@@ -302,17 +326,34 @@ function applyLang() {
   render();
 }
 
-function init() {
-  const d = DATA;
-  $("#date").textContent = d.date;
-  overview(d.projects);
+function show() {
+  $("#date").textContent = DATA.date;
+  if (!(DATA.projects.some(p => (p.cats || []).includes(cat)))) cat = "";
+  overview([...DATA.projects].sort((a, b) => b.overall - a.overall).slice(0, 15));
   applyLang();
+}
+
+function init() {
+  $("#day").innerHTML = DAYS.map(x => `<option>${x}</option>`).join("");
+  show();
+  $("#day").addEventListener("change", async e => {
+    try { DATA = await (await fetch(`data/${e.target.value}.json`)).json(); show(); }
+    catch { e.target.value = DATA.date; $("#list").innerHTML = `<div class="empty">${t("loadErr")}</div>`; }
+  });
+  $("#sort").addEventListener("click", e => {
+    const k = e.target.dataset.k; if (!k) return;
+    sortKey = k; $("#sort").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === e.target)); render();
+  });
+  $("#cats").addEventListener("click", e => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    cat = b.dataset.cat; $("#cats").querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); render();
+  });
   $("#lang").addEventListener("click", () => {
     lang = lang === "en" ? "zh" : "en";
     try { localStorage.setItem("powvy-lang", lang); } catch {}
     applyLang();
   });
-  ["#q", "#sort", "#f-all", "#f-zh", "#f-picked"].forEach(s => $(s).addEventListener("input", render));
+  ["#q", "#lng", "#f-picked"].forEach(s => $(s).addEventListener("input", render));
   $("#list").addEventListener("change", e => {
     const name = e.target.dataset.pick; if (!name) return;
     e.target.checked ? picked.add(name) : picked.delete(name); savePicked();
@@ -320,7 +361,7 @@ function init() {
     if ($("#f-picked").checked) render();
   });
   $("#copy").addEventListener("click", async () => {
-    const txt = JSON.stringify(d, null, 2), btn = $("#copy");
+    const txt = JSON.stringify(DATA, null, 2), btn = $("#copy");
     try { await navigator.clipboard.writeText(txt); btn.textContent = t("copied"); }
     catch { const ta = document.createElement("textarea"); ta.value = txt; document.body.append(ta); ta.select(); btn.textContent = t("selected"); }
     setTimeout(() => btn.textContent = t("copy"), 2400);

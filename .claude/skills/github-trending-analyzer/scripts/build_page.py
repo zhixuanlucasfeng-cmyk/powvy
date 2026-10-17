@@ -1,8 +1,9 @@
-"""Merge raw trending + hand-written analysis -> report.json + crayon page.
+"""Merge raw trending + hand-written analysis -> report.json, data/<date>.json archive and the page.
 Usage: python3 build_page.py raw.json analysis.json out_dir"""
 import json, pathlib, sys
 
 W = {"popularity": .3, "maintenance": .25, "usability": .25, "virality": .2}
+MIN_TODAY = 50
 
 def build(raw, ana):
     raw = {r["name"]: r for r in raw}
@@ -14,12 +15,16 @@ def build(raw, ana):
     passed.sort(key=lambda r: (-r["overall"], -r["stars_today"]))
     excluded = [{"name": n, "reason": why if isinstance(why, dict) else {"zh": why, "en": why}, "stars_today": raw.get(n, {}).get("stars_today"), "url": f"https://github.com/{n}"}
                 for n, why in ana["excluded"].items()]
-    return {"date": ana["date"], "weights": W, "total_fetched": len(raw), "projects": passed, "excluded": excluded}
+    return {"date": ana["date"], "weights": W, "min_today": MIN_TODAY, "total_fetched": len(raw),
+            "candidates": sum(r["stars_today"] >= MIN_TODAY for r in raw.values()), "projects": passed, "excluded": excluded}
 
 if __name__ == "__main__":
     report = build(json.load(open(sys.argv[1])), json.load(open(sys.argv[2])))
     out = pathlib.Path(sys.argv[3]); out.mkdir(parents=True, exist_ok=True)
     (out / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1))
+    (out / "data").mkdir(exist_ok=True)
+    (out / "data" / f"{report['date']}.json").write_text(json.dumps(report, ensure_ascii=False))
+    report["days"] = sorted((p.stem for p in (out / "data").glob("*.json")), reverse=True)
     tpl = (pathlib.Path(__file__).parent.parent / "template.html").read_text()
     assert "/*__DATA__*/null" in tpl
     page = tpl.replace("/*__DATA__*/null", json.dumps(report, ensure_ascii=False).replace("</", "<\\/"))
