@@ -1017,7 +1017,7 @@ document.querySelectorAll('[data-i18n]').forEach(el => { ZH_UI[el.dataset.i18n] 
 function addSawChains() {
   const paths = [
     'M298 381 L145 109 Q120 58 155 30 Q183 14 208 60 L346 333 Q361 363 335 385 Z',
-    'M675 175 L879 59 Q917 35 932 63 Q950 86 919 109 L707 235 Z',
+    'M616 175 L891 51 Q920 39 932 63 Q945 91 916 116 L697 210 Q662 178 616 175 Z',
     'M890 516 L1151 344 Q1186 314 1216 340 Q1240 365 1207 393 L950 563 Z'
   ];
   const ns = 'http://www.w3.org/2000/svg';
@@ -1025,13 +1025,23 @@ function addSawChains() {
   svg.setAttribute('viewBox', '0 0 1374 1145');
   svg.setAttribute('class', 'saw-chains');
   svg.setAttribute('aria-hidden', 'true');
-  paths.forEach(d => {
+  // 头部锯链在橙色外壳后折返，避免锯齿穿过额头。
+  const headClip = document.createElementNS(ns, 'clipPath');
+  headClip.id = 'head-chain-clip';
+  const exposedBlade = document.createElementNS(ns, 'path');
+  exposedBlade.setAttribute('d', 'M600 150 L960 20 L970 145 L710 216 Q671 174 610 168 Z');
+  headClip.appendChild(exposedBlade);
+  svg.appendChild(headClip);
+  paths.forEach((d, index) => {
     const rail = document.createElementNS(ns, 'path');
     rail.setAttribute('d', d);
     rail.setAttribute('fill', 'none');
     rail.setAttribute('stroke', '#0d0d0d');
     rail.setAttribute('stroke-width', '6');
-    svg.appendChild(rail);
+    const track = document.createElementNS(ns, 'g');
+    if (index === 1) track.setAttribute('clip-path', 'url(#head-chain-clip)');
+    svg.appendChild(track);
+    track.appendChild(rail);
     const length = rail.getTotalLength(), count = Math.round(length / 24), duration = length / 180;
     for (let i = 0; i < count; i++) {
       const tooth = document.createElementNS(ns, 'path');
@@ -1044,7 +1054,7 @@ function addSawChains() {
       tooth.style.offsetDistance = `${i / count * 100}%`;
       tooth.style.animationDuration = `${duration}s`;
       tooth.style.animationDelay = `${-i / count * duration}s`;
-      svg.appendChild(tooth);
+      track.appendChild(tooth);
     }
   });
   document.querySelector('.saw-art').appendChild(svg);
