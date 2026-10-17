@@ -81,6 +81,14 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .art{position:relative}
 #heroArt{display:block;padding:10px;width:100%;max-width:540px;margin-left:auto;will-change:transform;transition:transform .15s ease-out;cursor:pointer}
 #heroArt img{width:100%;height:auto;pointer-events:none}
+.saw-art{display:block;position:relative}
+.saw-blade{position:absolute;inset:0;pointer-events:none;background:url('hero.png') center/100% 100% no-repeat;animation:saw-idle .12s steps(2,end) infinite}
+.saw-blade.left{clip-path:polygon(9% 0,18% 0,31% 35%,22% 38%,12% 14%)}
+.saw-blade.head{clip-path:polygon(48% 16%,65% 3%,70% 3%,69% 9%,51% 23%);animation-delay:-.04s}
+.saw-blade.right{clip-path:polygon(67% 39%,85% 26%,91% 27%,88% 34%,70% 46%);animation-delay:-.08s}
+@keyframes saw-idle{0%,100%{transform:translate(0,0)}50%{transform:translate(.8px,-.8px)}}
+@keyframes saw-rev{0%,100%{transform:translate(-1px,1px)}50%{transform:translate(1.5px,-1.5px)}}
+.hero.rev .saw-blade{animation-name:saw-rev;animation-duration:.05s}
 /* 拟声词 */
 .sfx{position:absolute;font-family:var(--display);color:var(--red);-webkit-text-stroke:2px var(--ink);text-shadow:4px 4px 0 var(--ink);pointer-events:none;line-height:1}
 .sfx.a{top:-12%;right:0;font-size:clamp(36px,5vw,64px);transform:rotate(12deg);animation:shake .18s infinite}
@@ -89,7 +97,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .scroll-hint{display:inline-flex;align-items:center;gap:8px;margin-top:32px;font-family:var(--cn);font-size:20px}
 .scroll-hint b{color:var(--red);animation:shake .3s infinite}
 /* 点击插画：整幅画短暂震动 */
-.hero.rev #heroArt img{animation:buzz .05s infinite}
+.hero.rev .saw-art{animation:buzz .05s infinite}
 @keyframes buzz{50%{transform:translate(1px,-1px)}}
 @media (max-width:860px){
   .hero .wrap{grid-template-columns:1fr}
@@ -281,7 +289,7 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
     <div class="art">
       <span class="sfx a" aria-hidden="true">ブゥゥン!!</span>
       <span class="sfx b" aria-hidden="true">ギャリ</span>
-      <button id="heroArt" type="button" data-i18n="heroArtwork"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="电锯人与波奇塔同人插画，点击启动电锯效果"></button>
+      <button id="heroArt" type="button" data-i18n="heroArtwork"><span class="saw-art"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="电锯人与波奇塔同人插画，电锯运转中，点击加速"><span class="saw-blade left" aria-hidden="true"></span><span class="saw-blade head" aria-hidden="true"></span><span class="saw-blade right" aria-hidden="true"></span></span></button>
     </div>
   </div>
 </header>
@@ -801,7 +809,7 @@ const EN = {
     nav1: 'Products', nav2: 'Open Source', nav3: 'Writing', nav4: 'About', nav5: 'Contact',
     heroP: "Hi, I'm Lucas, also known as Powvy. I'm a student in Dubai building useful tools with AI and exploring how technology and business can solve real problems.",
     heroTags: '<span class="tag red">Student · Builder</span><span class="tag">AI &amp; Business</span><span class="tag">Dubai</span>',
-    heroArtwork: '<img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="Chainsaw Man and Pochita fan art. Activate for a chainsaw effect.">',
+    heroArtwork: '<span class="saw-art"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="Chainsaw Man and Pochita fan art. Chainsaws running. Activate to rev them up."><span class="saw-blade left" aria-hidden="true"></span><span class="saw-blade head" aria-hidden="true"></span><span class="saw-blade right" aria-hidden="true"></span></span>',
     heroHint: "<b>▼</b>See what I've made",
     hProducts: "<small>EP.01 · PRODUCTS</small>Things I've made",
     pProducts: 'Each one started as a fix for my own problem, then got shared.',
