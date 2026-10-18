@@ -533,6 +533,16 @@ const ART = {
     <rect x="36" y="130" width="90" height="10" fill="#fff" stroke-width="2"/><rect x="36" y="130" width="62" height="10" fill="${ORG}" stroke-width="2"/>
     <text x="36" y="125" font-size="9" stroke="none" fill="#666">5h 预计 68%</text>
     <text x="36" y="158" font-size="10" stroke="none" fill="#666">Claude · Codex · DeepSeek</text>`),
+  // Powvy Note：从刘海落下的黑色便签面板
+  powvynote: windowArt(`
+    <path d="M70 40h180v108q0 14-14 14H84q-14 0-14-14z" fill="${INK}"/>
+    <path d="M128 40h64v8q0 6-6 6h-52q-6 0-6-6z" fill="#333" stroke="none"/>
+    <path d="M82 66h40M82 82h32M82 98h36" stroke="#666" stroke-width="5"/>
+    <rect x="78" y="58" width="48" height="16" fill="none" stroke="#888" stroke-width="2"/>
+    <path d="M136 60v94" stroke="#333" stroke-width="2"/>
+    <text x="148" y="76" font-size="12" font-weight="900" stroke="none" fill="#fff"># Today</text>
+    ${[0,1,2].map(i=>`<rect x="148" y="${88+i*20}" width="11" height="11" fill="${i===0?RED:INK}" stroke="#fff" stroke-width="2"/><path d="M168 ${94+i*20}h${[56,44,62][i]}" stroke="${i===0?'#777':'#fff'}" stroke-width="4"/>`).join('')}
+    <path d="M60 176l20-12M258 176l-20-12" stroke="${ORG}" stroke-width="3"/>`),
   // 热榜：柱状图 + 星星
   trending: windowArt(`
     ${[96, 74, 62, 48, 40, 30].map((h, i) => `<rect x="${48 + i * 36}" y="${170 - h}" width="24" height="${h}" fill="${i < 1 ? RED : i < 3 ? ORG : '#fff'}"/>`).join('')}
@@ -680,6 +690,9 @@ const products = [
   { id:'usage', name:'Claude Usage', tag:'Token 可视化', url: GH + 'claude-usage',
     desc:'看清今天在 Claude Code、Codex、DeepSeek 上花了多少 token 和多少钱。',
     features:['CLI + 本地仪表盘 + macOS 桌面小组件','额度预测：按当前速度算出重置时用到多少，快超时提醒几点用完','7 天趋势图 + 电锯人 / 蕾塞主题皮肤'] },
+  { id:'powvynote', name:'Powvy Note', tag:'刘海便签', url: GH + 'powvy-note',
+    desc:'鼠标移到屏幕顶部，便签就从 Mac 刘海里落下来；Windows 版从顶部小黑条展开。每条笔记都是普通 .md 文件。',
+    features:['悬停展开、移开收回，图钉可保持常开','Markdown 预览，任务清单直接勾选','macOS（Swift）+ Windows（Electron），MIT 开源'] },
   { id:'colorbook', name:'Colorbook', tag:'iPad 数字填色', url:'https://zhixuanlucasfeng-cmyk.github.io/colorbook/',
     desc:'没有广告的数字填色 App：任意照片一键变成像素填色画。',
     features:['照片 → 像素网格 + 自动配色（最多 64 色）','Apple Pencil 拖动涂色、油漆桶一键填充','离线可用的 PWA，还有微信小程序版'] },
@@ -748,6 +761,7 @@ const skills = [
   { name:'power',            prop:'group',  repo:'zhixuanlucasfeng-cmyk/power',            desc:'你的所有 Agent，一个房间。群聊、角色包、Obsidian 记忆。' },
   { name:'contract',         prop:'api',    repo:'zhixuanlucasfeng-cmyk/contract',         desc:'一把主密钥调用所有 Agent 工具，自动故障切换，自带 MCP。' },
   { name:'claude-usage',     prop:'slides', repo:'zhixuanlucasfeng-cmyk/claude-usage',     desc:'Claude Code / Codex / DeepSeek token 用量 CLI + 桌面小组件。' },
+  { name:'powvy-note',       prop:'cover',  repo:'zhixuanlucasfeng-cmyk/powvy-note',       desc:'Powvy Note 的源码：刘海悬停便签，Mac + Windows，笔记是本地 .md 文件。' },
   { name:'cie-cs-toolkit',   prop:'code',   repo:'zhixuanlucasfeng-cmyk/cie-cs-toolkit',   desc:'DryRun 的源码：CIE 计算机复习工具，单文件零依赖。' },
   { name:'rest-solar-agent', prop:'chat',   repo:'zhixuanlucasfeng-cmyk/rest-solar-agent', desc:'光伏公司 AI 客服：FastAPI + 规则引擎 + 真人接管。' },
   { name:'jc-sports-day',    prop:'rocket', repo:'zhixuanlucasfeng-cmyk/jc-sports-day',    desc:'开源运动会计分系统：项目、成绩、学院实时排名、导出。' },
@@ -928,6 +942,8 @@ const EN = {
       features:['Rule-engine guardrails: never invents prices, adds 19.25% VAT automatically','Multi-country admin: Cameroon / Nigeria / Sudan / Mali','Live-agent takeover with a waiting queue and real-time chat'] },
     usage: { tag:'Token dashboard', desc:'See exactly how many tokens — and how much money — you spent today on Claude Code, Codex and DeepSeek.',
       features:['CLI + local dashboard + macOS desktop widget','Limit forecast: where your plan limits land at reset at today\'s pace, and when you\'d run out','7-day trend chart + Chainsaw Man / Reze themes'] },
+    powvynote: { tag:'Notch notes', desc:'Hover the top of the screen and a note panel drops out of the Mac notch; on Windows it unfolds from a small pill. Every note is a plain .md file.',
+      features:['Opens on hover, closes when you move away; pin to keep it open','Markdown preview with tick-able task lists','macOS (Swift) + Windows (Electron), MIT open source'] },
     colorbook: { tag:'iPad color-by-number', desc:'An ad-free color-by-number app: turn any photo into a pixel paint-by-number picture.',
       features:['Photo → pixel grid with automatic palette (up to 64 colors)','Drag-paint with Apple Pencil, bucket-fill a whole number','Offline-capable PWA, plus a WeChat mini-program version'] },
     contract: { tag:'Agent tool gateway', desc:'One master key for every agent tool — search, scraping, finance and social data — with automatic failover when a provider goes down.',
@@ -975,6 +991,7 @@ const EN = {
     'power':            { desc:'Your agents, one room. Group chat, persona packs and Obsidian memory.' },
     'contract':         { desc:'One master key for every agent tool, with automatic failover and an MCP server.' },
     'claude-usage':     { desc:'Claude Code / Codex / DeepSeek token usage: CLI + desktop widget.' },
+    'powvy-note':       { desc:'Source of Powvy Note: hover-to-open notch notes for Mac + Windows, stored as local .md files.' },
     'cie-cs-toolkit':   { desc:'Source of DryRun: a CIE Computer Science revision tool, single file, zero deps.' },
     'rest-solar-agent': { desc:'Solar-company AI support: FastAPI + rule engine + human takeover.' },
     'jc-sports-day':    { desc:'Open-source sports-day scoring: events, results, live house standings, exports.' },
