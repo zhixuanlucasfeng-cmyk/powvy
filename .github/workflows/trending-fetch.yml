@@ -1,0 +1,28 @@
+# Fetches GitHub Trending + READMEs into trending/_raw/ for the daily Claude routine,
+# whose cloud sandbox can only reach this repo.
+name: trending-fetch
+on:
+  schedule:
+    - cron: "30 4 * * *" # 08:30 Asia/Dubai, before the 09:00 routine
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rm -rf trending/_raw && mkdir -p trending/_raw
+          python3 .claude/skills/github-trending-analyzer/scripts/fetch_trending.py trending/_raw/raw.json trending/_raw/readme
+          TZ=Asia/Dubai date +%F > trending/_raw/date.txt
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add trending/_raw
+          git commit -m "trending raw: $(cat trending/_raw/date.txt)" || exit 0
+          git push

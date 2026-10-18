@@ -1,9 +1,9 @@
 """Fetch GitHub Trending (all + zh + per-language boards), merge, enrich candidates via GitHub API.
-Usage: python3 fetch_trending.py out.json"""
-import html, json, os, re, subprocess, sys, urllib.request
+Usage: python3 fetch_trending.py out.json [readme_dir]  (readme_dir: also save each candidate's README as owner__repo.md)"""
+import html, json, os, pathlib, re, subprocess, sys, urllib.request
 
-def get(url):
-    h = {"User-Agent": "Mozilla/5.0", "Accept": "application/vnd.github+json"}
+def get(url, accept="application/vnd.github+json"):
+    h = {"User-Agent": "Mozilla/5.0", "Accept": accept}
     tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     if tok and url.startswith("https://api.github.com/"):
         h["Authorization"] = "Bearer " + tok
@@ -58,5 +58,13 @@ for r in merged.values():
                  archived=m.get("archived"), homepage=m.get("homepage"))
     except Exception as e:
         r["api_error"] = str(e)
+if len(sys.argv) > 2:
+    d = pathlib.Path(sys.argv[2]); d.mkdir(parents=True, exist_ok=True)
+    for r in merged.values():
+        if r["stars_today"] >= MIN_TODAY:
+            try:
+                (d / (r["name"].replace("/", "__") + ".md")).write_text(get(f"https://api.github.com/repos/{r['name']}/readme", "application/vnd.github.raw"))
+            except Exception as e:
+                print(f"no README for {r['name']}: {e}", file=sys.stderr)
 json.dump(list(merged.values()), open(sys.argv[1], "w"), ensure_ascii=False, indent=1)
 print(f"{len(merged)} unique repos, {sum(r['stars_today'] >= MIN_TODAY for r in merged.values())} with >= {MIN_TODAY} stars today -> {sys.argv[1]}")

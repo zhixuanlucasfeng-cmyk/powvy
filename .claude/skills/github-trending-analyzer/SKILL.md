@@ -10,6 +10,7 @@ Lives in the Powvy site repo (`zhixuanlucasfeng-cmyk/powvy`). Output goes to `tr
 `$SKILL` = this directory. `$W` = a scratch dir outside the repo (e.g. `/tmp/gt`).
 
 ## 1. Fetch
+If `trending/_raw/date.txt` equals today's Dubai date, use the prefetched data instead of fetching: `trending/_raw/raw.json` is the raw file and `trending/_raw/readme/<owner>__<repo>.md` are the READMEs (the `trending-fetch` GitHub Action writes them daily at 08:30 Dubai; the cloud routine can only reach this repo, so it must use these). Run the Action by hand with `gh workflow run trending-fetch` if needed. Otherwise fetch:
 ```bash
 python3 $SKILL/scripts/fetch_trending.py $W/raw.json
 ```
