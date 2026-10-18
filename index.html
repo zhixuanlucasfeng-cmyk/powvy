@@ -1039,7 +1039,7 @@ const PROJECT_COVERS = {
   solarhub:'restar', 'solar-countries':'restar', restsolar:'restar', camaroom:'restar'
 };
 const productArt = (id, detail = false) => PROJECT_COVERS[id]
-  ? `<img class="project-art" src="assets/projects/${PROJECT_COVERS[id]}.webp" srcset="assets/projects/${PROJECT_COVERS[id]}-small.webp 640w, assets/projects/${PROJECT_COVERS[id]}.webp 1586w" sizes="${detail ? '(max-width: 820px) 100vw, 800px' : '(max-width: 600px) 100vw, 400px'}" width="1586" height="992" alt="" loading="${detail ? 'eager' : 'lazy'}" decoding="async">`
+  ? `<img class="project-art" src="assets/projects/${PROJECT_COVERS[id]}.webp" srcset="assets/projects/${PROJECT_COVERS[id]}-small.webp 640w, assets/projects/${PROJECT_COVERS[id]}.webp 1586w" sizes="${detail || id === 'badminton' ? '(max-width: 820px) 100vw, 800px' : '(max-width: 600px) 100vw, 400px'}" width="1586" height="992" alt="" loading="${detail ? 'eager' : 'lazy'}" decoding="async">`
   : lang === 'en' && EN_ART[id] ? EN_ART[id] : ART[id];
 let lang = 'zh';
 try { lang = localStorage.getItem('powvy-lang') || (navigator.language.startsWith('zh') ? 'zh' : 'en'); } catch (e) {}
