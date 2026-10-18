@@ -453,6 +453,7 @@ function windowArt(inner) {
   </g></svg>`;
 }
 const ART = {
+  badminton: windowArt(`<g fill="none" stroke="${INK}" stroke-width="3" transform="rotate(25 115 100)"><ellipse cx="115" cy="82" rx="35" ry="47" fill="${ORG}"/><path d="M94 44v76M108 36v92M122 36v92M136 44v76M82 62h66M80 80h70M82 98h66M115 129v46"/><path d="M115 156v28" stroke-width="10"/></g><path d="M213 89l-21-39 15 5 9-15 8 15 15-5-19 39z" fill="#fff"/><path d="M213 89q-9 14 4 19q14-4 3-19" fill="${RED}"/><path d="M186 143h83M186 159h60" stroke="${INK}" stroke-width="6"/>`),
   liangli: windowArt(`
     <rect x="34" y="56" width="150" height="116" fill="${PAPER}"/>
     ${[0,1,2].map(i=>`<rect x="46" y="${70+i*30}" width="16" height="16" fill="${i===0?RED:PAPER}"/><path d="M74 ${78+i*30}h92"/>`).join('')}
@@ -572,6 +573,9 @@ const ART = {
    ========================================================= */
 const GH = 'https://github.com/zhixuanlucasfeng-cmyk/';
 const products = [
+  { id:'badminton', name:'Powvy Badminton', tag:'羽毛球装备 · 开发中', links:[],
+    desc:'面向阿联酋球友的羽毛球拍信息与选购工具，整合规格、球友评分、价格比较和二手市场。项目开发中，公开链接待补充。',
+    features:['查看球拍规格与球友评分','比较阿联酋市场价格','浏览与发布二手球拍信息'] },
   { id:'trending', name:'Powvy 热榜', tag:'每日 GitHub 热门', url:'trending/index.html',
     desc:'每天自动扫 GitHub Trending，筛掉合集和刷星项目，读完 README 给 50 个项目打分、分类。',
     features:['综合分排名 + 新增 Star 排名一键切换','按 AI Agent、Claude Code、记忆、编程工具、语言等分类筛选','可以翻看之前每天的榜单'] },
@@ -838,6 +842,9 @@ const EN = {
     dBack: '← Back', dSave: 'Save', dShare: 'Share'
   },
   products: {
+    badminton: { tag:'Badminton gear · In development',
+      desc:'A racquet discovery tool for badminton players in the UAE, bringing together specs, player ratings, price comparisons and a second-hand marketplace. In development; a public link will be added when available.',
+      features:['Explore racquet specifications and player ratings','Compare prices in the UAE','Browse and list second-hand racquets'] },
 
   "liangli": {
     "tag": "Personal growth PWA",
