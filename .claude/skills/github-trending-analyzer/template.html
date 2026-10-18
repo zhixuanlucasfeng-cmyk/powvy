@@ -76,6 +76,25 @@ select { width: auto; cursor: pointer; }
 .box { appearance: none; -webkit-appearance: none; width: 22px; height: 22px; flex: none; border: 3px solid #fff; background: transparent; cursor: pointer; display: grid; place-items: center; transform: skew(-8deg); }
 .box:checked { background: var(--red); }
 .box:checked::after { content: "✕"; color: #fff; font: 900 14px/1 var(--font); }
+/* AI news / GitHub switch: [data-gh] and [data-news] only show in their own mode */
+body.news [data-gh], body:not(.news) [data-news] { display: none !important; }
+.modes { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+.modes button { font: 400 22px var(--display); color: var(--ink); background: #fff; border: 3px solid var(--ink); padding: 4px 18px 2px; cursor: pointer; transform: skew(-8deg); transition: transform .15s, box-shadow .15s; }
+.modes button[aria-pressed=true] { background: var(--ink); color: #fff; box-shadow: 5px 5px 0 var(--red); }
+.modes button:hover { transform: skew(-8deg) translateY(-2px); }
+.brief { list-style: none; padding: 4px 4px 8px; counter-reset: b; display: grid; gap: 10px; }
+.brief li { counter-increment: b; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: baseline; border-bottom: 2px dashed rgba(0,0,0,.18); padding-bottom: 8px; }
+.brief li::before { content: counter(b); font: 400 24px/1 var(--display); color: var(--red); -webkit-text-stroke: 1px var(--ink); }
+.brief a { font-weight: 800; font-size: 15px; line-height: 1.4; text-decoration: none; }
+.brief a:hover { color: var(--red); }
+.brief b { font: 400 15px var(--display); font-variant-numeric: tabular-nums; }
+.why { margin-top: 10px; border-left: 4px solid var(--red); padding-left: 10px; font-size: 14.5px; }
+.why b { font-family: var(--cn); font-weight: 400; font-size: 17px; margin-right: 6px; }
+.srcs { margin-top: 10px; font-size: 13px; color: var(--muted); }
+.srcs a { font-weight: 800; color: var(--ink); }
+.srcs a:hover { color: var(--red); }
+.heat { font: 400 20px var(--display); }
+.heat small { font: 800 12px var(--font); color: var(--muted); display: block; }
 .tabs { display: flex; flex-wrap: wrap; gap: 0; }
 .tabs button { font: 400 19px var(--cn); color: #fff; background: none; border: 3px solid #fff; padding: 3px 14px; cursor: pointer; }
 .tabs button + button { border-left: 0; }
@@ -179,14 +198,16 @@ footer small { display: block; font-weight: 800; margin-top: 10px; }
   <div class="wrap">
     <div>
       <span class="date" id="date"></span>
-      <h1 data-i18n="h1">今日 GitHub<br><em>热门</em>速报</h1>
+      <div class="modes" id="modes" role="group" aria-label="Section"><button type="button" data-mode="news"></button><button type="button" data-mode="gh"></button></div>
+      <h1 id="h1"></h1>
       <p class="bubble" id="lede"></p>
       <div class="stats" id="stats"></div>
     </div>
     <div class="panel">
       <span class="sfx a">ドン!</span>
-      <h2 data-i18n="chart">综合分排行</h2>
-      <svg id="overview" viewBox="0 0 560 250" role="img" aria-label="各项目综合分柱状图"></svg>
+      <h2 id="chart"></h2>
+      <svg id="overview" data-gh viewBox="0 0 560 250" role="img" aria-label="各项目综合分柱状图"></svg>
+      <ol class="brief" id="brief" data-news></ol>
     </div>
   </div>
 </section>
@@ -194,16 +215,17 @@ footer small { display: block; font-weight: 800; margin-top: 10px; }
 <div class="wrap">
   <div class="toolbar">
     <div class="search"><input type="search" id="q" placeholder="搜索名称、类型、技术栈…" aria-label="Search" data-i18n-ph="search"></div>
-    <div class="tabs" id="sort" role="group" aria-label="Ranking"><button type="button" data-k="overall" data-i18n="o1" aria-pressed="true">综合分排名</button><button type="button" data-k="stars_today" data-i18n="o2" aria-pressed="false">新增 Star 排名</button></div>
-    <label><select id="lng" aria-label="Language"></select></label>
+    <div class="tabs" id="nsort" data-news role="group" aria-label="Ranking"><button type="button" data-k="score" data-i18n="s1" aria-pressed="true">精选分排名</button><button type="button" data-k="heat" data-i18n="s2" aria-pressed="false">热度排名</button></div>
+    <div class="tabs" id="sort" data-gh role="group" aria-label="Ranking"><button type="button" data-k="overall" data-i18n="o1" aria-pressed="true">综合分排名</button><button type="button" data-k="stars_today" data-i18n="o2" aria-pressed="false">新增 Star 排名</button></div>
+    <label data-gh><select id="lng" aria-label="Language"></select></label>
     <label><span data-i18n="day">日期</span> <select id="day" aria-label="Day"></select></label>
-    <label><input type="checkbox" class="box" id="f-picked"> <span data-i18n="picked">只看我挑的</span></label>
+    <label data-gh><input type="checkbox" class="box" id="f-picked"> <span data-i18n="picked">只看我挑的</span></label>
   </div>
-  <div class="chips" id="cats"></div>
+  <div class="chips" id="cats" data-gh></div>
 
   <main class="list" id="list"></main>
 
-  <details class="excl">
+  <details class="excl" data-gh>
     <summary id="excl-sum">被筛掉的项目</summary>
     <div class="excl-grid" id="excl"></div>
   </details>
@@ -211,7 +233,7 @@ footer small { display: block; font-weight: 800; margin-top: 10px; }
 
 <footer>
   <div class="wrap">
-    <div><div class="big" data-i18n="big">挑一个，开干!</div><small id="rule"></small></div>
+    <div><div class="big" data-i18n="big">挑一个，开干!</div><small id="rule"></small><small id="credit"></small></div>
     <button class="btn" id="copy" type="button">复制结构化 JSON</button>
   </div>
 </footer>
@@ -219,7 +241,14 @@ footer small { display: block; font-weight: 800; margin-top: 10px; }
 <script>
 let DATA = /*__DATA__*/null;
 const DAYS = DATA.days || [DATA.date];
-let sortKey = "overall", cat = "";
+let sortKey = "overall", nsortKey = "score", cat = "";
+let mode = "news";
+try { mode = localStorage.getItem("powvy-hot-mode") || mode; } catch {}
+if (location.hash === "#github") mode = "gh"; else if (location.hash === "#news") mode = "news";
+const NTYPES = {
+  model_release: ["新模型", "Model release"], product_launch: ["新产品", "Product launch"], tool_or_prompt: ["方法 / 工具", "Tool or prompt"],
+  research_paper: ["研究", "Research"], industry_event: ["行业动态", "Industry"], opinion_analysis: ["观点", "Opinion"], tutorial_explainer: ["教程", "Tutorial"],
+};
 const CATS = {
   agent: ["AI Agent", "AI agents"], claude: ["Claude Code", "Claude Code"], coding: ["编程工具", "Coding tools"],
   memory: ["记忆 / 知识库", "Memory & RAG"], llm: ["大模型 / 推理", "LLMs & inference"], media: ["音视频 / 图像", "Audio, video & image"],
@@ -236,13 +265,23 @@ const T = {
     today: "今日", stack: "技术栈", usage: "怎么用", hl: "亮点", warn: "注意", meta: "综合分 · 最近提交", pick: "挑这个", empty: "……什么都没有。换个筛选条件试试。",
     lede: (t, n, m) => `扫了全语言榜、中文榜和各语言榜共 ${t} 个项目，今日新增不足 ${m} 星、一年没更新、合集教程类全部砍掉，剩下 ${n} 个，读完 README 打分分类。`,
     stats: ["入选", "被砍", "单日最高"], excl: n => `被砍掉的 ${n} 个项目`, dims: ["受欢迎", "活跃度", "易用性", "传播性"],
-    rule: w => `综合分 = 受欢迎 ×${w.popularity} + 活跃度 ×${w.maintenance} + 易用性 ×${w.usability} + 传播性 ×${w.virality}`, title: "POWVY 热榜", toggle: "EN" },
+    rule: w => `综合分 = 受欢迎 ×${w.popularity} + 活跃度 ×${w.maintenance} + 易用性 ×${w.usability} + 传播性 ×${w.virality}`, title: "POWVY 热点", toggle: "EN",
+    mNews: "AI 热点", mGh: "GitHub 热榜", h1n: "今日 AI<br><em>热点</em>速报", chartN: "今日要闻", s1: "精选分排名", s2: "热度排名", nsearch: "搜索标题、摘要…",
+    ledeN: (s, n) => `扫了官方博客、科技媒体和 Newsletter 共 18 个信源的 ${s} 条资讯，按五个维度打分，把同一件事合并成一个事件，留下 ${n} 个。`,
+    statsN: ["精选事件", "扫描资讯", "最多来源"], why: "为什么值得看", srcs: "来源", heat: "家来源", official: "官方一手", nmeta: "精选分 · 发布",
+    ruleN: "精选分 0–100 = 份量、增量、证据、共振、可用性，按事件类型加权；热度 = 报道它的独立来源数", noNews: "这一天还没有 AI 热点。",
+    credit: "AI 热点的信源和评分标准参考了开源项目 " },
   en: { nav1: "Products", nav2: "Open Source", nav3: "Writing", nav4: "About", nav5: "Contact", nav6: "Trending", h1: "GitHub<br><em>Trending</em> Today", chart: "Overall score · top 15", search: "Search name, type, stack…", zh: "Chinese", picked: "My picks only",
     o1: "Overall ranking", o2: "Stars gained ranking", day: "Day", allCats: "All", allLangs: "All languages", loadErr: "Couldn't load that day", big: "Pick one. Ship it!", copy: "Copy JSON", copied: "Copied ✓", selected: "Selected, press ⌘C",
     today: "today", stack: "Stack", usage: "How to use", hl: "Highlights", warn: "Watch out", meta: "Overall · last push", pick: "Pick this", empty: "…nothing here. Try another filter.",
     lede: (t, n, m) => `Scanned ${t} repos from the all-language, Chinese and per-language boards. Dropped anything under ${m} stars today, stale for a year, or just a collection or tutorial. ${n} left, scored and sorted from their READMEs.`,
     stats: ["picked", "cut", "top day"], excl: n => `${n} repos that got cut`, dims: ["Popular", "Active", "Easy", "Viral"],
-    rule: w => `Overall = popularity ×${w.popularity} + activity ×${w.maintenance} + ease ×${w.usability} + virality ×${w.virality}`, title: "POWVY Trending", toggle: "中" },
+    rule: w => `Overall = popularity ×${w.popularity} + activity ×${w.maintenance} + ease ×${w.usability} + virality ×${w.virality}`, title: "POWVY Hot", toggle: "中",
+    mNews: "AI news", mGh: "GitHub trending", h1n: "AI<br><em>News</em> Today", chartN: "Top stories", s1: "Score ranking", s2: "Heat ranking", nsearch: "Search titles and summaries…",
+    ledeN: (s, n) => `Scanned ${s} items from 18 sources (official blogs, tech media, newsletters), scored them on five axes and merged coverage of the same story. ${n} events made the cut.`,
+    statsN: ["events", "items scanned", "most sources"], why: "Why it matters", srcs: "Sources", heat: "sources", official: "Official", nmeta: "Score · published",
+    ruleN: "Score 0–100 = weight, novelty, evidence, resonance and usefulness, weighted by story type; heat = independent sources covering it", noNews: "No AI news for this day yet.",
+    credit: "Sources and scoring rubric adapted from the open-source project " },
 };
 const t = k => T[lang][k];
 const f = (p, k) => (lang === "en" && p.en && p.en[k]) || p[k];
@@ -308,7 +347,34 @@ function card(p, rank) {
   </article>`;
 }
 
+function ncard(e, rank) {
+  const L = lang === "en" ? 1 : 0, x = k => e[k][lang] || e[k].zh;
+  const official = e.sources.some(s => s.tier === "T1") ? `<span class="tag orange">${t("official")}</span>` : "";
+  return `<article class="card">
+    <div class="rankbox ${rank <= 3 ? "top" : ""}"><small>No.</small><b>${rank}</b></div>
+    <div class="main">
+      <div class="title"><a href="${esc(e.sources[0].url)}" target="_blank" rel="noopener">${esc(x("title"))}</a></div>
+      <div class="tags" style="margin-top:8px"><span class="tag red">${e.heat} ${t("heat")}</span><span class="tag ink">${esc((NTYPES[e.type] || [e.type, e.type])[L])}</span>${official}</div>
+      <p class="desc" style="color:var(--ink)">${esc(x("summary"))}</p>
+      <p class="why"><b>${t("why")}</b>${esc(x("why"))}</p>
+      <p class="srcs">${t("srcs")}: ${e.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.title)}">${esc(s.source)}</a>`).join(" · ")}</p>
+    </div>
+    <div class="side">
+      <div class="score"><div class="big"><b>${e.score}</b></div><div><small>${t("nmeta")}</small><span class="pushed">${esc(e.published.slice(0, 10))}</span></div></div>
+    </div>
+  </article>`;
+}
+
+function renderNews() {
+  const q = $("#q").value.trim().toLowerCase(), ns = DATA.news || [];
+  const sorted = [...ns].sort(nsortKey === "heat" ? (a, b) => b.heat - a.heat || b.score - a.score : (a, b) => b.score - a.score);
+  const es = sorted.filter(e => !q || [e.title.zh, e.title.en, e.summary.zh, e.summary.en, ...e.sources.map(s => s.source)].join(" ").toLowerCase().includes(q));
+  $("#list").innerHTML = !ns.length ? `<div class="empty">${t("noNews")}</div>`
+    : es.length ? es.map(e => ncard(e, sorted.indexOf(e) + 1)).join("") : `<div class="empty">${t("empty")}</div>`;
+}
+
 function render() {
+  if (mode === "news") return renderNews();
   const q = $("#q").value.trim().toLowerCase(), key = sortKey, lng = $("#lng").value;
   const sorted = [...DATA.projects].sort((a, b) => b[key] - a[key] || b.overall - a.overall);
   const rankOf = new Map(sorted.map((p, i) => [p.name, i + 1]));
@@ -329,7 +395,16 @@ function applyLang() {
   document.querySelectorAll("[data-i18n-ph]").forEach(el => el.placeholder = t(el.dataset.i18nPh));
   $("#lang").textContent = t("toggle");
   $("#copy").textContent = t("copy");
-  $("#lede").textContent = T[lang].lede(d.total_fetched, n, d.min_today || 100);
+  const ns = d.news || [], news = mode === "news";
+  document.body.classList.toggle("news", news);
+  $("#modes").querySelectorAll("button").forEach(b => { b.textContent = t(b.dataset.mode === "news" ? "mNews" : "mGh"); b.setAttribute("aria-pressed", b.dataset.mode === mode); });
+  $("#h1").innerHTML = t(news ? "h1n" : "h1");
+  $("#chart").textContent = t(news ? "chartN" : "chart");
+  $("#q").placeholder = t(news ? "nsearch" : "search");
+  $("#brief").innerHTML = [...ns].sort((a, b) => b.score - a.score).slice(0, 5)
+    .map(e => `<li><a href="${esc(e.sources[0].url)}" target="_blank" rel="noopener">${esc(e.title[lang] || e.title.zh)}</a><b>${e.score}</b></li>`).join("") || `<li>${t("noNews")}</li>`;
+  $("#credit").innerHTML = `${t("credit")}<a href="https://github.com/KKKKhazix/AIHOT" target="_blank" rel="noopener">AIHOT</a> (MIT).`;
+  $("#lede").textContent = news ? T[lang].ledeN(d.news_scanned || 0, ns.length) : T[lang].lede(d.total_fetched, n, d.min_today || 100);
   const count = k => d.projects.filter(p => (p.cats || []).includes(k)).length;
   $("#cats").innerHTML = [["", t("allCats"), n], ...Object.keys(CATS).map(k => [k, CATS[k][lang === "en" ? 1 : 0], count(k)]).filter(c => c[2])]
     .map(([k, label, c]) => `<button type="button" class="chip" data-cat="${k}" aria-pressed="${k === cat}">${esc(label)}<b>${c}</b></button>`).join("");
@@ -338,9 +413,9 @@ function applyLang() {
   $("#lng").innerHTML = `<option value="">${t("allLangs")}</option>` + Object.entries(langs).sort((a, b) => b[1] - a[1])
     .map(([l, c]) => `<option value="${esc(l)}" ${l === cur ? "selected" : ""}>${esc(l)} (${c})</option>`).join("");
   const top = d.projects.reduce((a, p) => p.stars_today > a.stars_today ? p : a, d.projects[0] || { stars_today: 0 });
-  $("#stats").innerHTML = [n, d.excluded.length, "+" + fmt(top.stars_today)]
-    .map((v, i) => `<div class="stat"><b>${v}</b><span>${t("stats")[i]}</span></div>`).join("");
-  $("#rule").textContent = T[lang].rule(d.weights);
+  $("#stats").innerHTML = (news ? [ns.length, d.news_scanned || 0, Math.max(0, ...ns.map(e => e.heat))] : [n, d.excluded.length, "+" + fmt(top.stars_today)])
+    .map((v, i) => `<div class="stat"><b>${v}</b><span>${t(news ? "statsN" : "stats")[i]}</span></div>`).join("");
+  $("#rule").textContent = news ? t("ruleN") : T[lang].rule(d.weights);
   $("#excl-sum").textContent = T[lang].excl(d.excluded.length);
   $("#excl").innerHTML = d.excluded.map(e => `<div><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)}</a> <span>${esc(e.reason[lang] || e.reason.zh)}</span></div>`).join("");
   render();
@@ -363,6 +438,15 @@ function init() {
   $("#sort").addEventListener("click", e => {
     const k = e.target.dataset.k; if (!k) return;
     sortKey = k; $("#sort").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === e.target)); render();
+  });
+  $("#modes").addEventListener("click", e => {
+    const m = e.target.dataset.mode; if (!m || m === mode) return;
+    mode = m; try { localStorage.setItem("powvy-hot-mode", m); } catch {}
+    history.replaceState(null, "", m === "news" ? "#news" : "#github"); $("#q").value = ""; applyLang();
+  });
+  $("#nsort").addEventListener("click", e => {
+    const k = e.target.dataset.k; if (!k) return;
+    nsortKey = k; $("#nsort").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === e.target)); render();
   });
   $("#cats").addEventListener("click", e => {
     const b = e.target.closest(".chip"); if (!b) return;

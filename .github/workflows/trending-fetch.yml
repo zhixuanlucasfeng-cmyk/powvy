@@ -1,4 +1,4 @@
-# Fetches GitHub Trending + READMEs into trending/_raw/ for the daily Claude routine,
+# Fetches GitHub Trending + READMEs and AI news feeds into trending/_raw/ for the daily Claude routine,
 # whose cloud sandbox can only reach this repo.
 name: trending-fetch
 on:
@@ -18,6 +18,7 @@ jobs:
         run: |
           rm -rf trending/_raw && mkdir -p trending/_raw
           python3 .claude/skills/github-trending-analyzer/scripts/fetch_trending.py trending/_raw/raw.json trending/_raw/readme
+          python3 .claude/skills/github-trending-analyzer/scripts/fetch_news.py trending/_raw/news.json
           TZ=Asia/Dubai date +%F > trending/_raw/date.txt
       - name: Commit
         run: |
