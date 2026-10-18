@@ -1,6 +1,6 @@
 # Powvy
 
-[访问网站 / Visit the website](https://zhixuanlucasfeng-cmyk.github.io/powvy/)
+[访问网站 / Visit the website](https://powvy.org/)
 
 ## 中文
 
