@@ -44,7 +44,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 /* =========================================================
    2. 导航：黑色漫画条，当前模块红色斜切高亮
    ========================================================= */
-.nav{position:fixed;inset:0 0 auto;height:var(--nav-h);z-index:50;background:var(--ink);color:#fff;border-bottom:4px solid var(--red)}
+.nav{position:fixed;inset:0 0 auto;height:60px;z-index:50;background:var(--ink);color:#fff;border-bottom:4px solid var(--red)}
 .nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo{font-family:var(--display);font-size:24px;letter-spacing:.02em}
 .logo span{color:var(--red)}
@@ -56,7 +56,14 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .lang{flex:none;border:2px solid #fff;color:#fff;font-weight:900;font-size:14px;padding:2px 10px;transition:background .15s}
 .lang:hover{background:var(--red)}
 .nav ul a.active{background:var(--red);color:#fff;transform:skew(-12deg)}
-@media (max-width:600px){.nav ul a{padding:4px 9px;font-size:17px}}
+@media (max-width:640px){
+  .nav{height:auto}
+  .nav .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding-top:8px;padding-bottom:6px}
+  .nav-r{display:contents}
+  .nav ul{grid-column:1/-1;grid-row:2;min-width:0;flex-wrap:wrap;overflow:visible}
+  .nav ul a{padding:4px 9px;font-size:17px}
+  .nav .lang{grid-column:2;grid-row:1}
+}
 
 /* =========================================================
    3. 首屏：集中线 + 大字 + 拟声词
@@ -188,7 +195,7 @@ footer small{font-weight:700}
 #detail{position:fixed;inset:0;z-index:80;background:var(--tone),var(--paper);overflow-y:auto;overscroll-behavior:contain}
 #detail[hidden]{display:none}
 .d-bar{position:sticky;top:0;z-index:2;background:var(--ink);border-bottom:4px solid var(--red)}
-.d-bar .wrap{max-width:820px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:8px}
+.d-bar .wrap{max-width:820px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:8px}
 .d-bar .btn{border-color:#fff;padding:2px 14px;font-size:16px}
 .d-bar .acts{display:flex;gap:8px}
 .d-main{max-width:820px;padding-top:32px;padding-bottom:96px}
@@ -1210,6 +1217,10 @@ function splat(x, y) {
 /* =========================================================
    E. 导航：当前模块高亮 + 进入视口淡入
    ========================================================= */
+// Keep anchor offsets and the hero below the wrapped navigation in either language.
+new ResizeObserver(([entry]) => {
+  document.documentElement.style.setProperty('--nav-h', `${entry.target.getBoundingClientRect().height}px`);
+}).observe(document.getElementById('nav'));
 const navLinks = [...document.querySelectorAll('.nav ul a')];
 const spy = new IntersectionObserver(entries => {
   for (const en of entries) if (en.isIntersecting)
