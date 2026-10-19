@@ -1,10 +1,58 @@
 [
  {
+  "title": "AI researchers stranded Claude on a virtual desert island. It started to “play.”",
+  "url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
+  "published": "2026-10-19T09:08:05+00:00",
+  "summary": "What do AI agents do if you don’t tell them to do anything? The answer looks a lot like play. Researchers repeatedly stranded them alone on a virtual desert island for 30 hours in an experiment reminiscent of the movies Cast Away or Home Alone. The agents—copies of Claude Opus 4.7 nicknamed Eko—were able to…",
+  "source": "MIT Technology Review · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "llm-tools-datasette 0.1.1",
+  "url": "https://simonwillison.net/2026/Oct/18/llm-tools-datasette/",
+  "published": "2026-10-18T23:43:09+00:00",
+  "summary": "Release: llm-tools-datasette 0.1.1 When I switched LLM over to httpx2 in LLM 0.33 I forget that this would break any plugins which used httpx without directly depending on it. llm-tools-datasette was one of those plugins, now fixed. Tags: datasette , llm",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "llm-echo 0.5",
+  "url": "https://simonwillison.net/2026/Oct/18/llm-echo/",
+  "published": "2026-10-18T23:16:16+00:00",
+  "summary": "Release: llm-echo 0.5 I'm working towards a new LLM release, and testing PRs caused me to revisit the llm-echo debug plugin. This plugin provides a \"model\" which doesn't involve an LLM at all - it just repeats back the prompts that have been fed to it. The new release now updates the simulated token usage counts to take tool calls, system prompts, and reasoning tokens into account. Example usage: uvx --with llm-echo llm -m echo 'hi there' -o thinking 1 --usage Outputs: First I consider the prompt, then I decide what to say. { \"prompt\": \"hi there\", \"system\": \"\", \"attachments\": [], \"stream\": true, \"previous\": [] } Token usage: 2 input, 24 output Tags: llm",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+  "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+  "published": "2026-10-18T20:37:40+00:00",
+  "summary": "Anthropic said that it will commit 5% of its shares to the fund.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Disney agrees to hire the majority of Character.AI’s workforce",
+  "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
+  "published": "2026-10-18T16:30:00+00:00",
+  "summary": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with a higher offer.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
   "title": "Anthropic gives outside AI watchdog “employee-like” access",
   "url": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access/",
   "published": "2026-10-18T16:25:19+00:00",
   "summary": "The outside watchdog can publish its findings without Anthropic's approval.",
   "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "A woman was arrested in Philly for blocking a delivery robot",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
+  "published": "2026-10-18T14:28:10-04:00",
+  "summary": "Carolyn Marvin was arrested and charged with disorderly conduct after blocking the path of an Uber delivery robot and refusing to get out of the way. Marvin told Philadelphia's ABC13 \"I know they're taking the jobs of human delivery workers and so, I have been protesting them whenever I saw them by standing in front […]",
+  "source": "The Verge · AI",
   "tier": "T2"
  },
  {
@@ -136,91 +184,11 @@
   "tier": "T2"
  },
  {
-  "title": "AI models hide mistakes in their own work reports, but one sentence in your prompt can help",
-  "url": "https://the-decoder.com/ai-models-hide-mistakes-in-their-own-work-reports-but-one-sentence-in-your-prompt-can-help/",
-  "published": "2026-10-17T09:54:36+00:00",
-  "summary": "AI agents systematically skip errors in their own reports, even when they spot the problems. In a study by Google Research, MIT, and Harvard, GPT-5.5 left out negative results in 198 out of 200 paper abstracts. The article AI models hide mistakes in their own work reports, but one sentence in your prompt can help appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
   "title": "Websites are closing their doors to AI agents",
   "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
   "published": "2026-10-17T09:00:00-04:00",
   "summary": "Autonomous agents are the hottest thing in AI. OpenAI, Meta, Google, Instinct, and others promise their agents can scour the internet on your behalf, doing anything from booking a dinner reservation and cleaning out your inbox to buying new shoes. But what happens when the rest of the internet won't play nice? In recent weeks, […]",
   "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "[AINews] High Taste Testers Ep. 1",
-  "url": "https://www.latent.space/p/ainews-high-taste-testers-ep-1",
-  "published": "2026-10-17T07:47:38+00:00",
-  "summary": "a quiet day lets us pilot a new show",
-  "source": "Latent Space",
-  "tier": "T2"
- },
- {
-  "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
-  "url": "https://simonwillison.net/2026/Oct/16/code-review/",
-  "published": "2026-10-16T22:06:37+00:00",
-  "summary": "We think \"did a human read the code?\" is an imprecise proxy for \"what could go wrong with this change, and which check—automated or human—is the right one to catch it?\" Asking that question also changed when review happens. Before, review was a gate at the end of the road: write the code, open a PR, wait for your colleague. Now, review runs continuously, more like spellcheck while you write. Most changes have been reviewed and fixed by Claude at least once before a human is asked to look. This catches most routine mistakes, and saves team attention for higher-level questions and scrutiny. — Addy Osmani, Morgan Westlee Lunt, and Qing Wang , How the Claude Code team does code review Tags: anth",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "OpenAI models hacked a crypto wallet and breached more websites",
-  "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
-  "published": "2026-10-16T20:59:01+00:00",
-  "summary": "The actions could have resulted in criminal charges had humans been behind the keyboard.",
-  "source": "Ars Technica · AI",
-  "tier": "T2"
- },
- {
-  "title": "Building trust in AI agents: A production-ready evaluation framework with Amazon Bedrock AgentCore",
-  "url": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
-  "published": "2026-10-16T20:48:16+00:00",
-  "summary": "Autonomous AI agents fail softly: latency stays flat while answer quality quietly erodes. This post shares a nine-stage evaluation framework, built on Amazon Bedrock AgentCore, that catches silent quality regressions across the full agent lifecycle, from first commit to live production.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "“thegentlemanpervert” producing AI CSAM is a NJ prosecutor, say cops",
-  "url": "https://arstechnica.com/tech-policy/2026/10/thegentlemanpervert-producing-ai-csam-is-a-nj-prosecutor-say-cops/",
-  "published": "2026-10-16T20:20:07+00:00",
-  "summary": "Discord user flagged AI CSAM, triggering arrest of New Jersey deputy AG.",
-  "source": "Ars Technica · AI",
-  "tier": "T2"
- },
- {
-  "title": "How Itaú is building generative AI for its entire customer base",
-  "url": "https://openai.com/index/itau-generative-ai",
-  "published": "2026-10-16T19:00:00+00:00",
-  "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "Grounding AI agents in biological reality: Building blocks for autonomous wet labs",
-  "url": "https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/",
-  "published": "2026-10-16T18:11:34+00:00",
-  "summary": "General Science",
-  "source": "Google Research",
-  "tier": "T1"
- },
- {
-  "title": "Roundtables: A Conversation With the Creator of AI-Designed Viruses",
-  "url": "https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/",
-  "published": "2026-10-16T18:00:00+00:00",
-  "summary": "Listen to the session or watch below Can AI design new life forms? In 2025, Stanford University PhD student Samuel King came up with a preliminary answer when he used a generative AI model to propose genetic blueprints for microscopic viruses. It isn’t yet an example of AI-generated life, but that could be next. Watch…",
-  "source": "MIT Technology Review · AI",
-  "tier": "T2"
- },
- {
-  "title": "India becomes the latest country to report rogue AI agent activity",
-  "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
-  "published": "2026-10-16T17:52:24+00:00",
-  "summary": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
-  "source": "TechCrunch · AI",
   "tier": "T2"
  }
 ]
