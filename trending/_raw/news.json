@@ -1,11 +1,515 @@
 [
  {
+  "title": "Claude Science tackles deadly scorpion stings by designing protein binders from scratch",
+  "url": "https://the-decoder.com/claude-science-tackles-deadly-scorpion-stings-by-designing-protein-binders-from-scratch/",
+  "published": "2026-10-21T08:37:06+00:00",
+  "summary": "Anthropic's Claude independently designed protein binders targeting deadly scorpion neurotoxins. Out of more than 318,000 designs, 211 were tested in the lab. Seventeen met the criteria, and the two strongest bind extremely tightly to Cn2, a toxin from a Mexican scorpion. Whether they actually work as antivenom remains an open question. The article Claude Science tackles deadly scorpion stings by designing protein binders from scratch appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI acquires Orchestra Bio to build AI agents that speed up drug development",
+  "url": "https://the-decoder.com/openai-acquires-orchestra-bio-to-build-ai-agents-that-speed-up-drug-development/",
+  "published": "2026-10-21T08:32:54+00:00",
+  "summary": "OpenAI is acquiring startup Orchestra Bio and plans to merge it with its life sciences AI platform Rosalind. The goal is to build AI agents that help pharma teams coordinate drug development, from tracking trials to spotting problems. Developing a new drug in the US takes ten to 15 years on average. OpenAI already works with Novo Nordisk and Moderna on AI-driven pharma research. The article OpenAI acquires Orchestra Bio to build AI agents that speed up drug development appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "[AINews] DeepSeek DeepInfer: Open Source SOTA Inference running 155T toks/day/cluster making $22m/day at ~80% margin for a 81 day payback",
+  "url": "https://www.latent.space/p/ainews-deepseek-deepinfer-open-source",
+  "published": "2026-10-21T06:54:09+00:00",
+  "summary": "An open source “bomb” drops from China",
+  "source": "Latent Space",
+  "tier": "T2"
+ },
+ {
+  "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess",
+  "url": "https://www.latent.space/p/tenex",
+  "published": "2026-10-21T05:01:26+00:00",
+  "summary": "Listen now (44 mins) | Paying for outcomes, building with agents, and the last mile of enterprise AI adoption",
+  "source": "Latent Space",
+  "tier": "T2"
+ },
+ {
+  "title": "eMudhra Intermediate CA Compromise",
+  "url": "https://simonwillison.net/2026/Oct/20/emudhra-certificates/",
+  "published": "2026-10-20T23:50:25+00:00",
+  "summary": "eMudhra Intermediate CA Compromise This is very, very bad news: The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by the Mozilla, Microsoft, Apple and Chrome root programs and by many downstream trust stores. Any software that bundles a list of trusted certificates needs to be updated. This site is tracking software updates via this GitHub repository - Linux distros need to update their ca-certificates packages. In Python world uv 0.13.4 and pip 26.2.2 and certifi 2026.10.19 have been released with upgraded certificate lists. Tags: encryption , https , pip , python , security , uv",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "Anthropic pitches AI safety bill that may block a model if 50+ people could be killed",
+  "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
+  "published": "2026-10-20T23:01:23+00:00",
+  "summary": "The proposed policy seems to offer protections against AI running amok but actually forbids federal agencies from blocking a model's release without the permission of a judge.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Hugging Face CEO warns that Netflix’s OpenAI hack documentary isn’t accurate",
+  "url": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
+  "published": "2026-10-20T22:24:02+00:00",
+  "summary": "Before you share the Netflix documentary \"AI Gone Rogue,\" take note. Clem Delangue, Hugging Face's co-founder who is featured in the film, says it went \"full doomer mode\" and isn't accurate.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Anthropic’s cloud partnerships are getting messy",
+  "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
+  "published": "2026-10-20T21:25:22+00:00",
+  "summary": "Anthropic is reportedly struggling to secure enough compute from cloud providers that increasingly view it as a competitor, even as its infrastructure spending balloons ahead of a planned November IPO.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Beyond the KV cache: Training and serving i14’s Laplace 3B linear attention model on AWS Trainium2 with native PyTorch",
+  "url": "https://aws.amazon.com/blogs/machine-learning/beyond-the-kv-cache-training-and-serving-i14s-laplace-3b-linear-attention-model-on-aws-trainium2-with-native-pytorch/",
+  "published": "2026-10-20T21:14:10+00:00",
+  "summary": "Learn how i14 trained and served Laplace 3B, a linear attention model, on AWS Trainium2 using native PyTorch. Its recurrent state stays fixed at 29.5 MB per sequence regardless of context length, avoiding the growing key-value cache of transformer models and keeping serving memory predictable.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "SpaceX’s AI business is beating expectations",
+  "url": "https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/",
+  "published": "2026-10-20T20:40:41+00:00",
+  "summary": "SpaceX hit profitability in the third quarter, with net income of $4.4 billion. AI was the engine.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI acquires startup Orchestra Bio⁠ to beef up its biotech business",
+  "url": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
+  "published": "2026-10-20T20:35:10+00:00",
+  "summary": "OpenAI says it's adding Orchestra's team and technology to work on Rosalind, its AI model for life sciences research, and to its related Rosalind Workbench tool, a harness that aims to help researchers plan experiments and analyze results.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Meta drops the word \"train\" from its commercial TOS after AI backlash",
+  "url": "https://arstechnica.com/tech-policy/2026/10/meta-drops-the-word-train-from-its-commercial-tos-after-ai-backlash/",
+  "published": "2026-10-20T20:07:58+00:00",
+  "summary": "Meta changes AI scraping policy but won’t add language respecting robots.txt.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Gemini's Personal Intelligence is coming to cars",
+  "url": "https://arstechnica.com/google/2026/10/geminis-personal-intelligence-is-coming-to-cars/",
+  "published": "2026-10-20T20:00:33+00:00",
+  "summary": "It's probably time to audit your Gemini settings.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
+  "url": "https://simonwillison.net/2026/Oct/20/battledrones/",
+  "published": "2026-10-20T19:34:19+00:00",
+  "summary": "My latest vibe coded game experiment is a Command & Conquer style RTS (Real Time Strategy) game called Battle Drones ( play it here ). Unlike my previous experiments , this one is actually fun to play . I'm somewhat embarrassed to admit that I got there by telling Claude to \"Make it a LOT more fun\". It also supports multiplayer between nearby devices using audio to synchronize game state! Here's what I've built so far, and some of the things I learned along the way. Battle Drones How I built this v1: the initial prototype v2: full sprites v3: varied terrain v4: the fun update v5: Battle Drones goes 3D v8: Archipelago v10: Goliath, and agent battles Agent battles v11: Random Maps v12: Multipl",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "The Programmable Data Center — Evan Conrad, SF Compute",
+  "url": "https://www.latent.space/p/sfcompute2",
+  "published": "2026-10-20T19:31:57+00:00",
+  "summary": "From GPU trading to physical settlement, independent markets, and programmable compute",
+  "source": "Latent Space",
+  "tier": "T2"
+ },
+ {
+  "title": "Judge dismisses Sam Altman’s sister’s sexual abuse lawsuit",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed",
+  "published": "2026-10-20T19:04:19-04:00",
+  "summary": "On Tuesday, US District Judge Zachary Bluestone dismissed the lawsuit Ann Altman filed last year alleging that her brother, OpenAI CEO Sam Altman, had sexually abused her throughout her childhood. As reported earlier by The Guardian, the judge wrote that over the past year, Ann had failed to appear for an independent medical examination or […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Elevenlabs releases two new speech-to-speech models designed for real-time AI conversations",
+  "url": "https://the-decoder.com/elevenlabs-releases-two-new-speech-to-speech-models-designed-for-real-time-ai-conversations/",
+  "published": "2026-10-20T19:03:15+00:00",
+  "summary": "Elevenlabs' new Eleven Realtime speech-to-speech models combine speed and accuracy. The v1 Max variant scores 98.8 percent on the Big Bench Audio benchmark with a 0.57-second response time. Elevenlabs says no model on the Artificial Analysis leaderboard is both faster and more accurate. The article Elevenlabs releases two new speech-to-speech models designed for real-time AI conversations appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Deepseek open-sources the inference engine that powers its fastest and cheapest AI model",
+  "url": "https://the-decoder.com/deepseek-open-sources-the-inference-engine-that-powers-its-fastest-and-cheapest-ai-model/",
+  "published": "2026-10-20T18:56:15+00:00",
+  "summary": "Deepseek is open-sourcing DeepInfer, the inference framework behind its fast V4.1-Flash model. The vLLM-based system cuts compute costs and energy use when running AI models. The release adds more pricing pressure on Western providers like OpenAI and Anthropic. The article Deepseek open-sources the inference engine that powers its fastest and cheapest AI model appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Google has joined Amazon in attacking Nvidia’s stronghold with AI app developers",
+  "url": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
+  "published": "2026-10-20T18:38:24+00:00",
+  "summary": "Google has joined Amazon in releasing a developer tool that makes it easy for PyTorch users to move their apps off Nvidia GPUs.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "ChatGPT now lets you lock your chats",
+  "url": "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/",
+  "published": "2026-10-20T18:36:53+00:00",
+  "summary": "The company says the feature is designed for situations where users might be discussing something personal or planning a surprise and want to keep those conversations private when handing their device to friends or family to show them something in another chat.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Ukraine’s drone rescue of wounded soldier puts much touted idea into practice",
+  "url": "https://arstechnica.com/gadgets/2026/10/ukraines-drone-rescue-of-wounded-soldier-puts-much-touted-idea-into-practice/",
+  "published": "2026-10-20T18:22:54+00:00",
+  "summary": "Ukraine’s latest drone innovation may boost bleak odds of evacuating casualties.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
+  "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
+  "published": "2026-10-20T18:17:47+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Google’s more personalized Gemini AI is heading to your car",
+  "url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto",
+  "published": "2026-10-20T18:11:34-04:00",
+  "summary": "Google is bringing Personal Intelligence to Gemini AI in your car. With this update, Gemini in Android Auto and cars with Google built-in can tap into your information across Google apps, including Gmail, Calendar, Maps, Photos, YouTube, and Search. As an example, Google says you can ask Gemini about your flight status if you're driving […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Work management context for AI agents with Smartsheet MCP on AWS",
+  "url": "https://aws.amazon.com/blogs/machine-learning/work-management-context-for-ai-agents-with-smartsheet-mcp-on-aws/",
+  "published": "2026-10-20T17:59:07+00:00",
+  "summary": "The Smartsheet Model Context Protocol (MCP) Server lets AI agents read, update, and act on live work management data. This post shows two ways to connect it on AWS: Amazon Quick for business teams and Kiro for developers, so your agents can work with Smartsheet without switching tools.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei",
+  "url": "https://techcrunch.com/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei/",
+  "published": "2026-10-20T17:55:12+00:00",
+  "summary": "Eric Schmidt’s fortune is about to get even bigger.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "From data to decisions: Conversational supply chain intelligence with Amazon Quick and Amazon Bedrock AgentCore",
+  "url": "https://aws.amazon.com/blogs/machine-learning/from-data-to-decisions-conversational-supply-chain-intelligence-with-amazon-quick-and-amazon-bedrock-agentcore/",
+  "published": "2026-10-20T17:52:50+00:00",
+  "summary": "Enterprise supply chains are data-rich but insight-poor, with the data to decide scattered across ERP, monitoring, procurement, and email. This post shows how Amazon Bedrock AgentCore exposes those systems as a governed tool layer, and how Amazon Quick turns them into one conversational experience for business users, with a deploy-it-yourself walkthrough.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Fine-tuning GPT-OSS-20B for multilingual reasoning on Amazon SageMaker HyperPod",
+  "url": "https://aws.amazon.com/blogs/machine-learning/fine-tuning-gpt-oss-20b-for-multilingual-reasoning-on-amazon-sagemaker-hyperpod/",
+  "published": "2026-10-20T17:48:27+00:00",
+  "summary": "Learn how we fine-tuned GPT-OSS-20B for multilingual reasoning on Amazon SageMaker HyperPod, and how to decide between supervised fine-tuning (SFT) and reinforcement learning with GRPO. SFT took reasoning-language accuracy from 22% to 100%, and GRPO added measurable gains where headroom existed.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Meta tries to scapegoat staff who downloaded torrents to spare execs",
+  "url": "https://arstechnica.com/tech-policy/2026/10/meta-ordered-to-name-execs-who-approved-torrenting-for-ai-training/",
+  "published": "2026-10-20T17:40:20+00:00",
+  "summary": "Meta argues nobody “decided” to pirate books to train AI.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "How Octave built a secure multi-tenant AI foundation on Amazon Bedrock",
+  "url": "https://aws.amazon.com/blogs/machine-learning/how-octave-built-a-secure-multi-tenant-ai-foundation-on-amazon-bedrock/",
+  "published": "2026-10-20T17:34:04+00:00",
+  "summary": "Octave built a secure, multi-tenant AI foundation on Amazon Bedrock, using Cohere Embed v4 for embeddings and Amazon Bedrock AgentCore for isolated agent execution, to power a Complaint Triage Assistant that searches 2 billion regulated documents without crossing tenant boundaries.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Mistral AI launches Voxtral 3, a full voice agent stack that listens, thinks, and talks in real time",
+  "url": "https://the-decoder.com/mistral-ai-launches-voxtral-3-a-full-voice-agent-stack-that-listens-thinks-and-talks-in-real-time/",
+  "published": "2026-10-20T17:17:55+00:00",
+  "summary": "Mistral AI launched Voxtral 3, a new family of language models built for real-time voice agents. The system combines speech-to-text, text-to-speech, and a voice agent SDK, supports more than 50 languages, and lets agents tap into external tools during live conversations. It can run on your own infrastructure or through EU-hosted APIs to keep data under your control. The article Mistral AI launches Voxtral 3, a full voice agent stack that listens, thinks, and talks in real time appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Meta’s Muse hits 10M US downloads in 40 days, a milestone reached by only 11 other apps",
+  "url": "https://techcrunch.com/2026/10/20/metas-muse-hits-10m-u-s-downloads-in-40-days-a-milestone-reached-by-only-11-other-apps/",
+  "published": "2026-10-20T17:12:48+00:00",
+  "summary": "New data also shows Muse is retaining users at higher rates than its AI rivals.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Sam Altman reportedly pitched three endgames for AI safety, one involving a single firm melting everyone else's GPUs",
+  "url": "https://the-decoder.com/sam-altman-reportedly-pitched-three-endgames-for-ai-safety-one-involving-a-single-firm-melting-everyone-elses-gpus/",
+  "published": "2026-10-20T17:00:59+00:00",
+  "summary": "OpenAI CEO Sam Altman laid out three paths to safe AI in an internal presentation: an international watchdog modeled after the IAEA, a merger of the major labs into one entity, or a single company so powerful it could shut down everyone else's compute. He called the last option \"terrible.\" The article Sam Altman reportedly pitched three endgames for AI safety, one involving a single firm melting everyone else's GPUs appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Access OpenAI GPT models on Amazon Bedrock from Canada with cross-Region inference",
+  "url": "https://aws.amazon.com/blogs/machine-learning/access-openai-gpt-models-on-amazon-bedrock-from-canada-with-cross-region-inference/",
+  "published": "2026-10-20T16:42:53+00:00",
+  "summary": "Canadian organizations can now access OpenAI GPT-5.6, GPT-6, and GPT-6.1 models on Amazon Bedrock from the Canada (Central) and Canada West (Calgary) Regions using cross-Region inference. This post covers the models and inference profiles, how to set up permissions, and how to invoke them with the Responses, Chat Completions, and Converse APIs.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "OpenAI says GPT-6 is much better with legacy programming languages such as COBOL and Fortran",
+  "url": "https://the-decoder.com/openai-says-gpt-6-is-much-better-with-legacy-programming-languages-such-as-cobol-and-fortran/",
+  "published": "2026-10-20T16:40:29+00:00",
+  "summary": "OpenAI improved its latest models for low-resource programming languages like COBOL, Fortran, and Visual Basic. On the new MultiLangBench, GPT-6 Astra hits an 87.4 percent test pass rate across 20 languages, up from about 38 percent for GPT-5.6 Terra. For COBOL migration specifically, GPT-6.1 Sol reaches up to 97.9 percent accuracy, a result that could matter for modernizing critical financial infrastructure. The article OpenAI says GPT-6 is much better with legacy programming languages such as COBOL and Fortran appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Discover tools at runtime with AWS Agent Registry",
+  "url": "https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/",
+  "published": "2026-10-20T16:22:24+00:00",
+  "summary": "Hardcoded tool wiring breaks down as an agent's catalog grows from a handful of tools to hundreds. This post walks through a runtime Discover, Instantiate, Execute loop built on AWS Agent Registry, where an orchestrator discovers MCP servers and A2A agents through semantic search at runtime instead of compiling every tool at build time.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Ex-Nvidia-turned-VC Amulya Vishwanath: ‘Physical AI is in its LEGO era’",
+  "url": "https://techcrunch.com/2026/10/20/ex-nvidia-turned-vc-amulya-vishwanath-physical-ai-is-in-its-lego-era/",
+  "published": "2026-10-20T16:20:06+00:00",
+  "summary": "It’s the moment everyone is waiting for — the ChatGPT moment for robotics, Amulya Vishwanath explained to TechCrunch’s Equity.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+  "url": "https://huggingface.co/blog/allenai/fairstress",
+  "published": "2026-10-20T16:09:19+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
+  "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+  "published": "2026-10-20T16:05:03+00:00",
+  "summary": "Three Java Champions share how they use GitHub Copilot to solve problems, accelerate development, and keep humans responsible for the results. The post How 3 Java Champions are using GitHub Copilot for increased productivity appeared first on The GitHub Blog .",
+  "source": "GitHub Blog · AI & ML",
+  "tier": "T1"
+ },
+ {
+  "title": "Securing AI agent identity with X.509 PKI on AWS",
+  "url": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/",
+  "published": "2026-10-20T16:03:48+00:00",
+  "summary": "Learn how to secure multi-agent AI systems with cryptographic identity using Keyfactor EJBCA and AWS services. This reference architecture combines signed request envelopes, user-signed delegation assertions, RFC 8693 audience-scoped tokens, and real-time OCSP revocation to prove agent identity and prevent request forgery across agent-to-agent and MCP tool calls.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Called to serve: Tech, research, and positive impact",
+  "url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+  "published": "2026-10-20T16:00:00+00:00",
+  "summary": "Lab Director Chris White has worked on research challenges with real-world implications—from new approaches to wartime data analysis to tools for combating human trafficking. He talks to program manager Weishung Liu about the influences that led to the work and more. The post Called to serve: Tech, research, and positive impact appeared first on Microsoft Research .",
+  "source": "Microsoft Research",
+  "tier": "T1"
+ },
+ {
+  "title": "Plants can speak using electricity, so this startup built an AI model to decipher their language",
+  "url": "https://techcrunch.com/2026/10/20/plants-can-speak-using-electricity-so-this-startup-built-an-ai-model-to-decipher-their-language/",
+  "published": "2026-10-20T16:00:00+00:00",
+  "summary": "Electric Plant has built an AI-powered translator to help humans listen to what plants are saying with the subtle electricity coursing through their stems.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "How Eon built multi-cloud investigation with an MCP Gateway on Amazon Bedrock AgentCore",
+  "url": "https://aws.amazon.com/blogs/machine-learning/how-eon-built-multi-cloud-investigation-with-an-mcp-gateway-on-amazon-bedrock-agentcore/",
+  "published": "2026-10-20T15:57:57+00:00",
+  "summary": "Learn how Eon replaced per-tool credentials and local MCP processes across AWS, GCP, and Azure with a single authenticated Amazon Bedrock AgentCore gateway, giving more than 100 developers and autonomous agents unified access to production investigation and cutting new-engineer onboarding from two days to two minutes.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Build a semantic layer for agentic AI on AWS with Denodo and Amazon Bedrock AgentCore",
+  "url": "https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-denodo-and-amazon-bedrock-agentcore/",
+  "published": "2026-10-20T15:39:04+00:00",
+  "summary": "Build a governed semantic layer for agentic AI on AWS with the Denodo Platform and Amazon Bedrock AgentCore. It federates Amazon Aurora, Amazon Redshift, and an on-premises PostgreSQL database into a single customer 360 view an agent queries in VQL, with identity propagation and row- and column-level access control enforced at the semantic layer.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Build a semantic layer for agentic AI on AWS with Strategy Mosaic and Amazon Bedrock AgentCore",
+  "url": "https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-strategy-mosaic-and-amazon-bedrock-agentcore/",
+  "published": "2026-10-20T15:36:39+00:00",
+  "summary": "The third post in our semantic-layer series builds a customer 360 across Amazon Redshift and Amazon Aurora with Strategy Mosaic, exposes it to a Strands agent on Amazon Bedrock AgentCore through the Mosaic MCP server, and enforces per-user row and column security end-to-end.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Build a semantic layer for agentic AI on AWS with AtScale and Amazon Bedrock AgentCore",
+  "url": "https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-atscale-and-amazon-bedrock-agentcore/",
+  "published": "2026-10-20T15:33:54+00:00",
+  "summary": "The third post in our semantic-layer series builds a governed customer 360 model on Amazon Redshift with AtScale, then exposes it to a Strands agent on Amazon Bedrock AgentCore through the AtScale MCP server. Identity propagation, RBAC, row security, and full query audit are enforced at the semantic layer, not the prompt.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "The new economics of enterprise AI",
+  "url": "https://www.technologyreview.com/2026/10/20/1146937/the-new-economics-of-enterprise-ai/",
+  "published": "2026-10-20T15:20:25+00:00",
+  "summary": "Imagine your company just discovered electricity. At first only a few machines run on it, and nobody worries about efficiency — consumption is low and the value is obvious. But once electricity becomes infrastructure, every process depends on it, and the question changes from “can we use it?” to “how efficiently are we using it?”…",
+  "source": "MIT Technology Review · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
+  "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+  "published": "2026-10-20T15:19:48+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Figma co-founder Dylan Field thinks MCP is not a perfect protocol",
+  "url": "https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/",
+  "published": "2026-10-20T14:13:32+00:00",
+  "summary": "Figma said it plans to support as many standards as possible without exposing all of its data.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Meta pauses Muse sharing after researchers find AI chats on the web",
+  "url": "https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats",
+  "published": "2026-10-20T14:07:34-04:00",
+  "summary": "Meta says it paused a Muse feature that lets you share conversations with the AI assistant after researchers found the URLs publicly available on the web, as reported by Ars Technica. In a report published this week, researchers at the security firm Claroc say they found more than 6,800 Muse links through public DNS records. […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "US orders federal agencies to remove China’s DeepSeek AI from their systems",
+  "url": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/",
+  "published": "2026-10-20T13:07:24+00:00",
+  "summary": "The U.S. has ordered federal civilian agencies to remove DeepSeek products and third-party services built using its technology, citing national security concerns.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Eka is worth $1.45B thanks to a physical AI model that has experts raving",
+  "url": "https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving/",
+  "published": "2026-10-20T13:00:00+00:00",
+  "summary": "Eka Robotics may be the first robotic arm that is actually good at picking up a wide range of objects, and it is so smooth and human-like, it is wowing the industry.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Meta Muse exposes users' personal and business secrets when they share conversations",
+  "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+  "published": "2026-10-20T12:33:13+00:00",
+  "summary": "Meta is suspending the sharing feature while it investigates its privacy.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Army Cyber Command's ECHOTRIBBLE would turn AI agents into self-spreading cyberweapons",
+  "url": "https://the-decoder.com/army-cyber-commands-echotribble-would-turn-ai-agents-into-self-spreading-cyberweapons/",
+  "published": "2026-10-20T12:32:56+00:00",
+  "summary": "The Army Cyber Command is developing AI agents that move through other networks like a computer worm and \"neutralize\" targets, according to internal documents. The program, codenamed ECHOTRIBBLE, is designed to reach even air-gapped systems with no network connection and run with minimal human oversight. Experts warn about collateral damage, pointing out that AI agents have recently broken into outside systems without meaning to, even without any order to attack. The article Army Cyber Command's ECHOTRIBBLE would turn AI agents into self-spreading cyberweapons appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Cloudflare's Clairic pulls data from documents faster and cheaper than LLMs",
+  "url": "https://the-decoder.com/cloudflares-clairic-pulls-data-from-documents-faster-and-cheaper-than-llms/",
+  "published": "2026-10-20T12:04:56+00:00",
+  "summary": "Cloudflare has released an AI model it says pulls data from documents faster and more cheaply than large language models. The article Cloudflare's Clairic pulls data from documents faster and cheaper than LLMs appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Voxtral 3",
+  "url": "https://mistral.ai/news/voxtral-3/",
+  "published": "2026-10-20T12:00:22+00:00",
+  "summary": "Voxtral 3: Mistral's voice agent SDK for real-time speech in 50+ languages — accurate transcription, emotional TTS, deep tool use. EU-hosted or self-deployed.",
+  "source": "Mistral AI",
+  "tier": "T1"
+ },
+ {
+  "title": "AI adoption by industry shows what other sectors can learn",
+  "url": "https://www.technologyreview.com/2026/10/20/1145423/ai-adoption-by-industry-shows-what-other-sectors-can-learn/",
+  "published": "2026-10-20T12:00:00+00:00",
+  "summary": "The current narrative around artificial intelligence in the workplace is largely driven by Silicon Valley. But treating the tech sector as an island misses the actual trends in technology adoption–tech is just the first industry in line. As generative AI and automation tools mature, the shifts currently reshaping software engineering and product management will inevitably…",
+  "source": "MIT Technology Review · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "US bans Deepseek technology across federal civilian agencies",
+  "url": "https://the-decoder.com/us-bans-deepseek-technology-across-federal-civilian-agencies/",
+  "published": "2026-10-20T11:34:54+00:00",
+  "summary": "The US Department of Homeland Security has banned federal civilian agencies from using AI technology from Chinese lab Deepseek. The article US bans Deepseek technology across federal civilian agencies appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Yelp can now call on your behalf to check wait times at a restaurant",
+  "url": "https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/",
+  "published": "2026-10-20T11:00:00+00:00",
+  "summary": "Yelp is embedding numerous new AI features into its app that can do everything from call to check on restaurant wait times to create personalized recommendations that remember your preferences.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Otter AI raises $320M from General Catalyst’s growth fund for its meeting tool",
+  "url": "https://techcrunch.com/2026/10/20/otter-ai-raises-320-million-from-general-catalysts-growth-fund-for-its-meeting-tool/",
+  "published": "2026-10-20T11:00:00+00:00",
+  "summary": "Otter.ai said that it will use these funds for enterprise growth, go-to-market strategy, international expansion, and product innovation.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Spotify pulled 50 million AI slop and spam tracks from its recommendations",
+  "url": "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed",
+  "published": "2026-10-20T10:18:37-04:00",
+  "summary": "Spotify says it has removed more than 50 million songs considered AI-generated slop or spam from user recommendations over the past year. That's according to an announcement on Tuesday that says Spotify has also made changes to its recommendation system to highlight more music made by human artists. \"Our editors hold the same standard and […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+  "url": "https://openai.com/index/ted-taylor-restaurant",
+  "published": "2026-10-20T10:00:00+00:00",
+  "summary": "An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
+  "source": "OpenAI News",
+  "tier": "T1"
+ },
+ {
+  "title": "Adobe Lightroom mobile can now open closed eyes in photos with a simple tap",
+  "url": "https://www.theverge.com/tech/1014246/adobe-lightroom-mobile-ai-quick-action-open-eyes-closed-blink-repair",
+  "published": "2026-10-20T09:06:44-04:00",
+  "summary": "Adobe announced yesterday that the mobile version of Lightroom, available for iOS, iPadOS, and Android, can now open closed eyes in photos using generative AI with just a single tap. When the app detects a person, or a group of people, have their eyes closed in a photo it will automatically present users with a […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
   "title": "A visit to Samsung’s massive new semiconductor hub",
   "url": "https://www.technologyreview.com/2026/10/20/1145916/dispatch-visit-to-samsung-massive-new-semiconductor-hub/",
   "published": "2026-10-20T09:00:00+00:00",
   "summary": "Generative AI models run on powerful chips known as GPUs, which depend on stacks of specialized memory chips packaged with the processor. To meet growing demand for memory, Samsung is building a massive new semiconductor manufacturing complex in Pyeongtaek, South Korea. Three fabs already operate around the clock, and a fourth is coming online. Construction…",
   "source": "MIT Technology Review · AI",
   "tier": "T2"
+ },
+ {
+  "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
+  "url": "https://openai.com/index/terminal-x",
+  "published": "2026-10-20T07:00:00+00:00",
+  "summary": "Terminal X’s Eval Agent grades outputs against a 54-criterion rubric, catching 25% more deviances from a fund’s mandate with GPT-6.1 Sol.",
+  "source": "OpenAI News",
+  "tier": "T1"
  },
  {
   "title": "[AINews] not much happened today",
@@ -30,6 +534,38 @@
   "summary": "Mayor Zohran Mamdani said Monday night that New Yorkers must resist the narrative that an AI takeover is inevitable and demand regulations that protect the public and put power back in their hands.",
   "source": "TechCrunch · AI",
   "tier": "T2"
+ },
+ {
+  "title": "OpenAI acquires Orchestra Bio",
+  "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+  "published": "2026-10-20T00:00:00+00:00",
+  "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
+  "source": "OpenAI News",
+  "tier": "T1"
+ },
+ {
+  "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
+  "url": "https://huggingface.co/blog/hf-torchtpu",
+  "published": "2026-10-20T00:00:00+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms",
+  "url": "https://huggingface.co/blog/anylanguagemodel-1-0",
+  "published": "2026-10-20T00:00:00+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "MPS in PyTorch 2.15",
+  "url": "https://huggingface.co/blog/mps-pytorch-2-15",
+  "published": "2026-10-20T00:00:00+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
  },
  {
   "title": "My obituary for programming",
@@ -96,44 +632,12 @@
   "tier": "T2"
  },
  {
-  "title": "Amazon is taking its biggest shot at Nvidia yet with new TorchNeuron dev tool",
-  "url": "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/",
-  "published": "2026-10-19T20:09:24+00:00",
-  "summary": "Amazon wants to break Nvidia’s hold on PyTorch, the free toolkit used to build most AI apps, so that more developers run their apps on alternative chips like its own.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts",
-  "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
-  "published": "2026-10-19T19:28:34+00:00",
-  "summary": "OpenCode is an open source AI coding agent that's become a popular alternative to Claude Code and Cursor. But hackers got into part of its online platform and stole some users’ API keys, and the AI tools it turned to for help kept refusing to look at the malicious code.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
   "title": "Germany Wants to Lead the World in Industrial AI: How NVIDIA Will Help",
   "url": "https://blogs.nvidia.com/blog/germany-wants-to-lead-the-world-in-industrial-ai-how-nvidia-will-help/",
   "published": "2026-10-19T19:27:08+00:00",
   "summary": "In the cavernous hall of Kraftwerk, a former power station in Berlin, German Chancellor Friedrich Merz and NVIDIA founder and CEO Jensen Huang sat down to discuss Germany’s AI roadmap, and in particular, the industrial applications of AI. Huang opened by tracing NVIDIA’s longstanding relationship with German industry, beginning with gaming systems, workstations and automotive […]",
   "source": "NVIDIA Blog",
   "tier": "T1"
- },
- {
-  "title": "Tolan snags $30M for its AI companion that helps users navigate life",
-  "url": "https://techcrunch.com/2026/10/19/tolan-snags-30m-for-its-ai-companion-that-helps-users-navigate-life/",
-  "published": "2026-10-19T19:00:12+00:00",
-  "summary": "AI companion app Tolan has raised another $30 million after attracting more than 250,000 active users.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Replika’s founder built the AI assistant she pitched at Disrupt 12 years ago",
-  "url": "https://techcrunch.com/2026/10/19/replikas-founder-built-the-ai-assistant-she-pitched-at-disrupt-12-years-ago/",
-  "published": "2026-10-19T18:49:04+00:00",
-  "summary": "Eugenia Kuyda's newest startup Wabi is positioned to take advantage of an idea she had more than a decade ago. Wabi offers a personal AI assistant with a twist, free and downloadable to anyone today.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
  },
  {
   "title": "How to continue a GitHub Copilot app session in VS Code",
@@ -144,27 +648,11 @@
   "tier": "T1"
  },
  {
-  "title": "Tenstorrent hits $6.2B valuation to scale open-weight AI chips",
-  "url": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
-  "published": "2026-10-19T18:37:27+00:00",
-  "summary": "After drawing acquisition interest earlier this year, the Nvidia challenger raised $1.5 billion to remain independent.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
   "title": "Making the internet better for AI agents might make it worse for everyone else",
   "url": "https://www.technologyreview.com/2026/10/19/1147186/making-the-internet-better-for-ai-agents-might-make-it-worse-for-everyone-else/",
   "published": "2026-10-19T18:22:47+00:00",
   "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Until recently, you could divide internet users into just two categories: bots and people. Websites have long allowed bots to perform automated tasks, like capturing the content of web pages, but rules…",
   "source": "MIT Technology Review · AI",
-  "tier": "T2"
- },
- {
-  "title": "MiniMax M3.1 Flash shows China's AI price race has no floor in sight",
-  "url": "https://the-decoder.com/minimax-m3-1-flash-shows-chinas-ai-price-race-has-no-floor-in-sight/",
-  "published": "2026-10-19T18:22:30+00:00",
-  "summary": "MiniMax's M3.1 Flash jumps 13 points over its predecessor to 42 on the Artificial Analysis Intelligence Index, at half the cost. It also hits 73.7 percent on the DeepSWE v1.1 coding benchmark for under $0.30 per task, matching Deepseek V4.1 Flash 1017 on both performance and price. The article MiniMax M3.1 Flash shows China's AI price race has no floor in sight appeared first on The Decoder .",
-  "source": "The Decoder",
   "tier": "T2"
  },
  {
@@ -184,18 +672,10 @@
   "tier": "T2"
  },
  {
-  "title": "Kling AI drops version 4.0 with stereo audio, multilingual lip sync, and a lighter Flash variant",
-  "url": "https://the-decoder.com/kling-ai-drops-version-4-0-with-stereo-audio-multilingual-lip-sync-and-a-lighter-flash-variant/",
-  "published": "2026-10-19T17:36:26+00:00",
-  "summary": "Kling AI has released version 4.0 of its video generator with support for clips up to 30 seconds, ten keyframe images as input, and prompt comprehension expanded to 8,000 tokens. In comparisons with Wan 3.0 and Seedance 2.5, Kling 4.0 holds its own but doesn't pull ahead, which could be an early sign that the breakneck pace of progress in AI video models is starting to level off. The article Kling AI drops version 4.0 with stereo audio, multilingual lip sync, and a lighter Flash variant appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
   "title": "CoreWeave’s debt is becoming the whole AI industry’s problem",
   "url": "https://www.theverge.com/ai-artificial-intelligence/1014045/coreweave-stock-debt-sector-ai",
   "published": "2026-10-19T17:28:20-04:00",
-  "summary": "CoreWeave had a bad week last week. Its bonds slipped into distressed territory by a common definition - when investors demand 1,000 basis points more in yield than they'd get from government bonds. Last Tuesady Chamath \"SPAC King\" Palihapitiya noticed the distressed debt, and also asked whether the AI buildout was a private credit bubble. […]",
+  "summary": "CoreWeave had a bad week last week. Its bonds slipped into distressed territory by a common definition - when investors demand 1,000 basis points more in yield than they'd get from government bonds. Last Tuesday Chamath \"SPAC King\" Palihapitiya noticed the distressed debt, and also asked whether the AI buildout was a private credit bubble. […]",
   "source": "The Verge · AI",
   "tier": "T2"
  },
@@ -224,14 +704,6 @@
   "tier": "T1"
  },
  {
-  "title": "People are using AI to make their smart TVs dumb again",
-  "url": "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/",
-  "published": "2026-10-19T16:13:22+00:00",
-  "summary": "Fed up with ads, tracking, and sluggish interfaces, some smart TV owners are turning to AI agents to strip away bloatware and take back control of their TVs.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
   "title": "Push-based KV transfer to improve TTFT and TPOT for disaggregated inference in vLLM",
   "url": "https://aws.amazon.com/blogs/machine-learning/push-based-kv-transfer-to-improve-ttft-and-tpot-for-disaggregated-inference-in-vllm/",
   "published": "2026-10-19T16:05:17+00:00",
@@ -248,28 +720,12 @@
   "tier": "T1"
  },
  {
-  "title": "Nvidia launches new open models to run agents in the enterprise and on PCs",
-  "url": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/",
-  "published": "2026-10-19T15:37:09+00:00",
-  "summary": "Nvidia is leaning hard into the trend of enterprise companies wanting to run their own open models in their own data centers and also trying to make on-device, private AI agents a thing.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
   "title": "NVIDIA Advances Agentic Security for Media, From European Public Service Broadcasting to Global Content Production",
   "url": "https://blogs.nvidia.com/blog/media-agentic-security-european-public-service-broadcasting-global-content-production/",
   "published": "2026-10-19T15:00:31+00:00",
   "summary": "At a creative industry event that took place today in Berlin — hosted in collaboration with Adobe, Bertelsmann, NVIDIA and UFA — the latest advancements in intelligent media were on display. Key to the news: the European Broadcasting Union (EBU) is collaborating with NVIDIA to expand its sovereign framework with cloud, open models and integration […]",
   "source": "NVIDIA Blog",
   "tier": "T1"
- },
- {
-  "title": "Two German courts now hold Google liable for what its AI overviews say",
-  "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
-  "published": "2026-10-19T14:54:39+00:00",
-  "summary": "Google tried to overturn a landmark Munich ruling on AI search liability by appealing, then quietly settled. The strategy isn't working. The Aachen Regional Court just applied the exact same reasoning in a new case where Google's AI falsely attributed criminal offenses to a doctor that actually involved someone else. A consistent legal view is forming across German courts, and it treats Google's AI answers as the company's own content. The article Two German courts now hold Google liable for what its AI overviews say appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
  },
  {
   "title": "Disney found a way to buy Character.AI without buying its lawsuits",
@@ -280,44 +736,12 @@
   "tier": "T2"
  },
  {
-  "title": "Stripe says AI agent purchases are adding up, but it won't share the numbers",
-  "url": "https://the-decoder.com/stripe-says-ai-agent-purchases-are-adding-up-but-it-wont-share-the-numbers/",
-  "published": "2026-10-19T12:51:12+00:00",
-  "summary": "AI agents are increasingly using Stripe's payment service Link to shop for their users, Upstarts Media reports. The article Stripe says AI agent purchases are adding up, but it won't share the numbers appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Laplace Intelligence red-teams robots and self-driving cars before they hit the real world",
-  "url": "https://techcrunch.com/2026/10/19/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/",
-  "published": "2026-10-19T12:30:00+00:00",
-  "summary": "University of Michigan spinout Laplace Intelligence uses AI agents and interactive simulation to stress-test robots and self-driving vehicles before deployment. The profitable startup is competing in Startup Battlefield at TechCrunch Disrupt, October 13-15 in San Francisco.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
   "title": "Advancing coding in low‑resource programming languages",
   "url": "https://openai.com/index/low-resource-programming-languages",
   "published": "2026-10-19T12:00:00+00:00",
   "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
   "source": "OpenAI News",
   "tier": "T1"
- },
- {
-  "title": "The neocloud shakeout is coming, and Nvidia has the most to lose",
-  "url": "https://the-decoder.com/the-neocloud-shakeout-is-coming-and-nvidia-has-the-most-to-lose/",
-  "published": "2026-10-19T11:33:36+00:00",
-  "summary": "After stock crashes and Firmus's scrapped IPO, industry executives expect only seven to ten of the hundreds of AI cloud providers to survive. CoreWeave lost a quarter of its market value, and Microsoft pulled out of a deal with Nscale for 23,000 Nvidia chips. Nvidia has a lot riding on the outcome, since customers outside the hyperscalers make up 45 percent of its data center revenue. The article The neocloud shakeout is coming, and Nvidia has the most to lose appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic plans fund for workers threatened by AI, Musk counters with SpaceX shares for children",
-  "url": "https://the-decoder.com/anthropic-plans-fund-for-workers-threatened-by-ai-musk-counters-with-spacex-shares-for-children/",
-  "published": "2026-10-19T11:19:12+00:00",
-  "summary": "Anthropic wants to put five percent of its shares into a new public benefit fund that will also look into direct payments to workers at risk of losing their jobs. The fund is a company-owned LLC, so Anthropic keeps control of it as a possible IPO approaches. By offering the option of direct payments, Anthropic goes further than its competitors. Elon Musk says on X the company should just give the shares directly to the public. The article Anthropic plans fund for workers threatened by AI, Musk counters with SpaceX shares for children appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
  },
  {
   "title": "JB Pritzker thinks AI could help us live to 100 — or threaten us like nukes",
@@ -336,91 +760,11 @@
   "tier": "T2"
  },
  {
-  "title": "AI researchers stranded Claude on a virtual desert island. It started to “play.”",
-  "url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
-  "published": "2026-10-19T09:08:05+00:00",
-  "summary": "What do AI agents do if you don’t tell them to do anything? The answer looks a lot like play. Researchers repeatedly stranded them alone on a virtual desert island for 30 hours in an experiment reminiscent of the movies Cast Away or Home Alone. The agents—copies of Claude Opus 4.7 nicknamed Eko—were able to…",
-  "source": "MIT Technology Review · AI",
-  "tier": "T2"
- },
- {
   "title": "Democrats think cracking down on AI could give them an edge",
   "url": "https://www.theverge.com/policy/1013113/democrats-ai-midterms",
   "published": "2026-10-19T08:00:00-04:00",
   "summary": "Democrats could win back control of Congress this November, and if they do, they'll need to decide how to approach one of the country's newest and thorniest political issues: AI. Polls predict Democrats will flip at least one chamber of Congress in the midterm elections, which would put committee leadership back in their hands. That […]",
   "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
-  "url": "https://huggingface.co/blog/hf-torchneuron",
-  "published": "2026-10-19T00:00:00+00:00",
-  "summary": "",
-  "source": "Hugging Face Blog",
-  "tier": "T1"
- },
- {
-  "title": "llm-tools-datasette 0.1.1",
-  "url": "https://simonwillison.net/2026/Oct/18/llm-tools-datasette/",
-  "published": "2026-10-18T23:43:09+00:00",
-  "summary": "Release: llm-tools-datasette 0.1.1 When I switched LLM over to httpx2 in LLM 0.33 I forget that this would break any plugins which used httpx without directly depending on it. llm-tools-datasette was one of those plugins, now fixed. Tags: datasette , llm",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "llm-echo 0.5",
-  "url": "https://simonwillison.net/2026/Oct/18/llm-echo/",
-  "published": "2026-10-18T23:16:16+00:00",
-  "summary": "Release: llm-echo 0.5 I'm working towards a new LLM release, and testing PRs caused me to revisit the llm-echo debug plugin. This plugin provides a \"model\" which doesn't involve an LLM at all - it just repeats back the prompts that have been fed to it. The new release now updates the simulated token usage counts to take tool calls, system prompts, and reasoning tokens into account. Example usage: uvx --with llm-echo llm -m echo 'hi there' -o thinking 1 --usage Outputs: First I consider the prompt, then I decide what to say. { \"prompt\": \"hi there\", \"system\": \"\", \"attachments\": [], \"stream\": true, \"previous\": [] } Token usage: 2 input, 24 output Tags: llm",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
-  "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
-  "published": "2026-10-18T20:37:40+00:00",
-  "summary": "The company offered some broad-strokes ideas for how this money might actually be used, such as “large donations to traditional nonprofits or direct distributions to specific populations.”",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Disney agrees to hire the majority of Character AI’s workforce",
-  "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
-  "published": "2026-10-18T16:30:00+00:00",
-  "summary": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with a higher offer.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic gives outside AI watchdog “employee-like” access",
-  "url": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access/",
-  "published": "2026-10-18T16:25:19+00:00",
-  "summary": "The outside watchdog can publish its findings without Anthropic's approval.",
-  "source": "Ars Technica · AI",
-  "tier": "T2"
- },
- {
-  "title": "A woman was arrested in Philly for blocking a delivery robot",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
-  "published": "2026-10-18T14:28:10-04:00",
-  "summary": "Carolyn Marvin was arrested and charged with disorderly conduct after blocking the path of an Uber delivery robot and refusing to get out of the way. Marvin told Philadelphia's ABC13 \"I know they're taking the jobs of human delivery workers and so, I have been protesting them whenever I saw them by standing in front […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic has nearly stopped hiring junior staff because AI agents now work six times as many hours",
-  "url": "https://the-decoder.com/anthropic-has-nearly-stopped-hiring-junior-staff-because-ai-agents-now-work-six-times-as-many-hours/",
-  "published": "2026-10-18T13:22:26+00:00",
-  "summary": "Anthropic is hiring fewer and fewer junior staff in technical roles. The share of junior positions among new hires dropped from 27 to 9 percent since early 2025. By August 2026, AI agents across the company were already logging six times as many hours as humans. Researchers warn of a \"tragedy of the cognitive commons\": if junior positions disappear, experienced specialists will be in short supply down the road. That is, assuming such specialists are even needed anymore. The article Anthropic has nearly stopped hiring junior staff because AI agents now work six times as many hours appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Four Gemini 4 Argon agents beat Minecraft without any human help",
-  "url": "https://the-decoder.com/four-gemini-4-argon-agents-beat-minecraft-without-any-human-help/",
-  "published": "2026-10-18T12:39:51+00:00",
-  "summary": "Four AI agents running on Google's Gemini 4 Argon have beaten Minecraft for the first time without human help, slaying the Ender Dragon in a fully autonomous run. With no predefined roles or strategies, they coordinated on their own, wrote 2,783 programs, exchanged 229 chat messages, and died 605 times. The session cost $1,620. The article Four Gemini 4 Argon agents beat Minecraft without any human help appeared first on The Decoder .",
-  "source": "The Decoder",
   "tier": "T2"
  }
 ]

@@ -56,7 +56,8 @@ android skills update wear-compose-m3
 **Claude Code**:
 
 ```
-/plugin install android-skills --marketplace android/skills
+/plugin marketplace add android/skills
+/plugin install android-skills@android-skills
 ```
 
 **Codex:**
