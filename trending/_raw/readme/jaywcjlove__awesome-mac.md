@@ -846,6 +846,7 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 * [AQBot](https://app.aqbot.top/) - Open-source desktop AI workspace for multi-provider chat, agent workflows, knowledge bases, MCP tools, and an OpenAI-compatible API gateway. [![Open-Source Software][OSS Icon]](https://github.com/AQBot-Desktop/AQBot) ![Freeware][Freeware Icon]
 * [Atomic Agent](https://atomicagent.io/) - Local-first CLI and TUI coding agent that runs open-weight models entirely on your machine, with MCP support and 56 built-in tools. [![Open-Source Software][OSS Icon]](https://github.com/AtomicBot-ai/atomic-agent) ![Freeware][Freeware Icon]
 * [Atomic Chat](https://github.com/AtomicBot-ai/Atomic-Chat) - Open-source AI chat client for local and cloud models with MCP support. [![Open-Source Software][OSS Icon]](https://github.com/AtomicBot-ai/Atomic-Chat)
+* [Atticus](https://saarthurr.github.io/atticus-mac/) - Open-source voice assistant that runs on your Claude plan, learns new tasks after doing them once, and handles dictation, screen help, and background agents. [![Open-Source Software][OSS Icon]](https://github.com/SaarthurR/atticus-mac) ![Freeware][Freeware Icon]
 * [BitFun](https://openbitfun.com/) - Open-source AI agent that gives each task its own interactive workspace with chat linked to live state. [![Open-Source Software][OSS Icon]](https://github.com/GCWing/BitFun) ![Freeware][Freeware Icon]
 * [BoltAI](https://boltai.com) - A beautiful & powerful ChatGPT app for Mac. Stay ahead by integrating AI into your workflow today.
 * [ChatGPT](https://openai.com/chatgpt/mac/) - A conversational AI system that listens, learns, and challenges
@@ -964,8 +965,10 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 
 * [Cyberduck](https://cyberduck.io) - Free FTP, SFTP, WebDAV, S3, Backblaze B2, Azure and OpenStack Swift browser. ![Freeware][Freeware Icon]
 * [Dropshare](https://dropshare.app) - File sharing tool for screenshots, screen recordings, and other files.
+* [FileShipper](https://getapps.cafe/app/fileshipper) - Peer-to-peer file transfer between computers and phones over local Wi-Fi. ![Freeware][Freeware Icon]
 * [Flow](https://fivedetails.com/flow/) - Award-winning, beautiful, fast, and reliable FTP + SFTP client.
 * [LocalSend](https://localsend.org/) - An open-source cross-platform alternative to AirDrop. [![Open-Source Software][OSS Icon]](https://github.com/localsend/localsend) ![Freeware][Freeware Icon]
+* [Nearby Drop](https://arslanbasharat-o-o.github.io/NearByDrop/) - Independent macOS menu-bar app for two-way Google Quick Share transfers with compatible Android devices, plus USB MTP, Finder sharing, QR tools, and experimental Windows interoperability. ![Freeware][Freeware Icon]
 * [NearDrop](https://github.com/grishka/NearDrop) - An unofficial Google Nearby Share/Quick Share app for macOS. [![Open-Source Software][OSS Icon]](https://github.com/localsend/localsend) ![Freeware][Freeware Icon]
 * [Rclone UI](https://rcloneui.com/) - The GUI for Rclone & S3. [![App Store][app-store Icon]](https://apps.apple.com/app/rclone-ui/id6756127598?platform=mac) [![Open-Source Software][OSS Icon]](https://github.com/rclone-ui/rclone-ui) ![Freeware][Freeware Icon]
 * [Transmit](https://panic.com/transmit/) - Highly flexible and intuitive FTP client, supports SFTP, S3 and iDisk/WebDAV.
@@ -1071,6 +1074,7 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 * [GarageBand](https://www.apple.com/mac/garageband/) - Digital audio workstation for recording and music production. ![Freeware][Freeware Icon] [![App Store][app-store Icon]](https://apps.apple.com/cn/app/garageband/id682658836?l=zh&ls=1&platform=mac)
 * [Local Transcriber](https://transcriber.teconomix.net) - Menu bar app that records calls and meetings and transcribes them on-device with Whisper, with speaker recognition, call detection and dictation into any app. [![Open-Source Software][OSS Icon]](https://github.com/teconomix/local-transcriber) ![Freeware][Freeware Icon]
 * [Logic Pro X](https://www.apple.com/logic-pro/) - Professional digital audio workstation for music and audio production. [![App Store][app-store Icon]](https://apps.apple.com/cn/app/logic-pro-x/id634148309?l=zh&platform=mac)
+* [PitchTap](https://github.com/gkudva96/pitchtap) - Open-source menu bar app that changes the key of any app's audio live without changing the tempo. [![Open-Source Software][OSS Icon]](https://github.com/gkudva96/pitchtap) ![Freeware][Freeware Icon]
 * [Segue](https://segue.npearce.me/) - Broadcast audio playout with crossfade, trim, ramp timers, and pause beds for live radio and podcasts. [![Open-Source Software][OSS Icon]](https://github.com/pearcenuk/Segue) ![Freeware][Freeware Icon]
 * [Shiyin](https://shiyin.weibuilds.com) - Open-source meeting recorder that transcribes on-device, identifies speakers, and writes timestamped notes with your own Claude or ChatGPT subscription. [![Open-Source Software][OSS Icon]](https://github.com/juinwei7/Shiyin) ![Freeware][Freeware Icon]
 * [Stargate DAW](https://github.com/stargatedaw/stargate) - An all-in-one digital audio workstation (DAW) and plugin suite. [![Open-Source Software][OSS Icon]](https://github.com/aria2) ![Freeware][Freeware Icon]
@@ -1151,7 +1155,6 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 
 ## Browsers
 
-* [Arc](https://arc.net/) - Browser with a distinctive workspace-style interface. ![Freeware][Freeware Icon]
 * [Brave](https://brave.com/) - Web browser with an emphasis on privacy and speed. [![Open-Source Software][OSS Icon]](https://github.com/brave/brave-browser/) ![Freeware][Freeware Icon]
 * [ChatGPT Atlas](https://chatgpt.com/atlas/) - Browser with ChatGPT built in. ![Freeware][Freeware Icon]
 * [Chrome](https://www.google.com/chrome/) - Chrome, developed by Google ![Freeware][Freeware Icon]
@@ -1167,6 +1170,7 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 * [Orion](https://browser.kagi.com/) - Lightweight WebKit-based browser with support for Chrome and Firefox extensions. ![Freeware][Freeware Icon]
 * [qutebrowser](https://www.qutebrowser.org/) - A keyboard-driven, vim-like browser based on Python and Qt. [![Open-Source Software][OSS Icon] ![Freeware][Freeware Icon]](https://github.com/qutebrowser/qutebrowser)
 * [Safari](https://www.apple.com/safari/) - Native browser for Macs. ![Freeware][Freeware Icon] [![Awesome List][awesome-list Icon]](https://github.com/learn-anything/safari-extensions#readme)
+* [Stedding](https://stedding.dev/) - Open-source Arc-style browser on Chromium with Spaces, vertical tabs, pinned folders, a command bar and Arc import. [![Open-Source Software][OSS Icon]](https://github.com/ysalitrynskyi/stedding-browser) ![Freeware][Freeware Icon]
 * [Tabbit](https://tabbitbrowser.com/) - An AI-native browser that understands your context, chats with webpages, and automates tasks. ![Freeware][Freeware Icon]
 * [Tor Browser](https://www.torproject.org/projects/torbrowser.html) - Privacy browser designed for anonymous web browsing. [![Open-Source Software][OSS Icon] ![Freeware][Freeware Icon]](https://gitlab.torproject.org/tpo/applications/tor-browser/)
 * [Mullvad Browser](https://mullvad.net/en/download/browser/) - Privacy browser focused on anti-fingerprinting protection. [![Open-Source Software][OSS Icon] ![Freeware][Freeware Icon]](https://gitlab.torproject.org/tpo/applications/mullvad-browser/)
@@ -1285,8 +1289,10 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 * [Clipbara](https://github.com/mobrava/Clipbara) - Free Paste-like clipboard manager with pinboards, Quick Look previews, and one-click copying. [![Open-Source Software][OSS Icon]](https://github.com/mobrava/Clipbara) ![Freeware][Freeware Icon] ![Native App][Native Icon] [![App Store][app-store Icon]](https://apps.apple.com/app/clipbara/id6803537696?platform=mac)
 * [Clipboard](https://getclipboard.app/) - Easy-to-use terminal clipboard manager for all platforms. [![Open-Source Software][OSS Icon]](https://github.com/Slackadays/Clipboard) ![Freeware][Freeware Icon]
 * [ClipMenu](https://www.clipmenu.com) - Clipboard manager for Mac OS X. [![Open-Source Software][OSS Icon]](https://github.com/naotaka/ClipMenu) ![Freeware][Freeware Icon]
+* [Clippo](https://lorder19.github.io/clippo/) - Clipboard history with search, saved snippet lists and a paste queue that pastes copied items one by one. Skips passwords, history encrypted on disk. [![Open-Source Software][OSS Icon]](https://github.com/Lorder19/clippo) ![Freeware][Freeware Icon] ![Native App][Native Icon]
 * [Clippy](https://github.com/yarasaa/Clippy) - Smart clipboard manager with content-aware previews, AI transformations, a built-in screenshot editor, and file converter. [![Open-Source Software][OSS Icon]](https://github.com/yarasaa/Clippy) ![Freeware][Freeware Icon]
 * [ClipHistory](https://github.com/weiykong/ClipHistory) - Lightweight native clipboard manager with instant hotkey popup, search, pinning, and text/image history. [![Open-Source Software][OSS Icon]](https://github.com/weiykong/ClipHistory) ![Freeware][Freeware Icon]
+* [ClipRecallBar](https://turhe123.github.io/clip-recall-bar/) - Keyboard-first clipboard history popup that filters as you type and pastes with one key. [![Open-Source Software][OSS Icon]](https://github.com/turhe123/clip-recall-bar) ![Freeware][Freeware Icon] ![Native App][Native Icon]
 * [ClipTools](https://macmost.com/cliptools) - Clipboard utility set for quick copy, paste, and text cleanup tasks. ![Freeware][Freeware Icon] [![App Store][app-store Icon]](https://apps.apple.com/us/app/cliptools/id1619348240?platform=mac)
 * [Clipy](https://clipy-app.com/) - Clipy is a Clipboard extension app for macOS. Based on ClipMenu. [![Open-Source Software][OSS Icon]](https://github.com/Clipy/Clipy) ![Freeware][Freeware Icon]
 * [CopyQ](https://hluk.github.io/CopyQ) - Clipboard Manager with Advanced Features. [![Open-Source Software][OSS Icon]](https://github.com/hluk/CopyQ) ![Freeware][Freeware Icon]
@@ -1321,6 +1327,7 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 * [cctop](https://cctop.app) - Open-source menu bar monitor that shows live status for AI coding sessions (Claude Code, Codex, opencode, pi) and jumps to the right terminal pane or editor window. [![Open-Source Software][OSS Icon]](https://github.com/st0012/cctop) ![Freeware][Freeware Icon]
 * [ChargeMonitor](https://github.com/CrashSystemZ/ChargeMonitor) - Menu bar battery monitor with real-time charging stats and energy impact insights. ![Freeware][Freeware Icon] [![Open-Source Software][OSS Icon]](https://github.com/CrashSystemZ/ChargeMonitor)
 * [CodexIsland](https://github.com/ericjypark/codex-island) - Turns the MacBook notch into a Dynamic Island-style live activity for Claude Code and Codex CLI rate limits and spend, computed locally with no telemetry. [![Open-Source Software][OSS Icon]](https://github.com/ericjypark/codex-island) ![Freeware][Freeware Icon]
+* [Konverter](https://github.com/davidpraznik/Konverter) - Menu bar file converter and image compressor operated by dragging files onto a radial wheel. [![Open-Source Software][OSS Icon]](https://github.com/davidpraznik/Konverter) ![Freeware][Freeware Icon] ![Native App][Native Icon]
 * [Kumquat](https://github.com/TheAlexRay/kumquat) - Menu bar file converter: drag files, tap Shift and drop them on a wheel to convert images, audio, video and documents, compress, OCR, trim and annotate. [![Open-Source Software][OSS Icon]](https://github.com/TheAlexRay/kumquat) ![Freeware][Freeware Icon]
 * [Perch](https://perchapp.dev) - Keyboard-first MacBook notch app for Claude Code, Codex, OpenCode and pi sessions: see what each did, answer from the notch, and jump back to the exact window or terminal pane. [![Open-Source Software][OSS Icon]](https://github.com/asafofer/perch) ![Freeware][Freeware Icon]
 * [SaneBar](https://sanebar.com) - Privacy-first menu bar manager with hidden zones and automation rules. [![Open-Source Software][OSS Icon]](https://github.com/sane-apps/SaneBar) ![Freeware][Freeware Icon]
@@ -1388,6 +1395,7 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 * [Tactile](https://tactile.masn.studio/) - Adds subtle trackpad haptic taps over clickable elements, with optional visual cues for accessibility. [![Open-Source Software][OSS Icon]](https://github.com/Mason363/Tactile) ![Freeware][Freeware Icon]
 * [TextSniper](https://textsniper.app/) - Simple yet powerful OCR app in your Menu Bar. Instantly copy and paste text from anywhere. [![App Store][app-store Icon]](https://apps.apple.com/app/id1528890965?platform=mac)
 * [Today](https://sindresorhus.com/today) - View today’s schedule and calendar events from the menu bar. ![Freeware][Freeware Icon] [![App Store][app-store Icon]](https://apps.apple.com/app/id6443714928?platform=mac)
+* [Topnotchers](https://github.com/joey-david/topnotchers) - Turns the MacBook notch into a home for Claude Code and Codex sessions as animated mascots, with questions and permission prompts answered from the notch. [![Open-Source Software][OSS Icon]](https://github.com/joey-david/topnotchers) ![Freeware][Freeware Icon] ![Native App][Native Icon]
 * [TomatoBar](https://github.com/ivoronin/TomatoBar) - World's neatest Pomodoro timer for macOS menu bar. [![Open-Source Software][OSS Icon]](https://github.com/ivoronin/TomatoBar) ![Freeware][Freeware Icon]
 * [TypeCue](https://typecue.app) - Types a prepared script into any app, one hotkey press per line, as real keystrokes at a human pace, for demo recordings and live presentations. [![Open-Source Software][OSS Icon]](https://github.com/alexpolonsky/TypeCue) ![Freeware][Freeware Icon]
 * [UTC Time](https://sindresorhus.com/utc-time) - Show the time in UTC in the menu bar or a widget. ![Freeware][Freeware Icon] [![App Store][app-store Icon]](https://apps.apple.com/app/id1538245904?platform=mac)
@@ -1434,6 +1442,7 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 ### File Organization Tools
 
 * [AppPorts](https://github.com/wzh4869/AppPorts) - Move apps to external storage while keeping working launch links in `/Applications`. [![Open-Source Software][OSS Icon]](https://github.com/wzh4869/AppPorts) ![Freeware][Freeware Icon]
+* [Archivator](https://github.com/davidpraznik/Archivator) - Menu bar archive tool that compresses and extracts files by dragging them onto a radial wheel. [![Open-Source Software][OSS Icon]](https://github.com/davidpraznik/Archivator) ![Freeware][Freeware Icon] ![Native App][Native Icon]
 * [BetterZip](https://macitbetter.com/) - Archive tool supports ZIP, TAR, TGZ, TBZ, TXZ (new), 7-ZIP, RAR.
 * [eZip](https://ezip.awehunt.com) - Lightweight archive tool for ZIP, RAR, 7Z, and other common formats. ![Freeware][Freeware Icon]
 * [Fileside](https://www.fileside.app) - A modern, tiling file manager with unlimited panes.
@@ -1714,6 +1723,7 @@ If you have any suggestions, ideas, or discover excellent software, feel free to
 * [GrandPerspective](https://grandperspectiv.sourceforge.net) - Visualize disk usage with tree maps. [![Open-Source Software][OSS Icon]](https://git.code.sf.net/p/grandperspectiv/source) [![Freeware][Freeware Icon]](https://sourceforge.net/projects/grandperspectiv/files/grandperspective/) [![App Store][app-store Icon]](https://apps.apple.com/us/app/grandperspective/id1111570163?platform=mac)
 * [Gray](https://github.com/zenangst/Gray) - Per-app light/dark mode switcher. ![Freeware][Freeware Icon] [![Open-Source Software][OSS Icon]](https://github.com/zenangst/Gray)
 * [HandShaker](https://www.smartisan.com/apps/handshaker) - Manage Android phone content on Mac. ![Freeware][Freeware Icon]
+* [Healthy Battery](https://github.com/berkinefeavci/healthy-battery) - Open-source charge limiter with live power flow and long-term battery health for Apple Silicon MacBooks. [![Open-Source Software][OSS Icon]](https://github.com/berkinefeavci/healthy-battery) ![Freeware][Freeware Icon]
 * [IconCraft](https://iconcraft.co) - Give any Mac app the name and icon you already know. The app underneath does not change. [![Open-Source Software][OSS Icon]](https://github.com/gshipman223/IconCraft) ![Freeware][Freeware Icon]
 * [iStat Menus](https://bjango.com/mac/istatmenus/) - Advanced system monitor for menubar.
 * [iStats](https://github.com/Chris911/iStats) - Command-line system information tool. [![Open-Source Software][OSS Icon] ![Freeware][Freeware Icon]](https://github.com/Chris911/iStats)
