@@ -258,6 +258,12 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1;translate:none}
 }
+/* Deliberate poster lettering: three clean lines at every screen size. */
+.hero h1{font-size:clamp(64px,7.5vw,100px);line-height:1.04;letter-spacing:-.045em;transform:none}
+.hero h1 span,.hero h1 em{display:block}
+.hero h1 em{-webkit-text-stroke:1.5px var(--ink);text-shadow:4px 4px 0 var(--ink)}
+@media(max-width:860px){.hero{padding-top:calc(var(--nav-h) + 36px)}.hero h1{font-size:clamp(58px,13vw,86px)}}
+@media(max-width:420px){.hero h1{font-size:clamp(54px,15vw,63px)}}
 </style>
 </head>
 <body>
@@ -287,7 +293,7 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
   <div class="kana" aria-hidden="true">パウビー・メイクス・シングス</div>
   <div class="wrap">
     <div>
-      <h1>Powvy makes<br><em>things.</em></h1>
+      <h1><span>Powvy</span><span>makes</span><em>things.</em></h1>
       <p data-i18n="heroP">Hi，我是 Lucas，也叫 Powvy。我在迪拜读书，喜欢用 AI 把想法做成能用的工具，探索技术与商业如何解决真实问题。</p>
       <div class="tags" data-i18n="heroTags"><span class="tag red">学生 · 创作者</span><span class="tag">AI &amp; Business</span><span class="tag">Dubai</span></div>
       <a class="scroll-hint" href="#products" data-i18n="heroHint"><b>▼</b>往下看看我做了什么</a>
@@ -597,7 +603,7 @@ const products = [
     features:['综合分排名 + 新增 Star 排名一键切换','按 AI Agent、Claude Code、记忆、编程工具、语言等分类筛选','可以翻看之前每天的榜单'] },
 {
   "id": "liangli",
-  "name": "Powy",
+  "name": "Powvy Habit",
   "tag": "个人成长 PWA",
   "url": "https://zhixuanlucasfeng-cmyk.github.io/liangli/",
   "desc": "反假性自律的个人成长工具：从任务负荷到专注与生活记录，把计划放回真实的一天。",
@@ -620,42 +626,8 @@ const products = [
     "中文网站"
   ]
 },
-{
-  "id": "solarhub",
-  "name": "Restar Solar Hub",
-  "tag": "国家选择入口",
-  "url": "https://zhixuanlucasfeng-cmyk.github.io/restar-solar-hub/",
-  "desc": "Restar Solar 的国家选择入口，帮助访客找到对应地区的网站。",
-  "features": [
-    "统一的国家选择入口",
-    "按地区访问企业网站"
-  ]
-},
-{
-  "id": "solar-countries",
-  "name": "Restar Solar · 三个国家",
-  "tag": "企业网站系列",
-  "url": "https://restarsolar.net/?country=NG",
-  "desc": "为尼日利亚、苏丹和马里制作的 Restar Solar 网站，现已迁移到统一网站的国家入口。",
-  "features": [
-    "尼日利亚、苏丹、马里三个国家入口",
-    "三个公开仓库集中展示"
-  ],
-  "links": [
-    {
-      "name": "尼日利亚",
-      "url": "https://restarsolar.net/?country=NG"
-    },
-    {
-      "name": "苏丹",
-      "url": "https://restarsolar.net/?country=SD"
-    },
-    {
-      "name": "马里",
-      "url": "https://restarsolar.net/?country=ML"
-    }
-  ]
-},
+
+
 {
   "id": "alevel",
   "name": "A-Level Survival Bureau",
@@ -700,10 +672,10 @@ const products = [
 // 开源仓库：repo 填 "用户名/仓库名"，用于实时拉取 GitHub 星标
 const skills = [
 {
-  "name": "liangli",
+  "name": "Powvy Habit",
   "prop": "bulb",
   "repo": "zhixuanlucasfeng-cmyk/liangli",
-  "desc": "Powy 的源码：任务、专注、学习卡片与生活记录，本地优先的个人成长 PWA。"
+  "desc": "Powvy Habit 的源码：任务、专注、学习卡片与生活记录，本地优先的个人成长 PWA。"
 },
 
 {
@@ -718,31 +690,8 @@ const skills = [
   "repo": "zhixuanlucasfeng-cmyk/Chainsaw-man-philosophy",
   "desc": "《电锯人》中文角色百科与藤本树作品哲学解读网站。"
 },
-{
-  "name": "restar-solar-hub",
-  "prop": "api",
-  "repo": "zhixuanlucasfeng-cmyk/restar-solar-hub",
-  "desc": "Restar Solar 国家选择入口的网站源码。"
-},
-{
-  "name": "Restar Solar · 三个国家",
-  "prop": "group",
-  "desc": "尼日利亚、苏丹、马里企业网站的三个公开仓库。",
-  "repos": [
-    {
-      "name": "尼日利亚",
-      "repo": "zhixuanlucasfeng-cmyk/Nigeria-website"
-    },
-    {
-      "name": "苏丹",
-      "repo": "zhixuanlucasfeng-cmyk/Sudan-website"
-    },
-    {
-      "name": "马里",
-      "repo": "zhixuanlucasfeng-cmyk/Mali-website"
-    }
-  ]
-},
+
+
   { name:'power',            prop:'group',  repo:'zhixuanlucasfeng-cmyk/power',            desc:'你的所有 Agent，一个房间。群聊、角色包、Obsidian 记忆。' },
   { name:'contract',         prop:'api',    repo:'zhixuanlucasfeng-cmyk/contract',         desc:'一把主密钥调用所有 Agent 工具，自动故障切换，自带 MCP。' },
   { name:'claude-usage',     prop:'slides', repo:'zhixuanlucasfeng-cmyk/claude-usage',     desc:'Claude Code / Codex / DeepSeek token 用量 CLI + 桌面小组件。' },
@@ -770,9 +719,9 @@ const posts = [
     "bg": "#EFEAE0",
     "tag": "项目介绍",
     "date": "2026-10-16",
-    "title": "Powy：把任务、专注与生活放回同一天",
+    "title": "Powvy Habit：把任务、专注与生活放回同一天",
     "summary": "一个反假性自律的个人成长 PWA，默认本地优先，也支持有限范围的可选同步。",
-    "body": "<p>Powy 的公开仓库名是 liangli。它是一款反假性自律的个人成长 PWA，把任务、精力负荷、目标、专注与生活记录放在同一个工具中。</p>\n<h2>想法不必立刻成为任务</h2><p>“今日”用于安排任务并显示负荷，超载时提醒而不强行阻止。“成长池”暂存想法，不计入当天负荷，需要时再转成任务。长期目标的进度由使用者手动推进。</p>\n<h2>专注和学习的辅助工具</h2><p>专注模块提供番茄钟与记录看板。学习助手还包含离线卡片，支持牌组管理、到期复习以及 JSON、CSV 导入导出。卡片采用简化的复习间隔，不宣称兼容 FSRS。</p>\n<h2>本地数据与可选同步</h2><p>生活页包含营养、钱包和日常记录。默认情况下数据留在设备上；启用账号同步后，可以同步核心任务与学习卡片，生活页数据仍保留在本机。界面支持中文与英文。</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/liangli/\" target=\"_blank\" rel=\"noopener\">打开 Powy →</a></p>"
+    "body": "<p>Powvy Habit 是一款反假性自律的个人成长 PWA，把任务、精力负荷、目标、专注与生活记录放在同一个工具中。</p>\n<h2>想法不必立刻成为任务</h2><p>“今日”用于安排任务并显示负荷，超载时提醒而不强行阻止。“成长池”暂存想法，不计入当天负荷，需要时再转成任务。长期目标的进度由使用者手动推进。</p>\n<h2>专注和学习的辅助工具</h2><p>专注模块提供番茄钟与记录看板。学习助手还包含离线卡片，支持牌组管理、到期复习以及 JSON、CSV 导入导出。卡片采用简化的复习间隔，不宣称兼容 FSRS。</p>\n<h2>本地数据与可选同步</h2><p>生活页包含营养、钱包和日常记录。默认情况下数据留在设备上；启用账号同步后，可以同步核心任务与学习卡片，生活页数据仍保留在本机。界面支持中文与英文。</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/liangli/\" target=\"_blank\" rel=\"noopener\">打开 Powvy Habit →</a></p>"
   },
   {
     "id": "restar-solar",
@@ -782,7 +731,7 @@ const posts = [
     "date": "2026-10-16",
     "title": "Restar Solar：连接企业网站、客服与产品管理",
     "summary": "面向非洲市场的家族业务项目，员工已开始使用后台更新产品。",
-    "body": "<p>我为面向非洲市场的家族业务开发了网站及配套工具。这个项目包括企业网站、AI 客服、员工线上客服，以及产品管理和更新功能。</p>\n<h2>网站之外，还有日常维护</h2><p>访客需要了解产品并提出问题，员工则需要维护产品信息。项目把对外展示与后台管理连接起来；目前已确认的实际使用情况是，员工已经开始通过后台更新产品。</p>\n<h2>AI 与人工客服并存</h2><p>项目既包含 AI 客服，也提供员工线上客服能力。它的范围不止是一个自动回答问题的聊天窗口，还包括业务人员参与服务和维护内容的入口。</p>\n<h2>多个国家的网站入口</h2><p>网站系列包括喀麦隆网站，以及尼日利亚、苏丹和马里的国家站点。后三者现已迁移到统一网站的对应国家入口，Restar Solar Hub 提供国家选择页面。</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/restar-solar-hub/\" target=\"_blank\" rel=\"noopener\">打开国家选择入口 →</a></p>"
+    "body": "<p>我为面向非洲市场的家族业务开发了网站及配套工具。这个项目包括企业网站、AI 客服、员工线上客服，以及产品管理和更新功能。</p>\n<h2>网站之外，还有日常维护</h2><p>访客需要了解产品并提出问题，员工则需要维护产品信息。项目把对外展示与后台管理连接起来；目前已确认的实际使用情况是，员工已经开始通过后台更新产品。</p>\n<h2>AI 与人工客服并存</h2><p>项目既包含 AI 客服，也提供员工线上客服能力。它的范围不止是一个自动回答问题的聊天窗口，还包括业务人员参与服务和维护内容的入口。</p>\n"
   },
   {
     "id": "alevel",
@@ -877,37 +826,8 @@ const EN = {
       "Chinese-language website"
     ]
   },
-  "solarhub": {
-    "tag": "Country selector",
-    "desc": "The Restar Solar country selector helps visitors find the website for their region.",
-    "features": [
-      "One country-selection entry point",
-      "Access company websites by region"
-    ]
-  },
-  "solar-countries": {
-    "name": "Restar Solar · Three Countries",
-    "tag": "Company website series",
-    "desc": "Restar Solar websites made for Nigeria, Sudan and Mali, now moved to country entry points on the unified website.",
-    "features": [
-      "Nigeria, Sudan and Mali country entry points",
-      "Three public repositories presented together"
-    ],
-    "links": [
-      {
-        "name": "Nigeria",
-        "url": "https://restarsolar.net/?country=NG"
-      },
-      {
-        "name": "Sudan",
-        "url": "https://restarsolar.net/?country=SD"
-      },
-      {
-        "name": "Mali",
-        "url": "https://restarsolar.net/?country=ML"
-      }
-    ]
-  },
+
+
   "alevel": {
     "tag": "A-Level study tools",
     "desc": "A local-first A-Level study workspace for recording practice evidence, planning study time and tracking reviews.",
@@ -940,8 +860,8 @@ const EN = {
   },
   skills: {
 
-  "liangli": {
-    "desc": "Source of Powy: a local-first growth PWA with tasks, focus, flashcards and life records."
+  "Powvy Habit": {
+    "desc": "Source of Powvy Habit: a local-first growth PWA with tasks, focus, flashcards and life records."
   },
   "bsr-hub": {
     "desc": "Campus marketplace and local errand demos, with the Rust core API and web apps."
@@ -952,27 +872,8 @@ const EN = {
   "Chainsaw-man-philosophy": {
     "desc": "A Chinese-language Chainsaw Man character encyclopedia and philosophical readings of Fujimoto’s work."
   },
-  "restar-solar-hub": {
-    "desc": "Source of the Restar Solar country-selection website."
-  },
-  "Restar Solar · 三个国家": {
-    "name": "Restar Solar · Three Countries",
-    "desc": "Three public repositories for the Nigeria, Sudan and Mali company websites.",
-    "repos": [
-      {
-        "name": "Nigeria",
-        "repo": "zhixuanlucasfeng-cmyk/Nigeria-website"
-      },
-      {
-        "name": "Sudan",
-        "repo": "zhixuanlucasfeng-cmyk/Sudan-website"
-      },
-      {
-        "name": "Mali",
-        "repo": "zhixuanlucasfeng-cmyk/Mali-website"
-      }
-    ]
-  },
+
+
     'power':            { desc:'Your agents, one room. Group chat, persona packs and Obsidian memory.' },
     'contract':         { desc:'One master key for every agent tool, with automatic failover and an MCP server.' },
     'claude-usage':     { desc:'Claude Code / Codex / DeepSeek token usage: CLI + desktop widget.' },
@@ -991,15 +892,15 @@ const EN = {
   },
   "powy": {
     "tag": "Project notes",
-    "title": "Powy: tasks, focus and everyday life",
+    "title": "Powvy Habit: tasks, focus and everyday life",
     "summary": "A personal growth PWA that challenges performative discipline, with local-first storage and optional, limited sync.",
-    "body": "<p>Powy, published in the liangli repository, is a personal growth PWA that challenges performative discipline. It brings tasks, workload, goals, focus and life records into one tool.</p>\n<h2>An idea does not have to become a task immediately</h2><p>Today schedules tasks and displays workload, warning about overload without blocking it. The Growth Pool holds ideas outside the daily load until they are ready to become tasks. Users advance long-term goal progress manually.</p>\n<h2>Tools for focus and study</h2><p>The focus module provides a Pomodoro timer and a record dashboard. Offline flashcards support decks, due reviews, and JSON and CSV import and export. Their simplified review intervals do not claim FSRS compatibility.</p>\n<h2>Local data and optional sync</h2><p>The Life page contains nutrition, wallet and daily records. Data stays on the device by default. Optional account sync covers core tasks and flashcards; Life data remains local. The interface supports Chinese and English.</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/liangli/\" target=\"_blank\" rel=\"noopener\">Open Powy →</a></p>"
+    "body": "<p>Powvy Habit is a personal growth PWA that challenges performative discipline. It brings tasks, workload, goals, focus and life records into one tool.</p>\n<h2>An idea does not have to become a task immediately</h2><p>Today schedules tasks and displays workload, warning about overload without blocking it. The Growth Pool holds ideas outside the daily load until they are ready to become tasks. Users advance long-term goal progress manually.</p>\n<h2>Tools for focus and study</h2><p>The focus module provides a Pomodoro timer and a record dashboard. Offline flashcards support decks, due reviews, and JSON and CSV import and export. Their simplified review intervals do not claim FSRS compatibility.</p>\n<h2>Local data and optional sync</h2><p>The Life page contains nutrition, wallet and daily records. Data stays on the device by default. Optional account sync covers core tasks and flashcards; Life data remains local. The interface supports Chinese and English.</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/liangli/\" target=\"_blank\" rel=\"noopener\">Open Powvy Habit →</a></p>"
   },
   "restar-solar": {
     "tag": "Project notes",
     "title": "Restar Solar: websites, support and product management",
     "summary": "A project for my family’s business serving African markets, with staff now using the admin tools to update products.",
-    "body": "<p>I developed a website and supporting tools for my family's business serving African markets. The project includes company websites, AI support, online support from staff, and product management and updates.</p>\n<h2>Ongoing maintenance behind the website</h2><p>Visitors need product information and a way to ask questions; staff need to maintain that information. The project connects the public website with admin tools. Staff have started using the admin interface to update products.</p>\n<h2>AI and human support together</h2><p>The project includes both AI support and online customer service from employees. Its scope extends beyond an automated chat window to the tools business staff use to participate in service and maintain content.</p>\n<h2>Country website entry points</h2><p>The website series includes Cameroon and country sites for Nigeria, Sudan and Mali. The latter three have moved to country entry points on a unified website. Restar Solar Hub provides a country-selection page.</p>\n<p><a href=\"https://zhixuanlucasfeng-cmyk.github.io/restar-solar-hub/\" target=\"_blank\" rel=\"noopener\">Open the country selector →</a></p>"
+    "body": "<p>I developed a website and supporting tools for my family's business serving African markets. The project includes company websites, AI support, online support from staff, and product management and updates.</p>\n<h2>Ongoing maintenance behind the website</h2><p>Visitors need product information and a way to ask questions; staff need to maintain that information. The project connects the public website with admin tools. Staff have started using the admin interface to update products.</p>\n<h2>AI and human support together</h2><p>The project includes both AI support and online customer service from employees. Its scope extends beyond an automated chat window to the tools business staff use to participate in service and maintain content.</p>\n"
   },
   "alevel": {
     "tag": "Project notes",
