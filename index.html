@@ -8,6 +8,12 @@
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png?v=2">
 <link rel="apple-touch-icon" href="favicon.png?v=2">
 <meta name="description" content="Powvy的个人网站：产品、开源 Skills、文章与交流。">
+<meta property="og:title" content="Multilingual AI customer service — live in 7 days">
+<meta property="og:description" content="AI support that answers product questions, captures leads and hands off to your team.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://powvy.org/">
+<meta property="og:image" content="https://powvy.org/assets/social/ai-customer-service.png">
+<meta name="twitter:card" content="summary_large_image">
 <!-- 字体：Dela Gothic One（日漫粗黑，用于英文/片假名） + 站酷庆科黄油体（中文标题） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -262,6 +268,10 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
 .hero h1{font-size:clamp(64px,7.5vw,100px);line-height:1.04;letter-spacing:-.045em;transform:none}
 .hero h1 span,.hero h1 em{display:block}
 .hero h1 em{-webkit-text-stroke:1.5px var(--ink);text-shadow:4px 4px 0 var(--ink)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:32px}
+.hero-actions .scroll-hint{margin-top:0}
+.service-cta{display:inline-flex;align-items:center;min-height:48px;padding:9px 18px;background:var(--red);color:#fff;border:3px solid var(--ink);font-weight:900;box-shadow:5px 5px 0 var(--ink)}
+.service-cta:hover{background:var(--ink)}
 @media(max-width:860px){.hero{padding-top:calc(var(--nav-h) + 36px)}.hero h1{font-size:clamp(58px,13vw,86px)}}
 @media(max-width:420px){.hero h1{font-size:clamp(54px,15vw,63px)}}
 </style>
@@ -296,7 +306,10 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
       <h1><span>Powvy</span><span>makes</span><em>things.</em></h1>
       <p data-i18n="heroP">Hi，我是 Lucas，也叫 Powvy。我在迪拜读书，喜欢用 AI 把想法做成能用的工具，探索技术与商业如何解决真实问题。</p>
       <div class="tags" data-i18n="heroTags"><span class="tag red">学生 · 创作者</span><span class="tag">AI &amp; Business</span><span class="tag">Dubai</span></div>
-      <a class="scroll-hint" href="#products" data-i18n="heroHint"><b>▼</b>往下看看我做了什么</a>
+      <div class="hero-actions">
+        <a class="service-cta" href="https://wa.me/8618707737002?text=Hi%20Lucas%2C%20I%27m%20interested%20in%20an%20AI%20customer%20service%20deployment." target="_blank" rel="noopener" data-i18n="heroServiceCta">让 AI 客服替你接住客户 →</a>
+        <a class="scroll-hint" href="#products" data-i18n="heroHint"><b>▼</b>看看我做过什么</a>
+      </div>
     </div>
 
     <!-- 首屏透明插画：鼠标视差，点击或键盘激活震动与墨点 -->
@@ -755,8 +768,8 @@ const jobs = [
 ];
 
 const talks = [
-  { id:'consult', name:'咨询', prop:'chat',   desc:'一对一技术 / 产品咨询',
-    detail:['AI 产品从 0 到 1 怎么做','Vibe Coding 入门与工具选择','把 AI 工具用在实际项目中'], cta:'预约咨询', href:'' },
+  { id:'consult', name:'AI 客服部署', prop:'chat', desc:'为企业部署能查产品、收集线索并转人工的多语言 AI 客服。',
+    detail:['7 天内上线首个可用版本','中文、英文、法文客服','价格与库存护栏，必要时转人工'], cta:'WhatsApp 咨询部署', href:'https://wa.me/8618707737002?text=Hi%20Lucas%2C%20I%27m%20interested%20in%20an%20AI%20customer%20service%20deployment.' },
   { id:'group',   name:'社群', prop:'group',  desc:'加入用户社群',
     detail:['第一时间体验新产品','和同样爱折腾的人交流','不定期分享资源与模板'], cta:'申请加入', href:'' },
   { id:'chat',    name:'唠嗑', prop:'coffee', desc:'日常交流板块',
@@ -781,6 +794,7 @@ const EN = {
     heroP: "Hi, I'm Lucas, also known as Powvy. I'm a student in Dubai building useful tools with AI and exploring how technology and business can solve real problems.",
     heroTags: '<span class="tag red">Student · Builder</span><span class="tag">AI &amp; Business</span><span class="tag">Dubai</span>',
     heroArtwork: '<span class="saw-art"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="Chainsaw Man and Pochita fan art. Chainsaws running. Activate to rev them up."></span>',
+    heroServiceCta: 'Deploy AI customer service →',
     heroHint: "<b>▼</b>See what I've made",
     hProducts: "<small>EP.01 · PRODUCTS</small>Things I've made",
     pProducts: 'Each one started as a fix for my own problem, then got shared.',
@@ -922,8 +936,8 @@ const EN = {
     'Restar Solar': { when:'Project work', role:'Website & AI support development', desc:'Developed a website and admin tools for my family’s business serving African markets. Staff have started using the tools to update products.' }
   },
   talks: {
-    consult: { name:'Consulting', desc:'One-on-one tech / product consulting', cta:'Book a session',
-      detail:['Taking an AI product from zero to one','Getting started with Vibe Coding and choosing tools','Applying AI tools to real projects'] },
+    consult: { name:'AI customer service deployment', desc:'Multilingual AI support that answers product questions, captures leads and hands off to your team.', cta:'Ask on WhatsApp',
+      detail:['A usable first version in 7 days','Chinese, English and French support','Price and inventory guardrails with human handoff'] },
     group:   { name:'Community', desc:'Join the user community', cta:'Ask to join',
       detail:['Try new products first','Meet people who love tinkering too','Resources and templates, now and then'] },
     chat:    { name:'Hang out', desc:'Casual chat', cta:'Say hi',
