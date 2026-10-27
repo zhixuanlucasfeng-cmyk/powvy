@@ -2,6 +2,14 @@
 
 [访问网站 / Visit the website](https://powvy.org/)
 
+## Multilingual AI customer service
+
+I deploy AI support for product businesses: it answers product questions, captures leads, follows price and inventory rules, and hands conversations to a human when needed. English, French and Chinese; a usable first version in seven days.
+
+[Ask about a deployment on WhatsApp](https://wa.me/8618707737002?text=Hi%20Lucas%2C%20I%27m%20interested%20in%20an%20AI%20customer%20service%20deployment.)
+
+![AI customer service deployment](assets/social/ai-customer-service.png)
+
 ## 中文
 
 Lucas（Powvy）的中英双语个人网站，采用漫画墨线、网点纸和黑红配色。
