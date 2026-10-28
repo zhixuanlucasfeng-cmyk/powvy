@@ -56,10 +56,16 @@ create the tools it needs based on how you actually work.
 - **Skills and workflows.** Portable Agent Skills you already keep for other coding agents are read in
   place, and bundled workflows guide project setup, design brainstorming, and shipping a pull request —
   pushing the workspace branch and opening or updating its GitHub PR through your own `gh`.
-- **Agent tools beyond the shell.** Web research, and inline diagrams, option comparisons and file previews
-  rendered right in the chat — when the agent proposes a UI change it shows a before/after mockup you can
-  comment on like a diff. Settings → Extensions lists the ThinkRail extensions the agent gets and lets you switch
-  each one off.
+- **Agent tools beyond the shell.** Web research, structured multiple-choice questions the agent asks you
+  in the chat instead of guessing, and inline diagrams, option comparisons and file previews rendered right
+  in the chat — when the agent proposes a UI change it shows a before/after mockup you can comment on like
+  a diff. Settings → Extensions lists the ThinkRail extensions the agent gets and lets you switch each one
+  off. The questions and visualize tools are also published as plain `pi` packages, one each —
+  `pi install npm:@thinkrail/pi-ask-user-question` for the questions
+  ([`@thinkrail/pi-ask-user-question`](https://www.npmjs.com/package/@thinkrail/pi-ask-user-question)) and
+  `pi install npm:@thinkrail/pi-visualize` for the diagrams and previews
+  ([`@thinkrail/pi-visualize`](https://www.npmjs.com/package/@thinkrail/pi-visualize)) — so a vanilla `pi`
+  in the terminal gets the same tools.
 - **MCP servers.** Connect the MCP servers in your `pi` `mcp.json` (or add them, and a few presets, from
   Settings): ThinkRail asks in the chat before calls the server does not mark read-only (or always allows
   the tools you trust in a project), keeps servers a repository
@@ -73,10 +79,12 @@ create the tools it needs based on how you actually work.
   when launching (`PI_CODING_AGENT_DIR=… thinkrail`) still wins.
 - **Desktop app or browser.** A native desktop app, or the `thinkrail` CLI that opens the same app in your
   browser. Both embed the same engine host; app state lives under `~/.thinkrail`.
-- **Your language.** Settings → Language follows your system language or a language you pick; English and
-  Simplified Chinese are built in. Add a language ThinkRail doesn't ship yet by dropping a translated
-  `en.json` into `~/.thinkrail/locales` — it applies as you save. Agent replies and tool output stay as
-  the agent wrote them.
+- **Your language.** Settings → Language follows your system language or a language you pick; English,
+  Japanese, Simplified Chinese, and Spanish are built in. Add a language ThinkRail doesn't ship yet by
+  dropping a translated `en.json` into `~/.thinkrail/locales` — it applies as you save. Agent replies and
+  tool output stay as the agent wrote them.
+- **Your themes.** Settings → Appearance ships dark, light, minimal and high-contrast themes. Make your own
+  by copying a bundled `*.theme.json`, changing its id and colors, and saving it to `~/.thinkrail/themes`.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/readme-assets/specs-dark.png">
@@ -135,7 +143,9 @@ thinkrail ~/code/my-repo
 ```
 
 `thinkrail` needs `git` on your PATH and a model provider — sign in with JetBrains AI from the app or use
-your own provider credentials. `thinkrail --help` lists the flags; `thinkrail --version` prints the build.
+your own provider credentials. The first launch walks you through connecting a provider and picking a
+project; **Start a new project** creates an empty git repository (under `~/thinkrail` by default), so you
+don't need one ready. `thinkrail --help` lists the flags; `thinkrail --version` prints the build.
 
 <details>
 <summary><strong>Nightly builds, pinned versions, updates, and uninstall</strong></summary>
@@ -189,17 +199,22 @@ and locally built packages may still be unsigned and blocked by Gatekeeper. Linu
 
 ## Analytics & privacy
 
-ThinkRail collects basic usage events — launches, chat creation, message sends, provider connections — tied to
+ThinkRail apps collect basic usage events — launches, chat creation, message sends, provider connections — tied to
 a random installation ID. Usage analytics never include prompts, code, files, credentials, or account
 identity. Error reports are also always sent, tied to the same installation ID, so we can fix crashes: the
 error type and code and where in ThinkRail's own code it happened. They never include error messages, file
 paths, names, URLs, or anything from your projects or extensions. Additional product
 usage and how you found ThinkRail are shared only while **Share additional usage
-data** is on; the switch is offered at first launch and lives in **Settings → Privacy**. When launching from
+data** is on; the switch is offered as a step of first-run setup (or right after you skip it) and lives in **Settings → Privacy**. When launching from
 the command line, `thinkrail --no-analytics` (or `THINKRAIL_NO_ANALYTICS=1`) turns additional sharing off for
 that run. With additional sharing on, a packaged build may open the ThinkRail blog in your browser once to
 link your installation to the website visit that brought you here — only where you accepted marketing cookies on the
 website or no consent is required — and that link expires after 30 days.
+
+The ThinkRail apps and the ThinkRail website ([thinkrail.ai](https://thinkrail.ai)) use PostHog Inc. services for
+analytics. The website also uses PostHog Surveys to collect feedback after a desktop download and, only if you
+choose to enter one, your email address, which is used to ask for further feedback and to send product updates.
+PostHog's privacy policy is at [posthog.com/privacy](https://posthog.com/privacy).
 
 ## Under the hood
 
