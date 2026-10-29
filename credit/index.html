@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#160f12">
+  <meta name="description" content="Powvy Credit — live Claude, Codex and DeepSeek token usage.">
+  <meta property="og:title" content="Powvy Credit — live token usage">
+  <meta property="og:description" content="Public live view of Powvy's AI token usage.">
+  <meta property="og:image" content="https://powvy.org/credit/power.webp">
+  <title>Powvy Credit</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <style>
+    :root{color-scheme:dark;--cream:#fff1df;--ash:#cbb9b3;--red:#ff3d52;--gold:#efb94f;--pale:#d9d0b5;--panel:#160f12}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#090708;color:var(--cream);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body{min-height:100vh;min-height:100svh;display:grid;place-items:center;padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 70% 15%,#7d243a55,transparent 42%),radial-gradient(circle at 10% 90%,#5b071755,transparent 38%);pointer-events:none}
+    .shell{position:relative;width:min(1320px,96vw);aspect-ratio:16/9;min-height:620px;border:1px solid #ff6675aa;border-radius:24px;overflow:hidden;box-shadow:0 30px 100px #000c,0 0 0 1px #fff1 inset;background:var(--panel)}
+    .art{position:absolute;inset:0;background:url("power.webp") center/cover no-repeat;transform:scale(1.002)}
+    .shade{position:absolute;inset:0;background:linear-gradient(90deg,transparent 0 40%,#160f12bb 54%,#32131be8 100%),linear-gradient(0deg,#09070833,#09070800 55%)}
+    .top{position:absolute;z-index:3;inset:28px 32px auto;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .brand{font-size:clamp(18px,1.6vw,25px);font-weight:900;letter-spacing:-.04em}.brand b{color:var(--red);font-size:.64em;letter-spacing:.09em;margin-left:10px}
+    .links{display:flex;align-items:center;gap:10px}.links a,.live{border:1px solid #fff2;border-radius:999px;background:#0c080aa8;backdrop-filter:blur(12px);padding:9px 14px;color:var(--cream);text-decoration:none;font-size:12px;font-weight:800}
+    .live{display:flex;align-items:center;gap:8px}.dot{width:8px;height:8px;border-radius:50%;background:#777}.dot.on{background:#42df80;box-shadow:0 0 12px #42df80}.dot.stale{background:var(--gold)}
+    .content{position:absolute;z-index:2;right:4.2%;top:17%;width:42%;display:flex;flex-direction:column;gap:18px}
+    .hero-row{display:flex;align-items:end;justify-content:space-between;gap:18px}.total{font-size:clamp(70px,8vw,126px);line-height:.82;font-weight:900;letter-spacing:-.075em;font-variant-numeric:tabular-nums}.when{text-align:right;color:var(--ash);font-weight:800;font-size:clamp(13px,1.1vw,18px);line-height:1.45;white-space:nowrap}
+    .sub{font-size:clamp(16px,1.35vw,22px);font-weight:750;color:var(--ash)}
+    .mix{height:20px;border-radius:999px;background:#3b2b2e;overflow:hidden;display:flex;box-shadow:0 1px #fff2 inset}.mix span{min-width:3px;transition:width .5s ease}.claude{background:var(--red)}.codex{background:var(--gold)}.deepseek{background:var(--pale)}
+    .models{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.model .name{display:flex;align-items:center;gap:8px;color:var(--ash);font-size:12px;font-weight:900;letter-spacing:.04em}.swatch{width:15px;height:5px;border-radius:5px}.model .value{margin-top:7px;font-size:clamp(28px,2.8vw,44px);font-weight:900;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+    .limits{display:grid;gap:4px;color:#e0d1c9;font-size:clamp(12px,1vw,16px);font-weight:700}
+    .week{margin-bottom:16px;height:115px;display:flex;align-items:end;gap:clamp(12px,2.3vw,34px);padding-top:8px}.day{height:100%;flex:1;display:flex;align-items:end;justify-content:center;position:relative}.bar{width:min(30px,70%);min-height:5px;border-radius:6px 6px 1px 1px;overflow:hidden;display:flex;flex-direction:column-reverse;background:#fff1}.bar i{display:block;width:100%}.day label{position:absolute;top:100%;margin-top:7px;color:#b9a7a3;font-size:10px;font-weight:800}.day:last-child label{color:var(--cream)}
+    .foot{display:flex;justify-content:space-between;gap:16px;color:#b9a7a3;font-size:12px;font-weight:700}.error{color:#ff8c98}
+    @media (max-width:900px){body{padding:0}.shell{width:100%;min-height:100svh;aspect-ratio:auto;border:0;border-radius:0}.art{background-position:38% top}.shade{background:linear-gradient(0deg,#160f12 0 49%,#160f1299 62%,transparent 82%)}.top{inset:20px 20px auto}.links a{display:none}.content{left:20px;right:20px;top:auto;bottom:30px;width:auto;gap:14px}.hero-row{align-items:end}.total{font-size:clamp(64px,18vw,105px)}.week{height:90px}.foot{font-size:11px}}
+    @media (max-width:520px){.brand b{display:block;margin:1px 0 0}.content{bottom:20px}.total{font-size:19vw}.when{font-size:12px}.models{gap:8px}.model .name{font-size:10px}.model .value{font-size:25px}.limits{font-size:11px}.week{gap:8px;height:72px}.day label{font-size:9px}.foot span:first-child{display:none}}
+  </style>
+</head>
+<body>
+  <main class="shell" aria-label="Powvy Credit live token usage">
+    <div class="art" role="img" aria-label="Power themed illustration"></div><div class="shade"></div>
+    <header class="top"><div class="brand">powvy credit <b>POWER</b></div><div class="links"><a href="/">POWVY.ORG</a><div class="live"><span class="dot" id="dot"></span><span id="state">CONNECTING</span></div></div></header>
+    <section class="content">
+      <div class="hero-row"><strong class="total" id="total">—</strong><div class="when">tokens today<br><span id="date">—</span></div></div>
+      <div class="sub" id="sub">Loading public usage…</div>
+      <div class="mix" aria-label="Token share"><span class="claude" id="mixClaude"></span><span class="codex" id="mixCodex"></span><span class="deepseek" id="mixDeepseek"></span></div>
+      <div class="models">
+        <div class="model"><div class="name"><i class="swatch claude"></i>CLAUDE</div><div class="value" id="claude">—</div></div>
+        <div class="model"><div class="name"><i class="swatch codex"></i>CODEX</div><div class="value" id="codex">—</div></div>
+        <div class="model"><div class="name"><i class="swatch deepseek"></i>DEEPSEEK</div><div class="value" id="deepseek">—</div></div>
+      </div>
+      <div class="limits"><div id="claudeLimit">Claude limit: —</div><div id="codexLimit">Codex limit: —</div></div>
+      <div class="week" id="week" aria-label="Last seven days"></div>
+      <div class="foot"><span id="updated">Waiting for data</span><span>PUBLIC LIVE VIEW · 7 DAYS</span></div>
+    </section>
+  </main>
+  <script>
+    const DATA_URL='https://gist.githubusercontent.com/zhixuanlucasfeng-cmyk/494784b4d08df1191bf6a35a0820c9cb/raw/powvy-credit-data.json';
+    const $=id=>document.getElementById(id);
+    const compact=n=>n>=1e9?(n/1e9).toFixed(1)+'B':n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(1)+'K':String(n||0);
+    const pct=n=>Number.isFinite(+n)?Math.round(+n)+'%':'—';
+    function render(data){
+      const t=data.today||{}, values=[+t.claude||0,+t.codex||0,+t.deepseek||0], total=values.reduce((a,b)=>a+b,0);
+      $('total').textContent=compact(total); $('claude').textContent=compact(values[0]); $('codex').textContent=compact(values[1]); $('deepseek').textContent=compact(values[2]);
+      $('date').textContent=new Intl.DateTimeFormat(undefined,{month:'short',day:'numeric'}).format(new Date());
+      const power=+data.power?.tokens||0, powerShare=total?power/total*100:0;
+      $('sub').textContent=`Claude $${(+t.claude_cost||0).toFixed(2)}  ·  Power ${compact(power)} / ${Math.round(powerShare)}%`;
+      const sum=total||1; $('mixClaude').style.width=values[0]/sum*100+'%'; $('mixCodex').style.width=values[1]/sum*100+'%'; $('mixDeepseek').style.width=values[2]/sum*100+'%';
+      const cl=data.claude_limit||{}, c5=cl.five_hour||{}, c7=cl.seven_day||{};
+      $('claudeLimit').textContent=`Claude · 5h ${pct(c5.used_percent)} used · week ${pct(c7.used_percent)} used`;
+      $('codexLimit').textContent=`Codex · week ${pct(data.codex_limit?.used_percent)} used`;
+      const week=(data.week||[]).slice(-7), max=Math.max(1,...week.map(d=>(+d.claude||0)+(+d.codex||0)+(+d.deepseek||0)));
+      $('week').replaceChildren(...week.map(d=>{const all=(+d.claude||0)+(+d.codex||0)+(+d.deepseek||0), day=document.createElement('div');day.className='day';day.innerHTML=`<div class="bar" style="height:${Math.max(8,all/max*100)}%"><i class="claude" style="height:${all?(+d.claude||0)/all*100:0}%"></i><i class="codex" style="height:${all?(+d.codex||0)/all*100:0}%"></i><i class="deepseek" style="height:${all?(+d.deepseek||0)/all*100:0}%"></i></div><label>${d.d.slice(5)}</label>`;return day;}));
+      const saved=cl.saved_at?new Date(cl.saved_at):new Date(); $('updated').textContent=`UPDATED ${saved.toLocaleString([], {month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})}`;
+      const age=Date.now()-saved.getTime(); $('dot').className='dot '+(age<12*60*1000?'on':'stale'); $('state').textContent=age<12*60*1000?'LIVE':'LAST SNAPSHOT';
+    }
+    async function loadUsage(){try{const r=await fetch(DATA_URL+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(r.status);render(await r.json())}catch(e){$('state').textContent='OFFLINE';$('sub').classList.add('error');$('sub').textContent='Public usage feed is temporarily unavailable.'}}
+    loadUsage(); setInterval(loadUsage, 60000);
+    if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+  </script>
+</body>
+</html>
