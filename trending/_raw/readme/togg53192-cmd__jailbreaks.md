@@ -4,8 +4,8 @@
 
 **A curated collection of system prompts, persona locks, workspace policies, and agent operating specifications for frontier, open-weight, and free stealth models.**
 
-![Prompts](https://img.shields.io/badge/prompts-31-4c9f70)
-![Targets](https://img.shields.io/badge/targets-25%2B-2f6f9f)
+![Prompts](https://img.shields.io/badge/prompts-32-4c9f70)
+![Targets](https://img.shields.io/badge/targets-26%2B-2f6f9f)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat&logo=github)
 ![Stars](https://img.shields.io/github/stars/togg53192-cmd/jailbreaks?style=flat&logo=github&color=yellow)
 
@@ -15,7 +15,7 @@
 
 ## About
 
-A working collection of **31 prompts targeting 25+ models**, including complete system prompts, persona definitions, workspace policies, `AGENTS.md` files, configuration blocks, and Ollama Modelfiles.
+A working collection of **32 prompts targeting 26+ models**, including complete system prompts, persona definitions, workspace policies, `AGENTS.md` files, configuration blocks, and Ollama Modelfiles.
 
 Every file is intended to be complete and paste-ready. No summaries. No partial excerpts.
 
@@ -90,6 +90,12 @@ The collection covers:
 | **Grok Build** | [Grok build.md](./Grok%20build.md) | Agent operating instructions |
 | **Grok 4.7** | [grok-4.7.md](./grok-4.7.md) | App-builder workspace guide |
 | **Grok Config** | [grok-config.txt](./grok-config.txt) | `<CFG>` priority and routing configuration |
+
+### NVIDIA — Nemotron
+
+| Model | File | Type |
+|---|---|---|
+| **Nemotron 3 Ultra 550B A55B** | [nemotron-3-ultra.md](./nemotron-3-ultra.md) | Assistant operating specification |
 
 ### Google / Mistral / Alibaba
 
