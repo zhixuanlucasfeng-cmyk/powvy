@@ -3,7 +3,7 @@
 name: trending-fetch
 on:
   schedule:
-    - cron: "30 4 * * *" # 08:30 Asia/Dubai, before the 09:00 routine
+    - cron: "15 20 * * *" # 00:15 Asia/Dubai; GitHub delays schedules by hours, so leave a wide gap before the 09:00 routine
   workflow_dispatch:
 permissions:
   contents: write
