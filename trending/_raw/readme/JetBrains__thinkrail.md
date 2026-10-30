@@ -60,7 +60,10 @@ create the tools it needs based on how you actually work.
   in the chat instead of guessing, and inline diagrams, option comparisons and file previews rendered right
   in the chat — when the agent proposes a UI change it shows a before/after mockup you can comment on like
   a diff. Settings → Extensions lists the ThinkRail extensions the agent gets and lets you switch each one
-  off. The questions and visualize tools are also published as plain `pi` packages, one each —
+  off — and installs any `pi` package by source (npm, git or a local folder), for you or for a repository,
+  showing what each one adds and letting you switch packages, their individual extensions and skills, and
+  pi's built-ins on or off; open chats pick a change up when their turn ends. The questions and visualize
+  tools are also published as plain `pi` packages, one each —
   `pi install npm:@thinkrail/pi-ask-user-question` for the questions
   ([`@thinkrail/pi-ask-user-question`](https://www.npmjs.com/package/@thinkrail/pi-ask-user-question)) and
   `pi install npm:@thinkrail/pi-visualize` for the diagrams and previews
@@ -80,7 +83,7 @@ create the tools it needs based on how you actually work.
 - **Desktop app or browser.** A native desktop app, or the `thinkrail` CLI that opens the same app in your
   browser. Both embed the same engine host; app state lives under `~/.thinkrail`.
 - **Your language.** Settings → Language follows your system language or a language you pick; English,
-  Japanese, Simplified Chinese, and Spanish are built in. Add a language ThinkRail doesn't ship yet by
+  Japanese, Russian, Simplified Chinese, and Spanish are built in. Add a language ThinkRail doesn't ship yet by
   dropping a translated `en.json` into `~/.thinkrail/locales` — it applies as you save. Agent replies and
   tool output stay as the agent wrote them.
 - **Your themes.** Settings → Appearance ships dark, light, minimal and high-contrast themes. Make your own
