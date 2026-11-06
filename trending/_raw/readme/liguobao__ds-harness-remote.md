@@ -35,7 +35,7 @@ Harness keeps running on your work computer, with the same workspaces, tools, an
 
 The DeepSeek Harness desktop edition is supported. Install the latest release:
 
-`ds-harness-remote@0.6.2`
+`ds-harness-remote@0.6.3`
 
 ## Features
 
@@ -74,13 +74,13 @@ The DeepSeek Harness desktop edition is supported. Install the latest release:
 
 | Client | Form | Status | Notes |
 | --- | --- | --- | --- |
-| DSH&nbsp;Desktop&nbsp;plugin | Remote sidebar | Supported | Install `ds-harness-remote@0.6.2`; this computer can also be the Host |
+| DSH&nbsp;Desktop&nbsp;plugin | Remote sidebar | Supported | Install `ds-harness-remote@0.6.3`; this computer can also be the Host |
 | Web | Browser page | Supported | Open [https://dsh.r2049.cn](https://dsh.r2049.cn); reuses the native Harness interface |
 | Android | Native app | Supported | Download the APK from [Releases](https://github.com/liguobao/ds-harness-remote/releases/latest); see the [Android guide](apps/android/README.md) |
 | DSH Go | A standout app by ccch1mneyyy | Supported | See [ccch1mneyyy/dsh-go: an Android client for DeepSeek Harness. Run it directly on your phone or control DSH on your computer remotely.](https://github.com/ccch1mneyyy/dsh-go) |
 | iOS | TestFlight beta | Beta | Not publicly released; see [issue #20](https://github.com/liguobao/ds-harness-remote/issues/20) |
 | Browser&nbsp;extension | Chrome | Entry point only | Exchanges an already signed-in Web authorization for a separate device credential, lists online Hosts and opens the same-origin Remote Web; it does not host a conversation UI |
-| dsh-TUI | Terminal-only CLI | Supported | Can act as a Host; see the [dsh-TUI Remote guide](docs/dsh-tui.md). The installer never creates a Web service for it automatically |
+| dsh-TUI | Terminal-only CLI | Planned | Integration is not part of this release and returns in a later version; the installer never creates a Web service for it automatically |
 | Linux | Cloud server | Supported | Sign in on the [official website](https://dsh.r2049.cn/) for unattended installation with a single command and no configuration. |
 
 Several clients can connect to the same Host at once; RPC calls and streams are isolated per connection.
@@ -92,19 +92,16 @@ Several clients can connect to the same Host at once; RPC calls and streams are 
 Open **Extensions / Plugin management** in DeepSeek Harness Desktop, choose installation
 from npm, and enter this package:
 
-`ds-harness-remote@0.6.2`
+`ds-harness-remote@0.6.3`
 
 Restart Desktop afterward. Its official `dsh` launcher can also install the pinned package
-with `dsh plugin --profile desktop add -w ds-harness-remote@0.6.2`.
+with `dsh plugin --profile desktop add -w ds-harness-remote@0.6.3`.
+
+On DSH 0.2.2+, npm installations support version checks and updates in Plugin management, with an attempt to restore the previous version if hot updating fails. GitHub and local link installations must switch to npm first; see [online updates](docs/installation.md#online-updates-in-dsh-plugin-management).
 
 ### Linux one-command installation
 
 Visit [https://dsh.r2049.cn](https://dsh.r2049.cn/), sign in, and obtain an installation authorization code to install with one command.
-
-### dsh-TUI Host
-
-For terminal Host setup with [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI), see the
-[dsh-TUI Remote guide](docs/dsh-tui.md).
 
 ### Native Android client
 
@@ -131,7 +128,7 @@ After installing the ds-harness-remote plugin in DSH Go on your phone, you can a
 
 By default, Remote uses this project's hosted Server at [https://dsh.r2049.cn](https://dsh.r2049.cn).
 
-For self-hosting, use the repository's [minimal Server](apps/server/README.md). The current version includes P2P coordination and a Relay Server, but does not provide the full hosted Remote Web experience.
+For self-hosting, use the repository's [minimal Server](apps/server/README.md). The current version includes WebRTC LAN/P2P/TURN coordination (TURN requires your own coturn deployment) and an encrypted Relay Server, but does not provide the full hosted Remote Web experience.
 
 ## Screenshots
 
@@ -176,7 +173,7 @@ The Harness Host does not need a public listening port. Connect from anywhere wi
 
 The client switches to the selected Host’s native Harness API, keeping the original workspaces, tools, and permission flows on that computer.
 
-Every settings namespace registered by the Host can also be configured remotely through the official Harness settings API, with full support for most plugin settings.
+You can also edit Harness and plugin settings on the remote host. Available options depend on which settings Harness and each plugin expose through the official settings API.
 
 ## Experimental ACP workspaces
 
@@ -184,14 +181,15 @@ The Host runs local ACP-capable Agents and forwards prompts, streamed replies, a
 
 Supported backends:
 
-- **Codex** — connected through its independent App Server interface, with the same workspace entry.
-- **Cursor** — connected through the CLI's ACP interface.
-- **Antigravity (AGY)** — its stream-json CLI is adapted to the ACP gateway.
-- **Pi Agent (experimental)** — install `@earendil-works/pi-coding-agent` and `pi-acp` on the Host, configure Pi's provider locally; Remote automatically detects and initializes Pi unless explicitly disabled in Remote settings. The workspace is available only after ACP initialization succeeds. Uses the separate ACP data plane. Tools run with Host-user permissions; per-tool confirmation requires a Pi extension and is not enabled by default.
+- **Codex** — connects through App Server, using the shared workspace entry.
+- **Cursor** — connects through the CLI's ACP interface.
+- **Antigravity (AGY)** — connects through an adapter for its stream-json CLI.
+- **Pi Agent (experimental)** — automatically detected after installing and configuring Pi and `pi-acp`; can be disabled in settings. Tools run with Host-user permissions, without per-tool confirmation by default.
+- **OpenCode** — connects through `opencode acp`, with workspaces and history. Session archiving requires a build with the authenticated API; unarchive is not yet available.
+- **Claude** — connects through a locally authorized `claude-agent-acp`; enable it in settings. Supports text and approvals; images are not yet supported.
+- **Hermes** — connects through `hermes acp`; enable it in settings. Supports text, images, streamed output, approvals, and model selection.
 
-- **OpenCode** — connected through `opencode acp`, with workspace discovery and history recovery. Host startup checks the CLI's supported options, accepting both native-listener and stdio-only ACP builds. Native session archiving on Desktop/Android requires the authenticated loopback API; builds without it report archiving unavailable. Archive state is saved by OpenCode; history is retained. Unarchive is not yet exposed.
-- **Claude** — uses a locally authorized `claude-agent-acp` on the Host; enable it in Remote settings. Desktop/Android support workspaces, history, text prompts and approvals. Image input and direct Files/Terminal access are not available.
-- **Hermes** — runs Nous Research's Hermes Agent through its own ACP server (`hermes acp`); opt-in in Remote settings. Desktop/Android support workspaces, history, streamed thinking and tool output, text and multimodal image prompts, approvals and model selection. Direct Files/Terminal access is not available.
+Claude and Hermes also support direct file and terminal access, subject to the Host's workspace boundaries and terminal settings.
 
 Setup and adapter development: [Agent workspace integration guide](docs/acp-integration.md).
 
@@ -255,7 +253,7 @@ There is currently no limit on concurrent client connections, with RPC calls and
 
 **Which Harness versions are supported?**
 
-The current baseline is `dsh-v0.2.1-rc.5`, compatible with `0.2.0` rc.2 / rc.1. See the [compatibility guide](docs/compatibility.md).
+The current baseline is `dsh-v0.2.2-rc.1`; `dsh-v0.2.1-rc.5` and `0.2.0` rc.2 / rc.1 remain compatible on the same official carrier. See the [compatibility guide](docs/compatibility.md).
 
 Harness `0.1.1-rc.2` ApiProxy support has been removed from the Host plugin, its bundled Remote client, and Android. Use a Host with the official Typert Remote carrier; Hosts that only provide ApiProxy or lack capability discovery are rejected, with no fallback.
 
@@ -295,7 +293,6 @@ DS Bot is a bot plugin for DeepSeek Harness (dsh) that turns dsh into a bot. You
 
 - [Plugin guide](packages/plugin/README.md)
 - [Installation guide](docs/installation.md)
-- [dsh-TUI Remote guide](docs/dsh-tui.md)
 - [Codex Remote technical notes](docs/codex-remote.md)
 - [ACP Remote / Agent adapter notes](docs/acp-remote.md)
 - [Documentation index](docs/README.md)
@@ -306,12 +303,12 @@ DS Bot is a bot plugin for DeepSeek Harness (dsh) that turns dsh into a bot. You
 - [Changelog](docs/CHANGELOG.md)
 - [Privacy policy](docs/PRIVACY.md)
 - [Android guide](apps/android/README.md)
-- The current development baseline is `dsh-v0.2.1-rc.5`; validation scope is documented in [the compatibility guide](docs/compatibility.md).
+- The current development baseline is `dsh-v0.2.2-rc.1`; validation scope is documented in [the compatibility guide](docs/compatibility.md).
 
 ## Links
 
 - Friendly link: [DSH Go](https://github.com/ccch1mneyyy/dsh-go) — DeepSeek Harness in your pocket: run it locally on your phone or control your computer remotely. Remote integration is available.
-- Friendly link: [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) — Remote integration is available; see the [dsh-TUI Remote guide](docs/dsh-tui.md).
+- Friendly link: [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) — terminal-first Harness client; Remote integration is planned for a later release.
 - Friendly link: [LINUX DO](https://linux.do/)
 - Friendly link: [Cyber Liu Kanshan](https://kanshan.r2049.cn/)
 

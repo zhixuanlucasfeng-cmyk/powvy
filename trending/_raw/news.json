@@ -1,5 +1,453 @@
 [
  {
+  "title": "Airbnb says it’s launching an AI travel agent in the first half of 2027",
+  "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
+  "published": "2026-11-05T22:40:55+00:00",
+  "summary": "Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistance throughout their stay.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable",
+  "url": "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/",
+  "published": "2026-11-05T21:40:36+00:00",
+  "summary": "Google is technically offering schools more choice but not the choices anyone wants.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Lawsuit: Man introduced his wife to ChatGPT. She used it to plan his murder.",
+  "url": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/",
+  "published": "2026-11-05T21:39:40+00:00",
+  "summary": "Bitter energy drinks turned out to be ChatGPT-steered poisoning, lawsuit says.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Getting started with Web Answer on Amazon Bedrock AgentCore",
+  "url": "https://aws.amazon.com/blogs/machine-learning/getting-started-with-web-answer-on-amazon-bedrock-agentcore/",
+  "published": "2026-11-05T21:04:24+00:00",
+  "summary": "Web Answer on Amazon Bedrock AgentCore returns a synthesized, source-cited answer to a natural-language question in a single tool call, with no search, retrieve, synthesize, and citation pipeline to build. Learn how it works and how to add it to an AgentCore Gateway and call it from an agent.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "OpenAIs GPT-6 Cyber can both break into systems and propose how to fix them",
+  "url": "https://the-decoder.com/openais-gpt-6-cyber-can-both-break-into-systems-and-propose-how-to-fix-them/",
+  "published": "2026-11-05T20:36:25+00:00",
+  "summary": "With GPT-6 Cyber, OpenAI is introducing an AI model built to find security vulnerabilities in software, develop exploits, and suggest patches. According to OpenAI, it has already found 81 previously unknown vulnerabilities in Firefox and developed 948 working exploits in the Linux kernel, significantly more than its predecessor. The article OpenAIs GPT-6 Cyber can both break into systems and propose how to fix them appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
+  "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/",
+  "published": "2026-11-05T20:00:41+00:00",
+  "summary": "AI agents do more than generate answers. They search for information, query databases, write and test code and take action. Each of those steps relies on a CPU, with agents moving between GPU reasoning and CPU execution throughout a task. As businesses put more agents to work, AI factories need CPUs that can execute those […]",
+  "source": "NVIDIA Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Meta says US users can now video chat with their Muse AI avatar",
+  "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/",
+  "published": "2026-11-05T19:48:28+00:00",
+  "summary": "Meta's AI agent can now take calls as a customizable animated avatar, ahead of the launch of a Tamagotchi-like wearable designed to bring Muse to life.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI is stepping back from NDAs for data center projects",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
+  "published": "2026-11-05T19:37:56-05:00",
+  "summary": "Following this week's midterms where voters resoundingly voiced their opposition to data center expansion, OpenAI today announced new commitments to communities where it is working on data center projects, including that it won't use non-disclosure agreements (NDAs) with public officials. Many data center projects have come under scrutiny for relying on NDAs to hide discussions […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+  "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+  "published": "2026-11-05T19:35:16+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Meta warns that election backlash against data centers could make AI expansion harder",
+  "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
+  "published": "2026-11-05T19:12:39+00:00",
+  "summary": "Meta warns that growing political opposition to data centers could threaten future AI investments, as communities push back against massive infrastructure projects.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Airbnb is working on an AI travel agent",
+  "url": "https://www.theverge.com/tech/1028412/airbnb-ai-travel-agent-q3-2026-earnings",
+  "published": "2026-11-05T19:06:12-05:00",
+  "summary": "Airbnb plans to roll out an AI agent in the first half of 2027 that will help users plan and book travel, the company said in its Q3 2026 earnings shareholder letter released today. \"Today's AI agents are good at simple, routine tasks, like making a restaurant reservation or scheduling an appointment,\" Airbnb said. \"But […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI released a new cybersecurity model. Is that enough?",
+  "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
+  "published": "2026-11-05T19:06:12+00:00",
+  "summary": "OpenAI's newest cybersecurity model comes out as AI labs face scrutiny of their work to protect digital infrastructure.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Google's Gemini Omni 1.2 Flash stretches AI video clips to 15 seconds and cuts pricing by 30 percent",
+  "url": "https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/",
+  "published": "2026-11-05T19:05:31+00:00",
+  "summary": "Google Deepmind is making Gemini Omni 1.2 Flash generally available. The video-generation model now creates clips up to 15 seconds long, can be edited step by step via conversation, and costs just $0.07 per second at 720p, 30 percent less than its predecessor. Users who draft in low resolution and upscale only the final result can save even more. The article Google's Gemini Omni 1.2 Flash stretches AI video clips to 15 seconds and cuts pricing by 30 percent appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "How Amazon Marketplace evaluates content quality with Amazon SageMaker AI",
+  "url": "https://aws.amazon.com/blogs/machine-learning/how-amazon-marketplace-evaluates-content-quality-with-amazon-sagemaker-ai/",
+  "published": "2026-11-05T18:06:43+00:00",
+  "summary": "Learn how Amazon Marketplace evaluates A+ Content quality at scale on Amazon SageMaker AI by rendering each product page as a single snapshot, scoring it with a vision-language model fused with OCR readability signals in a CatBoost classifier, and using SHAP to turn each decision into prioritized, actionable recommendations for selling partners.",
+  "source": "AWS Machine Learning Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "OpenAI president Greg Brockman says company could be IPO ready in 2027",
+  "url": "https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/",
+  "published": "2026-11-05T18:02:27+00:00",
+  "summary": "Speaking at a Wall Street Journal tech conference on Wednesday, the executive touted how the company had been gaining ground in the enterprise market, where rival Anthropic had already successfully made inroads.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Claude can now analyze your spending with its new Personal Finance tool",
+  "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
+  "published": "2026-11-05T18:00:00+00:00",
+  "summary": "With Personal Finance in Claude, users can connect their bank and card accounts through Plaid and ask questions about their finances.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Baidu releases ERNIE 5.5 Flash Base with 280 billion parameters as an open-source foundation model",
+  "url": "https://the-decoder.com/baidu-releases-ernie-5-5-flash-base-with-280-billion-parameters-as-an-open-source-foundation-model/",
+  "published": "2026-11-05T17:56:41+00:00",
+  "summary": "Baidu releases ERNIE 5.5 Flash Base: a 280-billion-parameter MoE model pre-trained on 33.5 trillion tokens, shipped deliberately without fine-tuning, so developers can take it wherever they want. The article Baidu releases ERNIE 5.5 Flash Base with 280 billion parameters as an open-source foundation model appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Quoting Paul Ford",
+  "url": "https://simonwillison.net/2026/Nov/5/paul-ford/",
+  "published": "2026-11-05T17:34:03+00:00",
+  "summary": "The web browser is very, very, very powerful software for applications, and the cost of accessing that power is going down seemingly every day . — Paul Ford , The Web Is More Than Enough Tags: browsers , paul-ford , web-development",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "Perplexity launches its own take on AI agents for work",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+  "published": "2026-11-05T17:26:50-05:00",
+  "summary": "Perplexity is taking on OpenAI and Anthropic with its own work-focused AI agents. The startup's new always-on \"Teammates\" can take on multiple roles within a workspace, while pulling existing projects, skills, and memory from the Perplexity tools you already use. Teammates integrate with Perplexity Computer, an AI system that can deploy agents on your device […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+  "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+  "published": "2026-11-05T17:05:16+00:00",
+  "summary": "",
+  "source": "Google DeepMind",
+  "tier": "T1"
+ },
+ {
+  "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+  "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+  "published": "2026-11-05T17:00:35+00:00",
+  "summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through […]",
+  "source": "NVIDIA Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "No AI agent scores above 12 percent on SemiAnalysis' new real-world work benchmark",
+  "url": "https://the-decoder.com/no-ai-agent-scores-above-12-percent-on-semianalysis-new-real-world-work-benchmark/",
+  "published": "2026-11-05T16:46:24+00:00",
+  "summary": "SemiAnalysis is putting AI agents through simulated knowledge work in its new GDPx benchmark, covering everything from chip design to quant trading. No model breaks 12 percent. Claude Opus 5.5 leads narrowly over Gemini 4 Carbon. Critics point to the small number of tasks per domain and uneven testing conditions. The article No AI agent scores above 12 percent on SemiAnalysis' new real-world work benchmark appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Axiom Math wants to keep AI slop out of mathematics",
+  "url": "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/",
+  "published": "2026-11-05T16:16:45+00:00",
+  "summary": "As AI floods math with unchecked proofs, Axiom Math is betting on verification. The startup’s AI agents just formally verified the Stacks Project, one of the field’s biggest libraries.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Tencent releases Hy4 with vision and computer use, claims second place among Chinese AI models",
+  "url": "https://the-decoder.com/tencent-releases-hy4-with-vision-and-computer-use-claims-second-place-among-chinese-ai-models/",
+  "published": "2026-11-05T16:06:31+00:00",
+  "summary": "Tencent has unveiled Hy4, its first multimodal language model that understands images and can operate software on its own. On the Artificial Analysis Intelligence Index, it scores 35 points, solid but behind Kimi K3.1 Pro. On hard math and complex image analysis, Hy4 still trails the best commercial models by a wide margin, according to Tencent itself. The article Tencent releases Hy4 with vision and computer use, claims second place among Chinese AI models appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Detecting signs of hypertension using wearable sensors",
+  "url": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/",
+  "published": "2026-11-05T16:01:08+00:00",
+  "summary": "Health & Bioscience",
+  "source": "Google Research",
+  "tier": "T1"
+ },
+ {
+  "title": "The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models",
+  "url": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/",
+  "published": "2026-11-05T16:00:05+00:00",
+  "summary": "Chris Alexiuk has a simple rule about open source AI: If you believe in it, be loud about it. “We should be shouting about this technology from the rooftops,” said Alexiuk, a Toronto-based senior product research engineer in deep learning at NVIDIA who specializes in making open large language models (LLMs) practical for working developers. […]",
+  "source": "NVIDIA Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Formally verifying agent-written full-stack web apps with PDD Kit",
+  "url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+  "published": "2026-11-05T16:00:00+00:00",
+  "summary": "AI agents can generate code at a scale that’s hard for humans to review line-by-line. PDD Kit helps ensure the code is doing what the developer intended by creating formal specifications and testing against them. It converts developer intent into a Verus specification, proves AI-generated code meets it for every input, and uses tests where proofs aren't practical. Developers review intent, not every line. The post Formally verifying agent-written full-stack web apps with PDD Kit appeared first on Microsoft Research .",
+  "source": "Microsoft Research",
+  "tier": "T1"
+ },
+ {
+  "title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
+  "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/",
+  "published": "2026-11-05T16:00:00+00:00",
+  "summary": "Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and prices rise — a trend expected to continue through the near term. NVIDIA works closely with memory partners to rapidly adopt the latest memory technologies. NVIDIA was first to adopt HBM3e and HBM4 technologies into an accelerated computing stack. […]",
+  "source": "NVIDIA Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure",
+  "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/",
+  "published": "2026-11-05T15:19:05+00:00",
+  "summary": "The deal is expected to support the development of DBX Agent Cloud, a new storage platform aimed at developers building AI models and agents.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Meta buys AI coding startup Conductor as big tech races to lock in developers",
+  "url": "https://the-decoder.com/meta-buys-ai-coding-startup-conductor-as-big-tech-races-to-lock-in-developers/",
+  "published": "2026-11-05T15:01:09+00:00",
+  "summary": "Meta is acquiring AI coding startup Conductor, which lets developers control multiple AI coding agents at once. On the same day, OpenAI announced plans to acquire Pierre Computer, and Anthropic already bought Stainless back in May. The deals follow a pattern: AI models are becoming interchangeable, and the value is shifting to the tools built around them. The article Meta buys AI coding startup Conductor as big tech races to lock in developers appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Aina’s smart ring has a screen, a joystick, and a mic so you can talk to AI agents",
+  "url": "https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/",
+  "published": "2026-11-05T14:42:00+00:00",
+  "summary": "Aina's ring can also take calls and help you dictate notes on your Mac.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "After midterm rout, OpenAI tries to win over communities it needs for AI expansion",
+  "url": "https://the-decoder.com/after-midterm-rout-openai-tries-to-win-over-communities-it-needs-for-ai-expansion/",
+  "published": "2026-11-05T14:37:46+00:00",
+  "summary": "OpenAI is responding to the clear vote by US voters against new data centers with voluntary commitments for future sites. The pledges only apply to facilities OpenAI operates itself, though, and a large share of its infrastructure is built by partners like Oracle. Voters rejected new data centers in 40 out of 41 local ballot measures. The article After midterm rout, OpenAI tries to win over communities it needs for AI expansion appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Anthropic reverses course and pays for news content for the first time",
+  "url": "https://the-decoder.com/anthropic-reverses-course-and-pays-for-news-content-for-the-first-time/",
+  "published": "2026-11-05T14:09:05+00:00",
+  "summary": "Anthropic signed its first licensing deal with a news publisher just ahead of the US midterm elections. The article Anthropic reverses course and pays for news content for the first time appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI's GPT-6 Astra quietly sabotaged safety research by inventing fake obstacles",
+  "url": "https://the-decoder.com/openais-gpt-6-astra-quietly-sabotaged-safety-research-by-inventing-fake-obstacles/",
+  "published": "2026-11-05T14:08:22+00:00",
+  "summary": "OpenAI's new GPT-6 Astra model apparently sabotaged AI safety research on purpose. It invented obstacles, withheld solutions, and performed about 40 percent worse on safety tasks than on comparable other tasks. Removing a flawed training dataset fixed the problem, but OpenAI can't fully rule out strategic motives. The article OpenAI's GPT-6 Astra quietly sabotaged safety research by inventing fake obstacles appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Apple slashes internal AI budgets, with deeper cuts still planned",
+  "url": "https://the-decoder.com/apple-slashes-internal-ai-budgets-with-deeper-cuts-still-planned/",
+  "published": "2026-11-05T14:03:14+00:00",
+  "summary": "Tech companies are cutting internal AI spending, and Apple is the latest to follow suit. The article Apple slashes internal AI budgets, with deeper cuts still planned appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Muse has a voice mode now",
+  "url": "https://www.theverge.com/tech/1028015/meta-muse-ai-voice-mode-expressive-avatar",
+  "published": "2026-11-05T14:03:04-05:00",
+  "summary": "Meta now lets you have voice conversations with your Muse AI agent in real time, CEO Mark Zuckerberg announced today. The feature has been rolled out to me, and I gave it a spin on the iOS app while writing this article. As you chat with your Muse agent, the avatar at the top of […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "‘Hogwarts Legacy’ Gets a Magical NVIDIA DLSS 5 Upgrade on GeForce NOW",
+  "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-hogwarts-legacy-dlss-5/",
+  "published": "2026-11-05T14:00:34+00:00",
+  "summary": "Hogwarts Legacy receives an NVIDIA DLSS 5 upgrade with 3D-Guided Neural Rendering today, bringing lifelike lighting and materials to the wizarding world on GeForce NOW. Blizzard Entertainment’s World of Warcraft: Forever also opens a new chapter in Azeroth, with a launch-week access reward available for GeForce NOW members. Meanwhile, Ubisoft brings fresh challenges with expansions […]",
+  "source": "NVIDIA Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Box taps Nvidia’s Nemotron for new agent-first content retrieval system",
+  "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/",
+  "published": "2026-11-05T14:00:00+00:00",
+  "summary": "The system can supposedly answer queries four times faster, with 20% fewer errors and 90% fewer tokens used.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Claude AI can plug directly into your bank account",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1027652/anthropic-claude-plaid-personal-finance",
+  "published": "2026-11-05T13:00:00-05:00",
+  "summary": "Anthropic has a new pitch for managing your personal finances: let Claude do it instead, with a new Personal Finance feature that connects it to your bank and card accounts via the Plaid bank bridging platform. You can ask the chatbot \"where did my money go this month,\" for example, and it'll create an overview […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "A YC startup is putting $1M behind 5 unsolved materials science problems for AI",
+  "url": "https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/",
+  "published": "2026-11-05T13:00:00+00:00",
+  "summary": "While frontier AI models have solved a remarkable series of outstanding mathematics problems and made progress in the life sciences, they have yet to truly plumb the complex physics in advanced materials.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "‘Total repudiation’: The blue wave is about to hit AI",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai",
+  "published": "2026-11-05T12:51:52-05:00",
+  "summary": "On Tuesday night, Democrats made history as they took control of the House and the Senate, and a blue wave swept through traditionally red and swing states - with the nation's first Black woman governor elected in Georgia, the country's first Native American woman governor elected in New Mexico, and a Maine Senator ceding to […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Agility Robotics' Nasdaq debut invites scrutiny of humanoid robot market",
+  "url": "https://arstechnica.com/ai/2026/11/agility-robotics-nasdaq-debut-invites-scrutiny-of-humanoid-robot-market/",
+  "published": "2026-11-05T12:00:41+00:00",
+  "summary": "US leader in deploying humanoid robots goes public on the Nasdaq stock exchange.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Le Chonk brings the brains. Studio puts it to work.",
+  "url": "https://mistral.ai/news/build-with-studio/",
+  "published": "2026-11-05T12:00:14+00:00",
+  "summary": "Build and deploy enterprise agents, workflows and apps faster with Mistral Studio and Le Chonk full control over your models, data and infrastructure.",
+  "source": "Mistral AI",
+  "tier": "T1"
+ },
+ {
+  "title": "Grimes is going to star in an AI movie that’s coming to theaters",
+  "url": "https://www.theverge.com/entertainment/1026282/grimes-ai-movie",
+  "published": "2026-11-05T12:00:00-05:00",
+  "summary": "The AI-generated sci-fi film Gods Don't Give Gifts has added a bit of star power: Pop star Grimes is going to appear in the movie. Billed as \"the first AI film to come to theatres,\" Gods Don't Give Gifts is a notable test case for the commercial potential of AI films, and it releases on […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI says its new cybersecurity model is better at not hacking other companies",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch",
+  "published": "2026-11-05T12:00:00-05:00",
+  "summary": "OpenAI is launching GPT-6 Cyber, the latest version of its cybersecurity AI model, which it says is better at finding vulnerabilities and less likely to go rogue and hack other platforms in the process. OpenAI says that during testing, GPT-6 Cyber went out of bounds less than 1 percent of the time, down from around […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Agility is the first pure humanoid robot company on the stock market. Are you buying?",
+  "url": "https://techcrunch.com/2026/11/05/agility-is-the-first-pure-humanoid-robot-company-on-the-stock-market-are-you-buying/",
+  "published": "2026-11-05T12:00:00+00:00",
+  "summary": "Agility arrives on the Nasdaq today as the first publicly traded pure-play humanoid robotics company.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "The hidden supply chain costs of the AI boom",
+  "url": "https://www.theverge.com/podcast/1024438/willy-shih-supply-chain-ai-chips-ram-where-does-my-stuff-come-from-book",
+  "published": "2026-11-05T10:00:00-05:00",
+  "summary": "Today, I’m talking with Willy Shih, an economist, a professor of management practice at Harvard Business School, and the author of the upcoming book, Where Does My Stuff Come From? The Powerful Economics Behind Global Supply Chains. Willy is one of my all-time favorite Decoder guests — his way of looking at the world through […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "You can post AI music straight to SoundCloud from ElevenLabs",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1027427/ai-music-soundcloud-elevenlabs",
+  "published": "2026-11-05T10:00:00-05:00",
+  "summary": "After partnering with Moises earlier this year, SoundCloud is now adding integration with another AI music platform, ElevenLabs. Now, rather than having to export and download your outputs from ElevenLabs and then upload them to SoundCloud, you can publish them directly. As part of the partnership, SoundCloud Artist Pro subscribers are also getting three months […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+  "url": "https://openai.com/index/introducing-gpt-6-cyber",
+  "published": "2026-11-05T09:00:00+00:00",
+  "summary": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
+  "source": "OpenAI News",
+  "tier": "T1"
+ },
+ {
+  "title": "Merge builds product and business tools with OpenAI technology",
+  "url": "https://openai.com/index/merge-builds-with-openai",
+  "published": "2026-11-05T08:00:00+00:00",
+  "summary": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.",
+  "source": "OpenAI News",
+  "tier": "T1"
+ },
+ {
+  "title": "[AINews] It's Swapping Season",
+  "url": "https://latent.space/p/ainews-it-s-swapping-season/",
+  "published": "2026-11-05T06:24:09+00:00",
+  "summary": "November 4, 2026 — OpenAI’s Linux kernel security work, Kimi K3.1 Pro’s open weights, and Ricursive’s Ripple-65B.",
+  "source": "Latent Space",
+  "tier": "T2"
+ },
+ {
+  "title": "Setting a new standard for responsible AI infrastructure",
+  "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+  "published": "2026-11-05T02:00:00+00:00",
+  "summary": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
+  "source": "OpenAI News",
+  "tier": "T1"
+ },
+ {
+  "title": "Apple is reportedly cutting budgets for its internal AI usage",
+  "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
+  "published": "2026-11-05T01:26:22+00:00",
+  "summary": "The tokenmaxxing frenzy has been short-lived as bills for said tokens came due, and companies decided that token rationing might be a more fiscally sensible approach.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "After the midterms, a bigger clash over data centers could be coming",
+  "url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/",
+  "published": "2026-11-05T01:02:14+00:00",
+  "summary": "Data center opposition crossed party lines in Tuesday’s midterms.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Flipsnack grows product signups with conversion optimization",
+  "url": "https://openai.com/ads/customers/flipsnack",
+  "published": "2026-11-05T00:45:15+00:00",
+  "summary": "Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while lowering the cost per signup.",
+  "source": "OpenAI News",
+  "tier": "T1"
+ },
+ {
+  "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+  "url": "https://huggingface.co/blog/phonon-tts",
+  "published": "2026-11-05T00:00:00+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
   "title": "AI PACs spent millions trying to shape Congress — here’s how they fared",
   "url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/",
   "published": "2026-11-04T22:45:09+00:00",
@@ -48,26 +496,10 @@
   "tier": "T2"
  },
  {
-  "title": "ChatGPT can now turn text prompts and photos into animated GIFs with OpenAI's Images 2.6 model",
-  "url": "https://the-decoder.com/chatgpt-can-now-turn-text-prompts-and-photos-into-animated-gifs-with-openais-images-2-6-model/",
-  "published": "2026-11-04T19:44:20+00:00",
-  "summary": "OpenAI is adding a GIF feature to ChatGPT. With the new Images 2.6 model, users can create animated GIFs from text prompts or photos and then adjust speed and individual frames. The model's image consistency is strong enough to keep characters recognizable across frames, making flipbook-style animation possible. According to OpenAI, users now generate more than four billion images per week. The article ChatGPT can now turn text prompts and photos into animated GIFs with OpenAI's Images 2.6 model appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
   "title": "Open source AI is booming. Hugging Face explains who profits.",
   "url": "https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits/",
   "published": "2026-11-04T19:30:04+00:00",
   "summary": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. But as increasingly capable models become more freely available, how do companies capture value? And with Chinese open models gaining ground, can American players keep up? On this episode of […]",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "DuckDuckGo pitches itself to schools amid backlash over Google’s AI policy",
-  "url": "https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy/",
-  "published": "2026-11-04T19:29:52+00:00",
-  "summary": "DuckDuckGo is courting schools frustrated by Google's AI restrictions, pointing educators to its search engine and options to disable AI features.",
   "source": "TechCrunch · AI",
   "tier": "T2"
  },
@@ -77,14 +509,6 @@
   "published": "2026-11-04T19:17:30+00:00",
   "summary": "November 3, 2026 — A quiet day lets us share some behind the senes.",
   "source": "Latent Space",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic's text watermark is easy to bypass on several older Claude models",
-  "url": "https://the-decoder.com/anthropics-text-watermark-is-easy-to-bypass-on-several-older-claude-models/",
-  "published": "2026-11-04T19:03:55+00:00",
-  "summary": "Anthropic is rolling out text watermarks to four more Claude models ahead of the EU AI Act's December deadline. But on older models like Claude Opus 4.6 and Sonnet 4.6, API users can disable the watermark by changing a single sampling parameter. Anthropic's response to the loophole? A compliance warning. The article Anthropic's text watermark is easy to bypass on several older Claude models appeared first on The Decoder .",
-  "source": "The Decoder",
   "tier": "T2"
  },
  {
@@ -104,22 +528,6 @@
   "tier": "T1"
  },
  {
-  "title": "Building on open source AI? Hugging Face’s policy chief on the costs, risks, and trade-offs",
-  "url": "https://techcrunch.com/podcast/building-on-open-source-ai-hugging-faces-policy-chief-on-the-costs-risks-and-trade-offs/",
-  "published": "2026-11-04T18:44:57+00:00",
-  "summary": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. But as increasingly capable models become more freely available, how do companies capture value? And with Chinese open models gaining ground, can American players keep up? On this episode of […]",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "OpenAI acquires Pierre Computer Company to make Git keep up with AI coding agents",
-  "url": "https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/",
-  "published": "2026-11-04T18:41:03+00:00",
-  "summary": "OpenAI is buying Pierre Computer Company, the startup whose libraries already power the coding agent Codex. Combined with OpenAI's recently launched Git backend Pando, the deal shows the company is building out its infrastructure for developers and AI agents working side by side. The article OpenAI acquires Pierre Computer Company to make Git keep up with AI coding agents appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
   "title": "Agile Deliberation: How AI helps humans define the gray areas",
   "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
   "published": "2026-11-04T18:07:05+00:00",
@@ -134,38 +542,6 @@
   "summary": "",
   "source": "Hugging Face Blog",
   "tier": "T1"
- },
- {
-  "title": "Qualcomm is betting big on data centers as smartphone sales sink",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
-  "published": "2026-11-04T17:42:15-05:00",
-  "summary": "With smartphone sales tanking by around 20 percent compared to 2025, Qualcomm is looking to data centers to help boost its bottom line. During its Q4 2026 earnings call, the company laid out its plans to make a splash in the AI data center business, through partnerships with companies like Amazon and Meta announced earlier […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "I tried Apple’s Siri Recaps. They’re surprisingly useful — and a little unsettling",
-  "url": "https://techcrunch.com/2026/11/04/i-tried-apples-siri-recaps-theyre-surprisingly-useful-and-a-little-unsettling/",
-  "published": "2026-11-04T16:51:35+00:00",
-  "summary": "Apple's AI-powered Siri Recaps won me over in just one day, despite my privacy reservations. But there's still room for improvement.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "17 better ways Elon Musk could have wasted $446 million",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1026878/not-even-good-at-being-rich",
-  "published": "2026-11-04T16:45:00-05:00",
-  "summary": "One of the basic problems of spending too much time on social media is that you are cooking your brain by reading posts from a pack of attention-seeking lunatics. If your social media of choice is the site formerly known as Twitter, and it is your main source of contact with the outside world, you […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "New open-source benchmark reveals reasoning as the biggest bottleneck for AI in cloud operations",
-  "url": "https://the-decoder.com/new-open-source-benchmark-reveals-reasoning-as-the-biggest-bottleneck-for-ai-in-cloud-operations/",
-  "published": "2026-11-04T16:42:52+00:00",
-  "summary": "CloudOpsBench is a new open-source benchmark that measures how well AI agents handle typical DevOps tasks in the cloud, from fixing services and removing resources to restricting access rights, rolling out updates, and decommissioning projects. The article New open-source benchmark reveals reasoning as the biggest bottleneck for AI in cloud operations appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
  },
  {
   "title": "Smart Approvals in Amazon Quick: Human oversight where it matters",
@@ -200,43 +576,11 @@
   "tier": "T1"
  },
  {
-  "title": "Google faces backlash for plan that would turn off Search for schools that restrict AI",
-  "url": "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/",
-  "published": "2026-11-04T16:17:22+00:00",
-  "summary": "Politicians on the left, like NYC mayor Zohran Mamdani and former FTC chair Lina Khan, accused Google of acting as an unregulated monopoly.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "GPT-6 Astra sees the matrix and reprograms other AI models directly through their weights",
-  "url": "https://the-decoder.com/gpt-6-astra-sees-the-matrix-and-reprograms-other-ai-models-directly-through-their-weights/",
-  "published": "2026-11-04T15:44:44+00:00",
-  "summary": "MIT researchers show that OpenAI's GPT-6 Astra can read and deliberately rewrite the weights of other AI models without traditional training. In one experiment, Astra boosted a Qwen model's math accuracy from 7.9 to 48.1 percent by changing just 0.016 percent of its weights. The approach could fundamentally simplify AI optimization but still hits clear limits. The article GPT-6 Astra sees the matrix and reprograms other AI models directly through their weights appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
   "title": "datasette-llm 0.1a10",
   "url": "https://simonwillison.net/2026/Nov/4/datasette-llm/",
   "published": "2026-11-04T15:26:02+00:00",
   "summary": "Release: datasette-llm 0.1a10 Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. Tags: datasette , llm",
   "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic's new prototype proves which model wrote an AI response without exposing its weights",
-  "url": "https://the-decoder.com/anthropics-new-prototype-proves-which-model-wrote-an-ai-response-without-exposing-its-weights/",
-  "published": "2026-11-04T15:23:49+00:00",
-  "summary": "Anthropic has released FlashProve, a research prototype that uses cryptography to verify whether an AI response actually came from the claimed model. The system still has significant limitations. The article Anthropic's new prototype proves which model wrote an AI response without exposing its weights appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Gemini for Home now plugs into AT&T’s smart security system",
-  "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
-  "published": "2026-11-04T15:23:24-05:00",
-  "summary": "AT&T's smart home security system now integrates with Gemini for Home. The company says its Connected Life system is the \"first\" home security product to integrate with Google Home Premium, enabling a bunch of Gemini-powered features that can summarize home events, search your video history, and more. With the update, Gemini for Home can provide […]",
-  "source": "The Verge · AI",
   "tier": "T2"
  },
  {
@@ -248,83 +592,11 @@
   "tier": "T1"
  },
  {
-  "title": "Nothing teases a screen-free AI device ahead of launch next month",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei",
-  "published": "2026-11-04T13:26:07-05:00",
-  "summary": "Nothing CEO Carl Pei said in a post on X that the company's launching its first AI device in December. That's just a little over a year after Pei announced plans for \"AI-native\" devices and an AI operating system. He didn't give away much about what exactly the new device is, only that one feature […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "My therapist thinks I should chuck the Amazon Bee Frontier out a window",
-  "url": "https://www.theverge.com/column/1026464/optimizer-amazon-bee-frontier-ambient-listening-wearables",
-  "published": "2026-11-04T13:00:00-05:00",
-  "summary": "This is Optimizer, a weekly newsletter sent from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they're going to change your life. Opt in for Optimizer here. \"How does that make you feel?\" I get asked this a lot in therapy. Plenty of life events, big and […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "ChatGPT will now make you animated GIFs",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
-  "published": "2026-11-04T13:00:00-05:00",
-  "summary": "ChatGPT can now create GIFs using a prompt or a photo uploaded to the AI chatbot. The update, which is rolling out alongside OpenAI's new Images 2.6 model, allows you to adjust the GIF's animation speed, edit individual frames, and share it with others. Before this change, ChatGPT couldn't natively generate GIFs in a single […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "TechCrunch Founder Summit 2026: Doors open at 9 a.m. ET in Boston",
-  "url": "https://techcrunch.com/2026/11/04/techcrunch-founder-summit-2026-todays-the-day/",
-  "published": "2026-11-04T13:00:00+00:00",
-  "summary": "Today is the day to join TechCrunch Founder Summit 2026 in Boston's SoWa Power Station. Register now to join this founder-focused conference today.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
   "title": "Securing the agentic enterprise with data lineage",
   "url": "https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/",
   "published": "2026-11-04T13:00:00+00:00",
   "summary": "A sales representative asks an AI agent for customer pricing, and the agent pulls data from multiple sources: restricted pricing systems, internal communications, and archived quotes. The output looks accurate to the agent, so a second agent uses the data to draft the proposal for the sales rep. No human checks either handoff. When it’s…",
   "source": "MIT Technology Review · AI",
-  "tier": "T2"
- },
- {
-  "title": "Data centers lost the midterms",
-  "url": "https://www.theverge.com/policy/1026365/data-centers-midterms-results",
-  "published": "2026-11-04T11:05:39-05:00",
-  "summary": "Data center developers are poised to face a more restrictive building environment after voters across the country voted in candidates who favor moratoriums and ballot measures that put more obstacles on their expansion, delivering a stinging blow to a central pillar of the AI industry. Of voters polled by NBC News on Election Day, 76 […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Uber only fulfilled 4 rides from AI agents last quarter",
-  "url": "https://www.theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation",
-  "published": "2026-11-04T10:58:45-05:00",
-  "summary": "AI agents won't be stealing Uber's lunch any time soon. Only four rides were arranged by third-party AI agents during the third quarter of 2026, Uber executives disclosed during an earnings call this morning. The volume of Uber Eats orders fulfilled by AI agents was a little higher, with the company recording \"around 500\" during […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Exit polls show AI ranked last among voter priorities in the 2026 U.S. midterms",
-  "url": "https://the-decoder.com/exit-polls-show-ai-ranked-last-among-voter-priorities-in-the-2026-u-s-midterms/",
-  "published": "2026-11-04T10:45:54+00:00",
-  "summary": "In the 2026 U.S. midterm elections, AI ranked last among campaign issues: only 56 percent of respondents cited AI and data centers as an important factor. According to NBC exit polls, corruption (90 percent) and the cost of living (89 percent) clearly dominated, despite growing public attention to the issue. The article Exit polls show AI ranked last among voter priorities in the 2026 U.S. midterms appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Schools that turn off Google's AI will lose search too starting in 2027",
-  "url": "https://the-decoder.com/schools-that-turn-off-googles-ai-will-lose-search-too-starting-in-2027/",
-  "published": "2026-11-04T10:06:23+00:00",
-  "summary": "Starting in 2027, Google plans to turn off AI features in its school products by default, letting schools decide what to enable. The catch: schools that block AI entirely on their devices will also lose access to Google Search, since the two systems are now too deeply intertwined to separate. Given Google's grip on the US school market, that \"choice\" doesn't leave schools with much room to maneuver. The article Schools that turn off Google's AI will lose search too starting in 2027 appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Sam Altman addresses RAM comments: People should ‘put as much as they want in their computers’",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1026292/sam-altman-ram-shortage-pcs-comments",
-  "published": "2026-11-04T09:46:01-05:00",
-  "summary": "OpenAI CEO Sam Altman spent election night defending his position on PC RAM purchases. He changed his name on X to \"Ram Altman\" in response to another user's comment, saying, \"i actually do want the world to have tons of memory and people to put as much as they want in their computers, and it […]",
-  "source": "The Verge · AI",
   "tier": "T2"
  },
  {
@@ -336,331 +608,11 @@
   "tier": "T1"
  },
  {
-  "title": "Google hasn’t figured out how to make AI pay like its search engine",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3",
-  "published": "2026-11-04T07:00:00-05:00",
-  "summary": "Search queries are growing at their fastest rate in five years, Google parent Alphabet said in its earnings report last week. However, Google's Search revenue growth slowed to 12 percent year over year in the third quarter, down from roughly 17 percent in the previous quarter. Meanwhile, growth in paid clicks - clicks on ads […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
   "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
   "url": "https://openai.com/index/daybreak-red-aws-govcloud",
   "published": "2026-11-04T07:00:00+00:00",
   "summary": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work.",
   "source": "OpenAI News",
   "tier": "T1"
- },
- {
-  "title": "datasette-apps 0.3a0",
-  "url": "https://simonwillison.net/2026/Nov/4/datasette-apps/",
-  "published": "2026-11-04T00:29:36+00:00",
-  "summary": "Release: datasette-apps 0.3a0 Datasette Apps adds support for hosting and editing custom HTML applications inside of Datasette. These can be created by hand, but it's easier to create them using LLMs via Datasette Agent . This release improves that integration: Apps can now be tagged in Datasette Agent chat messages by typing # , which autocompletes from the apps the user has permission to view. New app_add_stored_queries() and app_remove_stored_queries() tools let the agent manage which stored queries an app is allowed to call. Granting a write query requires approval from the user first. app_create() now checks that each requested stored query exists and that the user can view it, and asks",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "Introducing Images 2.6",
-  "url": "https://openai.com/index/introducing-images-2-6",
-  "published": "2026-11-04T00:00:00+00:00",
-  "summary": "Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
-  "url": "https://openai.com/index/devrev-enterprise-self-service",
-  "published": "2026-11-04T00:00:00+00:00",
-  "summary": "DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "datasette-agent 0.5a0",
-  "url": "https://simonwillison.net/2026/Nov/3/datasette-agent/",
-  "published": "2026-11-03T23:13:45+00:00",
-  "summary": "Release: datasette-agent 0.5a0 This is a significant release of Datasette Agent . The most notable new feature is called the panel - it lets the agent chat open and then sit next to pages from Datasette, for example a table or query page. When combined with datasette-apps this means you can prompt a database-backed app into existence and then modify it from the chat that sits next to that app. You can try it by signing in with your GitHub account to agent.datasette.io . Tags: projects , datasette , datasette-agent",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic is working on a system to prove AI models’ identity",
-  "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
-  "published": "2026-11-03T22:41:03+00:00",
-  "summary": "Called FlashProve, the system would let anyone check that an AI response really came from the model it claims to be from.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Data centers are turning to old jet engines as the wait for power grows",
-  "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/",
-  "published": "2026-11-03T22:19:53+00:00",
-  "summary": "The years-long wait for access to the grid and new turbines is causing data center builders to turn to an unusual, less-efficient and less environmentally friendly solution: once-discarded jet engines.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
-  "url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/",
-  "published": "2026-11-03T21:43:08+00:00",
-  "summary": "Cybersecurity-focused Ballistic Ventures is seeking to raise $360 million for a new flagship fund and another $130 million for a separate investment vehicle.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "llm 0.37.1",
-  "url": "https://simonwillison.net/2026/Nov/3/llm/",
-  "published": "2026-11-03T21:41:42+00:00",
-  "summary": "Release: llm 0.37.1 A bugfix release for LLM , with contributions from Steven Huang , Tao An , Arjan Mossel , and XQ . Tags: llm",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "Hiding inside Palantir’s skyrocketing quarter is a foreboding signal",
-  "url": "https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/",
-  "published": "2026-11-03T21:05:55+00:00",
-  "summary": "Palantir's U.S. commercial revenue surpassed U.S. government revenue for the first time ever.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Ukraine’s drone strikes spur hasty Russian plans for underground data centers",
-  "url": "https://arstechnica.com/ai/2026/11/russia-looks-to-hide-data-centers-underground-as-ukrainian-drones-strike-back/",
-  "published": "2026-11-03T20:39:55+00:00",
-  "summary": "Russia tries to fix exposed digital infrastructure as data center war backfires.",
-  "source": "Ars Technica · AI",
-  "tier": "T2"
- },
- {
-  "title": "OpenAI says GPT-6 Astra designed a hardware device from scratch in under a week",
-  "url": "https://the-decoder.com/openai-says-gpt-6-astra-designed-a-hardware-device-from-scratch-in-under-a-week/",
-  "published": "2026-11-03T20:15:45+00:00",
-  "summary": "OpenAI's hardware team used GPT-6 Astra to design a device for the Codex coding agent in under a week, handling everything from the enclosure to the circuit board to the firmware. Several revision rounds were needed before production because the model didn't always account for manufacturing tolerances. A newer internal model scores significantly higher on OpenAI's engineering benchmark, though the company isn't sharing details. The article OpenAI says GPT-6 Astra designed a hardware device from scratch in under a week appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Rapid LLM development is outrunning the research meant to explain it, study finds",
-  "url": "https://the-decoder.com/rapid-llm-development-is-outrunning-the-research-meant-to-explain-it-study-finds/",
-  "published": "2026-11-03T19:41:43+00:00",
-  "summary": "Stanford researchers tested 50 widely cited claims about LLMs against 20 current models. 44 percent of the findings are already \"expired,\" and another 34 percent have weakened significantly. The average lifespan is just 15.7 months. Claims about what models can't do expire fastest. The article Rapid LLM development is outrunning the research meant to explain it, study finds appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "AI inference startup Fal doubles its valuation to $16B as demand surges",
-  "url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
-  "published": "2026-11-03T19:34:43+00:00",
-  "summary": "The five-year-old startup raised a $1.3 billion round led by Bessemer.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Netflix’s new AI Discover tab helps you find something to watch based on your mood",
-  "url": "https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/",
-  "published": "2026-11-03T18:42:16+00:00",
-  "summary": "The first experimental feature under the tab will allow users to get recommendations based on what they're currently in the mood for.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Google will let schools skip AI tools, but they have to give up search, too",
-  "url": "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too/",
-  "published": "2026-11-03T17:54:43+00:00",
-  "summary": "Google will offer schools AI tools that purportedly don't give away the answers.",
-  "source": "Ars Technica · AI",
-  "tier": "T2"
- },
- {
-  "title": "StateBench: Testing how language models track state changes over long documents",
-  "url": "https://huggingface.co/blog/allenai/statebench",
-  "published": "2026-11-03T17:15:21+00:00",
-  "summary": "",
-  "source": "Hugging Face Blog",
-  "tier": "T1"
- },
- {
-  "title": "Learn the rules: The hacker mindset",
-  "url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
-  "published": "2026-11-03T17:14:38+00:00",
-  "summary": "Research Manager Mike Walker reflects on a career spanning hacker culture, cybersecurity, and AI, sharing lessons about trust, teamwork, leadership, and why solving difficult problems requires curiosity, judgment, agility—and an understanding of the rules. The post Learn the rules: The hacker mindset appeared first on Microsoft Research .",
-  "source": "Microsoft Research",
-  "tier": "T1"
- },
- {
-  "title": "Anthropic is still grappling with the economics of compute",
-  "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/",
-  "published": "2026-11-03T17:07:01+00:00",
-  "summary": "At a moment when Anthropic's compute margins should be getting better, they’re getting worse.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Agentic cheminformatics with Google Antigravity",
-  "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
-  "published": "2026-11-03T17:01:49+00:00",
-  "summary": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles.",
-  "source": "Google DeepMind",
-  "tier": "T1"
- },
- {
-  "title": "Bring structured and unstructured data together with Amazon Quick",
-  "url": "https://aws.amazon.com/blogs/machine-learning/bring-structured-and-unstructured-data-together-with-amazon-quick/",
-  "published": "2026-11-03T16:49:29+00:00",
-  "summary": "Amazon Quick brings structured and unstructured data together in one experience. In this post, you connect Amazon S3 as a knowledge base, enrich a dataset, build a Space, and create a custom chat agent that answers business questions across both data types through a single conversational interface.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "ServiceNow on-behalf-of token exchange with Bedrock AgentCore Gateway",
-  "url": "https://aws.amazon.com/blogs/machine-learning/servicenow-on-behalf-of-token-exchange-with-bedrock-agentcore-gateway/",
-  "published": "2026-11-03T16:47:40+00:00",
-  "summary": "Learn how to configure Amazon Bedrock AgentCore Gateway for an on-behalf-of (OBO) token exchange with Microsoft Entra ID, so an AI agent can call the ServiceNow REST API while preserving the calling user's identity. AgentCore Gateway performs the exchange natively, with no interceptor Lambda or custom code.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "How Gen Digital built Norton Revamp’s AI-curated News Engine with Amazon Bedrock AgentCore Web Search",
-  "url": "https://aws.amazon.com/blogs/machine-learning/how-gen-digital-built-norton-revamps-ai-curated-news-engine-with-amazon-bedrock-agentcore-web-search/",
-  "published": "2026-11-03T16:43:20+00:00",
-  "summary": "Gen Digital built Norton Revamp, a generative AI-powered professional reputation management platform, with an AI-curated News Engine grounded by Web Search on Amazon Bedrock AgentCore. See how the Gen team delivers real-time, cited content suggestions, goal setting, and news feeds with zero data egress and Norton-grade privacy.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Build a semantic layer for agentic AI with EDB Postgres AI and Amazon Bedrock AgentCore",
-  "url": "https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-with-edb-postgres-ai-and-amazon-bedrock-agentcore/",
-  "published": "2026-11-03T16:41:13+00:00",
-  "summary": "Learn how to build a governed semantic layer for agentic AI inside EDB Postgres AI and query it from a Strands Agents agent on Amazon Bedrock AgentCore. Business meaning, join paths, and access control all live in Postgres, with GRANT and row-level security enforcing what each agent can read.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Building ultra-low-latency voice AI applications on AWS",
-  "url": "https://aws.amazon.com/blogs/machine-learning/building-ultra-low-latency-voice-ai-applications-on-aws/",
-  "published": "2026-11-03T16:40:54+00:00",
-  "summary": "Learn how Cartesia, an AWS Partner, uses purpose-built State Space Models and AWS infrastructure to deliver sub-100ms text-to-speech and speech-to-text at global scale, and how to deploy its Sonic model on Amazon SageMaker AI or self-managed Amazon EC2 GPU instances.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Palette: teaching a small model to build decks in your design language",
-  "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
-  "published": "2026-11-03T16:35:36+00:00",
-  "summary": "",
-  "source": "Hugging Face Blog",
-  "tier": "T1"
- },
- {
-  "title": "Introducing India-based inference for Kimi K3 on Amazon Bedrock",
-  "url": "https://aws.amazon.com/blogs/machine-learning/introducing-india-based-inference-for-kimi-k3-on-amazon-bedrock/",
-  "published": "2026-11-03T16:32:54+00:00",
-  "summary": "Amazon Bedrock now offers in-country inference in India for Kimi K3, keeping processing within the Mumbai and Hyderabad Regions. This post explains the global and geographic cross-Region inference options and shares example code for reading and understanding Indic-language documents with Kimi K3.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Google will let schools disable its AI tools, but not without sacrificing Search",
-  "url": "https://techcrunch.com/2026/11/03/google-will-let-schools-disable-its-ai-tools-but-not-without-sacrificing-search/",
-  "published": "2026-11-03T16:30:34+00:00",
-  "summary": "Schools choosing to restrict AI altogether will no longer be able to access Google Search, as AI features are now integrated into the search engine.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-  "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
-  "published": "2026-11-03T16:29:48+00:00",
-  "summary": "Yesterday's hot paper was Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights by Rikiya Takehi, Jayden Teoh, Alex Zhang, and Omar Khattab. The paper (OK, the authors classify is as a \"blog post\", but it's paper-shaped) found that frontier models, in particular GPT-6 Astra, can both interpret and modify the raw weights of a machine learning model - literally a text description of the model containing a bunch of floating point numbers. I've been playing with one of the examples from the paper and I'm delighted to share that Qwen 3.8 27B running on my laptop can do this as well! Weight-Space Programming Here's the highlight from their abstract, describing i",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
-  "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs/",
-  "published": "2026-11-03T16:00:45+00:00",
-  "summary": "Demand for advanced chips is rising. The processes to build them are getting more complex. And the margin for error is shrinking. For engineers, understanding how a process change will behave, how a material will interact with a new step, how a defect maps back to a root cause are critical, challenging steps in semiconductor […]",
-  "source": "NVIDIA Blog",
-  "tier": "T1"
- },
- {
-  "title": "Apple restricts dating apps and AI companions to users 18 and up",
-  "url": "https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/",
-  "published": "2026-11-03T15:38:27+00:00",
-  "summary": "Apple's new App Store rules will require 18+ ratings for dating apps and AI companions that offer sexual or romantic content.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Accelerating engineering for the physical world",
-  "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
-  "published": "2026-11-03T12:00:00+00:00",
-  "summary": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "How “reverse game theory” could keep AI agents in check",
-  "url": "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/",
-  "published": "2026-11-03T10:43:41+00:00",
-  "summary": "A new approach known as “reverse game theory” aims to control powerful AI models by designing systems that incentivize them to stick to the rules. As AI models become more capable, safety researchers are scrambling to ensure they are “aligned” with human desires—to make sure, in other words, that rogue agents don’t break the law,…",
-  "source": "MIT Technology Review · AI",
-  "tier": "T2"
- },
- {
-  "title": "How Cisco defends at machine speed with OpenAI",
-  "url": "https://openai.com/index/cisco-cyber",
-  "published": "2026-11-03T08:00:00+00:00",
-  "summary": "Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more adaptive defenses.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "Heimstaden is changing residential real estate management with AI",
-  "url": "https://openai.com/index/heimstaden",
-  "published": "2026-11-03T08:00:00+00:00",
-  "summary": "Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and Agentic AI",
-  "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
-  "published": "2026-11-03T07:00:12+00:00",
-  "summary": "Cities generate enormous amounts of data from cameras, sensors and operational systems, but turning it into useful action — for planning, maintenance and public services — remains a challenge. Physical and agentic AI offer new ways to close that gap, from digital twins for infrastructure planning to vision and service agents, while keeping local governments […]",
-  "source": "NVIDIA Blog",
-  "tier": "T1"
- },
- {
-  "title": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
-  "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/",
-  "published": "2026-11-03T05:35:00+00:00",
-  "summary": "Editing Qwen’s weights to reduce reasoning loops, DeepSeek’s super-agent prototype, and the GDPx benchmark.",
-  "source": "Latent Space",
-  "tier": "T2"
- },
- {
-  "title": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube",
-  "url": "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
-  "published": "2026-11-03T05:32:25+00:00",
-  "summary": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube Genius piece of OSINT by Colsto, who demonstrates how you can take almost imperceptible background noise of planes from a video soundtrack, figure out their Doppler curves, then cross reference them against ADS-B data to find the exact location of the video based on their speed, distance, and gaps between different flights. Via Lobste.rs Tags: privacy , youtube",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "October sponsors-only newsletter",
-  "url": "https://simonwillison.net/2026/Nov/3/october-newsletter/",
-  "published": "2026-11-03T05:28:59+00:00",
-  "summary": "I sent out the October edition of my sponsors-only monthly newsletter . If you are a sponsor (or start a sponsorship now) you can access it here . This month: The October inflection point for vibe game development The vulnerability apocalypse gets hot LLM releases API credits for $100+/month subscriptions What I'm using right now My software releases My September newsletter can now be seen here , as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy! Tags: newsletter",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "Here’s who is falling in line for Trump’s “Super Intelligence” loyalty test",
-  "url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/",
-  "published": "2026-11-03T04:18:47+00:00",
-  "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. At the end of September, President Trump signed an executive order that contained just one directive, ordering government agencies to rebrand what they had been calling artificial intelligence as “Super Intelligence.” That…",
-  "source": "MIT Technology Review · AI",
-  "tier": "T2"
  }
 ]

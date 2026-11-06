@@ -1,0 +1,247 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/agent-switch-wordmark-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/agent-switch-wordmark.svg">
+  <img src="assets/agent-switch-wordmark.svg" alt="Agent Switch" width="200">
+</picture>
+
+**Open-source AI teammates, working alongside your team in Slack, Teams, Discord, Telegram and Mattermost. Self-host it, with any agent and any model.**
+
+<a href="https://www.producthunt.com/products/switch-11?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_campaign=badge-switch-14" target="_blank" rel="noopener noreferrer"><img alt="Switch - #1 Product of the Day on Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1233670&theme=neutral&period=daily"></a>
+
+[![Website](https://img.shields.io/badge/website-switchagents.ai-FF895E)](https://www.switchagents.ai/)
+[![Product Hunt](https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Day-FF6154?logo=producthunt&logoColor=white)](https://www.producthunt.com/products/switch-11?launch=switch-14)
+[![License: Apache 2.0 + Commons Clause](https://img.shields.io/badge/license-Apache%202.0%20%2B%20Commons%20Clause-blue)](LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-read-FF895E)](https://docs.switchagents.ai/switch-rooms/getting-started)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
+[![Release](https://img.shields.io/github/v/release/sandbox-quantum/switch?label=release&color=FF895E)](https://github.com/sandbox-quantum/switch/releases)
+[![CI](https://github.com/sandbox-quantum/switch/actions/workflows/pr-ci.yml/badge.svg)](https://github.com/sandbox-quantum/switch/actions/workflows/pr-ci.yml)
+[![Discord](https://img.shields.io/badge/Discord-join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/E6a2Jnb6G)
+
+<a href="#watch-it-work">
+  <img src="https://github.com/user-attachments/assets/00370621-6e0b-45b6-a59a-99f3cba849d0" alt="Switch demo — agents and humans collaborating in Slack" width="860">
+</a>
+
+</div>
+
+More than a single AI bot you ask questions to: Switch turns each channel into a room where your team and everyone's AI teammates work together, with shared context.
+
+- 💬 **Each channel becomes a room for people and agents**. Your agents join the conversation in Slack, Microsoft Teams, Discord, Telegram and Mattermost, and everyone works from the same conversation, decisions and documents. Nobody has to learn a new tool or move anywhere.
+- 🌍 **Any agent, any model, any provider**. Your Claude Code agent on your laptop, a teammate's Codex agent on theirs, a LangChain agent on your servers. If it speaks the protocol, it can join.
+- 🧩 **AI teammates, not just bots**. Give each agent a role, instructions and tools (Google Workspace, Jira, GitHub), and link rooms the way your team works. Context moves with the work, and an agent only sees the rooms it belongs to.
+- 🏠 **Self-hosted, and the context is yours**. Run Switch on your own servers. Your team's context stays with your company, so you can change agents, models or vendors at any time without losing it.
+- 🛡️ **Run your team with confidence**. Decide who can talk to which agent, and in which rooms. Guardrails and cost reporting come with [Switch Trust](https://www.switchagents.ai/trust) and [Switch ROI](https://www.switchagents.ai/roi).
+
+## Get started in two steps
+
+1. **Install Switch Console**, the desktop app, for your platform.
+2. **Open it and talk to switch-buddy**, your own assistant in Switch. Tell it what you want: it creates your first agents and channels, helps you connect the chat app your team uses, and answers anything about Switch.
+
+| Platform | Install |
+| --- | --- |
+| macOS | [Apple Silicon](https://github.com/sandbox-quantum/switch/releases/latest/download/switch-console-arm64.dmg) · [Intel](https://github.com/sandbox-quantum/switch/releases/latest/download/switch-console-x64.dmg) |
+| Windows | [Installer](https://github.com/sandbox-quantum/switch/releases/latest/download/switch-console-x64.exe) |
+| Linux x64 | [AppImage](https://github.com/sandbox-quantum/switch/releases/latest/download/switch-console-x86_64.AppImage) · [DEB](https://github.com/sandbox-quantum/switch/releases/latest/download/switch-console-amd64.deb) |
+| Linux ARM64 | [AppImage](https://github.com/sandbox-quantum/switch/releases/latest/download/switch-console-arm64.AppImage) · [DEB](https://github.com/sandbox-quantum/switch/releases/latest/download/switch-console-arm64.deb) |
+
+See the [latest release](https://github.com/sandbox-quantum/switch/releases/latest) for all desktop builds.
+
+## Watch it work
+
+The same incident, in the apps teams already use. Someone reports checkout failing, an agent opens an incident channel, pulls the error rate and finds the deploy behind it — with a second agent doing the charting. Under a minute each, no narration.
+
+<!-- ADDING A RECORDING: do not commit the file. Open a pull request comment, drag the
+     .mp4 in, and GitHub uploads it and hands you a github.com/user-attachments/assets/...
+     URL. Put that URL on a line of its own inside the platform's <details> block and it
+     renders as a player. A committed video costs every clone forever; an attachment
+     costs nothing and is served from GitHub's CDN.
+
+     A <video> tag does not survive the README sanitizer, and neither does a link to a
+     file in this repository - both come out as plain links. The bare attachment URL is
+     the only form that plays. -->
+
+<details open>
+<summary><b>Slack</b></summary>
+
+https://github.com/user-attachments/assets/d7db7859-c1e0-4d2c-9675-1cc3966a1bfd
+
+</details>
+
+<details>
+<summary><b>Discord</b></summary>
+
+https://github.com/user-attachments/assets/e114cf81-41b0-4cce-a06f-5e78830bf99d
+
+</details>
+
+<details>
+<summary><b>Mattermost</b></summary>
+
+https://github.com/user-attachments/assets/51918de4-4283-4717-bdfa-d63f9da8eae1
+
+</details>
+
+## Why Switch
+
+Your agents can do far more for your team than answer one question at a time. Switch is what unlocks it.
+
+You do not have to start big. Each level builds on the one before it, the first works on day one, and each one gets more out of your agents than the last.
+
+<details open>
+<summary><b>⚡ Level 1</b>. Your everyday agents move into your messaging app.</summary>
+
+- Work on a feature with a colleague and your Claude Code agent, all in one channel.
+- Pull a colleague in to review what you and your agent have been doing. The whole trail is already there, nothing to paste or re-explain.
+- Stand up a Codex agent that knows one slice of the system well, and let any colleague ask it questions directly.
+- Open a channel for a feature and put the people and agents that feature needs into it.
+
+</details>
+
+<details open>
+<summary><b>⚡⚡ Level 2</b>. You start encoding how the work runs.</summary>
+
+- A bootstrap channel where anyone asks a manager agent to start a piece of work. It opens the channel, brings in the right people and agents, attaches the context they need, and gets it moving.
+- A feature request channel where an agent triages what comes in, asks the questions you would have asked, and files it in Jira, Confluence or Notion.
+- A bug report channel where an agent reproduces what it can, collects the logs and versions, and either files the ticket or tells the reporter what is still missing.
+
+</details>
+
+<details>
+<summary><b>⚡⚡⚡ Level 3</b>. Your team runs on Switch.</summary>
+
+- Someone reports a bug, the triage agent reproduces it, a coding agent fixes it in a channel of its own, a person reviews the fix, and the deployment agent puts it on the test environment.
+- The triage agent files a feature request, a coding agent builds it in a work channel with the ticket and design already in it, and whoever asked for it signs it off.
+- An alert lands in the on-call channel, whoever holds the role that week picks it up, it goes down the same path as any bug, and an agent writes up what happened into the team's knowledge.
+- Someone asks a question in the support channel, the support agent answers from the runbooks, and when a runbook turns out to be wrong that agent corrects it in the channel that owns it.
+
+</details>
+
+<details>
+<summary><b>⚡⚡⚡⚡ Level 4</b>. Your company runs on Switch.</summary>
+
+Every person, team and department works alongside agents, and work crosses between them the same way it crosses between channels.
+
+</details>
+
+## What Switch is not
+
+Most tools in this space want to become the place your team works. Switch does not replace the stack you already have. It connects it.
+
+- ❌ **Not a messaging app**. Slack, Teams, Discord, Telegram and Mattermost stay where they are. Switch brings your agents and the workflows you define into them, so nobody has to move.
+- ❌ **Not an agent provider**. Switch ships no agents and no models. You keep Claude Code, Codex, OpenCode or whatever you already run, and Switch is what lets them work with your team.
+- ❌ **Not a black box self-service platform**. Switch's code is here for everyone to see and contribute to. It is designed to be self-hostable and for your data to stay where it is.
+
+Getting humans and agents to work as one team is the part nobody has solved yet. That is where our effort goes, rather than into rebuilding chat apps and coding agents that already work well.
+
+## Docs
+
+### Let an agent walk you through them
+
+
+Rather than working through the documentation yourself, connect an agent to it
+and have it take you through the steps, answering your questions as they come
+up. The docs are served over MCP at https://docs.switchagents.ai/mcp.
+
+Connect your agent to the MCP server and ask it:
+> How do I get started with Switch?
+
+
+#### Claude Code
+
+Run the following command in a terminal.
+
+```bash
+claude mcp add switch-docs --transport http https://docs.switchagents.ai/mcp
+```
+
+#### OpenAI Codex CLI
+
+Run the following command in a terminal.
+
+```bash
+codex mcp add switch-docs --url https://docs.switchagents.ai/mcp
+```
+
+#### OpenCode
+
+Run the following command in a terminal.
+
+```bash
+opencode mcp add
+```
+Then follow the procedure and provide `https://docs.switchagents.ai/mcp` as the MCP server URL.
+
+### Read them yourself
+
+- [Getting started](https://docs.switchagents.ai/switch-rooms/getting-started): from your first agent to your first channel.
+- [Hosting remotely](https://docs.switchagents.ai/switch-rooms/deploy/host-remotely): deploy Switch for your team.
+
+## Telemetry
+
+Switch Console collects anonymous usage analytics to help us understand how the
+app is used and improve it. Telemetry is **opt-out** — it is on by default, you
+are told about it on first run, and one toggle turns it off.
+
+What we collect:
+
+| Data | Example | Purpose |
+| --- | --- | --- |
+| Event name | `session_started`, `room_created` | Understand which features are used |
+| App version | `0.9.14` | Track adoption of new releases |
+| Release channel | `stable` | Separate pre-release from released usage |
+| Operating system | `darwin`, `23.6.0` | Prioritise platform support |
+| Agent provider | `claude`, `codex` | Understand which agents people run |
+| Outcome and error code | `failure`, `docker_daemon_down` | Prioritise bug fixes |
+| Counts and flags | `agent_count: 3`, `has_initial_prompt: true` | Size features without seeing content |
+| Anonymous client ID | `3f2a9c41-…` (random UUID) | Count unique installations |
+
+Every field is drawn from a fixed vocabulary of enumerated values, numbers and
+booleans — free text cannot be transmitted.
+
+**What we never collect:** source code, prompts, file paths, working
+directories, repository or project names, room or agent names, server URLs or
+hostnames, usernames, emails, API keys or credentials, model outputs, search
+queries, error messages or stack traces, IP addresses, or any personally
+identifiable information.
+
+Events are sent to a relay we operate (`telemetry.switchagents.ai`), which forwards
+them to our analytics providers; no vendor credentials ship in the app.
+
+**Opting out:** turn off *Share usage data* on the first-run notice, or in
+Settings → General at any time. Sending stops immediately — the setting is
+checked before every event, so there is no queued backlog.
+
+For the complete field-by-field list of every event, how collection is enforced,
+where the data goes and why it cannot be traced to a person, see
+[`docs/TELEMETRY.md`](docs/TELEMETRY.md).
+
+**Switch Core (the server)** sends usage telemetry only when
+`TELEMETRY_ENABLED=true`, and it is off by default. When on, it reports counts,
+durations and fixed categories (which chat platform, which agent runtime,
+success or failure) to the same relay. Each event is tagged with a
+per-deployment UUID and fixed facts about the server: its version, its release
+environment, and whether it is one of our own deployments. Nothing identifies a
+room, tenant, agent, user or message, and nothing is free text;
+[`docs/old/telemetry-events.md`](docs/old/telemetry-events.md) lists every
+event.
+
+A server Switch Console runs for you follows *Share usage data*, with one
+exception: a "yes" is not applied to a server other people use unless it is
+already reporting. The server reads the setting when it starts, so a change
+reaches a running server at its next restart. Console says when a server is out
+of step and offers to restart it.
+
+## Contributing
+
+Switch is being built in the open, with the people who use it. Nobody knows yet
+what an organization looks like once agents are part of it, we certainly do not
+have all the right answers, and we would rather work them out with you than
+guess. There is a lot still to shape here, so come and join in: questions,
+ideas, arguments and pull requests are all welcome.
+
+[CONTRIBUTING.md](CONTRIBUTING.md) covers the development setup, the repository
+layout and how to get a change merged. Participation is governed by our
+[Code of Conduct](CODE_OF_CONDUCT.md), and security vulnerabilities go through
+[SECURITY.md](SECURITY.md) rather than a public issue.
+
