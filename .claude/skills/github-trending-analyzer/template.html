@@ -427,14 +427,14 @@ const SK = REPO + ".claude/skills/github-trending-analyzer/";
 function how(d) {
   const zh = lang !== "en", w = d.weights, cand = d.projects.length + d.excluded.length;
   const L = zh ? {
-    tag: "AI 帮我每天读完 GitHub 热榜和 AI 新闻。", sub: "这页全部由我写的 Claude Code 技能自动生成：抓数据、筛选、读 README、打分、写双语分析、发布，我一行都不用动。", go: "获取这个技能 →",
+    tag: "AI 帮我每天读完 GitHub 热榜和 AI 新闻。", sub: "这页全部由我写的 AI 技能自动生成，Claude Code 和 Codex 都能用：抓数据、筛选、读 README、打分、写双语分析、发布，我一行都不用动。", go: "获取这个技能 →",
     r: [["每天自己跑", "凌晨抓数据，早上九点 Claude 分析并发布。GitHub 的定时任务常常延迟几个小时，所以两步之间留了足够的空档。", "定时任务配置 →"],
         ["砍掉噪音", `今日新增不足 <b>${d.min_today || 50}</b> 星的不看；一年没提交、已归档的砍掉；合集、教程、翻译、刷星项目砍掉。剩下的按今日新增最多保留 <b>50</b> 个。`, "抓取脚本 →"],
         ["读完 README 再打分", "每个项目读 README 前 ~150 行，四项各打 1–10 分，只用 README 里写的事实，不编。", "技能说明 →"],
         ["AI 新闻去重排序", `拉取 18 个信源最近 <b>48 小时</b>的资讯，同一件事合并成一个事件，按事件类型加权打 0–100 分，只留 ≥ <b>60</b> 分的，最多 <b>20</b> 个。`, "信源列表 →"]],
     v: { fetch: "抓热榜、README、新闻", ana: "Claude 筛选、打分、发布", scan: "扫描", cand: "≥ 50 星", kept: "入选", dims: ["受欢迎", "活跃度", "易用性", "传播性"], ev: "一个事件", src: "家来源", tz: "迪拜时间" }
   } : {
-    tag: "AI reads GitHub Trending and the AI news for me, every day.", sub: "My Claude Code skill builds this whole page by itself: fetch, filter, read READMEs, score, write notes in two languages, publish. I don't touch a line.", go: "Get the skill →",
+    tag: "AI reads GitHub Trending and the AI news for me, every day.", sub: "My AI skill builds this whole page by itself, and it runs in both Claude Code and Codex: fetch, filter, read READMEs, score, write notes in two languages, publish. I don't touch a line.", go: "Get the skill →",
     r: [["Runs itself daily", "Data is fetched after midnight and Claude analyses and publishes at 9 am. GitHub often runs scheduled jobs hours late, so there's a wide gap between the two.", "Schedule config →"],
         ["Cuts the noise", `Anything under <b>${d.min_today || 50}</b> stars today is skipped. Repos with no push in a year, archived repos, collections, tutorials, translations and star-farmed shells are cut. At most <b>50</b> stay, ranked by stars today.`, "Fetch script →"],
         ["Reads the README, then scores", "Claude reads ~150 lines of each README and scores four axes 1–10, using only facts the README states.", "Skill spec →"],
