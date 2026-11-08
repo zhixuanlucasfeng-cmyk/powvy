@@ -1,5 +1,5 @@
 {
- "date": "2026-11-07",
+ "date": "2026-11-08",
  "weights": {
   "popularity": 0.3,
   "maintenance": 0.25,
@@ -7,15 +7,138 @@
   "virality": 0.2
  },
  "min_today": 50,
- "total_fetched": 288,
- "candidates": 84,
+ "total_fetched": 241,
+ "candidates": 100,
  "projects": [
+  {
+   "name": "garrytan/gstack",
+   "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+   "language": "TypeScript",
+   "stars": 140660,
+   "stars_today": 292,
+   "url": "https://github.com/garrytan/gstack",
+   "boards": [
+    "typescript"
+   ],
+   "pushed_at": "2026-11-07T23:36:07Z",
+   "created_at": "2026-03-11T21:22:45Z",
+   "topics": [],
+   "license": "MIT",
+   "forks": 20764,
+   "open_issues": 70,
+   "archived": false,
+   "homepage": "",
+   "scores": {
+    "popularity": 9,
+    "maintenance": 10,
+    "usability": 8,
+    "virality": 9
+   },
+   "cats": [
+    "claude",
+    "coding"
+   ],
+   "stack": "TypeScript + Markdown 命令",
+   "type": "Garry Tan 的 Claude Code 虚拟工程团队",
+   "usage": "按 README 快速开始安装，然后使用斜杠命令",
+   "highlights": [
+    "把 Claude Code 变成含 CEO、工程经理、设计、评审、QA、安全、发布的虚拟团队",
+    "全是 Markdown 斜杠命令，免费，MIT",
+    "适合创始人、Claude Code 新手与技术负责人"
+   ],
+   "cautions": [
+    "带有作者个人风格的流程，需按团队习惯调整",
+    "效果与效率数字来自作者自述"
+   ],
+   "en": {
+    "stack": "TypeScript + Markdown commands",
+    "type": "Garry Tan's virtual engineering team for Claude Code",
+    "usage": "Follow the README quick start, then use the slash commands",
+    "highlights": [
+     "Turns Claude Code into a virtual team: CEO, eng manager, designer, reviewer, QA, security, release engineer",
+     "All Markdown slash commands, free, MIT",
+     "Aimed at founders, first-time Claude Code users and tech leads"
+    ],
+    "cautions": [
+     "Opinionated workflow of one author; adapt to your team",
+     "Productivity claims are the author’s own"
+    ]
+   },
+   "overall": 9.0
+  },
+  {
+   "name": "JuliusBrussee/caveman",
+   "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+   "language": "Go",
+   "stars": 118171,
+   "stars_today": 214,
+   "url": "https://github.com/JuliusBrussee/caveman",
+   "boards": [
+    "go"
+   ],
+   "pushed_at": "2026-11-07T03:27:47Z",
+   "created_at": "2026-04-04T10:03:00Z",
+   "topics": [
+    "ai",
+    "anthropic",
+    "caveman",
+    "claude",
+    "claude-code",
+    "llm",
+    "meme",
+    "prompt-engineering",
+    "skill",
+    "tokens"
+   ],
+   "license": "Apache-2.0",
+   "forks": 6871,
+   "open_issues": 67,
+   "archived": false,
+   "homepage": "https://docs.caveman.so/caveman",
+   "scores": {
+    "popularity": 9,
+    "maintenance": 10,
+    "usability": 8,
+    "virality": 9
+   },
+   "cats": [
+    "claude",
+    "agent"
+   ],
+   "stack": "Go 技能 + 代理",
+   "type": "让智能体少说少读以省 token 的技能",
+   "usage": "按 README 选择你的智能体并安装技能/代理",
+   "highlights": [
+    "README 称整段会话输入 token 减少 33.2%",
+    "同样的修复，63 token 缩到 20 token",
+    "代码保持准确，只压缩说明文字"
+   ],
+   "cautions": [
+    "数据为作者自测/中期结果，需自行验证",
+    "输出风格偏“原始人”，不一定适合所有团队"
+   ],
+   "en": {
+    "stack": "Go skill + proxy",
+    "type": "Skill that makes agents say and read less to save tokens",
+    "usage": "Pick your agent in the README and install the skill/proxy",
+    "highlights": [
+     "README claims 33.2% fewer input tokens across whole sessions",
+     "Same fix in 20 tokens instead of 63",
+     "Code stays exact; only the prose is compressed"
+    ],
+    "cautions": [
+     "Numbers are the author’s own and interim; verify yourself",
+     "The terse style may not suit every team"
+    ]
+   },
+   "overall": 9.0
+  },
   {
    "name": "mattpocock/skills",
    "description": "Skills for Real Engineers. Straight from my .agents directory.",
    "language": "Shell",
-   "stars": 316692,
-   "stars_today": 2070,
+   "stars": 317671,
+   "stars_today": 1111,
    "url": "https://github.com/mattpocock/skills",
    "boards": [
     "all",
@@ -25,8 +148,8 @@
    "created_at": "2026-02-03T11:15:53Z",
    "topics": [],
    "license": "MIT",
-   "forks": 26492,
-   "open_issues": 217,
+   "forks": 26575,
+   "open_issues": 219,
    "archived": false,
    "homepage": "https://aihero.dev/skills",
    "scores": {
@@ -68,93 +191,16 @@
    "overall": 8.8
   },
   {
-   "name": "D4Vinci/Scrapling",
-   "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
-   "language": "Python",
-   "stars": 98832,
-   "stars_today": 1324,
-   "url": "https://github.com/D4Vinci/Scrapling",
-   "boards": [
-    "python"
-   ],
-   "pushed_at": "2026-11-05T18:01:47Z",
-   "created_at": "2024-10-13T20:29:53Z",
-   "topics": [
-    "ai",
-    "ai-scraping",
-    "automation",
-    "crawler",
-    "crawling",
-    "crawling-python",
-    "data",
-    "data-extraction",
-    "mcp",
-    "mcp-server",
-    "playwright",
-    "python",
-    "scraping",
-    "selectors",
-    "stealth",
-    "web-scraper",
-    "web-scraping",
-    "web-scraping-python",
-    "webscraping",
-    "xpath"
-   ],
-   "license": "BSD-3-Clause",
-   "forks": 10351,
-   "open_issues": 15,
-   "archived": false,
-   "homepage": "https://scrapling.readthedocs.io/en/latest/",
-   "scores": {
-    "popularity": 9,
-    "maintenance": 9,
-    "usability": 9,
-    "virality": 8
-   },
-   "cats": [
-    "data",
-    "agent"
-   ],
-   "stack": "Python",
-   "type": "网页抓取框架",
-   "usage": "按官方文档 `pip install` 后使用，可从单次请求扩展到完整爬虫；内含 MCP 服务器",
-   "highlights": [
-    "覆盖从单个请求到完整爬取的各种场景",
-    "README 带 MCP 声明，可接入 AI Agent",
-    "文档完善，提供多语言 README"
-   ],
-   "cautions": [
-    "抓取需遵守目标站点条款与法律",
-    "具体能力以官方文档为准"
-   ],
-   "en": {
-    "stack": "Python",
-    "type": "Web scraping framework",
-    "usage": "`pip install` per the docs; scales from a single request to a full crawl; includes an MCP server",
-    "highlights": [
-     "Handles everything from one request to a full crawl",
-     "README declares an MCP server so AI agents can use it",
-     "Full docs and multilingual READMEs"
-    ],
-    "cautions": [
-     "Scraping must respect site terms and the law",
-     "See the docs for exact capabilities"
-    ]
-   },
-   "overall": 8.8
-  },
-  {
    "name": "stablyai/orca",
    "description": "Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime.",
    "language": "TypeScript",
-   "stars": 117837,
-   "stars_today": 1155,
+   "stars": 118572,
+   "stars_today": 917,
    "url": "https://github.com/stablyai/orca",
    "boards": [
     "typescript"
    ],
-   "pushed_at": "2026-11-07T00:07:11Z",
+   "pushed_at": "2026-11-07T23:39:24Z",
    "created_at": "2026-03-17T03:28:57Z",
    "topics": [
     "agent-ide",
@@ -179,8 +225,8 @@
     "yc-backed"
    ],
    "license": "MIT",
-   "forks": 7469,
-   "open_issues": 8104,
+   "forks": 7528,
+   "open_issues": 8161,
    "archived": false,
    "homepage": "https://orca.dev",
    "scores": {
@@ -222,17 +268,76 @@
    "overall": 8.8
   },
   {
+   "name": "anthropics/skills",
+   "description": "Public repository for Agent Skills",
+   "language": "Python",
+   "stars": 188759,
+   "stars_today": 386,
+   "url": "https://github.com/anthropics/skills",
+   "boards": [
+    "all",
+    "python"
+   ],
+   "pushed_at": "2026-11-06T22:32:32Z",
+   "created_at": "2025-09-22T15:53:31Z",
+   "topics": [
+    "agent-skills"
+   ],
+   "license": null,
+   "forks": 22249,
+   "open_issues": 1492,
+   "archived": false,
+   "homepage": "",
+   "scores": {
+    "popularity": 9,
+    "maintenance": 9,
+    "usability": 9,
+    "virality": 8
+   },
+   "cats": [
+    "claude",
+    "agent"
+   ],
+   "stack": "Python + Markdown 技能",
+   "type": "Anthropic 官方 Agent Skills 示例库",
+   "usage": "按 README 将技能文件夹接入 Claude（Claude Code、Claude.ai 或 API）",
+   "highlights": [
+    "每个技能是含 SKILL.md 的独立文件夹，涵盖创意、技术与企业工作流",
+    "官方示例，可作为编写自己技能的参考",
+    "README 注明为 Anthropic 对技能的实现"
+   ],
+   "cautions": [
+    "示例仅作展示，生产使用前需自行测试",
+    "部分技能有各自的许可条款"
+   ],
+   "en": {
+    "stack": "Python + Markdown skills",
+    "type": "Anthropic's official Agent Skills examples",
+    "usage": "Plug the skill folders into Claude (Claude Code, Claude.ai or API) per the README",
+    "highlights": [
+     "Each skill is a folder with a SKILL.md, spanning creative, technical and enterprise workflows",
+     "Official examples to learn from when writing your own skills",
+     "README states it is Anthropic’s implementation of skills"
+    ],
+    "cautions": [
+     "Examples are demonstrations; test before production use",
+     "Some skills carry their own license terms"
+    ]
+   },
+   "overall": 8.8
+  },
+  {
    "name": "astral-sh/ruff",
    "description": "An extremely fast Python linter and code formatter, written in Rust.",
    "language": "Rust",
-   "stars": 50687,
-   "stars_today": 169,
+   "stars": 50968,
+   "stars_today": 350,
    "url": "https://github.com/astral-sh/ruff",
    "boards": [
     "all",
     "rust"
    ],
-   "pushed_at": "2026-11-07T00:07:06Z",
+   "pushed_at": "2026-11-07T20:47:39Z",
    "created_at": "2022-08-09T17:17:44Z",
    "topics": [
     "linter",
@@ -248,8 +353,8 @@
     "styleguide"
    ],
    "license": "MIT",
-   "forks": 2611,
-   "open_issues": 2254,
+   "forks": 2628,
+   "open_issues": 2283,
    "archived": false,
    "homepage": "https://docs.astral.sh/ruff",
    "scores": {
@@ -288,16 +393,129 @@
    "overall": 8.8
   },
   {
+   "name": "msitarzewski/agency-agents",
+   "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+   "language": "Shell",
+   "stars": 167119,
+   "stars_today": 205,
+   "url": "https://github.com/msitarzewski/agency-agents",
+   "boards": [
+    "shell"
+   ],
+   "pushed_at": "2026-11-07T17:31:08Z",
+   "created_at": "2025-10-13T12:12:29Z",
+   "topics": [],
+   "license": "MIT",
+   "forks": 27090,
+   "open_issues": 238,
+   "archived": false,
+   "homepage": "",
+   "scores": {
+    "popularity": 9,
+    "maintenance": 10,
+    "usability": 8,
+    "virality": 8
+   },
+   "cats": [
+    "agent",
+    "claude"
+   ],
+   "stack": "Shell + Markdown 智能体",
+   "type": "一整个 AI 代理机构：各领域专家智能体合集",
+   "usage": "克隆仓库或用配套应用一键安装到 Claude Code、Cursor、Codex、Gemini 等",
+   "highlights": [
+    "每个智能体都有专长、人格、流程与交付物",
+    "配套桌面应用（macOS/Linux/Windows）可一键安装",
+    "覆盖前端到社区运营等"
+   ],
+   "cautions": [
+    "本质是提示词集合，质量因角色而异",
+    "需自行评估是否适合工作流"
+   ],
+   "en": {
+    "stack": "Shell + Markdown agents",
+    "type": "A full AI agency: a roster of specialist agents",
+    "usage": "Clone the repo or use the companion app to install into Claude Code, Cursor, Codex, Gemini and more",
+    "highlights": [
+     "Each agent has a specialty, personality, process and deliverables",
+     "Companion desktop app (macOS/Linux/Windows) installs with a click",
+     "Spans frontend to community management"
+    ],
+    "cautions": [
+     "Essentially a prompt collection; quality varies by role",
+     "Check fit with your workflow yourself"
+    ]
+   },
+   "overall": 8.8
+  },
+  {
+   "name": "anthropics/claude-code",
+   "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+   "language": "TypeScript",
+   "stars": 154911,
+   "stars_today": 122,
+   "url": "https://github.com/anthropics/claude-code",
+   "boards": [
+    "typescript"
+   ],
+   "pushed_at": "2026-11-06T17:04:01Z",
+   "created_at": "2025-02-22T17:41:21Z",
+   "topics": [],
+   "license": null,
+   "forks": 25600,
+   "open_issues": 16787,
+   "archived": false,
+   "homepage": "https://code.claude.com/docs/en/overview",
+   "scores": {
+    "popularity": 8,
+    "maintenance": 10,
+    "usability": 9,
+    "virality": 8
+   },
+   "cats": [
+    "claude",
+    "coding"
+   ],
+   "stack": "TypeScript 终端工具",
+   "type": "Anthropic 的终端智能体式编码工具",
+   "usage": "`curl -fsSL https://claude.ai/install.sh | bash` 或 Homebrew、Windows 安装脚本",
+   "highlights": [
+    "在终端、IDE 或 GitHub 中通过自然语言写代码、解释代码、处理 git",
+    "README 注明 npm 安装已弃用",
+    "官方维护"
+   ],
+   "cautions": [
+    "需要 Claude 账号或相应 API 访问",
+    "今日新增在榜单中偏低，属常青项目"
+   ],
+   "en": {
+    "stack": "TypeScript terminal tool",
+    "type": "Anthropic's agentic coding tool for the terminal",
+    "usage": "`curl -fsSL https://claude.ai/install.sh | bash`, or Homebrew / the Windows installer",
+    "highlights": [
+     "Write, explain code and handle git from the terminal, IDE or GitHub via natural language",
+     "README notes npm install is deprecated",
+     "Officially maintained"
+    ],
+    "cautions": [
+     "Needs a Claude account or API access",
+     "Modest stars today; a perennial project"
+    ]
+   },
+   "overall": 8.8
+  },
+  {
    "name": "sherlock-project/sherlock",
    "description": "Hunt down social media accounts by username across social networks",
    "language": "Python",
-   "stars": 98396,
-   "stars_today": 1761,
+   "stars": 100393,
+   "stars_today": 1819,
    "url": "https://github.com/sherlock-project/sherlock",
    "boards": [
+    "all",
     "python"
    ],
-   "pushed_at": "2026-11-06T05:15:07Z",
+   "pushed_at": "2026-11-07T05:13:07Z",
    "created_at": "2018-12-24T14:30:48Z",
    "topics": [
     "cli",
@@ -318,8 +536,8 @@
     "tools"
    ],
    "license": "MIT",
-   "forks": 11685,
-   "open_issues": 362,
+   "forks": 11862,
+   "open_issues": 363,
    "archived": false,
    "homepage": "https://sherlockproject.xyz",
    "scores": {
@@ -361,17 +579,86 @@
    "overall": 8.7
   },
   {
-   "name": "microsoft/vscode",
-   "description": "Visual Studio Code",
+   "name": "milind-soni/OpenMausBot",
+   "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
    "language": "TypeScript",
-   "stars": 195022,
-   "stars_today": 301,
-   "url": "https://github.com/microsoft/vscode",
+   "stars": 16937,
+   "stars_today": 1986,
+   "url": "https://github.com/milind-soni/OpenMausBot",
    "boards": [
     "all",
     "typescript"
    ],
-   "pushed_at": "2026-11-07T00:07:28Z",
+   "pushed_at": "2026-11-07T23:32:52Z",
+   "created_at": "2026-08-11T18:58:55Z",
+   "topics": [
+    "ai-agents",
+    "claude-code",
+    "codex",
+    "computer-use",
+    "docker",
+    "electron",
+    "expo",
+    "grok",
+    "grok-bot",
+    "grok-bot-alternative",
+    "self-hosted",
+    "typescript"
+   ],
+   "license": "Apache-2.0",
+   "forks": 2400,
+   "open_issues": 813,
+   "archived": false,
+   "homepage": "https://www.openmausbot.com/",
+   "scores": {
+    "popularity": 9,
+    "maintenance": 10,
+    "usability": 7,
+    "virality": 8
+   },
+   "cats": [
+    "agent",
+    "app"
+   ],
+   "stack": "TypeScript 桌面应用",
+   "type": "开源 Grok Bot 替代：聊天里的 AI 机器人团队",
+   "usage": "下载 macOS/Windows/Ubuntu 安装包；底层使用本机的 Claude 或 Codex",
+   "highlights": [
+    "每个机器人都是真正的智能体（本地运行 Claude 或 Codex），有独立人格、模型和云端电脑",
+    "自带智能体、本地优先，可连接应用并需要时审批",
+    "README 声明与 xAI、Meta、OpenAI、Manus 无关联，也无代币"
+   ],
+   "cautions": [
+    "需要自备 Claude/Codex 等账号",
+    "依赖云端电脑与第三方服务，需自行评估隐私"
+   ],
+   "en": {
+    "stack": "TypeScript desktop app",
+    "type": "Open-source Grok Bot alternative: a team of AI bots in a chat app",
+    "usage": "Install the macOS/Windows/Ubuntu build; Claude or Codex runs locally underneath",
+    "highlights": [
+     "Each bot is a real agent (Claude or Codex running locally) with its own personality, model and cloud computer",
+     "Bring-your-own-agent and local-first, with connected apps and approval for key actions",
+     "README states no affiliation with xAI, Meta, OpenAI or Manus and no crypto token"
+    ],
+    "cautions": [
+     "You need your own Claude/Codex access",
+     "Relies on cloud computers and third-party services; assess privacy yourself"
+    ]
+   },
+   "overall": 8.5
+  },
+  {
+   "name": "microsoft/vscode",
+   "description": "Visual Studio Code",
+   "language": "TypeScript",
+   "stars": 195140,
+   "stars_today": 432,
+   "url": "https://github.com/microsoft/vscode",
+   "boards": [
+    "typescript"
+   ],
+   "pushed_at": "2026-11-07T23:10:54Z",
    "created_at": "2015-09-03T20:23:38Z",
    "topics": [
     "editor",
@@ -381,8 +668,8 @@
     "visual-studio-code"
    ],
    "license": "MIT",
-   "forks": 44425,
-   "open_issues": 21834,
+   "forks": 44437,
+   "open_issues": 21795,
    "archived": false,
    "homepage": "https://code.visualstudio.com",
    "scores": {
@@ -424,76 +711,11 @@
    "overall": 8.4
   },
   {
-   "name": "floci-io/floci",
-   "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
-   "language": "Java",
-   "stars": 30876,
-   "stars_today": 738,
-   "url": "https://github.com/floci-io/floci",
-   "boards": [
-    "java"
-   ],
-   "pushed_at": "2026-11-07T00:05:40Z",
-   "created_at": "2026-02-18T02:28:29Z",
-   "topics": [
-    "aws",
-    "aws-emulation",
-    "devops",
-    "docker",
-    "ec2",
-    "ecs",
-    "localstack",
-    "s3",
-    "sqs",
-    "testcontainers"
-   ],
-   "license": "MIT",
-   "forks": 3365,
-   "open_issues": 201,
-   "archived": false,
-   "homepage": "https://floci.io/floci/",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 10,
-    "usability": 8,
-    "virality": 7
-   },
-   "cats": [
-    "infra",
-    "coding"
-   ],
-   "stack": "Java（MIT）",
-   "type": "本地 AWS 模拟器",
-   "usage": "`docker compose up`，将 AWS SDK/CLI/Terraform 指向 http://localhost:4566",
-   "highlights": [
-    "无需账号、token 或功能限制",
-    "声称可替换 LocalStack，换镜像即可",
-    "适合开发、测试和 CI"
-   ],
-   "cautions": [
-    "服务覆盖度需对照文档确认"
-   ],
-   "en": {
-    "stack": "Java (MIT)",
-    "type": "Local AWS emulator",
-    "usage": "`docker compose up`, then point AWS SDK/CLI/Terraform at http://localhost:4566",
-    "highlights": [
-     "No account, token or feature gates",
-     "Positioned as a drop-in LocalStack replacement",
-     "For development, testing and CI"
-    ],
-    "cautions": [
-     "Check the docs for service coverage"
-    ]
-   },
-   "overall": 8.3
-  },
-  {
    "name": "obra/superpowers",
    "description": "An agentic skills framework & software development methodology that works.",
    "language": "Shell",
-   "stars": 313600,
-   "stars_today": 629,
+   "stars": 314104,
+   "stars_today": 553,
    "url": "https://github.com/obra/superpowers",
    "boards": [
     "shell"
@@ -511,8 +733,8 @@
     "superpowers"
    ],
    "license": "MIT",
-   "forks": 27895,
-   "open_issues": 340,
+   "forks": 27944,
+   "open_issues": 342,
    "archived": false,
    "homepage": "",
    "scores": {
@@ -555,30 +777,34 @@
    "overall": 8.3
   },
   {
-   "name": "max-sixty/worktrunk",
-   "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
-   "language": "Rust",
-   "stars": 11800,
-   "stars_today": 422,
-   "url": "https://github.com/max-sixty/worktrunk",
+   "name": "floci-io/floci",
+   "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+   "language": "Java",
+   "stars": 31011,
+   "stars_today": 254,
+   "url": "https://github.com/floci-io/floci",
    "boards": [
-    "rust"
+    "java"
    ],
-   "pushed_at": "2026-11-06T17:25:04Z",
-   "created_at": "2025-10-17T22:13:14Z",
+   "pushed_at": "2026-11-07T14:04:34Z",
+   "created_at": "2026-02-18T02:28:29Z",
    "topics": [
-    "agents",
-    "claude-code",
-    "codex",
-    "developer-tools",
-    "git",
-    "worktrees"
+    "aws",
+    "aws-emulation",
+    "devops",
+    "docker",
+    "ec2",
+    "ecs",
+    "localstack",
+    "s3",
+    "sqs",
+    "testcontainers"
    ],
-   "license": "NOASSERTION",
-   "forks": 453,
-   "open_issues": 52,
+   "license": "MIT",
+   "forks": 3381,
+   "open_issues": 214,
    "archived": false,
-   "homepage": "https://worktrunk.dev",
+   "homepage": "https://floci.io/floci/",
    "scores": {
     "popularity": 8,
     "maintenance": 10,
@@ -586,90 +812,91 @@
     "virality": 7
    },
    "cats": [
-    "coding",
-    "agent"
+    "infra",
+    "coding"
    ],
-   "stack": "Rust（NOASSERTION）",
-   "type": "Git worktree 管理 CLI",
-   "usage": "安装 CLI 后用命令创建和切换 worktree，配合多个 AI 智能体并行工作",
+   "stack": "Java（MIT）",
+   "type": "本地 AWS 模拟器",
+   "usage": "`docker compose up`，将 AWS SDK/CLI/Terraform 指向 http://localhost:4566",
    "highlights": [
-    "为并行 AI 智能体工作流设计",
-    "文档站与 CI、覆盖率齐全",
-    "作者称已成为最流行的 git worktree 管理器"
+    "无需账号、token 或功能限制",
+    "声称可替换 LocalStack，换镜像即可",
+    "适合开发、测试和 CI"
    ],
    "cautions": [
-    "许可证显示为 NOASSERTION，使用前确认条款"
+    "服务覆盖度需对照文档确认"
    ],
    "en": {
-    "stack": "Rust (NOASSERTION)",
-    "type": "CLI for Git worktree management",
-    "usage": "Install the CLI and create/switch worktrees so several AI agents work in parallel",
+    "stack": "Java (MIT)",
+    "type": "Local AWS emulator",
+    "usage": "`docker compose up`, then point AWS SDK/CLI/Terraform at http://localhost:4566",
     "highlights": [
-     "Built for parallel AI-agent workflows",
-     "Docs site, CI and coverage in place",
-     "Author calls it the most popular git worktree manager"
+     "No account, token or feature gates",
+     "Positioned as a drop-in LocalStack replacement",
+     "For development, testing and CI"
     ],
     "cautions": [
-     "License shows NOASSERTION; check terms before use"
+     "Check the docs for service coverage"
     ]
    },
    "overall": 8.3
   },
   {
-   "name": "vitejs/vite",
-   "description": "Next generation frontend tooling. It's fast!",
-   "language": "TypeScript",
-   "stars": 83844,
-   "stars_today": 160,
-   "url": "https://github.com/vitejs/vite",
+   "name": "localsend/localsend",
+   "description": "An open-source cross-platform alternative to AirDrop",
+   "language": "Dart",
+   "stars": 97749,
+   "stars_today": 198,
+   "url": "https://github.com/localsend/localsend",
    "boards": [
-    "typescript"
+    "dart"
    ],
-   "pushed_at": "2026-11-06T11:40:02Z",
-   "created_at": "2020-04-21T05:03:57Z",
+   "pushed_at": "2026-11-07T20:51:43Z",
+   "created_at": "2022-12-16T00:46:07Z",
    "topics": [
-    "build-tool",
-    "dev-server",
-    "frontend",
-    "hmr",
-    "vite"
+    "dart",
+    "file-sharing",
+    "flutter",
+    "flutter-apps"
    ],
-   "license": "MIT",
-   "forks": 9235,
-   "open_issues": 837,
+   "license": "Apache-2.0",
+   "forks": 5565,
+   "open_issues": 1035,
    "archived": false,
-   "homepage": "http://vite.dev",
+   "homepage": "https://localsend.org",
    "scores": {
-    "popularity": 7,
-    "maintenance": 10,
-    "usability": 10,
-    "virality": 6
+    "popularity": 8,
+    "maintenance": 9,
+    "usability": 9,
+    "virality": 7
    },
    "cats": [
-    "coding"
+    "app"
    ],
-   "stack": "TypeScript",
-   "type": "前端构建工具",
-   "usage": "`npm create vite@latest`",
+   "stack": "Flutter 跨平台",
+   "type": "局域网文件与消息分享（AirDrop 开源替代）",
+   "usage": "从官网或包管理器安装，同一局域网内设备互传",
    "highlights": [
-    "即时启动的开发服务器与快速热更新",
-    "生产构建使用 Rolldown 打包",
-    "通用插件接口与完整类型 API"
+    "无需联网，在附近设备间安全分享文件与消息",
+    "跨平台、开源免费",
+    "有翻译社区与多渠道打包"
    ],
    "cautions": [
-    "成熟项目，热度主要来自日常关注"
+    "需设备处于同一局域网",
+    "防火墙可能影响设备发现"
    ],
    "en": {
-    "stack": "TypeScript",
-    "type": "Frontend build tool",
-    "usage": "`npm create vite@latest`",
+    "stack": "Flutter cross-platform",
+    "type": "Share files and messages over the local network (open-source AirDrop alternative)",
+    "usage": "Install from the site or a package manager; transfer between devices on one LAN",
     "highlights": [
-     "Instant dev-server start and fast HMR",
-     "Production builds bundled with Rolldown",
-     "Universal plugin interface and fully typed APIs"
+     "Securely share files and messages with nearby devices, no internet needed",
+     "Cross-platform, free and open source",
+     "Community translations and wide packaging"
     ],
     "cautions": [
-     "Mature project; stars reflect general attention"
+     "Devices must share a LAN",
+     "Firewalls can break device discovery"
     ]
    },
    "overall": 8.3
@@ -678,10 +905,11 @@
    "name": "tailwindlabs/tailwindcss",
    "description": "A utility-first CSS framework for rapid UI development.",
    "language": "TypeScript",
-   "stars": 98165,
-   "stars_today": 152,
+   "stars": 98451,
+   "stars_today": 181,
    "url": "https://github.com/tailwindlabs/tailwindcss",
    "boards": [
+    "all",
     "typescript"
    ],
    "pushed_at": "2026-11-06T14:50:08Z",
@@ -696,8 +924,8 @@
     "utility-classes"
    ],
    "license": "MIT",
-   "forks": 7089,
-   "open_issues": 115,
+   "forks": 7106,
+   "open_issues": 113,
    "archived": false,
    "homepage": "https://tailwindcss.com/",
    "scores": {
@@ -737,75 +965,156 @@
    "overall": 8.3
   },
   {
-   "name": "sveltejs/svelte",
-   "description": "web development for the rest of us",
-   "language": "JavaScript",
-   "stars": 88657,
-   "stars_today": 152,
-   "url": "https://github.com/sveltejs/svelte",
+   "name": "max-sixty/worktrunk",
+   "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+   "language": "Rust",
+   "stars": 11946,
+   "stars_today": 147,
+   "url": "https://github.com/max-sixty/worktrunk",
    "boards": [
-    "javascript"
+    "rust"
    ],
-   "pushed_at": "2026-11-06T22:50:32Z",
-   "created_at": "2016-11-20T18:13:05Z",
+   "pushed_at": "2026-11-07T08:25:14Z",
+   "created_at": "2025-10-17T22:13:14Z",
    "topics": [
-    "compiler",
-    "template",
-    "ui"
+    "agents",
+    "claude-code",
+    "codex",
+    "developer-tools",
+    "git",
+    "worktrees"
    ],
-   "license": "MIT",
-   "forks": 6794,
-   "open_issues": 1272,
+   "license": "NOASSERTION",
+   "forks": 463,
+   "open_issues": 49,
    "archived": false,
-   "homepage": "https://svelte.dev",
+   "homepage": "https://worktrunk.dev",
    "scores": {
-    "popularity": 7,
+    "popularity": 8,
     "maintenance": 10,
-    "usability": 10,
-    "virality": 6
+    "usability": 8,
+    "virality": 7
    },
    "cats": [
-    "app",
-    "coding"
+    "coding",
+    "agent"
    ],
-   "stack": "JavaScript",
-   "type": "前端编译型框架",
-   "usage": "按 svelte.dev 文档创建项目",
+   "stack": "Rust（NOASSERTION）",
+   "type": "Git worktree 管理 CLI",
+   "usage": "安装 CLI 后用命令创建和切换 worktree，配合多个 AI 智能体并行工作",
    "highlights": [
-    "把声明式组件编译为精确更新 DOM 的 JavaScript",
-    "MIT 许可，由志愿者维护并公开路线图",
-    "有 Discord 社区"
+    "为并行 AI 智能体工作流设计",
+    "文档站与 CI、覆盖率齐全",
+    "作者称已成为最流行的 git worktree 管理器"
    ],
    "cautions": [
-    "成熟项目，热度主要来自日常关注"
+    "许可证显示为 NOASSERTION，使用前确认条款"
    ],
    "en": {
-    "stack": "JavaScript",
-    "type": "Compiler-based frontend framework",
-    "usage": "Create a project per svelte.dev docs",
+    "stack": "Rust (NOASSERTION)",
+    "type": "CLI for Git worktree management",
+    "usage": "Install the CLI and create/switch worktrees so several AI agents work in parallel",
     "highlights": [
-     "Compiles declarative components into JS that surgically updates the DOM",
-     "MIT-licensed, volunteer-driven, public roadmap",
-     "Discord community"
+     "Built for parallel AI-agent workflows",
+     "Docs site, CI and coverage in place",
+     "Author calls it the most popular git worktree manager"
     ],
     "cautions": [
-     "Mature project; stars reflect general attention"
+     "License shows NOASSERTION; check terms before use"
     ]
    },
    "overall": 8.3
   },
   {
+   "name": "morluto/rea",
+   "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+   "language": "TypeScript",
+   "stars": 440951,
+   "stars_today": 3308,
+   "url": "https://github.com/morluto/rea",
+   "boards": [
+    "typescript"
+   ],
+   "pushed_at": "2026-11-07T22:49:08Z",
+   "created_at": "2026-04-14T00:51:32Z",
+   "topics": [
+    "agent-skills",
+    "ai",
+    "android",
+    "claude-code",
+    "cli",
+    "cpp",
+    "dsh-plugin",
+    "html",
+    "java",
+    "javascript",
+    "linux",
+    "mcp",
+    "nodejs",
+    "python",
+    "rea",
+    "react",
+    "rust",
+    "security",
+    "touhou",
+    "typescript"
+   ],
+   "license": "MIT",
+   "forks": 109105,
+   "open_issues": 1594,
+   "archived": false,
+   "homepage": "https://rea.tools",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 10,
+    "usability": 7,
+    "virality": 9
+   },
+   "cats": [
+    "agent",
+    "security"
+   ],
+   "stack": "TypeScript + MCP",
+   "type": "面向智能体的逆向工程 MCP",
+   "usage": "`npx rea-agents setup` 一键配置，让智能体分析二进制、Electron、.NET 和网站",
+   "highlights": [
+    "单个 MCP 覆盖原生二进制、JS/Electron、.NET 程序集与网站的逆向",
+    "分析在本地运行，可给出证据并解释功能实现",
+    "今日新增 3308 星"
+   ],
+   "cautions": [
+    "数十万星、十余万 fork 且创建仅数月，增长异常，需自行核实",
+    "逆向他人软件需注意授权与合规",
+    "只应从 README 列出的官方渠道获取"
+   ],
+   "en": {
+    "stack": "TypeScript + MCP",
+    "type": "Reverse-engineering MCP for agents",
+    "usage": "`npx rea-agents setup`, then let your agent analyze binaries, Electron apps, .NET and websites",
+    "highlights": [
+     "One MCP covers native binaries, JS/Electron, .NET assemblies and websites",
+     "Analysis runs locally and shows evidence for how a feature works",
+     "3,308 stars today"
+    ],
+    "cautions": [
+     "Hundreds of thousands of stars and 100k+ forks in a few months is an unusual curve; verify yourself",
+     "Reverse engineering third-party software needs authorization and legal care",
+     "Get it only from the official sources named in the README"
+    ]
+   },
+   "overall": 8.2
+  },
+  {
    "name": "react/react",
    "description": "The library for web and native user interfaces.",
    "language": "JavaScript",
-   "stars": 252251,
-   "stars_today": 248,
+   "stars": 252366,
+   "stars_today": 374,
    "url": "https://github.com/react/react",
    "boards": [
-    "all",
     "javascript"
    ],
-   "pushed_at": "2026-11-06T19:49:25Z",
+   "pushed_at": "2026-11-07T02:19:03Z",
    "created_at": "2013-05-24T16:15:54Z",
    "topics": [
     "declarative",
@@ -816,8 +1125,8 @@
     "ui"
    ],
    "license": "MIT",
-   "forks": 51809,
-   "open_issues": 1503,
+   "forks": 51938,
+   "open_issues": 1522,
    "archived": false,
    "homepage": "https://react.dev",
    "scores": {
@@ -856,247 +1165,80 @@
    "overall": 8.2
   },
   {
-   "name": "pandas-dev/pandas",
-   "description": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
-   "language": "Python",
-   "stars": 50502,
-   "stars_today": 194,
-   "url": "https://github.com/pandas-dev/pandas",
+   "name": "cheaper-inference/OmniRoute",
+   "description": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 900+ contributors",
+   "language": "TypeScript",
+   "stars": 85452,
+   "stars_today": 325,
+   "url": "https://github.com/cheaper-inference/OmniRoute",
    "boards": [
-    "python"
+    "typescript"
    ],
-   "pushed_at": "2026-11-06T21:58:33Z",
-   "created_at": "2010-08-24T01:37:33Z",
+   "pushed_at": "2026-11-07T22:36:08Z",
+   "created_at": "2026-02-13T12:38:31Z",
    "topics": [
-    "alignment",
-    "data-analysis",
-    "data-science",
-    "flexible",
-    "pandas",
-    "python"
+    "a2a",
+    "ai-agents",
+    "ai-gateway",
+    "anthropic",
+    "claude",
+    "claude-code",
+    "cline",
+    "codex",
+    "copilot",
+    "cursor",
+    "deepseek",
+    "free-ai",
+    "gemini",
+    "kimi",
+    "llm-gateway",
+    "mcp",
+    "openai",
+    "openai-proxy",
+    "qwen",
+    "token-saver"
    ],
-   "license": "BSD-3-Clause",
-   "forks": 20727,
-   "open_issues": 1984,
+   "license": "MIT",
+   "forks": 12918,
+   "open_issues": 525,
    "archived": false,
-   "homepage": "https://pandas.pydata.org",
+   "homepage": "https://omniroute.online",
    "scores": {
     "popularity": 8,
     "maintenance": 10,
-    "usability": 9,
-    "virality": 5
-   },
-   "cats": [
-    "data"
-   ],
-   "stack": "Python",
-   "type": "数据分析工具包",
-   "usage": "`pip install pandas`",
-   "highlights": [
-    "提供快速、灵活、表达力强的带标签数据结构",
-    "定位为 Python 实际数据分析的基础构件",
-    "由 NumFOCUS 支持"
-   ],
-   "cautions": [
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "Python",
-    "type": "Data analysis toolkit",
-    "usage": "`pip install pandas`",
-    "highlights": [
-     "Fast, flexible, expressive labeled data structures",
-     "Aims to be the high-level building block for real-world data analysis in Python",
-     "Backed by NumFOCUS"
-    ],
-    "cautions": [
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 8.2
-  },
-  {
-   "name": "nodejs/node",
-   "description": "Node.js JavaScript runtime ✨🐢🚀✨",
-   "language": "JavaScript",
-   "stars": 123388,
-   "stars_today": 192,
-   "url": "https://github.com/nodejs/node",
-   "boards": [
-    "javascript"
-   ],
-   "pushed_at": "2026-11-06T18:33:07Z",
-   "created_at": "2014-11-26T19:57:11Z",
-   "topics": [
-    "javascript",
-    "js",
-    "linux",
-    "macos",
-    "mit",
-    "node",
-    "nodejs",
-    "runtime",
-    "windows"
-   ],
-   "license": "NOASSERTION",
-   "forks": 38735,
-   "open_issues": 1319,
-   "archived": false,
-   "homepage": "https://nodejs.org",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 10,
-    "usability": 9,
-    "virality": 5
+    "usability": 7,
+    "virality": 8
    },
    "cats": [
     "infra",
-    "coding"
+    "llm"
    ],
-   "stack": "JavaScript / C++",
-   "type": "跨平台 JavaScript 运行时",
-   "usage": "从 nodejs.org 下载 LTS 或 Current 版本",
+   "stack": "TypeScript AI 网关",
+   "type": "免费 AI 网关：一个端点接入数百家提供商",
+   "usage": "部署网关并连接你自己的各家免费额度账号，用统一端点调用",
    "highlights": [
-    "开源、跨平台的 JavaScript 运行环境",
-    "采用开放治理模式，由 OpenJS 基金会支持",
-    "提供 Current、LTS 与每夜构建"
+    "单一端点聚合 375 个提供商（以 README 为准）",
+    "整理了大量免费额度条目并给出仪表盘",
+    "MIT 许可"
    ],
    "cautions": [
-    "成熟项目，热度主要来自日常关注"
+    "README 称额度为各提供商自有，非 OmniRoute 赠送",
+    "“每月 16 亿 token”为估算，需自行注册各家账号",
+    "聚合免费额度需遵守各家条款"
    ],
    "en": {
-    "stack": "JavaScript / C++",
-    "type": "Cross-platform JavaScript runtime",
-    "usage": "Download LTS or Current from nodejs.org",
+    "stack": "TypeScript AI gateway",
+    "type": "Free AI gateway: one endpoint for hundreds of providers",
+    "usage": "Deploy the gateway, connect your own free-tier accounts, call one endpoint",
     "highlights": [
-     "Open-source, cross-platform JavaScript runtime",
-     "Open governance, supported by the OpenJS Foundation",
-     "Current, LTS and nightly releases"
+     "One endpoint fronts 375 providers (per the README)",
+     "Catalogs many free-tier entries with a dashboard",
+     "MIT licensed"
     ],
     "cautions": [
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 8.2
-  },
-  {
-   "name": "golang/go",
-   "description": "The Go programming language",
-   "language": "Go",
-   "stars": 139756,
-   "stars_today": 180,
-   "url": "https://github.com/golang/go",
-   "boards": [
-    "go"
-   ],
-   "pushed_at": "2026-11-06T23:02:18Z",
-   "created_at": "2014-08-19T04:33:40Z",
-   "topics": [
-    "go",
-    "golang",
-    "language",
-    "programming-language"
-   ],
-   "license": "BSD-3-Clause",
-   "forks": 20991,
-   "open_issues": 9916,
-   "archived": false,
-   "homepage": "https://go.dev",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 10,
-    "usability": 9,
-    "virality": 5
-   },
-   "cats": [
-    "coding",
-    "infra"
-   ],
-   "stack": "Go",
-   "type": "Go 语言主仓库",
-   "usage": "从 go.dev/dl 下载二进制发行版",
-   "highlights": [
-    "用于构建简单、可靠、高效软件的开源语言",
-    "官方仓库在 go.googlesource.com，GitHub 为镜像",
-    "提供二进制发行版与源码安装"
-   ],
-   "cautions": [
-    "GitHub 仅为镜像，贡献须走官方流程",
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "Go",
-    "type": "Main Go language repository",
-    "usage": "Download a binary release from go.dev/dl",
-    "highlights": [
-     "Open-source language for simple, reliable, efficient software",
-     "Canonical repo is on go.googlesource.com; GitHub is a mirror",
-     "Binary and source installs"
-    ],
-    "cautions": [
-     "GitHub is only a mirror; contribute via the official process",
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 8.2
-  },
-  {
-   "name": "django/django",
-   "description": "The Web framework for perfectionists with deadlines.",
-   "language": "Python",
-   "stars": 91670,
-   "stars_today": 169,
-   "url": "https://github.com/django/django",
-   "boards": [
-    "python"
-   ],
-   "pushed_at": "2026-11-06T22:17:53Z",
-   "created_at": "2012-04-28T02:47:18Z",
-   "topics": [
-    "apps",
-    "django",
-    "framework",
-    "models",
-    "orm",
-    "python",
-    "templates",
-    "views",
-    "web"
-   ],
-   "license": "BSD-3-Clause",
-   "forks": 35967,
-   "open_issues": 534,
-   "archived": false,
-   "homepage": "https://www.djangoproject.com/",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 10,
-    "usability": 9,
-    "virality": 5
-   },
-   "cats": [
-    "app"
-   ],
-   "stack": "Python",
-   "type": "Python Web 框架",
-   "usage": "`pip install django`，阅读 docs/intro 教程",
-   "highlights": [
-    "鼓励快速开发与简洁务实设计的高级 Web 框架",
-    "文档完整，含入门教程、专题指南与部署指南"
-   ],
-   "cautions": [
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "Python",
-    "type": "Python web framework",
-    "usage": "`pip install django`; follow the docs/intro tutorials",
-    "highlights": [
-     "High-level web framework for rapid development and clean design",
-     "Thorough docs: tutorials, topic guides and deployment howtos"
-    ],
-    "cautions": [
-     "Mature project; stars reflect general attention"
+     "README says quotas belong to the providers, not a grant from OmniRoute",
+     "The ~1.62B tokens/month headline is an estimate and needs your own sign-ups",
+     "Stacking free tiers must respect each provider’s terms"
     ]
    },
    "overall": 8.2
@@ -1105,8 +1247,8 @@
    "name": "cloudflare/security-audit-skill",
    "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
    "language": "JavaScript",
-   "stars": 63945,
-   "stars_today": 2548,
+   "stars": 65662,
+   "stars_today": 2088,
    "url": "https://github.com/cloudflare/security-audit-skill",
    "boards": [
     "all",
@@ -1116,8 +1258,8 @@
    "created_at": "2026-06-18T14:08:44Z",
    "topics": [],
    "license": "MIT",
-   "forks": 4142,
-   "open_issues": 115,
+   "forks": 4263,
+   "open_issues": 118,
    "archived": false,
    "homepage": "",
    "scores": {
@@ -1163,14 +1305,14 @@
    "name": "zed-industries/zed",
    "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
    "language": "Rust",
-   "stars": 93608,
-   "stars_today": 306,
+   "stars": 94258,
+   "stars_today": 1119,
    "url": "https://github.com/zed-industries/zed",
    "boards": [
     "all",
     "rust"
    ],
-   "pushed_at": "2026-11-06T20:00:38Z",
+   "pushed_at": "2026-11-07T22:34:09Z",
    "created_at": "2021-02-20T03:01:06Z",
    "topics": [
     "gpui",
@@ -1179,8 +1321,8 @@
     "zed"
    ],
    "license": "NOASSERTION",
-   "forks": 11499,
-   "open_issues": 3028,
+   "forks": 11550,
+   "open_issues": 3053,
    "archived": false,
    "homepage": "https://zed.dev",
    "scores": {
@@ -1222,269 +1364,22 @@
    "overall": 8.1
   },
   {
-   "name": "lobehub/lobehub",
-   "description": "🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team already uses.They take on work by themselves and get better every week.",
-   "language": "TypeScript",
-   "stars": 84235,
-   "stars_today": 209,
-   "url": "https://github.com/lobehub/lobehub",
-   "boards": [
-    "typescript"
-   ],
-   "pushed_at": "2026-11-07T00:03:26Z",
-   "created_at": "2023-05-21T07:19:12Z",
-   "topics": [
-    "agent",
-    "agent-collaboration",
-    "agent-harness",
-    "loop-engineering",
-    "mcp",
-    "personal-assistant",
-    "proactive-agent",
-    "skills",
-    "super-agent",
-    "task-management"
-   ],
-   "license": "NOASSERTION",
-   "forks": 16103,
-   "open_issues": 1352,
-   "archived": false,
-   "homepage": "https://lobehub.com",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 9,
-    "usability": 8,
-    "virality": 7
-   },
-   "cats": [
-    "agent",
-    "app"
-   ],
-   "stack": "TypeScript",
-   "type": "多智能体协作平台",
-   "usage": "访问官方站点使用，或按文档用 Docker 自托管",
-   "highlights": [
-    "“团队中的超级智能体”：把智能体加入团队已有的聊天",
-    "智能体可自主接手工作并逐周改进",
-    "提供 Docker 发行版与中英文文档"
-   ],
-   "cautions": [
-    "README 以营销语言为主，能力需实测"
-   ],
-   "en": {
-    "stack": "TypeScript",
-    "type": "Multi-agent collaboration platform",
-    "usage": "Use the hosted site, or self-host with Docker per the docs",
-    "highlights": [
-     "“Super-agents on your team”: add agents to the chats your team already uses",
-     "Agents take on work on their own and improve weekly",
-     "Docker releases and bilingual docs"
-    ],
-    "cautions": [
-     "README is marketing-heavy; test the claims"
-    ]
-   },
-   "overall": 8.1
-  },
-  {
-   "name": "sharkdp/fd",
-   "description": "A simple, fast and user-friendly alternative to 'find'",
-   "language": "Rust",
-   "stars": 45088,
-   "stars_today": 160,
-   "url": "https://github.com/sharkdp/fd",
-   "boards": [
-    "rust"
-   ],
-   "pushed_at": "2026-11-04T09:09:30Z",
-   "created_at": "2017-05-09T21:27:10Z",
-   "topics": [
-    "cli",
-    "command-line",
-    "filesystem",
-    "hacktoberfest",
-    "regex",
-    "rust",
-    "search",
-    "terminal",
-    "tool"
-   ],
-   "license": "Apache-2.0",
-   "forks": 1299,
-   "open_issues": 211,
-   "archived": false,
-   "homepage": "",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 10,
-    "virality": 6
-   },
-   "cats": [
-    "coding"
-   ],
-   "stack": "Rust",
-   "type": "`find` 的简单快速替代",
-   "usage": "`fd PATTERN`；按 README 用包管理器安装",
-   "highlights": [
-    "语法直观：`fd PATTERN` 代替 `find -iname`",
-    "默认正则、支持 glob，并行遍历",
-    "智能大小写、彩色输出、支持并行执行命令"
-   ],
-   "cautions": [
-    "不追求支持 `find` 的全部功能"
-   ],
-   "en": {
-    "stack": "Rust",
-    "type": "Simple, fast alternative to `find`",
-    "usage": "`fd PATTERN`; install via package manager per README",
-    "highlights": [
-     "Intuitive syntax: `fd PATTERN` instead of `find -iname`",
-     "Regex by default, glob supported, parallel traversal",
-     "Smart case, colored output, parallel command execution"
-    ],
-    "cautions": [
-     "Does not aim to cover all of `find`"
-    ]
-   },
-   "overall": 8.1
-  },
-  {
-   "name": "sharkdp/bat",
-   "description": "A cat(1) clone with wings.",
-   "language": "Rust",
-   "stars": 61201,
-   "stars_today": 138,
-   "url": "https://github.com/sharkdp/bat",
-   "boards": [
-    "rust"
-   ],
-   "pushed_at": "2026-11-06T22:35:58Z",
-   "created_at": "2018-04-21T10:52:23Z",
-   "topics": [
-    "cli",
-    "command-line",
-    "git",
-    "hacktoberfest",
-    "rust",
-    "syntax-highlighting",
-    "terminal",
-    "tool"
-   ],
-   "license": "Apache-2.0",
-   "forks": 3068,
-   "open_issues": 564,
-   "archived": false,
-   "homepage": "",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 10,
-    "virality": 6
-   },
-   "cats": [
-    "coding"
-   ],
-   "stack": "Rust",
-   "type": "带语法高亮的 `cat` 替代",
-   "usage": "按 README 用包管理器安装，`bat 文件`",
-   "highlights": [
-    "支持大量语言的语法高亮",
-    "集成 Git，显示相对索引的修改",
-    "自动分页，可显示不可见字符"
-   ],
-   "cautions": [
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "Rust",
-    "type": "`cat` clone with syntax highlighting",
-    "usage": "Install via package manager per README; `bat <file>`",
-    "highlights": [
-     "Syntax highlighting for many languages",
-     "Git integration showing changes against the index",
-     "Automatic paging and non-printable character display"
-    ],
-    "cautions": [
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 8.1
-  },
-  {
-   "name": "microsoft/TypeScript",
-   "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
-   "language": "Go",
-   "stars": 111850,
-   "stars_today": 129,
-   "url": "https://github.com/microsoft/TypeScript",
-   "boards": [
-    "go"
-   ],
-   "pushed_at": "2026-11-06T23:04:23Z",
-   "created_at": "2014-06-17T15:28:39Z",
-   "topics": [
-    "javascript",
-    "language",
-    "typechecker",
-    "typescript"
-   ],
-   "license": "Apache-2.0",
-   "forks": 15397,
-   "open_issues": 5249,
-   "archived": false,
-   "homepage": "https://www.typescriptlang.org",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 10,
-    "usability": 10,
-    "virality": 5
-   },
-   "cats": [
-    "coding"
-   ],
-   "stack": "TypeScript",
-   "type": "带类型的 JavaScript 超集",
-   "usage": "`npm install -D typescript`",
-   "highlights": [
-    "为大型 JavaScript 应用提供可选类型与工具支持",
-    "编译为可读的标准 JavaScript",
-    "提供在线 Playground 与每夜构建"
-   ],
-   "cautions": [
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "TypeScript",
-    "type": "Typed superset of JavaScript",
-    "usage": "`npm install -D typescript`",
-    "highlights": [
-     "Optional types and tooling for application-scale JavaScript",
-     "Compiles to readable, standards-based JavaScript",
-     "Online playground and nightly builds"
-    ],
-    "cautions": [
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 8.1
-  },
-  {
    "name": "vercel-labs/agent-browser",
    "description": "Browser automation CLI for AI agents",
    "language": "Rust",
-   "stars": 46311,
-   "stars_today": 622,
+   "stars": 46803,
+   "stars_today": 180,
    "url": "https://github.com/vercel-labs/agent-browser",
    "boards": [
+    "all",
     "rust"
    ],
-   "pushed_at": "2026-11-06T23:49:51Z",
+   "pushed_at": "2026-11-07T21:49:34Z",
    "created_at": "2026-01-11T05:38:15Z",
    "topics": [],
    "license": "Apache-2.0",
-   "forks": 3172,
-   "open_issues": 487,
+   "forks": 3208,
+   "open_issues": 500,
    "archived": false,
    "homepage": "https://agent-browser.dev",
    "scores": {
@@ -1527,14 +1422,13 @@
    "name": "rust-lang/rust",
    "description": "Empowering everyone to build reliable and efficient software.",
    "language": "Rust",
-   "stars": 121439,
-   "stars_today": 192,
+   "stars": 121603,
+   "stars_today": 463,
    "url": "https://github.com/rust-lang/rust",
    "boards": [
-    "all",
     "rust"
    ],
-   "pushed_at": "2026-11-07T00:01:59Z",
+   "pushed_at": "2026-11-07T23:11:50Z",
    "created_at": "2010-06-16T20:39:03Z",
    "topics": [
     "compiler",
@@ -1542,8 +1436,8 @@
     "rust"
    ],
    "license": "Apache-2.0",
-   "forks": 17365,
-   "open_issues": 12615,
+   "forks": 17376,
+   "open_issues": 12596,
    "archived": false,
    "homepage": "https://www.rust-lang.org",
    "scores": {
@@ -1586,19 +1480,18 @@
    "name": "NVIDIA/auto-ontology",
    "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
    "language": "Python",
-   "stars": 8992,
-   "stars_today": 2015,
+   "stars": 9768,
+   "stars_today": 1322,
    "url": "https://github.com/NVIDIA/auto-ontology",
    "boards": [
-    "all",
     "python"
    ],
-   "pushed_at": "2026-11-06T23:03:36Z",
+   "pushed_at": "2026-11-07T21:54:29Z",
    "created_at": "2026-04-27T21:45:56Z",
    "topics": [],
    "license": "Apache-2.0",
-   "forks": 722,
-   "open_issues": 62,
+   "forks": 794,
+   "open_issues": 81,
    "archived": false,
    "homepage": "",
    "scores": {
@@ -1643,14 +1536,14 @@
    "name": "google/skills",
    "description": "Agent Skills for Google products and technologies",
    "language": "Python",
-   "stars": 22825,
-   "stars_today": 534,
+   "stars": 23377,
+   "stars_today": 449,
    "url": "https://github.com/google/skills",
    "boards": [
     "all",
     "python"
    ],
-   "pushed_at": "2026-11-06T22:01:22Z",
+   "pushed_at": "2026-11-07T14:41:39Z",
    "created_at": "2026-03-31T19:02:20Z",
    "topics": [
     "google",
@@ -1658,7 +1551,7 @@
     "skills"
    ],
    "license": "Apache-2.0",
-   "forks": 1920,
+   "forks": 1953,
    "open_issues": 26,
    "archived": false,
    "homepage": "",
@@ -1701,62 +1594,133 @@
    "overall": 7.8
   },
   {
-   "name": "ConardLi/garden-skills",
-   "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
-   "language": "JavaScript",
-   "stars": 14517,
-   "stars_today": 518,
-   "url": "https://github.com/ConardLi/garden-skills",
+   "name": "jamiepine/voicebox",
+   "description": "The open-source AI voice studio. Clone, dictate, create.",
+   "language": "Python",
+   "stars": 59993,
+   "stars_today": 318,
+   "url": "https://github.com/jamiepine/voicebox",
    "boards": [
-    "javascript"
+    "python"
    ],
-   "pushed_at": "2026-10-25T13:45:33Z",
-   "created_at": "2026-04-21T11:56:17Z",
+   "pushed_at": "2026-10-07T01:17:58Z",
+   "created_at": "2026-01-25T12:27:03Z",
    "topics": [
-    "agent",
-    "claude",
-    "gpt-image-2",
-    "rag",
-    "skills",
-    "web-design"
+    "ai",
+    "cuda",
+    "mlx",
+    "qwen3-tts",
+    "qwen3-tts-ui",
+    "voice-ai",
+    "voice-clone",
+    "whisper"
    ],
    "license": "MIT",
-   "forks": 1673,
-   "open_issues": 26,
+   "forks": 7531,
+   "open_issues": 534,
    "archived": false,
-   "homepage": "https://github.com/ConardLi/garden-skills",
+   "homepage": "https://voicebox.sh",
    "scores": {
     "popularity": 8,
-    "maintenance": 8,
+    "maintenance": 7,
+    "usability": 8,
+    "virality": 8
+   },
+   "cats": [
+    "media",
+    "llm"
+   ],
+   "stack": "Python 本地语音工作室",
+   "type": "开源 AI 语音工作室（ElevenLabs/WisprFlow 替代）",
+   "usage": "下载桌面应用，或按文档本地运行；可经 MCP 给智能体配语音",
+   "highlights": [
+    "几秒音频克隆声音，8 个 TTS 引擎、23 种语言",
+    "全局热键语音输入到任意文本框",
+    "本地优先，MIT 许可，无广告横幅"
+   ],
+   "cautions": [
+    "最近一次推送在 10 月上旬，维护节奏需观察",
+    "本地模型对硬件有要求",
+    "声音克隆需注意授权"
+   ],
+   "en": {
+    "stack": "Python local voice studio",
+    "type": "Open-source AI voice studio (ElevenLabs/WisprFlow alternative)",
+    "usage": "Download the desktop app or run locally per the docs; give agents a voice via MCP",
+    "highlights": [
+     "Clone a voice from seconds of audio; 8 TTS engines, 23 languages",
+     "Global hotkey dictation into any text field",
+     "Local-first, MIT licensed, no banners or splash screens"
+    ],
+    "cautions": [
+     "Last push was early October; watch the update cadence",
+     "Local models need decent hardware",
+     "Voice cloning needs consent"
+    ]
+   },
+   "overall": 7.8
+  },
+  {
+   "name": "Predidit/Kazumi",
+   "description": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。",
+   "language": "Dart",
+   "stars": 41499,
+   "stars_today": 216,
+   "url": "https://github.com/Predidit/Kazumi",
+   "boards": [
+    "dart"
+   ],
+   "pushed_at": "2026-11-04T11:47:25Z",
+   "created_at": "2024-05-09T01:56:22Z",
+   "topics": [
+    "android",
+    "cross-platform",
+    "danmaku",
+    "flutter",
+    "ios",
+    "linux-desktop",
+    "macos",
+    "windows"
+   ],
+   "license": "GPL-3.0",
+   "forks": 1390,
+   "open_issues": 649,
+   "archived": false,
+   "homepage": "https://kazumi.app",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 9,
     "usability": 8,
     "virality": 7
    },
    "cats": [
-    "claude",
-    "coding"
+    "app",
+    "media"
    ],
-   "stack": "JavaScript",
-   "type": "Agent Skills 精选集",
-   "usage": "把对应技能装入 Claude Code、Cursor、Codex 等",
+   "stack": "Flutter 跨平台应用",
+   "type": "基于自定义规则的番剧采集与在线观看应用",
+   "usage": "从 Releases 下载；Arch 可用 AUR；自行导入规则",
    "highlights": [
-    "面向 Claude Code、Cursor、Codex 等的生产级技能集合",
-    "包含 motion-showreel（代码渲染短视频）、web-video-presentation、web-design-engineer、gpt-image-2 等",
-    "带封面图的技能画廊"
+    "用最多五行 XPath 选择器编写规则，可导入与分享",
+    "支持弹幕、Anime4K 实时超分、DLNA 投屏、一起看",
+    "覆盖 Android、Windows、macOS、Linux、iOS、HarmonyOS 与 Web"
    ],
    "cautions": [
-    "属于技能集合，质量需逐个评估"
+    "内容来自第三方视频源，可能含广告且版权风险需自行判断",
+    "超分对 GPU 要求较高"
    ],
    "en": {
-    "stack": "JavaScript",
-    "type": "Curated Agent Skills collection",
-    "usage": "Install the needed skills into Claude Code, Cursor, Codex, etc.",
+    "stack": "Flutter cross-platform app",
+    "type": "Rule-based anime collection and streaming app",
+    "usage": "Download from Releases (AUR on Arch) and import your own rules",
     "highlights": [
-     "Production-ready skills for Claude Code, Cursor, Codex and other agents",
-     "Includes motion-showreel (code-rendered video), web-video-presentation, web-design-engineer, gpt-image-2 and more",
-     "Skill gallery with cover images"
+     "Write rules with up to five XPath selectors; import and share them",
+     "Danmaku, Anime4K real-time upscaling, DLNA casting, watch-together",
+     "Android, Windows, macOS, Linux, iOS, HarmonyOS and Web"
     ],
     "cautions": [
-     "A collection; judge each skill individually"
+     "Content comes from third-party sources: ads and copyright risk are on you",
+     "Upscaling needs a strong GPU"
     ]
    },
    "overall": 7.8
@@ -1765,18 +1729,19 @@
    "name": "meta/astryx",
    "description": "An open source design system that's fully customizable and agent ready",
    "language": "TypeScript",
-   "stars": 14048,
-   "stars_today": 198,
+   "stars": 14471,
+   "stars_today": 185,
    "url": "https://github.com/meta/astryx",
    "boards": [
+    "all",
     "typescript"
    ],
-   "pushed_at": "2026-11-07T00:07:10Z",
+   "pushed_at": "2026-11-07T23:38:39Z",
    "created_at": "2026-01-09T16:20:32Z",
    "topics": [],
    "license": "MIT",
-   "forks": 1164,
-   "open_issues": 754,
+   "forks": 1183,
+   "open_issues": 726,
    "archived": false,
    "homepage": "http://astryx.atmeta.com",
    "scores": {
@@ -1818,506 +1783,201 @@
    "overall": 7.8
   },
   {
-   "name": "InlitX/GymMane",
-   "description": "Offline gym log for Android. No account, no ads, no internet.",
-   "language": "Dart",
-   "stars": 1538,
-   "stars_today": 153,
-   "url": "https://github.com/InlitX/GymMane",
+   "name": "ConardLi/garden-skills",
+   "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+   "language": "JavaScript",
+   "stars": 14614,
+   "stars_today": 136,
+   "url": "https://github.com/ConardLi/garden-skills",
    "boards": [
-    "dart"
+    "javascript"
    ],
-   "pushed_at": "2026-11-06T20:49:58Z",
-   "created_at": "2026-08-05T12:02:49Z",
+   "pushed_at": "2026-10-25T13:45:33Z",
+   "created_at": "2026-04-21T11:56:17Z",
    "topics": [
-    "android",
-    "bodybuilding",
-    "dart",
-    "exercises",
-    "f-droid",
-    "fitness",
-    "flutter",
-    "gym",
-    "gym-app",
-    "health",
-    "privacy",
-    "workout",
-    "workout-app",
-    "workout-tracker"
+    "agent",
+    "claude",
+    "gpt-image-2",
+    "rag",
+    "skills",
+    "web-design"
    ],
-   "license": "GPL-3.0",
-   "forks": 164,
-   "open_issues": 28,
+   "license": "MIT",
+   "forks": 1685,
+   "open_issues": 26,
    "archived": false,
-   "homepage": "https://inlitx.github.io/GymMane/",
+   "homepage": "https://github.com/ConardLi/garden-skills",
    "scores": {
-    "popularity": 7,
+    "popularity": 8,
     "maintenance": 8,
-    "usability": 9,
-    "virality": 7
-   },
-   "cats": [
-    "app"
-   ],
-   "stack": "Android 应用",
-   "type": "离线健身记录 App",
-   "usage": "安装 Android 应用即可，无需账号",
-   "highlights": [
-    "免费、离线，无账号无广告",
-    "点按肌肉部位生成训练、休息计时、超级组与每侧杠铃片",
-    "提供进步曲线、预估 1RM、活动热力图、进度照片"
-   ],
-   "cautions": [
-    "仅限 Android",
-    "README 无其他平台说明"
-   ],
-   "en": {
-    "stack": "Android app",
-    "type": "Offline gym log app",
-    "usage": "Install the Android app; no account needed",
-    "highlights": [
-     "Free, offline, no account, no ads",
-     "Tap muscles on a body map to get a session; rest timer, supersets, plates per side",
-     "Strength curves, estimated 1RM, activity heatmap, progress photos"
-    ],
-    "cautions": [
-     "Android only",
-     "README mentions no other platforms"
-    ]
-   },
-   "overall": 7.8
-  },
-  {
-   "name": "denoland/deno",
-   "description": "A modern runtime for JavaScript and TypeScript.",
-   "language": "Rust",
-   "stars": 108906,
-   "stars_today": 146,
-   "url": "https://github.com/denoland/deno",
-   "boards": [
-    "rust"
-   ],
-   "pushed_at": "2026-10-29T08:03:10Z",
-   "created_at": "2018-05-15T01:34:26Z",
-   "topics": [
-    "deno",
-    "javascript",
-    "rust",
-    "typescript"
-   ],
-   "license": "MIT",
-   "forks": 6643,
-   "open_issues": 1696,
-   "archived": false,
-   "homepage": "https://deno.com",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 9,
-    "virality": 6
-   },
-   "cats": [
-    "infra",
-    "coding"
-   ],
-   "stack": "Rust",
-   "type": "JavaScript / TypeScript / WASM 运行时",
-   "usage": "`curl -fsSL https://deno.land/install.sh | sh`（Mac/Linux）",
-   "highlights": [
-    "默认安全、开发体验佳",
-    "基于 V8、Rust 与 Tokio",
-    "提供 Shell、PowerShell、Homebrew 等安装方式"
-   ],
-   "cautions": [
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "Rust",
-    "type": "JavaScript / TypeScript / WebAssembly runtime",
-    "usage": "`curl -fsSL https://deno.land/install.sh | sh` (Mac/Linux)",
-    "highlights": [
-     "Secure by default with good developer experience",
-     "Built on V8, Rust and Tokio",
-     "Installable via shell, PowerShell, Homebrew and more"
-    ],
-    "cautions": [
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 7.8
-  },
-  {
-   "name": "solidjs/solid",
-   "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
-   "language": "TypeScript",
-   "stars": 36334,
-   "stars_today": 145,
-   "url": "https://github.com/solidjs/solid",
-   "boards": [
-    "typescript"
-   ],
-   "pushed_at": "2026-11-07T00:04:34Z",
-   "created_at": "2018-04-24T16:36:27Z",
-   "topics": [
-    "declarative",
-    "fine-grained",
-    "javascript",
-    "jsx",
-    "performance",
-    "proxies",
-    "reactive",
-    "solid"
-   ],
-   "license": "MIT",
-   "forks": 1157,
-   "open_issues": 35,
-   "archived": false,
-   "homepage": "https://solidjs.com",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 9,
-    "virality": 6
-   },
-   "cats": [
-    "app"
-   ],
-   "stack": "TypeScript",
-   "type": "声明式前端 UI 库",
-   "usage": "`npm install solid-js`",
-   "highlights": [
-    "声明式、高效、灵活的 UI 库",
-    "不使用虚拟 DOM，而是编译模板",
-    "提供教程与在线 Playground"
-   ],
-   "cautions": [
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "TypeScript",
-    "type": "Declarative frontend UI library",
-    "usage": "`npm install solid-js`",
-    "highlights": [
-     "Declarative, efficient, flexible UI library",
-     "No virtual DOM; templates are compiled",
-     "Tutorial and playground available"
-    ],
-    "cautions": [
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 7.8
-  },
-  {
-   "name": "tldraw/tldraw",
-   "description": "Build infinite canvas apps in React with the tldraw SDK. World's best, top-most agent recommended #1 five star SDK.",
-   "language": "TypeScript",
-   "stars": 51384,
-   "stars_today": 139,
-   "url": "https://github.com/tldraw/tldraw",
-   "boards": [
-    "typescript"
-   ],
-   "pushed_at": "2026-11-06T18:26:19Z",
-   "created_at": "2021-05-09T11:48:37Z",
-   "topics": [
-    "canvas",
-    "collaboration",
-    "design",
-    "diagram",
-    "drawing",
-    "infinite",
-    "multiplayer",
-    "react",
-    "sdk",
-    "sketch",
-    "sync",
-    "whiteboard"
-   ],
-   "license": "NOASSERTION",
-   "forks": 3621,
-   "open_issues": 589,
-   "archived": false,
-   "homepage": "https://tldraw.dev",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
     "usability": 8,
     "virality": 7
    },
    "cats": [
-    "app",
+    "claude",
     "coding"
    ],
-   "stack": "TypeScript / React",
-   "type": "无限画布 SDK",
-   "usage": "在 React 项目中安装 tldraw SDK，参考文档与示例",
+   "stack": "JavaScript",
+   "type": "Agent Skills 精选集",
+   "usage": "把对应技能装入 Claude Code、Cursor、Codex 等",
    "highlights": [
-    "在 React 中构建无限画布应用，白板功能开箱即用",
-    "自托管实时多人协作（`@tldraw/sync`）",
-    "可自定义形状、工具与 UI，并提供面向 LLM 的画布原语"
+    "面向 Claude Code、Cursor、Codex 等的生产级技能集合",
+    "包含 motion-showreel（代码渲染短视频）、web-video-presentation、web-design-engineer、gpt-image-2 等",
+    "带封面图的技能画廊"
    ],
    "cautions": [
-    "商用许可请查阅 README 与官网"
+    "属于技能集合，质量需逐个评估"
    ],
    "en": {
-    "stack": "TypeScript / React",
-    "type": "Infinite canvas SDK",
-    "usage": "Install the tldraw SDK in a React project; see docs and examples",
+    "stack": "JavaScript",
+    "type": "Curated Agent Skills collection",
+    "usage": "Install the needed skills into Claude Code, Cursor, Codex, etc.",
     "highlights": [
-     "Build infinite-canvas apps in React with a ready whiteboard toolset",
-     "Self-hostable real-time collaboration (`@tldraw/sync`)",
-     "Custom shapes, tools and UI, plus canvas primitives for LLMs"
+     "Production-ready skills for Claude Code, Cursor, Codex and other agents",
+     "Includes motion-showreel (code-rendered video), web-video-presentation, web-design-engineer, gpt-image-2 and more",
+     "Skill gallery with cover images"
     ],
     "cautions": [
-     "Check the README and site for commercial licensing"
+     "A collection; judge each skill individually"
     ]
    },
    "overall": 7.8
   },
   {
-   "name": "numpy/numpy",
-   "description": "The fundamental package for scientific computing with Python.",
-   "language": "Python",
-   "stars": 33375,
-   "stars_today": 131,
-   "url": "https://github.com/numpy/numpy",
+   "name": "astral-sh/uv",
+   "description": "An extremely fast Python package and project manager, written in Rust.",
+   "language": "Rust",
+   "stars": 91741,
+   "stars_today": 133,
+   "url": "https://github.com/astral-sh/uv",
    "boards": [
-    "python"
+    "rust"
    ],
-   "pushed_at": "2026-11-06T19:17:55Z",
-   "created_at": "2010-09-13T23:02:39Z",
+   "pushed_at": "2026-11-07T13:26:53Z",
+   "created_at": "2023-10-02T20:24:11Z",
    "topics": [
-    "numpy",
-    "python"
+    "packaging",
+    "python",
+    "resolver",
+    "uv"
    ],
-   "license": "NOASSERTION",
-   "forks": 13092,
-   "open_issues": 2239,
+   "license": "Apache-2.0",
+   "forks": 3777,
+   "open_issues": 3052,
    "archived": false,
-   "homepage": "https://numpy.org",
+   "homepage": "https://docs.astral.sh/uv",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 10,
+    "usability": 9,
+    "virality": 6
+   },
+   "cats": [
+    "coding"
+   ],
+   "stack": "Rust 命令行工具",
+   "type": "极速 Python 包与项目管理器",
+   "usage": "按官方文档安装后用 `uv` 管理依赖与项目",
+   "highlights": [
+    "Rust 编写，速度极快",
+    "同时管理包、虚拟环境与项目",
+    "持续活跃"
+   ],
+   "cautions": [
+    "今日热度属于常青项目的日常波动"
+   ],
+   "en": {
+    "stack": "Rust CLI",
+    "type": "Extremely fast Python package and project manager",
+    "usage": "Install per the docs and use `uv` for dependencies and projects",
+    "highlights": [
+     "Written in Rust and very fast",
+     "Handles packages, environments and projects",
+     "Actively developed"
+    ],
+    "cautions": [
+     "Today’s attention is routine for a perennial project"
+    ]
+   },
+   "overall": 7.8
+  },
+  {
+   "name": "AAswordman/Operit",
+   "description": "The most powerful AI agent and AI chat software on Android/Operit是一款Android上能力最为强大、发展最久的AI Agent",
+   "language": "Kotlin",
+   "stars": 9429,
+   "stars_today": 120,
+   "url": "https://github.com/AAswordman/Operit",
+   "boards": [
+    "kotlin"
+   ],
+   "pushed_at": "2026-11-07T13:18:35Z",
+   "created_at": "2025-03-15T04:24:12Z",
+   "topics": [
+    "agent",
+    "ai",
+    "android",
+    "compose",
+    "kotlin",
+    "llama",
+    "llm",
+    "mnn",
+    "terminal"
+   ],
+   "license": "LGPL-3.0",
+   "forks": 820,
+   "open_issues": 176,
+   "archived": false,
+   "homepage": "https://operit.app",
    "scores": {
     "popularity": 7,
     "maintenance": 10,
-    "usability": 9,
-    "virality": 5
-   },
-   "cats": [
-    "data"
-   ],
-   "stack": "Python / C",
-   "type": "Python 科学计算基础包",
-   "usage": "`pip install numpy`",
-   "highlights": [
-    "强大的 N 维数组对象与广播函数",
-    "可集成 C/C++ 与 Fortran 代码",
-    "提供线性代数、傅里叶变换与随机数功能"
-   ],
-   "cautions": [
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "Python / C",
-    "type": "Fundamental package for scientific computing in Python",
-    "usage": "`pip install numpy`",
-    "highlights": [
-     "Powerful N-dimensional array object with broadcasting",
-     "Tools for integrating C/C++ and Fortran code",
-     "Linear algebra, Fourier transform and random number capabilities"
-    ],
-    "cautions": [
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 7.8
-  },
-  {
-   "name": "multica-ai/multica",
-   "description": "Make humans and AI agents work as one team — open-source and self-hostable.",
-   "language": "Go",
-   "stars": 55161,
-   "stars_today": 130,
-   "url": "https://github.com/multica-ai/multica",
-   "boards": [
-    "go"
-   ],
-   "pushed_at": "2026-11-06T18:17:49Z",
-   "created_at": "2026-01-13T17:59:46Z",
-   "topics": [],
-   "license": "NOASSERTION",
-   "forks": 7272,
-   "open_issues": 1904,
-   "archived": false,
-   "homepage": "https://multica.ai",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
     "usability": 7,
-    "virality": 8
+    "virality": 7
    },
    "cats": [
     "agent",
-    "coding"
-   ],
-   "stack": "Go",
-   "type": "AI 编码智能体任务看板",
-   "usage": "访问 multica.ai 或按 SELF_HOSTING.md 自托管",
-   "highlights": [
-    "像给同事派活一样把工作分配给 AI 编码智能体，它们认领、汇报、遇阻并交回审阅",
-    "可自托管，兼容已有智能体 CLI，无锁定",
-    "提供云端快速开始与桌面下载"
-   ],
-   "cautions": [
-    "README 标明为 source-available，非标准开源许可",
-    "需自备智能体 CLI"
-   ],
-   "en": {
-    "stack": "Go",
-    "type": "Task board for AI coding agents",
-    "usage": "Use multica.ai or self-host per SELF_HOSTING.md",
-    "highlights": [
-     "Assign work to AI coding agents like teammates: they pick up issues, report progress, raise blockers and hand back for review",
-     "Self-hostable, works with agent CLIs you already use, no lock-in",
-     "Cloud quickstart and desktop download"
-    ],
-    "cautions": [
-     "README says source-available, not a standard open-source license",
-     "Requires your own agent CLIs"
-    ]
-   },
-   "overall": 7.7
-  },
-  {
-   "name": "tokio-rs/tokio",
-   "description": "A runtime for writing reliable asynchronous applications with Rust. Provides I/O, networking, scheduling, timers, ...",
-   "language": "Rust",
-   "stars": 33701,
-   "stars_today": 149,
-   "url": "https://github.com/tokio-rs/tokio",
-   "boards": [
-    "rust"
-   ],
-   "pushed_at": "2026-11-06T15:04:58Z",
-   "created_at": "2016-09-09T22:31:36Z",
-   "topics": [
-    "asynchronous",
-    "networking",
-    "rust"
-   ],
-   "license": "MIT",
-   "forks": 4508,
-   "open_issues": 451,
-   "archived": false,
-   "homepage": "https://tokio.rs",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 10,
-    "usability": 8,
-    "virality": 5
-   },
-   "cats": [
-    "infra",
-    "coding"
-   ],
-   "stack": "Rust",
-   "type": "Rust 异步运行时",
-   "usage": "在 Cargo.toml 中添加 tokio 依赖",
-   "highlights": [
-    "用于编写可靠、轻量异步应用的运行时",
-    "强调零成本抽象、可靠性与可扩展性（含背压与取消）"
-   ],
-   "cautions": [
-    "底层库，需熟悉 Rust 异步",
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "Rust",
-    "type": "Async runtime for Rust",
-    "usage": "Add tokio to Cargo.toml",
-    "highlights": [
-     "Runtime for reliable, slim async applications",
-     "Zero-cost abstractions, reliability, scalability with backpressure and cancellation"
-    ],
-    "cautions": [
-     "Low-level library; requires Rust async knowledge",
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 7.6
-  },
-  {
-   "name": "rails/rails",
-   "description": "Ruby on Rails",
-   "language": "Ruby",
-   "stars": 59023,
-   "stars_today": 142,
-   "url": "https://github.com/rails/rails",
-   "boards": [
-    "all"
-   ],
-   "pushed_at": "2026-11-06T23:19:25Z",
-   "created_at": "2008-04-11T02:19:47Z",
-   "topics": [
-    "activejob",
-    "activerecord",
-    "framework",
-    "html",
-    "mvc",
-    "rails",
-    "ruby"
-   ],
-   "license": "MIT",
-   "forks": 23833,
-   "open_issues": 1761,
-   "archived": false,
-   "homepage": "https://rubyonrails.org",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 10,
-    "usability": 8,
-    "virality": 5
-   },
-   "cats": [
     "app"
    ],
-   "stack": "Ruby",
-   "type": "全栈 Web 应用框架",
-   "usage": "`gem install rails`",
+   "stack": "Kotlin Android 智能体",
+   "type": "Android 上的开源 AI 智能体平台",
+   "usage": "在 Android 安装，接入云端或本地模型，用工具调用、MCP、Skills 扩展",
    "highlights": [
-    "包含构建数据库驱动 Web 应用所需的一切",
-    "基于 MVC 模式，分模型、视图、控制器层",
-    "Active Record 将数据库行映射为对象"
+    "连接系统能力、终端、浏览器、文件与项目工作区执行真实任务",
+    "支持 ToolPkg、MCP 与 Skills 扩展",
+    "作者另有基于 Rust 运行时的跨平台后继 Operit 2"
    ],
    "cautions": [
-    "成熟项目，热度主要来自日常关注"
+    "本仓库为 Android 版，作者的新工作在 Operit 2",
+    "赋予智能体系统权限需谨慎"
    ],
    "en": {
-    "stack": "Ruby",
-    "type": "Full-stack web application framework",
-    "usage": "`gem install rails`",
+    "stack": "Kotlin Android agent",
+    "type": "Open-source AI agent platform for Android",
+    "usage": "Install on Android, connect cloud or local models, extend with tool calls, MCP and Skills",
     "highlights": [
-     "Everything needed for database-backed web apps",
-     "MVC pattern with model, view and controller layers",
-     "Active Record maps database rows to objects"
+     "Connects system capabilities, terminal, browser, files and workspaces for real tasks",
+     "Extensible via ToolPkg, MCP and Skills",
+     "Author also ships Operit 2, a Rust-runtime cross-platform successor"
     ],
     "cautions": [
-     "Mature project; stars reflect general attention"
+     "This repo is the Android edition; new work is in Operit 2",
+     "Be careful granting agents system permissions"
     ]
    },
-   "overall": 7.6
+   "overall": 7.8
   },
   {
    "name": "angular/angular",
    "description": "Deliver web apps with confidence 🚀",
    "language": "TypeScript",
-   "stars": 101354,
-   "stars_today": 135,
+   "stars": 101466,
+   "stars_today": 358,
    "url": "https://github.com/angular/angular",
    "boards": [
-    "all",
     "typescript"
    ],
-   "pushed_at": "2026-11-06T19:39:34Z",
+   "pushed_at": "2026-11-07T09:11:52Z",
    "created_at": "2014-09-18T16:12:01Z",
    "topics": [
     "angular",
@@ -2329,8 +1989,8 @@
     "web-performance"
    ],
    "license": "MIT",
-   "forks": 28912,
-   "open_issues": 1033,
+   "forks": 28923,
+   "open_issues": 1034,
    "archived": false,
    "homepage": "https://angular.dev",
    "scores": {
@@ -2369,326 +2029,158 @@
    "overall": 7.6
   },
   {
-   "name": "python-poetry/poetry",
-   "description": "Python packaging and dependency management made easy",
-   "language": "Python",
-   "stars": 34430,
-   "stars_today": 133,
-   "url": "https://github.com/python-poetry/poetry",
+   "name": "Tianyu199509/DeskBox",
+   "description": "A free, open-source Windows desktop organizer with native-feeling WinUI 3 widgets.",
+   "language": "C#",
+   "stars": 8601,
+   "stars_today": 193,
+   "url": "https://github.com/Tianyu199509/DeskBox",
    "boards": [
-    "python"
+    "c%23"
    ],
-   "pushed_at": "2026-11-02T23:01:17Z",
-   "created_at": "2018-02-28T15:23:47Z",
+   "pushed_at": "2026-11-03T12:00:38Z",
+   "created_at": "2026-06-11T10:55:22Z",
    "topics": [
-    "dependency-manager",
-    "package-manager",
-    "packaging",
-    "poetry",
-    "python"
-   ],
-   "license": "MIT",
-   "forks": 2584,
-   "open_issues": 642,
-   "archived": false,
-   "homepage": "https://python-poetry.org",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 9,
-    "virality": 5
-   },
-   "cats": [
-    "coding"
-   ],
-   "stack": "Python",
-   "type": "Python 打包与依赖管理工具",
-   "usage": "官方脚本 install.python-poetry.org 安装",
-   "highlights": [
-    "以 pyproject.toml 取代 setup.py、requirements.txt 等",
-    "确保各处依赖栈一致",
-    "支持多种安装方式"
-   ],
-   "cautions": [
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "Python",
-    "type": "Python packaging and dependency manager",
-    "usage": "Install via install.python-poetry.org",
-    "highlights": [
-     "Replaces setup.py, requirements.txt and others with pyproject.toml",
-     "Keeps the dependency stack consistent everywhere",
-     "Multiple install methods"
-    ],
-    "cautions": [
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 7.6
-  },
-  {
-   "name": "rivet-dev/rivet",
-   "description": "The orchestrator for agentic workloads. A fast, high-density and scalable orchestrator for every workload an agent needs.",
-   "language": "Rust",
-   "stars": 6761,
-   "stars_today": 162,
-   "url": "https://github.com/rivet-dev/rivet",
-   "boards": [
-    "rust"
-   ],
-   "pushed_at": "2026-11-06T23:04:48Z",
-   "created_at": "2023-06-16T11:51:15Z",
-   "topics": [
-    "actor",
-    "actors",
-    "cloudflare",
-    "cloudflare-durable-objects",
-    "durable-objects",
-    "foundationdb",
-    "multiplayer",
-    "realtime",
-    "rust",
-    "serverless"
-   ],
-   "license": "Apache-2.0",
-   "forks": 310,
-   "open_issues": 386,
-   "archived": false,
-   "homepage": "https://www.rivet.dev",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 7,
-    "virality": 7
-   },
-   "cats": [
-    "agent",
-    "infra"
-   ],
-   "stack": "Rust",
-   "type": "Actor 编排运行时（面向智能体）",
-   "usage": "按 Quickstart 与文档部署",
-   "highlights": [
-    "Actor 为长生命周期进程，含内存状态、SQLite、WebSocket 与调度",
-    "称每个 Actor 72 KB 内存、p99 冷启动 4.99 ms",
-    "数据存于 S3，空闲时休眠、按需唤醒"
-   ],
-   "cautions": [
-    "性能数字为项目自述",
-    "需理解 Actor 模型"
-   ],
-   "en": {
-    "stack": "Rust",
-    "type": "Actor orchestration runtime for agents",
-    "usage": "Deploy via the Quickstart and docs",
-    "highlights": [
-     "Actors are long-lived processes with in-memory state, SQLite, WebSockets and scheduling",
-     "Claims 72 KB per Actor and 4.99 ms p99 cold starts",
-     "Data lives in S3; idle Actors hibernate and wake on demand"
-    ],
-    "cautions": [
-     "Performance numbers are the project’s own claims",
-     "Requires understanding the actor model"
-    ]
-   },
-   "overall": 7.5
-  },
-  {
-   "name": "nushell/nushell",
-   "description": "A new type of shell",
-   "language": "Rust",
-   "stars": 40978,
-   "stars_today": 131,
-   "url": "https://github.com/nushell/nushell",
-   "boards": [
-    "all",
-    "rust"
-   ],
-   "pushed_at": "2026-11-06T12:38:23Z",
-   "created_at": "2019-05-10T16:59:42Z",
-   "topics": [
-    "nushell",
-    "rust",
-    "shell"
-   ],
-   "license": "MIT",
-   "forks": 2343,
-   "open_issues": 1456,
-   "archived": false,
-   "homepage": "https://www.nushell.sh/",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 8,
-    "virality": 6
-   },
-   "cats": [
-    "coding"
-   ],
-   "stack": "Rust",
-   "type": "新型 Shell",
-   "usage": "`cargo install nu` 或用包管理器安装，参阅 Nushell 手册",
-   "highlights": [
-    "以管道处理结构化数据的新型 Shell",
-    "配有 Nushell 手册、插件体系",
-    "README 称已达最小可用水平，许多人日常使用"
-   ],
-   "cautions": [
-    "README 提示部分命令可能不稳定，设计仍会变化"
-   ],
-   "en": {
-    "stack": "Rust",
-    "type": "A new type of shell",
-    "usage": "`cargo install nu` or a package manager; see the Nushell book",
-    "highlights": [
-     "A shell built around pipelines",
-     "Nushell book and plugin system",
-     "README says it reached MVP quality and many use it daily"
-    ],
-    "cautions": [
-     "README warns some commands may be unstable and design may change"
-    ]
-   },
-   "overall": 7.5
-  },
-  {
-   "name": "kubernetes/kubernetes",
-   "description": "Production-Grade Container Scheduling and Management",
-   "language": "Go",
-   "stars": 128880,
-   "stars_today": 201,
-   "url": "https://github.com/kubernetes/kubernetes",
-   "boards": [
-    "go"
-   ],
-   "pushed_at": "2026-11-06T22:29:49Z",
-   "created_at": "2014-06-06T22:56:04Z",
-   "topics": [
-    "cncf",
-    "containers",
-    "go",
-    "kubernetes"
-   ],
-   "license": "Apache-2.0",
-   "forks": 45751,
-   "open_issues": 3220,
-   "archived": false,
-   "homepage": "https://kubernetes.io",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 10,
-    "usability": 6,
-    "virality": 5
-   },
-   "cats": [
-    "infra"
-   ],
-   "stack": "Go",
-   "type": "容器编排系统",
-   "usage": "参阅 kubernetes.io 文档；多数用户使用托管发行版",
-   "highlights": [
-    "在多主机上管理容器化应用的部署、维护与扩缩容",
-    "脱胎于 Google 在生产中运行 Borg 的经验",
-    "由 CNCF 托管"
-   ],
-   "cautions": [
-    "学习与运维成本高",
-    "成熟项目，热度主要来自日常关注"
-   ],
-   "en": {
-    "stack": "Go",
-    "type": "Container orchestration system",
-    "usage": "See kubernetes.io docs; most users run a managed distribution",
-    "highlights": [
-     "Manages deployment, maintenance and scaling of containerized apps across hosts",
-     "Builds on 15 years of Google experience running Borg in production",
-     "Hosted by the CNCF"
-    ],
-    "cautions": [
-     "Steep learning and ops cost",
-     "Mature project; stars reflect general attention"
-    ]
-   },
-   "overall": 7.4
-  },
-  {
-   "name": "chen08209/FlClash",
-   "description": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
-   "language": "Dart",
-   "stars": 61660,
-   "stars_today": 244,
-   "url": "https://github.com/chen08209/FlClash",
-   "boards": [
-    "dart"
-   ],
-   "pushed_at": "2026-11-04T07:31:46Z",
-   "created_at": "2023-08-15T07:47:22Z",
-   "topics": [
-    "clash",
-    "clash-meta",
-    "flutter",
-    "hysteria",
-    "multi-platform",
-    "proxy",
-    "v2ray",
-    "vless",
-    "vpn"
+    "desktop-cleanup",
+    "desktop-organizer",
+    "desktop-widget",
+    "desktop-widgets",
+    "dotnet10",
+    "file-management",
+    "file-organization",
+    "file-organizer",
+    "open-source",
+    "productivity",
+    "tray-app",
+    "windows",
+    "windows-11",
+    "windows-app-sdk",
+    "windows-desktop",
+    "windows-tool",
+    "winui",
+    "winui-3",
+    "winui3"
    ],
    "license": "GPL-3.0",
-   "forks": 4063,
-   "open_issues": 313,
+   "forks": 465,
+   "open_issues": 94,
    "archived": false,
-   "homepage": "https://chen08209.github.io/FlClash",
+   "homepage": "https://deskbox.fun",
    "scores": {
-    "popularity": 7,
-    "maintenance": 8,
-    "usability": 8,
+    "popularity": 6,
+    "maintenance": 9,
+    "usability": 9,
     "virality": 6
    },
    "cats": [
     "app"
    ],
-   "stack": "Flutter / mihomo (Clash.Meta) 内核",
-   "type": "多平台代理客户端",
-   "usage": "从 Releases 下载对应平台安装包，导入订阅链接或配置文件",
+   "stack": "C# + WinUI 3",
+   "type": "Windows 桌面整理工具",
+   "usage": "从 Releases 下载 v1.5.9 安装",
    "highlights": [
-    "支持 Android、Windows、macOS、Linux",
-    "规则路由、代理组、延迟测试、TUN 模式",
-    "内置配置编辑器、覆写脚本与实时连接/DNS/日志视图"
+    "免费开源、本地优先",
+    "原生风格的 WinUI 3 小组件整理桌面",
+    "有 CI 与发布版本"
    ],
    "cautions": [
-    "代理订阅需自备",
-    "请遵守所在地法律法规"
+    "仅 Windows",
+    "README 称暂不合并外部 PR"
    ],
    "en": {
-    "stack": "Flutter / mihomo (Clash.Meta) core",
-    "type": "Multi-platform proxy client",
-    "usage": "Download the installer from Releases and import a subscription link or file",
+    "stack": "C# + WinUI 3",
+    "type": "Windows desktop organizer",
+    "usage": "Download v1.5.9 from Releases",
     "highlights": [
-     "Android, Windows, macOS and Linux",
-     "Rule routing, proxy groups, latency tests, TUN mode",
-     "Built-in profile editor, override scripts and live connection/DNS/log views"
+     "Free, open source and local-first",
+     "Native-feeling WinUI 3 widgets to organize the desktop",
+     "CI and tagged releases"
     ],
     "cautions": [
-     "You must bring your own proxy subscription",
-     "Follow local laws and regulations"
+     "Windows only",
+     "README says external PRs are not being merged for now"
     ]
    },
-   "overall": 7.3
+   "overall": 7.5
+  },
+  {
+   "name": "BurntSushi/ripgrep",
+   "description": "ripgrep recursively searches directories for a regex pattern while respecting your gitignore",
+   "language": "Rust",
+   "stars": 69880,
+   "stars_today": 136,
+   "url": "https://github.com/BurntSushi/ripgrep",
+   "boards": [
+    "rust"
+   ],
+   "pushed_at": "2026-10-27T18:31:31Z",
+   "created_at": "2016-03-11T02:02:33Z",
+   "topics": [
+    "cli",
+    "command-line",
+    "command-line-tool",
+    "gitignore",
+    "grep",
+    "recursively-search",
+    "regex",
+    "ripgrep",
+    "rust",
+    "search"
+   ],
+   "license": "Unlicense",
+   "forks": 4192,
+   "open_issues": 225,
+   "archived": false,
+   "homepage": "",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 9,
+    "usability": 10,
+    "virality": 5
+   },
+   "cats": [
+    "coding"
+   ],
+   "stack": "Rust 命令行工具",
+   "type": "按正则递归搜索目录的极速搜索工具",
+   "usage": "按发行版包管理器安装后运行 `rg`",
+   "highlights": [
+    "递归搜索并默认遵守 gitignore 规则",
+    "Rust 编写，速度快",
+    "开发者日常常用工具"
+   ],
+   "cautions": [
+    "最近推送在 10 月下旬",
+    "今日热度主要来自榜单常客"
+   ],
+   "en": {
+    "stack": "Rust CLI",
+    "type": "Fast recursive regex search for directories",
+    "usage": "Install via your package manager and run `rg`",
+    "highlights": [
+     "Recursive search that respects gitignore rules by default",
+     "Written in Rust and fast",
+     "A staple developer tool"
+    ],
+    "cautions": [
+     "Last push was late October",
+     "Attention likely reflects a perennial favorite"
+    ]
+   },
+   "overall": 7.5
   },
   {
    "name": "prometheus/prometheus",
    "description": "The Prometheus monitoring system and time series database.",
    "language": "Go",
-   "stars": 67178,
-   "stars_today": 148,
+   "stars": 67441,
+   "stars_today": 325,
    "url": "https://github.com/prometheus/prometheus",
    "boards": [
     "all",
     "go"
    ],
-   "pushed_at": "2026-11-06T17:19:24Z",
+   "pushed_at": "2026-11-07T22:52:23Z",
    "created_at": "2012-11-24T11:14:12Z",
    "topics": [
     "alerting",
@@ -2700,8 +2192,8 @@
     "time-series"
    ],
    "license": "Apache-2.0",
-   "forks": 10988,
-   "open_issues": 1075,
+   "forks": 11002,
+   "open_issues": 1097,
    "archived": false,
    "homepage": "https://prometheus.io/",
    "scores": {
@@ -2742,11 +2234,152 @@
    "overall": 7.3
   },
   {
+   "name": "boykopovar/AnyPS5",
+   "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+   "language": "C++",
+   "stars": 52047,
+   "stars_today": 289,
+   "url": "https://github.com/boykopovar/AnyPS5",
+   "boards": [
+    "c++"
+   ],
+   "pushed_at": "2026-11-07T23:38:32Z",
+   "created_at": "2026-08-03T21:30:25Z",
+   "topics": [
+    "anyps5",
+    "dynamic-library",
+    "game-porting",
+    "ps5",
+    "ps5-tools",
+    "spir-v",
+    "vulkan"
+   ],
+   "license": "GPL-2.0",
+   "forks": 4955,
+   "open_issues": 2015,
+   "archived": false,
+   "homepage": "https://boykopovar.github.io/AnyPS5/",
+   "scores": {
+    "popularity": 8,
+    "maintenance": 9,
+    "usability": 5,
+    "virality": 7
+   },
+   "cats": [
+    "coding"
+   ],
+   "stack": "C++ 重链接器",
+   "type": "PS5 可执行文件移植到 Linux/Windows 的工具",
+   "usage": "按文档构建，将可执行文件转换为目标系统原生格式",
+   "highlights": [
+    "不用模拟器或独立运行时，转换为原生格式并动态链接",
+    "文件留在本机；仅重链接器版本可在 macOS（含 Apple 芯片）运行",
+    "公开进度与按游戏的兼容性报告"
+   ],
+   "cautions": [
+    "属早期项目，已知系统函数覆盖率有限",
+    "使用前请确认对所处理软件拥有合法权利",
+    "遇到不支持状态会抛 C++ 异常"
+   ],
+   "en": {
+    "stack": "C++ relinker",
+    "type": "Tool to port PS5 executables to Linux and Windows",
+    "usage": "Build per the docs and convert executables into the target system’s native format",
+    "highlights": [
+     "No emulation or separate runtime: converts to native format with dynamic linking",
+     "Files stay on your device; the relinker-only build runs on macOS incl. Apple silicon",
+     "Public progress tracker and per-game compatibility reports"
+    ],
+    "cautions": [
+     "Early-stage; coverage of known system functions is partial",
+     "Make sure you have the legal right to the software you process",
+     "Unsupported states throw C++ exceptions"
+    ]
+   },
+   "overall": 7.3
+  },
+  {
+   "name": "FareedKhan-dev/kimi-k3-in-c",
+   "description": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+   "language": "C",
+   "stars": 11222,
+   "stars_today": 295,
+   "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
+   "boards": [
+    "c"
+   ],
+   "pushed_at": "2026-10-02T04:51:44Z",
+   "created_at": "2026-08-01T09:29:38Z",
+   "topics": [
+    "avx2",
+    "c99",
+    "cpu-inference",
+    "deep-learning",
+    "from-scratch",
+    "inference-engine",
+    "kimi-k3",
+    "linear-attention",
+    "llm",
+    "llm-inference",
+    "machine-learning",
+    "memory-efficient",
+    "mixture-of-experts",
+    "moe",
+    "mxfp4",
+    "quantization",
+    "simd",
+    "systems-programming",
+    "transformer",
+    "zero-dependencies"
+   ],
+   "license": "Apache-2.0",
+   "forks": 1745,
+   "open_issues": 28,
+   "archived": false,
+   "homepage": "https://medium.com/@fareedkhandev/building-kimi-k3-in-c-to-run-a-2-8t-model-on-consumer-hardware-a5792cbf3b59",
+   "scores": {
+    "popularity": 8,
+    "maintenance": 7,
+    "usability": 5,
+    "virality": 9
+   },
+   "cats": [
+    "llm"
+   ],
+   "stack": "C99（Apache-2.0）",
+   "type": "大模型 CPU 推理引擎",
+   "usage": "用 make 编译；需要约 1.56 TB 的检查点文件，内存峰值约 8.24 GB",
+   "highlights": [
+    "可移植 C99，不依赖 BLAS、框架或 GPU",
+    "README 称 2.78 万亿参数 Kimi K3 在单 CPU、8.24 GB 内存下推理，引擎仅 176 KB",
+    "内存越多只影响速度，不影响结果"
+   ],
+   "cautions": [
+    "需要约 1.56 TB 磁盘存放检查点",
+    "速度数据来自作者自测，需自行验证"
+   ],
+   "en": {
+    "stack": "C99 (Apache-2.0)",
+    "type": "CPU inference engine for a huge LLM",
+    "usage": "Build with make; needs the ~1.56 TB checkpoint, peak RSS about 8.24 GB",
+    "highlights": [
+     "Portable C99 with no BLAS, framework or GPU",
+     "README says the 2.78T-parameter Kimi K3 runs on one CPU in 8.24 GB RAM; the whole engine is 176 KB",
+     "More memory only buys speed, same answers"
+    ],
+    "cautions": [
+     "Needs about 1.56 TB of disk for the checkpoint",
+     "Performance figures are the author's own measurements"
+    ]
+   },
+   "overall": 7.2
+  },
+  {
    "name": "microsoft/VibeVoice",
    "description": "Open-Source Frontier Voice AI",
    "language": "Python",
-   "stars": 56464,
-   "stars_today": 1004,
+   "stars": 56691,
+   "stars_today": 237,
    "url": "https://github.com/microsoft/VibeVoice",
    "boards": [
     "python"
@@ -2755,7 +2388,7 @@
    "created_at": "2025-08-25T13:24:01Z",
    "topics": [],
    "license": "MIT",
-   "forks": 6358,
+   "forks": 6381,
    "open_issues": 205,
    "archived": false,
    "homepage": "https://microsoft.github.io/VibeVoice/",
@@ -2798,131 +2431,390 @@
    "overall": 7.2
   },
   {
-   "name": "FareedKhan-dev/kimi-k3-in-c",
-   "description": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+   "name": "mpv-player/mpv",
+   "description": "🎥 Command line media player",
    "language": "C",
-   "stars": 10974,
-   "stars_today": 180,
-   "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
+   "stars": 37982,
+   "stars_today": 220,
+   "url": "https://github.com/mpv-player/mpv",
    "boards": [
     "c"
    ],
-   "pushed_at": "2026-10-02T04:51:44Z",
-   "created_at": "2026-08-01T09:29:38Z",
+   "pushed_at": "2026-11-07T05:29:16Z",
+   "created_at": "2012-10-13T08:08:44Z",
    "topics": [
-    "avx2",
-    "c99",
-    "cpu-inference",
-    "deep-learning",
-    "from-scratch",
-    "inference-engine",
-    "kimi-k3",
-    "linear-attention",
-    "llm",
-    "llm-inference",
-    "machine-learning",
-    "memory-efficient",
-    "mixture-of-experts",
-    "moe",
-    "mxfp4",
-    "quantization",
-    "simd",
-    "systems-programming",
-    "transformer",
-    "zero-dependencies"
+    "audio",
+    "c",
+    "ffmpeg",
+    "mplayer",
+    "mpv",
+    "multimedia",
+    "video"
    ],
-   "license": "Apache-2.0",
-   "forks": 1715,
-   "open_issues": 28,
+   "license": "NOASSERTION",
+   "forks": 3641,
+   "open_issues": 1167,
    "archived": false,
-   "homepage": "https://medium.com/@fareedkhandev/building-kimi-k3-in-c-to-run-a-2-8t-model-on-consumer-hardware-a5792cbf3b59",
+   "homepage": "https://mpv.io",
    "scores": {
-    "popularity": 8,
-    "maintenance": 7,
-    "usability": 5,
-    "virality": 9
+    "popularity": 6,
+    "maintenance": 10,
+    "usability": 7,
+    "virality": 5
    },
    "cats": [
-    "llm"
+    "media",
+    "app"
    ],
-   "stack": "C99（Apache-2.0）",
-   "type": "大模型 CPU 推理引擎",
-   "usage": "用 make 编译；需要约 1.56 TB 的检查点文件，内存峰值约 8.24 GB",
+   "stack": "C 命令行播放器",
+   "type": "免费开源命令行媒体播放器",
+   "usage": "按平台安装，命令行运行，用 `--hwdec` 启用硬件解码",
    "highlights": [
-    "可移植 C99，不依赖 BLAS、框架或 GPU",
-    "README 称 2.78 万亿参数 Kimi K3 在单 CPU、8.24 GB 内存下推理，引擎仅 176 KB",
-    "内存越多只影响速度，不影响结果"
+    "支持大量格式、编解码器与字幕",
+    "Linux、Windows 10+、macOS 10.15+",
+    "有 FAQ 与发布列表"
    ],
    "cautions": [
-    "需要约 1.56 TB 磁盘存放检查点",
-    "速度数据来自作者自测，需自行验证"
+    "以命令行与配置为主，上手有门槛",
+    "低功耗核显可能卡顿，建议 `--profile=fast`"
    ],
    "en": {
-    "stack": "C99 (Apache-2.0)",
-    "type": "CPU inference engine for a huge LLM",
-    "usage": "Build with make; needs the ~1.56 TB checkpoint, peak RSS about 8.24 GB",
+    "stack": "C command-line player",
+    "type": "Free open-source command-line media player",
+    "usage": "Install for your platform, run from the CLI, enable `--hwdec` for hardware decoding",
     "highlights": [
-     "Portable C99 with no BLAS, framework or GPU",
-     "README says the 2.78T-parameter Kimi K3 runs on one CPU in 8.24 GB RAM; the whole engine is 176 KB",
-     "More memory only buys speed, same answers"
+     "Wide range of formats, codecs and subtitles",
+     "Linux, Windows 10+, macOS 10.15+",
+     "FAQ and release list available"
     ],
     "cautions": [
-     "Needs about 1.56 TB of disk for the checkpoint",
-     "Performance figures are the author's own measurements"
+     "CLI/config oriented, so a learning curve",
+     "Weak integrated GPUs may stutter; try `--profile=fast`"
     ]
    },
-   "overall": 7.2
+   "overall": 7.0
   },
   {
-   "name": "kushagrasinghx/BitChord",
-   "description": "BitChord - A modern YouTube music client with clean aesthetics inspired from Apple Music",
-   "language": "Kotlin",
-   "stars": 5972,
-   "stars_today": 159,
-   "url": "https://github.com/kushagrasinghx/BitChord",
+   "name": "longbridge/gpui-kit",
+   "description": "Rust GUI components for building fantastic cross-platform desktop application by using GPUI.",
+   "language": "Rust",
+   "stars": 19824,
+   "stars_today": 217,
+   "url": "https://github.com/longbridge/gpui-kit",
    "boards": [
-    "kotlin"
+    "rust"
    ],
-   "pushed_at": "2026-11-06T16:21:46Z",
-   "created_at": "2026-08-11T13:39:46Z",
-   "topics": [],
-   "license": "GPL-3.0",
-   "forks": 601,
-   "open_issues": 374,
+   "pushed_at": "2026-11-07T17:33:29Z",
+   "created_at": "2024-06-13T13:45:39Z",
+   "topics": [
+    "desktop-application",
+    "gpui",
+    "rust",
+    "uikit"
+   ],
+   "license": "NOASSERTION",
+   "forks": 1219,
+   "open_issues": 141,
    "archived": false,
-   "homepage": "https://bitchord.kushagrasingh.in/",
+   "homepage": "http://gpui-kit.com",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 10,
+    "usability": 7,
+    "virality": 5
+   },
+   "cats": [
+    "coding",
+    "app"
+   ],
+   "stack": "Rust + GPUI",
+   "type": "Rust 桌面应用框架与组件库",
+   "usage": "在 Cargo 中依赖单一 crate `gpui-kit`",
+   "highlights": [
+    "75+ 带文档的组件与原语，支持 WebAssembly 与 AccessKit 无障碍",
+    "单一依赖，固定匹配的 GPUI 版本并重新导出",
+    "可选 JavaScript 扩展运行时"
+   ],
+   "cautions": [
+    "依赖 GPUI 生态，较新",
+    "主要面向 Rust 桌面开发者"
+   ],
+   "en": {
+    "stack": "Rust + GPUI",
+    "type": "Rust desktop application framework and component kit",
+    "usage": "Depend on the single `gpui-kit` crate in Cargo",
+    "highlights": [
+     "75+ documented components and primitives, WebAssembly and AccessKit accessibility",
+     "One dependency that pins the matching GPUI release and re-exports it",
+     "Optional JavaScript extension runtime"
+    ],
+    "cautions": [
+     "Tied to the GPUI ecosystem and fairly new",
+     "Aimed at Rust desktop developers"
+    ]
+   },
+   "overall": 7.0
+  },
+  {
+   "name": "ranxianglei/billion-context",
+   "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+   "language": "TypeScript",
+   "stars": 4592,
+   "stars_today": 185,
+   "url": "https://github.com/ranxianglei/billion-context",
+   "boards": [
+    "all",
+    "typescript"
+   ],
+   "pushed_at": "2026-11-07T23:25:02Z",
+   "created_at": "2026-08-06T08:27:34Z",
+   "topics": [
+    "dsh-plugin"
+   ],
+   "license": "NOASSERTION",
+   "forks": 368,
+   "open_issues": 909,
+   "archived": false,
+   "homepage": "",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 10,
+    "usability": 6,
+    "virality": 6
+   },
+   "cats": [
+    "coding",
+    "memory"
+   ],
+   "stack": "TypeScript 插件",
+   "type": "长会话上下文压缩插件",
+   "usage": "`npm install -g billion-context --prefix=~/.local`",
+   "highlights": [
+    "小上下文窗口（100K）即可跑数月单会话",
+    "README 称 token 减少 5 倍，前缀缓存命中率 95–97%",
+    "提供 `/acp` 等缓存诊断命令"
+   ],
+   "cautions": [
+    "效果数据来自作者自述",
+    "许可证标为 NOASSERTION",
+    "项目较新，社区体量小"
+   ],
+   "en": {
+    "stack": "TypeScript plugin",
+    "type": "Context-compression plugin for long sessions",
+    "usage": "`npm install -g billion-context --prefix=~/.local`",
+    "highlights": [
+     "Runs month-long single sessions on a 100K context window",
+     "README claims 5× fewer tokens and a 95–97% prefix-cache hit rate",
+     "Ships `/acp` cache diagnostics"
+    ],
+    "cautions": [
+     "Performance figures are the author’s own",
+     "License is listed as NOASSERTION",
+     "Young project with a small community"
+    ]
+   },
+   "overall": 7.0
+  },
+  {
+   "name": "mbillow/localthings",
+   "description": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.",
+   "language": "Python",
+   "stars": 1049,
+   "stars_today": 184,
+   "url": "https://github.com/mbillow/localthings",
+   "boards": [
+    "all",
+    "python"
+   ],
+   "pushed_at": "2026-11-07T06:48:26Z",
+   "created_at": "2026-06-30T21:30:14Z",
+   "topics": [
+    "coap-protocol",
+    "coap-server",
+    "custom-component",
+    "dtls",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "home-automation",
+    "samsung",
+    "smartthings"
+   ],
+   "license": "MIT",
+   "forks": 112,
+   "open_issues": 95,
+   "archived": false,
+   "homepage": "",
    "scores": {
     "popularity": 5,
-    "maintenance": 9,
-    "usability": 8,
+    "maintenance": 10,
+    "usability": 7,
     "virality": 6
    },
    "cats": [
     "app",
-    "media"
+    "infra"
    ],
-   "stack": "Kotlin · Android",
-   "type": "YouTube Music 第三方客户端",
-   "usage": "从 Releases 下载安装 APK",
+   "stack": "Python Home Assistant 集成",
+   "type": "本地控制三星家电的 Home Assistant 集成",
+   "usage": "在 Home Assistant 中添加集成，输入家电 IP 地址",
    "highlights": [
-    "界面参考 Apple Music 的简洁美学",
-    "开源，有下载量徽章",
-    "README 注明与 YouTube/Google 无关联"
+    "无需云账号，完全走局域网",
+    "支持洗衣机、冰箱、空调、烤箱等 SmartThings 家电",
+    "设置后不再联系三星服务器"
    ],
    "cautions": [
-    "第三方客户端，可能受平台政策影响"
+    "需要知道家电 IP",
+    "家电本身仍保持与三星的连接",
+    "仅 1000 余星，较新"
    ],
    "en": {
-    "stack": "Kotlin · Android",
-    "type": "Third-party YouTube Music client",
-    "usage": "Download the APK from Releases",
+    "stack": "Python Home Assistant integration",
+    "type": "Local control of Samsung appliances from Home Assistant",
+    "usage": "Add the integration in Home Assistant and enter the appliance IP",
     "highlights": [
-     "Clean UI inspired by Apple Music",
-     "Open source with a downloads badge",
-     "README states no affiliation with YouTube or Google"
+     "No cloud account; talks to appliances on your LAN",
+     "Washers, fridges, ACs, ovens and other SmartThings appliances",
+     "Never contacts Samsung servers after setup"
     ],
     "cautions": [
-     "Third-party client; may be affected by platform policy"
+     "You need the appliance IP address",
+     "Appliances still keep their own connection to Samsung",
+     "Small and new (~1,000 stars)"
+    ]
+   },
+   "overall": 7.0
+  },
+  {
+   "name": "Usagi-org/ai-goofish-monitor",
+   "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+   "language": "Python",
+   "stars": 18313,
+   "stars_today": 146,
+   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+   "boards": [
+    "python"
+   ],
+   "pushed_at": "2026-10-10T07:39:16Z",
+   "created_at": "2025-07-16T08:13:41Z",
+   "topics": [
+    "ai",
+    "ai-assistant",
+    "ai-tools",
+    "automation",
+    "gemini",
+    "goofish",
+    "open-source",
+    "openai",
+    "playwright",
+    "tool",
+    "xian-yu",
+    "xianyu",
+    "xianyu-bot"
+   ],
+   "license": "MIT",
+   "forks": 3018,
+   "open_issues": 49,
+   "archived": false,
+   "homepage": "",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 7,
+    "usability": 8,
+    "virality": 6
+   },
+   "cats": [
+    "agent",
+    "data"
+   ],
+   "stack": "Python + Playwright",
+   "type": "AI 驱动的闲鱼多任务监控系统",
+   "usage": "`docker compose up -d`，访问 http://127.0.0.1:8000 配置任务",
+   "highlights": [
+    "自然语言创建任务，多模态模型分析商品",
+    "多任务并发、定时调度、账号与代理轮换",
+    "支持 ntfy、企微、Bark、Telegram 等通知"
+   ],
+   "cautions": [
+    "需自备多模态模型 API",
+    "抓取平台数据需遵守平台条款",
+    "最近一次推送在 10 月上旬"
+   ],
+   "en": {
+    "stack": "Python + Playwright",
+    "type": "AI-driven multi-task Xianyu (Goofish) monitor",
+    "usage": "`docker compose up -d`, then configure tasks at http://127.0.0.1:8000",
+    "highlights": [
+     "Create tasks in natural language; multimodal models analyze listings",
+     "Concurrent tasks, cron scheduling, account and proxy rotation",
+     "Notifications via ntfy, WeCom, Bark, Telegram and more"
+    ],
+    "cautions": [
+     "You need your own multimodal model API",
+     "Scraping a platform must respect its terms",
+     "Last push was early October"
+    ]
+   },
+   "overall": 7.0
+  },
+  {
+   "name": "samolego/Canta",
+   "description": "Uninstall any Android app without root (with power of Shizuku). Debloat your device as you wish, with Android app or even from your browser!",
+   "language": "Kotlin",
+   "stars": 6721,
+   "stars_today": 141,
+   "url": "https://github.com/samolego/Canta",
+   "boards": [
+    "kotlin"
+   ],
+   "pushed_at": "2026-11-06T07:53:47Z",
+   "created_at": "2023-08-29T19:07:03Z",
+   "topics": [
+    "android",
+    "app-manager",
+    "debloater",
+    "no-root",
+    "shizuku"
+   ],
+   "license": "LGPL-3.0",
+   "forks": 161,
+   "open_issues": 36,
+   "archived": false,
+   "homepage": "https://samolego.github.io/Canta/",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 9,
+    "usability": 7,
+    "virality": 6
+   },
+   "cats": [
+    "app"
+   ],
+   "stack": "Kotlin Android 应用",
+   "type": "无需 root 卸载任意应用的工具",
+   "usage": "从 F-Droid、IzzyOnDroid 或 Releases 安装，借助 Shizuku 使用",
+   "highlights": [
+    "无需 root，可卸载预装与用户应用",
+    "借助 Shizuku，并有安全卸载推荐",
+    "可检测之前卸载过的应用"
+   ],
+   "cautions": [
+    "README 警告使用风险自负，可能造成数据损失",
+    "需先设置 Shizuku"
+   ],
+   "en": {
+    "stack": "Kotlin Android app",
+    "type": "Uninstall any app without root",
+    "usage": "Install from F-Droid, IzzyOnDroid or Releases and use it through Shizuku",
+    "highlights": [
+     "No root needed to remove pre-installed or user apps",
+     "Powered by Shizuku, with safe-removal recommendations",
+     "Detects previously uninstalled apps"
+    ],
+    "cautions": [
+     "README warns use is at your own risk; data loss possible",
+     "Shizuku must be set up first"
     ]
    },
    "overall": 7.0
@@ -2931,13 +2823,13 @@
    "name": "realidkroo/Mochy-Music",
    "description": "A modern, cool, sleek music player. made with <3",
    "language": "Kotlin",
-   "stars": 946,
-   "stars_today": 151,
+   "stars": 1076,
+   "stars_today": 146,
    "url": "https://github.com/realidkroo/Mochy-Music",
    "boards": [
     "kotlin"
    ],
-   "pushed_at": "2026-11-06T09:22:35Z",
+   "pushed_at": "2026-11-07T17:30:57Z",
    "created_at": "2026-06-15T12:13:15Z",
    "topics": [
     "music",
@@ -2947,10 +2839,10 @@
     "players"
    ],
    "license": "GPL-3.0",
-   "forks": 53,
-   "open_issues": 43,
+   "forks": 55,
+   "open_issues": 45,
    "archived": false,
-   "homepage": "https://404.com",
+   "homepage": "https://realidkroo.github.io/Mochy-Music/",
    "scores": {
     "popularity": 5,
     "maintenance": 9,
@@ -2990,67 +2882,11 @@
    "overall": 6.8
   },
   {
-   "name": "orailnoor/cross-platform-llm-client",
-   "description": "A unified cross-platform AI client supporting seamless transitions between standard cloud APIs and on-device, offline execution of custom and uncensored language models.",
-   "language": "C++",
-   "stars": 1581,
-   "stars_today": 130,
-   "url": "https://github.com/orailnoor/cross-platform-llm-client",
-   "boards": [
-    "c++"
-   ],
-   "pushed_at": "2026-11-04T15:05:41Z",
-   "created_at": "2026-04-25T14:37:00Z",
-   "topics": [],
-   "license": "MIT",
-   "forks": 329,
-   "open_issues": 23,
-   "archived": false,
-   "homepage": null,
-   "scores": {
-    "popularity": 6,
-    "maintenance": 8,
-    "usability": 7,
-    "virality": 6
-   },
-   "cats": [
-    "llm",
-    "app"
-   ],
-   "stack": "Flutter / C++",
-   "type": "跨平台 AI 聊天客户端（PrivateLM）",
-   "usage": "按 README 构建，或访问网页版",
-   "highlights": [
-    "Android 上用 Vulkan GPU 加速本地运行 GGUF 模型，下载后可离线",
-    "可切换 OpenAI、Anthropic、Gemini、Kimi 云端 API",
-    "支持图文多模态，对话与设置本地保存"
-   ],
-   "cautions": [
-    "本地推理仅限 Android",
-    "项目较新，成熟度需自行评估"
-   ],
-   "en": {
-    "stack": "Flutter / C++",
-    "type": "Cross-platform AI chat client (PrivateLM)",
-    "usage": "Build per README, or use the web version",
-    "highlights": [
-     "Runs GGUF models locally on Android with Vulkan GPU acceleration, offline after download",
-     "Switch to OpenAI, Anthropic, Gemini or Kimi APIs",
-     "Multimodal chat; chats and settings stored locally"
-    ],
-    "cautions": [
-     "Local inference is Android-only",
-     "Young project; judge maturity yourself"
-    ]
-   },
-   "overall": 6.8
-  },
-  {
    "name": "Anil-matcha/Open-Generative-AI",
    "description": "Unrestricted Open-source alternative to AI video platforms — Free AI image & video generation studio with 600+ models (Flux, Midjourney, Kling, Sora, Veo). No content filters. Self-hosted, MIT licensed.",
    "language": "JavaScript",
-   "stars": 32835,
-   "stars_today": 398,
+   "stars": 33024,
+   "stars_today": 141,
    "url": "https://github.com/Anil-matcha/Open-Generative-AI",
    "boards": [
     "javascript"
@@ -3080,8 +2916,8 @@
     "wan-video"
    ],
    "license": "MIT",
-   "forks": 6233,
-   "open_issues": 48,
+   "forks": 6266,
+   "open_issues": 49,
    "archived": false,
    "homepage": "https://muapi.ai/open-generative-ai?utm_source=github&utm_medium=about&utm_campaign=open-generative-ai",
    "scores": {
@@ -3122,277 +2958,667 @@
     ]
    },
    "overall": 6.5
-  }
- ],
- "excluded": [
+  },
   {
-   "name": "symfony/symfony",
-   "reason": {
-    "zh": "今日新增 128，未进前 50",
-    "en": "128 stars today, outside the top 50"
+   "name": "dsx-ai-factory/nvke",
+   "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+   "language": "Go",
+   "stars": 545,
+   "stars_today": 125,
+   "url": "https://github.com/dsx-ai-factory/nvke",
+   "boards": [
+    "all",
+    "go"
+   ],
+   "pushed_at": "2026-11-07T02:09:56Z",
+   "created_at": "2026-08-04T15:42:58Z",
+   "topics": [
+    "bare-metal",
+    "cluster-api",
+    "gpu",
+    "kubernetes",
+    "nvidia"
+   ],
+   "license": "Apache-2.0",
+   "forks": 87,
+   "open_issues": 182,
+   "archived": false,
+   "homepage": "https://docs.nvidia.com/nvke/",
+   "scores": {
+    "popularity": 5,
+    "maintenance": 10,
+    "usability": 5,
+    "virality": 6
    },
-   "stars_today": 128,
-   "url": "https://github.com/symfony/symfony"
+   "cats": [
+    "infra"
+   ],
+   "stack": "Go Kubernetes 管理平面",
+   "type": "在自有 NVIDIA GPU 基础设施上运行托管 Kubernetes",
+   "usage": "按文档用模拟机器在无 GPU 环境评估，或安装到 GPU 集群",
+   "highlights": [
+    "为客户创建并运营独立控制平面的 Kubernetes 集群",
+    "可在无 GPU 硬件、无需 NVIDIA 账号的情况下评估",
+    "提供入门导航表"
+   ],
+   "cautions": [
+    "README 标注为预览版，不建议用于生产",
+    "仅约 500 星，非常新"
+   ],
+   "en": {
+    "stack": "Go Kubernetes management plane",
+    "type": "Managed Kubernetes on your own NVIDIA GPU infrastructure",
+    "usage": "Evaluate on simulated machines without GPUs per the docs, or install on a GPU cluster",
+    "highlights": [
+     "Create and operate customer clusters, each with its own control plane and etcd",
+     "Can be evaluated without GPU hardware or an NVIDIA account",
+     "Getting-started table by goal"
+    ],
+    "cautions": [
+     "Marked as a preview; not recommended for production",
+     "Only ~500 stars and very new"
+    ]
+   },
+   "overall": 6.5
   },
   {
    "name": "etcd-io/etcd",
-   "reason": {
-    "zh": "今日新增 128，未进前 50",
-    "en": "128 stars today, outside the top 50"
+   "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+   "language": "Go",
+   "stars": 52668,
+   "stars_today": 204,
+   "url": "https://github.com/etcd-io/etcd",
+   "boards": [
+    "go"
+   ],
+   "pushed_at": "2026-11-06T12:29:27Z",
+   "created_at": "2013-07-06T21:57:21Z",
+   "topics": [
+    "cncf",
+    "consensus",
+    "database",
+    "distributed-database",
+    "distributed-systems",
+    "etcd",
+    "go",
+    "key-value",
+    "kubernetes",
+    "raft"
+   ],
+   "license": "Apache-2.0",
+   "forks": 10593,
+   "open_issues": 427,
+   "archived": false,
+   "homepage": "https://etcd.io",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 9,
+    "usability": 6,
+    "virality": 4
    },
-   "stars_today": 128,
-   "url": "https://github.com/etcd-io/etcd"
+   "cats": [
+    "infra"
+   ],
+   "stack": "Go 分布式键值存储",
+   "type": "分布式可靠键值存储（Raft）",
+   "usage": "按官方文档部署集群，通过 gRPC API 访问",
+   "highlights": [
+    "为分布式系统关键数据设计：简单、安全（自动 TLS）、快、可靠",
+    "基于 Raft，Go 编写",
+    "官方称基准约 1 万次写/秒"
+   ],
+   "cautions": [
+    "main 分支可能不稳定，生产请用发布版本",
+    "运维分布式集群有门槛"
+   ],
+   "en": {
+    "stack": "Go distributed key-value store",
+    "type": "Distributed reliable key-value store (Raft)",
+    "usage": "Deploy a cluster per the docs and use the gRPC API",
+    "highlights": [
+     "Built for critical distributed-system data: simple, secure (auto TLS), fast, reliable",
+     "Raft consensus, written in Go",
+     "Benchmarked at ~10,000 writes/sec per the README"
+    ],
+    "cautions": [
+     "`main` may be unstable; use releases in production",
+     "Operating a distributed cluster takes expertise"
+    ]
+   },
+   "overall": 6.3
   },
   {
-   "name": "Anduin2017/HowToCook",
-   "reason": {
-    "zh": "菜谱教程，非软件项目",
-    "en": "Cooking guide, not a software project"
+   "name": "openssl/openssl",
+   "description": "General purpose TLS and crypto library",
+   "language": "C",
+   "stars": 31364,
+   "stars_today": 170,
+   "url": "https://github.com/openssl/openssl",
+   "boards": [
+    "c"
+   ],
+   "pushed_at": "2026-11-07T16:10:18Z",
+   "created_at": "2013-01-15T22:34:48Z",
+   "topics": [
+    "cryptography",
+    "decryption",
+    "encryption",
+    "openssl",
+    "ssl",
+    "tls"
+   ],
+   "license": "Apache-2.0",
+   "forks": 11585,
+   "open_issues": 1653,
+   "archived": false,
+   "homepage": "https://openssl-library.org/",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 10,
+    "usability": 5,
+    "virality": 4
    },
-   "stars_today": 57,
-   "url": "https://github.com/Anduin2017/HowToCook"
+   "cats": [
+    "security",
+    "infra"
+   ],
+   "stack": "C 密码学库",
+   "type": "通用 TLS 与密码学库",
+   "usage": "按发行版安装或从源码构建",
+   "highlights": [
+    "被广泛使用的 TLS 与加密基础库",
+    "持续活跃维护"
+   ],
+   "cautions": [
+    "底层库，不适合直接作为应用使用",
+    "使用不当会带来安全风险"
+   ],
+   "en": {
+    "stack": "C crypto library",
+    "type": "General-purpose TLS and cryptography library",
+    "usage": "Install from your distro or build from source",
+    "highlights": [
+     "Widely used TLS and cryptography foundation",
+     "Actively maintained"
+    ],
+    "cautions": [
+     "A low-level library, not an end-user app",
+     "Misuse carries security risk"
+    ]
+   },
+   "overall": 6.3
   },
+  {
+   "name": "lz4/lz4",
+   "description": "Extremely Fast Compression algorithm",
+   "language": "C",
+   "stars": 12704,
+   "stars_today": 161,
+   "url": "https://github.com/lz4/lz4",
+   "boards": [
+    "c"
+   ],
+   "pushed_at": "2026-11-07T20:10:27Z",
+   "created_at": "2014-03-25T15:52:21Z",
+   "topics": [
+    "c",
+    "compression",
+    "lz4"
+   ],
+   "license": "NOASSERTION",
+   "forks": 1646,
+   "open_issues": 8,
+   "archived": false,
+   "homepage": "http://www.lz4.org",
+   "scores": {
+    "popularity": 5,
+    "maintenance": 10,
+    "usability": 6,
+    "virality": 4
+   },
+   "cats": [
+    "infra"
+   ],
+   "stack": "C 压缩算法",
+   "type": "极速压缩算法",
+   "usage": "按发行版安装或从源码构建，使用命令行或库",
+   "highlights": [
+    "以压缩与解压速度见长",
+    "C 实现，可作为库或命令行使用"
+   ],
+   "cautions": [
+    "底层库",
+    "今日热度偏小，原因 README 未说明"
+   ],
+   "en": {
+    "stack": "C compression algorithm",
+    "type": "Extremely fast compression algorithm",
+    "usage": "Install from your distro or build from source; use the CLI or the library",
+    "highlights": [
+     "Known for compression and decompression speed",
+     "C implementation usable as a library or CLI"
+    ],
+    "cautions": [
+     "A low-level library",
+     "README does not explain today’s attention"
+    ]
+   },
+   "overall": 6.3
+  }
+ ],
+ "excluded": [
   {
    "name": "521xueweihan/HelloGitHub",
    "reason": {
     "zh": "开源项目推荐合集，非单一项目",
     "en": "Curated list of open source projects, not a single project"
    },
-   "stars_today": 228,
+   "stars_today": 204,
    "url": "https://github.com/521xueweihan/HelloGitHub"
   },
   {
-   "name": "psf/requests",
+   "name": "donnemartin/system-design-primer",
    "reason": {
-    "zh": "今日新增 119，未进前 50",
-    "en": "119 stars today, outside the top 50"
+    "zh": "系统设计学习/面试资料合集，非工具",
+    "en": "System-design study and interview-prep resource, not a tool"
    },
-   "stars_today": 119,
-   "url": "https://github.com/psf/requests"
+   "stars_today": 185,
+   "url": "https://github.com/donnemartin/system-design-primer"
   },
   {
-   "name": "pipeshub-ai/pipeshub-ai",
+   "name": "EbookFoundation/free-programming-books",
    "reason": {
-    "zh": "今日新增 64，未进前 50",
-    "en": "64 stars today, outside the top 50"
+    "zh": "免费编程书籍列表，资源合集",
+    "en": "List of free programming books; resource collection"
    },
-   "stars_today": 64,
-   "url": "https://github.com/pipeshub-ai/pipeshub-ai"
+   "stars_today": 179,
+   "url": "https://github.com/EbookFoundation/free-programming-books"
   },
   {
-   "name": "antoniaci/blackbird",
+   "name": "bobeff/open-source-games",
    "reason": {
-    "zh": "今日新增 121，未进前 50",
-    "en": "121 stars today, outside the top 50"
+    "zh": "开源游戏列表，资源合集",
+    "en": "A list of open source games; resource collection"
    },
    "stars_today": 121,
-   "url": "https://github.com/antoniaci/blackbird"
+   "url": "https://github.com/bobeff/open-source-games"
   },
   {
-   "name": "dgtlmoon/changedetection.io",
+   "name": "jaywcjlove/awesome-mac",
    "reason": {
-    "zh": "今日新增 55，未进前 50",
-    "en": "55 stars today, outside the top 50"
+    "zh": "macOS 软件合集（awesome 列表）",
+    "en": "Awesome-style list of macOS software"
    },
-   "stars_today": 55,
-   "url": "https://github.com/dgtlmoon/changedetection.io"
+   "stars_today": 68,
+   "url": "https://github.com/jaywcjlove/awesome-mac"
   },
   {
-   "name": "elder-plinius/T3MP3ST",
+   "name": "anthropics/claude-cookbooks",
    "reason": {
-    "zh": "自主攻击性红队平台，攻击性安全工具，不予收录",
-    "en": "Autonomous offensive red-teaming platform; not included"
+    "zh": "教程/示例笔记本合集，非单一工具",
+    "en": "Collection of tutorial notebooks and recipes, not a single tool"
    },
-   "stars_today": 242,
-   "url": "https://github.com/elder-plinius/T3MP3ST"
+   "stars_today": 73,
+   "url": "https://github.com/anthropics/claude-cookbooks"
   },
   {
-   "name": "ParadevAI/Paradev",
+   "name": "k1tbyte/Wand-Enhancer",
    "reason": {
-    "zh": "今日新增 56，未进前 50",
-    "en": "56 stars today, outside the top 50"
+    "zh": "用于绕过 WeMod 付费功能的修改工具，不收录",
+    "en": "Modification tool that unlocks paid WeMod features; not included"
    },
-   "stars_today": 56,
-   "url": "https://github.com/ParadevAI/Paradev"
+   "stars_today": 134,
+   "url": "https://github.com/k1tbyte/Wand-Enhancer"
   },
   {
-   "name": "vuejs/vue",
+   "name": "YuKongA/ghostlock-app",
    "reason": {
-    "zh": "Vue 2 旧版仓库，最近推送已超过一年",
-    "en": "Legacy Vue 2 repo; last push over a year ago"
+    "zh": "针对特定 CVE 的一键利用程序，不收录",
+    "en": "One-tap exploit for a specific CVE; not included"
    },
-   "stars_today": 169,
-   "url": "https://github.com/vuejs/vue"
-  },
-  {
-   "name": "Yu9191/wloc",
-   "reason": {
-    "zh": "修改 Apple 网络定位的规则脚本，非独立项目，不予收录",
-    "en": "Rules/scripts spoofing Apple network location; not included"
-   },
-   "stars_today": 112,
-   "url": "https://github.com/Yu9191/wloc"
-  },
-  {
-   "name": "byoungd/up",
-   "reason": {
-    "zh": "学习指南/文章合集，非工具",
-    "en": "Learning guide / article collection, not a tool"
-   },
-   "stars_today": 95,
-   "url": "https://github.com/byoungd/up"
-  },
-  {
-   "name": "mnfst/awesome-free-llm-apis",
-   "reason": {
-    "zh": "awesome 清单",
-    "en": "Awesome-style list"
-   },
-   "stars_today": 115,
-   "url": "https://github.com/mnfst/awesome-free-llm-apis"
-  },
-  {
-   "name": "orhun/git-cliff",
-   "reason": {
-    "zh": "今日新增 116，未进前 50",
-    "en": "116 stars today, outside the top 50"
-   },
-   "stars_today": 116,
-   "url": "https://github.com/orhun/git-cliff"
-  },
-  {
-   "name": "servo/servo",
-   "reason": {
-    "zh": "今日新增 55，未进前 50",
-    "en": "55 stars today, outside the top 50"
-   },
-   "stars_today": 55,
-   "url": "https://github.com/servo/servo"
-  },
-  {
-   "name": "oven-sh/bun",
-   "reason": {
-    "zh": "今日新增 119，未进前 50",
-    "en": "119 stars today, outside the top 50"
-   },
-   "stars_today": 119,
-   "url": "https://github.com/oven-sh/bun"
-  },
-  {
-   "name": "moby/moby",
-   "reason": {
-    "zh": "今日新增 123，未进前 50",
-    "en": "123 stars today, outside the top 50"
-   },
-   "stars_today": 123,
-   "url": "https://github.com/moby/moby"
-  },
-  {
-   "name": "gin-gonic/gin",
-   "reason": {
-    "zh": "今日新增 116，未进前 50",
-    "en": "116 stars today, outside the top 50"
-   },
-   "stars_today": 116,
-   "url": "https://github.com/gin-gonic/gin"
-  },
-  {
-   "name": "infiniflow/ragflow",
-   "reason": {
-    "zh": "今日新增 86，未进前 50",
-    "en": "86 stars today, outside the top 50"
-   },
-   "stars_today": 86,
-   "url": "https://github.com/infiniflow/ragflow"
-  },
-  {
-   "name": "spf13/cobra",
-   "reason": {
-    "zh": "今日新增 102，未进前 50",
-    "en": "102 stars today, outside the top 50"
-   },
-   "stars_today": 102,
-   "url": "https://github.com/spf13/cobra"
+   "stars_today": 60,
+   "url": "https://github.com/YuKongA/ghostlock-app"
   },
   {
    "name": "Lordog/dive-into-llms",
    "reason": {
-    "zh": "教程；且最近推送已超过一年",
+    "zh": "教程；最后推送超过一年",
     "en": "Tutorial; last push over a year ago"
    },
    "stars_today": 123,
    "url": "https://github.com/Lordog/dive-into-llms"
   },
   {
-   "name": "spring-projects/spring-boot",
+   "name": "elder-plinius/OBLITERATUS",
    "reason": {
-    "zh": "今日新增 55，未进前 50",
-    "en": "55 stars today, outside the top 50"
+    "zh": "今日新增 61，未进前 50",
+    "en": "61 stars today, outside the top 50"
    },
-   "stars_today": 55,
-   "url": "https://github.com/spring-projects/spring-boot"
+   "stars_today": 61,
+   "url": "https://github.com/elder-plinius/OBLITERATUS"
   },
   {
-   "name": "ashishps1/awesome-low-level-design",
+   "name": "spotDL/spotify-downloader",
    "reason": {
-    "zh": "面试准备资源合集",
-    "en": "Interview-prep resource collection"
+    "zh": "今日新增 75，未进前 50",
+    "en": "75 stars today, outside the top 50"
    },
-   "stars_today": 71,
-   "url": "https://github.com/ashishps1/awesome-low-level-design"
+   "stars_today": 75,
+   "url": "https://github.com/spotDL/spotify-downloader"
   },
   {
-   "name": "HD838A/remote-mic-app",
+   "name": "django/django",
    "reason": {
-    "zh": "今日新增 66，未进前 50",
-    "en": "66 stars today, outside the top 50"
+    "zh": "今日新增 93，未进前 50",
+    "en": "93 stars today, outside the top 50"
    },
-   "stars_today": 66,
-   "url": "https://github.com/HD838A/remote-mic-app"
+   "stars_today": 93,
+   "url": "https://github.com/django/django"
   },
   {
-   "name": "YuKongA/ghostlock-app",
+   "name": "awslabs/aidlc-workflows",
    "reason": {
-    "zh": "针对特定 CVE 的一键利用工具，不予收录",
-    "en": "One-tap exploit for a specific CVE; not included"
+    "zh": "今日新增 99，未进前 50",
+    "en": "99 stars today, outside the top 50"
    },
-   "stars_today": 50,
-   "url": "https://github.com/YuKongA/ghostlock-app"
+   "stars_today": 99,
+   "url": "https://github.com/awslabs/aidlc-workflows"
   },
   {
-   "name": "tiann/KernelSU",
+   "name": "Unleash/unleash",
    "reason": {
-    "zh": "今日新增 58，未进前 50",
-    "en": "58 stars today, outside the top 50"
+    "zh": "今日新增 63，未进前 50",
+    "en": "63 stars today, outside the top 50"
    },
-   "stars_today": 58,
-   "url": "https://github.com/tiann/KernelSU"
+   "stars_today": 63,
+   "url": "https://github.com/Unleash/unleash"
   },
   {
-   "name": "redis/redis",
+   "name": "lobehub/lobehub",
    "reason": {
-    "zh": "今日新增 77，未进前 50",
-    "en": "77 stars today, outside the top 50"
+    "zh": "今日新增 103，未进前 50",
+    "en": "103 stars today, outside the top 50"
    },
-   "stars_today": 77,
-   "url": "https://github.com/redis/redis"
+   "stars_today": 103,
+   "url": "https://github.com/lobehub/lobehub"
   },
   {
-   "name": "rawfilejson/awesome-osint-arsenal",
+   "name": "Fission-AI/OpenSpec",
    "reason": {
-    "zh": "awesome 工具清单",
-    "en": "Awesome-style tool list"
+    "zh": "今日新增 92，未进前 50",
+    "en": "92 stars today, outside the top 50"
    },
-   "stars_today": 53,
-   "url": "https://github.com/rawfilejson/awesome-osint-arsenal"
+   "stars_today": 92,
+   "url": "https://github.com/Fission-AI/OpenSpec"
   },
   {
-   "name": "omacom/omarchy",
+   "name": "sveltejs/svelte",
+   "reason": {
+    "zh": "今日新增 97，未进前 50",
+    "en": "97 stars today, outside the top 50"
+   },
+   "stars_today": 97,
+   "url": "https://github.com/sveltejs/svelte"
+  },
+  {
+   "name": "CapSoftware/Cap",
+   "reason": {
+    "zh": "今日新增 82，未进前 50",
+    "en": "82 stars today, outside the top 50"
+   },
+   "stars_today": 82,
+   "url": "https://github.com/CapSoftware/Cap"
+  },
+  {
+   "name": "sharkdp/fd",
+   "reason": {
+    "zh": "今日新增 106，未进前 50",
+    "en": "106 stars today, outside the top 50"
+   },
+   "stars_today": 106,
+   "url": "https://github.com/sharkdp/fd"
+  },
+  {
+   "name": "tokio-rs/tokio",
+   "reason": {
+    "zh": "今日新增 107，未进前 50",
+    "en": "107 stars today, outside the top 50"
+   },
+   "stars_today": 107,
+   "url": "https://github.com/tokio-rs/tokio"
+  },
+  {
+   "name": "rustdesk/rustdesk",
+   "reason": {
+    "zh": "今日新增 116，未进前 50",
+    "en": "116 stars today, outside the top 50"
+   },
+   "stars_today": 116,
+   "url": "https://github.com/rustdesk/rustdesk"
+  },
+  {
+   "name": "serde-rs/serde",
+   "reason": {
+    "zh": "今日新增 102，未进前 50",
+    "en": "102 stars today, outside the top 50"
+   },
+   "stars_today": 102,
+   "url": "https://github.com/serde-rs/serde"
+  },
+  {
+   "name": "denoland/deno",
+   "reason": {
+    "zh": "今日新增 84，未进前 50",
+    "en": "84 stars today, outside the top 50"
+   },
+   "stars_today": 84,
+   "url": "https://github.com/denoland/deno"
+  },
+  {
+   "name": "orhun/git-cliff",
    "reason": {
     "zh": "今日新增 101，未进前 50",
     "en": "101 stars today, outside the top 50"
    },
    "stars_today": 101,
+   "url": "https://github.com/orhun/git-cliff"
+  },
+  {
+   "name": "spf13/cobra",
+   "reason": {
+    "zh": "今日新增 63，未进前 50",
+    "en": "63 stars today, outside the top 50"
+   },
+   "stars_today": 63,
+   "url": "https://github.com/spf13/cobra"
+  },
+  {
+   "name": "kubernetes/kubernetes",
+   "reason": {
+    "zh": "今日新增 105，未进前 50",
+    "en": "105 stars today, outside the top 50"
+   },
+   "stars_today": 105,
+   "url": "https://github.com/kubernetes/kubernetes"
+  },
+  {
+   "name": "gin-gonic/gin",
+   "reason": {
+    "zh": "今日新增 82，未进前 50",
+    "en": "82 stars today, outside the top 50"
+   },
+   "stars_today": 82,
+   "url": "https://github.com/gin-gonic/gin"
+  },
+  {
+   "name": "microsoft/TypeScript",
+   "reason": {
+    "zh": "今日新增 87，未进前 50",
+    "en": "87 stars today, outside the top 50"
+   },
+   "stars_today": 87,
+   "url": "https://github.com/microsoft/TypeScript"
+  },
+  {
+   "name": "moby/moby",
+   "reason": {
+    "zh": "今日新增 86，未进前 50",
+    "en": "86 stars today, outside the top 50"
+   },
+   "stars_today": 86,
+   "url": "https://github.com/moby/moby"
+  },
+  {
+   "name": "multica-ai/multica",
+   "reason": {
+    "zh": "今日新增 85，未进前 50",
+    "en": "85 stars today, outside the top 50"
+   },
+   "stars_today": 85,
+   "url": "https://github.com/multica-ai/multica"
+  },
+  {
+   "name": "Gentleman-Programming/gentle-ai",
+   "reason": {
+    "zh": "今日新增 95，未进前 50",
+    "en": "95 stars today, outside the top 50"
+   },
+   "stars_today": 95,
+   "url": "https://github.com/Gentleman-Programming/gentle-ai"
+  },
+  {
+   "name": "dashdogy/MFG-Unlocker",
+   "reason": {
+    "zh": "今日新增 67，未进前 50",
+    "en": "67 stars today, outside the top 50"
+   },
+   "stars_today": 67,
+   "url": "https://github.com/dashdogy/MFG-Unlocker"
+  },
+  {
+   "name": "orailnoor/cross-platform-llm-client",
+   "reason": {
+    "zh": "今日新增 72，未进前 50",
+    "en": "72 stars today, outside the top 50"
+   },
+   "stars_today": 72,
+   "url": "https://github.com/orailnoor/cross-platform-llm-client"
+  },
+  {
+   "name": "Fincept-Corporation/FinceptTerminal",
+   "reason": {
+    "zh": "今日新增 50，未进前 50",
+    "en": "50 stars today, outside the top 50"
+   },
+   "stars_today": 50,
+   "url": "https://github.com/Fincept-Corporation/FinceptTerminal"
+  },
+  {
+   "name": "78/xiaozhi-esp32",
+   "reason": {
+    "zh": "今日新增 76，未进前 50",
+    "en": "76 stars today, outside the top 50"
+   },
+   "stars_today": 76,
+   "url": "https://github.com/78/xiaozhi-esp32"
+  },
+  {
+   "name": "tensorflow/tensorflow",
+   "reason": {
+    "zh": "今日新增 81，未进前 50",
+    "en": "81 stars today, outside the top 50"
+   },
+   "stars_today": 81,
+   "url": "https://github.com/tensorflow/tensorflow"
+  },
+  {
+   "name": "ggml-org/llama.cpp",
+   "reason": {
+    "zh": "今日新增 96，未进前 50",
+    "en": "96 stars today, outside the top 50"
+   },
+   "stars_today": 96,
+   "url": "https://github.com/ggml-org/llama.cpp"
+  },
+  {
+   "name": "termux/termux-app",
+   "reason": {
+    "zh": "今日新增 108，未进前 50",
+    "en": "108 stars today, outside the top 50"
+   },
+   "stars_today": 108,
+   "url": "https://github.com/termux/termux-app"
+  },
+  {
+   "name": "exelban/stats",
+   "reason": {
+    "zh": "今日新增 50，未进前 50",
+    "en": "50 stars today, outside the top 50"
+   },
+   "stars_today": 50,
+   "url": "https://github.com/exelban/stats"
+  },
+  {
+   "name": "gkd-kit/gkd",
+   "reason": {
+    "zh": "今日新增 93，未进前 50",
+    "en": "93 stars today, outside the top 50"
+   },
+   "stars_today": 93,
+   "url": "https://github.com/gkd-kit/gkd"
+  },
+  {
+   "name": "tiann/KernelSU",
+   "reason": {
+    "zh": "今日新增 82，未进前 50",
+    "en": "82 stars today, outside the top 50"
+   },
+   "stars_today": 82,
+   "url": "https://github.com/tiann/KernelSU"
+  },
+  {
+   "name": "RikkaApps/Shizuku",
+   "reason": {
+    "zh": "今日新增 115，未进前 50",
+    "en": "115 stars today, outside the top 50"
+   },
+   "stars_today": 115,
+   "url": "https://github.com/RikkaApps/Shizuku"
+  },
+  {
+   "name": "maxrave-dev/SimpMusic",
+   "reason": {
+    "zh": "今日新增 87，未进前 50",
+    "en": "87 stars today, outside the top 50"
+   },
+   "stars_today": 87,
+   "url": "https://github.com/maxrave-dev/SimpMusic"
+  },
+  {
+   "name": "microsoft/PowerToys",
+   "reason": {
+    "zh": "今日新增 75，未进前 50",
+    "en": "75 stars today, outside the top 50"
+   },
+   "stars_today": 75,
+   "url": "https://github.com/microsoft/PowerToys"
+  },
+  {
+   "name": "ShareX/ShareX",
+   "reason": {
+    "zh": "今日新增 99，未进前 50",
+    "en": "99 stars today, outside the top 50"
+   },
+   "stars_today": 99,
+   "url": "https://github.com/ShareX/ShareX"
+  },
+  {
+   "name": "omacom/omarchy",
+   "reason": {
+    "zh": "今日新增 87，未进前 50",
+    "en": "87 stars today, outside the top 50"
+   },
+   "stars_today": 87,
    "url": "https://github.com/omacom/omarchy"
   },
   {
@@ -3405,22 +3631,13 @@
    "url": "https://github.com/tw93/Mole"
   },
   {
-   "name": "AppFlowy-IO/AppFlowy",
+   "name": "liandu2024/Open-Box",
    "reason": {
-    "zh": "今日新增 74，未进前 50",
-    "en": "74 stars today, outside the top 50"
+    "zh": "今日新增 50，未进前 50",
+    "en": "50 stars today, outside the top 50"
    },
-   "stars_today": 74,
-   "url": "https://github.com/AppFlowy-IO/AppFlowy"
-  },
-  {
-   "name": "GopeedLab/gopeed",
-   "reason": {
-    "zh": "今日新增 58，未进前 50",
-    "en": "58 stars today, outside the top 50"
-   },
-   "stars_today": 58,
-   "url": "https://github.com/GopeedLab/gopeed"
+   "stars_today": 50,
+   "url": "https://github.com/liandu2024/Open-Box"
   },
   {
    "name": "hiddify/hiddify-app",
@@ -3430,61 +3647,70 @@
    },
    "stars_today": 54,
    "url": "https://github.com/hiddify/hiddify-app"
+  },
+  {
+   "name": "AppFlowy-IO/AppFlowy",
+   "reason": {
+    "zh": "今日新增 86，未进前 50",
+    "en": "86 stars today, outside the top 50"
+   },
+   "stars_today": 86,
+   "url": "https://github.com/AppFlowy-IO/AppFlowy"
   }
  ],
  "news": [
   {
-   "score": 82,
-   "type": "model_release",
+   "score": 84,
+   "type": "industry_event",
    "title": {
-    "zh": "Thinking Machines 发布 Inkling 2 Small，称居西方开源权重模型之首",
-    "en": "Thinking Machines releases Inkling 2 Small, claims top western open-weight model"
+    "zh": "Anthropic 顶着科技股抛售推进感恩节前 IPO，接受更低估值",
+    "en": "Anthropic presses ahead with pre-Thanksgiving IPO at a lower valuation"
    },
    "summary": {
-    "zh": "前 OpenAI CTO Mira Murati 创办的 Thinking Machines 发布 5940 亿参数的混合专家模型 Inkling 2 Small，称其在西方开源权重模型中排名第一。Latent Space 称其在 12T token 上训练 68 小时。",
-    "en": "Thinking Machines, the startup of former OpenAI CTO Mira Murati, released Inkling 2 Small, a 594B-parameter mixture-of-experts model it says tops western open-weight models. Latent Space reports it was trained in 68 hours on 12T tokens."
+    "zh": "Anthropic 仍计划上市，估值区间 1.25 万亿至 1.75 万亿美元，低于预期的 2 万亿，拟募资 800 亿至 1000 亿美元。",
+    "en": "Anthropic is pressing ahead with its IPO at a $1.25–1.75 trillion valuation, below the hoped-for $2 trillion, aiming to raise $80–100 billion."
    },
    "why": {
-    "zh": "西方开源权重阵营出现新的头部竞争者。",
-    "en": "A new heavyweight contender in the western open-weight field."
+    "zh": "AI 头部公司上市将重塑行业资本格局。",
+    "en": "A frontier-lab IPO would reshape AI capital markets."
    },
-   "heat": 2,
-   "published": "2026-11-06T13:25:09+00:00",
+   "heat": 1,
+   "published": "2026-11-07T17:37:25+00:00",
    "sources": [
     {
      "source": "The Decoder",
      "tier": "T2",
-     "url": "https://the-decoder.com/thinking-machines-inkling-2-small-claims-top-spot-among-western-open-weight-models/",
-     "title": "Thinking Machines' Inkling 2 Small claims top spot among western open-weight models",
-     "published": "2026-11-06T13:25:09+00:00"
-    },
-    {
-     "source": "Latent Space",
-     "tier": "T2",
-     "url": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/",
-     "title": "[AINews] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark",
-     "published": "2026-11-06T10:35:21+00:00"
+     "url": "https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/",
+     "title": "Anthropic pushes ahead with pre-Thanksgiving IPO despite tech selloff, accepts lower valuation",
+     "published": "2026-11-07T17:37:25+00:00"
     }
    ]
   },
   {
-   "score": 80,
+   "score": 82,
    "type": "industry_event",
    "title": {
-    "zh": "OpenAI 再融资 110 亿美元，估值达 1.25 万亿美元",
-    "en": "OpenAI reportedly raises another $11B at a $1.25T valuation"
+    "zh": "OpenAI 新一轮融资再进 110 亿美元，估值 1.25 万亿美元",
+    "en": "OpenAI raises another $11B at a $1.25 trillion valuation"
    },
    "summary": {
-    "zh": "据报道，OpenAI 在尚未结束的融资轮中又筹得 110 亿美元，估值 1.25 万亿美元，预计未来几周内完成。",
-    "en": "OpenAI has reportedly raised another $11 billion at a $1.25 trillion valuation in a round that is expected to close in the coming weeks."
+    "zh": "OpenAI 据报道首批募得 110 亿美元，估值 1.25 万亿美元，全轮可能增至 200 亿美元，尚未交割。",
+    "en": "OpenAI has reportedly raised $11 billion as the first tranche of a round valuing it at $1.25 trillion; the full round could reach $20 billion and has not closed."
    },
    "why": {
-    "zh": "估值数字显示 AI 头部公司的资本规模仍在快速抬升。",
-    "en": "The valuation shows capital flowing to top AI labs is still climbing fast."
+    "zh": "显示 AI 实验室融资规模仍在攀升。",
+    "en": "Shows AI-lab fundraising still scaling up."
    },
-   "heat": 2,
-   "published": "2026-11-06T22:53:46+00:00",
+   "heat": 3,
+   "published": "2026-11-07T09:45:23+00:00",
    "sources": [
+    {
+     "source": "The Decoder",
+     "tier": "T2",
+     "url": "https://the-decoder.com/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capital/",
+     "title": "OpenAI lands an $11 billion funding round, but has to court dentists for more capital",
+     "published": "2026-11-07T09:45:23+00:00"
+    },
     {
      "source": "TechCrunch · AI",
      "tier": "T2",
@@ -3502,116 +3728,55 @@
    ]
   },
   {
-   "score": 74,
-   "type": "industry_event",
-   "title": {
-    "zh": "Anthropic 1.5 万亿美元 IPO 遇阻，企业 AI 支出趋缓",
-    "en": "Anthropic’s $1.5T IPO meets resistance as AI spending stalls"
-   },
-   "summary": {
-    "zh": "据 The Decoder，投资者对 Anthropic 1.5 万亿美元估值提出异议，科技市场同时下跌。TechCrunch 引用 Ramp 数据称 AI 使用量仍在增长，但支出趋于停滞。",
-    "en": "The Decoder reports investors are pushing back on Anthropic’s $1.5T valuation amid a tech sell-off. TechCrunch, citing Ramp data, says AI usage keeps climbing but spending has stalled."
-   },
-   "why": {
-    "zh": "对 AI 公司上市估值与收入假设构成压力。",
-    "en": "Puts pressure on IPO valuations and revenue assumptions for AI companies."
-   },
-   "heat": 2,
-   "published": "2026-11-06T15:54:47+00:00",
-   "sources": [
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/anthropics-1-5-trillion-ipo-hits-resistance-as-investors-balk-at-valuation/",
-     "title": "Anthropic's $1.5 trillion IPO hits resistance as investors balk at valuation",
-     "published": "2026-11-06T11:38:17+00:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
-     "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
-     "published": "2026-11-06T15:54:47+00:00"
-    }
-   ]
-  },
-  {
-   "score": 72,
-   "type": "product_launch",
-   "title": {
-    "zh": "Claude 推出 Personal Finance，可连接银行账户分析支出",
-    "en": "Claude launches Personal Finance for analyzing spending via bank accounts"
-   },
-   "summary": {
-    "zh": "Anthropic 在 Claude 中加入 Personal Finance，用户通过 Plaid 连接银行卡账户，可就自己的财务状况提问。",
-    "en": "Anthropic added Personal Finance to Claude: users connect bank and card accounts through Plaid and ask questions about their finances."
-   },
-   "why": {
-    "zh": "AI 助手进入个人财务数据场景，需关注隐私与授权。",
-    "en": "AI assistants move into personal financial data, raising privacy and consent questions."
-   },
-   "heat": 2,
-   "published": "2026-11-06T11:33:13+00:00",
-   "sources": [
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/anthropic-adds-bank-account-access-to-claude-so-users-can-track-their-spending/",
-     "title": "Anthropic adds bank account access to Claude so users can track their spending",
-     "published": "2026-11-06T11:33:13+00:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
-     "title": "Claude can now analyze your spending with its new Personal Finance tool",
-     "published": "2026-11-05T18:00:00+00:00"
-    }
-   ]
-  },
-  {
-   "score": 72,
+   "score": 80,
    "type": "research_paper",
    "title": {
-    "zh": "METR：Anthropic 可能早在 7 月就越过自设的 AI 加速预警线",
-    "en": "METR: Anthropic may have crossed its own AI-acceleration warning threshold in July"
+    "zh": "METR 报告：Anthropic 用 AI 加速 AI 研发，模型进步速度约为一年前的两倍",
+    "en": "METR report: Anthropic automating AI development, models improving about twice as fast"
    },
    "summary": {
-    "zh": "非营利机构 METR 花 11 周审计 Anthropic 内部研究数据，认为模型研发速度大致翻倍。",
-    "en": "Nonprofit METR audited Anthropic’s internal research data for eleven weeks and concluded the pace of model development has roughly doubled."
+    "zh": "The Verge 报道称，Anthropic 用 AI 构建更强的 AI，其模型进步速度约为一年前的两倍，且几乎没有放缓迹象，引发研究者担忧。",
+    "en": "The Verge reports Anthropic is using AI to build more powerful AI, with models improving roughly twice as fast as a year ago and little sign of slowing, which alarms researchers."
    },
    "why": {
-    "zh": "第三方审计触及前沿实验室的自我约束承诺。",
-    "en": "A third-party audit tests a frontier lab’s self-imposed safety commitments."
+    "zh": "AI 自我加速研发是安全与治理讨论的核心问题。",
+    "en": "AI-accelerated AI R&D is central to safety and governance debates."
    },
-   "heat": 1,
-   "published": "2026-11-06T13:40:07+00:00",
+   "heat": 2,
+   "published": "2026-11-07T07:30:00-05:00",
    "sources": [
     {
-     "source": "The Decoder",
+     "source": "The Verge · AI",
      "tier": "T2",
-     "url": "https://the-decoder.com/metr-finds-anthropic-may-have-crossed-its-own-ai-acceleration-warning-threshold-back-in-july/",
-     "title": "METR finds Anthropic may have crossed its own AI acceleration warning threshold back in July",
-     "published": "2026-11-06T13:40:07+00:00"
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+     "title": "Why a new report on Anthropic automating AI development is alarming researchers",
+     "published": "2026-11-07T07:30:00-05:00"
+    },
+    {
+     "source": "Latent Space",
+     "tier": "T2",
+     "url": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/",
+     "title": "[AINews] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark",
+     "published": "2026-11-06T10:35:21+00:00"
     }
    ]
   },
   {
-   "score": 70,
+   "score": 74,
    "type": "model_release",
    "title": {
-    "zh": "Ripple-65B Preview：Apache 2.0 协议的美国开源智能体编码模型",
-    "en": "Ripple-65B Preview: Apache 2.0 open US model for agentic coding"
+    "zh": "Ricursive 发布 Ripple-65B Preview：Apache 2.0 开源美国模型",
+    "en": "Ricursive releases Ripple-65B Preview, an Apache 2.0 open US model"
    },
    "summary": {
-    "zh": "Ricursive Intelligence 发布 650 亿参数的开放权重模型 Ripple-65B Preview，称在开源模型中取得最高的智能体编码成绩，采用 Apache 2.0 许可。",
-    "en": "Ricursive Intelligence released Ripple-65B Preview, a 65B-parameter open-weight model under Apache 2.0 that it says tops open models on agentic coding."
+    "zh": "Ricursive Intelligence 发布 650 亿参数开源权重模型 Ripple-65B Preview，称其在 TerminalBench 上取得美国开源模型最高分。",
+    "en": "Ricursive Intelligence released the 65B open-weight Ripple-65B Preview, which it says tops open-source US models on TerminalBench."
    },
    "why": {
-    "zh": "宽松许可的开源编码模型可直接用于商用与本地部署。",
-    "en": "A permissively licensed open coding model can be used commercially and run locally."
+    "zh": "给出完全宽松许可的开源智能体编码模型新选择。",
+    "en": "A new permissively licensed open model for agentic coding."
    },
-   "heat": 2,
+   "heat": 1,
    "published": "2026-11-06T19:47:04+00:00",
    "sources": [
     {
@@ -3620,187 +3785,50 @@
      "url": "https://the-decoder.com/ripple-65b-preview-delivers-strong-agentic-coding-results-as-a-fully-apache-2-0-open-us-model/",
      "title": "Ripple-65B Preview delivers strong agentic coding results as a fully Apache 2.0 open US model",
      "published": "2026-11-06T19:47:04+00:00"
-    },
-    {
-     "source": "Latent Space",
-     "tier": "T2",
-     "url": "https://latent.space/p/ainews-it-s-swapping-season/",
-     "title": "[AINews] It's Swapping Season",
-     "published": "2026-11-05T06:24:09+00:00"
     }
    ]
   },
   {
-   "score": 68,
-   "type": "industry_event",
+   "score": 72,
+   "type": "research_paper",
    "title": {
-    "zh": "中期选举后数据中心遭反对，OpenAI 与 Meta 调整应对",
-    "en": "After midterms, data-center backlash prompts OpenAI and Meta responses"
+    "zh": "开源与闭源模型的网络攻击能力差距持续缩小",
+    "en": "The open–closed gap in cyber capabilities keeps shrinking"
    },
    "summary": {
-    "zh": "美国中期选举中选民就 41 项数据中心相关议案表态。OpenAI 宣布不再对数据中心项目采用保密协议，并发布社区承诺与算力园区政策蓝图；Meta 警告政治反弹可能令 AI 扩张更难。",
-    "en": "US voters decided 41 data-center ballot measures in the midterms. OpenAI said it is stepping back from NDAs for data-center projects and published a community compact and campus policy blueprint; Meta warned the backlash could make AI expansion harder."
+    "zh": "Vals AI 基准中，GPT-6 Sol Daybreak 在模拟企业网络中达成 80.8% 攻击目标，开源权重的 DeepSeek V4.1 Flash 达 72.8%。",
+    "en": "In the Vals AI benchmark, GPT-6 Sol Daybreak hits 80.8% of attack objectives in simulated corporate networks while open-weight DeepSeek V4.1 Flash reaches 72.8%."
    },
    "why": {
-    "zh": "算力基础设施的社区与政治阻力正成为 AI 扩张的现实约束。",
-    "en": "Local and political resistance is becoming a real constraint on AI compute build-out."
-   },
-   "heat": 3,
-   "published": "2026-11-06T18:00:00+00:00",
-   "sources": [
-    {
-     "source": "The Verge · AI",
-     "tier": "T2",
-     "url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
-     "title": "OpenAI is stepping back from NDAs for data center projects",
-     "published": "2026-11-05T19:37:56-05:00"
-    },
-    {
-     "source": "OpenAI News",
-     "tier": "T1",
-     "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
-     "title": "Setting a new standard for responsible AI infrastructure",
-     "published": "2026-11-05T02:00:00+00:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
-     "title": "Meta warns that election backlash against data centers could make AI expansion harder",
-     "published": "2026-11-05T19:12:39+00:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
-     "title": "How a Blue Wave midterm might reshape the AI industry",
-     "published": "2026-11-06T18:00:00+00:00"
-    },
-    {
-     "source": "The Verge · AI",
-     "tier": "T2",
-     "url": "https://www.theverge.com/podcast/1028731/2026-midterms-tech-ai-vergecast",
-     "title": "Big Tech lost big in the 2026 election",
-     "published": "2026-11-06T11:38:02-05:00"
-    }
-   ]
-  },
-  {
-   "score": 68,
-   "type": "model_release",
-   "title": {
-    "zh": "Gemini Omni 1.2 Flash 正式可用：视频片段延长至 15 秒，价格降 30%",
-    "en": "Gemini Omni 1.2 Flash goes GA: 15-second clips, 30% lower pricing"
-   },
-   "summary": {
-    "zh": "Google DeepMind 宣布 Gemini Omni 1.2 Flash 正式可用，可生成最长 15 秒的视频并分步编辑，价格下调 30%。",
-    "en": "Google DeepMind made Gemini Omni 1.2 Flash generally available: it generates clips up to 15 seconds, supports step-by-step editing, and costs 30% less."
-   },
-   "why": {
-    "zh": "视频生成变得更长、更便宜。",
-    "en": "Video generation gets longer and cheaper."
-   },
-   "heat": 2,
-   "published": "2026-11-05T19:05:31+00:00",
-   "sources": [
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/",
-     "title": "Google's Gemini Omni 1.2 Flash stretches AI video clips to 15 seconds and cuts pricing by 30 percent",
-     "published": "2026-11-05T19:05:31+00:00"
-    },
-    {
-     "source": "Google DeepMind",
-     "tier": "T1",
-     "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
-     "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-     "published": "2026-11-05T17:05:16+00:00"
-    }
-   ]
-  },
-  {
-   "score": 68,
-   "type": "model_release",
-   "title": {
-    "zh": "百度开源 2800 亿参数的 ERNIE 5.5 Flash Base 基础模型",
-    "en": "Baidu open-sources 280B-parameter ERNIE 5.5 Flash Base"
-   },
-   "summary": {
-    "zh": "百度发布 ERNIE 5.5 Flash Base，为 2800 亿参数的 MoE 模型，在 33.5 万亿 token 上预训练，刻意不做微调，供开发者自行调优。",
-    "en": "Baidu released ERNIE 5.5 Flash Base, a 280B-parameter MoE model pre-trained on 33.5T tokens and shipped deliberately without fine-tuning for developers to adapt."
-   },
-   "why": {
-    "zh": "提供未微调的大型开源底座，利于研究与定制。",
-    "en": "An un-tuned large open base model is useful for research and customization."
+    "zh": "开源模型的攻击能力逼近闭源，影响防御与监管思路。",
+    "en": "Open models closing in on closed ones in offensive ability affects defense and policy."
    },
    "heat": 1,
-   "published": "2026-11-05T17:56:41+00:00",
+   "published": "2026-11-07T15:35:50+00:00",
    "sources": [
     {
      "source": "The Decoder",
      "tier": "T2",
-     "url": "https://the-decoder.com/baidu-releases-ernie-5-5-flash-base-with-280-billion-parameters-as-an-open-source-foundation-model/",
-     "title": "Baidu releases ERNIE 5.5 Flash Base with 280 billion parameters as an open-source foundation model",
-     "published": "2026-11-05T17:56:41+00:00"
+     "url": "https://the-decoder.com/the-gap-between-open-and-closed-ai-models-in-cyber-capabilities-keeps-shrinking/",
+     "title": "The gap between open and closed AI models in cyber capabilities keeps shrinking",
+     "published": "2026-11-07T15:35:50+00:00"
     }
    ]
   },
   {
-   "score": 66,
-   "type": "model_release",
-   "title": {
-    "zh": "OpenAI 发布网络安全模型 GPT-6 Cyber",
-    "en": "OpenAI launches cybersecurity model GPT-6 Cyber"
-   },
-   "summary": {
-    "zh": "OpenAI 推出 GPT-6 Cyber，用于发现可利用漏洞、开发利用并建议补丁，训练使其保持在授权范围内。TechCrunch 追问这是否足以应对外界对 AI 实验室网络安全工作的审视。",
-    "en": "OpenAI introduced GPT-6 Cyber to find exploitable vulnerabilities, develop exploits and suggest patches, trained to stay within authorized scope. TechCrunch asks whether that is enough amid scrutiny of AI labs’ security work."
-   },
-   "why": {
-    "zh": "攻防两用的安全模型，同时把“守边界”作为卖点。",
-    "en": "A dual-use security model that makes staying in scope a headline feature."
-   },
-   "heat": 3,
-   "published": "2026-11-05T20:36:25+00:00",
-   "sources": [
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/openais-gpt-6-cyber-can-both-break-into-systems-and-propose-how-to-fix-them/",
-     "title": "OpenAIs GPT-6 Cyber can both break into systems and propose how to fix them",
-     "published": "2026-11-05T20:36:25+00:00"
-    },
-    {
-     "source": "OpenAI News",
-     "tier": "T1",
-     "url": "https://openai.com/index/introducing-gpt-6-cyber",
-     "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
-     "published": "2026-11-05T09:00:00+00:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
-     "title": "OpenAI released a new cybersecurity model. Is that enough?",
-     "published": "2026-11-05T19:06:12+00:00"
-    }
-   ]
-  },
-  {
-   "score": 66,
+   "score": 70,
    "type": "product_launch",
    "title": {
-    "zh": "Perplexity 推出常驻智能体 Teammates",
+    "zh": "Perplexity 推出常驻 AI 智能体 Teammates",
     "en": "Perplexity launches always-on agents “Teammates”"
    },
    "summary": {
-    "zh": "Perplexity 推出 Teammates，在各自的虚拟机上自主推进长期项目的常驻智能体，需要 Max 套餐。",
-    "en": "Perplexity launched “Teammates”, always-on agents that work through ongoing projects on their own virtual machines; it requires the Max plan."
+    "zh": "Teammates 在各自的虚拟机上持续推进项目，需要每月 200 美元的 Max 套餐，价格高于同类产品。",
+    "en": "Teammates work on ongoing projects on their own virtual machines and require the $200/month Max plan, well above similar offerings."
    },
    "why": {
-    "zh": "搜索公司转向长期运行的自主智能体。",
-    "en": "A search company moves into long-running autonomous agents."
+    "zh": "常驻云端智能体成为各家产品的新方向。",
+    "en": "Always-on cloud agents are becoming a product battleground."
    },
    "heat": 1,
    "published": "2026-11-06T16:47:28+00:00",
@@ -3815,19 +3843,100 @@
    ]
   },
   {
-   "score": 64,
-   "type": "product_launch",
+   "score": 68,
+   "type": "research_paper",
    "title": {
-    "zh": "Meta Muse 推出 Spaces，并支持与 Muse 头像视频通话",
-    "en": "Meta adds Spaces to Muse and video chat with the Muse avatar"
+    "zh": "研究：AI 审计员能抓住多数智能体违规，但误报泛滥",
+    "en": "Study: AI auditors catch most agent misbehavior but flood reviewers with false alarms"
    },
    "summary": {
-    "zh": "Meta 为 Muse 加入 Spaces，让助手构建定制的应用式界面；美国用户还可与 Muse 动画头像视频通话。",
-    "en": "Meta added “Spaces” to Muse so the assistant can build customized app-like experiences, and US users can now video chat with a Muse animated avatar."
+    "zh": "Anthropic 研究员 Andy Hall 的研究显示，GPT-5 能发现约 98% 的奖励投机案例，但更详尽的审计会产生大量误报。",
+    "en": "A study by Anthropic researcher Andy Hall finds GPT-5 caught about 98% of reward-hacking cases, but more exhaustive auditing floods reviewers with false alarms."
    },
    "why": {
-    "zh": "消费级助手向可自建界面与拟人交互扩展。",
-    "en": "Consumer assistants expand toward self-built interfaces and avatar interaction."
+    "zh": "为智能体监督的可行性与成本提供数据。",
+    "en": "Gives data on the feasibility and cost of agent oversight."
+   },
+   "heat": 1,
+   "published": "2026-11-07T16:56:38+00:00",
+   "sources": [
+    {
+     "source": "The Decoder",
+     "tier": "T2",
+     "url": "https://the-decoder.com/ai-auditors-catch-most-agent-misbehavior-but-flood-reviewers-with-false-alarms-new-study-finds/",
+     "title": "AI auditors catch most agent misbehavior but flood reviewers with false alarms, new study finds",
+     "published": "2026-11-07T16:56:38+00:00"
+    }
+   ]
+  },
+  {
+   "score": 66,
+   "type": "research_paper",
+   "title": {
+    "zh": "九个 AI 智能体挑战国家实验室开放问题，无一达到专家标准",
+    "en": "Nine AI agents tackle national-lab open questions; none meets the experts’ bar"
+   },
+   "summary": {
+    "zh": "“Into the Unknown”基准让九个智能体研究美国国家实验室的开放问题，135 份提交没有一份满足全部要求。",
+    "en": "The “Into the Unknown” benchmark had nine agents tackle open questions from U.S. national labs; none of 135 submissions met all requirements."
+   },
+   "why": {
+    "zh": "说明自主科研智能体距离专家水平仍有差距。",
+    "en": "Shows autonomous research agents still fall short of expert level."
+   },
+   "heat": 1,
+   "published": "2026-11-07T11:13:42+00:00",
+   "sources": [
+    {
+     "source": "The Decoder",
+     "tier": "T2",
+     "url": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/",
+     "title": "Nine AI agents tried autonomous research on open questions from US national labs and none passed the experts' bar",
+     "published": "2026-11-07T11:13:42+00:00"
+    }
+   ]
+  },
+  {
+   "score": 64,
+   "type": "research_paper",
+   "title": {
+    "zh": "Nous Research：某些中国模型的政治宣传只是“薄薄一层”，微调即可去除",
+    "en": "Nous Research: propaganda in some Chinese models is a thin layer fine-tuning can strip"
+   },
+   "summary": {
+    "zh": "Nous 重训阿里 Qwen3.8-27B 得到 Arete-27B，宣传倾向率从 22% 降至不足 1%，通用能力基本保持。",
+    "en": "Nous retrained Alibaba’s Qwen3.8-27B into Arete-27B, cutting the propaganda rate from 22% to under 1% while largely keeping general capability."
+   },
+   "why": {
+    "zh": "影响对开源模型对齐与偏见可控性的判断。",
+    "en": "Bears on how controllable bias and alignment are in open models."
+   },
+   "heat": 1,
+   "published": "2026-11-07T12:32:45+00:00",
+   "sources": [
+    {
+     "source": "The Decoder",
+     "tier": "T2",
+     "url": "https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/",
+     "title": "State propaganda in some Chinese AI models is only \"a thin layer\" that fine-tuning can strip away",
+     "published": "2026-11-07T12:32:45+00:00"
+    }
+   ]
+  },
+  {
+   "score": 62,
+   "type": "product_launch",
+   "title": {
+    "zh": "Meta 为 Muse 推出 Spaces，让智能体生成定制的类应用界面",
+    "en": "Meta adds Spaces to Muse, letting the agent build custom app-like views"
+   },
+   "summary": {
+    "zh": "Muse 的 Spaces 可让 AI 助手构建购物中心、学校仪表盘、音乐追踪等定制的类应用体验。",
+    "en": "Muse’s Spaces lets the assistant build custom app-like experiences such as a shopping hub, school dashboard or music tracker."
+   },
+   "why": {
+    "zh": "助手从对话走向按需生成界面。",
+    "en": "Assistants are moving from chat to generating interfaces on demand."
    },
    "heat": 2,
    "published": "2026-11-06T18:44:20+00:00",
@@ -3845,40 +3954,6 @@
      "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
      "title": "Meta’s Muse AI can create custom ‘spaces’ for the version of the app you need right now",
      "published": "2026-11-06T13:10:10-05:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/",
-     "title": "Meta says US users can now video chat with their Muse AI avatar",
-     "published": "2026-11-05T19:48:28+00:00"
-    }
-   ]
-  },
-  {
-   "score": 62,
-   "type": "model_release",
-   "title": {
-    "zh": "NVIDIA 发布 Cosmos 3 开放模型，用于交互式世界模拟",
-    "en": "NVIDIA releases Cosmos 3 open models for interactive world simulation"
-   },
-   "summary": {
-    "zh": "NVIDIA 在 Hugging Face 发布新的 Cosmos 3 开放模型，面向交互式世界模拟。",
-    "en": "NVIDIA published new Cosmos 3 open models on Hugging Face for interactive world simulation."
-   },
-   "why": {
-    "zh": "为机器人与仿真提供开放的世界模型底座。",
-    "en": "Offers an open world-model base for robotics and simulation."
-   },
-   "heat": 1,
-   "published": "2026-11-05T19:35:16+00:00",
-   "sources": [
-    {
-     "source": "Hugging Face Blog",
-     "tier": "T1",
-     "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
-     "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
-     "published": "2026-11-05T19:35:16+00:00"
     }
    ]
   },
@@ -3886,29 +3961,29 @@
    "score": 60,
    "type": "industry_event",
    "title": {
-    "zh": "Palo Alto Networks 拟以 5 亿美元收购 AI 智能体安全初创 Clutch",
-    "en": "Palo Alto Networks in talks to buy agent-security startup Clutch for $500M"
+    "zh": "Ramp 数据：AI 支出趋于停滞，而 Anthropic 临近 IPO",
+    "en": "Ramp data: AI spending stalls as Anthropic nears its IPO"
    },
    "summary": {
-    "zh": "据消息人士，Palo Alto Networks 正洽谈以约 5 亿美元收购 Clutch，后者上次估值为 8500 万美元。",
-    "en": "Per a source, Palo Alto Networks is in talks to buy Clutch for about $500M; Clutch was last valued at $85M."
+    "zh": "Ramp 数据显示 AI 使用量仍在攀升但支出停滞，大客户的降价与成本控制可能挑战投资者对 AI 高增长的假设。",
+    "en": "Ramp data shows AI usage still climbing but spending stalled; price cuts and cost controls among top spenders could challenge hypergrowth assumptions."
    },
    "why": {
-    "zh": "智能体安全成为并购热点。",
-    "en": "Agent security is becoming an M&A hot spot."
+    "zh": "为 AI 估值与需求判断提供反向信号。",
+    "en": "A counter-signal for AI valuation and demand narratives."
    },
    "heat": 1,
-   "published": "2026-11-06T06:28:32+00:00",
+   "published": "2026-11-06T15:54:47+00:00",
    "sources": [
     {
      "source": "TechCrunch · AI",
      "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
-     "title": "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
-     "published": "2026-11-06T06:28:32+00:00"
+     "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+     "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+     "published": "2026-11-06T15:54:47+00:00"
     }
    ]
   }
  ],
- "news_scanned": 83
+ "news_scanned": 54
 }
