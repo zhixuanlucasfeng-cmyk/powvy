@@ -67,3 +67,9 @@ Open [the local page](http://127.0.0.1:8765/). Press `Ctrl+C` to stop the server
 - `csm.png`: transparent illustration in the About section.
 
 GitHub Pages publishes from the root of `main` and updates after a push. Keep the images alongside the HTML so relative paths work. Fonts and GitHub star counts need an internet connection; no GitHub token is included in the frontend.
+
+## Website AI chat / 网站 AI 聊天
+
+The Contact section and floating chat button open a bilingual AI assistant using public project information. It follows the site language and links to the existing WhatsApp contact for a human reply. It does not send messages on Lucas’s behalf.
+
+「交流」和悬浮聊天入口已接入中英双语 AI 助手，只使用公开项目资料；需要本人回复时引导至 WhatsApp，不自动转发聊天。服务配置、限流和测试方法见 [chat-api/README.md](chat-api/README.md)。

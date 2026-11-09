@@ -1,0 +1,8 @@
+{
+  "name": "powvy-site-chat",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "ai": {"binding": "AI"},
+  "observability": {"enabled": false},
+  "d1_databases": [{"binding":"DB","database_name":"powvy-site-chat","database_id":"7f8da002-8524-4fff-b84f-56ee5e0b3978"}]
+}

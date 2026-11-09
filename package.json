@@ -1,0 +1,1 @@
+{"name":"powvy-personal-site","private":true,"scripts":{"test:chat":"node --test tests/chat-api.test.mjs","test:chat-ui":"node tests/chat-ui.mjs","deploy:chat":"wrangler deploy --config chat-api/wrangler.jsonc"},"devDependencies":{"playwright-core":"^1.64.1","wrangler":"^4.154.0"}}

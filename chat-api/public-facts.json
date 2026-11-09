@@ -1,0 +1,90 @@
+{
+  "owner": "Lucas (Powvy), a student and developer based in Dubai. Interests: AI, building products, badminton. Only the public information below is available.",
+  "contact": "For personal replies or collaboration: https://wa.me/8618707737002 . GitHub: https://github.com/zhixuanlucasfeng-cmyk . Never say a message has been delivered, a meeting booked or a quote agreed.",
+  "service": "Public website offers multilingual AI customer service deployment for product businesses: product questions, lead capture, price/inventory rules and human handoff; Chinese, English and French. Specific scope, prices, timelines and availability must be confirmed directly with Lucas.",
+  "projects": [
+    {
+      "name": "Powvy Badminton",
+      "description": "面向阿联酋球友的羽毛球拍信息与选购工具，整合规格、球友评分、价格比较和二手市场。",
+      "url": "https://powvybadminton.com/"
+    },
+    {
+      "name": "JC Sports Day Scoring",
+      "description": "为 Jumeirah College 运动会开发的全栈计分系统，集中管理赛事、选手、成绩和学院积分。",
+      "url": "https://jc-sports-day-scoring.vercel.app/"
+    },
+    {
+      "name": "Powvy 热榜",
+      "description": "每天自动扫 GitHub Trending，筛掉合集和刷星项目，读完 README 给 50 个项目打分、分类。",
+      "url": "https://powvy.org/trending/index.html"
+    },
+    {
+      "name": "Powvy Habit",
+      "description": "反假性自律的个人成长工具：从任务负荷到专注与生活记录，把计划放回真实的一天。",
+      "url": "https://zhixuanlucasfeng-cmyk.github.io/liangli/"
+    },
+    {
+      "name": "Chainsaw Man Philosophy",
+      "description": "围绕《电锯人》的中文角色百科与藤本树作品哲学解读网站。",
+      "url": "https://zhixuanlucasfeng-cmyk.github.io/Chainsaw-man-philosophy/"
+    },
+    {
+      "name": "A-Level Survival Bureau",
+      "description": "本地优先的 A-Level 学习工作台，记录练习证据、安排学习时间并追踪复习。",
+      "url": "https://alevel-survival-bureau.vercel.app/"
+    },
+    {
+      "name": "Powvy AI Agent",
+      "description": "基于 Power 的本地编码控制台：登记项目、选择 Claude Code 或 Codex，按任务要求与验收标准推进代码工作。",
+      "url": "https://github.com/zhixuanlucasfeng-cmyk/power",
+      "setup": "REQUIRED: The user must separately install and sign into each underlying Agent CLI (Claude Code, Codex, Hermes or opencode) they want to use. Power only organizes these tools; it does NOT replace their installation, accounts or service. 必须自行安装并登录要使用的 Agent CLI，Power 不代替它们的安装和账号。"
+    },
+    {
+      "name": "Power",
+      "description": "把 Claude Code、Codex、Hermes、opencode 等本机 Agent 放进同一个桌面 App，组成一支会记事、会学技能的 AI 小队。",
+      "url": "https://github.com/zhixuanlucasfeng-cmyk/power",
+      "setup": "REQUIRED: The user must separately install and sign into each underlying Agent CLI (Claude Code, Codex, Hermes or opencode) they want to use. Power only organizes these tools; it does NOT replace their installation, accounts or service. 必须自行安装并登录要使用的 Agent CLI，Power 不代替它们的安装和账号。"
+    },
+    {
+      "name": "DryRun",
+      "description": "Cambridge 计算机科学复习工具：追踪表、逻辑门、伪代码转换，单文件、零依赖、可离线。",
+      "url": "https://dryruncs.com/"
+    },
+    {
+      "name": "Rest Solar Agent",
+      "description": "给喀麦隆光伏公司做的中英法三语 AI 客服，能查库存报价，也能一键转人工。",
+      "url": "https://rest-solar-agent.onrender.com/"
+    },
+    {
+      "name": "Claude Usage",
+      "description": "看清今天在 Claude Code、Codex、DeepSeek 上花了多少 token 和多少钱。",
+      "url": "https://github.com/zhixuanlucasfeng-cmyk/claude-usage"
+    },
+    {
+      "name": "Powvy Note",
+      "description": "鼠标移到屏幕顶部，便签就从 Mac 刘海里落下来；Windows 版从顶部小黑条展开。每条笔记都是普通 .md 文件。",
+      "url": "https://github.com/zhixuanlucasfeng-cmyk/powvy-note",
+      "usage": "Hover at the top of the Mac screen to open notes; use the pin to keep it open. Supports Markdown preview and task checkboxes. Notes are normal .md files."
+    },
+    {
+      "name": "Colorbook",
+      "description": "没有广告的数字填色 App：任意照片一键变成像素填色画。",
+      "url": "https://zhixuanlucasfeng-cmyk.github.io/colorbook/"
+    },
+    {
+      "name": "Contract",
+      "description": "一把主密钥调用所有 Agent 工具：搜索、抓取、金融、社交数据，服务商挂了自动切换。",
+      "url": "https://github.com/zhixuanlucasfeng-cmyk/contract"
+    },
+    {
+      "name": "Legend of 4P Vedundi",
+      "description": "我写的中英双语暗黑文学网络小说《4p维敦帝的故事》，附带阅读站。",
+      "url": "https://zhixuanlucasfeng-cmyk.github.io/legend-of-4p-vedundi/"
+    },
+    {
+      "name": "Camaroom Web",
+      "description": "Rest Solar 喀麦隆公司官网：产品介绍、项目图库和联系方式。",
+      "url": "https://zhixuanlucasfeng-cmyk.github.io/camaroom-web/"
+    }
+  ]
+}
