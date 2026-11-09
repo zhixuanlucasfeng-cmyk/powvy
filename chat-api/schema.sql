@@ -1,2 +1,9 @@
 CREATE TABLE IF NOT EXISTS limits (key TEXT PRIMARY KEY, n INTEGER NOT NULL, expires INTEGER NOT NULL);
 CREATE INDEX IF NOT EXISTS limits_expiry ON limits(expires);
+CREATE TABLE IF NOT EXISTS messages (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ submission_id TEXT NOT NULL UNIQUE,
+ name TEXT NOT NULL, contact TEXT NOT NULL, message TEXT NOT NULL,
+ transcript TEXT NOT NULL DEFAULT '[]', lang TEXT NOT NULL, created INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS messages_created ON messages(created);

@@ -73,3 +73,9 @@ GitHub Pages publishes from the root of `main` and updates after a push. Keep th
 The Contact section and floating chat button open a bilingual AI assistant using public project information. It follows the site language and links to the existing WhatsApp contact for a human reply. It does not send messages on Lucas’s behalf.
 
 「交流」和悬浮聊天入口已接入中英双语 AI 助手，只使用公开项目资料；需要本人回复时引导至 WhatsApp，不自动转发聊天。服务配置、限流和测试方法见 [chat-api/README.md](chat-api/README.md)。
+
+### 访客留言 / Visitor messages
+
+聊天窗口的「给 Lucas 留言」可保存联系方式和留言，访客可选择附上对话；需主动同意提交。普通聊天不自动保存。管理员在 `/inbox.html` 输入私人密码查看和删除，密码不在仓库中。留言保留约 180 天，不自动发送回复。
+
+Use **Leave Lucas a message** in the chat to submit contact details and a message, with an optional conversation attachment and explicit consent. Regular chats are not saved. The password-protected `/inbox.html` lets the owner read and delete submissions. Messages are retained for about 180 days; no automatic replies are sent.

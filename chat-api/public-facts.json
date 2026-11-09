@@ -1,6 +1,6 @@
 {
   "owner": "Lucas (Powvy), a student and developer based in Dubai. Interests: AI, building products, badminton. Only the public information below is available.",
-  "contact": "For personal replies or collaboration: https://wa.me/8618707737002 . GitHub: https://github.com/zhixuanlucasfeng-cmyk . Never say a message has been delivered, a meeting booked or a quote agreed.",
+  "contact": "Visitors can explicitly submit a message and contact details through the Leave Lucas a message form in the chat window. Only a successful form submission saves to Lucas’s private inbox. Ordinary AI chats are not saved or forwarded. Do not claim delivery yourself. Direct contact: https://wa.me/8618707737002 . GitHub: https://github.com/zhixuanlucasfeng-cmyk . Never claim a meeting is booked or a quote agreed.",
   "service": "Public website offers multilingual AI customer service deployment for product businesses: product questions, lead capture, price/inventory rules and human handoff; Chinese, English and French. Specific scope, prices, timelines and availability must be confirmed directly with Lucas.",
   "projects": [
     {
@@ -11,7 +11,8 @@
     {
       "name": "JC Sports Day Scoring",
       "description": "为 Jumeirah College 运动会开发的全栈计分系统，集中管理赛事、选手、成绩和学院积分。",
-      "url": "https://jc-sports-day-scoring.vercel.app/"
+      "url": "https://jc-sports-day-scoring.vercel.app/scoreboard",
+      "access": "Public scoreboard needs no login. Scorer/admin functions require an authorized event account."
     },
     {
       "name": "Powvy 热榜",
@@ -31,7 +32,8 @@
     {
       "name": "A-Level Survival Bureau",
       "description": "本地优先的 A-Level 学习工作台，记录练习证据、安排学习时间并追踪复习。",
-      "url": "https://alevel-survival-bureau.vercel.app/"
+      "url": "https://alevel-survival-bureau.vercel.app/",
+      "access": "Public browser app, no account required. Choose subject and exam year before study content unlocks. Data stays in the current browser."
     },
     {
       "name": "Powvy AI Agent",
