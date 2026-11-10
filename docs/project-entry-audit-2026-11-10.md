@@ -30,3 +30,16 @@ Checked all 16 personal-site product detail routes in Chinese and English; 17 di
 - Source-only local apps now explicitly say installation is required; a GitHub repository is not presented as a running web app.
 - A-Level rendered successfully in this audit. Its earlier intermittent connection issue and reported school-network blank page remain unverified on the affected computer.
 - No school-network restrictions, certificate checks, or browser security controls were bypassed.
+
+## JC public gateway follow-up
+
+- Published `https://jc.powvy.org/scoreboard` through the fixed-origin Worker in `project-gateway/`. It fetches the existing public Vercel production deployment; no database migration or protection changes.
+- Chrome rendered real house standings, the scorer login page, and redirected unauthenticated `/events` to `/login`. Mobile width and public-page navigation checked. No real scores edited.
+- Vercel replaces `X-Forwarded-Host`, which initially broke Next Server Actions. The gateway translates only an exact same-origin Origin to its fixed upstream; foreign/null origins are preserved. Regression tests cover this boundary, auth status/cookies, redirects and unavailable responses.
+- School Wi-Fi still requires verification on the affected visitor's computer. A successful local check does not guarantee every network.
+
+## Rest Solar remains blocked
+
+- The current company website uses `rest-solar-agent-cm.onrender.com`, while the old portfolio entry uses `rest-solar-agent.onrender.com`.
+- Direct connections time out here. A test Worker targeting the current CM backend receives HTTP 429 with `cf-mitigated: challenge`, not a working chat application. It has not been linked from the portfolio or assigned a public custom domain.
+- Render CLI credentials have expired (API 401). Requested owner reauthentication before inspecting service health/configuration. No secrets copied, challenges bypassed, login protections removed, or customer data changed.

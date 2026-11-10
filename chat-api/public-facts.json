@@ -11,8 +11,8 @@
     {
       "name": "JC Sports Day Scoring",
       "description": "为 Jumeirah College 运动会开发的全栈计分系统，集中管理赛事、选手、成绩和学院积分。",
-      "url": "https://jc-sports-day-scoring.vercel.app/scoreboard",
-      "access": "Public scoreboard needs no login. Scorer/admin functions require an authorized event account. On 10 Nov 2026 the website connection timed out in testing. Do not guarantee reachability. Public source: https://github.com/zhixuanlucasfeng-cmyk/jc-sports-day ."
+      "url": "https://jc.powvy.org/scoreboard",
+      "access": "Public scoreboard needs no login. Scorer/admin functions require an authorized event account. Verified on 10 Nov 2026: the new jc.powvy.org entry displays the live scoreboard and sign-in page. School Wi-Fi access still needs confirmation from the visitor. Public source: https://github.com/zhixuanlucasfeng-cmyk/jc-sports-day ."
     },
     {
       "name": "Powvy 热榜",

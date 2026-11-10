@@ -1,0 +1,28 @@
+{
+  "name": "powvy-project-gateway",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "observability": {
+    "enabled": false
+  },
+  "env": {
+    "jc": {
+      "name": "powvy-jc-site",
+      "vars": {
+        "UPSTREAM_HOST": "jc-sports-day-scoring.vercel.app"
+      },
+      "routes": [
+        {
+          "pattern": "jc.powvy.org",
+          "custom_domain": true
+        }
+      ]
+    },
+    "solar": {
+      "name": "powvy-solar-agent-site",
+      "vars": {
+        "UPSTREAM_HOST": "rest-solar-agent-cm.onrender.com"
+      }
+    }
+  }
+}
