@@ -1,7 +1,7 @@
 import {chromium} from 'playwright-core';import assert from 'node:assert/strict';
 const b=await chromium.launch({channel:'chrome'});
 try{const p=await b.newPage({viewport:{width:390,height:844}});let requests=[];p.on('requestfailed',r=>console.log('network:',r.url(),r.failure()?.errorText));
-await p.route('https://jc-sports-day-scoring.vercel.app/**',async r=>{requests.push(r.request().method());await r.abort('connectionfailed')});
+await p.route('https://jc.powvy.org/**',async r=>{requests.push(r.request().method());await r.abort('connectionfailed')});
 await p.route('https://alevel-survival-bureau.vercel.app/**',async r=>{requests.push(r.request().method());await r.fulfill({status:200,body:'Filter or application page'})});
 await p.route('https://rest-solar-agent.onrender.com/**',async r=>{requests.push(r.request().method());await r.abort('connectionfailed')});
 await p.goto('http://127.0.0.1:8778/connection.html');await p.locator('#run').click();await p.waitForFunction(()=>!document.querySelector('#run').disabled);const text=await p.locator('#report').innerText();assert.match(text,/HTTP 200/);assert.match(text,/FAILED/);assert.match(text,/HTTP response received; status and page content cannot be inspected/);assert.match(text,/NOT proof/);assert.deepEqual(requests,['HEAD','HEAD','HEAD']);assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await p.locator('#language').click();await p.screenshot({path:'/tmp/powvy-connection-mobile.png'});
