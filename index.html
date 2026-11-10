@@ -678,9 +678,9 @@ const products = [
   { id:'dryrun', name:'DryRun', tag:'CIE 计算机复习', url:'https://dryruncs.com',
     desc:'Cambridge 计算机科学复习工具：追踪表、逻辑门、伪代码转换，单文件、零依赖、可离线。',
     features:['伪代码追踪表模拟器 + 逻辑门真值表与电路图','结构化英语 / 追踪表 / 流程图 → 伪代码','练习模式：自动出题、自动批改'] },
-  { id:'restsolar', name:'Rest Solar Agent', tag:'AI 客服', url:'https://solar-agent.powvy.org',
+  { id:'restsolar', name:'Rest Solar Agent', tag:'AI 客服', url:'https://solar-agent.powvy.org/chat',
     desc:'给喀麦隆光伏公司做的中英法三语 AI 客服，能查库存报价，也能一键转人工。',
-    links:[{name:'客服网站',url:'https://solar-agent.powvy.org'},{name:'GitHub · 项目源码',url:GH+'rest-solar-agent'}],
+    links:[{name:'客服网站',url:'https://solar-agent.powvy.org/chat'},{name:'备用直达入口',url:'https://rest-solar-agent-cm.onrender.com/chat'},{name:'GitHub · 项目源码',url:GH+'rest-solar-agent'}],
     features:['规则引擎护栏：不乱报价、自动算 19.25% 增值税','四国多租户后台：喀麦隆 / 尼日利亚 / 苏丹 / 马里','真人坐席接管：等待队列 + 实时对话'] },
   { id:'usage', name:'Claude Usage', tag:'Token 可视化', url: GH + 'claude-usage',
     desc:'看清今天在 Claude Code、Codex、DeepSeek 上花了多少 token 和多少钱。',
@@ -887,7 +887,7 @@ const EN = {
     dryrun: { tag:'CIE CS revision', desc:'A Cambridge Computer Science revision tool: trace tables, logic gates and pseudocode conversion. One file, zero dependencies, works offline.',
       features:['Pseudocode trace-table simulator + logic-gate truth tables and circuits','Structured English / trace table / flowchart → pseudocode','Practice mode with generated, auto-marked questions'] },
     restsolar: { tag:'AI customer service', desc:'A trilingual (EN / FR / ZH) AI support agent for a solar company in Cameroon. It answers stock and price questions and hands off to a human in one tap.',
-      links:[{name:'Support website',url:'https://solar-agent.powvy.org'},{name:'GitHub · Source code',url:GH+'rest-solar-agent'}],
+      links:[{name:'Support website',url:'https://solar-agent.powvy.org/chat'},{name:'Direct service · Backup',url:'https://rest-solar-agent-cm.onrender.com/chat'},{name:'GitHub · Source code',url:GH+'rest-solar-agent'}],
       features:['Rule-engine guardrails: never invents prices, adds 19.25% VAT automatically','Multi-country admin: Cameroon / Nigeria / Sudan / Mali','Live-agent takeover with a waiting queue and real-time chat'] },
     usage: { tag:'Token dashboard', desc:'See exactly how many tokens — and how much money — you spent today on Claude Code, Codex and DeepSeek.',
       features:['CLI + local dashboard + macOS desktop widget','Limit forecast: where your plan limits land at reset at today\'s pace, and when you\'d run out','7-day trend chart + Chainsaw Man / Reze themes'] },
@@ -1080,6 +1080,7 @@ function renderStars() {
 }
 function projectAccess(p) {
   const en = lang === 'en';
+  if(p.id==='restsolar') return {badge:en?'Website · Intermittent availability':'网站 · 偶发繁忙',note:en?'The chat works, but intermittent rate limits and timeouts were observed on 10 Nov 2026. If unavailable, try again later or use the direct service link below.':'2026 年 11 月 10 日复查：聊天可用，但观察到间歇性限流与超时。如遇繁忙，请稍后再试，或尝试下方备用直达入口。'};
   if (p.url.startsWith('https://github.com/')) return {
     badge: en ? 'Source · Installation required' : '源码 · 需要安装',
     note: en ? 'This is a locally installed tool. The link opens its source and setup instructions, not an online app.' : '这是需要在本机安装的工具。入口提供源码与安装说明，不是在线运行的网页应用。'

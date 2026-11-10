@@ -16,3 +16,9 @@ test('translate only exact same-origin requests, never null or foreign origins',
  await proxy(new Request('https://jc.powvy.org/login',{method:'POST',headers:{Origin:origin}}),'jc-sports-day-scoring.vercel.app',async(_,init)=>{assert.equal(init.headers.get('origin'),origin==='https://jc.powvy.org'?'https://jc-sports-day-scoring.vercel.app':origin);return new Response('ok')});
  }
 });
+test('navigation errors stay errors with usable guidance; API and challenges unchanged',async()=>{
+ const nav=new Request('https://solar-agent.powvy.org/chat',{headers:{Accept:'text/html'}});
+ const busy=await proxy(nav,'rest-solar-agent-cm.onrender.com',async()=>new Response('Too Many Requests',{status:429}));assert.equal(busy.status,429);assert.match(await busy.text(),/Original service/);
+ const challenge=await proxy(nav,'rest-solar-agent-cm.onrender.com',async()=>new Response('challenge',{status:429,headers:{'cf-mitigated':'challenge'}}));assert.equal(await challenge.text(),'challenge');
+ const api=await proxy(new Request('https://solar-agent.powvy.org/api/chat',{method:'POST'}),'rest-solar-agent-cm.onrender.com',async()=>new Response('busy',{status:429}));assert.equal(await api.text(),'busy');
+});

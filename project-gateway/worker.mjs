@@ -13,6 +13,10 @@ export async function proxy(request, upstreamHost, fetcher=fetch) {
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),45000);
  try{
   const response=await fetcher(target.href,{method:request.method,headers,body:['GET','HEAD'].includes(request.method)?undefined:request.body,redirect:'manual',signal:controller.signal});
+  if(request.method==='GET' && headers.get('Accept')?.includes('text/html') && (response.status===429 || response.status>=500) && !response.headers.has('cf-mitigated')) {
+   await response.body?.cancel();
+   return new Response('<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>暂时不可用 / Temporarily unavailable</title><main style="font:18px/1.6 system-ui;max-width:600px;margin:10vh auto;padding:24px"><h1>服务暂时繁忙 / Service temporarily unavailable</h1><p>请稍后刷新，或尝试原服务入口。备用入口也可能受到同一服务故障影响。</p><p>Please refresh shortly, or try the original service. It may be affected by the same outage.</p><p><a href="https://'+upstreamHost+'/">原服务入口 / Original service</a></p><a href="https://powvy.org/">返回 Powvy / Back to Powvy</a></main>',{status:response.status,headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','Retry-After':response.headers.get('Retry-After')||'30'}});
+  }
   if(response.status===101)return response; // WebSocket upgrade, unchanged.
   const output=new Headers(response.headers),location=output.get('Location');
   if(location){const redirect=new URL(location,target);if(redirect.hostname===upstreamHost){redirect.protocol=incoming.protocol;redirect.host=incoming.host;output.set('Location',redirect.href);}}
