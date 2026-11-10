@@ -43,3 +43,11 @@ Checked all 16 personal-site product detail routes in Chinese and English; 17 di
 - The current company website uses `rest-solar-agent-cm.onrender.com`, while the old portfolio entry uses `rest-solar-agent.onrender.com`.
 - Direct connections time out here. A test Worker targeting the current CM backend receives HTTP 429 with `cf-mitigated: challenge`, not a working chat application. It has not been linked from the portfolio or assigned a public custom domain.
 - Render CLI credentials have expired (API 401). Requested owner reauthentication before inspecting service health/configuration. No secrets copied, challenges bypassed, login protections removed, or customer data changed.
+
+## Rest Solar restored entry (later check, 10 Nov)
+
+- Render dashboard became reachable (HTTP 200). The old `rest-solar-agent.onrender.com` health endpoint still timed out, but the current CM service returned `{"status":"ok"}`. No Render settings were changed: the CLI authorization had not completed.
+- The existing gateway's upstream challenge was no longer present. A real English product-information chat returned HTTP 200 and a substantive reply. Published the native Cloudflare custom domain `solar-agent.powvy.org`, pointing only at the existing CM backend.
+- Chrome on the new domain: `/` redirects to `/chat`, mobile 390px layout has no horizontal overflow, French language toggle and a real French product-information reply work, no JavaScript exceptions. Synthetic tests did not place orders or request staff contact.
+- Updated portfolio, connection diagnostics and public AI project facts to the verified online entry, and removed the outdated timeout badge. This fixes the stale portfolio destination; it is not evidence that Render can never time out or that school-network filtering is resolved.
+- Worker version: `f20b76ec-805a-405f-82f2-293a75e1be5d`. Existing Render database, admin accounts and security controls unchanged.

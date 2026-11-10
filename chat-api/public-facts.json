@@ -55,8 +55,8 @@
     {
       "name": "Rest Solar Agent",
       "description": "给喀麦隆光伏公司做的中英法三语 AI 客服，能查库存报价，也能一键转人工。",
-      "url": "https://rest-solar-agent.onrender.com/",
-      "access": "On 10 Nov 2026 the website connection timed out. Public source remains available at https://github.com/zhixuanlucasfeng-cmyk/rest-solar-agent . Do not claim the live service is available."
+      "url": "https://solar-agent.powvy.org/",
+      "access": "The public chat entry uses the existing Cameroon service through solar-agent.powvy.org. Verified on 10 Nov 2026: chat page and a real English product-information reply returned successfully. Admin functions still require authorization. School Wi-Fi access has not been independently confirmed."
     },
     {
       "name": "Claude Usage",

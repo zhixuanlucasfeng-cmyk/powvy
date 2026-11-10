@@ -22,7 +22,13 @@
       "name": "powvy-solar-agent-site",
       "vars": {
         "UPSTREAM_HOST": "rest-solar-agent-cm.onrender.com"
-      }
+      },
+      "routes": [
+        {
+          "pattern": "solar-agent.powvy.org",
+          "custom_domain": true
+        }
+      ]
     }
   }
 }
