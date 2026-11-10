@@ -144,7 +144,7 @@ section.dark{background:var(--tone-w),var(--ink);color:#fff}
 .card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
 .card h3{font-family:var(--cn);font-weight:400;font-size:25px;line-height:1.2}
 .card p{color:var(--muted);font-size:14.5px}
-.card .row{margin-top:auto;padding-top:12px}
+.card .row{margin-top:auto;padding-top:12px;display:flex;align-items:center;flex-wrap:wrap;gap:10px}
 .btn{display:inline-flex;align-items:center;gap:6px;border:3px solid var(--ink);padding:5px 16px;font-family:var(--cn);font-size:18px;background:var(--ink);color:#fff;transition:background .15s,transform .15s}
 .btn:hover{background:var(--red);transform:skew(-8deg)}
 .btn.ghost{background:#fff;color:var(--ink)}
@@ -680,6 +680,7 @@ const products = [
     features:['伪代码追踪表模拟器 + 逻辑门真值表与电路图','结构化英语 / 追踪表 / 流程图 → 伪代码','练习模式：自动出题、自动批改'] },
   { id:'restsolar', name:'Rest Solar Agent', tag:'AI 客服', url:'https://rest-solar-agent.onrender.com',
     desc:'给喀麦隆光伏公司做的中英法三语 AI 客服，能查库存报价，也能一键转人工。',
+    links:[{name:'客服网站',url:'https://rest-solar-agent.onrender.com'},{name:'GitHub · 项目源码',url:GH+'rest-solar-agent'}],
     features:['规则引擎护栏：不乱报价、自动算 19.25% 增值税','四国多租户后台：喀麦隆 / 尼日利亚 / 苏丹 / 马里','真人坐席接管：等待队列 + 实时对话'] },
   { id:'usage', name:'Claude Usage', tag:'Token 可视化', url: GH + 'claude-usage',
     desc:'看清今天在 Claude Code、Codex、DeepSeek 上花了多少 token 和多少钱。',
@@ -696,7 +697,7 @@ const products = [
   { id:'vedundi', name:'Legend of 4P Vedundi', tag:'暗黑小说', url:'https://zhixuanlucasfeng-cmyk.github.io/legend-of-4p-vedundi/',
     desc:'我写的中英双语暗黑文学网络小说《4p维敦帝的故事》，附带阅读站。',
     features:['中英双语一键切换','深色阅读模式','连载中'] },
-  { id:'camaroom', name:'Camaroom Web', tag:'企业官网', url:'https://zhixuanlucasfeng-cmyk.github.io/camaroom-web/',
+  { id:'camaroom', name:'Camaroom Web', tag:'企业官网', url:'https://restarsolar.net/',
     desc:'Rest Solar 喀麦隆公司官网：产品介绍、项目图库和联系方式。',
     features:['产品与服务介绍','项目实拍图库','尼日利亚 / 苏丹 / 马里多国站点'] }
 ];
@@ -885,6 +886,7 @@ const EN = {
     dryrun: { tag:'CIE CS revision', desc:'A Cambridge Computer Science revision tool: trace tables, logic gates and pseudocode conversion. One file, zero dependencies, works offline.',
       features:['Pseudocode trace-table simulator + logic-gate truth tables and circuits','Structured English / trace table / flowchart → pseudocode','Practice mode with generated, auto-marked questions'] },
     restsolar: { tag:'AI customer service', desc:'A trilingual (EN / FR / ZH) AI support agent for a solar company in Cameroon. It answers stock and price questions and hands off to a human in one tap.',
+      links:[{name:'Support website',url:'https://rest-solar-agent.onrender.com'},{name:'GitHub · Source code',url:GH+'rest-solar-agent'}],
       features:['Rule-engine guardrails: never invents prices, adds 19.25% VAT automatically','Multi-country admin: Cameroon / Nigeria / Sudan / Mali','Live-agent takeover with a waiting queue and real-time chat'] },
     usage: { tag:'Token dashboard', desc:'See exactly how many tokens — and how much money — you spent today on Claude Code, Codex and DeepSeek.',
       features:['CLI + local dashboard + macOS desktop widget','Limit forecast: where your plan limits land at reset at today\'s pace, and when you\'d run out','7-day trend chart + Chainsaw Man / Reze themes'] },
@@ -1074,6 +1076,18 @@ function starLabel(repo) {
 function renderStars() {
   document.querySelectorAll('.stars').forEach(el => { el.textContent = starLabel(el.dataset.repo); });
 }
+function projectAccess(p) {
+  const en = lang === 'en';
+  if (['jc-sports-day','restsolar'].includes(p.id)) return {
+    badge: en ? 'Access notice' : '访问提示',
+    note: en ? 'Connection timed out during the 10 Nov 2026 check. You can try the website or view the public source below. School-network access has not been confirmed.' : '2026 年 11 月 10 日检查时连接超时。你可以尝试访问网站，或查看下方公开源码；学校网络能否访问尚未确认。'
+  };
+  if (p.url.startsWith('https://github.com/')) return {
+    badge: en ? 'Source · Installation required' : '源码 · 需要安装',
+    note: en ? 'This is a locally installed tool. The link opens its source and setup instructions, not an online app.' : '这是需要在本机安装的工具。入口提供源码与安装说明，不是在线运行的网页应用。'
+  };
+  return {badge: en ? 'Website' : '网站', note: ''};
+}
 function render() {
 $('#productList').innerHTML = products.map(x => tr('products', x.id, x)).map(p => `
   <a class="card reveal" href="#/product/${p.id}" data-product="${p.id}">
@@ -1082,7 +1096,7 @@ $('#productList').innerHTML = products.map(x => tr('products', x.id, x)).map(p =
       <span class="tag red" style="align-self:flex-start">${p.tag}</span>
       <h3 class="title">${p.name}</h3>
       <p>${p.desc}</p>
-      <div class="row"><span class="btn">${t('enter')}</span></div>
+      <div class="row"><span class="btn">${t('enter')}</span><small>${projectAccess(p).badge}</small></div>
     </div>
   </a>`).join('');
 
@@ -1260,7 +1274,10 @@ function fillDetail(kind, item) {
     $('#dBody').innerHTML = `<p>${item.desc}</p><h2>${t('features')}</h2><ul>${item.features.map(f => `<li>${f}</li>`).join('')}</ul>
       <p class="product-links">${(item.links || [{ name:item.name, url:item.url }]).map(link => `<a class="btn" href="${link.url}" target="_blank" rel="noopener">${t('open')} ${link.name} →</a>`).join('')}</p>`;
   }
-  if(kind==='product'&&['jc-sports-day','alevel'].includes(item.id)) {
+  if(kind==='product'&&projectAccess(item).note) {
+    const notice=document.createElement('p');notice.className='project-access-note';notice.textContent=projectAccess(item).note;$('#dBody').prepend(notice);
+  }
+  if(kind==='product'&&['jc-sports-day','alevel','restsolar'].includes(item.id)) {
     const help=document.createElement('p'),link=document.createElement('a');
     link.href='connection.html';link.target='_blank';link.rel='noopener';
     link.textContent=lang==='zh'?'打不开或白屏？检查连接 →':'Blank page or unable to open? Check connection →';
