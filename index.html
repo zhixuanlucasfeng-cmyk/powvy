@@ -1260,6 +1260,12 @@ function fillDetail(kind, item) {
     $('#dBody').innerHTML = `<p>${item.desc}</p><h2>${t('features')}</h2><ul>${item.features.map(f => `<li>${f}</li>`).join('')}</ul>
       <p class="product-links">${(item.links || [{ name:item.name, url:item.url }]).map(link => `<a class="btn" href="${link.url}" target="_blank" rel="noopener">${t('open')} ${link.name} →</a>`).join('')}</p>`;
   }
+  if(kind==='product'&&['jc-sports-day','alevel'].includes(item.id)) {
+    const help=document.createElement('p'),link=document.createElement('a');
+    link.href='connection.html';link.target='_blank';link.rel='noopener';
+    link.textContent=lang==='zh'?'打不开或白屏？检查连接 →':'Blank page or unable to open? Check connection →';
+    help.append(link);$('#dBody').append(help);
+  }
   document.title = dTitle.textContent + ' · Powvy';
 }
 
