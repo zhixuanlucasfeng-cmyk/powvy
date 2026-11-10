@@ -1,0 +1,23 @@
+/* Redesign layer (2026-11-10). Delete the <link> in index.html to revert. */
+
+/* English section titles get the hero's heavy manga treatment */
+html:lang(en) .sec-head h2 { font-family: var(--display); font-size: clamp(40px, 6vw, 76px); line-height: 1; letter-spacing: -.01em;
+  text-shadow: 4px 4px 0 var(--red); transform: rotate(-1.5deg); transform-origin: left bottom; }
+html:lang(en) .dark .sec-head h2 { color: #fff; text-shadow: 4px 4px 0 var(--red), 4px 4px 0 2px var(--ink); }
+html:lang(en) .sec-head h2 small { transform: skew(-12deg) rotate(1.5deg); }
+html:lang(en) .card h3, html:lang(en) .about .intro h3 { font-family: var(--display); font-size: 21px; line-height: 1.15; }
+
+/* Cards: harder punch on hover, cover art zooms */
+.card .cover img, .card .cover svg { transition: transform .35s cubic-bezier(.22,1,.36,1); }
+.card:hover .cover img, .card:hover .cover svg, .card:focus-visible .cover img { transform: scale(1.05); }
+.card:hover, .card:focus-visible { box-shadow: 10px 10px 0 var(--red), 10px 10px 0 3px var(--ink); }
+
+/* Buttons press down like a stamp */
+.btn:active { transform: translate(2px, 2px); }
+
+@media (prefers-reduced-motion: reduce) {
+  html:lang(en) .sec-head h2, html:lang(en) .sec-head h2 small { transform: none; }
+  .card .cover img, .card .cover svg { transition: none; }
+  .card:hover .cover img, .card:hover .cover svg { transform: none; }
+  .btn:active { transform: none; }
+}
