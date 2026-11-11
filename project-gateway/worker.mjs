@@ -25,4 +25,13 @@ export async function proxy(request, upstreamHost, fetcher=fetch, timeoutMs=4500
   return new Response('<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>暂时无法连接 / Temporarily unavailable</title><main style="font:18px/1.6 system-ui;max-width:600px;margin:10vh auto;padding:24px"><h1>暂时无法连接服务</h1><p>The application did not respond. Please try again shortly.</p><p>服务暂时没有响应，请稍后刷新。没有提交成功的消息请重新发送。</p><a href="https://powvy.org/">返回 Powvy / Back to Powvy</a></main>',{status:503,headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','Retry-After':'30'}});
  }finally{clearTimeout(timer);}
 }
-export default {fetch(request,env){return proxy(request,env.UPSTREAM_HOST,fetch,Number(env.UPSTREAM_TIMEOUT_MS)||45000)}};
+export default {
+ fetch(request,env){
+  if(env.SOLAR){
+   if(new URL(request.url).pathname.startsWith('/static/'))return env.ASSETS.fetch(request);
+   // This name is scoped to the production backend's own object namespace.
+   return env.SOLAR.getByName('rest-solar-staging',{locationHint:'enam'}).fetch(request);
+  }
+  return proxy(request,env.UPSTREAM_HOST,fetch,Number(env.UPSTREAM_TIMEOUT_MS)||45000);
+ }
+};

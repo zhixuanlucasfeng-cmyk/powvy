@@ -7,3 +7,5 @@ graphify-out/
 .wrangler/
 chat-api/.dev.vars
 node_modules/
+
+project-gateway/solar-assets/

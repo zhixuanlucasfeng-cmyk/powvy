@@ -22,3 +22,24 @@ test('navigation errors stay errors with usable guidance; API and challenges unc
  const challenge=await proxy(nav,'rest-solar-agent-cm.onrender.com',async()=>new Response('challenge',{status:429,headers:{'cf-mitigated':'challenge'}}));assert.equal(await challenge.text(),'challenge');
  const api=await proxy(new Request('https://solar-agent.powvy.org/api/chat',{method:'POST'}),'rest-solar-agent-cm.onrender.com',async()=>new Response('busy',{status:429}));assert.equal(await api.text(),'busy');
 });
+
+test('Solar serves assets and the stateful backend directly without Render',async(t)=>{
+ const {default:worker}=await import('../project-gateway/worker.mjs');
+ t.mock.method(globalThis,'fetch',async()=>new Response('legacy upstream'));
+ const upgrade={status:101};let backendCalls=0;
+ const env={
+  ASSETS:{fetch:async()=>new Response('image')},
+  SOLAR:{getByName(name){
+   assert.equal(name,'rest-solar-staging');
+   return {fetch:async req=>{
+    backendCalls++;
+    assert.equal(new URL(req.url).host,'solar-agent.powvy.org');
+    return upgrade;
+   }};
+  }}
+ };
+ assert.equal(await (await worker.fetch(new Request('https://solar-agent.powvy.org/static/test.png'),env)).text(),'image');
+ assert.equal(backendCalls,0);
+ assert.equal(await worker.fetch(new Request('https://solar-agent.powvy.org/ws/1'),env),upgrade);
+ assert.equal(backendCalls,1);
+});

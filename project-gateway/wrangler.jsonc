@@ -29,7 +29,21 @@
           "pattern": "solar-agent.powvy.org",
           "custom_domain": true
         }
-      ]
+      ],
+      "durable_objects": {
+        "bindings": [
+          {
+            "name": "SOLAR",
+            "class_name": "SolarRuntime",
+            "script_name": "rest-solar-production"
+          }
+        ]
+      },
+      "assets": {
+        "directory": "./solar-assets",
+        "binding": "ASSETS",
+        "run_worker_first": true
+      }
     }
   }
 }

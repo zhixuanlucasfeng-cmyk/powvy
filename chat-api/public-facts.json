@@ -56,7 +56,7 @@
       "name": "Rest Solar Agent",
       "description": "给喀麦隆光伏公司做的中英法三语 AI 客服，能查库存报价，也能一键转人工。",
       "url": "https://solar-agent.powvy.org/chat",
-      "access": "The public chat entry uses the existing Cameroon service through solar-agent.powvy.org. Verified on 10 Nov 2026: chat page and a real English product-information reply returned successfully. Admin functions still require authorization. Intermittent HTTP 429/timeouts were observed again during the later 10 Nov audit; do not promise uninterrupted availability. School Wi-Fi access has not been independently confirmed."
+      "access": "The public entry runs directly on Cloudflare Workers with the original PostgreSQL data and accounts retained. Verified on 11 Nov 2026: real English chat and French streaming replies succeeded; admin login and the migrated human-support queue were checked. No paid hosting plan was enabled. Free platform quotas and model-provider limits still apply; school Wi-Fi access has not been independently confirmed."
     },
     {
       "name": "Claude Usage",
