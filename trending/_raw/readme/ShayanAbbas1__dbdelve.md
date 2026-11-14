@@ -10,9 +10,6 @@ introduce limits.
 
 Ideas and discussion on [Discord](https://discord.gg/7PegWzwqCm).
 
-Like DBDelve? [Support its development](https://www.patreon.com/cw/ShayanAbbas1).
-Support is voluntary and does not provide any additional benefits.
-
 
 ![DBDelve in Gruvbox Dark Glass: a SELECT on the events table in the editor and its result grid below](assets/screenshots/query-dark.png)
 
@@ -120,7 +117,8 @@ statements you type run under the connection's mode. See
   ![An Explain Analyze plan for a join: each node with its actual and estimated rows and time, and a ×76 misestimate flagged](assets/screenshots/query-plan.png)
 
 - **Completion that knows your schema:** tables, and a table's columns after
-  its name and a dot.
+  its name and a dot. A table is written with an alias, and after `JOIN` with
+  the condition its foreign keys imply.
 
   ![Completing accounts. to its columns in a join](assets/screenshots/completion.png)
 
@@ -187,3 +185,17 @@ Copyright (C) 2026 Shayan Abbas and contributors, licensed under the
 [GPL-3.0](LICENSE). Code contributed before the switch was released under the
 [MIT License](licenses/MIT-dbdelve.txt), and that notice still applies to it.
 Third-party font and theme licenses are in [NOTICES.md](NOTICES.md).
+
+## Sponsors
+
+Support DBDelve on [Patreon](https://www.patreon.com/membership/30003257). Sponsors are listed here and on the site.
+
+<a href="https://dbdelve.github.io/#sponsors"><img src="https://dbdelve.github.io/sponsors/sponsors.svg" alt="DBDelve's sponsors"></a>
+
+## Contributors
+
+Thank you to everyone who has contributed to DBDelve.
+
+<a href="https://github.com/ShayanAbbas1/dbdelve/graphs/contributors"><img src="https://contrib.rocks/image?repo=ShayanAbbas1/dbdelve" alt="DBDelve's contributors"></a>
+
+Want to join them? Read [CONTRIBUTING.md](CONTRIBUTING.md).
