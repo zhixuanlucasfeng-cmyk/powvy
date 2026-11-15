@@ -1,5 +1,5 @@
 {
- "date": "2026-11-14",
+ "date": "2026-11-15",
  "weights": {
   "popularity": 0.3,
   "maintenance": 0.25,
@@ -7,15 +7,15 @@
   "virality": 0.2
  },
  "min_today": 50,
- "total_fetched": 213,
- "candidates": 77,
+ "total_fetched": 216,
+ "candidates": 60,
  "projects": [
   {
    "name": "mattpocock/skills",
    "description": "Skills for Real Engineers. Straight from my .agents directory.",
    "language": "Shell",
-   "stars": 323832,
-   "stars_today": 898,
+   "stars": 324480,
+   "stars_today": 724,
    "url": "https://github.com/mattpocock/skills",
    "boards": [
     "shell"
@@ -24,8 +24,8 @@
    "created_at": "2026-02-03T11:15:53Z",
    "topics": [],
    "license": "MIT",
-   "forks": 27176,
-   "open_issues": 245,
+   "forks": 27231,
+   "open_issues": 246,
    "archived": false,
    "homepage": "https://aihero.dev/skills",
    "scores": {
@@ -65,291 +65,223 @@
    "overall": 9.1
   },
   {
-   "name": "farion1231/cc-switch",
-   "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io",
-   "language": "Rust",
-   "stars": 154232,
-   "stars_today": 315,
-   "url": "https://github.com/farion1231/cc-switch",
+   "name": "JuliusBrussee/caveman",
+   "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+   "language": "Go",
+   "stars": 120053,
+   "stars_today": 227,
+   "url": "https://github.com/JuliusBrussee/caveman",
    "boards": [
-    "rust"
+    "all",
+    "go"
    ],
-   "pushed_at": "2026-11-13T15:28:34Z",
-   "created_at": "2025-08-04T14:16:16Z",
+   "pushed_at": "2026-11-14T07:52:12Z",
+   "created_at": "2026-04-04T10:03:00Z",
    "topics": [
-    "ai-tools",
+    "ai",
+    "anthropic",
+    "caveman",
+    "claude",
     "claude-code",
-    "codex",
-    "deepseek-harness",
-    "desktop-app",
-    "grok",
-    "grokbuild",
-    "hermes",
-    "kimi-code",
-    "mcp",
-    "open-source",
-    "opencode",
-    "pi",
-    "provider-management",
-    "rust",
-    "skills",
-    "skills-management",
-    "tauri",
-    "wsl-support"
+    "llm",
+    "meme",
+    "prompt-engineering",
+    "skill",
+    "tokens"
    ],
-   "license": "MIT",
-   "forks": 10115,
-   "open_issues": 956,
+   "license": "Apache-2.0",
+   "forks": 7002,
+   "open_issues": 88,
    "archived": false,
-   "homepage": "https://ccswitch.io",
+   "homepage": "https://docs.caveman.so/caveman",
    "scores": {
-    "popularity": 10,
+    "popularity": 9,
+    "maintenance": 9,
+    "usability": 8,
+    "virality": 9
+   },
+   "cats": [
+    "claude",
+    "coding"
+   ],
+   "stack": "Go + Skills",
+   "type": "省 token 的编码 Agent 技能与代理",
+   "usage": "按 README 安装技能，用 /caveman 等命令让 Agent 精简输出",
+   "highlights": [
+    "让 Agent 少说少读，代码保持准确",
+    "README 示例中一次回答由 63 个 token 降到 20",
+    "宣称被 Adobe Research 引用、JetBrains 做过 A/B 测试"
+   ],
+   "cautions": [
+    "性能与省钱数字均为 README 自述",
+    "同时推广其付费生态与桌面应用"
+   ],
+   "en": {
+    "stack": "Go + Skills",
+    "type": "Token-saving skill and proxy for coding agents",
+    "usage": "Install per the README and use commands like /caveman to shorten output",
+    "highlights": [
+     "Makes the agent say less and read less while code stays exact",
+     "README example cuts an answer from 63 to 20 tokens",
+     "Claims citations by Adobe Research and a JetBrains A/B test"
+    ],
+    "cautions": [
+     "Savings figures are README claims",
+     "Also promotes a companion desktop app"
+    ]
+   },
+   "overall": 8.8
+  },
+  {
+   "name": "ChromeDevTools/chrome-devtools-mcp",
+   "description": "Chrome DevTools for coding agents",
+   "language": "TypeScript",
+   "stars": 56280,
+   "stars_today": 673,
+   "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+   "boards": [
+    "all",
+    "typescript"
+   ],
+   "pushed_at": "2026-11-13T17:28:37Z",
+   "created_at": "2025-09-11T10:39:55Z",
+   "topics": [
+    "browser",
+    "chrome",
+    "chrome-devtools",
+    "debugging",
+    "devtools",
+    "mcp",
+    "mcp-server",
+    "puppeteer"
+   ],
+   "license": "Apache-2.0",
+   "forks": 4759,
+   "open_issues": 127,
+   "archived": false,
+   "homepage": "https://developer.chrome.com/docs/devtools/agents",
+   "scores": {
+    "popularity": 9,
     "maintenance": 9,
     "usability": 8,
     "virality": 8
    },
    "cats": [
-    "claude",
-    "coding",
-    "app"
+    "agent",
+    "coding"
    ],
-   "stack": "Rust + 桌面应用",
-   "type": "AI 编码工具配置管理器",
-   "usage": "按 README 下载桌面应用，选预设、填 Key 一键切换",
+   "stack": "TypeScript + Puppeteer + MCP",
+   "type": "编码 Agent 的 Chrome DevTools 接入",
+   "usage": "作为 MCP 服务器或 CLI 接入 Claude、Cursor、Copilot 等",
    "highlights": [
-    "一个应用管理 Claude Code、Codex、Gemini CLI 等 12 款工具的供应商",
-    "90+ 供应商预设，统一管理 MCP、Skills 与提示词",
-    "切换只替换端点、Key 与模型，保留插件与钩子"
+    "让编码 Agent 控制并检查真实运行的 Chrome",
+    "可录制性能 trace、分析网络请求、读取带 source map 的控制台",
+    "基于 Puppeteer，自动等待操作结果"
    ],
    "cautions": [
-    "README 含多处赞助与返佣链接",
-    "README 强调唯一官网为 ccswitch.io，谨防仿冒"
+    "会向 MCP 客户端暴露浏览器内容，注意敏感信息",
+    "官方仅支持 Google Chrome 与 Chrome for Testing"
    ],
    "en": {
-    "stack": "Rust desktop app",
-    "type": "AI coding tool config manager",
-    "usage": "Download the desktop app per the README, pick a preset, enter a key, switch in one click",
+    "stack": "TypeScript + Puppeteer + MCP",
+    "type": "Chrome DevTools for coding agents",
+    "usage": "Use as an MCP server or CLI with Claude, Cursor, Copilot, etc.",
     "highlights": [
-     "One app switches API providers for 12 tools including Claude Code, Codex and Gemini CLI",
-     "90+ provider presets; manages MCP, Skills and prompts in one place",
-     "Switching swaps only endpoint, key and model, keeping plugins and hooks"
+     "Lets a coding agent drive and inspect a live Chrome",
+     "Records performance traces, analyzes network requests, reads source-mapped console messages",
+     "Built on Puppeteer with automatic waiting for action results"
     ],
     "cautions": [
-     "README carries sponsor and affiliate links",
-     "README says the only official site is ccswitch.io; beware imitations"
+     "Exposes browser content to MCP clients; avoid sensitive data",
+     "Officially supports only Google Chrome and Chrome for Testing"
     ]
    },
-   "overall": 8.8
+   "overall": 8.5
   },
   {
-   "name": "rtk-ai/rtk",
-   "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
-   "language": "Rust",
-   "stars": 86500,
-   "stars_today": 123,
-   "url": "https://github.com/rtk-ai/rtk",
+   "name": "openai/codex-security",
+   "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+   "language": "TypeScript",
+   "stars": 13537,
+   "stars_today": 599,
+   "url": "https://github.com/openai/codex-security",
    "boards": [
-    "rust"
+    "typescript"
    ],
-   "pushed_at": "2026-11-13T17:09:37Z",
-   "created_at": "2026-01-22T16:54:16Z",
+   "pushed_at": "2026-11-14T17:14:45Z",
+   "created_at": "2026-07-13T22:00:13Z",
    "topics": [
-    "agentic-coding",
-    "ai-coding",
-    "anthropic",
-    "claude-code",
+    "ai-security",
+    "application-security",
     "cli",
-    "command-line-tool",
-    "cost-reduction",
-    "developer-tools",
-    "llm",
-    "open-source",
-    "productivity",
-    "rust",
-    "token-optimization"
+    "code-scanning",
+    "codex",
+    "codex-security",
+    "cybersecurity",
+    "devsecops",
+    "nodejs",
+    "npm",
+    "openai",
+    "sdk",
+    "security",
+    "typescript",
+    "vulnerability-scanning"
    ],
    "license": "Apache-2.0",
-   "forks": 5545,
-   "open_issues": 1697,
+   "forks": 1054,
+   "open_issues": 176,
    "archived": false,
-   "homepage": "https://www.rtk-ai.app",
+   "homepage": "https://developers.openai.com/codex/security",
    "scores": {
     "popularity": 9,
     "maintenance": 9,
-    "usability": 9,
+    "usability": 8,
     "virality": 8
    },
    "cats": [
-    "coding",
-    "llm"
+    "security",
+    "agent"
    ],
-   "stack": "Rust 单文件 CLI",
-   "type": "LLM token 压缩代理",
-   "usage": "`brew install rtk` / `winget install rtk-ai.rtk` / 安装脚本；`rtk gain` 查看节省量",
+   "stack": "TypeScript CLI + SDK",
+   "type": "AI 代码安全扫描",
+   "usage": "在 Codex 中启用插件，或用 `@openai/codex-security` CLI / TypeScript SDK / GitHub Action 扫描仓库",
    "highlights": [
-    "在 Agent 读取前压缩测试、diff、日志、构建输出，称最多省 90%",
-    "覆盖 100+ 命令，单命令低于 25 ms，无需配置",
-    "新增可共享的流水线以进一步降本"
+    "扫描仓库、路径或 Git 变更，验证发现并生成补丁",
+    "可导入第三方扫描结果，导出 SARIF/JSON/CSV，对接 Linear、Jira、GitHub"
    ],
    "cautions": [
-    "节省比例为作者自述",
-    "另有商业版 RTK Pro"
+    "部分功能依赖 Codex 或 Codex Security Cloud"
    ],
    "en": {
-    "stack": "Rust single-binary CLI",
-    "type": "LLM token-saving CLI proxy",
-    "usage": "`brew install rtk` / `winget install rtk-ai.rtk` / install script; `rtk gain` shows savings",
+    "stack": "TypeScript CLI + SDK",
+    "type": "AI code security scanner",
+    "usage": "Enable the plugin in Codex, or scan with the `@openai/codex-security` CLI, TypeScript SDK or GitHub Action",
     "highlights": [
-     "Compresses test, diff, log and build output before the agent reads it, claiming up to 90% less",
-     "100+ commands, under 25 ms each, no config",
-     "New shareable pipelines to cut cost further"
+     "Scans repos, paths or Git changes, validates findings and generates patches",
+     "Imports third-party scanner results; exports SARIF/JSON/CSV; tracks in Linear, Jira, GitHub"
     ],
     "cautions": [
-     "Savings are the author's claims",
-     "A commercial RTK Pro also exists"
+     "Some features depend on Codex or Codex Security Cloud"
     ]
    },
-   "overall": 8.8
-  },
-  {
-   "name": "ollama/ollama",
-   "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
-   "language": "Go",
-   "stars": 186897,
-   "stars_today": 141,
-   "url": "https://github.com/ollama/ollama",
-   "boards": [
-    "go"
-   ],
-   "pushed_at": "2026-11-14T00:00:10Z",
-   "created_at": "2023-06-26T19:39:32Z",
-   "topics": [
-    "deepseek",
-    "gemma",
-    "glm",
-    "go",
-    "golang",
-    "gpt-oss",
-    "llama",
-    "llm",
-    "llms",
-    "minimax",
-    "mistral",
-    "muse",
-    "ollama",
-    "qwen"
-   ],
-   "license": "MIT",
-   "forks": 19070,
-   "open_issues": 4651,
-   "archived": false,
-   "homepage": "https://ollama.com",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 10,
-    "usability": 10,
-    "virality": 6
-   },
-   "cats": [
-    "llm"
-   ],
-   "stack": "Go",
-   "type": "本地大模型运行工具",
-   "usage": "macOS/Linux 运行 `curl -fsSL https://ollama.com/install.sh | sh`，Windows 用 PowerShell 脚本，或用 Docker 镜像",
-   "highlights": [
-    "一条命令运行 Kimi、GLM、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等模型",
-    "支持本地与云端，称注重隐私"
-   ],
-   "cautions": [
-    "大模型需要足够的显存或内存"
-   ],
-   "en": {
-    "stack": "Go",
-    "type": "Local LLM runner",
-    "usage": "On macOS/Linux run `curl -fsSL https://ollama.com/install.sh | sh`; Windows has a PowerShell script; Docker image available",
-    "highlights": [
-     "Run Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models with one command",
-     "Local or cloud, with a privacy focus"
-    ],
-    "cautions": [
-     "Big models need enough VRAM/RAM"
-    ]
-   },
-   "overall": 8.6
-  },
-  {
-   "name": "anthropics/claude-plugins-official",
-   "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-   "language": "Python",
-   "stars": 47200,
-   "stars_today": 130,
-   "url": "https://github.com/anthropics/claude-plugins-official",
-   "boards": [
-    "python"
-   ],
-   "pushed_at": "2026-11-14T00:41:09Z",
-   "created_at": "2025-11-20T18:36:20Z",
-   "topics": [
-    "claude-code",
-    "mcp",
-    "skills"
-   ],
-   "license": "Apache-2.0",
-   "forks": 4897,
-   "open_issues": 1293,
-   "archived": false,
-   "homepage": "https://code.claude.com/docs/en/plugins",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 10,
-    "usability": 9,
-    "virality": 7
-   },
-   "cats": [
-    "claude"
-   ],
-   "stack": "Python + 插件清单",
-   "type": "Claude Code 官方插件市场",
-   "usage": "`/plugin install {plugin-name}@claude-plugins-official`，或在 `/plugin > Discover` 浏览",
-   "highlights": [
-    "Anthropic 自有插件与官方 marketplace",
-    "第三方插件改在 claude.ai/directory/manage 提交"
-   ],
-   "cautions": [
-    "README 提醒安装前先确认信任插件",
-    "仓库不处理 Pull Request"
-   ],
-   "en": {
-    "stack": "Python + plugin manifests",
-    "type": "Official Claude Code plugin marketplace",
-    "usage": "`/plugin install {plugin-name}@claude-plugins-official`, or browse in `/plugin > Discover`",
-    "highlights": [
-     "Anthropic's own plugins and the official marketplace",
-     "Third-party plugins are now submitted at claude.ai/directory/manage"
-    ],
-    "cautions": [
-     "README says to trust a plugin before installing",
-     "Pull requests are not monitored"
-    ]
-   },
-   "overall": 8.6
+   "overall": 8.5
   },
   {
    "name": "Alishahryar1/free-claude-code",
    "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
    "language": "Python",
-   "stars": 69884,
-   "stars_today": 787,
+   "stars": 70223,
+   "stars_today": 367,
    "url": "https://github.com/Alishahryar1/free-claude-code",
    "boards": [
     "python"
    ],
-   "pushed_at": "2026-11-13T19:37:18Z",
+   "pushed_at": "2026-11-14T23:41:27Z",
    "created_at": "2026-01-28T19:02:30Z",
    "topics": [],
    "license": "NOASSERTION",
-   "forks": 10830,
-   "open_issues": 407,
+   "forks": 10902,
+   "open_issues": 418,
    "archived": false,
    "homepage": "",
    "scores": {
@@ -390,136 +322,69 @@
    "overall": 8.5
   },
   {
-   "name": "openai/codex-security",
-   "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
-   "language": "TypeScript",
-   "stars": 13133,
-   "stars_today": 751,
-   "url": "https://github.com/openai/codex-security",
+   "name": "louislam/uptime-kuma",
+   "description": "A fancy self-hosted monitoring tool",
+   "language": "JavaScript",
+   "stars": 94227,
+   "stars_today": 432,
+   "url": "https://github.com/louislam/uptime-kuma",
    "boards": [
     "all",
-    "typescript"
-   ],
-   "pushed_at": "2026-11-13T22:45:43Z",
-   "created_at": "2026-07-13T22:00:13Z",
-   "topics": [
-    "ai-security",
-    "application-security",
-    "cli",
-    "code-scanning",
-    "codex",
-    "codex-security",
-    "cybersecurity",
-    "devsecops",
-    "nodejs",
-    "npm",
-    "openai",
-    "sdk",
-    "security",
-    "typescript",
-    "vulnerability-scanning"
-   ],
-   "license": "Apache-2.0",
-   "forks": 1024,
-   "open_issues": 165,
-   "archived": false,
-   "homepage": "https://developers.openai.com/codex/security",
-   "scores": {
-    "popularity": 9,
-    "maintenance": 9,
-    "usability": 8,
-    "virality": 8
-   },
-   "cats": [
-    "security",
-    "agent"
-   ],
-   "stack": "TypeScript CLI + SDK",
-   "type": "AI 代码安全扫描",
-   "usage": "在 Codex 中启用插件，或用 `@openai/codex-security` CLI / TypeScript SDK / GitHub Action 扫描仓库",
-   "highlights": [
-    "扫描仓库、路径或 Git 变更，验证发现并生成补丁",
-    "可导入第三方扫描结果，导出 SARIF/JSON/CSV，对接 Linear、Jira、GitHub"
-   ],
-   "cautions": [
-    "部分功能依赖 Codex 或 Codex Security Cloud"
-   ],
-   "en": {
-    "stack": "TypeScript CLI + SDK",
-    "type": "AI code security scanner",
-    "usage": "Enable the plugin in Codex, or scan with the `@openai/codex-security` CLI, TypeScript SDK or GitHub Action",
-    "highlights": [
-     "Scans repos, paths or Git changes, validates findings and generates patches",
-     "Imports third-party scanner results; exports SARIF/JSON/CSV; tracks in Linear, Jira, GitHub"
-    ],
-    "cautions": [
-     "Some features depend on Codex or Codex Security Cloud"
-    ]
-   },
-   "overall": 8.5
-  },
-  {
-   "name": "Leonxlnx/taste-skill",
-   "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
-   "language": "JavaScript",
-   "stars": 115050,
-   "stars_today": 795,
-   "url": "https://github.com/Leonxlnx/taste-skill",
-   "boards": [
     "javascript"
    ],
-   "pushed_at": "2026-11-08T21:51:50Z",
-   "created_at": "2026-02-19T21:44:05Z",
+   "pushed_at": "2026-11-14T11:48:02Z",
+   "created_at": "2021-07-03T01:02:42Z",
    "topics": [
-    "agent-skills",
-    "ai-agents",
-    "anti-slop",
-    "claude-code",
-    "codex",
-    "cursor",
-    "design-system",
-    "frontend",
-    "landing-page",
-    "ui-design",
-    "web-design"
+    "docker",
+    "monitor",
+    "monitoring",
+    "responsive",
+    "self-hosted",
+    "selfhosted",
+    "single-page-app",
+    "socket-io",
+    "uptime",
+    "uptime-monitoring",
+    "webapp",
+    "websocket"
    ],
    "license": "MIT",
-   "forks": 7719,
-   "open_issues": 9,
+   "forks": 8818,
+   "open_issues": 855,
    "archived": false,
-   "homepage": "https://tasteskill.dev",
+   "homepage": "https://uptime.kuma.pet",
    "scores": {
-    "popularity": 9,
-    "maintenance": 8,
-    "usability": 8,
-    "virality": 8
+    "popularity": 8,
+    "maintenance": 9,
+    "usability": 9,
+    "virality": 7
    },
    "cats": [
-    "claude",
-    "coding"
+    "infra",
+    "app"
    ],
-   "stack": "JavaScript + Node 22 技能",
-   "type": "前端设计 Agent 技能",
-   "usage": "`npx skills add https://github.com/Leonxlnx/taste-skill --skill \"design-taste-frontend\"`，或在 Claude Code 中 `/plugin install taste-skill@taste-skill`",
+   "stack": "JavaScript + Docker",
+   "type": "自托管监控工具",
+   "usage": "按 README 用 Docker Compose 部署",
    "highlights": [
-    "让编码 Agent 按单一需求生成接近 figma.com、x.ai 水准的公司官网",
-    "内置参考图与浏览器检查流程；示例图片来自开放档案并署名"
+    "支持 HTTP/TCP/Ping/DNS/Docker 等多种监控",
+    "90+ 种通知渠道，20 秒检测间隔",
+    "多状态页，可绑定自定义域名"
    ],
    "cautions": [
-    "需要 Node 22+ 与 Chrome/Edge/Chromium",
-    "效果依赖所用模型与需求描述"
+    "README 提醒 uptimekuma.co 不是官方网站"
    ],
    "en": {
-    "stack": "JavaScript + Node 22 skill",
-    "type": "Frontend design agent skill",
-    "usage": "`npx skills add https://github.com/Leonxlnx/taste-skill --skill \"design-taste-frontend\"`, or `/plugin install taste-skill@taste-skill` in Claude Code",
+    "stack": "JavaScript + Docker",
+    "type": "Self-hosted monitoring tool",
+    "usage": "Deploy with Docker Compose per the README",
     "highlights": [
-     "Makes coding agents build company sites at the figma.com / x.ai level from a single brief",
-     "Built-in reference images and a browser check; example photos come from open archives and are credited"
+     "Monitors HTTP, TCP, ping, DNS, Docker containers and more",
+     "90+ notification services, 20-second intervals",
+     "Multiple status pages mappable to domains"
     ],
     "cautions": [
-     "Needs Node 22+ and Chrome/Edge/Chromium",
-     "Results depend on the model and the brief"
+     "README warns uptimekuma.co is not the official site"
     ]
    },
    "overall": 8.3
@@ -528,8 +393,8 @@
    "name": "obra/superpowers",
    "description": "An agentic skills framework & software development methodology that works.",
    "language": "Shell",
-   "stars": 317238,
-   "stars_today": 530,
+   "stars": 317645,
+   "stars_today": 425,
    "url": "https://github.com/obra/superpowers",
    "boards": [
     "shell"
@@ -547,8 +412,8 @@
     "superpowers"
    ],
    "license": "MIT",
-   "forks": 28240,
-   "open_issues": 345,
+   "forks": 28286,
+   "open_issues": 350,
    "archived": false,
    "homepage": "",
    "scores": {
@@ -594,8 +459,8 @@
    "name": "msitarzewski/agency-agents",
    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
    "language": "Shell",
-   "stars": 168151,
-   "stars_today": 190,
+   "stars": 168332,
+   "stars_today": 228,
    "url": "https://github.com/msitarzewski/agency-agents",
    "boards": [
     "shell"
@@ -604,7 +469,7 @@
    "created_at": "2025-10-13T12:12:29Z",
    "topics": [],
    "license": "MIT",
-   "forks": 27278,
+   "forks": 27300,
    "open_issues": 251,
    "archived": false,
    "homepage": "",
@@ -646,8 +511,8 @@
    "name": "localsend/localsend",
    "description": "An open-source cross-platform alternative to AirDrop",
    "language": "Dart",
-   "stars": 98868,
-   "stars_today": 177,
+   "stars": 99005,
+   "stars_today": 150,
    "url": "https://github.com/localsend/localsend",
    "boards": [
     "dart"
@@ -661,8 +526,8 @@
     "flutter-apps"
    ],
    "license": "Apache-2.0",
-   "forks": 5653,
-   "open_issues": 1036,
+   "forks": 5668,
+   "open_issues": 1040,
    "archived": false,
    "homepage": "https://localsend.org",
    "scores": {
@@ -703,146 +568,93 @@
    "overall": 8.3
   },
   {
-   "name": "DietrichGebert/ponytail",
-   "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-   "language": "JavaScript",
-   "stars": 190367,
-   "stars_today": 600,
-   "url": "https://github.com/DietrichGebert/ponytail",
+   "name": "tw93/Mole",
+   "description": "🐹 Open-source Mac and PC cleaner. Keep your machine clean, light, and running like new. Fast CLI, plus native Mac and Windows apps.",
+   "language": "Shell",
+   "stars": 75052,
+   "stars_today": 136,
+   "url": "https://github.com/tw93/Mole",
    "boards": [
-    "javascript"
+    "shell"
    ],
-   "pushed_at": "2026-10-29T11:59:31Z",
-   "created_at": "2026-06-12T00:52:37Z",
+   "pushed_at": "2026-11-14T03:07:55Z",
+   "created_at": "2025-09-23T06:38:40Z",
    "topics": [
-    "agent-skills",
-    "ai-agents",
-    "claude",
-    "claude-code",
-    "claude-code-plugin",
-    "cursor-rules",
-    "developer-tools",
-    "llm",
-    "prompt-engineering",
-    "yagni"
+    "analyzer",
+    "appcleaner",
+    "clean",
+    "cleaner",
+    "cleanmymac",
+    "command-line",
+    "daisydisk",
+    "deepseek-harness",
+    "dsh-plugin",
+    "dsh-skill",
+    "gemini-cli-extension",
+    "istat",
+    "macos",
+    "macos-app",
+    "optimize",
+    "pearcleaner",
+    "sensei",
+    "shell",
+    "uninstall",
+    "windows"
    ],
-   "license": "MIT",
-   "forks": 10628,
-   "open_issues": 227,
+   "license": "GPL-3.0",
+   "forks": 2702,
+   "open_issues": 18,
    "archived": false,
-   "homepage": "https://ponytail.dev",
-   "scores": {
-    "popularity": 9,
-    "maintenance": 7,
-    "usability": 8,
-    "virality": 9
-   },
-   "cats": [
-    "claude",
-    "coding"
-   ],
-   "stack": "JavaScript 技能/插件",
-   "type": "精简代码 Agent 技能",
-   "usage": "按 README 安装到 Claude Code 等 Agent，使用 `/ponytail-review`、`/ponytail-audit` 命令",
-   "highlights": [
-    "让 Agent 像“最懒的资深开发”：先复用现有代码，只写任务所需",
-    "README 称盲测中 Ponytail 5 的回复以 110 比 67 胜过上一版",
-    "提供 /ponytail-review 与 /ponytail-audit，Claude Code 内有成本与 token 状态条"
-   ],
-   "cautions": [
-    "性能数据为作者自述",
-    "最近一次推送为 10 月 29 日"
-   ],
-   "en": {
-    "stack": "JavaScript skill/plugin",
-    "type": "Lean-code agent skill",
-    "usage": "Install into Claude Code or another agent per the README; use `/ponytail-review` and `/ponytail-audit`",
-    "highlights": [
-     "Makes the agent act like the laziest senior dev: reuse what exists, write only what the task needs",
-     "README says Ponytail 5 replies beat the previous version 110 to 67 in a blind comparison",
-     "Ships /ponytail-review and /ponytail-audit, plus a cost/token band in Claude Code"
-    ],
-    "cautions": [
-     "Benchmarks are the author's own claims",
-     "Last push was Oct 29"
-    ]
-   },
-   "overall": 8.2
-  },
-  {
-   "name": "addyosmani/agent-skills",
-   "description": "Production-grade engineering skills for AI coding agents.",
-   "language": "JavaScript",
-   "stars": 117147,
-   "stars_today": 591,
-   "url": "https://github.com/addyosmani/agent-skills",
-   "boards": [
-    "javascript"
-   ],
-   "pushed_at": "2026-11-01T19:24:49Z",
-   "created_at": "2026-02-15T20:20:26Z",
-   "topics": [
-    "agent-skills",
-    "antigravity",
-    "claude-code",
-    "codex",
-    "cursor",
-    "skills"
-   ],
-   "license": "MIT",
-   "forks": 12250,
-   "open_issues": 140,
-   "archived": false,
-   "homepage": "https://skills.addy.ie",
+   "homepage": "https://mole.fit",
    "scores": {
     "popularity": 8,
-    "maintenance": 8,
+    "maintenance": 9,
     "usability": 9,
-    "virality": 8
+    "virality": 7
    },
    "cats": [
-    "claude",
-    "coding",
-    "agent"
+    "app"
    ],
-   "stack": "JavaScript + Markdown 技能",
-   "type": "面向 AI 编码 Agent 的工程技能集",
-   "usage": "按 README 安装技能，并用 /spec、/plan、/build、/test、/review 等命令驱动流程",
+   "stack": "Shell",
+   "type": "Mac 清理与监控命令行工具",
+   "usage": "brew install mole，用 mo 命令使用",
    "highlights": [
-    "覆盖定义、规划、构建、验证、评审、上线六个阶段",
-    "把资深工程师的流程与质量门槛编码为技能",
-    "Agent 可在各阶段保持一致做法"
+    "深度清理缓存、日志与残留",
+    "卸载应用时一并清理残留文件",
+    "TUI 磁盘分析与实时系统监控"
    ],
    "cautions": [
-    "技能偏通用，需结合团队规范调整"
+    "会删除文件，使用前先看预览",
+    "另有独立的付费/闭源 Mac 应用"
    ],
    "en": {
-    "stack": "JavaScript + Markdown skills",
-    "type": "Engineering skills for AI coding agents",
-    "usage": "Install the skills per the README and drive the flow with commands such as /spec, /plan, /build, /test, /review",
+    "stack": "Shell",
+    "type": "Mac cleaner and monitor CLI",
+    "usage": "brew install mole, then use the mo command",
     "highlights": [
-     "Covers define, plan, build, verify, review and ship phases",
-     "Encodes senior-engineer workflows and quality gates as skills",
-     "Lets agents follow the same practice in every phase"
+     "Deep-cleans caches, logs and leftovers",
+     "Uninstalls apps along with their leftovers",
+     "TUI disk analyzer and live system monitor"
     ],
     "cautions": [
-     "Generic skills; adapt to your team’s standards"
+     "Deletes files; review before running",
+     "A separate Mac app is a different download"
     ]
    },
-   "overall": 8.2
+   "overall": 8.3
   },
   {
    "name": "alibaba/open-code-review",
    "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
    "language": "Go",
-   "stars": 50622,
-   "stars_today": 215,
+   "stars": 51413,
+   "stars_today": 897,
    "url": "https://github.com/alibaba/open-code-review",
    "boards": [
     "all",
     "go"
    ],
-   "pushed_at": "2026-11-13T16:04:43Z",
+   "pushed_at": "2026-11-14T16:50:04Z",
    "created_at": "2026-05-18T02:16:36Z",
    "topics": [
     "agent",
@@ -853,8 +665,8 @@
     "repository-level-context"
    ],
    "license": "Apache-2.0",
-   "forks": 3766,
-   "open_issues": 341,
+   "forks": 3907,
+   "open_issues": 342,
    "archived": false,
    "homepage": "https://open-codereview.ai",
    "scores": {
@@ -896,237 +708,150 @@
    "overall": 8.2
   },
   {
-   "name": "NVIDIA/SkillSpector",
-   "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
-   "language": "Python",
-   "stars": 25897,
-   "stars_today": 190,
-   "url": "https://github.com/NVIDIA/SkillSpector",
+   "name": "addyosmani/agent-skills",
+   "description": "Production-grade engineering skills for AI coding agents.",
+   "language": "JavaScript",
+   "stars": 117564,
+   "stars_today": 419,
+   "url": "https://github.com/addyosmani/agent-skills",
    "boards": [
-    "python"
+    "javascript"
    ],
-   "pushed_at": "2026-11-13T23:13:59Z",
-   "created_at": "2026-03-21T00:28:43Z",
-   "topics": [
-    "agent-security",
-    "agent-skills",
-    "agentic-ai",
-    "ai-security",
-    "claude-code",
-    "mcp",
-    "prompt-injection",
-    "security-scanner",
-    "security-tools",
-    "security-workflow",
-    "supply-chain-security"
-   ],
-   "license": "Apache-2.0",
-   "forks": 2298,
-   "open_issues": 145,
-   "archived": false,
-   "homepage": "https://docs.nvidia.com/skills/scanning-agent-skills",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 9,
-    "usability": 8,
-    "virality": 8
-   },
-   "cats": [
-    "security",
-    "claude"
-   ],
-   "stack": "开源安全扫描器",
-   "type": "Agent 技能安全扫描",
-   "usage": "安装技能前先用其扫描，参见 NVIDIA 官方扫描指南",
-   "highlights": [
-    "README 称在 31,132 个技能样本中 26.1% 含漏洞、5.2% 疑似恶意",
-    "属于 NVIDIA Verified Skills 流水线，可用于把关安装"
-   ],
-   "cautions": [
-    "结论基于其研究数据集，需自行判断风险"
-   ],
-   "en": {
-    "stack": "Open-source security scanner",
-    "type": "Agent skill security scanner",
-    "usage": "Scan a skill before installing it; see NVIDIA scanning guide",
-    "highlights": [
-     "README says 26.1% of 31,132 analyzed skills contain vulnerabilities, 5.2% look malicious",
-     "Part of NVIDIA Verified Skills pipeline; usable to gate installs"
-    ],
-    "cautions": [
-     "Figures come from its own research dataset"
-    ]
-   },
-   "overall": 8.2
-  },
-  {
-   "name": "kajisho5/ffmpeg-skill",
-   "description": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
-   "language": "Python",
-   "stars": 5434,
-   "stars_today": 168,
-   "url": "https://github.com/kajisho5/ffmpeg-skill",
-   "boards": [
-    "python"
-   ],
-   "pushed_at": "2026-11-14T00:20:32Z",
-   "created_at": "2026-09-03T14:33:38Z",
+   "pushed_at": "2026-11-14T04:33:56Z",
+   "created_at": "2026-02-15T20:20:26Z",
    "topics": [
     "agent-skills",
-    "ai-agents",
-    "audio-processing",
-    "captions",
+    "antigravity",
     "claude-code",
     "codex",
-    "coding-agent",
     "cursor",
-    "ffmpeg",
-    "gemini-cli-extension",
-    "loudness-normalization",
-    "mcp",
-    "mcp-server",
-    "model-context-protocol",
-    "python",
-    "subtitles",
-    "transcoding",
-    "video",
-    "video-editing",
-    "whisper"
+    "skills"
    ],
    "license": "MIT",
-   "forks": 468,
-   "open_issues": 29,
+   "forks": 12297,
+   "open_issues": 122,
    "archived": false,
-   "homepage": "https://www.npmjs.com/package/ffmpeg-skill",
+   "homepage": "https://skills.addy.ie",
    "scores": {
-    "popularity": 7,
-    "maintenance": 9,
+    "popularity": 8,
+    "maintenance": 8,
     "usability": 9,
     "virality": 8
    },
    "cats": [
     "claude",
-    "media"
+    "coding",
+    "agent"
    ],
-   "stack": "Python 标准库 + FFmpeg",
-   "type": "视频剪辑 Agent 技能 / MCP",
-   "usage": "`npx ffmpeg-skill`（需 PATH 中有 ffmpeg 与 python3）",
+   "stack": "JavaScript + Markdown 技能",
+   "type": "面向 AI 编码 Agent 的工程技能集",
+   "usage": "按 README 安装技能，并用 /spec、/plan、/build、/test、/review 等命令驱动流程",
    "highlights": [
-    "42 个 FFmpeg 工具，探测→剪辑→校验的固定流程",
-    "完全本地，无云端、无 API Key",
-    "可用于 Claude Code、Cursor、Codex 及任意 MCP 客户端"
+    "覆盖定义、规划、构建、验证、评审、上线六个阶段",
+    "把资深工程师的流程与质量门槛编码为技能",
+    "Agent 可在各阶段保持一致做法"
    ],
    "cautions": [
-    "需本地安装 ffmpeg",
-    "剪辑决策需由上层 Agent 或人完成"
+    "技能偏通用，需结合团队规范调整"
    ],
    "en": {
-    "stack": "Python stdlib + FFmpeg",
-    "type": "Video-editing agent skill / MCP server",
-    "usage": "`npx ffmpeg-skill` (needs ffmpeg and python3 on PATH)",
+    "stack": "JavaScript + Markdown skills",
+    "type": "Engineering skills for AI coding agents",
+    "usage": "Install the skills per the README and drive the flow with commands such as /spec, /plan, /build, /test, /review",
     "highlights": [
-     "42 FFmpeg tools with a probe → edit → verify workflow",
-     "Fully local: no cloud, no API keys",
-     "Works with Claude Code, Cursor, Codex and any MCP client"
+     "Covers define, plan, build, verify, review and ship phases",
+     "Encodes senior-engineer workflows and quality gates as skills",
+     "Lets agents follow the same practice in every phase"
     ],
     "cautions": [
-     "Requires local ffmpeg",
-     "Editing decisions are left to the calling agent or person"
+     "Generic skills; adapt to your team’s standards"
     ]
    },
    "overall": 8.2
   },
   {
-   "name": "mvanhorn/last30days-skill",
-   "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-   "language": "Python",
-   "stars": 67558,
-   "stars_today": 111,
-   "url": "https://github.com/mvanhorn/last30days-skill",
+   "name": "backnotprop/plannotator",
+   "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+   "language": "TypeScript",
+   "stars": 11102,
+   "stars_today": 412,
+   "url": "https://github.com/backnotprop/plannotator",
    "boards": [
-    "python"
+    "all",
+    "typescript"
    ],
-   "pushed_at": "2026-11-13T23:02:34Z",
-   "created_at": "2026-01-23T20:37:37Z",
+   "pushed_at": "2026-11-14T23:53:50Z",
+   "created_at": "2025-12-28T02:09:40Z",
    "topics": [
-    "ai-prompts",
-    "ai-skill",
-    "bluesky",
-    "claude",
+    "agents",
     "claude-code",
-    "clawhub",
-    "deep-research",
-    "hackernews",
-    "instagram",
-    "openclaw",
-    "polymarket",
-    "recency",
-    "reddit",
-    "research",
-    "social-media",
-    "tiktok",
-    "trends",
-    "twitter",
-    "web-search",
-    "youtube"
+    "code-review",
+    "codex",
+    "obsidian",
+    "opencode",
+    "pi-mono",
+    "plan-mode",
+    "skills"
    ],
-   "license": "MIT",
-   "forks": 5939,
-   "open_issues": 21,
+   "license": "Apache-2.0",
+   "forks": 923,
+   "open_issues": 236,
    "archived": false,
-   "homepage": null,
+   "homepage": "https://plannotator.ai",
    "scores": {
     "popularity": 8,
     "maintenance": 9,
     "usability": 8,
-    "virality": 8
+    "virality": 7
    },
    "cats": [
-    "agent",
-    "claude"
+    "coding",
+    "agent"
    ],
-   "stack": "Agent 技能",
-   "type": "主题研究技能",
-   "usage": "按 README 安装后用 `/last30days` 触发",
+   "stack": "TypeScript",
+   "type": "Agent 评审工作台",
+   "usage": "按 README 以插件/钩子接入 Claude Code、Codex 等；`plannotator inbox` 打开收件箱",
    "highlights": [
-    "跨 Reddit、X、YouTube、HN、Polymarket 研究任意话题",
-    "提供 8 种语言 README"
+    "在浏览器中批注 Agent 的计划、规格与 HTML，并把反馈回传",
+    "支持 Git、GitHub、GitLab 等的代码评审",
+    "Inbox 汇集多 Agent 的问题与决策"
    ],
    "cautions": [
-    "依赖各平台数据访问"
+    "需配合所用 Agent 的插件或 MCP 配置"
    ],
    "en": {
-    "stack": "Agent skill",
-    "type": "Topic research skill",
-    "usage": "Install per the README and trigger with `/last30days`",
+    "stack": "TypeScript",
+    "type": "Agent review workspace",
+    "usage": "Hook it into Claude Code, Codex etc. via plugins per the README; open `plannotator inbox`",
     "highlights": [
-     "Researches any topic across Reddit, X, YouTube, HN, Polymarket",
-     "README in 8 languages"
+     "Annotate agent plans, specs and HTML in the browser and send feedback back",
+     "Code review for Git, GitHub, GitLab and more",
+     "Inbox gathers questions and decisions from multiple agents"
     ],
     "cautions": [
-     "Depends on access to each platform"
+     "Needs the plugin or MCP setup for your agent"
     ]
    },
-   "overall": 8.2
+   "overall": 8.1
   },
   {
    "name": "ggml-org/llama.cpp",
    "description": "LLM inference in C/C++",
    "language": "C++",
-   "stars": 134878,
-   "stars_today": 494,
+   "stars": 135067,
+   "stars_today": 240,
    "url": "https://github.com/ggml-org/llama.cpp",
    "boards": [
     "c++"
    ],
-   "pushed_at": "2026-11-13T23:50:18Z",
+   "pushed_at": "2026-11-14T23:54:48Z",
    "created_at": "2023-03-10T18:58:00Z",
    "topics": [
     "ggml"
    ],
    "license": "MIT",
-   "forks": 25576,
-   "open_issues": 2596,
+   "forks": 25615,
+   "open_issues": 2602,
    "archived": false,
    "homepage": "https://llama.app",
    "scores": {
@@ -1169,13 +894,14 @@
    "name": "QwenLM/qwen-code",
    "description": "An open-source AI coding agent that lives in your terminal.",
    "language": "TypeScript",
-   "stars": 30120,
-   "stars_today": 462,
+   "stars": 30323,
+   "stars_today": 116,
    "url": "https://github.com/QwenLM/qwen-code",
    "boards": [
+    "all",
     "typescript"
    ],
-   "pushed_at": "2026-11-14T00:31:18Z",
+   "pushed_at": "2026-11-14T23:52:10Z",
    "created_at": "2025-06-26T01:37:46Z",
    "topics": [
     "agentic",
@@ -1192,8 +918,8 @@
     "typescript"
    ],
    "license": "Apache-2.0",
-   "forks": 3417,
-   "open_issues": 2254,
+   "forks": 3500,
+   "open_issues": 2290,
    "archived": false,
    "homepage": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
    "scores": {
@@ -1229,88 +955,16 @@
    "overall": 8.1
   },
   {
-   "name": "rustdesk/rustdesk",
-   "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
-   "language": "Rust",
-   "stars": 129356,
-   "stars_today": 146,
-   "url": "https://github.com/rustdesk/rustdesk",
-   "boards": [
-    "rust"
-   ],
-   "pushed_at": "2026-11-14T00:29:32Z",
-   "created_at": "2020-09-28T15:36:08Z",
-   "topics": [
-    "android",
-    "anydesk",
-    "dart",
-    "flatpak",
-    "flutter",
-    "flutter-apps",
-    "ios",
-    "linux",
-    "macos",
-    "p2p",
-    "rdp",
-    "remote-control",
-    "remote-desktop",
-    "rust",
-    "rust-lang",
-    "teamviewer",
-    "vnc",
-    "wayland",
-    "windows"
-   ],
-   "license": "AGPL-3.0",
-   "forks": 20663,
-   "open_issues": 220,
-   "archived": false,
-   "homepage": "https://rustdesk.com",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 9,
-    "usability": 9,
-    "virality": 6
-   },
-   "cats": [
-    "app",
-    "infra"
-   ],
-   "stack": "Rust + Flutter",
-   "type": "开源远程桌面",
-   "usage": "从 Releases、F-Droid 或 Flathub 下载，开箱即用；也可自建服务器",
-   "highlights": [
-    "TeamViewer 的开源替代，开箱即用",
-    "可使用官方中继，也可自托管以掌控数据"
-   ],
-   "cautions": [
-    "README 声明反对未授权访问等滥用"
-   ],
-   "en": {
-    "stack": "Rust + Flutter",
-    "type": "Open-source remote desktop",
-    "usage": "Download from Releases, F-Droid or Flathub; works out of the box, or self-host the server",
-    "highlights": [
-     "Open-source alternative to TeamViewer that works with no setup",
-     "Use the public relay or self-host to keep control of your data"
-    ],
-    "cautions": [
-     "README disclaims misuse such as unauthorized access"
-    ]
-   },
-   "overall": 8.1
-  },
-  {
    "name": "headroomlabs-ai/headroom",
    "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
    "language": "Python",
-   "stars": 79605,
-   "stars_today": 120,
+   "stars": 79671,
+   "stars_today": 93,
    "url": "https://github.com/headroomlabs-ai/headroom",
    "boards": [
     "python"
    ],
-   "pushed_at": "2026-11-13T23:38:21Z",
+   "pushed_at": "2026-11-14T23:00:26Z",
    "created_at": "2026-01-07T19:58:51Z",
    "topics": [
     "agent",
@@ -1335,8 +989,8 @@
     "typescript"
    ],
    "license": "Apache-2.0",
-   "forks": 6230,
-   "open_issues": 333,
+   "forks": 6237,
+   "open_issues": 304,
    "archived": false,
    "homepage": "https://docs.headroomlabs.ai/docs",
    "scores": {
@@ -1378,34 +1032,28 @@
    "overall": 8.1
   },
   {
-   "name": "backnotprop/plannotator",
-   "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-   "language": "TypeScript",
-   "stars": 10453,
-   "stars_today": 108,
-   "url": "https://github.com/backnotprop/plannotator",
+   "name": "aaif-goose/goose",
+   "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+   "language": "Rust",
+   "stars": 56617,
+   "stars_today": 72,
+   "url": "https://github.com/aaif-goose/goose",
    "boards": [
-    "all",
-    "typescript"
+    "rust"
    ],
-   "pushed_at": "2026-11-14T00:46:20Z",
-   "created_at": "2025-12-28T02:09:40Z",
+   "pushed_at": "2026-11-14T23:49:13Z",
+   "created_at": "2024-08-23T19:03:36Z",
    "topics": [
-    "agents",
-    "claude-code",
-    "code-review",
-    "codex",
-    "obsidian",
-    "opencode",
-    "pi-mono",
-    "plan-mode",
-    "skills"
+    "acp",
+    "ai",
+    "ai-agents",
+    "mcp"
    ],
    "license": "Apache-2.0",
-   "forks": 784,
-   "open_issues": 208,
+   "forks": 6591,
+   "open_issues": 548,
    "archived": false,
-   "homepage": "https://plannotator.ai",
+   "homepage": "https://goose-docs.ai/",
    "scores": {
     "popularity": 8,
     "maintenance": 9,
@@ -1413,307 +1061,182 @@
     "virality": 7
    },
    "cats": [
-    "coding",
-    "agent"
+    "agent",
+    "coding"
    ],
-   "stack": "TypeScript",
-   "type": "Agent 评审工作台",
-   "usage": "按 README 以插件/钩子接入 Claude Code、Codex 等；`plannotator inbox` 打开收件箱",
+   "stack": "Rust",
+   "type": "开源通用 AI Agent",
+   "usage": "下载桌面应用，或安装 CLI",
    "highlights": [
-    "在浏览器中批注 Agent 的计划、规格与 HTML，并把反馈回传",
-    "支持 Git、GitHub、GitLab 等的代码评审",
-    "Inbox 汇集多 Agent 的问题与决策"
+    "桌面应用、CLI 与 API 三种形态",
+    "支持 15+ 模型提供商，包括 Ollama",
+    "隶属 Linux 基金会旗下 AAIF"
    ],
    "cautions": [
-    "需配合所用 Agent 的插件或 MCP 配置"
+    "通用 Agent 会执行命令，需注意权限"
+   ],
+   "en": {
+    "stack": "Rust",
+    "type": "Open-source general-purpose AI agent",
+    "usage": "Download the desktop app or install the CLI",
+    "highlights": [
+     "Desktop app, CLI and API",
+     "15+ providers including Ollama",
+     "Part of the Linux Foundation's AAIF"
+    ],
+    "cautions": [
+     "Runs commands; mind permissions"
+    ]
+   },
+   "overall": 8.1
+  },
+  {
+   "name": "andrewyng/openworker",
+   "description": "",
+   "language": "Python",
+   "stars": 19219,
+   "stars_today": 94,
+   "url": "https://github.com/andrewyng/openworker",
+   "boards": [
+    "python"
+   ],
+   "pushed_at": "2026-11-14T00:34:18Z",
+   "created_at": "2026-07-20T01:52:32Z",
+   "topics": [],
+   "license": "MIT",
+   "forks": 2739,
+   "open_issues": 408,
+   "archived": false,
+   "homepage": "http://openworker.com",
+   "scores": {
+    "popularity": 8,
+    "maintenance": 9,
+    "usability": 7,
+    "virality": 8
+   },
+   "cats": [
+    "agent",
+    "app"
+   ],
+   "stack": "Python + TypeScript + Rust",
+   "type": "AI 同事桌面应用与 Agent SDK",
+   "usage": "下载 macOS/Windows 桌面应用，填入模型 key 或指向 Ollama",
+   "highlights": [
+    "桌面应用可研究、写作、审阅代码",
+    "可自带云端或本地模型并设置权限审批",
+    "Harness SDK 提供 Agent 循环与沙箱"
+   ],
+   "cautions": [
+    "桌面应用仍处公测",
+    "命令可在 NVIDIA OpenShell 沙箱中运行，需要自行配置"
+   ],
+   "en": {
+    "stack": "Python + TypeScript + Rust",
+    "type": "AI coworker desktop app and agent SDK",
+    "usage": "Download the macOS/Windows app, add a model key or point to Ollama",
+    "highlights": [
+     "Desktop app for research, writing and code review",
+     "Bring cloud or local models and set approval rules",
+     "Harness SDK handles the agent loop and sandboxing"
+    ],
+    "cautions": [
+     "Desktop app is in open beta",
+     "Commands can run in an NVIDIA OpenShell sandbox; needs setup"
+    ]
+   },
+   "overall": 8.0
+  },
+  {
+   "name": "dream-num/univer",
+   "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+   "language": "TypeScript",
+   "stars": 24474,
+   "stars_today": 495,
+   "url": "https://github.com/dream-num/univer",
+   "boards": [
+    "all",
+    "typescript"
+   ],
+   "pushed_at": "2026-11-14T17:23:40Z",
+   "created_at": "2022-09-29T12:09:14Z",
+   "topics": [
+    "board",
+    "collaboration",
+    "doc",
+    "docx",
+    "excel",
+    "offce365",
+    "office",
+    "pdf",
+    "ppt",
+    "pptx",
+    "presentation",
+    "sdk",
+    "sheet",
+    "slides",
+    "spreadsheet",
+    "univer",
+    "word",
+    "wordprocessor",
+    "workspace",
+    "xlsx"
+   ],
+   "license": "Apache-2.0",
+   "forks": 2225,
+   "open_issues": 165,
+   "archived": false,
+   "homepage": "https://univer.ai",
+   "scores": {
+    "popularity": 8,
+    "maintenance": 9,
+    "usability": 7,
+    "virality": 7
+   },
+   "cats": [
+    "app",
+    "coding"
+   ],
+   "stack": "TypeScript",
+   "type": "可嵌入的 Office SDK",
+   "usage": "按 README 的 Quick start 引入开源电子表格编辑器并接入自己的应用",
+   "highlights": [
+    "提供编辑、计算、协作等 Office 能力的 SDK",
+    "通过 Facade API 与事件把应用和 Agent 接入文档内容",
+    "带跨功能编辑与撤销重做的架构"
+   ],
+   "cautions": [
+    "README 将开源能力与更完整的产品区分，需自行确认所需功能是否开源"
    ],
    "en": {
     "stack": "TypeScript",
-    "type": "Agent review workspace",
-    "usage": "Hook it into Claude Code, Codex etc. via plugins per the README; open `plannotator inbox`",
+    "type": "Embeddable Office SDK",
+    "usage": "Follow the README Quick start to embed the open-source spreadsheet editor in your app",
     "highlights": [
-     "Annotate agent plans, specs and HTML in the browser and send feedback back",
-     "Code review for Git, GitHub, GitLab and more",
-     "Inbox gathers questions and decisions from multiple agents"
+     "SDK for editing, calculation and collaboration in your own app",
+     "Facade APIs and events connect apps and agents to document content",
+     "Architecture supports composed cross-feature edits and undo/redo"
     ],
     "cautions": [
-     "Needs the plugin or MCP setup for your agent"
+     "README separates open-source capabilities from the fuller product; check what you need is open"
     ]
    },
-   "overall": 8.1
-  },
-  {
-   "name": "tw93/Pake",
-   "description": "Turn any website into a lightweight desktop app with one command, on macOS, Windows and Linux.",
-   "language": "Rust",
-   "stars": 63550,
-   "stars_today": 102,
-   "url": "https://github.com/tw93/Pake",
-   "boards": [
-    "zh",
-    "rust"
-   ],
-   "pushed_at": "2026-11-13T03:12:48Z",
-   "created_at": "2022-10-14T09:32:57Z",
-   "topics": [
-    "chatgpt",
-    "claude",
-    "cli",
-    "desktop",
-    "desktop-app",
-    "electron-alternative",
-    "gemini",
-    "linux",
-    "macos",
-    "nativefier",
-    "no-electron",
-    "rust",
-    "tauri",
-    "web-to-desktop",
-    "website-to-app",
-    "webview",
-    "windows",
-    "youtube"
-   ],
-   "license": "GPL-3.0",
-   "forks": 13000,
-   "open_issues": 6,
-   "archived": false,
-   "homepage": "https://pake.run",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 9,
-    "usability": 9,
-    "virality": 6
-   },
-   "cats": [
-    "app"
-   ],
-   "stack": "Rust + Tauri",
-   "type": "网页打包桌面应用工具",
-   "usage": "用 CLI 一条命令打包网站，或使用在线构建与 Pake 桌面应用",
-   "highlights": [
-    "安装包通常小于 10 MB，称比 Electron 小近 20 倍",
-    "基于系统 WebView，支持快捷键、沉浸窗口与自定义样式"
-   ],
-   "cautions": [
-    "桌面应用版为独立下载，官网 pake.run"
-   ],
-   "en": {
-    "stack": "Rust + Tauri",
-    "type": "Website-to-desktop-app packager",
-    "usage": "Package a site with one CLI command, via online building, or the Pake desktop app",
-    "highlights": [
-     "Installers typically under 10 MB, claimed nearly 20x smaller than Electron",
-     "Uses the system WebView; shortcuts, immersive windows and style tweaks"
-    ],
-    "cautions": [
-     "The desktop app is a separate download (pake.run)"
-    ]
-   },
-   "overall": 8.1
-  },
-  {
-   "name": "affaan-m/ECC",
-   "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-   "language": "JavaScript",
-   "stars": 302467,
-   "stars_today": 559,
-   "url": "https://github.com/affaan-m/ECC",
-   "boards": [
-    "javascript"
-   ],
-   "pushed_at": "2026-11-09T04:56:24Z",
-   "created_at": "2026-01-18T00:51:51Z",
-   "topics": [
-    "ai-agents",
-    "anthropic",
-    "claude",
-    "claude-code",
-    "developer-tools",
-    "llm",
-    "mcp",
-    "productivity"
-   ],
-   "license": "MIT",
-   "forks": 44616,
-   "open_issues": 275,
-   "archived": false,
-   "homepage": "https://ecc.tools",
-   "scores": {
-    "popularity": 9,
-    "maintenance": 9,
-    "usability": 6,
-    "virality": 8
-   },
-   "cats": [
-    "claude",
-    "agent",
-    "coding"
-   ],
-   "stack": "JavaScript 插件/技能体系",
-   "type": "Agent 工程套件",
-   "usage": "用 `ecc@ecc` 插件（Claude Code 原生命令）或引导式安装；仅从官方渠道安装",
-   "highlights": [
-    "README 称含 71 个 Agent、314 个技能、98 个命令垫片",
-    "覆盖规划、测试、评审、记忆、持续学习与 AgentShield 安全扫描",
-    "支持 Claude Code、Codex、Qoder 及多款 IDE/Agent 的适配"
-   ],
-   "cautions": [
-    "体量大，需按语言/项目选择性启用规则",
-    "README 提醒仅信任官方来源"
-   ],
-   "en": {
-    "stack": "JavaScript plugin/skills system",
-    "type": "Agent engineering toolkit",
-    "usage": "Install the `ecc@ecc` plugin (native Claude Code commands) or the guided setup; use official channels only",
-    "highlights": [
-     "README lists 71 agents, 314 skills and 98 command shims",
-     "Covers planning, tests, review, memory, continuous learning and AgentShield security scanning",
-     "Adapters for Claude Code, Codex, Qoder and several IDEs/agents"
-    ],
-    "cautions": [
-     "Large footprint; enable rules selectively per language/project",
-     "README warns to trust official sources only"
-    ]
-   },
-   "overall": 8.0
-  },
-  {
-   "name": "multica-ai/multica",
-   "description": "Make humans and AI agents work as one team — open-source and self-hostable.",
-   "language": "Go",
-   "stars": 56057,
-   "stars_today": 167,
-   "url": "https://github.com/multica-ai/multica",
-   "boards": [
-    "go"
-   ],
-   "pushed_at": "2026-11-13T22:51:19Z",
-   "created_at": "2026-01-13T17:59:46Z",
-   "topics": [],
-   "license": "NOASSERTION",
-   "forks": 7402,
-   "open_issues": 2011,
-   "archived": false,
-   "homepage": "https://multica.ai",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 9,
-    "usability": 7,
-    "virality": 8
-   },
-   "cats": [
-    "agent",
-    "coding"
-   ],
-   "stack": "自托管工作区",
-   "type": "Agent 协作看板",
-   "usage": "使用云端快速开始，或按 SELF_HOSTING.md 自托管",
-   "highlights": [
-    "像分配给队友一样把 issue 分配给 AI 编码 Agent，它会汇报进度并交回评审",
-    "兼容已有的 Agent CLI，可自托管，无锁定",
-    "意图、运行、决策与 diff 都关联在同一个 issue 上"
-   ],
-   "cautions": [
-    "README 称为 source-available，并非传统开源许可"
-   ],
-   "en": {
-    "stack": "Self-hostable workspace",
-    "type": "Agent collaboration board",
-    "usage": "Use the cloud quickstart or self-host via SELF_HOSTING.md",
-    "highlights": [
-     "Assign issues to AI coding agents like teammates; they report progress and hand back for review",
-     "Works with agent CLIs you already use, self-hostable, no lock-in",
-     "Intent, run, decisions and diff stay linked to one issue"
-    ],
-    "cautions": [
-     "README calls it source-available, not a traditional open source license"
-    ]
-   },
-   "overall": 8.0
-  },
-  {
-   "name": "ahujasid/mcp-for-blender",
-   "description": "Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender Foundation.",
-   "language": "Python",
-   "stars": 34326,
-   "stars_today": 136,
-   "url": "https://github.com/ahujasid/mcp-for-blender",
-   "boards": [
-    "python"
-   ],
-   "pushed_at": "2026-11-13T06:54:07Z",
-   "created_at": "2025-03-07T09:58:58Z",
-   "topics": [
-    "3d-modeling",
-    "ai",
-    "blender",
-    "blender-addon",
-    "blender-mcp",
-    "claude",
-    "generative-ai",
-    "llm",
-    "mcp",
-    "model-context-protocol",
-    "python"
-   ],
-   "license": "MIT",
-   "forks": 3123,
-   "open_issues": 58,
-   "archived": false,
-   "homepage": "https://www.mcp-for-blender.com/",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 9,
-    "usability": 7,
-    "virality": 8
-   },
-   "cats": [
-    "media",
-    "agent"
-   ],
-   "stack": "Python MCP + Blender 插件",
-   "type": "Blender MCP 服务",
-   "usage": "运行 README 的一行安装脚本，同时配置 AI 应用与 Blender 插件；`uvx blender-mcp` 仍可用",
-   "highlights": [
-    "用任意 LLM 提示驱动 3D 建模与场景操作",
-    "原 `blender-mcp`，PyPI 包已更名为 `mcp-for-blender`，旧配置照常可用"
-   ],
-   "cautions": [
-    "第三方集成，非 Blender 官方出品",
-    "一行脚本为 `curl | sh`，执行前请自行检查"
-   ],
-   "en": {
-    "stack": "Python MCP + Blender add-on",
-    "type": "Blender MCP server",
-    "usage": "Run the README one-line installer (sets up AI apps and the Blender add-on); `uvx blender-mcp` still works",
-    "highlights": [
-     "Prompt-driven 3D modeling and scene manipulation with any LLM",
-     "Formerly `blender-mcp`; PyPI package renamed `mcp-for-blender`, old setups keep working"
-    ],
-    "cautions": [
-     "Third-party integration, not by Blender",
-     "Installer is `curl | sh`; inspect before running"
-    ]
-   },
-   "overall": 8.0
+   "overall": 7.8
   },
   {
    "name": "JustVugg/colibri",
    "description": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own.",
    "language": "C",
-   "stars": 50869,
-   "stars_today": 488,
+   "stars": 51126,
+   "stars_today": 280,
    "url": "https://github.com/JustVugg/colibri",
    "boards": [
     "c"
    ],
-   "pushed_at": "2026-11-13T23:00:42Z",
+   "pushed_at": "2026-11-14T22:50:43Z",
    "created_at": "2026-07-01T12:27:49Z",
    "topics": [],
    "license": "Apache-2.0",
-   "forks": 6021,
+   "forks": 6097,
    "open_issues": 199,
    "archived": false,
    "homepage": "https://justvugg.github.io/colibri",
@@ -1755,222 +1278,11 @@
    "overall": 7.8
   },
   {
-   "name": "ZhuLinsen/daily_stock_analysis",
-   "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
-   "language": "Python",
-   "stars": 71597,
-   "stars_today": 256,
-   "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-   "boards": [
-    "all",
-    "python"
-   ],
-   "pushed_at": "2026-11-13T16:25:42Z",
-   "created_at": "2026-01-10T06:43:20Z",
-   "topics": [
-    "a-stock",
-    "ai-agent",
-    "aigc",
-    "llm",
-    "quant",
-    "quantitative-finance",
-    "quantitative-trading"
-   ],
-   "license": "MIT",
-   "forks": 57283,
-   "open_issues": 57,
-   "archived": false,
-   "homepage": "https://dsa.zhulinsen.tech",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 9,
-    "usability": 7,
-    "virality": 7
-   },
-   "cats": [
-    "data",
-    "llm"
-   ],
-   "stack": "Python，支持 Docker 与 GitHub Actions",
-   "type": "LLM 股票智能分析",
-   "usage": "配置模型与数据源，可用 Docker 或 GitHub Actions 定时运行并推送到企业微信/飞书/Telegram 等",
-   "highlights": [
-    "覆盖 A 股、港股、美股、日股、韩股、台股与 ETF",
-    "每日生成含评分、买卖点位、风险提示的「决策仪表盘」",
-    "支持多渠道推送，提供 Web/桌面工作台"
-   ],
-   "cautions": [
-    "输出为 AI 生成内容，不构成投资建议",
-    "README 含第三方赞助推广"
-   ],
-   "en": {
-    "stack": "Python, Docker and GitHub Actions",
-    "type": "LLM stock analysis",
-    "usage": "Configure a model and data sources; run on a schedule via Docker or GitHub Actions and push to WeCom/Feishu/Telegram etc.",
-    "highlights": [
-     "Covers A-share, HK, US, JP, KR, TW stocks and ETFs",
-     "Daily \"decision dashboard\" with scores, entry/exit levels and risk alerts",
-     "Multi-channel push plus web/desktop workbench"
-    ],
-    "cautions": [
-     "AI-generated output, not investment advice",
-     "README contains third-party sponsor promotion"
-    ]
-   },
-   "overall": 7.8
-  },
-  {
-   "name": "Gentleman-Programming/gentle-ai",
-   "description": "Gentle-AI configures the AI coding agents you already use: Claude Code, Cursor, OpenCode, Codex, Pi, and more. Choose persistent memory, Organic-Driven Development, curated skills, MCP servers, personas, and optional bounded review. Open source, no agent lock-in.",
-   "language": "Go",
-   "stars": 9131,
-   "stars_today": 242,
-   "url": "https://github.com/Gentleman-Programming/gentle-ai",
-   "boards": [
-    "go"
-   ],
-   "pushed_at": "2026-11-13T23:01:57Z",
-   "created_at": "2026-02-27T23:28:01Z",
-   "topics": [
-    "agent-skills",
-    "ai-agents",
-    "ai-coding",
-    "claude-code",
-    "code-review",
-    "codex",
-    "coding-agents",
-    "copilot",
-    "cursor",
-    "developer-tools",
-    "golang",
-    "llm",
-    "mcp",
-    "opencode",
-    "persistent-memory",
-    "pi",
-    "spec-driven-development"
-   ],
-   "license": "MIT",
-   "forks": 898,
-   "open_issues": 402,
-   "archived": false,
-   "homepage": "https://gentlemanprogramming.com/",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 9,
-    "usability": 7,
-    "virality": 7
-   },
-   "cats": [
-    "agent",
-    "memory",
-    "coding"
-   ],
-   "stack": "Go CLI",
-   "type": "Agent 配置与记忆工具",
-   "usage": "按 README 安装后，为已有的 Claude Code、Cursor、OpenCode、Codex 等配置记忆与工作流",
-   "highlights": [
-    "为现有编码 Agent 配置记忆、工作流与可验证的证据",
-    "支持 Claude Code、Cursor、OpenCode、Codex、Pi 等"
-   ],
-   "cautions": [
-    "README 篇幅较长，上手前需阅读功能章节",
-    "项目靠捐赠维护"
-   ],
-   "en": {
-    "stack": "Go CLI",
-    "type": "Agent setup and memory tool",
-    "usage": "Install per the README, then configure memory and workflow for the agents you already use (Claude Code, Cursor, OpenCode, Codex…)",
-    "highlights": [
-     "Configures memory, workflow and verifiable evidence for existing coding agents",
-     "Supports Claude Code, Cursor, OpenCode, Codex, Pi and more"
-    ],
-    "cautions": [
-     "Long README; read the features section before starting",
-     "Funded by donations"
-    ]
-   },
-   "overall": 7.8
-  },
-  {
-   "name": "coreyhaines31/marketingskills",
-   "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
-   "language": "JavaScript",
-   "stars": 60178,
-   "stars_today": 190,
-   "url": "https://github.com/coreyhaines31/marketingskills",
-   "boards": [
-    "javascript"
-   ],
-   "pushed_at": "2026-11-11T17:49:23Z",
-   "created_at": "2026-01-15T19:45:23Z",
-   "topics": [
-    "agent-skills",
-    "ai-agents",
-    "ai-seo",
-    "claude",
-    "claude-code",
-    "claude-code-plugin",
-    "claude-skills",
-    "codex",
-    "content-marketing",
-    "conversion-rate-optimization",
-    "copywriting",
-    "cursor",
-    "email-marketing",
-    "generative-engine-optimization",
-    "growth-marketing",
-    "marketing",
-    "marketing-automation",
-    "saas-marketing",
-    "seo",
-    "skill-md"
-   ],
-   "license": "MIT",
-   "forks": 8788,
-   "open_issues": 84,
-   "archived": false,
-   "homepage": "https://marketing-skills.com",
-   "scores": {
-    "popularity": 8,
-    "maintenance": 8,
-    "usability": 8,
-    "virality": 7
-   },
-   "cats": [
-    "claude",
-    "agent"
-   ],
-   "stack": "Markdown 技能（Agent Skills 规范）",
-   "type": "营销 Agent 技能集",
-   "usage": "按 README 安装到 Claude Code、Codex、Cursor 等支持 Agent Skills 的工具",
-   "highlights": [
-    "覆盖转化优化、文案、SEO、分析与增长工程",
-    "兼容多种编码 Agent"
-   ],
-   "cautions": [
-    "README 含作者商业服务推广"
-   ],
-   "en": {
-    "stack": "Markdown skills (Agent Skills spec)",
-    "type": "Marketing skills for AI agents",
-    "usage": "Install into Claude Code, Codex, Cursor or any agent supporting Agent Skills",
-    "highlights": [
-     "Covers CRO, copywriting, SEO, analytics and growth engineering",
-     "Works with many coding agents"
-    ],
-    "cautions": [
-     "README promotes the author's commercial services"
-    ]
-   },
-   "overall": 7.8
-  },
-  {
    "name": "apple/container",
    "description": "A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon.",
    "language": "Swift",
-   "stars": 51435,
-   "stars_today": 104,
+   "stars": 51474,
+   "stars_today": 77,
    "url": "https://github.com/apple/container",
    "boards": [
     "swift"
@@ -1979,8 +1291,8 @@
    "created_at": "2025-05-30T21:26:05Z",
    "topics": [],
    "license": "Apache-2.0",
-   "forks": 1822,
-   "open_issues": 616,
+   "forks": 1824,
+   "open_issues": 620,
    "archived": false,
    "homepage": "https://apple.github.io/container/documentation/",
    "scores": {
@@ -2017,407 +1329,377 @@
    "overall": 7.8
   },
   {
-   "name": "nvm-sh/nvm",
-   "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-   "language": "Shell",
-   "stars": 96106,
-   "stars_today": 154,
-   "url": "https://github.com/nvm-sh/nvm",
+   "name": "tradermonty/claude-trading-skills",
+   "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+   "language": "Python",
+   "stars": 4783,
+   "stars_today": 556,
+   "url": "https://github.com/tradermonty/claude-trading-skills",
    "boards": [
-    "shell"
+    "all",
+    "python"
    ],
-   "pushed_at": "2026-11-12T05:50:45Z",
-   "created_at": "2010-04-15T17:47:47Z",
-   "topics": [
-    "bash",
-    "install",
-    "lts",
-    "node",
-    "node-js",
-    "nodejs",
-    "nvm",
-    "nvmrc",
-    "posix",
-    "posix-compliant",
-    "shell",
-    "version-manager",
-    "zsh"
-   ],
+   "pushed_at": "2026-11-14T23:51:49Z",
+   "created_at": "2025-10-19T16:37:29Z",
+   "topics": [],
    "license": "MIT",
-   "forks": 10761,
-   "open_issues": 378,
+   "forks": 992,
+   "open_issues": 65,
    "archived": false,
-   "homepage": "",
+   "homepage": "https://tradermonty.github.io/claude-trading-skills/",
    "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 9,
-    "virality": 5
+    "popularity": 8,
+    "maintenance": 8,
+    "usability": 7,
+    "virality": 7
    },
    "cats": [
-    "infra"
+    "claude",
+    "data"
    ],
-   "stack": "POSIX Shell",
-   "type": "Node 版本管理器",
-   "usage": "按 README 运行安装脚本，之后用 `nvm install` / `nvm use` 切换 Node 版本",
+   "stack": "Python + Claude Skills",
+   "type": "面向个人投资者的交易流程技能包",
+   "usage": "按 README 推荐路径把技能装入 Claude Code，用于市场复盘、风控、交易计划与日志",
    "highlights": [
-    "POSIX 兼容脚本，可并存并切换多个 Node.js 版本",
-    "文档覆盖 Docker、CI、Linux/macOS 排错"
+    "覆盖市场分析、技术图表、风险管理与交易日志",
+    "定位是结构化决策流程，而非买卖信号",
+    "附带文档站与日文 README"
    ],
    "cautions": [
-    "不支持原生 Windows（见 README 说明）"
+    "仅供教育研究，非投资建议，不是信号服务",
+    "MIT 协议，按现状提供且无担保"
    ],
    "en": {
-    "stack": "POSIX shell",
-    "type": "Node version manager",
-    "usage": "Run the install script from the README, then `nvm install` / `nvm use`",
+    "stack": "Python + Claude Skills",
+    "type": "Trading workflow skills for individual investors",
+    "usage": "Install the skills into Claude Code following the README's recommended path for market review, risk, trade planning and journaling",
     "highlights": [
-     "POSIX-compliant script that keeps and switches multiple Node.js versions",
-     "Docs cover Docker, CI and Linux/macOS troubleshooting"
+     "Covers market analysis, technical charting, risk management and trade journaling",
+     "Aims to structure decisions rather than give buy/sell signals",
+     "Ships a documentation site and a Japanese README"
     ],
     "cautions": [
-     "Native Windows is not supported (see README)"
+     "Educational only, not financial advice or a signal service",
+     "MIT, provided as-is without warranty"
     ]
    },
    "overall": 7.6
   },
   {
-   "name": "PurpleDoubleD/locally-uncensored",
-   "description": "The all-in-one local AI studio for your desktop: chat, image and video generation and a coding agent in one free, open source app. Windows and Linux. No Docker, no terminal, no cloud required.",
-   "language": "TypeScript",
-   "stars": 4191,
-   "stars_today": 148,
-   "url": "https://github.com/PurpleDoubleD/locally-uncensored",
+   "name": "tailscale/tailscale",
+   "description": "The easiest, most secure way to use WireGuard and 2FA.",
+   "language": "Go",
+   "stars": 39113,
+   "stars_today": 66,
+   "url": "https://github.com/tailscale/tailscale",
    "boards": [
-    "typescript"
+    "go"
    ],
-   "pushed_at": "2026-11-09T15:41:41Z",
-   "created_at": "2026-03-24T21:52:47Z",
+   "pushed_at": "2026-11-14T18:09:55Z",
+   "created_at": "2020-01-31T22:00:03Z",
    "topics": [
-    "agent",
-    "ai-chat",
-    "ai-studio",
-    "all-in-one",
-    "coding-agent",
-    "desktop-app",
-    "flux",
-    "image-generation",
-    "linux",
-    "llm",
-    "local-ai",
-    "local-llm",
-    "open-source",
-    "privacy",
-    "self-hosted",
-    "stable-diffusion",
-    "uncensored",
-    "uncensored-ai",
-    "video-generation",
-    "windows"
+    "2fa",
+    "oauth",
+    "sso",
+    "tailscale",
+    "vpn",
+    "wireguard"
    ],
-   "license": "AGPL-3.0",
-   "forks": 666,
-   "open_issues": 25,
+   "license": "BSD-3-Clause",
+   "forks": 3483,
+   "open_issues": 4734,
    "archived": false,
-   "homepage": "https://locallyuncensored.com",
+   "homepage": "https://tailscale.com",
    "scores": {
     "popularity": 7,
-    "maintenance": 8,
+    "maintenance": 10,
     "usability": 8,
-    "virality": 7
+    "virality": 5
+   },
+   "cats": [
+    "infra",
+    "security"
+   ],
+   "stack": "Go",
+   "type": "基于 WireGuard 的私有网络",
+   "usage": "按官网安装 tailscaled 与 tailscale CLI",
+   "highlights": [
+    "包含 tailscaled 守护进程与 CLI",
+    "支持 Linux、Windows、macOS 等",
+    "iOS 与 Android 应用复用此仓库代码"
+   ],
+   "cautions": [
+    "仓库不含移动端界面与完整控制平面"
+   ],
+   "en": {
+    "stack": "Go",
+    "type": "Private WireGuard networks made easy",
+    "usage": "Install tailscaled and the tailscale CLI per the website",
+    "highlights": [
+     "Contains the tailscaled daemon and CLI",
+     "Runs on Linux, Windows, macOS and more",
+     "iOS and Android apps reuse this code"
+    ],
+    "cautions": [
+     "Repo lacks mobile GUI code and the full control plane"
+    ]
+   },
+   "overall": 7.6
+  },
+  {
+   "name": "jellyfin/jellyfin",
+   "description": "The Free Software Media System - Server Backend & API",
+   "language": "C#",
+   "stars": 59366,
+   "stars_today": 58,
+   "url": "https://github.com/jellyfin/jellyfin",
+   "boards": [
+    "c%23"
+   ],
+   "pushed_at": "2026-11-14T23:52:25Z",
+   "created_at": "2018-12-09T06:36:45Z",
+   "topics": [
+    "csharp",
+    "dotnet",
+    "hacktoberfest",
+    "jellyfin"
+   ],
+   "license": "GPL-2.0",
+   "forks": 5814,
+   "open_issues": 904,
+   "archived": false,
+   "homepage": "https://jellyfin.org",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 10,
+    "usability": 8,
+    "virality": 5
+   },
+   "cats": [
+    "app",
+    "media"
+   ],
+   "stack": "C# + .NET",
+   "type": "自由软件媒体服务器",
+   "usage": "按官方文档安装服务器并连接客户端",
+   "highlights": [
+    "Plex、Emby 的开源替代",
+    "无付费授权，无隐藏功能",
+    "覆盖多种终端设备客户端"
+   ],
+   "cautions": [
+    "本仓库仅为后端服务器"
+   ],
+   "en": {
+    "stack": "C# + .NET",
+    "type": "Free software media server",
+    "usage": "Install per the official docs and connect a client app",
+    "highlights": [
+     "Open-source alternative to Plex and Emby",
+     "No premium licenses or hidden features",
+     "Apps for many devices"
+    ],
+    "cautions": [
+     "This repo is only the backend server"
+    ]
+   },
+   "overall": 7.6
+  },
+  {
+   "name": "ggml-org/ggml",
+   "description": "Tensor library for machine learning",
+   "language": "C++",
+   "stars": 15787,
+   "stars_today": 139,
+   "url": "https://github.com/ggml-org/ggml",
+   "boards": [
+    "c++"
+   ],
+   "pushed_at": "2026-11-13T08:34:20Z",
+   "created_at": "2022-09-18T17:07:19Z",
+   "topics": [
+    "machine-learning"
+   ],
+   "license": "MIT",
+   "forks": 1947,
+   "open_issues": 387,
+   "archived": false,
+   "homepage": "https://github.com/ggml-org",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 10,
+    "usability": 7,
+    "virality": 6
    },
    "cats": [
     "llm",
-    "media"
+    "infra"
    ],
-   "stack": "桌面应用",
-   "type": "本地 AI 工作室",
-   "usage": "下载应用、选择模型即可使用",
+   "stack": "C/C++",
+   "type": "机器学习张量库",
+   "usage": "从源码 cmake 构建，examples/simple 有最小示例",
    "highlights": [
-    "聊天、图像、视频与编码 Agent 合一",
-    "本地模式全部在本机运行，无需 Docker 或配置文件"
+    "无依赖的纯 C/C++ 实现",
+    "覆盖 CPU、GPU、NPU 与浏览器后端",
+    "2 到 8 位量化及 MXFP4/NVFP4"
    ],
    "cautions": [
-    "名称含“uncensored”，需注意使用合规"
+    "偏底层库，面向开发者而非终端用户"
    ],
    "en": {
-    "stack": "Desktop app",
-    "type": "Local AI studio",
-    "usage": "Download the app, pick a model, go",
+    "stack": "C/C++",
+    "type": "Tensor library for machine learning",
+    "usage": "Build from source with cmake; examples/simple is a minimal example",
     "highlights": [
-     "Chat, images, video and a coding agent in one app",
-     "Local mode runs fully on your machine; no Docker or config files"
+     "Dependency-free plain C/C++",
+     "CPU, GPU, NPU and browser backends",
+     "2- to 8-bit quantization plus MXFP4/NVFP4"
     ],
     "cautions": [
-     "\"Uncensored\" in the name; use responsibly"
+     "Low-level library for developers, not end users"
     ]
    },
    "overall": 7.5
   },
   {
-   "name": "dotnet/skills",
-   "description": "Repository for skills to assist AI coding agents with .NET and C#",
-   "language": "C#",
-   "stars": 6143,
-   "stars_today": 147,
-   "url": "https://github.com/dotnet/skills",
+   "name": "zeronsh/zeron",
+   "description": "A native control plane for Claude Code, Codex, Cursor, Devin and other coding agents.",
+   "language": "Rust",
+   "stars": 3663,
+   "stars_today": 60,
+   "url": "https://github.com/zeronsh/zeron",
    "boards": [
-    "c%23"
+    "rust"
    ],
-   "pushed_at": "2026-11-13T20:11:12Z",
-   "created_at": "2026-02-03T22:51:09Z",
+   "pushed_at": "2026-11-14T22:25:26Z",
+   "created_at": "2026-07-20T15:04:04Z",
    "topics": [
-    "agent-skills"
+    "ai",
+    "claude-code",
+    "codex",
+    "coding-agent",
+    "cursor",
+    "developer-tools",
+    "gpui",
+    "local-first",
+    "open-source",
+    "rust"
    ],
    "license": "MIT",
-   "forks": 482,
-   "open_issues": 111,
+   "forks": 372,
+   "open_issues": 271,
    "archived": false,
-   "homepage": "",
+   "homepage": "https://zeron.sh",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 9,
+    "usability": 8,
+    "virality": 7
+   },
+   "cats": [
+    "agent",
+    "coding"
+   ],
+   "stack": "Rust",
+   "type": "本地优先的编码 Agent 控制台",
+   "usage": "下载桌面应用，或在 Linux 服务器用安装脚本",
+   "highlights": [
+    "统一控制 Claude Code、Codex、Cursor 等 Agent",
+    "默认本地，无需账号",
+    "可选多设备同步"
+   ],
+   "cautions": [
+    "README 提供 curl | sh 安装脚本，运行前先审阅"
+   ],
+   "en": {
+    "stack": "Rust",
+    "type": "Local-first control plane for coding agents",
+    "usage": "Download the desktop app, or use the install script on a Linux server",
+    "highlights": [
+     "One place to control Claude Code, Codex, Cursor and more",
+     "Local by default, no account needed",
+     "Optional multi-device sync"
+    ],
+    "cautions": [
+     "README offers a curl | sh installer; read it before running"
+    ]
+   },
+   "overall": 7.5
+  },
+  {
+   "name": "chen08209/FlClash",
+   "description": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
+   "language": "Dart",
+   "stars": 63242,
+   "stars_today": 224,
+   "url": "https://github.com/chen08209/FlClash",
+   "boards": [
+    "dart"
+   ],
+   "pushed_at": "2026-11-04T07:31:46Z",
+   "created_at": "2023-08-15T07:47:22Z",
+   "topics": [
+    "clash",
+    "clash-meta",
+    "flutter",
+    "hysteria",
+    "multi-platform",
+    "proxy",
+    "v2ray",
+    "vless",
+    "vpn"
+   ],
+   "license": "GPL-3.0",
+   "forks": 4181,
+   "open_issues": 277,
+   "archived": false,
+   "homepage": "https://chen08209.github.io/FlClash",
    "scores": {
     "popularity": 7,
-    "maintenance": 9,
+    "maintenance": 8,
     "usability": 8,
     "virality": 6
    },
    "cats": [
-    "claude",
-    "coding"
-   ],
-   "stack": "C# / Markdown 技能",
-   "type": ".NET 官方 Agent 技能集",
-   "usage": "按 README 以插件方式安装 dotnet、dotnet-advanced 等插件",
-   "highlights": [
-    ".NET 团队维护的可移植技能与 GitHub Copilot 自定义 Agent",
-    "含 C# 语言服务器集成，并有技能价值看板"
-   ],
-   "cautions": [
-    "Agent 文件按 Copilot 约定，不是原生 Codex Agent"
-   ],
-   "en": {
-    "stack": "C# / Markdown skills",
-    "type": "Official .NET agent skills",
-    "usage": "Install the dotnet, dotnet-advanced… plugins per the README",
-    "highlights": [
-     "Portable skills and Copilot custom agents curated by the .NET team",
-     "Includes C# language-server integration and a skill-value dashboard"
-    ],
-    "cautions": [
-     "Agent files follow Copilot conventions, not native Codex agents"
-    ]
-   },
-   "overall": 7.5
-  },
-  {
-   "name": "vorssaint/vorssaint-utils",
-   "description": "Free and open-source macOS menu bar toolkit.",
-   "language": "Swift",
-   "stars": 34615,
-   "stars_today": 131,
-   "url": "https://github.com/vorssaint/vorssaint-utils",
-   "boards": [
-    "swift"
-   ],
-   "pushed_at": "2026-11-13T18:28:47Z",
-   "created_at": "2026-06-12T15:25:43Z",
-   "topics": [
-    "alt-tab",
-    "app-uninstaller",
-    "appkit",
-    "finder",
-    "free",
-    "keep-awake",
-    "mac-os",
-    "menu-bar",
-    "menubar",
-    "open-source",
-    "swift",
-    "swift-ui",
-    "system-monitor",
-    "uninstaller",
-    "volume-mixer",
-    "window-switcher"
-   ],
-   "license": "GPL-3.0",
-   "forks": 1750,
-   "open_issues": 1565,
-   "archived": false,
-   "homepage": "https://vorssaint.com",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 8,
-    "usability": 8,
-    "virality": 7
-   },
-   "cats": [
     "app"
    ],
-   "stack": "macOS 菜单栏应用",
-   "type": "macOS 工具集",
-   "usage": "按需安装所需模块",
+   "stack": "Dart/Flutter + mihomo",
+   "type": "多平台 Clash.Meta 代理客户端",
+   "usage": "从 GitHub Releases 下载对应平台安装包",
    "highlights": [
-    "一个菜单栏图标替代多款付费 Mac 应用",
-    "免费开源，只装需要的部分"
+    "支持 Android、Windows、macOS、Linux",
+    "规则路由、TUN 模式与订阅配置",
+    "无广告，GPL-3.0"
    ],
    "cautions": [
-    "README 信息有限"
+    "需自备合法订阅或节点，请遵守所在地法规"
    ],
    "en": {
-    "stack": "macOS menu bar app",
-    "type": "macOS toolkit",
-    "usage": "Install only the modules you use",
+    "stack": "Dart/Flutter + mihomo",
+    "type": "Multi-platform Clash.Meta proxy client",
+    "usage": "Download the build for your platform from GitHub Releases",
     "highlights": [
-     "One menu bar icon replacing a dozen paid Mac apps",
-     "Free and open source; install only what you need"
+     "Android, Windows, macOS and Linux",
+     "Rule routing, TUN mode and subscription profiles",
+     "Ad-free, GPL-3.0"
     ],
     "cautions": [
-     "README details are limited"
+     "You supply your own subscription; follow local laws"
     ]
    },
-   "overall": 7.5
-  },
-  {
-   "name": "a2ui-project/a2ui",
-   "description": "Open-source generative UI framework: agents stream layout data, and apps render it with native components in React, Angular, Lit, Flutter, SwiftUI and Jetpack Compose.",
-   "language": "TypeScript",
-   "stars": 17312,
-   "stars_today": 117,
-   "url": "https://github.com/a2ui-project/a2ui",
-   "boards": [
-    "typescript"
-   ],
-   "pushed_at": "2026-11-14T00:40:33Z",
-   "created_at": "2025-09-24T23:14:02Z",
-   "topics": [
-    "a2a",
-    "a2ui",
-    "agent",
-    "angular",
-    "flutter",
-    "generative-ui",
-    "jetpack-compose",
-    "lit",
-    "llm",
-    "mcp",
-    "react",
-    "swiftui"
-   ],
-   "license": "Apache-2.0",
-   "forks": 1402,
-   "open_issues": 479,
-   "archived": false,
-   "homepage": "https://a2ui.org/",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 7,
-    "virality": 7
-   },
-   "cats": [
-    "agent",
-    "app"
-   ],
-   "stack": "TypeScript + 多端渲染器",
-   "type": "生成式 UI 协议与框架",
-   "usage": "参考 a2ui.org 的规范与渲染器，或在 A2UI Composer 中试用",
-   "highlights": [
-    "Agent 以数据而非代码描述界面，流式低延迟传输",
-    "提供 Web/移动原生渲染器与多语言 Agent SDK"
-   ],
-   "cautions": [
-    "协议较新，生态仍在成长"
-   ],
-   "en": {
-    "stack": "TypeScript + multi-platform renderers",
-    "type": "Generative UI protocol and framework",
-    "usage": "See a2ui.org for the spec and renderers, or try the A2UI Composer in the browser",
-    "highlights": [
-     "Agents describe UI as data, not code, streamed at low latency",
-     "Native renderers for web and mobile plus agent SDKs in several languages"
-    ],
-    "cautions": [
-     "New protocol; ecosystem still growing"
-    ]
-   },
-   "overall": 7.5
-  },
-  {
-   "name": "volcengine/OpenViking",
-   "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
-   "language": "Python",
-   "stars": 42204,
-   "stars_today": 113,
-   "url": "https://github.com/volcengine/OpenViking",
-   "boards": [
-    "python"
-   ],
-   "pushed_at": "2026-11-13T18:32:33Z",
-   "created_at": "2026-01-05T07:11:17Z",
-   "topics": [
-    "agent-context",
-    "agent-memory",
-    "agent-plugins",
-    "agentic-rag",
-    "context-database",
-    "dsh-plugin",
-    "knowledge-base",
-    "memory",
-    "memory-management",
-    "self-evolving",
-    "vector-database"
-   ],
-   "license": "AGPL-3.0",
-   "forks": 3479,
-   "open_issues": 1455,
-   "archived": false,
-   "homepage": "https://openviking.ai",
-   "scores": {
-    "popularity": 7,
-    "maintenance": 9,
-    "usability": 7,
-    "virality": 7
-   },
-   "cats": [
-    "memory",
-    "agent"
-   ],
-   "stack": "Python",
-   "type": "Agent 上下文数据库",
-   "usage": "按 README 部署，或在浏览器试用 OpenViking Studio",
-   "highlights": [
-    "用 `viking://` 虚拟文件系统统一管理知识、记忆与技能",
-    "先读目录摘要再读原文，会话可沉淀为可编辑的 Markdown 记忆",
-    "检索可限定在某个子目录"
-   ],
-   "cautions": [
-    "概念较新，需适应其文件系统式范式"
-   ],
-   "en": {
-    "stack": "Python",
-    "type": "Context database for AI agents",
-    "usage": "Deploy per the README, or try OpenViking Studio in the browser",
-    "highlights": [
-     "One `viking://` virtual filesystem for knowledge, memory and skills",
-     "Reads directory summaries before sources; sessions become editable Markdown memories",
-     "Search can be scoped to a subtree"
-    ],
-    "cautions": [
-     "New concept; takes time to adopt the filesystem-style model"
-    ]
-   },
-   "overall": 7.5
+   "overall": 7.3
   },
   {
    "name": "CopilotKit/OpenBot",
    "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
    "language": "TypeScript",
-   "stars": 12112,
-   "stars_today": 674,
+   "stars": 12273,
+   "stars_today": 209,
    "url": "https://github.com/CopilotKit/OpenBot",
    "boards": [
     "typescript"
    ],
-   "pushed_at": "2026-11-14T00:45:17Z",
+   "pushed_at": "2026-11-14T23:51:41Z",
    "created_at": "2026-08-17T00:44:59Z",
    "topics": [
     "ag-ui",
@@ -2429,8 +1711,8 @@
     "mcp"
    ],
    "license": "MIT",
-   "forks": 1487,
-   "open_issues": 109,
+   "forks": 1513,
+   "open_issues": 108,
    "archived": false,
    "homepage": "open.bot",
    "scores": {
@@ -2468,22 +1750,88 @@
    "overall": 7.3
   },
   {
+   "name": "pi-hole/pi-hole",
+   "description": "A black hole for Internet advertisements",
+   "language": "Shell",
+   "stars": 62004,
+   "stars_today": 52,
+   "url": "https://github.com/pi-hole/pi-hole",
+   "boards": [
+    "shell"
+   ],
+   "pushed_at": "2026-11-14T16:44:58Z",
+   "created_at": "2014-06-08T15:02:55Z",
+   "topics": [
+    "ad-blocker",
+    "blocker",
+    "cloud",
+    "dashboard",
+    "dhcp",
+    "dhcp-server",
+    "dns-server",
+    "dnsmasq",
+    "pi-hole",
+    "raspberry-pi",
+    "shell"
+   ],
+   "license": "NOASSERTION",
+   "forks": 3390,
+   "open_issues": 33,
+   "archived": false,
+   "homepage": "https://pi-hole.net",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 9,
+    "usability": 8,
+    "virality": 5
+   },
+   "cats": [
+    "infra",
+    "security"
+   ],
+   "stack": "Shell",
+   "type": "全网广告拦截 DNS 服务",
+   "usage": "一行脚本安装在自己的 Linux 设备上",
+   "highlights": [
+    "DNS 黑洞，客户端无需安装软件",
+    "可拦截应用与智能电视里的广告",
+    "带网页控制台"
+   ],
+   "cautions": [
+    "安装脚本为 curl 管道方式，运行前先审阅"
+   ],
+   "en": {
+    "stack": "Shell",
+    "type": "Network-wide ad-blocking DNS sinkhole",
+    "usage": "Install with the one-step script on your own Linux machine",
+    "highlights": [
+     "DNS sinkhole, no client software",
+     "Blocks ads in apps and smart TVs",
+     "Web dashboard"
+    ],
+    "cautions": [
+     "Pipe-to-shell installer; read it before running"
+    ]
+   },
+   "overall": 7.3
+  },
+  {
    "name": "GoogleChrome/modern-web-guidance-src",
    "description": "Keep your coding agent up to date with the latest web best practices",
    "language": "TypeScript",
-   "stars": 4851,
-   "stars_today": 1925,
+   "stars": 6006,
+   "stars_today": 1225,
    "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
    "boards": [
     "all",
     "typescript"
    ],
-   "pushed_at": "2026-11-14T00:26:54Z",
+   "pushed_at": "2026-11-14T14:28:09Z",
    "created_at": "2026-01-27T20:22:24Z",
    "topics": [],
    "license": "Apache-2.0",
-   "forks": 270,
-   "open_issues": 387,
+   "forks": 401,
+   "open_issues": 390,
    "archived": false,
    "homepage": "https://goo.gle/modern-web-guidance",
    "scores": {
@@ -2526,13 +1874,13 @@
    "name": "ModernRelay/omnigraph",
    "description": "Object-storage native graph database with branching and typed ontology",
    "language": "Rust",
-   "stars": 2248,
-   "stars_today": 160,
+   "stars": 2430,
+   "stars_today": 212,
    "url": "https://github.com/ModernRelay/omnigraph",
    "boards": [
     "rust"
    ],
-   "pushed_at": "2026-11-14T00:20:26Z",
+   "pushed_at": "2026-11-14T13:30:05Z",
    "created_at": "2026-04-10T17:50:30Z",
    "topics": [
     "apache-arrow",
@@ -2548,8 +1896,8 @@
     "versioning"
    ],
    "license": "MIT",
-   "forks": 291,
-   "open_issues": 179,
+   "forks": 307,
+   "open_issues": 186,
    "archived": false,
    "homepage": "https://omnigraph.dev",
    "scores": {
@@ -2594,116 +1942,193 @@
    "overall": 7.2
   },
   {
-   "name": "microsoft/Procexp-Mac",
-   "description": "Process Explorer for MacOS",
-   "language": "Swift",
-   "stars": 907,
-   "stars_today": 148,
-   "url": "https://github.com/microsoft/Procexp-Mac",
+   "name": "NVIDIA/SkillEvaluator",
+   "description": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+   "language": "Python",
+   "stars": 1254,
+   "stars_today": 168,
+   "url": "https://github.com/NVIDIA/SkillEvaluator",
    "boards": [
-    "swift"
+    "python"
    ],
-   "pushed_at": "2026-11-11T20:26:16Z",
-   "created_at": "2026-07-06T21:43:46Z",
-   "topics": [],
-   "license": null,
-   "forks": 26,
-   "open_issues": 11,
+   "pushed_at": "2026-11-14T23:50:56Z",
+   "created_at": "2026-06-24T02:32:26Z",
+   "topics": [
+    "agent-evaluation",
+    "agent-plugins",
+    "agent-security",
+    "agent-skills",
+    "agentic-ai",
+    "benchmark",
+    "claude-code",
+    "codex",
+    "evaluate",
+    "evaluation",
+    "plugin",
+    "plugin-evaluation",
+    "security-scanner",
+    "skill-eval",
+    "skill-evals",
+    "skill-evaluation",
+    "skill-evaluator",
+    "skills"
+   ],
+   "license": "Apache-2.0",
+   "forks": 146,
+   "open_issues": 40,
    "archived": false,
-   "homepage": null,
+   "homepage": "https://docs.nvidia.com/skills/skillevaluator/",
    "scores": {
-    "popularity": 7,
-    "maintenance": 8,
-    "usability": 7,
-    "virality": 7
+    "popularity": 6,
+    "maintenance": 9,
+    "usability": 8,
+    "virality": 6
    },
    "cats": [
-    "app",
-    "infra"
+    "agent",
+    "coding"
    ],
-   "stack": "Swift / SwiftUI / AppKit",
-   "type": "macOS 进程查看器",
-   "usage": "按 README 构建并运行，部分功能可选特权 helper",
+   "stack": "Python",
+   "type": "Agent 技能评估框架",
+   "usage": "pip install skillevaluator，运行 validate 做第一层检查，无需 API key",
    "highlights": [
-    "实时进程树、模块/句柄/线程检查、系统性能图表",
-    "检查代码签名，提供 Process Explorer 风格体验"
+    "先做质量检查，再对比有/无技能的任务结果",
+    "可用 ci init 在每个 PR 上检查改动的技能",
+    "属于 NVIDIA Verified Skills 流水线"
    ],
    "cautions": [
-    "仅限 macOS；部分能力需特权 helper"
+    "更深层评估需要模型调用，可能产生费用"
    ],
    "en": {
-    "stack": "Swift / SwiftUI / AppKit",
-    "type": "macOS process explorer",
-    "usage": "Build and run per the README; optional privileged helper for some features",
+    "stack": "Python",
+    "type": "Agent skill evaluation framework",
+    "usage": "pip install skillevaluator, then run validate for Tier 1 checks without an API key",
     "highlights": [
-     "Live process tree, module/handle/thread inspection, system graphs",
-     "Code-signing inspection in Process Explorer style"
+     "Quality checks first, then runs with vs. without a skill",
+     "ci init checks changed skills on every pull request",
+     "Part of the NVIDIA Verified Skills pipeline"
     ],
     "cautions": [
-     "macOS only; some features need a privileged helper"
+     "Deeper tiers call models and may cost money"
     ]
    },
    "overall": 7.2
   },
   {
-   "name": "boykopovar/AnyPS5",
-   "description": "Tool for automatic PS5 executables porting to Linux and Windows",
-   "language": "C++",
-   "stars": 53725,
-   "stars_today": 239,
-   "url": "https://github.com/boykopovar/AnyPS5",
+   "name": "LibreTranslate/LibreTranslate",
+   "description": "Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup.",
+   "language": "Python",
+   "stars": 17718,
+   "stars_today": 130,
+   "url": "https://github.com/LibreTranslate/LibreTranslate",
    "boards": [
-    "c++"
+    "python"
    ],
-   "pushed_at": "2026-11-14T00:34:29Z",
-   "created_at": "2026-08-03T21:30:25Z",
+   "pushed_at": "2026-11-14T12:22:54Z",
+   "created_at": "2020-12-19T19:19:34Z",
    "topics": [
-    "anyps5",
-    "dynamic-library",
-    "game-porting",
-    "ps5",
-    "ps5-tools",
-    "spir-v",
-    "vulkan"
+    "api",
+    "machine",
+    "translate",
+    "translation",
+    "translator"
    ],
-   "license": "GPL-2.0",
-   "forks": 5124,
-   "open_issues": 1859,
+   "license": "AGPL-3.0",
+   "forks": 1855,
+   "open_issues": 134,
    "archived": false,
-   "homepage": "https://boykopovar.github.io/AnyPS5/",
+   "homepage": "https://libretranslate.com",
    "scores": {
-    "popularity": 8,
-    "maintenance": 9,
-    "usability": 4,
-    "virality": 7
+    "popularity": 7,
+    "maintenance": 8,
+    "usability": 8,
+    "virality": 5
+   },
+   "cats": [
+    "app",
+    "llm"
+   ],
+   "stack": "Python + Argos Translate",
+   "type": "自托管开源机器翻译 API",
+   "usage": "按官方文档快速开始，自行部署",
+   "highlights": [
+    "不依赖 Google、Azure 等专有服务",
+    "完全自托管，可离线使用",
+    "引擎来自 Argos Translate"
+   ],
+   "cautions": [
+    "AGPL-3.0 协议，商用需留意"
+   ],
+   "en": {
+    "stack": "Python + Argos Translate",
+    "type": "Self-hosted open-source translation API",
+    "usage": "Follow the official quickstart and self-host",
+    "highlights": [
+     "No reliance on Google or Azure",
+     "Fully self-hosted, offline capable",
+     "Engine powered by Argos Translate"
+    ],
+    "cautions": [
+     "AGPL-3.0 licensed; mind commercial use"
+    ]
+   },
+   "overall": 7.1
+  },
+  {
+   "name": "juliangarnier/anime",
+   "description": "JavaScript animation engine",
+   "language": "JavaScript",
+   "stars": 74672,
+   "stars_today": 71,
+   "url": "https://github.com/juliangarnier/anime",
+   "boards": [
+    "javascript"
+   ],
+   "pushed_at": "2026-11-02T22:25:55Z",
+   "created_at": "2016-03-13T21:37:45Z",
+   "topics": [
+    "animation",
+    "anime",
+    "canvas",
+    "css",
+    "javascript",
+    "javascript-library",
+    "svg"
+   ],
+   "license": "MIT",
+   "forks": 5095,
+   "open_issues": 130,
+   "archived": false,
+   "homepage": "https://animejs.com",
+   "scores": {
+    "popularity": 7,
+    "maintenance": 8,
+    "usability": 8,
+    "virality": 5
    },
    "cats": [
     "app"
    ],
-   "stack": "C++（含着色器重编译）",
-   "type": "可执行文件移植工具",
-   "usage": "使用网页转换器（文件留在本地），或按构建文档本地编译",
+   "stack": "JavaScript",
+   "type": "轻量 JavaScript 动画库",
+   "usage": "npm 引入，作用于 CSS、SVG、DOM 属性与 JS 对象",
    "highlights": [
-    "把 PS5 可执行文件重链接为 Linux/Windows 原生格式，称无需模拟",
-    "含着色器重编译到 SPIR-V，并有逐游戏兼容性讨论"
+    "快速、轻量、API 简洁",
+    "支持 CSS 属性、SVG 与 JS 对象"
    ],
    "cautions": [
-    "README 声明不含也不需要受版权保护的软件或密钥",
-    "项目独立，与索尼无关",
-    "实际可用性取决于具体游戏，仍属早期"
+    "今日增长主要来自老牌项目被重新关注"
    ],
    "en": {
-    "stack": "C++ (with shader recompiler)",
-    "type": "Executable porting tool",
-    "usage": "Use the web converter (files stay local) or build locally per the docs",
+    "stack": "JavaScript",
+    "type": "Lightweight JavaScript animation library",
+    "usage": "Install from npm; animates CSS, SVG, DOM attributes and JS objects",
     "highlights": [
-     "Relinks PS5 executables into native Linux/Windows formats, stated to need no emulation",
-     "Recompiles shaders to SPIR-V; per-game compatibility discussions"
+     "Fast, lightweight, simple API",
+     "Works with CSS, SVG and JS objects"
     ],
     "cautions": [
-     "README says it includes/requires no copyrighted software or keys",
-     "Independent project, not affiliated with Sony",
-     "Usability varies by title; still early"
+     "Today's gain mostly reflects renewed attention to an established library"
     ]
    },
    "overall": 7.1
@@ -2712,18 +2137,18 @@
    "name": "we-promise/sure",
    "description": "The personal finance app for everyone (by everyone)",
    "language": "Ruby",
-   "stars": 14743,
-   "stars_today": 925,
+   "stars": 15286,
+   "stars_today": 659,
    "url": "https://github.com/we-promise/sure",
    "boards": [
     "all"
    ],
-   "pushed_at": "2026-11-13T22:00:45Z",
+   "pushed_at": "2026-11-14T23:43:57Z",
    "created_at": "2025-07-23T04:13:55Z",
    "topics": [],
    "license": "AGPL-3.0",
-   "forks": 1120,
-   "open_issues": 921,
+   "forks": 1266,
+   "open_issues": 935,
    "archived": false,
    "homepage": "https://sure.am",
    "scores": {
@@ -2767,19 +2192,18 @@
    "name": "tailscale/tailcat",
    "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
    "language": "Go",
-   "stars": 9457,
-   "stars_today": 256,
+   "stars": 9830,
+   "stars_today": 490,
    "url": "https://github.com/tailscale/tailcat",
    "boards": [
-    "all",
     "go"
    ],
    "pushed_at": "2026-11-05T15:10:23Z",
    "created_at": "2024-10-29T17:21:12Z",
    "topics": [],
    "license": "BSD-3-Clause",
-   "forks": 431,
-   "open_issues": 42,
+   "forks": 454,
+   "open_issues": 46,
    "archived": false,
    "homepage": "https://tailscale.com/tailcat",
    "scores": {
@@ -2816,78 +2240,57 @@
    "overall": 7.0
   },
   {
-   "name": "ShayanAbbas1/dbdelve",
-   "description": "Fast and lightweight DB Client made in Rust and GPUI.",
-   "language": "Rust",
-   "stars": 1301,
-   "stars_today": 106,
-   "url": "https://github.com/ShayanAbbas1/dbdelve",
+   "name": "Likely7/Veyra-NRVideo",
+   "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+   "language": "C++",
+   "stars": 2221,
+   "stars_today": 423,
+   "url": "https://github.com/Likely7/Veyra-NRVideo",
    "boards": [
-    "rust"
+    "all",
+    "c++"
    ],
-   "pushed_at": "2026-11-13T19:32:58Z",
-   "created_at": "2026-08-17T14:41:16Z",
-   "topics": [
-    "database",
-    "dbclient",
-    "developer-tools",
-    "gpui",
-    "linux",
-    "local-first",
-    "macos-app",
-    "mariadb",
-    "mongodb",
-    "mssql-database",
-    "mssqlserver",
-    "mysql",
-    "odbc",
-    "postgresql",
-    "redis",
-    "rust",
-    "snowflake",
-    "sql",
-    "sqlite",
-    "windows"
-   ],
+   "pushed_at": "2026-11-14T05:53:56Z",
+   "created_at": "2026-09-09T10:58:42Z",
+   "topics": [],
    "license": "GPL-3.0",
-   "forks": 69,
-   "open_issues": 23,
+   "forks": 175,
+   "open_issues": 66,
    "archived": false,
-   "homepage": "https://dbdelve.github.io/",
+   "homepage": "",
    "scores": {
-    "popularity": 6,
-    "maintenance": 9,
-    "usability": 7,
-    "virality": 6
+    "popularity": 7,
+    "maintenance": 8,
+    "usability": 6,
+    "virality": 7
    },
    "cats": [
-    "app",
-    "coding"
+    "media"
    ],
-   "stack": "Rust + GPUI",
-   "type": "原生数据库客户端",
-   "usage": "按 README 安装对应平台版本",
+   "stack": "C++ + DirectX 12",
+   "type": "Windows 实时 GPU 视频增强工具",
+   "usage": "Windows 11 下载便携包使用，支持 NVIDIA 与 AMD",
    "highlights": [
-    "原生跨平台多引擎数据库客户端，无 Electron 与 JVM",
-    "主打秒开、低内存与百万行平滑滚动",
-    "称任何功能都不会放到付费墙后"
+    "超分、降噪、HDR、插帧与采集一体化",
+    "可处理本地视频、采集卡与主机串流",
+    "README 称便携包累计下载约 7.9 万次，发布迭代频繁"
    ],
    "cautions": [
-    "仅约 1.1k 星，项目较新",
-    "功能完整度尚在追赶成熟客户端"
+    "README 宣传语偏营销，效果与延迟因硬件而异",
+    "新项目，星标增长很快，需谨慎看待"
    ],
    "en": {
-    "stack": "Rust + GPUI",
-    "type": "Native database client",
-    "usage": "Install the build for your platform per the README",
+    "stack": "C++ + DirectX 12",
+    "type": "Real-time GPU video enhancement for Windows",
+    "usage": "Download the portable package on Windows 11; NVIDIA and AMD supported",
     "highlights": [
-     "Native, cross-platform, multi-engine DB client with no Electron or JVM",
-     "Instant startup, low memory, smooth scrolling through a million rows",
-     "Says no feature will go behind a paywall"
+     "Super resolution, denoising, HDR, frame generation and capture in one pipeline",
+     "Works on local video, capture cards and console streaming",
+     "README claims ~79K portable-package downloads and frequent releases"
     ],
     "cautions": [
-     "Only about 1.1k stars; young project",
-     "Still catching up on features with mature clients"
+     "Marketing-heavy wording; results and latency vary by hardware",
+     "Young project with fast star growth; treat with care"
     ]
    },
    "overall": 7.0
@@ -2896,19 +2299,18 @@
    "name": "block/buzz",
    "description": "A hive mind communication platform",
    "language": "Rust",
-   "stars": 37298,
-   "stars_today": 97,
+   "stars": 37442,
+   "stars_today": 275,
    "url": "https://github.com/block/buzz",
    "boards": [
-    "all",
     "rust"
    ],
-   "pushed_at": "2026-11-14T00:50:58Z",
+   "pushed_at": "2026-11-14T22:37:22Z",
    "created_at": "2026-03-06T21:00:56Z",
    "topics": [],
    "license": "Apache-2.0",
-   "forks": 4941,
-   "open_issues": 3837,
+   "forks": 4948,
+   "open_issues": 3849,
    "archived": false,
    "homepage": "",
    "scores": {
@@ -2946,84 +2348,338 @@
    "overall": 7.0
   },
   {
-   "name": "shanliuling/dsh-image-gen",
-   "description": "可在对话内生成、编辑、对比图像；内置 500 + 提示词、图库、多模型工作流，支持 ComfyUI。AI image studio for DeepSeek Harness — generate, edit & compare images in chat, with 500+ prompts, gallery, multi-model workflows and ComfyUI.",
-   "language": "TypeScript",
-   "stars": 1473,
-   "stars_today": 95,
-   "url": "https://github.com/shanliuling/dsh-image-gen",
+   "name": "FujiwaraChoki/supoclip",
+   "description": "An open-source OpusClip alternative",
+   "language": "Python",
+   "stars": 3105,
+   "stars_today": 91,
+   "url": "https://github.com/FujiwaraChoki/supoclip",
    "boards": [
-    "typescript"
+    "python"
    ],
-   "pushed_at": "2026-11-12T15:01:27Z",
-   "created_at": "2026-08-17T10:16:37Z",
-   "topics": [
-    "ai-agent",
-    "ai-image-generation-api",
-    "comfyui",
-    "deepseek",
-    "deepseek-harness",
-    "dsh-plugin",
-    "gemini",
-    "image-generation",
-    "openai",
-    "prompt-library",
-    "seedream"
-   ],
-   "license": "Apache-2.0",
-   "forks": 124,
-   "open_issues": 8,
+   "pushed_at": "2026-11-14T21:17:22Z",
+   "created_at": "2025-07-28T23:46:45Z",
+   "topics": [],
+   "license": "AGPL-3.0",
+   "forks": 707,
+   "open_issues": 60,
    "archived": false,
-   "homepage": "https://github.com/shanliuling/dsh-image-gen#readme",
+   "homepage": "https://www.supoclip.com/",
    "scores": {
     "popularity": 6,
-    "maintenance": 9,
+    "maintenance": 8,
     "usability": 7,
-    "virality": 6
+    "virality": 7
    },
    "cats": [
     "media",
-    "agent"
+    "app"
    ],
-   "stack": "TypeScript 插件",
-   "type": "DeepSeek Harness 生图插件",
-   "usage": "`pnpm dsh plugin --profile web add dsh-image-gen@latest`",
+   "stack": "Python + AGPL",
+   "type": "开源 AI 视频剪辑工具",
+   "usage": "使用托管网页版，或按教程用 Docker 自托管",
    "highlights": [
-    "让 Agent 在对话里批量生图、看懂画布选区并局部修改",
-    "内置 500+ 提示词案例，支持多模型对比与本地 ComfyUI",
-    "称已有 ChatGPT、Grok 或 Google 订阅可直接登录生图"
+    "把长视频切成带评分的竖屏 9:16 短片",
+    "人脸居中裁剪",
+    "无水印，无平台锁定"
    ],
    "cautions": [
-    "依赖 DeepSeek Harness",
-    "部分模型需自备 API Key 或订阅"
+    "AGPL-3.0 协议",
+    "托管版与自托管体验可能不同"
    ],
    "en": {
-    "stack": "TypeScript plugin",
-    "type": "Image-generation plugin for DeepSeek Harness",
-    "usage": "`pnpm dsh plugin --profile web add dsh-image-gen@latest`",
+    "stack": "Python, AGPL-3.0",
+    "type": "Open-source AI video clipping tool",
+    "usage": "Use the hosted web app or self-host with Docker via the tutorial",
     "highlights": [
-     "Lets the agent batch-generate images in chat, read canvas selections and edit locally",
-     "500+ prompt examples; multi-model comparison and local ComfyUI",
-     "Says existing ChatGPT, Grok or Google subscriptions can log in to generate"
+     "Cuts long videos into scored vertical 9:16 clips",
+     "Face-centered cropping",
+     "No watermark or platform lock-in"
     ],
     "cautions": [
-     "Requires DeepSeek Harness",
-     "Some models need your own API key or subscription"
+     "AGPL-3.0 licensed",
+     "Hosted and self-hosted experience may differ"
     ]
    },
    "overall": 7.0
   },
   {
+   "name": "itsfatduck/optimizerDuck",
+   "description": "Free, open-source Windows optimization tool for performance, privacy, and simplicity.",
+   "language": "C#",
+   "stars": 11732,
+   "stars_today": 57,
+   "url": "https://github.com/itsfatduck/optimizerDuck",
+   "boards": [
+    "c%23"
+   ],
+   "pushed_at": "2026-11-13T13:15:08Z",
+   "created_at": "2025-10-31T10:44:47Z",
+   "topics": [
+    "csharp",
+    "debloat",
+    "dotnet",
+    "gaming",
+    "open-source",
+    "optimization",
+    "optimizer",
+    "optimizerduck",
+    "performance",
+    "privacy",
+    "tweaker",
+    "tweaks",
+    "windows",
+    "winui"
+   ],
+   "license": "NOASSERTION",
+   "forks": 515,
+   "open_issues": 12,
+   "archived": false,
+   "homepage": "https://optimizerduck.vercel.app/",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 8,
+    "usability": 8,
+    "virality": 5
+   },
+   "cats": [
+    "app"
+   ],
+   "stack": "C#",
+   "type": "Windows 优化工具",
+   "usage": "按官网指南下载使用",
+   "highlights": [
+    "聚焦性能、隐私与简洁",
+    "免费开源"
+   ],
+   "cautions": [
+    "系统优化类工具会改动系统设置，使用前建议备份"
+   ],
+   "en": {
+    "stack": "C#",
+    "type": "Windows optimization tool",
+    "usage": "Download and follow the website's guide",
+    "highlights": [
+     "Focus on performance, privacy and simplicity",
+     "Free and open source"
+    ],
+    "cautions": [
+     "System tweaking tools change settings; back up first"
+    ]
+   },
+   "overall": 6.8
+  },
+  {
+   "name": "0x0funky/agent-sprite-forge",
+   "description": "Agent Skill for generating 2D sprite sheets and map, transparent PNG frames, and animated GIFs from prompts.",
+   "language": "Python",
+   "stars": 5728,
+   "stars_today": 56,
+   "url": "https://github.com/0x0funky/agent-sprite-forge",
+   "boards": [
+    "python"
+   ],
+   "pushed_at": "2026-11-13T01:41:03Z",
+   "created_at": "2026-04-23T20:52:52Z",
+   "topics": [
+    "agent-skills",
+    "claude-code",
+    "codex",
+    "grok-build",
+    "pixel-art",
+    "sprite-generator"
+   ],
+   "license": "MIT",
+   "forks": 559,
+   "open_issues": 14,
+   "archived": false,
+   "homepage": "",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 8,
+    "usability": 6,
+    "virality": 7
+   },
+   "cats": [
+    "media",
+    "claude"
+   ],
+   "stack": "Python + Agent Skills",
+   "type": "生成 2D 精灵图的 Agent 技能",
+   "usage": "作为 Claude Code 插件、Codex 或 Grok 技能使用",
+   "highlights": [
+    "从一张确认的主图生成整套动作",
+    "每个动作一段图生视频并自动抠图成循环",
+    "导出适配游戏引擎"
+   ],
+   "cautions": [
+    "依赖图像与图生视频服务，可能有成本"
+   ],
+   "en": {
+    "stack": "Python + Agent Skills",
+    "type": "Agent skill for 2D sprite sheets",
+    "usage": "Use as a Claude Code plugin, or Codex/Grok skill",
+    "highlights": [
+     "From one approved still to a full set of actions",
+     "One image-to-video clip per action, keyed and looped",
+     "Exports for game engines"
+    ],
+    "cautions": [
+     "Relies on image and image-to-video services; may cost money"
+    ]
+   },
+   "overall": 6.7
+  },
+  {
+   "name": "FinanceFlash/unvibecode",
+   "description": "Complex code hides connections, workflows, and business risks.Unvibe complex code. Trace business workflows.",
+   "language": "Jupyter Notebook",
+   "stars": 1753,
+   "stars_today": 141,
+   "url": "https://github.com/FinanceFlash/unvibecode",
+   "boards": [
+    "jupyter-notebook"
+   ],
+   "pushed_at": "2026-11-04T07:32:04Z",
+   "created_at": "2026-08-04T07:03:05Z",
+   "topics": [
+    "ai-system-design",
+    "business-logic",
+    "code-analysis",
+    "code-understanding",
+    "codebase-analysis",
+    "codebase-understanding",
+    "developer-tools",
+    "source-code-analysis",
+    "vibe-coding"
+   ],
+   "license": "Apache-2.0",
+   "forks": 173,
+   "open_issues": 598,
+   "archived": false,
+   "homepage": "https://financeflash.github.io/unvibecode/",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 7,
+    "usability": 7,
+    "virality": 6
+   },
+   "cats": [
+    "coding"
+   ],
+   "stack": "Python",
+   "type": "代码库逆向理解工具",
+   "usage": "Python 3.11+，pip 安装后运行 unvibecode review 指向仓库",
+   "highlights": [
+    "把复杂代码还原为业务流程、关联代码与边界情况",
+    "输出带证据的风险",
+    "面向大量 LLM 生成代码的审阅场景"
+   ],
+   "cautions": [
+    "README 请求点星，推广味较重",
+    "分析质量依赖所用 LLM"
+   ],
+   "en": {
+    "stack": "Python",
+    "type": "Codebase reverse-engineering tool",
+    "usage": "Python 3.11+; pip install, then run unvibecode review on a repository",
+    "highlights": [
+     "Turns complex code into business workflows, connected code and edge cases",
+     "Reports evidence-backed risks",
+     "Aimed at reviewing large LLM-written codebases"
+    ],
+    "cautions": [
+     "README asks for stars, fairly promotional",
+     "Quality depends on the LLM used"
+    ]
+   },
+   "overall": 6.5
+  },
+  {
+   "name": "elementalsouls/Claude-BugHunter",
+   "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+   "language": "Python",
+   "stars": 5842,
+   "stars_today": 127,
+   "url": "https://github.com/elementalsouls/Claude-BugHunter",
+   "boards": [
+    "python"
+   ],
+   "pushed_at": "2026-11-14T11:33:54Z",
+   "created_at": "2026-05-05T11:22:32Z",
+   "topics": [
+    "ai-security",
+    "anthropic",
+    "application-security",
+    "bug-bounty",
+    "bugbounty",
+    "bugcrowd",
+    "claude",
+    "claude-code",
+    "claude-skills",
+    "ethical-hacking",
+    "hackerone",
+    "offensive-security",
+    "pentesting",
+    "red-team",
+    "security-tools",
+    "web-security"
+   ],
+   "license": "MIT",
+   "forks": 900,
+   "open_issues": 5,
+   "archived": false,
+   "homepage": "https://elementalsouls.github.io/Claude-BugHunter",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 8,
+    "usability": 6,
+    "virality": 6
+   },
+   "cats": [
+    "claude",
+    "security"
+   ],
+   "stack": "Python + Claude Skills",
+   "type": "漏洞挖掘与红队技能包",
+   "usage": "按 README 安装技能包，使用其斜杠命令",
+   "highlights": [
+    "83 个技能、15 个斜杠命令",
+    "681 条已披露报告的漏洞模式",
+    "覆盖 24 类核心漏洞"
+   ],
+   "cautions": [
+    "仅可用于已授权的测试",
+    "带赞助商展示，数据为 README 自述"
+   ],
+   "en": {
+    "stack": "Python + Claude Skills",
+    "type": "Bug-hunting and red-team skill bundle",
+    "usage": "Install the bundle per the README and use its slash commands",
+    "highlights": [
+     "83 skills and 15 slash commands",
+     "681 disclosed-report patterns",
+     "24 core vulnerability classes"
+    ],
+    "cautions": [
+     "Use only on authorized targets",
+     "Sponsor banners; figures are README claims"
+    ]
+   },
+   "overall": 6.5
+  },
+  {
    "name": "Tencent/LoopForge",
    "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
    "language": "Go",
-   "stars": 670,
-   "stars_today": 174,
+   "stars": 891,
+   "stars_today": 101,
    "url": "https://github.com/Tencent/LoopForge",
    "boards": [
+    "all",
     "go"
    ],
-   "pushed_at": "2026-11-14T00:51:55Z",
+   "pushed_at": "2026-11-14T22:04:04Z",
    "created_at": "2026-07-28T03:51:01Z",
    "topics": [
     "agent-orchestration",
@@ -3048,8 +2704,8 @@
     "workflow-engine"
    ],
    "license": "NOASSERTION",
-   "forks": 110,
-   "open_issues": 169,
+   "forks": 211,
+   "open_issues": 61,
    "archived": false,
    "homepage": "https://loopforge.cn",
    "scores": {
@@ -3089,11 +2745,72 @@
    "overall": 6.5
   },
   {
+   "name": "MoFeng2223/BrimDeck",
+   "description": "A Dynamic Island for Windows 11 with AI coding tool quotas, usage tracking, music controls, and more.",
+   "language": "C#",
+   "stars": 696,
+   "stars_today": 62,
+   "url": "https://github.com/MoFeng2223/BrimDeck",
+   "boards": [
+    "c%23"
+   ],
+   "pushed_at": "2026-11-14T17:40:08Z",
+   "created_at": "2026-09-03T07:58:39Z",
+   "topics": [
+    "dynamic-island",
+    "media-controls",
+    "usage-tracking",
+    "windows11"
+   ],
+   "license": "Apache-2.0",
+   "forks": 65,
+   "open_issues": 40,
+   "archived": false,
+   "homepage": null,
+   "scores": {
+    "popularity": 5,
+    "maintenance": 8,
+    "usability": 7,
+    "virality": 6
+   },
+   "cats": [
+    "app",
+    "coding"
+   ],
+   "stack": "C# + WPF",
+   "type": "Windows 11 灵动岛",
+   "usage": "在 Windows 11 安装使用",
+   "highlights": [
+    "集中显示 Claude、Codex、Cursor 等额度",
+    "含媒体控制、系统监控与设备电量",
+    "全屏时自动隐藏"
+   ],
+   "cautions": [
+    "项目较新，星标仅 700 左右",
+    "仅限 Windows 11"
+   ],
+   "en": {
+    "stack": "C# + WPF",
+    "type": "Dynamic Island for Windows 11",
+    "usage": "Install on Windows 11",
+    "highlights": [
+     "Shows Claude, Codex, Cursor quotas in one panel",
+     "Media control, system monitor and device batteries",
+     "Auto-hides in full screen"
+    ],
+    "cautions": [
+     "New project with ~700 stars",
+     "Windows 11 only"
+    ]
+   },
+   "overall": 6.5
+  },
+  {
    "name": "CYQawa/YunX",
    "description": "YunX云析 ✨一个安卓 网盘解析 + 视频平台解析 下载app✨",
    "language": "Kotlin",
-   "stars": 7762,
-   "stars_today": 209,
+   "stars": 7912,
+   "stars_today": 178,
    "url": "https://github.com/CYQawa/YunX",
    "boards": [
     "kotlin"
@@ -3102,8 +2819,8 @@
    "created_at": "2026-08-06T16:42:44Z",
    "topics": [],
    "license": "AGPL-3.0",
-   "forks": 408,
-   "open_issues": 65,
+   "forks": 420,
+   "open_issues": 68,
    "archived": false,
    "homepage": "",
    "scores": {
@@ -3142,11 +2859,71 @@
    "overall": 6.2
   },
   {
+   "name": "ashhart/TensorFold",
+   "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+   "language": "Zig",
+   "stars": 2155,
+   "stars_today": 53,
+   "url": "https://github.com/ashhart/TensorFold",
+   "boards": [
+    "all"
+   ],
+   "pushed_at": "2026-11-14T23:52:41Z",
+   "created_at": "2026-06-19T20:27:39Z",
+   "topics": [
+    "ai",
+    "ai-tools",
+    "llm",
+    "llm-inference",
+    "llm-tools"
+   ],
+   "license": "Apache-2.0",
+   "forks": 497,
+   "open_issues": 596,
+   "archived": false,
+   "homepage": "https://tensorfold.dev",
+   "scores": {
+    "popularity": 5,
+    "maintenance": 8,
+    "usability": 6,
+    "virality": 6
+   },
+   "cats": [
+    "llm",
+    "infra"
+   ],
+   "stack": "Zig",
+   "type": "Apple Silicon/NVIDIA 推理引擎",
+   "usage": "从 Zig 二进制运行，无需 Python 或 MLX",
+   "highlights": [
+    "直接读取检查点并运行 Metal/CUDA 内核",
+    "无需 Python 环境"
+   ],
+   "cautions": [
+    "项目较新，星标约 2000",
+    "贡献流程要求使用 ATC 工具"
+   ],
+   "en": {
+    "stack": "Zig",
+    "type": "Inference engine for Apple Silicon and NVIDIA",
+    "usage": "Run the Zig binary; no Python or MLX needed",
+    "highlights": [
+     "Reads checkpoints and runs Metal/CUDA kernels directly",
+     "No Python environment"
+    ],
+    "cautions": [
+     "Young project with ~2K stars",
+     "Contributions require the ATC tool"
+    ]
+   },
+   "overall": 6.2
+  },
+  {
    "name": "tidain/YunX-Desktop",
    "description": "YunX（云析）的官方 windows 桌面端",
    "language": "Kotlin",
-   "stars": 5606,
-   "stars_today": 457,
+   "stars": 5911,
+   "stars_today": 333,
    "url": "https://github.com/tidain/YunX-Desktop",
    "boards": [
     "kotlin"
@@ -3155,8 +2932,8 @@
    "created_at": "2026-09-05T13:47:32Z",
    "topics": [],
    "license": "AGPL-3.0",
-   "forks": 435,
-   "open_issues": 48,
+   "forks": 458,
+   "open_issues": 56,
    "archived": false,
    "homepage": null,
    "scores": {
@@ -3195,6 +2972,122 @@
     ]
    },
    "overall": 6.0
+  },
+  {
+   "name": "martin-olivier/airgorah",
+   "description": "A WiFi security auditing software",
+   "language": "Rust",
+   "stars": 5840,
+   "stars_today": 269,
+   "url": "https://github.com/martin-olivier/airgorah",
+   "boards": [
+    "all",
+    "rust"
+   ],
+   "pushed_at": "2026-11-06T19:32:49Z",
+   "created_at": "2022-09-30T09:06:45Z",
+   "topics": [
+    "gui",
+    "kali",
+    "linux-app",
+    "security",
+    "security-audit",
+    "wifi",
+    "wifi-security",
+    "wireless"
+   ],
+   "license": "MIT",
+   "forks": 1024,
+   "open_issues": 16,
+   "archived": false,
+   "homepage": "https://crates.io/crates/airgorah",
+   "scores": {
+    "popularity": 6,
+    "maintenance": 6,
+    "usability": 6,
+    "virality": 6
+   },
+   "cats": [
+    "security"
+   ],
+   "stack": "Rust + GTK4",
+   "type": "WiFi 安全审计工具",
+   "usage": "仅 Linux，需支持监听模式与包注入的网卡，按 Wiki 安装",
+   "highlights": [
+    "可抓包、发现客户端、抓取握手与 PMKID",
+    "用 polkit 提权代理，图形界面以普通用户运行",
+    "Rust + GTK4 实现"
+   ],
+   "cautions": [
+    "仅可用于自己拥有的网络，攻击他人网络违法",
+    "需要特定无线网卡"
+   ],
+   "en": {
+    "stack": "Rust + GTK4",
+    "type": "WiFi security auditing tool",
+    "usage": "Linux only; needs a card with monitor mode and packet injection; install per the Wiki",
+    "highlights": [
+     "Captures traffic, discovers clients, captures handshakes and PMKIDs",
+     "Privileged operations go through a polkit agent; GUI runs unprivileged",
+     "Written in Rust with GTK4"
+    ],
+    "cautions": [
+     "Use only on networks you own; attacking others is illegal",
+     "Needs a compatible wireless card"
+    ]
+   },
+   "overall": 6.0
+  },
+  {
+   "name": "RookieEnough/Orion-Store",
+   "description": "The ultimate home for Open Source and Cleaned apps. OrionStore offers instant access to YouTube Morphe, YT Music Morphe, and essential open-source tools without the clutter. No servers, no tracking, just a beautiful, modern gateway to the apps you love.",
+   "language": "Kotlin",
+   "stars": 4150,
+   "stars_today": 56,
+   "url": "https://github.com/RookieEnough/Orion-Store",
+   "boards": [
+    "kotlin"
+   ],
+   "pushed_at": "2026-11-11T18:32:33Z",
+   "created_at": "2025-11-28T11:15:56Z",
+   "topics": [],
+   "license": "GPL-3.0",
+   "forks": 139,
+   "open_issues": 87,
+   "archived": false,
+   "homepage": "https://orionstore.pages.dev",
+   "scores": {
+    "popularity": 5,
+    "maintenance": 7,
+    "usability": 7,
+    "virality": 5
+   },
+   "cats": [
+    "app"
+   ],
+   "stack": "Kotlin",
+   "type": "Android 开源应用商店",
+   "usage": "从 GitHub Releases 获取",
+   "highlights": [
+    "围绕公开发布与可查元数据",
+    "自动化流程透明"
+   ],
+   "cautions": [
+    "README 信息有限，实际应用来源需自行核对"
+   ],
+   "en": {
+    "stack": "Kotlin",
+    "type": "Open-source Android app store",
+    "usage": "Get it from GitHub Releases",
+    "highlights": [
+     "Built around public releases and inspectable metadata",
+     "Transparent automation"
+    ],
+    "cautions": [
+     "README is thin; verify app sources yourself"
+    ]
+   },
+   "overall": 6.0
   }
  ],
  "excluded": [
@@ -3204,348 +3097,168 @@
     "zh": "项目推荐合集",
     "en": "Curated project list"
    },
-   "stars_today": 230,
+   "stars_today": 226,
    "url": "https://github.com/521xueweihan/HelloGitHub"
   },
   {
-   "name": "langchain-ai/rag-from-scratch",
+   "name": "ruanyf/weekly",
    "reason": {
-    "zh": "超过一年未更新；教程类",
-    "en": "No push in over a year; tutorial"
+    "zh": "周刊/资讯合集，非软件项目",
+    "en": "Weekly newsletter, not a software project"
    },
-   "stars_today": 64,
-   "url": "https://github.com/langchain-ai/rag-from-scratch"
+   "stars_today": 53,
+   "url": "https://github.com/ruanyf/weekly"
   },
   {
-   "name": "microsoft/ai-agents-for-beginners",
+   "name": "anthropics/claude-plugins-official",
    "reason": {
-    "zh": "教程课程类",
-    "en": "Tutorial course"
+    "zh": "插件目录/收录合集",
+    "en": "Plugin directory"
    },
-   "stars_today": 69,
-   "url": "https://github.com/microsoft/ai-agents-for-beginners"
+   "stars_today": 137,
+   "url": "https://github.com/anthropics/claude-plugins-official"
   },
   {
-   "name": "jaywcjlove/awesome-mac",
+   "name": "k1tbyte/Wand-Enhancer",
    "reason": {
-    "zh": "软件资源合集（awesome 列表）",
-    "en": "Software collection (awesome list)"
+    "zh": "README 称已收到 DMCA 下架通知，仓库当前无法构建；涉及第三方应用改动",
+    "en": "README reports a DMCA takedown; repo does not currently build; modifies a third-party app"
    },
-   "stars_today": 84,
-   "url": "https://github.com/jaywcjlove/awesome-mac"
+   "stars_today": 65,
+   "url": "https://github.com/k1tbyte/Wand-Enhancer"
   },
   {
-   "name": "asgeirtj/system_prompts_leaks",
+   "name": "mukul975/Anthropic-Cybersecurity-Skills",
    "reason": {
-    "zh": "系统提示词合集（资源集合）",
-    "en": "Collection of system prompts (resource list)"
+    "zh": "技能合集类，近两月未更新",
+    "en": "Skill collection; no push in over two months"
    },
-   "stars_today": 73,
-   "url": "https://github.com/asgeirtj/system_prompts_leaks"
+   "stars_today": 66,
+   "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
   },
   {
-   "name": "Likely7/Veyra-NRVideo",
+   "name": "rasbt/LLMs-from-scratch",
    "reason": {
-    "zh": "疑似营销壳：星数仅 1.6k 却声称数十万下载，标题蹭 PS5/GTA6 热度",
-    "en": "Suspected marketing shell: ~1.6k stars yet claims 100k+ downloads; title leans on PS5/GTA6 hype"
-   },
-   "stars_today": 256,
-   "url": "https://github.com/Likely7/Veyra-NRVideo"
-  },
-  {
-   "name": "facebookresearch/faiss",
-   "reason": {
-    "zh": "今日新增 89，未进前 50",
-    "en": "89 stars today, outside the top 50"
-   },
-   "stars_today": 89,
-   "url": "https://github.com/facebookresearch/faiss"
-  },
-  {
-   "name": "pi-hole/pi-hole",
-   "reason": {
-    "zh": "今日新增 89，未进前 50",
-    "en": "89 stars today, outside the top 50"
-   },
-   "stars_today": 89,
-   "url": "https://github.com/pi-hole/pi-hole"
-  },
-  {
-   "name": "Tencent/WeKnora",
-   "reason": {
-    "zh": "今日新增 88，未进前 50",
-    "en": "88 stars today, outside the top 50"
-   },
-   "stars_today": 88,
-   "url": "https://github.com/Tencent/WeKnora"
-  },
-  {
-   "name": "FinanceFlash/unvibecode",
-   "reason": {
-    "zh": "今日新增 84，未进前 50",
-    "en": "84 stars today, outside the top 50"
-   },
-   "stars_today": 84,
-   "url": "https://github.com/FinanceFlash/unvibecode"
-  },
-  {
-   "name": "Genymobile/scrcpy",
-   "reason": {
-    "zh": "今日新增 84，未进前 50",
-    "en": "84 stars today, outside the top 50"
-   },
-   "stars_today": 84,
-   "url": "https://github.com/Genymobile/scrcpy"
-  },
-  {
-   "name": "2dust/v2rayN",
-   "reason": {
-    "zh": "今日新增 81，未进前 50",
-    "en": "81 stars today, outside the top 50"
-   },
-   "stars_today": 81,
-   "url": "https://github.com/2dust/v2rayN"
-  },
-  {
-   "name": "OpenWhispr/openwhispr",
-   "reason": {
-    "zh": "今日新增 79，未进前 50",
-    "en": "79 stars today, outside the top 50"
-   },
-   "stars_today": 79,
-   "url": "https://github.com/OpenWhispr/openwhispr"
-  },
-  {
-   "name": "mksglu/context-mode",
-   "reason": {
-    "zh": "今日新增 77，未进前 50",
-    "en": "77 stars today, outside the top 50"
-   },
-   "stars_today": 77,
-   "url": "https://github.com/mksglu/context-mode"
-  },
-  {
-   "name": "louislam/uptime-kuma",
-   "reason": {
-    "zh": "今日新增 71，未进前 50",
-    "en": "71 stars today, outside the top 50"
-   },
-   "stars_today": 71,
-   "url": "https://github.com/louislam/uptime-kuma"
-  },
-  {
-   "name": "tradermonty/claude-trading-skills",
-   "reason": {
-    "zh": "今日新增 69，未进前 50",
-    "en": "69 stars today, outside the top 50"
-   },
-   "stars_today": 69,
-   "url": "https://github.com/tradermonty/claude-trading-skills"
-  },
-  {
-   "name": "xtool-org/xtool",
-   "reason": {
-    "zh": "今日新增 69，未进前 50",
-    "en": "69 stars today, outside the top 50"
-   },
-   "stars_today": 69,
-   "url": "https://github.com/xtool-org/xtool"
-  },
-  {
-   "name": "lyogavin/airllm",
-   "reason": {
-    "zh": "今日新增 68，未进前 50",
-    "en": "68 stars today, outside the top 50"
-   },
-   "stars_today": 68,
-   "url": "https://github.com/lyogavin/airllm"
-  },
-  {
-   "name": "ChromeDevTools/chrome-devtools-mcp",
-   "reason": {
-    "zh": "今日新增 67，未进前 50",
-    "en": "67 stars today, outside the top 50"
-   },
-   "stars_today": 67,
-   "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
-  },
-  {
-   "name": "2dust/v2rayNG",
-   "reason": {
-    "zh": "今日新增 63，未进前 50",
-    "en": "63 stars today, outside the top 50"
-   },
-   "stars_today": 63,
-   "url": "https://github.com/2dust/v2rayNG"
-  },
-  {
-   "name": "davila7/claude-code-templates",
-   "reason": {
-    "zh": "今日新增 62，未进前 50",
-    "en": "62 stars today, outside the top 50"
-   },
-   "stars_today": 62,
-   "url": "https://github.com/davila7/claude-code-templates"
-  },
-  {
-   "name": "eugeniosegala/MAKO",
-   "reason": {
-    "zh": "今日新增 60，未进前 50",
-    "en": "60 stars today, outside the top 50"
-   },
-   "stars_today": 60,
-   "url": "https://github.com/eugeniosegala/MAKO"
-  },
-  {
-   "name": "aimod-cc/Agent2API",
-   "reason": {
-    "zh": "今日新增 59，未进前 50",
-    "en": "59 stars today, outside the top 50"
+    "zh": "教程类",
+    "en": "Tutorial"
    },
    "stars_today": 59,
-   "url": "https://github.com/aimod-cc/Agent2API"
+   "url": "https://github.com/rasbt/LLMs-from-scratch"
   },
   {
-   "name": "lidge-jun/opencodex",
-   "reason": {
-    "zh": "今日新增 54，未进前 50",
-    "en": "54 stars today, outside the top 50"
-   },
-   "stars_today": 54,
-   "url": "https://github.com/lidge-jun/opencodex"
-  },
-  {
-   "name": "agent-substrate/substrate",
-   "reason": {
-    "zh": "今日新增 52，未进前 50",
-    "en": "52 stars today, outside the top 50"
-   },
-   "stars_today": 52,
-   "url": "https://github.com/agent-substrate/substrate"
-  },
-  {
-   "name": "avenoxai/avenoxbeyin",
-   "reason": {
-    "zh": "今日新增 51，未进前 50",
-    "en": "51 stars today, outside the top 50"
-   },
-   "stars_today": 51,
-   "url": "https://github.com/avenoxai/avenoxbeyin"
-  },
-  {
-   "name": "orwa-mahmoud/nightshift",
+   "name": "umlx5h/LLPlayer",
    "reason": {
     "zh": "今日新增 50，未进前 50",
     "en": "50 stars today, outside the top 50"
    },
    "stars_today": 50,
-   "url": "https://github.com/orwa-mahmoud/nightshift"
+   "url": "https://github.com/umlx5h/LLPlayer"
+  },
+  {
+   "name": "techjarves/Uncensored-Local-AI-Multiplatform",
+   "reason": {
+    "zh": "今日新增 50，未进前 50",
+    "en": "50 stars today, outside the top 50"
+   },
+   "stars_today": 50,
+   "url": "https://github.com/techjarves/Uncensored-Local-AI-Multiplatform"
+  },
+  {
+   "name": "moeru-ai/airi",
+   "reason": {
+    "zh": "今日新增 51，未进前 50",
+    "en": "51 stars today, outside the top 50"
+   },
+   "stars_today": 51,
+   "url": "https://github.com/moeru-ai/airi"
+  },
+  {
+   "name": "a2ui-project/a2ui",
+   "reason": {
+    "zh": "今日新增 51，未进前 50",
+    "en": "51 stars today, outside the top 50"
+   },
+   "stars_today": 51,
+   "url": "https://github.com/a2ui-project/a2ui"
   }
  ],
  "news": [
   {
-   "score": 80,
-   "type": "model_release",
+   "score": 86,
+   "type": "industry_event",
    "title": {
-    "zh": "Google 发布 Gemini 4 Hydrogen，并用于搜索 AI 模式",
-    "en": "Google releases Gemini 4 Hydrogen and puts it in Search AI Mode"
+    "zh": "黄仁勋辞去英伟达 CEO，Colette Kress 任临时 CEO",
+    "en": "Jensen Huang resigns as Nvidia CEO; Colette Kress named interim CEO"
    },
    "summary": {
-    "zh": "Gemini 4 Hydrogen 取代 3.8 Flash；Google 搜索 AI 模式改用它，更擅长理解复杂问题、呈现相关链接与视觉回答。",
-    "en": "Gemini 4 Hydrogen replaces 3.8 Flash, and Google Search's AI Mode now runs on it for better handling of complex queries, links and visual answers."
+    "zh": "黄仁勋在执掌英伟达 33 年后辞职，Colette Kress 接任临时 CEO。多家媒体称此事涉及国家安全议题；亚洲多国政府已就芯片供应作出回应，VC 预计 AI 创业融资将收紧。",
+    "en": "Huang resigned after 33 years leading Nvidia, and Colette Kress is interim CEO. Outlets tie the saga to national-security concerns; Asian governments reacted over chip supply and VCs expect tighter AI startup funding."
    },
    "why": {
-    "zh": "新一代主力模型已落地到搜索产品。",
-    "en": "A new workhorse model is already shipping in Search."
+    "zh": "AI 算力龙头换帅，波及供应链与融资环境。",
+    "en": "The leadership change at the AI compute leader ripples through supply and funding."
    },
-   "heat": 5,
-   "published": "2026-11-12T22:55:19+00:00",
+   "heat": 4,
+   "published": "2026-11-14T16:34:15+00:00",
    "sources": [
     {
-     "source": "Google DeepMind",
-     "tier": "T1",
-     "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
-     "title": "Introducing Gemini 4 Hydrogen",
-     "published": "2026-11-12T18:00:50+00:00"
+     "source": "TechCrunch · AI",
+     "tier": "T2",
+     "url": "https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+     "title": "The unfolding Jensen Huang scandal: a timeline",
+     "published": "2026-11-13T15:58:00+00:00"
     },
     {
-     "source": "Ars Technica · AI",
+     "source": "Latent Space",
      "tier": "T2",
-     "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
-     "title": "Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash",
-     "published": "2026-11-12T19:23:03+00:00"
-    },
-    {
-     "source": "The Verge · AI",
-     "tier": "T2",
-     "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-     "title": "Google’s new Gemini model is better at understanding complicated questions",
-     "published": "2026-11-12T16:55:32-05:00"
+     "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+     "title": "[AINews] Jensen Huang resigns after 33 years leading NVIDIA",
+     "published": "2026-11-13T09:04:13+00:00"
     },
     {
      "source": "TechCrunch · AI",
      "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-     "title": "Google’s latest Search upgrade promises better answers to your most complicated questions",
-     "published": "2026-11-12T19:27:45+00:00"
+     "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+     "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+     "published": "2026-11-13T22:43:00+00:00"
     },
     {
-     "source": "Simon Willison",
+     "source": "The Decoder",
      "tier": "T2",
-     "url": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
-     "title": "llm-gemini 0.37",
-     "published": "2026-11-12T22:55:19+00:00"
+     "url": "https://the-decoder.com/jensen-huangs-ouster-likely-traces-back-to-nvidias-risky-business-practices-more-than-his-personal-life/",
+     "title": "Jensen Huang's ouster likely traces back to Nvidia's risky business practices more than his personal life",
+     "published": "2026-11-13T20:07:34+00:00"
+    },
+    {
+     "source": "TechCrunch · AI",
+     "tier": "T2",
+     "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+     "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
+     "published": "2026-11-14T16:34:15+00:00"
+    },
+    {
+     "source": "The Verge · AI",
+     "tier": "T2",
+     "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
+     "title": "What’s really at stake in the Jensen Huang saga",
+     "published": "2026-11-13T09:47:16-05:00"
     }
    ]
   },
   {
    "score": 80,
-   "type": "industry_event",
-   "title": {
-    "zh": "Anthropic IPO 超额认购 6 倍，中国大陆与香港投资者被拒",
-    "en": "Anthropic IPO six times oversubscribed; mainland China and Hong Kong investors turned away"
-   },
-   "summary": {
-    "zh": "订单量为可售股份的 6 倍，有望成为史上最大 IPO；彭博称银行因美国出口管制（ITAR）拒绝来自中国大陆和香港的认购。",
-    "en": "Orders exceed available shares six-fold, on track for the largest IPO ever; Bloomberg says banks reject mainland China and Hong Kong orders over US export-control (ITAR) rules."
-   },
-   "why": {
-    "zh": "AI 公司资本市场里程碑，也显示出口管制影响。",
-    "en": "A capital-markets milestone for AI, and a sign of export-control reach."
-   },
-   "heat": 1,
-   "published": "2026-11-13T18:01:53+00:00",
-   "sources": [
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/anthropics-ipo-is-six-times-oversubscribed-and-on-track-to-become-the-largest-public-offering-in-history/",
-     "title": "Anthropic's IPO is six times oversubscribed and on track to become the largest public offering in history",
-     "published": "2026-11-13T15:15:08+00:00"
-    },
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/banks-bar-chinese-and-hong-kong-investors-from-anthropic-ipo-over-us-export-controls/",
-     "title": "Banks bar Chinese and Hong Kong investors from Anthropic IPO over US export controls",
-     "published": "2026-11-13T18:01:53+00:00"
-    }
-   ]
-  },
-  {
-   "score": 78,
    "type": "product_launch",
    "title": {
-    "zh": "OpenAI 推出 ChatGPT Wallet，让 Agent 代你下单",
-    "en": "OpenAI launches ChatGPT Wallet so agents can buy for you"
+    "zh": "OpenAI 推出 ChatGPT Wallet，让 Agent 经用户批准后代为购物",
+    "en": "OpenAI launches ChatGPT Wallet so agents can buy with user approval"
    },
    "summary": {
-    "zh": "ChatGPT Work、Codex 和 dots 中的 Agent 可经用户批准后完成购买；用户一次绑卡，每笔用 Face ID 或指纹确认，卡号由支付令牌隐藏。取代此前被放弃的 Instant Checkout。",
-    "en": "Agents in ChatGPT Work, Codex and dots can complete purchases with user approval: register a card once, confirm each buy with Face ID or fingerprint, card details hidden behind tokens. It replaces the scrapped Instant Checkout."
+    "zh": "ChatGPT Wallet 让 ChatGPT Work、Codex 和 dots 中的 Agent 在用户批准下用现有银行卡完成购买，首批仅向美国 Pro 订阅用户开放，取代此前的 Instant Checkout 方案。",
+    "en": "ChatGPT Wallet lets agents in ChatGPT Work, Codex and dots complete purchases with user approval and existing card protections. It starts with US Pro subscribers and replaces the earlier Instant Checkout approach."
    },
    "why": {
-    "zh": "Agent 购物支付闭环，影响电商与支付入口。",
-    "en": "Closes the loop on agent shopping and payments."
+    "zh": "Agent 开始具备真实支付能力。",
+    "en": "Agents are gaining real payment ability."
    },
    "heat": 4,
    "published": "2026-11-13T18:55:21+00:00",
@@ -3556,13 +3269,6 @@
      "url": "https://openai.com/index/introducing-chatgpt-wallet",
      "title": "Introducing ChatGPT Wallet",
      "published": "2026-11-13T15:00:00+00:00"
-    },
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/openai-rebuilt-ai-shopping-from-scratch-with-chatgpt-wallet/",
-     "title": "OpenAI rebuilt AI shopping from scratch with ChatGPT Wallet",
-     "published": "2026-11-13T18:55:21+00:00"
     },
     {
      "source": "TechCrunch · AI",
@@ -3577,254 +3283,98 @@
      "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
      "published": "2026-11-13T15:45:10-05:00"
+    },
+    {
+     "source": "The Decoder",
+     "tier": "T2",
+     "url": "https://the-decoder.com/openai-rebuilt-ai-shopping-from-scratch-with-chatgpt-wallet/",
+     "title": "OpenAI rebuilt AI shopping from scratch with ChatGPT Wallet",
+     "published": "2026-11-13T18:55:21+00:00"
     }
    ]
   },
   {
    "score": 76,
-   "type": "research_paper",
+   "type": "industry_event",
    "title": {
-    "zh": "研究称中国顶级模型在被禁的 Nvidia Blackwell 芯片上训练",
-    "en": "Research says top Chinese models were trained on export-banned Nvidia Blackwell chips"
+    "zh": "Anthropic 临近创纪录 IPO：Amodei 谈算力难题，中国大陆与香港投资者被拒",
+    "en": "Anthropic nears record IPO: Amodei on compute dilemma, mainland China and Hong Kong investors turned away"
    },
    "summary": {
-    "zh": "前 OpenAI 研究员 Will DePue 称从公开权重中读出芯片特征，认为 DeepSeek、Moonshot、MiniMax 和蚂蚁集团使用了 Blackwell；另据 MIT Technology Review，Nvidia 私下确认技术上可做芯片追踪。",
-    "en": "Ex-OpenAI researcher Will DePue says chip signatures read from published weights show DeepSeek, Moonshot, MiniMax and Ant Group use Blackwell GPUs; MIT Technology Review adds Nvidia privately confirmed chip tracking is technically possible."
+    "zh": "Amodei 称购买算力是公司面临的最深层商业难题，并承认明年有巨大不确定性；据彭博报道，银行因美国出口管制拒绝来自中国大陆和香港的认购订单。",
+    "en": "Amodei called buying compute the deepest business dilemma and admitted huge uncertainty next year; Bloomberg reports banks are rejecting buy orders from mainland China and Hong Kong over US export controls."
    },
    "why": {
-    "zh": "直接关系出口管制的有效性与监管走向。",
-    "en": "Bears directly on export-control effectiveness and policy."
+    "zh": "可能是史上最大 IPO 之一，影响 AI 行业资本格局。",
+    "en": "Possibly the largest IPO ever, shaping AI capital markets."
    },
-   "heat": 3,
-   "published": "2026-11-13T18:40:30+00:00",
+   "heat": 1,
+   "published": "2026-11-14T19:05:17+00:00",
    "sources": [
     {
      "source": "The Decoder",
      "tier": "T2",
-     "url": "https://the-decoder.com/former-openai-researcher-says-he-found-nvidia-blackwell-fingerprints-hidden-inside-six-chinese-ai-models/",
-     "title": "Former OpenAI researcher says he found Nvidia Blackwell fingerprints hidden inside six Chinese AI models",
-     "published": "2026-11-13T15:21:04+00:00"
+     "url": "https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/",
+     "title": "Anthropic CEO Amodei admits \"there's a huge uncertainty in what's going to happen next year\" days before a record IPO",
+     "published": "2026-11-14T19:05:17+00:00"
     },
     {
-     "source": "TechCrunch · AI",
+     "source": "The Decoder",
      "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
-     "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
-     "published": "2026-11-13T18:40:30+00:00"
+     "url": "https://the-decoder.com/banks-bar-chinese-and-hong-kong-investors-from-anthropic-ipo-over-us-export-controls/",
+     "title": "Banks bar Chinese and Hong Kong investors from Anthropic IPO over US export controls",
+     "published": "2026-11-13T18:01:53+00:00"
     },
     {
-     "source": "MIT Technology Review · AI",
+     "source": "The Decoder",
      "tier": "T2",
-     "url": "https://www.technologyreview.com/2026/11/12/1148483/nvidia-chip-tracking/",
-     "title": "Nvidia privately confirmed it could track chips to fight smuggling, even as industry publicly questioned feasibility",
-     "published": "2026-11-12T20:16:24+00:00"
+     "url": "https://the-decoder.com/anthropic-can-already-retrain-mythos-with-a-fraction-of-the-compute-originally-needed-says-former-researcher-coxon/",
+     "title": "Anthropic can already retrain Mythos with \"a fraction of the compute originally needed,\" says former researcher Coxon",
+     "published": "2026-11-14T11:21:41+00:00"
     }
    ]
   },
   {
    "score": 72,
-   "type": "industry_event",
+   "type": "product_launch",
    "title": {
-    "zh": "黄仁勋同意出席国会作证，民主党对英伟达展开调查",
-    "en": "Huang agrees to testify to Congress as Democrats open Nvidia probe"
+    "zh": "Claude Opus 5.5 成为所有付费方案默认模型，Anthropic 发布新提示指南",
+    "en": "Claude Opus 5.5 becomes default on all paid plans; Anthropic publishes new prompting guide"
    },
    "summary": {
-    "zh": "在多位议员威胁传唤后，黄仁勋同意周三作证；民主党另行启动对英伟达对华销售及其与特朗普往来的调查，这是第二项国会调查。",
-    "en": "Huang agreed to testify Wednesday after lawmakers threatened subpoenas; Democrats opened a second congressional probe into Nvidia's China sales and dealings with Trump."
+    "zh": "Anthropic 将 Opus 5.5 设为所有付费方案的默认模型，并发布指南，称沿用旧的提示习惯会拖慢该模型。",
+    "en": "Anthropic made Opus 5.5 the default on all paid plans and published a guide saying old prompting habits slow the model down."
    },
    "why": {
-    "zh": "英伟达风波进入政治审查阶段。",
-    "en": "The Nvidia saga moves into political scrutiny."
+    "zh": "用户需要调整提示写法才能发挥新模型。",
+    "en": "Users need to adjust prompting to get the most from it."
    },
    "heat": 1,
-   "published": "2026-11-12T22:42:51+00:00",
+   "published": "2026-11-14T16:42:56+00:00",
    "sources": [
     {
-     "source": "TechCrunch · AI",
+     "source": "The Decoder",
      "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/",
-     "title": "Jensen Huang agrees to testify before Congress",
-     "published": "2026-11-12T16:36:37+00:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-     "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
-     "published": "2026-11-12T22:42:51+00:00"
+     "url": "https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5/",
+     "title": "Anthropic says outdated prompting habits are slowing down Claude Opus 5.5",
+     "published": "2026-11-14T16:42:56+00:00"
     }
    ]
   },
   {
    "score": 68,
-   "type": "industry_event",
-   "title": {
-    "zh": "黄仁勋离任冲击 AI 融资与英伟达开源立场",
-    "en": "Huang's exit rattles AI funding and Nvidia's open-source stance"
-   },
-   "summary": {
-    "zh": "VC 与创始人预计英伟达投资的支票更小、估值更低；同时外界质疑英伟达对开源、Hugging Face 收购与开放权重的承诺，Hugging Face CEO 表示将继续为开源 AI 而战。",
-    "en": "VCs and founders expect smaller checks and lower valuations from Nvidia; its commitment to open source, the Hugging Face acquisition and open weights is questioned, and the Hugging Face CEO vows to keep fighting for open-source AI."
-   },
-   "why": {
-    "zh": "AI 资金与开源生态的关键赞助方出现不确定性。",
-    "en": "Uncertainty at a key funder of AI startups and open source."
-   },
-   "heat": 1,
-   "published": "2026-11-13T22:43:00+00:00",
-   "sources": [
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
-     "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
-     "published": "2026-11-13T22:43:00+00:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
-     "title": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
-     "published": "2026-11-12T18:39:23+00:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/",
-     "title": "Hugging Face CEO vows to keep fighting for open source AI after Jensen Huang’s exit",
-     "published": "2026-11-12T17:36:40+00:00"
-    }
-   ]
-  },
-  {
-   "score": 66,
    "type": "product_launch",
-   "title": {
-    "zh": "Anthropic 推出 Claude for Manufacturing 插件",
-    "en": "Anthropic launches Claude for Manufacturing plugin"
-   },
-   "summary": {
-    "zh": "插件连接 Autodesk Fusion、Oracle NetSuite 与 Infor，含 17 个专业技能，可起草报价、比较供应商并在交付延迟时下备份订单，均需人工批准；暂不控制实体机器。",
-    "en": "The plugin connects to Autodesk Fusion, Oracle NetSuite and Infor with 17 skills to draft quotes, compare suppliers and place backup orders on delays, all after human approval; it does not control physical machines yet."
-   },
-   "why": {
-    "zh": "Claude 向制造业企业软件深入。",
-    "en": "Claude moves deeper into industrial enterprise software."
-   },
-   "heat": 1,
-   "published": "2026-11-13T16:37:01+00:00",
-   "sources": [
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/",
-     "title": "Anthropic's Claude for Manufacturing plugs AI directly into factory software to automate industrial workflows",
-     "published": "2026-11-13T16:37:01+00:00"
-    }
-   ]
-  },
-  {
-   "score": 66,
-   "type": "product_launch",
-   "title": {
-    "zh": "Claude Meetings 让 Claude 加入视频会议",
-    "en": "Claude Meetings lets Claude join video calls"
-   },
-   "summary": {
-    "zh": "Claude 可加入 Google Meet，实时生成文档、白板与会议纪要；面向 Team 与 Enterprise 套餐的测试版，之后扩展到更多平台。",
-    "en": "Claude joins Google Meet sessions and produces documents, whiteboards and notes in real time; beta for Team and Enterprise plans, more platforms later."
-   },
-   "why": {
-    "zh": "AI 助手进入实时协作场景。",
-    "en": "AI assistants enter live collaboration."
-   },
-   "heat": 1,
-   "published": "2026-11-12T20:26:50+00:00",
-   "sources": [
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/claude-meetings-lets-anthropics-ai-join-your-video-calls/",
-     "title": "Claude Meetings lets Anthropic's AI join your video calls",
-     "published": "2026-11-12T20:26:50+00:00"
-    }
-   ]
-  },
-  {
-   "score": 62,
-   "type": "product_launch",
-   "title": {
-    "zh": "Meta Muse 可替付费用户给美国商家打电话",
-    "en": "Meta's Muse can now phone US businesses for paying users"
-   },
-   "summary": {
-    "zh": "Muse 可代付费美国用户致电商家，Meta AI 负责人称其用户超过 1000 万；Gemini、Grok 等也有类似功能，但不少商家会直接挂断。",
-    "en": "Muse places calls to US businesses for paying subscribers; Meta's AI chief says it has over 10 million users. Gemini and Grok offer similar features, but many businesses hang up."
-   },
-   "why": {
-    "zh": "AI 代打电话功能趋同，商家态度成为瓶颈。",
-    "en": "Phone-calling agents are converging; business pushback is the bottleneck."
-   },
-   "heat": 2,
-   "published": "2026-11-13T15:12:44+00:00",
-   "sources": [
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/metas-muse-now-calls-businesses-for-you-but-many-companies-might-just-hang-up-on-the-ai/",
-     "title": "Meta's Muse now calls businesses for you, but many companies might just hang up on the AI",
-     "published": "2026-11-13T15:12:44+00:00"
-    },
-    {
-     "source": "TechCrunch · AI",
-     "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
-     "title": "Muse can now place calls to US businesses — if you pay",
-     "published": "2026-11-12T22:22:28+00:00"
-    }
-   ]
-  },
-  {
-   "score": 62,
-   "type": "product_launch",
-   "title": {
-    "zh": "OpenAI 以 Daybreak 品牌推出两款安全产品",
-    "en": "OpenAI enters cybersecurity with two Daybreak products"
-   },
-   "summary": {
-    "zh": "OpenAI 在 Daybreak 品牌下发布两款网络安全产品，进入该市场。",
-    "en": "OpenAI launched two security products under its Daybreak brand, entering the cybersecurity market."
-   },
-   "why": {
-    "zh": "OpenAI 向垂直安全领域扩张。",
-    "en": "OpenAI expands into a vertical market."
-   },
-   "heat": 1,
-   "published": "2026-11-13T15:08:57+00:00",
-   "sources": [
-    {
-     "source": "The Decoder",
-     "tier": "T2",
-     "url": "https://the-decoder.com/openai-enters-the-cybersecurity-market-with-two-daybreak-products/",
-     "title": "OpenAI enters the cybersecurity market with two Daybreak products",
-     "published": "2026-11-13T15:08:57+00:00"
-    }
-   ]
-  },
-  {
-   "score": 62,
-   "type": "tool_or_prompt",
    "title": {
     "zh": "llama.cpp 发布 v1.0.0",
     "en": "llama.cpp reaches v1.0.0"
    },
    "summary": {
-    "zh": "Hugging Face 博客宣布 llama.cpp v1.0.0，称其为本地 AI 生态更坚实的基础。",
-    "en": "Hugging Face blog announces llama.cpp v1.0.0 as a stronger foundation for the local AI ecosystem."
+    "zh": "Hugging Face 博客宣布 llama.cpp v1.0.0，称其为本地 AI 生态更稳固的基础。",
+    "en": "A Hugging Face post announces llama.cpp v1.0.0 as a stronger foundation for the local AI ecosystem."
    },
    "why": {
-    "zh": "本地推理事实标准迈入 1.0。",
-    "en": "The de facto local-inference engine hits 1.0."
+    "zh": "本地推理的核心项目进入 1.0。",
+    "en": "The core local-inference project hits 1.0."
    },
    "heat": 1,
    "published": "2026-11-13T14:05:22+00:00",
@@ -3839,56 +3389,137 @@
    ]
   },
   {
-   "score": 62,
-   "type": "industry_event",
+   "score": 68,
+   "type": "model_release",
    "title": {
-    "zh": "美联航禁止 AI Agent 订票，称有网络安全风险",
-    "en": "United Airlines blocks AI agents from booking flights"
+    "zh": "Runway 开源机器人模型 Praxis-1",
+    "en": "Runway open-sources robotics model Praxis-1"
    },
    "summary": {
-    "zh": "美联航表示不允许客户用 AI Agent 订票和管理预订，理由是网络安全风险。",
-    "en": "United said it will not let customers use AI agents to book flights or manage reservations, citing cybersecurity risks."
+    "zh": "Runway 以 Apache 2.0 协议发布 Praxis-1 的权重与代码，利用视频训练中获得的知识来控制机器人。",
+    "en": "Runway released Praxis-1 weights and code under Apache 2.0, using knowledge from video training to control robots."
    },
    "why": {
-    "zh": "与 ChatGPT Wallet 同日，显示 Agent 购物遇到的阻力。",
-    "en": "Lands the same day as ChatGPT Wallet, showing friction for agent commerce."
+    "zh": "视频模型向机器人控制延伸。",
+    "en": "Video models extend into robot control."
    },
    "heat": 1,
-   "published": "2026-11-12T17:17:58+00:00",
+   "published": "2026-11-14T09:45:45+00:00",
    "sources": [
     {
-     "source": "TechCrunch · AI",
+     "source": "The Decoder",
      "tier": "T2",
-     "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/",
-     "title": "United Airlines blocks AI agents from booking flights, citing cybersecurity risks",
-     "published": "2026-11-12T17:17:58+00:00"
+     "url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/",
+     "title": "Runway's open-source Praxis-1 turns video AI into a robot controller",
+     "published": "2026-11-14T09:45:45+00:00"
     }
    ]
   },
   {
-   "score": 60,
+   "score": 66,
    "type": "product_launch",
    "title": {
-    "zh": "首批 Gemini 智能眼镜发布，起价 395 美元",
-    "en": "First Gemini smartglasses debut from $395"
+    "zh": "Anthropic 推出 Claude for Manufacturing 插件",
+    "en": "Anthropic launches Claude for Manufacturing plugin"
    },
    "summary": {
-    "zh": "由 Google、三星、Gentle Monster 与 Warby Parker 合作，起价 395 美元，Google 主打隐私卖点。",
-    "en": "A collaboration of Google, Samsung, Gentle Monster and Warby Parker starting at $395, with Google pushing a privacy angle."
+    "zh": "该插件把 Claude 连接到 Autodesk Fusion、Oracle NetSuite 和 Infor，内置 17 项专用技能，用于自动化工业流程。",
+    "en": "The plugin connects Claude to Autodesk Fusion, Oracle NetSuite and Infor, with 17 specialized skills to automate industrial workflows."
    },
    "why": {
-    "zh": "AI 穿戴设备进入主流价位。",
-    "en": "AI wearables reach mainstream pricing."
+    "zh": "Claude 进一步深入垂直行业软件。",
+    "en": "Claude moves deeper into vertical-industry software."
    },
    "heat": 1,
-   "published": "2026-11-12T14:50:17+00:00",
+   "published": "2026-11-13T16:37:01+00:00",
    "sources": [
     {
-     "source": "Ars Technica · AI",
+     "source": "The Decoder",
      "tier": "T2",
-     "url": "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/",
-     "title": "Google pushes privacy angle as Gemini-powered smartglasses debut starting at $395",
-     "published": "2026-11-12T14:50:17+00:00"
+     "url": "https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/",
+     "title": "Anthropic's Claude for Manufacturing plugs AI directly into factory software to automate industrial workflows",
+     "published": "2026-11-13T16:37:01+00:00"
+    }
+   ]
+  },
+  {
+   "score": 63,
+   "type": "research_paper",
+   "title": {
+    "zh": "研究称中国最强 AI 模型由被禁运的英伟达芯片训练",
+    "en": "Research says China's most powerful AI models were trained on export-banned Nvidia chips"
+   },
+   "summary": {
+    "zh": "TechCrunch 引述新研究称，中国最先进的 AI 模型是用被出口管制的英伟达芯片训练的。",
+    "en": "TechCrunch cites new research that China's most advanced AI models were trained on export-banned Nvidia chips."
+   },
+   "why": {
+    "zh": "与出口管制成效的争论直接相关。",
+    "en": "Bears directly on the export-control debate."
+   },
+   "heat": 1,
+   "published": "2026-11-13T18:40:30+00:00",
+   "sources": [
+    {
+     "source": "TechCrunch · AI",
+     "tier": "T2",
+     "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+     "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
+     "published": "2026-11-13T18:40:30+00:00"
+    }
+   ]
+  },
+  {
+   "score": 62,
+   "type": "industry_event",
+   "title": {
+    "zh": "Gemini 4 Carbon 登顶 MathArena，但成本是 GPT-6.1 Sol 的 15 倍",
+    "en": "Gemini 4 Carbon tops MathArena at 15x the cost of GPT-6.1 Sol"
+   },
+   "summary": {
+    "zh": "Gemini 4 Carbon 与 Anthropic 的 Fable 5.2 超过 OpenAI 模型，登上 MathArena 数学榜首，但价格远高于 GPT-6.1 Sol。",
+    "en": "Gemini 4 Carbon and Anthropic's Fable 5.2 knocked OpenAI off the top of the MathArena math benchmark, at far higher cost than GPT-6.1 Sol."
+   },
+   "why": {
+    "zh": "数学推理榜单易主，性价比出现分化。",
+    "en": "Math leadership changes hands, with a cost gap."
+   },
+   "heat": 1,
+   "published": "2026-11-14T16:48:01+00:00",
+   "sources": [
+    {
+     "source": "The Decoder",
+     "tier": "T2",
+     "url": "https://the-decoder.com/gemini-4-carbon-takes-the-matharena-crown-but-costs-15-times-more-than-gpt-6-1-sol/",
+     "title": "Gemini 4 Carbon takes the MathArena crown but costs 15 times more than GPT-6.1 Sol",
+     "published": "2026-11-14T16:48:01+00:00"
+    }
+   ]
+  },
+  {
+   "score": 62,
+   "type": "industry_event",
+   "title": {
+    "zh": "OpenAI 再次解散独立机器人团队",
+    "en": "OpenAI dissolves its standalone robotics team again"
+   },
+   "summary": {
+    "zh": "OpenAI 把机器人研究员调往其他团队，称并非缺数据，而是 GPT-6 Astra 等通用模型可能让专用机器人 AI 变得不必要。",
+    "en": "OpenAI is reassigning robotics researchers; the reason is not lack of data but that general models like GPT-6 Astra may make specialized robotics AI unnecessary."
+   },
+   "why": {
+    "zh": "反映通用模型路线对专用方案的挤压。",
+    "en": "Shows general models squeezing out specialized approaches."
+   },
+   "heat": 1,
+   "published": "2026-11-14T11:40:51+00:00",
+   "sources": [
+    {
+     "source": "The Decoder",
+     "tier": "T2",
+     "url": "https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary/",
+     "title": "OpenAI reassigns robotics researchers to other teams as general-purpose models might make specialized robotics AI unnecessary",
+     "published": "2026-11-14T11:40:51+00:00"
     }
    ]
   },
@@ -3900,12 +3531,12 @@
     "en": "LangChain hits a $3B valuation"
    },
    "summary": {
-    "zh": "LangChain 称 LangSmith 已有 7000 家客户。",
-    "en": "LangChain says LangSmith now has 7,000 customers."
+    "zh": "LangChain 称 LangSmith 已有 7000 家客户，估值达到 30 亿美元。",
+    "en": "LangChain says LangSmith has 7,000 customers and is now valued at $3B."
    },
    "why": {
-    "zh": "Agent 工程平台获得资本认可。",
-    "en": "Capital validates agent-engineering platforms."
+    "zh": "Agent 工程平台的资本热度。",
+    "en": "A sign of capital flowing into agent tooling."
    },
    "heat": 1,
    "published": "2026-11-13T19:37:57+00:00",
@@ -3920,5 +3551,5 @@
    ]
   }
  ],
- "news_scanned": 88
+ "news_scanned": 49
 }
