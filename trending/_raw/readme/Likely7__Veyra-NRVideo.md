@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="300" height="300" alt="40e9b0ec-d341-4375-b5ad-e86344407880" src="https://github.com/user-attachments/assets/30c0253e-6963-447d-a83b-29269d9323e2" />
+<img src="assets/veyra-wordmark-sun.gif" alt="Veyra NR · transparent animated wordmark and sun" width="480">
 
 # Veyra
 
@@ -25,6 +25,32 @@
 **Super Resolution · Denoising · HDR · Frame Generation · Capture · PS5 / Xbox / PC Streaming**
 
 Turn local video, capture cards and game streaming into one real-time GPU enhancement pipeline.
+
+---
+
+### 💜 Community Support / 社区支持
+
+**English**
+
+A huge thank you to the Pump.fun community for supporting Veyra!
+
+I've received creator fees from a community-created Veyra token. These contributions will help support the continued development of Veyra.
+
+**中文**
+
+非常感谢 Pump.fun 社区对 Veyra 的支持！
+
+我已经从社区自行创建的 Veyra 代币中领取了创作者手续费。这些收入将帮助支持 Veyra 的持续开发。
+
+**Token Contract Address (CA) / 代币合约地址：**
+
+`i6Aop7z5qLaY47kseaoUt6kGq4Pi2ySg8j7cxRkpump`
+
+**Disclaimer / 免责声明：** This token was independently created by the community and is not an official Veyra release or investment recommendation. Veyra remains free and open-source.
+
+该代币由社区独立创建，并非 Veyra 官方发行的代币，也不构成投资建议。Veyra 仍然是免费开源软件。
+
+---
 
 <br>
 
@@ -280,7 +306,7 @@ Original code: GPL-3.0. The combined Chiaki streaming application is also subjec
 <p align="center">
   <img src="https://raw.githubusercontent.com/Likely7/Veyra-NRVideo/v1.4.0/docs/images/1.4.0/donate-wechat.jpg" alt="WeChat donation" width="220">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/Likely7/Veyra-NRVideo/main/docs/images/community/group-12-20261115.png" alt="Veyra community group 12" width="220">
+  <img src="https://raw.githubusercontent.com/Likely7/Veyra-NRVideo/main/docs/images/community/group-13-20261116.png" alt="Veyra community group 13" width="220">
 </p>
 
-Left: optional donation, no feature restrictions. Right: community group 12; QR valid **before 2026-11-22** as shown. Check repository updates after expiry.
+Left: optional donation, no feature restrictions. Right: community group 13; QR valid **before 2026-11-23** as shown. Check repository updates after expiry.
