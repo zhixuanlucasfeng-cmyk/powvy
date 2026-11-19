@@ -11,9 +11,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 source = (ROOT / 'index.html').read_text()
 # The site already owns these translations; don't maintain a second copy.
-js = source[source.index('const GH ='):source.index('const UI =')]
-result = subprocess.run(['node', '-e', "const vm=require('node:vm');let s='';process.stdin.on('data',c=>s+=c);process.stdin.on('end',()=>console.log(JSON.stringify(vm.runInNewContext(s+';EN.ui',{}, {timeout:1000}))));"],input=js,text=True,capture_output=True,check=True)
-translations = json.loads(result.stdout)
+js = source[source.index('const INK ='):source.index("let lang = 'zh';") if "let lang = 'zh';" in source else source.index('let lang = document.documentElement.lang')]
+result = subprocess.run(['node', '-e', 'const vm=require(\'node:vm\');let s=\'\';process.stdin.on(\'data\',c=>s+=c);process.stdin.on(\'end\',()=>console.log(JSON.stringify(vm.runInNewContext(s+";let lang=\'zh\';({ui:EN.ui, EN, products, posts, covers:Object.fromEntries(products.map(p=>[p.id,productArt(p.id,true)])), postCovers:Object.fromEntries(posts.map(p=>[p.id,buddy(p.prop,p.bg)]))})",{}, {timeout:1000}))));'],input=js,text=True,capture_output=True,check=True)
+data = json.loads(result.stdout)
+translations = data['ui']
 
 class TranslatedContent(HTMLParser):
     def __init__(self, text):
@@ -53,4 +54,7 @@ text=text.replace('href="#','href="en/#')
 text=text.replace('id="langBtn" aria-label="切换语言 / Switch language">EN','id="langBtn" aria-label="切换语言 / Switch language">中',1)
 (ROOT/'en').mkdir(exist_ok=True)
 (ROOT/'en/index.html').write_text(text)
+# Standalone pages and crawlable homepage lists share the same project data.
+from seo_pages import build_pages
+build_pages(ROOT, source, text, data)
 print('Built English homepage:',len(parser.edits),'translated elements')

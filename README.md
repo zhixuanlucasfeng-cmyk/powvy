@@ -97,3 +97,9 @@ node --test tests/seo-metadata.test.mjs
 `en/index.html` 从首页已有英文翻译生成，请勿单独编辑。请保留首页的 `google-site-verification` 标签。Search Console 使用 `https://powvy.org/` 资源，提交 `https://powvy.org/sitemap.xml`；所有权验证成功与实际收录是两个不同状态，收录和排名由 Google 决定。
 
 `en/index.html` is generated from the existing translations. Keep the Google verification tag in the homepage. Submit the sitemap in the `https://powvy.org/` Search Console property; verification does not guarantee indexing or rankings.
+
+项目与文章静态页面 / Static detail pages
+
+`python3 scripts/build-seo.py` 从首页数据生成 16 个项目、4 篇文章的中英文独立页面，并更新包含 44 个网址的网站地图。修改内容后请重新运行。
+
+The build generates bilingual static project and article pages from the homepage data, including canonical URLs, language alternatives and sharing metadata. Run it after content changes.

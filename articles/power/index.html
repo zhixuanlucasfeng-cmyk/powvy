@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../../">
+<title>Power：让本机 AI Agents 在同一个房间协作 · Powvy</title><meta name="description" content="从多个 Agent CLI 到一个桌面工作区：群聊、角色包与可编辑的记忆。">
+<link rel="canonical" href="https://powvy.org/articles/power/">
+<link rel="alternate" hreflang="zh-Hans" href="https://powvy.org/articles/power/"><link rel="alternate" hreflang="en" href="https://powvy.org/en/articles/power/"><link rel="alternate" hreflang="x-default" href="https://powvy.org/articles/power/">
+<link rel="icon" href="favicon.ico?v=2"><link rel="apple-touch-icon" href="favicon.png?v=2">
+<link rel="stylesheet" href="assets/detail.css">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Powvy">
+<meta property="og:title" content="Power：让本机 AI Agents 在同一个房间协作 · Powvy"><meta property="og:description" content="从多个 Agent CLI 到一个桌面工作区：群聊、角色包与可编辑的记忆。"><meta property="og:url" content="https://powvy.org/articles/power/">
+<meta property="og:locale" content="zh_CN"><meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://powvy.org/assets/social/powvy.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Powvy makes things.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Power：让本机 AI Agents 在同一个房间协作 · Powvy"><meta name="twitter:description" content="从多个 Agent CLI 到一个桌面工作区：群聊、角色包与可编辑的记忆。"><meta name="twitter:image" content="https://powvy.org/assets/social/powvy.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "name": "Power：让本机 AI Agents 在同一个房间协作", "headline": "Power：让本机 AI Agents 在同一个房间协作", "description": "从多个 Agent CLI 到一个桌面工作区：群聊、角色包与可编辑的记忆。", "url": "https://powvy.org/articles/power/", "inLanguage": "zh-Hans", "author": {"@type": "Person", "name": "Lucas Feng"}, "isPartOf": {"@type": "WebSite", "name": "Powvy", "url": "https://powvy.org/"}, "datePublished": "2026-10-16"}</script>
+<script src="assets/detail.js" defer></script></head>
+<body><header class="site-nav"><a class="brand" href="./">POWVY!</a><nav aria-label="导航"><a href="./#products">产品</a><a href="./#articles">文章</a><a href="trending/">Trending</a><a class="language" hreflang="en" href="en/articles/power/">EN</a></nav></header>
+<main><div class="toolbar"><a href="./#articles">← 返回首页</a><button id="share" type="button" hidden>分享</button></div>
+<article><div class="cover"><svg viewBox="0 0 200 130" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+  <rect width="200" height="130" fill="#D7261E"/>
+  <!-- 背景集中线 -->
+  <g stroke="#0d0d0d" stroke-width="1" opacity=".18"><path d="M170 65L260 65"/><path d="M167.6148078402348 77.94095225512604L254.54813220625093 96.0582854123025"/><path d="M160.62177826491072 90L238.5640646055102 125"/><path d="M149.49747468305833 100.35533905932738L213.1370849898476 149.8528137423857"/><path d="M135 108.30127018922192L180 168.92304845413264"/><path d="M118.11733315717646 113.29629131445341L141.41104721640332 180.9110991546882"/><path d="M100 115L100.00000000000001 185"/><path d="M81.88266684282354 113.29629131445341L58.58895278359667 180.9110991546882"/><path d="M65.00000000000001 108.30127018922194L20.00000000000003 168.92304845413264"/><path d="M50.50252531694168 100.35533905932738L-13.137084989847594 149.8528137423857"/><path d="M39.37822173508929 90L-38.5640646055102 125"/><path d="M32.385192159765225 77.94095225512605L-54.5481322062509 96.05828541230252"/><path d="M30 65L-60 65.00000000000001"/><path d="M32.38519215976521 52.05904774487398L-54.548132206250955 33.94171458769756"/><path d="M39.3782217350893 39.99999999999999L-38.56406460551017 4.999999999999986"/><path d="M50.502525316941664 29.64466094067263L-13.137084989847637 -19.852813742385692"/><path d="M64.99999999999997 21.698729810778076L19.99999999999993 -38.92304845413261"/><path d="M81.88266684282355 16.703708685546587L58.588952783596696 -50.9110991546882"/><path d="M99.99999999999999 15L99.99999999999997 -55"/><path d="M118.11733315717642 16.70370868554658L141.41104721640323 -50.911099154688216"/><path d="M135 21.69872981077807L180 -38.923048454132626"/><path d="M149.49747468305833 29.644660940672615L213.13708498984758 -19.85281374238572"/><path d="M160.6217782649107 39.99999999999998L238.56406460551014 4.999999999999943"/><path d="M167.6148078402348 52.059047744873965L254.54813220625093 33.94171458769752"/></g>
+  <ellipse cx="100" cy="122" rx="80" ry="5" fill="#0d0d0d" opacity=".15"/>
+  <!-- 电锯人 + 波奇塔：直接引用首屏插画里的 #csm / #dog -->
+  <g stroke="#0d0d0d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <use href="#csm" transform="translate(8 6) scale(.4)"/>
+    <use href="#dog" transform="translate(-10 -40) scale(.55)"/>
+  </g>
+  <g transform="translate(150 34)" stroke="#0d0d0d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="-11" cy="-4" r="7" fill="#fff"/><circle cx="11" cy="-4" r="7" fill="#fff"/><circle cx="0" cy="-10" r="8" fill="#F07A22"/><path d="M-20 16q20-16 40 0"/></g>
+</svg></div><p class="eyebrow">项目介绍 / <time datetime="2026-10-16">2026-10-16</time> · Lucas Feng</p><h1>Power：让本机 AI Agents 在同一个房间协作</h1><div class="prose"><p>Power 是一个把本机 AI Agents 放进同一桌面界面的项目。Claude Code、Codex、Hermes 和 opencode 等工具仍通过各自的 CLI 工作，Power 提供统一的聊天与项目入口。</p>
+<h2>把不同工具组织在一起</h2><p>可以单独与一个 Agent 对话，也可以把多个 Agent 放进群聊。群聊支持 @ 指定成员、自动选择负责成员，以及按轮次讨论。角色包定义成员的表达方式和默认配置，项目文件夹则为对话提供工作上下文。</p>
+<h2>记忆可以直接查看和修改</h2><p>Power 将记忆保存成 Obsidian 中的 Markdown 笔记，并在后续消息中回忆相关内容。记忆不必藏在看不见的状态里：可以直接编辑或删除对应笔记。</p>
+<h2>使用前需要什么</h2><p>各个 Agent 需要按自己的方式安装和登录。Power 负责组织这些工具，不代替它们的账号或服务。Telegram 远程控制属于可选配置；发送消息或发布内容前的确认卡片，让用户有机会检查待发送内容。</p>
+<p><a href="https://github.com/zhixuanlucasfeng-cmyk/power" target="_blank" rel="noopener">查看 Power 源码与安装说明 →</a></p></div></article>
+<p id="share-status" role="status"></p>
+<section class="related"><h2>继续阅读</h2><ul><li><a href="articles/powy/">Powvy Habit：把任务、专注与生活放回同一天</a></li><li><a href="articles/restar-solar/">Restar Solar：连接企业网站、客服与产品管理</a></li><li><a href="articles/alevel/">A-Level：让学习计划有练习记录可依</a></li></ul></section>
+</main><footer>Powvy · Lucas Feng / <a href="./">首页</a></footer></body></html>
