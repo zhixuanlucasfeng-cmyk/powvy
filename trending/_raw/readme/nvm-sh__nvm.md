@@ -712,7 +712,7 @@ The header is only sent with requests for URLs under a mirror, never to any othe
 
 nvm gives the header to `curl` and to GNU Wget in a config file (for GNU Wget, a private temporary file that also holds a copy of your `~/.wgetrc`), not as a command-line argument, which other users of the same machine could read. Other `wget`s, like BusyBox's, read no config file, so on a machine shared with other users, install `curl` before using `$NVM_AUTH_HEADER`.
 
-`$NVM_AUTH_HEADER` is the recommended way to authenticate to a mirror. Credentials embedded in the mirror URL itself (`https://user:password@host/...`) also work, and nvm prints such URLs with the credentials masked as `***@`.
+`$NVM_AUTH_HEADER` is the recommended way to authenticate to a mirror. Credentials embedded in the mirror URL itself (`https://user:password@host/...`) also work, and nvm prints such URLs with the credentials masked as `***@`. Like the header, such a URL is given to `curl` in a config and to GNU Wget on its standard input, not as a command-line argument; other `wget`s, like BusyBox's, only take a URL as an argument, so on a machine shared with other users, install `curl` before putting credentials in a mirror URL.
 
 ### Platforms without official binaries
 
@@ -866,8 +866,13 @@ load-nvmrc() {
   nvmrc_path="$(nvm_find_nvmrc)"
 
   if [ -n "$nvmrc_path" ]; then
+    local nvmrc_version
+    # Let nvm parse `.nvmrc`, so that comments are ignored and the content of an invalid
+    # or symlinked `.nvmrc` is not passed along to other commands
+    nvmrc_version="$(nvm_process_nvmrc "${nvmrc_path}")" || return
+
     local nvmrc_node_version
-    nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+    nvmrc_node_version=$(nvm version "${nvmrc_version}")
 
     if [ "$nvmrc_node_version" = "N/A" ]; then
       nvm install
@@ -906,9 +911,15 @@ function load_nvm --on-variable="PWD"
   set -l node_version (nvm version)
   set -l nvmrc_path (nvm_find_nvmrc)
   if test -n "$nvmrc_path"
-    set -l nvmrc_node_version (nvm version (cat $nvmrc_path))
+    # Let nvm parse `.nvmrc`, so that comments are ignored and the content of an invalid
+    # or symlinked `.nvmrc` is not passed along to other commands.
+    # bass runs its arguments as bash code, so pass the path and version in the environment.
+    set -lx NVMRC_PATH $nvmrc_path
+    set -lx NVMRC_VERSION (bass source ~/.nvm/nvm.sh --no-use ';' nvm_process_nvmrc '"$NVMRC_PATH"')
+    or return
+    set -l nvmrc_node_version (nvm version '"$NVMRC_VERSION"')
     if test "$nvmrc_node_version" = "N/A"
-      nvm install (cat $nvmrc_path)
+      nvm install '"$NVMRC_VERSION"'
     else if test "$nvmrc_node_version" != "$node_version"
       nvm use $nvmrc_node_version
     end

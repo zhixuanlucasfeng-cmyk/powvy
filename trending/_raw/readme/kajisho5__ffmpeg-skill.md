@@ -52,6 +52,10 @@ Left half is the input, right half is what the command produced. **[Every before
 
 If `ffmpeg` and `python3` are on your PATH, it works: offline, on footage you would rather not upload.
 
+- **Protect your source files.** A destination that matches a declared input is refused. Direct edits require `--overwrite` to replace an existing output. A `batch --watch` job can replace an unchanged file it delivered on an earlier pass. The `-y` in the dry-run command takes effect only after the tool checks the destination.
+- **Call typed tools.** The agent supplies named options such as `--aspect 9:16` and `--fit pad`. The tool builds the FFmpeg command and filter graph.
+- **Verify the edit.** The tools probe the source and the written file, so the agent can check the actual duration, frame size and audio before reporting success.
+
 > **SPEC** (Self-Producing Execution Contract): each tool's `input_schema` — the part of its
 > contract and MCP tool definition that has to track the CLI flag-for-flag — is never
 > hand-authored beside the code. It is derived, at run time, from the same `argparse` parser that
@@ -122,9 +126,9 @@ Already installed? re-run `npx ffmpeg-skill` to refresh `~/.claude/skills/ffmpeg
 
 Then talk to your agent:
 
-> "Take `interview.mp4`, keep 0:45–3:10 and 5:00–6:30, and make it exactly 60 seconds for Reels."
+> "Take `interview.mp4`, keep 0:45–1:20 and 5:00–5:25, and make it a 60-second Reel."
 
-The agent runs `probe.py`, `cut.py --segments 0:45-3:10,5:00-6:30`, `fit.py --duration 60 --aspect 9:16 --fit crop`, `export.py --preset reels`, `check.py --platform reels` and `look.py`, then reports "final.mp4: 59.98 s, 1080×1920, 30 fps, AAC stereo" with the contact sheet it inspected.
+The agent runs `probe.py`, `cut.py --segments 0:45-1:20,5:00-5:25 --accurate`, `fit.py --aspect 9:16 --fit crop`, `export.py --preset reels`, `check.py --platform reels` and `look.py`, then reports "final.mp4: 60.00 s, 1080×1920, 30 fps, AAC stereo" with the contact sheet it inspected.
 
 ### Deliver to a platform
 
@@ -154,7 +158,7 @@ The tools also work on their own, from any shell:
 ```bash
 S=~/.claude/skills/ffmpeg-skill/scripts
 python3 $S/probe.py input.mp4 --compact
-python3 $S/fit.py input.mp4 --duration 60 --aspect 9:16 --dry-run    # print the plan, run nothing
+python3 $S/fit.py input.mp4 --duration 60 --method trim --aspect 9:16 --dry-run    # plan a trim and reframe
 python3 $S/export.py input.mp4 --preset reels --json                 # structured result with a probe of the output
 ```
 
@@ -224,7 +228,7 @@ These are the rules the skill file gives the agent and the code enforces.
 | `cut.py` | In/out or multi-segment cuts, lossless `-c copy` first, re-encode fallback, `--accurate` for frame-exact video and sample-exact audio, `--smart` for a frame-exact H.264 cut that re-encodes only the partial GOPs at the cut points (matched to the source, verified against its packets and frames) and copies the rest, an SDR HEVC source re-encodes as HEVC (`--no-keep-hevc` for x264), a single `.mp4`/`.mov` copy keeps its edit list, so the picture starts at `--start` unless a keyframe lands later (`start_snapped` then says so; `--no-edit-list` for 2.x's shifted start), `--vfr-guard` to choose the VFR check (`sampled` by default); reports `precision`; `--snap beats` moves the in/out points onto a measured beat, or refuses when there is no measurable pulse ; `--remove A-B,...` drops ranges and keeps the rest |
 | `join.py` | Concatenate clips with xfade transitions, normalising size, fps, sample rate and channel layout (the widest clip's, or `--channels`); audio-only inputs are joined as audio; `--list parts.txt` reads generated segments (TTS lines) and checks every one first — missing, empty or unreadable parts are all named in one refusal, or skipped and reported with `--on-missing skip` ; `--copy --transition none` joins clips with matching streams by stream copy, measured afterwards, and refuses a mismatch by name |
 | `silence.py` | Detect and remove dead air (jump cuts) with a margin around speech (`--margin`, 0.2 s each side); list or export the cut list, or a source-to-output time map (`--timemap`, JSON or CSV); reports the level at every cut and warns where one may land in a breath or a word's tail; `--filler` also removes filler words, but only where a speech engine timed them; `--speech-aware` keeps a breath inside a sentence and cuts only at sentence-boundary pauses, composing with `--filler` through the same `keep_ranges()`; `--margin-lead` / `--margin-tail` keep different amounts before and after speech, and with word timings `--sentence-min-silence` / `--sentence-margin-tail` give the pause after a sentence end (the transcript's punctuation) its own floor and tail |
-| `fit.py` | Fit to a duration (pitch-preserving speed change or trim, smooth slow-mo) and/or aspect ratio (pad, crop or `--fit blur`'s blurred, darkened fill, with `--crop-x`/`--crop-y` to keep an off-centre subject) and/or exact `--width`/`--height`, with the result's `picture` saying where the picture sits in the frame written (measured); rotate 90/180/270, flip h/v; force constant fps |
+| `fit.py` | Fit to a duration (pitch-preserving speed change or trim, smooth slow-mo), aspect ratio (pad, crop or blurred fill) or exact size. `picture` measures the written frame. `crop_check` flags discarded motion or detail and can suggest `--crop-x`/`--crop-y`. Rotate 90/180/270, flip h/v and force constant fps. |
 | `crop.py` | Crop to an exact pixel rectangle (`--x --y --width --height`) — distinct from `fit.py --fit crop`, which crops to an aspect ratio it computes itself |
 | `cropdetect.py` | Measure existing black letterbox/pillarbox bars and report the `crop.py`-ready rectangle that removes them — analysis only, writes no file; `--motion-centre` reports the per-second motion centroid instead, for a 9:16 reframe — report only, the calling agent picks the crop, no auto-reframing |
 | `deinterlace.py` | Deinterlace interlaced source footage (`yadif`), `--mode frame`/`field`, `--parity` |
@@ -369,6 +373,22 @@ A structured value is never read as an option: one that starts with `-` (overlay
 
 The server also advertises a `prompts` capability: five canned workflow recipes an agent can ask for by name instead of composing the individual tool calls itself — `reel`, `podcast`, `multicam`, `delivery_check`, `hdr`. `prompts/list` returns each one's name, description and arguments; `prompts/get {name, arguments}` fills the matching template and returns one text message naming the actual command lines to run and what to check afterward. These are recipes, not new tool calls — every command line a prompt names is one `tools/call` (or the CLI) can already run.
 
+For a small editing workflow, set the server's `env` to
+`{"FFMPEG_SKILL_MCP_TOOLS": "probe,cut,fit,export,check"}`.
+This lists tools to inspect, cut, reframe, export and check a clip. Add `caption` for subtitles
+or use a recipe from `prompts/list`. Tool names are comma-separated and the response keeps
+contract order. `FFMPEG_SKILL_MCP_FULL=1` takes precedence and lists all tools. Unlisted tools
+remain callable by name. See the [named list contract](docs/contract.md#default-toolslist-surface-core-12-opt-in-for-all-42).
+
+| `tools/list` profile | Measured JSON-RPC response | Rough tokens at 4 bytes per token |
+| --- | ---: | ---: |
+| Default 12 | 71.0 kB | 18,000 |
+| Full 42 | 190.9 kB | 48,000 |
+| Five-tool editing list above | 24.0 kB | 6,000 |
+
+The byte counts include the JSON-RPC envelope and the final newline. Token counts
+depend on the client and tokenizer.
+
 ### Capability detection
 
 ```bash
@@ -417,6 +437,13 @@ The short list for humans. The agent-facing version, with the reasoning, is the 
 
 Each operation is a script whose flags are its argparse parser, and that parser is what `contract --json` and the MCP `inputSchema` are built from. CI fails the build when those drift from the scripts. A caller-supplied filter graph, `-vf` string, or other ffmpeg option is not an argument any script accepts. `doctor` reads `ffmpeg -filters` (and `-encoders`, `-bsfs`) and reports a filter a tool needs before a job runs into it. MCP does accept an `argv` array, and that array is the named script's own CLI flags, still bound to that script: the script's flags, never an ffmpeg command line and never a shell.
 
+### What if I need an option no tool exposes?
+
+For immediate use, run FFmpeg directly outside the skill. To request support in
+the skill, open an issue with the FFmpeg option, the kind of footage it applies
+to, and the result you need. New options are added as typed flags with tests
+and appear in the CLI and MCP schemas through the same contract.
+
 ### Why 42 tools? Isn't that overkill?
 
 One tool per job, because each job promises something different, and the tool measures that promise after the run. `loudness.py` re-measures integrated loudness and true peak. `cut.py` reports how far a cut snapped to a keyframe. `silence.py` returns the ranges it kept. `export.py` checks the preset's maximum length. A value a tool cannot read fails that step as `not_measured`; it does not pass. One tool with a mode flag would need as large a schema, and its checks would be vaguer.
@@ -455,6 +482,12 @@ It cannot tell you whether the result looks or sounds right, and the result says
 They are the most used tools here, and they are tested on every pull request and every push to `main` on Linux, macOS and Windows, with FFmpeg 6.1 to 9. On 20 test files with known gaps, `silence.py` missed none and left at most 1 ms of silence (see [Tested on real footage](#tested-on-real-footage)). A cut keeps `--margin` seconds of air on each side, 0.2 s by default; raise it to 0.3 s for a speaker who trails off. `--speech-aware` keeps the short breaths inside a sentence. Filler words are removed only from measured word timings (`--words` or a local `--transcribe`), never guessed. `--timemap` writes where each kept and removed range sits in the source and the output, for re-timing subtitles. If `--threshold` is set high enough to cut into a breath or a weak word ending, the result warns at that cut.
 
 `caption.py` burns SRT/ASS or muxes them as soft tracks, fits the size to the platform's safe area, and picks a font that covers the script (Japanese, Chinese, Korean, Arabic, Thai, Hindi and others). It needs FFmpeg's `subtitles` filter (libass); `doctor` reports whether this build has it. Placement and legibility are listed as `unverified`, so look at a contact sheet before delivering. Speech-to-text runs on a local engine you install; its first run may download a model.
+
+### Which engine provides word timestamps for karaoke?
+
+With `caption.py --transcribe --karaoke`, the speech engine supplies word timestamps for the highlights. In `--engine auto`, eligible English speech can use Parakeet first. Auto prefers Whisper engines in this order: whisper.cpp, faster-whisper, OpenAI Whisper. An engine's failure can stop automatic selection, for example when the language is known and whisper.cpp fails to produce word timings. Use `--engine` to select an engine explicitly and `--model` to choose a model. Some engines download the selected model on first use. Whisper.cpp needs a local model file.
+
+Run `doctor --json` and inspect `speech_engines` for Whisper startup checks and errors. The faster-whisper entry includes the installed PyAV version when readable. Startup checks run without loading a model. Model availability and word timestamps are checked when you transcribe.
 
 ### How well does HDR to SDR work, and what should I watch for?
 
@@ -710,3 +743,11 @@ If this skill saves you time, you can help keep it maintained through [GitHub Sp
 ## License
 
 [MIT](LICENSE)
+
+ffmpeg-skill runs your FFmpeg build as a separate executable. FFmpeg has its own license.
+Its LGPL builds can include encoders such as SVT-AV1 or VideoToolbox when available.
+Builds with GPL components such as libx264, libx265 or libvidstab use GPL terms.
+That affects the default x264/x265 encoding paths and the vid.stab filters used by
+`stabilize.py`. FFmpeg labels builds configured with `--enable-nonfree` as
+non-redistributable. `doctor` displays the license reported by the selected executable.
+See [FFmpeg's license and distribution information](https://ffmpeg.org/legal.html).
