@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /trending/_raw/
+
+Sitemap: https://powvy.org/sitemap.xml

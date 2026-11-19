@@ -79,3 +79,21 @@ The Contact section and floating chat button open a bilingual AI assistant using
 聊天窗口的「给 Lucas 留言」可保存联系方式和留言，访客可选择附上对话；需主动同意提交。普通聊天不自动保存。管理员在 `/inbox.html` 输入私人密码查看和删除，密码不在仓库中。留言保留约 180 天，不自动发送回复。
 
 Use **Leave Lucas a message** in the chat to submit contact details and a message, with an optional conversation attachment and explicit consent. Regular chats are not saved. The password-protected `/inbox.html` lets the owner read and delete submissions. Messages are retained for about 180 days; no automatic replies are sent.
+
+## 搜索与分享 / Search and sharing
+
+中文首页是 `/`，英文首页是 `/en/`；两者有独立标题、简介、canonical 和互相对应的 hreflang。`sitemap.xml` 只列真实页面，不包含详情弹窗的 `#` 地址。`robots.txt` 公布地图地址；留言后台和连接检查保留 `noindex`。
+
+The Chinese homepage lives at `/`, and the English homepage at `/en/`. Both have static metadata, canonical URLs and reciprocal hreflang links. The sitemap lists real pages, not hash-based dialogs. Private inbox and connection diagnostics remain excluded from indexing.
+
+修改首页后 / After editing the homepage:
+
+```sh
+python3 scripts/build-seo.py
+python3 tests/seo_test.py
+node --test tests/seo-metadata.test.mjs
+```
+
+`en/index.html` 从首页已有英文翻译生成，请勿单独编辑。请保留首页的 `google-site-verification` 标签。Search Console 使用 `https://powvy.org/` 资源，提交 `https://powvy.org/sitemap.xml`；所有权验证成功与实际收录是两个不同状态，收录和排名由 Google 决定。
+
+`en/index.html` is generated from the existing translations. Keep the Google verification tag in the homepage. Submit the sitemap in the `https://powvy.org/` Search Console property; verification does not guarantee indexing or rankings.
