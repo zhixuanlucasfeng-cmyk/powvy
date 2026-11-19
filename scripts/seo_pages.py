@@ -38,6 +38,9 @@ def build_pages(root, zh_home, en_home, data):
                 desc=item.get('summary',item.get('desc',''))
                 title=heading+' · Powvy'
                 cover=data['postCovers' if kind=='articles' else 'covers'].get(key,'')
+                if kind=='articles':
+                    cover=re.sub(r'<use href="#csm"[^>]*/>', '<image href="csm.png" x="28" y="5" width="130" height="120" preserveAspectRatio="xMidYMid meet"/>',cover)
+                    cover=re.sub(r'<use href="#dog"[^>]*/>', '',cover)
                 if english and key=='restsolar':cover=cover.replace('转人工客服 →','Talk to an agent →')
                 if kind=='articles':
                     body=item['body'];stamp=f'<time datetime="{escape(item["date"])}">{escape(item["date"])}</time> · Lucas Feng'
@@ -75,13 +78,13 @@ def build_pages(root, zh_home, en_home, data):
 <p id="share-status" role="status"></p>
 <section class="related"><h2>{'Explore more' if english else '继续阅读'}</h2><ul>{''.join('<li><a href="'+page_path(kind,p['id'],language)+'">'+escape(({**p,**(data['EN'][source_key].get(p['id'],{}) if english else {})}).get('title',data['EN'][source_key].get(p['id'],{}).get('name',p.get('name','')) if english else p.get('name','')))+'</a></li>' for p in data[source_key] if p['id']!=key)}</ul></section>
 </main><footer>Powvy · Lucas Feng / <a href="{'en/' if english else './'}">{'Home' if english else '首页'}</a></footer></body></html>'''
-                target=root/path/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(html)
+                target=root/path/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text('\n'.join(line.rstrip() for line in html.split('\n')))
                 add_url(path,alts)
                 cards.append(f'<a class="card reveal in" href="{path}" data-{"product" if kind=="projects" else "post"}="{key}"><div class="cover">{cover}</div><div class="body"><span class="tag red">{escape(item["tag"])}</span><h3 class="title">{escape(heading)}</h3><p>{escape(desc)}</p></div></a>')
             block=f'<!-- seo:{container} -->\n<div class="grid" id="{container}">'+''.join(cards)+f'</div>\n<!-- /seo:{container} -->'
             pattern=f'<!-- seo:{container} -->.*?<!-- /seo:{container} -->'
             if re.search(pattern,home,re.S):home=re.sub(pattern,lambda _:block,home,flags=re.S)
             else:home=home.replace(f'<div class="grid" id="{container}"></div>',block)
-        (root/('en/index.html' if english else 'index.html')).write_text(home)
+        (root/('en/index.html' if english else 'index.html')).write_text('\n'.join(line.rstrip() for line in home.split('\n')))
     ElementTree(sitemap).write(root/'sitemap.xml',encoding='UTF-8',xml_declaration=True)
     print('Built',len(data['products'])*2,'project pages and',len(data['posts'])*2,'article pages;',len(sitemap),'sitemap URLs')
