@@ -80,6 +80,14 @@ https://github.com/user-attachments/assets/d97dc8c9-f320-4645-8dcd-0d9dc4cf2eab
 </p>
 
 <!-- COMMAND LINE -->
+## Translation
+
+We translate Ghost Downloader on [Crowdin](https://gdi18n.xychr.com). Do not send pull requests that change translation files.
+
+- Your language is not on Crowdin? Request it in [Discussions](https://github.com/XiaoYouChR/Ghost-Downloader-3/discussions/categories/翻译-translations).
+- The source text is Simplified Chinese. [@i0ntempest](https://github.com/i0ntempest) reviews the English translation by hand. To see it, open the **Other Languages** panel in the Crowdin editor.
+- A new language goes into the app when 60% of the desktop text is translated. Text that is not translated shows in English.
+
 ## Command Line
 
 Install `ghd` from **Settings -> Command Line Tool**.
@@ -139,26 +147,32 @@ Thanks to all contributors who have participated in this project!
 
 ## Translation Contributors
 
-> [!TIP]
-> If you'd like to help translate Ghost Downloader, welcome to join the Crowdin project: [ghost-downloader](https://crowdin.com/project/ghost-downloader)
-
 <!-- CROWDIN-CONTRIBUTORS-START -->
 <table>
   <tbody>
     <tr>
       <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/XiaoYouChR"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17224586/medium/44dde418af0da7d664fff23b96622e40.png" />
+        <a href="https://crowdin.com/profile/XiaoYouChR"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17224586/medium/8543b6654f23235a06e06daaede0dea7.jpg" />
           <br />
           <sub><b>XiaoYouChR</b></sub></a>
         <br />
-        <sub><b>14249 words</b></sub>
+        <sub><b>255883 words</b></sub>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/Havokdan"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/12607851/medium/a1ec7e6a771c303892d82c92015a3641_default.png" />
+          <br />
+          <sub><b>Daniel Neves</b></sub>
+          <br />
+          <sub><b>(Havokdan)</b></sub></a>
+        <br />
+        <sub><b>4443 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/i0ntempest"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17636930/medium/f6bf4e67c7b87221f2e7e04345f8c6b2.jpeg" />
           <br />
           <sub><b>i0ntempest</b></sub></a>
         <br />
-        <sub><b>1988 words</b></sub>
+        <sub><b>2139 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/ReM2812"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17626502/medium/8d12a395a224c0f9d5546a8e5621186c.jpg" />
@@ -166,6 +180,15 @@ Thanks to all contributors who have participated in this project!
           <sub><b>ReM2812</b></sub></a>
         <br />
         <sub><b>1010 words</b></sub>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/s0990"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/14938059/medium/c8029e289a5b05e7d8a92c07163323d8.png" />
+          <br />
+          <sub><b>Kay Xue學昀楷</b></sub>
+          <br />
+          <sub><b>(s0990)</b></sub></a>
+        <br />
+        <sub><b>602 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Dima88888"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16304162/medium/706302f8224fffaf9d81f8cc4168ed24_default.png" />
