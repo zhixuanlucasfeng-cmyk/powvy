@@ -103,3 +103,5 @@ node --test tests/seo-metadata.test.mjs
 `python3 scripts/build-seo.py` 从首页数据生成 16 个项目、4 篇文章的中英文独立页面，并更新包含 44 个网址的网站地图。修改内容后请重新运行。
 
 The build generates bilingual static project and article pages from the homepage data, including canonical URLs, language alternatives and sharing metadata. Run it after content changes.
+
+精选工具 / Useful tools: `/tools/` and `/en/tools/`. Edit the bilingual entries in `scripts/tools_pages.py`, then run `python3 scripts/build-seo.py`. Each entry links to its official site; descriptions do not claim personal testing. The sitemap now includes 46 URLs.

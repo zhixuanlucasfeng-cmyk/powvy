@@ -52,9 +52,13 @@ text=text.replace('property="og:locale" content="zh_CN"','property="og:locale" c
 # A base URL fixes assets, while hash links must remain on the English page.
 text=text.replace('href="#','href="en/#')
 text=text.replace('id="langBtn" aria-label="切换语言 / Switch language">EN','id="langBtn" aria-label="切换语言 / Switch language">中',1)
+text=text.replace('href="tools/"','href="en/tools/"')
 (ROOT/'en').mkdir(exist_ok=True)
 (ROOT/'en/index.html').write_text(text)
 # Standalone pages and crawlable homepage lists share the same project data.
 from seo_pages import build_pages
 build_pages(ROOT, source, text, data)
 print('Built English homepage:',len(parser.edits),'translated elements')
+
+from tools_pages import build_tools
+build_tools(ROOT)

@@ -22,7 +22,7 @@ class SEO(unittest.TestCase):
  def test_indexable_pages_and_sitemap(self):
   tree=ET.parse(ROOT/'sitemap.xml');ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
   urls=[n.text for n in tree.findall('s:url/s:loc',ns)]
-  self.assertEqual(len(urls),44);self.assertEqual(len(set(urls)),44)
+  self.assertEqual(len(urls),46);self.assertEqual(len(set(urls)),46)
   self.assertEqual(sum('/projects/' in u for u in urls),32)
   self.assertEqual(sum('/articles/' in u for u in urls),8)
   for url in urls:

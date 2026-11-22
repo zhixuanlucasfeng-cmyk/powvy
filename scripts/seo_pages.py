@@ -26,6 +26,8 @@ def build_pages(root, zh_home, en_home, data):
     home_alts=[('zh-Hans',ORIGIN),('en',ORIGIN+'en/'),('x-default',ORIGIN)]
     for path in ('','en/'):add_url(path,home_alts)
     for path in ('trending/','credit/'):add_url(path)
+    tools_alts=[('zh-Hans',ORIGIN+'tools/'),('en',ORIGIN+'en/tools/'),('x-default',ORIGIN+'tools/')]
+    for path in ('tools/','en/tools/'):add_url(path,tools_alts)
     for language,home in [('zh',zh_home),('en',en_home)]:
         english=language=='en';home_url=ORIGIN+('en/' if english else '')
         for kind,source_key,container in [('projects','products','productList'),('articles','posts','postList')]:
