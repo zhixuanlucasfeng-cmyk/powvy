@@ -1,5 +1,125 @@
 [
  {
+  "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+  "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+  "published": "2026-11-21T21:37:10+00:00",
+  "summary": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "A tale of two Nvidias",
+  "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
+  "published": "2026-11-21T21:07:42+00:00",
+  "summary": "We got two very different pictures of Nvidia — the company’s latest earnings report vs. the tech executives loudly calling for Jensen Huang’s return.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Here are the top AI agents that can live in your text messages",
+  "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+  "published": "2026-11-21T17:00:00+00:00",
+  "summary": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Nvidia researchers argue huge AI context windows are a dead end",
+  "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/",
+  "published": "2026-11-21T16:23:45+00:00",
+  "summary": "Nvidia researchers argue that language models often don't need their full context windows—which are slow, expensive, and prone to errors—and propose an alternative. In tests, periodic summaries and targeted keyword search usually matched full-context results at a fraction of the cost. The team even proposes a new class of models that works with short notes instead of long context. The article Nvidia researchers argue huge AI context windows are a dead end appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Silicon Valley's growing obsession with AI doomsday is turning parts of the tech industry toward cult-like devotion",
+  "url": "https://the-decoder.com/silicon-valleys-growing-obsession-with-ai-doomsday-is-turning-parts-of-the-tech-industry-toward-cult-like-devotion/",
+  "published": "2026-11-21T16:04:29+00:00",
+  "summary": "A Buddhist monastery in Vermont called Maple wants to establish itself as Silicon Valley's spiritual authority while creating its own AI god. According to a New Yorker report, leader Soryu Forall's group records every breath its members take to train an AI in his image. Former members report manipulation and psychological breakdowns. The article Silicon Valley's growing obsession with AI doomsday is turning parts of the tech industry toward cult-like devotion appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+  "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+  "published": "2026-11-21T16:00:00+00:00",
+  "summary": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "The UN fails to agree on rules regulating ‘killer robots’",
+  "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
+  "published": "2026-11-21T15:03:37-05:00",
+  "summary": "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations. According to NPR: Before the negotiations got underway, the […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions",
+  "url": "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/",
+  "published": "2026-11-21T13:32:35+00:00",
+  "summary": "OpenAI has released new prompt templates for GPT-6.2 Astra and Sol meant to fix common model behaviors such as overly brief answers, unnecessary follow-up questions, and excessive testing when coding. The API is changing as well, since editing a conversation's history can discard reasoning content and lower response quality. The article OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft",
+  "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
+  "published": "2026-11-21T11:19:49+00:00",
+  "summary": "Anthropic mathematician Levent Alpöge says he used Claude to prove the Riemann hypothesis, math's most famous open problem for 167 years, with a proof formalized in Lean that spans over 250,000 pages. Just hours later, Stanford researchers published an independent, entirely human competing proof, and mathematicians are now checking whether either one holds up. The article Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop",
+  "url": "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/",
+  "published": "2026-11-21T10:33:02+00:00",
+  "summary": "Thinking Machines has released Inkling 2 Mini, an open looped transformer that runs 12 of its 24 layers three times per token. This lets the model reason internally for longer without generating extra text. On Artificial Analysis's Intelligence Index, it ties with Qwen3.8 27B at roughly six times lower cost. The article New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "US technology stocks suffer their worst weekly loss since the pandemic as AI doubts pile up",
+  "url": "https://the-decoder.com/us-technology-stocks-suffer-their-worst-weekly-loss-since-the-pandemic-as-ai-doubts-pile-up/",
+  "published": "2026-11-21T10:27:44+00:00",
+  "summary": "The Nasdaq 100 has slipped into a bear market after its worst weekly loss since the Covid-19 crisis. Nvidia plunged 14 percent as the SEC reviews its accounting, and Anthropic lost nearly all of its gains a day after its record IPO. AI doubts, scandals, rising interest rates, and political headwinds are hitting overheated valuations all at once. The article US technology stocks suffer their worst weekly loss since the pandemic as AI doubts pile up appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Can Anthropic afford to put safety first?",
+  "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+  "published": "2026-11-21T10:00:00-05:00",
+  "summary": "Today, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the Anthropic IPO for the third and final episode in our series about AI in real life. The AI lab behind Claude went public on the Nasdaq last Thursday. The numbers are gigantic, but not really that important for this conversation, except to […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Bytedance argues most AI training phases are unnecessary and backs it up with a competitive open model",
+  "url": "https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/",
+  "published": "2026-11-21T09:17:24+00:00",
+  "summary": "Bytedance and several US universities introduce Axion 1.0, an AI agent that rivals top commercial models from OpenAI and Anthropic on benchmarks after just three training phases. The researchers attribute the gains to carefully curated training data rather than ever more training steps. The model, data, and code are freely available. The article Bytedance argues most AI training phases are unnecessary and backs it up with a competitive open model appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
+  "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
+  "published": "2026-11-21T09:00:00-05:00",
+  "summary": "Chess.com is ready to go a lot bigger than chess. After launching Gambit, a gambling-free poker site, earlier this year, the company is now adding 10 more games: backgammon, checkers, go, hearts, mahjong, shogi, sudoku, solitaire, xiangqi, and a Scrabble alternative called word. They're all part of Chess's new Classic Games platform, which is launching […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "[AINews] Riemann Hypothesis proved...twice independently",
+  "url": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
+  "published": "2026-11-21T05:02:13+00:00",
+  "summary": "November 20 2026 —",
+  "source": "Latent Space",
+  "tier": "T2"
+ },
+ {
   "title": "New in AWS Quick: More capable flows, an updated web experience, and agents that work together",
   "url": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
   "published": "2026-11-21T01:06:42+00:00",
@@ -168,35 +288,11 @@
   "tier": "T2"
  },
  {
-  "title": "Bloomberg analysis of 10 million job postings shows AI-exposed roles in China fell 10 percentage points faster than others",
-  "url": "https://the-decoder.com/bloomberg-analysis-of-10-million-job-postings-shows-ai-exposed-roles-in-china-fell-10-percentage-points-faster-than-others/",
-  "published": "2026-11-20T15:56:03+00:00",
-  "summary": "A Bloomberg News analysis of 10 million job postings suggests AI is compounding China's already weak labor market. Entry-level workers and the creative industry are feeling the shift most, with more than 90% of Chinese micro-dramas now produced using AI. Former central bank adviser Cai Fang warns that a larger AI shock is still ahead. The article Bloomberg analysis of 10 million job postings shows AI-exposed roles in China fell 10 percentage points faster than others appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Apple joins the race for AI agents that control your device while raising new barriers for competitors",
-  "url": "https://the-decoder.com/apple-joins-the-race-for-ai-agents-that-control-your-device-while-raising-new-barriers-for-competitors/",
-  "published": "2026-11-20T15:03:25+00:00",
-  "summary": "After Meta, OpenAI, Anthropic, and Google launched their own AI agents, Apple is now building one too - while making it harder for rivals to access its devices. The article Apple joins the race for AI agents that control your device while raising new barriers for competitors appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
   "title": "The fallout from Nvidia’s Jensen Huang scandal continues",
   "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
   "published": "2026-11-20T14:55:44+00:00",
   "summary": "In the midst of dealing with the fallout from its ouster of CEO Jensen Huang, Nvidia delivered its latest earnings report this week, with healthy growth and promises that the good times will continue. At the same time, the chipmaker said it will stop selling its H200 chips in China, and it dismissed calls to […]",
   "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Nvidia bets at least $500 million on Inception's diffusion models to strengthen its open-source Nemotron lineup",
-  "url": "https://the-decoder.com/nvidia-bets-at-least-500-million-on-inceptions-diffusion-models-to-strengthen-its-open-source-nemotron-lineup/",
-  "published": "2026-11-20T14:53:50+00:00",
-  "summary": "Nvidia is close to acquiring AI startup Inception for at least $500 million, according to The Information. The company is just two years old and builds language models based on diffusion processes, an alternative approach to the token-by-token generation used by models like ChatGPT. The deal would bolster Nvidia's own open-source models and its push into robotics. The article Nvidia bets at least $500 million on Inception's diffusion models to strengthen its open-source Nemotron lineup appeared first on The Decoder .",
-  "source": "The Decoder",
   "tier": "T2"
  },
  {
@@ -216,14 +312,6 @@
   "tier": "T2"
  },
  {
-  "title": "Google's latest homepage update pushes its search engine further toward an AI answer engine",
-  "url": "https://the-decoder.com/googles-latest-homepage-update-pushes-its-search-engine-further-toward-an-ai-answer-engine/",
-  "published": "2026-11-20T13:19:31+00:00",
-  "summary": "Google is rolling out a collapsible sidebar globally on its Desktop Search homepage. In AI Mode, it lets users reopen recent AI searches, search threads, and create notebooks. Temporary threads that aren't saved to history are also launching worldwide. Google Search co-lead Robby Stein says the feature should make it easier for users to continue longer web research. The article Google's latest homepage update pushes its search engine further toward an AI answer engine appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
   "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
   "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
   "published": "2026-11-20T11:34:13-05:00",
@@ -238,14 +326,6 @@
   "summary": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.",
   "source": "OpenAI News",
   "tier": "T1"
- },
- {
-  "title": "Hermes Agent's Collective Wisdom feature turns one employee's AI trick into the whole team's skill",
-  "url": "https://the-decoder.com/hermes-agents-collective-wisdom-feature-turns-one-employees-ai-trick-into-the-whole-teams-skill/",
-  "published": "2026-11-20T09:59:51+00:00",
-  "summary": "Companies will soon be able to run the open-source Hermes Agent from Nous Research directly inside Microsoft Teams. The article Hermes Agent's Collective Wisdom feature turns one employee's AI trick into the whole team's skill appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
  },
  {
   "title": "The week everything fell apart",
@@ -269,6 +349,14 @@
   "published": "2026-11-20T07:12:24+00:00",
   "summary": "November 19, 2026 — ANT went from $83 at pricing to $111.50 at the open and $97.17 at the close. Plus, Google opens Genie 4 to developers.",
   "source": "Latent Space",
+  "tier": "T2"
+ },
+ {
+  "title": "llm-gemini 0.38.1",
+  "url": "https://simonwillison.net/2026/Nov/20/llm-gemini/",
+  "published": "2026-11-20T03:01:57+00:00",
+  "summary": "Release: llm-gemini 0.38.1 Gemini 4 Carbon only supports low , medium and high reasoning levels - but Gemini 4 Hydrogen and Gemini 4 Neon both have an extra xhigh level. I missed that when I added those models to the llm-gemini plugin, which is now fixed in this dot release. The xhigh setting for Hydrogen makes a significant difference. I updated my Gemini 4 comparison grid - note how Hydrogen at high used 5,311 output tokens and cost 3.99 cents, but the same model at xhigh used 31,477 output tokens, cost 23.61 cents, and produced a pelican that's competitive with Gemini 4 Neon: Tags: gemini , llm , llm-reasoning , pelican-riding-a-bicycle , ai , llms , google , generative-ai",
+  "source": "Simon Willison",
   "tier": "T2"
  },
  {
@@ -310,349 +398,5 @@
   "summary": "Kimi Code CLI v2.7.0 adds a native Amazon Bedrock provider, so you can connect the open source coding agent to models like Kimi K3.1 Pro using your standard AWS credential chain (named profiles or SSO) instead of a separate API key. This post shows how to configure the provider and send your first request.",
   "source": "AWS Machine Learning Blog",
   "tier": "T1"
- },
- {
-  "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
-  "url": "https://openai.com/business/customer-stories/hebbia",
-  "published": "2026-11-20T00:00:00+00:00",
-  "summary": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "Can AI help scientists identify promising drug candidates?",
-  "url": "https://openai.com/index/introducing-medchembench",
-  "published": "2026-11-20T00:00:00+00:00",
-  "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
-  "url": "https://huggingface.co/blog/inkling2mini",
-  "published": "2026-11-20T00:00:00+00:00",
-  "summary": "",
-  "source": "Hugging Face Blog",
-  "tier": "T1"
- },
- {
-  "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
-  "url": "https://huggingface.co/blog/harness-adapters-at-scale",
-  "published": "2026-11-20T00:00:00+00:00",
-  "summary": "",
-  "source": "Hugging Face Blog",
-  "tier": "T1"
- },
- {
-  "title": "Scaling Linear’s GTM to $100M ARR — Cristina Cordova, COO",
-  "url": "https://latent.space/p/linear-scaling/",
-  "published": "2026-11-19T23:58:21+00:00",
-  "summary": ">50% of tickets written by agents, the AI budgets behind $100M-in-months ARR, and selling without SDRs or FDEs",
-  "source": "Latent Space",
-  "tier": "T2"
- },
- {
-  "title": "Enable AI agents to pay for AWS Marketplace x402 products with Amazon Bedrock AgentCore payments",
-  "url": "https://aws.amazon.com/blogs/machine-learning/enable-ai-agents-to-pay-for-aws-marketplace-x402-products-with-amazon-bedrock-agentcore-payments/",
-  "published": "2026-11-19T23:02:16+00:00",
-  "summary": "Amazon Bedrock AgentCore payments now supports AWS Marketplace, so agents can discover and buy x402-enabled products, APIs, data, and content and pay in USD on the developer's AWS bill, with no stablecoin wallets or API keys. This post walks through a research agent that finds a tool, pays per request through AWS Billing, and answers with sources.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "How the BMW Group governs hundreds of agents across thousands of developers",
-  "url": "https://aws.amazon.com/blogs/machine-learning/how-the-bmw-group-governs-hundreds-of-agents-across-thousands-of-developers/",
-  "published": "2026-11-19T22:20:23+00:00",
-  "summary": "When hundreds of agents serve thousands of developers, governance cannot be an afterthought. The BMW Group shares the practices and patterns its R&D teams use to build, govern, and operate AI agents at enterprise scale without sacrificing speed, quality, or compliance.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Run your whole selling business in AWS Quick",
-  "url": "https://aws.amazon.com/blogs/machine-learning/run-your-whole-selling-business-in-aws-quick/",
-  "published": "2026-11-19T22:16:22+00:00",
-  "summary": "Most sellers do not need another AI product to learn. They need the tools and information they already use brought together, so they can see what is happening in their business and act on it.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Meta’s new Muse Charm device may cost $300",
-  "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
-  "published": "2026-11-19T21:58:06+00:00",
-  "summary": "Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "These tech outages are giving Y2K, AI agent style",
-  "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
-  "published": "2026-11-19T21:42:31+00:00",
-  "summary": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Amazon SageMaker AI now detects latency drift, idle GPUs, and missed optimizations on your inference endpoints",
-  "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-now-detects-latency-drift-idle-gpus-and-missed-optimizations-on-your-inference-endpoints/",
-  "published": "2026-11-19T21:28:18+00:00",
-  "summary": "Amazon SageMaker AI now monitors your generative AI inference endpoints by default and tells you when a change could improve performance or lower cost. It tracks latency, GPU utilization, and serving configuration, then sends a finding through AWS Health with a one-click path to benchmark alternatives in SageMaker Studio before you apply any change.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Inside Amazon Connect Talent: The science of structured AI interviews",
-  "url": "https://aws.amazon.com/blogs/machine-learning/inside-amazon-connect-talent-the-science-of-structured-ai-interviews/",
-  "published": "2026-11-19T21:23:20+00:00",
-  "summary": "For organizations hiring hundreds or thousands of people, every interview presents the same challenge: How do you give candidates a consistent opportunity to demonstrate their skills while gathering the evidence needed to make informed hiring decisions? Structured behavioral interviews offer a research-backed approach to this challenge. They use consistent, job-related questions and clear scoring criteria […]",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "An OpenAI agent assigned a simple writing task decided on its own to build a secret email surveillance tool",
-  "url": "https://the-decoder.com/an-openai-agent-assigned-a-simple-writing-task-decided-on-its-own-to-build-a-secret-email-surveillance-tool/",
-  "published": "2026-11-19T21:15:01+00:00",
-  "summary": "An internal OpenAI model was supposed to create a fitness document but instead began planning scripts to secretly forward emails to an \"attacker.\" The agent recognized the conflict with its assigned task but dismissed it as an environment error. OpenAI identified security training against prompt injection as a possible trigger but cannot establish it as the sole cause. The article An OpenAI agent assigned a simple writing task decided on its own to build a secret email surveillance tool appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "PostgreSQL 19 Released",
-  "url": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
-  "published": "2026-11-19T20:43:57+00:00",
-  "summary": "PostgreSQL 19 Released Most years PostgreSQL ships a new release in September, but this year's release came two months later thanks mainly to the flurry of issues that the PostgreSQL team needed to address as part of the ongoing AI-reported vulnerability apocalypse. This release was definitely worth the wait. My favorite new feature is this one: For applications that send reads to standbys, PostgreSQL 19 adds \"read-your-writes\" consistency with the new WAIT FOR LSN command. A session on a standby can use WAIT FOR LSN to wait until the standby has replayed the write-ahead log (WAL) up to a specific log sequence number (LSN) before running a query, so the application can read data it just wrot",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "Traumatized teens sue school, cops after Doritos bag triggers AI gun alert",
-  "url": "https://arstechnica.com/tech-policy/2026/11/traumatized-teens-sue-school-cops-after-doritos-bag-triggers-ai-gun-alert/",
-  "published": "2026-11-19T20:19:28+00:00",
-  "summary": "Lawsuit: Over 99% of school system’s AI gun alerts were false positives.",
-  "source": "Ars Technica · AI",
-  "tier": "T2"
- },
- {
-  "title": "The unfolding Jensen Huang scandal: a timeline",
-  "url": "https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
-  "published": "2026-11-19T20:18:49+00:00",
-  "summary": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "A game you cannot win unless you have a quantum computer",
-  "url": "https://research.google/blog/a-game-you-cannot-win-unless-you-have-a-quantum-computer/",
-  "published": "2026-11-19T20:03:00+00:00",
-  "summary": "Quantum",
-  "source": "Google Research",
-  "tier": "T1"
- },
- {
-  "title": "Amazon Bedrock AgentCore harness adds Strands harness defaults, built-in tools, and lifecycle hooks",
-  "url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks/",
-  "published": "2026-11-19T20:01:06+00:00",
-  "summary": "Amazon Bedrock AgentCore harness now runs on the open-source Strands harness, bringing a recommended model, task-oriented defaults, automatic prompt caching, proactive context management, and new built-in tools. It also adds lifecycle hooks so you can run deterministic allow or deny checks at defined points in the agent loop.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs",
-  "url": "https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/",
-  "published": "2026-11-19T20:00:15+00:00",
-  "summary": "NVIDIA and Microsoft are extending their full-stack collaboration to help organizations build, customize and deploy intelligent applications — from next-generation infrastructure on Azure to industrial systems and Windows PCs. At Microsoft Ignite, the companies are expanding access to Azure virtual machines powered by NVIDIA Vera Rubin NVL72 systems, as well as adding customer availability to […]",
-  "source": "NVIDIA Blog",
-  "tier": "T1"
- },
- {
-  "title": "Amazon Polly launches voice cloning: A unique voice for your brand",
-  "url": "https://aws.amazon.com/blogs/machine-learning/amazon-polly-launches-voice-cloning-a-unique-voice-for-your-brand/",
-  "published": "2026-11-19T19:53:32+00:00",
-  "summary": "Voice cloning in Amazon Polly is now generally available. Give Amazon Polly a few minutes of recordings from a consenting speaker, and it builds a custom voice that reads new text in that speaker's voice. Cloned voices run on the Amazon Polly generative engine and support seven languages.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "AI industry growth remains strong, but the pace is slowing",
-  "url": "https://the-decoder.com/ai-industry-growth-remains-strong-but-the-pace-is-slowing/",
-  "published": "2026-11-19T19:28:19+00:00",
-  "summary": "Token prices for AI models fell 21 percent in six weeks while usage volume hit a record high, according to the Ramp AI Index. Anthropic dominates with nearly 59 percent of token spending. Data from Ramp, Stripe and OpenRouter independently show the same pattern: the AI industry is still growing, but revenue momentum is cooling. The article AI industry growth remains strong, but the pace is slowing appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic’s IPO could deliver $156B to charity",
-  "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
-  "published": "2026-11-19T19:10:45+00:00",
-  "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Optimize AI economics on Amazon Bedrock with Accenture’s sequenced approach",
-  "url": "https://aws.amazon.com/blogs/machine-learning/optimize-ai-economics-on-amazon-bedrock-with-accentures-sequenced-approach/",
-  "published": "2026-11-19T18:48:55+00:00",
-  "summary": "As enterprises scale AI on Amazon Bedrock, token spend can grow even as per-token prices fall. This post walks through six composable optimization levers, shows how Accenture applied them across four client engagements, and recommends a sequence for cutting AI token spend on your own workloads.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "From learning to leaderboard: How Cisco upskilled 1,200 engineers in agentic AI with AWS AI League",
-  "url": "https://aws.amazon.com/blogs/machine-learning/from-learning-to-leaderboard-how-cisco-upskilled-1200-engineers-in-agentic-ai-with-aws-ai-league/",
-  "published": "2026-11-19T18:26:22+00:00",
-  "summary": "Cisco and AWS used Cisco Transformation Fest and AWS AI League to turn hands-on AI learning into a culture of building. A Cisco engineer won the 2025 AWS AI League global title and 1,200 engineers competed in 2026. This post shares Cisco's journey, lessons from the 2026 winning agent built on Amazon Bedrock AgentCore, and how to host your own league.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Keep inference running through regional capacity shortfalls with cross-Region inference routing in Amazon SageMaker AI",
-  "url": "https://aws.amazon.com/blogs/machine-learning/keep-inference-running-through-regional-capacity-shortfalls-with-cross-region-inference-routing-in-amazon-sagemaker-ai/",
-  "published": "2026-11-19T18:20:54+00:00",
-  "summary": "Cross-Region inference routing in Amazon SageMaker AI gives your application one invocation path across the endpoints and inference components you already run, in one or more AWS Regions and AWS accounts. The router prefers its own Region and shifts new requests to another destination only when the local one can't serve reliably.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Protect agent tool calls with Skyflow and Amazon Bedrock AgentCore Gateway",
-  "url": "https://aws.amazon.com/blogs/machine-learning/protect-agent-tool-calls-with-skyflow-and-amazon-bedrock-agentcore-gateway/",
-  "published": "2026-11-19T18:14:36+00:00",
-  "summary": "Learn how Skyflow and Amazon Bedrock AgentCore Gateway keep sensitive data out of the tools your AI agents call. Added as a gateway interceptor, Skyflow de-identifies data before any tool, model, or log sees it, and restores it for authorized callers, with no change to your agent code.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Google gives Gemini the ability to use your Mac for you",
-  "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
-  "published": "2026-11-19T18:09:11+00:00",
-  "summary": "Google's latest update to Gemini brings an AI agent to the Mac that can organize files, fill out forms, and tackle multistep workflows.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Meta’s AI agent Muse is mixing up conversations and could be exposing private data, report says",
-  "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
-  "published": "2026-11-19T17:38:40+00:00",
-  "summary": "In some of these instances, employees said Muse surfaced messages about childcare requests they never made, career advice they never asked for, product orders they never placed, and bank account balances that didn't belong to them.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Apple is hiring engineers to build its own AI agent",
-  "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
-  "published": "2026-11-19T17:31:41-05:00",
-  "summary": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a now-removed job listing spotted by Bloomberg, which said Apple is looking for an engineer to lead the creation of an agentic AI […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
-  "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
-  "published": "2026-11-19T17:00:35+00:00",
-  "summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through […]",
-  "source": "NVIDIA Blog",
-  "tier": "T1"
- },
- {
-  "title": "Former Alibaba exec’s Everful raises $48.5M to connect retailers with Chinese factories",
-  "url": "https://techcrunch.com/2026/11/19/former-alibaba-execs-everful-raises-48-5m-to-connect-retailers-with-chinese-factories/",
-  "published": "2026-11-19T17:00:00+00:00",
-  "summary": "Everful has raised $48.5 million to expand its factory-direct sourcing platform, helping retailers source products from overseas manufacturers.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "A brief history of Nvidia’s recent stock fluctuations",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
-  "published": "2026-11-19T16:59:35-05:00",
-  "summary": "\"We've got this,\" Colette Kress, interim CEO of Nvidia, said Tuesday night as she closed out the embattled chip company's third quarter earnings call. By Thursday, the company's stock price was hovering at around $150 per share, a nearly 40 percent drop from its all-time high on October 6th, and wiping out a brief post-earnings […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
-  "url": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
-  "published": "2026-11-19T16:59:23+00:00",
-  "summary": "Anthropic's IPO price was set at $83, representing more than $80 billion in new capital raised.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development",
-  "url": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
-  "published": "2026-11-19T16:19:41+00:00",
-  "summary": "In his Nasdaq opening bell speech, Dario Amodei reiterated Anthropic's commitment to pacing AI development, regardless of business or political pressure.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Meta’s Muse Charm might cost $300",
-  "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
-  "published": "2026-11-19T15:22:17-05:00",
-  "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Google is putting AI chats right on the homepage",
-  "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
-  "published": "2026-11-19T15:05:06-05:00",
-  "summary": "Google is updating its homepage to include AI searches. In a post on X, Google's vice president of product, Robby Stein, shows how you can now open a collapsible sidebar to view and continue your AI chats. Based on the GIF shared by Stein, it looks like you can open the sidebar by clicking the […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic’s IPO puts AI’s circular financing boom to the test",
-  "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/",
-  "published": "2026-11-19T14:54:39+00:00",
-  "summary": "Anthropic faces enormous compute commitments as it goes public, but its biggest infrastructure partners, including Amazon and Google, could continue profiting from AI even if Anthropic loses its lead.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Season’s Streamings and Savings: Black Friday Deals Come to GeForce NOW",
-  "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-black-friday-2026/",
-  "published": "2026-11-19T14:00:12+00:00",
-  "summary": "GeForce NOW is kicking off Black Friday with more reasons to make time for gaming. Six-month memberships are back for a limited time. Save 30% on the first six-month term of a Performance or Ultimate membership. Big gaming plans, smaller price tag. Keep the holiday savings going: Check out more NVIDIA holiday deals for gamers, […]",
-  "source": "NVIDIA Blog",
-  "tier": "T1"
- },
- {
-  "title": "Superhuman pushes its Go assistant everywhere",
-  "url": "https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/",
-  "published": "2026-11-19T14:00:00+00:00",
-  "summary": "Superhuman is making Go its central agent and making it available in Docs and Mail.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Gemini on Mac can now use your computer",
-  "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
-  "published": "2026-11-19T13:21:13-05:00",
-  "summary": "Google's Gemini app for macOS now has computer use, meaning it can help you \"get multi-step tasks done across your local files, desktop apps, and the web,\" the company says. Google suggests the feature might be useful for things like speeding up workflows, filling in forms, making presentations, and listing items for sale. Users will […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic starts trading on Wall Street",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
-  "published": "2026-11-19T11:52:01-05:00",
-  "summary": "Anthropic has officially gone public. It began trading on the Nasdaq under the ticker symbol \"ANT\" at $111.50 per share, up from its initial $83 per share price that put company's value at around $1.5 trillion. The listing comes nearly a month after Anthropic revealed its plans to go public. In its lengthy S-1 filing, […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
-  "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
-  "published": "2026-11-19T08:00:00+00:00",
-  "summary": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender",
-  "url": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
-  "published": "2026-11-19T07:07:43+00:00",
-  "summary": "November 18, 2026 — Google’s middle tier scores 61 on the Intelligence Index. Plus, Anthropic prices its IPO at $83.",
-  "source": "Latent Space",
-  "tier": "T2"
  }
 ]
