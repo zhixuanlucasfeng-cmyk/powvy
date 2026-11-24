@@ -1,5 +1,397 @@
 [
  {
+  "title": "[AINews] Jensen Is Back! and OpenAI Shows Its Pretraining Curve, joined by Microsoft",
+  "url": "https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/",
+  "published": "2026-11-24T04:14:16+00:00",
+  "summary": "November 23, 2026 — Nvidia reinstates its founder, and OpenAI publishes its internal loss curve and proposes a shared training limit.",
+  "source": "Latent Space",
+  "tier": "T2"
+ },
+ {
+  "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+  "url": "https://simonwillison.net/2026/Nov/23/glm-54/",
+  "published": "2026-11-23T23:40:49+00:00",
+  "summary": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer GLM 5.4 is now available from Chinese AI lab Z.ai. It's their first model to use a looped transformer architecture, which they describe like this: In a standard Transformer, each layer runs once per forward pass. In a Loop Transformer, a group of weight-shared layers runs for multiple iterations, refining the hidden states from the previous pass. This gives us a deeper network without increasing the parameter count. This is the second mention of looped transformers I've seen in the past week - the first was Inkling 2 Mini from Thinking Machines Lab on November 20th, who said: Inkling 2 Mini is a looped transformer, running th",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+  "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+  "published": "2026-11-23T22:05:50+00:00",
+  "summary": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
+  "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
+  "published": "2026-11-23T22:02:05+00:00",
+  "summary": "Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without having to pick the stocks yourself.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia amid scandal",
+  "url": "https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/",
+  "published": "2026-11-23T21:47:41+00:00",
+  "summary": "\"The mistake has been corrected,\" Elon Musk chimed in.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Ladybird's first alpha release",
+  "url": "https://simonwillison.net/2026/Nov/23/ladybird/",
+  "published": "2026-11-23T21:46:35+00:00",
+  "summary": "Ladybird is an astonishingly ambitious project: a new browser, in 2026, with its own implementation of most of the key components - HTML parsing, CSS engine, layout, JavaScript, even WebAssembly. It still uses a few external components - things like HarfBuzz for text shaping, Skia for 2D graphics, ffmpeg for video, and SQLite for the things you do with SQLite. Everything else is part of Ladybird, or code brought in from Ladybird's even more ambitious predecessor project SerenityOS . This morning the Ladybird project released their first alpha , which means you can now install the browser (on macOS or Linux) without having to compile it yourself! I've been trying it out today, and it's very i",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+  "url": "https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/",
+  "published": "2026-11-23T21:30:44+00:00",
+  "summary": "X says every Grok output is screened, but state AGs say Grok is still making CSAM.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Megaspeed, the company at the center of the Jensen Huang scandal, appears headed for a US blacklist",
+  "url": "https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/",
+  "published": "2026-11-23T21:25:42+00:00",
+  "summary": "Megaspeed, which was previously led by Alice Huang, would be barred from doing business with U.S. companies unless those companies attained a special license from the federal government.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI and Cisco introduce Shirudo",
+  "url": "https://openai.com/index/introducing-shirudo",
+  "published": "2026-11-23T21:20:00+00:00",
+  "summary": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.",
+  "source": "OpenAI News",
+  "tier": "T1"
+ },
+ {
+  "title": "OpenAI updates ChatGPT to handle complex everyday questions, web searches, and images more reliably",
+  "url": "https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/",
+  "published": "2026-11-23T20:39:18+00:00",
+  "summary": "OpenAI is making GPT-6.2 Sol the new default model in ChatGPT's chat tab, rolling it out worldwide. In internal tests, image understanding jumped from 47.4 to 71.7 percent, and the model now handles difficult instructions correctly 78.1 percent of the time. It also sticks to safety policies more consistently. The article OpenAI updates ChatGPT to handle complex everyday questions, web searches, and images more reliably appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ",
+  "url": "https://techcrunch.com/2026/11/23/nvidia-employees-greet-jensen-huang-like-a-hero-as-he-returns-to-companys-hq/",
+  "published": "2026-11-23T20:38:53+00:00",
+  "summary": "\"I'm going to be a better CEO the second time around,\" Huang told employees.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Google Search’s AI Mode can now tap into Drive and Wallet for more personalized responses",
+  "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+  "published": "2026-11-23T19:14:46+00:00",
+  "summary": "By bringing Personal Intelligence in AI Mode to Drive, Wallet, and the Gemini app, Google is leveraging the wealth of user data that's already within its ecosystem",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Anthropic's appetite for compute is pushing xAI toward a rent-over-build strategy",
+  "url": "https://the-decoder.com/anthropics-appetite-for-compute-is-pushing-xai-toward-a-rent-over-build-strategy/",
+  "published": "2026-11-23T18:47:53+00:00",
+  "summary": "Since May, SpaceXSI has been renting compute to competitors like Anthropic and Google while scaling back its own AI projects. Anthropic pays about $3.1 billion a month, Google $800 million, the New York Times reports. After its June IPO, SpaceXSI disbanded the 60-person Grok Imagine team, among other cuts. The article Anthropic's appetite for compute is pushing xAI toward a rent-over-build strategy appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI warns that upcoming AI systems could outpace safety checks and urges rivals to agree on shared limits",
+  "url": "https://the-decoder.com/openai-warns-that-upcoming-ai-systems-could-outpace-safety-checks-and-urges-rivals-to-agree-on-shared-limits/",
+  "published": "2026-11-23T18:42:38+00:00",
+  "summary": "OpenAI chief scientist Jakub Pachocki has released internal perplexity scores for the entire GPT series for the first time, up to an unreleased model beyond the current generation. The metric shows that core capabilities emerge at surprisingly precise thresholds. Pachocki is pushing to make perplexity an industry-wide progress metric and establish shared limits before control over AI behavior erodes. The article OpenAI warns that upcoming AI systems could outpace safety checks and urges rivals to agree on shared limits appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Jensen Huang scheduled to testify next week in Senate following reinstatement as Nvidia CEO",
+  "url": "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo/",
+  "published": "2026-11-23T18:12:22+00:00",
+  "summary": "The public hearing follows bipartisan calls for Huang to testify about the affair with the suspected Chinese spy.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "A legendary philosopher isn’t buying Anthropic’s consciousness argument",
+  "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+  "published": "2026-11-23T17:36:08+00:00",
+  "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing. Given “the way we approach model sentience and moral…",
+  "source": "MIT Technology Review · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Trump engineered a risky comeback for Jensen Huang",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
+  "published": "2026-11-23T17:25:12-05:00",
+  "summary": "After Nvidia's board accepted Jensen Huang's resignation as CEO, following reports that Huang had an affair with an alleged Chinese spy, President Donald Trump, too, appeared to submit to the new reality. Appearing on Stephen A. Smith's radio show shortly after the news came out, Trump said that Huang would \"end up on his feet.\" […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Supercharging transformer residual connections",
+  "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+  "published": "2026-11-23T17:21:12+00:00",
+  "summary": "Algorithms & Theory",
+  "source": "Google Research",
+  "tier": "T1"
+ },
+ {
+  "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+  "url": "https://huggingface.co/blog/allenai/robotrack",
+  "published": "2026-11-23T17:20:37+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares to sell Trainium chips",
+  "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
+  "published": "2026-11-23T17:14:23+00:00",
+  "summary": "Amazon is acquiring Decart’s AI optimization technology and research team in a reported $7.5 billion deal.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Nvidia CEO Jensen Huang is back. What happens next?",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+  "published": "2026-11-23T17:10:32-05:00",
+  "summary": "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation. However, after The New York Times reported there was evidence of another affair, this time with an Nvidia executive who reported directly to him, a board meeting that night ended […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Welcome to elite impunity, Jensen Huang",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
+  "published": "2026-11-23T17:09:26-05:00",
+  "summary": "I suppose I must issue a hearty congratulations to Jensen Huang. Huang is CEO of Nvidia again, to the surprise of basically everyone except President Donald Trump and Vice President JD Vance, who made sure it happened. Now, those of us who had some kind of basic education on what a \"free market\" is might […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Merry Making: Play, Build and Create With NVIDIA Technologies This Holiday Season",
+  "url": "https://blogs.nvidia.com/blog/nvidia-technologies-holidays-2026/",
+  "published": "2026-11-23T17:00:08+00:00",
+  "summary": "The elves don’t have to be the only ones busy in the workshop this holiday season. With the lights twinkling and the gift wrap out, it’s the perfect time to give someone — or yourself — a spark to take a hobby to the next level. For some, that means diving into a new game. […]",
+  "source": "NVIDIA Blog",
+  "tier": "T1"
+ },
+ {
+  "title": "Finding faster quantum algorithms with agents and formal verification",
+  "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+  "published": "2026-11-23T16:59:40+00:00",
+  "summary": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
+  "source": "Google DeepMind",
+  "tier": "T1"
+ },
+ {
+  "title": "Jensen Huang isn’t out of the woods yet",
+  "url": "https://techcrunch.com/2026/11/23/jensen-huang-isnt-out-of-the-woods-yet/",
+  "published": "2026-11-23T16:57:40+00:00",
+  "summary": "Tech leaders should be clear-eyed about all the problems likely to come with Huang's reinstatement.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Trump reportedly called into Nvidia board meeting to advocate for Huang’s return",
+  "url": "https://techcrunch.com/2026/11/23/trump-reportedly-called-into-nvidia-board-meeting-to-advocate-for-huangs-return/",
+  "published": "2026-11-23T16:39:10+00:00",
+  "summary": "\"I spoke to them, let me put it that way … And I convinced them,\" the president told CNBC.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "AI data centers throw another wrench into chaotic UN climate talks",
+  "url": "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit",
+  "published": "2026-11-23T16:09:37-05:00",
+  "summary": "The clean energy revolution hinges on electrifying the entire global economy just as power-hungry data centers are surging. It's a challenge delegates from all over the world had to grapple with during the United Nations climate conference, called COP31, that came to a chaotic and unsatisfying close in Antalya, Turkey, on Sunday. Each year, attendees […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Jensen Huang reinstated as Nvidia CEO, board chair",
+  "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/",
+  "published": "2026-11-23T15:46:18+00:00",
+  "summary": "Trump says he spoke to the board and that Huang \"did nothing wrong.\"",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Z.ai follows OpenAI into loop transformer territory with its new 750B flagship model",
+  "url": "https://the-decoder.com/z-ai-follows-openai-into-loop-transformer-territory-with-its-new-750b-flagship-model/",
+  "published": "2026-11-23T15:13:03+00:00",
+  "summary": "Z.ai is moving its flagship GLM-5.4 model to a loop architecture in which 28 layers run twice, which the company says lets the 750-billion-parameter model match models with 2 to 3 trillion parameters. Benchmark scores are only available for a smaller 30B test model so far, and Z.ai is positioning GLM-5.4 as the start of \"Generalized Coding,\" where code also generates videos, games, and CAD models. The article Z.ai follows OpenAI into loop transformer territory with its new 750B flagship model appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Trump endorses Jensen Huang’s return to Nvidia, says US has no evidence of wrongdoing",
+  "url": "https://techcrunch.com/2026/11/23/trump-endorses-jensen-huangs-return-to-nvidia-says-us-has-no-evidence-of-wrongdoing/",
+  "published": "2026-11-23T15:04:01+00:00",
+  "summary": "The president cited the U.S. attorney general in defending Huang's return, while urging Nvidia to continue its export-control investigation.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Claude AI can review pull requests and ship fixes on its own now",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+  "published": "2026-11-23T15:00:00-05:00",
+  "summary": "Anthropic is launching some new Claude AI features to help software engineers ship code. As part of a new Claude Ship product being announced today, Claude now can review, fix, and approve pull requests. Engineers have already been able to take advantage of Claude's code review capabilities thanks to the Code Review feature, which was […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "How Jensen Huang ended up as Nvidia CEO again",
+  "url": "https://www.theverge.com/tech/1040428/nvidia-jensen-huang-ceo-return",
+  "published": "2026-11-23T14:57:18-05:00",
+  "summary": "The Jensen Huang era of Nvidia nearly came to an end this month. Huang, who three decades ago cofounded what's come to be considered one of the most important companies in AI, resigned from his role on November 12th over mounting scrutiny around his alleged affairs. Huang admitted he had been \"unfaithful\" to his wife […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Chinese military fears AI could let the US find and destroy its nuclear missiles",
+  "url": "https://the-decoder.com/chinese-military-fears-ai-could-let-the-us-find-and-destroy-its-nuclear-missiles/",
+  "published": "2026-11-23T14:43:23+00:00",
+  "summary": "Chinese military researchers fear that AI advances could give the US an edge in the nuclear balance of power. The article Chinese military fears AI could let the US find and destroy its nuclear missiles appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
+  "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
+  "published": "2026-11-23T14:43:03+00:00",
+  "summary": "Enterprise customer experience company Sierra, co-founded by former Salesforce co-CEO Bret Taylor, said on Monday that it has raised $1.75 billion in a Series F round.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Nvidia tried life without Jensen Huang and it lasted about two weeks",
+  "url": "https://the-decoder.com/nvidia-tried-life-without-jensen-huang-and-it-lasted-about-two-weeks/",
+  "published": "2026-11-23T14:24:47+00:00",
+  "summary": "Nvidia's board of directors has reinstated Jensen Huang as president, CEO, and board member, effective immediately. The article Nvidia tried life without Jensen Huang and it lasted about two weeks appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Nvidia reverses course and brings Jensen Huang back as CEO",
+  "url": "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo/",
+  "published": "2026-11-23T14:21:59+00:00",
+  "summary": "The stunning reversal was supported by senior officials in the U.S. government.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Nothing’s upcoming Ear Note is a pair of earbuds with AI transcription",
+  "url": "https://www.theverge.com/gadgets/1040357/nothing-ear-note-earbuds-ai-recording",
+  "published": "2026-11-23T14:04:52-05:00",
+  "summary": "Nothing's new AI device is the Ear Note, a set of earbuds and their microphone-equipped charging case that can record and transcribe conversations, with a connected app to manage the recordings, transcriptions and AI-generated summaries, similar to Apple's new Watch feature and devices like Amazon's Bee wearable. Nothing CEO Carl Pei demonstrated the new device […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Meta's Alexandr Wang warns the AI industry isn't ready for what's coming after Riemann breakthrough",
+  "url": "https://the-decoder.com/metas-alexandr-wang-warns-the-ai-industry-isnt-ready-for-whats-coming-after-riemann-breakthrough/",
+  "published": "2026-11-23T13:59:36+00:00",
+  "summary": "Meta's Chief AI Officer Alexandr Wang sees the recent AI-assisted proof sketch of the Riemann Hypothesis as a clear sign that superintelligence is right around the corner. The article Meta's Alexandr Wang warns the AI industry isn't ready for what's coming after Riemann breakthrough appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "US spies tracked Nvidia scandal figure's ties to Chinese intelligence for over a year",
+  "url": "https://the-decoder.com/us-spies-tracked-nvidia-scandal-figures-ties-to-chinese-intelligence-for-over-a-year/",
+  "published": "2026-11-23T13:45:32+00:00",
+  "summary": "US intelligence agencies tracked contacts between Alice Huang and China's Ministry of State Security for over a year, the New York Times reports. The surveillance ran parallel to her secret affair with then-Nvidia CEO Jensen Huang. Federal investigators are now looking into whether a network of companies in Southeast Asia was used to smuggle AI chips into China in violation of US export controls. Jensen Huang is scheduled to testify before the US House of Representatives on December 1. The article US spies tracked Nvidia scandal figure's ties to Chinese intelligence for over a year appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Oregon and Virginia sue SpaceX over Grok’s porn deepfakes",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit",
+  "published": "2026-11-23T13:26:47-05:00",
+  "summary": "In separate but similar lawsuits filed on Monday, Oregon Attorney General Dan Rayfield and Virginia Attorney General Jay Jones accused SpaceX of violating state consumer protection laws by ignoring industry-standard safeguards and falsely promoting the safety of its X social media platform and Grok AI features. The complaint filed in Virginia accuses Musk of willfully […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "GPT-6.2 Astra solved a math theorem no other AI could crack, then invented its own proof strategy",
+  "url": "https://the-decoder.com/gpt-6-2-astra-solved-a-math-theorem-no-other-ai-could-crack-then-invented-its-own-proof-strategy/",
+  "published": "2026-11-23T12:17:01+00:00",
+  "summary": "OpenAI's GPT-6.2 Astra independently produced a machine-verifiable Lean proof of Smoktunowicz's gap theorem, the first of its kind according to Vals AI. The model chose its own approach because key foundations were missing from Mathlib. On Autoform-Hard, Astra now leads the leaderboard with 49 of 56 tasks solved. The article GPT-6.2 Astra solved a math theorem no other AI could crack, then invented its own proof strategy appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Review: The Asus ProArt P16 offers a glimpse of a future powered by local AI",
+  "url": "https://arstechnica.com/reviews/2026/11/review-the-asus-proart-p16-offers-a-glimpse-of-a-future-powered-by-local-ai/",
+  "published": "2026-11-23T12:00:00+00:00",
+  "summary": "The new Asus ProArt laptop costs up to $7,000, but it can run a gaggle of local AI agents.",
+  "source": "Ars Technica · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "White House brags that Trump was ‘totally involved’ in getting Jensen reinstated",
+  "url": "https://www.theverge.com/policy/1040096/trump-nvidia-jensen-huang-reinstated",
+  "published": "2026-11-23T11:30:11-05:00",
+  "summary": "It sure looked like President Donald Trump played a role in Jensen Huang's reinstatement as Nvidia CEO - and now the White House is making sure everyone knows he was. \"President Trump was totally involved and this is a great decision by the NVIDIA board,\" White House communications director Steven Cheung said in a statement, […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Tech leaders are celebrating Jensen Huang’s return",
+  "url": "https://www.theverge.com/tech/1040069/jensen-huang-return-elon-musk-sam-altman-yay",
+  "published": "2026-11-23T11:14:04-05:00",
+  "summary": "Let's say you're Jensen Huang. You (allegedly) cheated on your wife with an alleged Chinese spy, allegedly had an affair with not one, but two subordinates, and (allegedly!) \"terrorized\" your employees, a series of indiscretions that led to your ouster from what was once the world's most valuable company. (The stock price has recently taken […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "Connected intelligence for in-house legal",
+  "url": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
+  "published": "2026-11-23T08:00:00+00:00",
+  "summary": "Watch OpenAI’s Stacey Wang and Craig Bruney, Mary O’Carroll of LECG, and Cooley’s Richard Segal explore how AI can help in-house legal teams connect business context, build reusable workflows and get more from outside counsel.",
+  "source": "OpenAI News",
+  "tier": "T1"
+ },
+ {
+  "title": "Richpanel helps companies automate 50% of support in 30 days",
+  "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+  "published": "2026-11-23T08:00:00+00:00",
+  "summary": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.",
+  "source": "OpenAI News",
+  "tier": "T1"
+ },
+ {
+  "title": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+  "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+  "published": "2026-11-23T01:25:53+00:00",
+  "summary": "Three significant backers share what gave them conviction to bet billions on Anthropic.",
+  "source": "TechCrunch · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "datasette-charts 0.1a0",
+  "url": "https://simonwillison.net/2026/Nov/23/datasette-charts/",
+  "published": "2026-11-23T00:37:20+00:00",
+  "summary": "Release: datasette-charts 0.1a0 I've been thinking about this problem for over a year now, but on Sunday I finally fired up Claude Fable 5.2 to build an initial prototype. The prototype went so well that this is now a full plugin. You can try it out in Datasette Lite here . It looks like this: The new charts plugin works against any table or arbitrary SQL query in Datasette. It defines several different chart types (using vendored D3 , Observable Plot , and topojson-client ), each with a set of heuristics for identifying when they might be a good match for a specific set of rows. Those suggestion thumbnails at the top are actual visualizations driven by the data, and selecting one pulls up t",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "How to build and maintain an agentic evaluation",
+  "url": "https://huggingface.co/blog/agentic-evals",
+  "published": "2026-11-23T00:00:00+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
   "title": "OpenAI’s chief scientist has thoughts on how to limit AI development",
   "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
   "published": "2026-11-22T21:14:07+00:00",
@@ -24,203 +416,11 @@
   "tier": "T2"
  },
  {
-  "title": "We haven’t seen the last of the major tech outages",
-  "url": "https://www.theverge.com/tech/1039851/major-tech-outages",
-  "published": "2026-11-22T17:48:02-05:00",
-  "summary": "Over the last week or so, we have seen a nationwide FAA ground stop, a multi-day Outlook outage that brought entire companies to a standstill, and a banking outage at JPMorgan Chase. But the consensus is that there are more to come. Director of National Intelligence Jay Clayton told CNN: \"The American people should be […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
   "title": "AI coding agents ace isolated tests but complete fewer than one in ten tasks in a simulated workplace",
   "url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/",
   "published": "2026-11-22T15:15:48+00:00",
   "summary": "A new real-world test puts AI coding agents in a simulated developer job with colleagues, project boards, and incomplete handoffs, where they have to keep developing software on their own and reliably close open tickets in a messy daily workflow. Even Opus 5.5 and Astra fall far short, solving fewer than one in ten tasks completely. The models finish clear, standalone assignments quickly, but they lose track as autonomous developers. The article AI coding agents ace isolated tests but complete fewer than one in ten tasks in a simulated workplace appeared first on The Decoder .",
   "source": "The Decoder",
   "tier": "T2"
- },
- {
-  "title": "Perplexity's new Monitor API turns web search from a one-off query into a nonstop watchdog",
-  "url": "https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/",
-  "published": "2026-11-22T14:20:28+00:00",
-  "summary": "Perplexity is launching a Monitor API that searches the web on a schedule and alerts agents via webhook only when relevant changes occur. Its own decision model filters out unimportant results. For Perplexity, the API is part of a broader strategy to stand out from an increasingly interchangeable chatbot business through developer tools. The article Perplexity's new Monitor API turns web search from a one-off query into a nonstop watchdog appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "AI is getting better faster than experts can reliably test whether new systems are safe, METR warns",
-  "url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/",
-  "published": "2026-11-22T13:00:43+00:00",
-  "summary": "METR reports that leading AI models like Opus 5.5 and GPT-6 Astra are improving rapidly at research tasks but getting harder to measure. Current data can't rule out a dangerous acceleration in AI development, the organization warns, though it also says common tests may overestimate what the models can actually do. The article AI is getting better faster than experts can reliably test whether new systems are safe, METR warns appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Binding of Isaac developer removes AI music from Repentance Plus",
-  "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
-  "published": "2026-11-22T12:25:20-05:00",
-  "summary": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section. They found several audio files with Suno metadata that pointed back to […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Security researchers show how cheap AI inference providers steal keys and snoop on users",
-  "url": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/",
-  "published": "2026-11-22T12:07:56+00:00",
-  "summary": "Security researchers at Dragos used two million fake AI requests to uncover serious vulnerabilities in the AI supply chain, finding at least three compromised providers, hundreds of stolen AWS keys, and marketplace resellers who were simply reading customer requests. OpenRouter responded by removing three providers and 125 endpoints. The article Security researchers show how cheap AI inference providers steal keys and snoop on users appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Lean and Mathlib community officially confirms Levent Alpöge's proof of the Riemann hypothesis is correct",
-  "url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/",
-  "published": "2026-11-22T11:08:31+00:00",
-  "summary": "The Lean and Mathlib community has officially confirmed Levent Alpöge's proof of the Riemann hypothesis as correct. Dozens of independent verifiers checked the 17 million lines of computer code. The solution arrived years earlier than expected: Terence Tao had predicted it wouldn't happen until around 2050 and didn't expect AI to solve it alone. The article Lean and Mathlib community officially confirms Levent Alpöge's proof of the Riemann hypothesis is correct appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "GPT-6.2 Astra and Sol get to the point faster but score lower on transparency than Claude",
-  "url": "https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/",
-  "published": "2026-11-22T09:41:37+00:00",
-  "summary": "OpenAI's GPT-6.2 Astra and Sol give much shorter, more direct answers than their predecessors, but they are also less willing to admit uncertainty. Anthropic's Claude models score well ahead on transparency. The article GPT-6.2 Astra and Sol get to the point faster but score lower on transparency than Claude appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "The vibe-coding revolution is coming to all the gadgets",
-  "url": "https://www.theverge.com/column/1039139/vibe-coding-gadgets-tv-camera",
-  "published": "2026-11-22T08:00:00-05:00",
-  "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on the vibe-hacking of everything, follow David Pierce. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it started Like so many things with AI, it's not […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Meta ads is now available in AWS Quick",
-  "url": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
-  "published": "2026-11-22T01:59:13+00:00",
-  "summary": "AWS Quick now has a Meta ads AI connector. Meta advertisers can use natural language in Quick to create, manage, and analyze campaigns while staying connected to the Meta ad management network, and combine Meta ad data with first- and third-party sources to build dashboards, documents, slide decks, and automated workflows.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
- },
- {
-  "title": "Perplexity and Intelligence",
-  "url": "https://openai.com/index/perplexity-and-intelligence",
-  "published": "2026-11-22T00:00:00+00:00",
-  "summary": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
-  "source": "OpenAI News",
-  "tier": "T1"
- },
- {
-  "title": "Muru",
-  "url": "https://simonwillison.net/2026/Nov/21/muru/",
-  "published": "2026-11-21T23:56:28+00:00",
-  "summary": "Muru Graham Dumpleton started mod_wsgi 20 years ago, and has been thinking about the ideal way to serve Python web applications in production ever since. Muru is his new, AI-assisted Rust server that aims to provide the best possible tools for running ASGI and WSGI Python apps both in development and production. As he did with wrapture , he's been publishing an extraordinarily detailed account of the project as he works on it - as part of his development process. Here's everything he's published so far, all in the last three weeks: 2026-11-04 — Twenty years of mod_wsgi, and what comes next 2026-11-05 — A first look at Muru 2026-11-07 — Muru: looking inside the workers 2026-11-08 — Muru: how ",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
-  "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
-  "published": "2026-11-21T21:37:10+00:00",
-  "summary": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "A tale of two Nvidias",
-  "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
-  "published": "2026-11-21T21:07:42+00:00",
-  "summary": "We got two very different pictures of Nvidia — the company’s latest earnings report vs. the tech executives loudly calling for Jensen Huang’s return.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Here are the top AI agents that can live in your text messages",
-  "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
-  "published": "2026-11-21T17:00:00+00:00",
-  "summary": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Nvidia researchers argue huge AI context windows are a dead end",
-  "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/",
-  "published": "2026-11-21T16:23:45+00:00",
-  "summary": "Nvidia researchers argue that language models often don't need their full context windows—which are slow, expensive, and prone to errors—and propose an alternative. In tests, periodic summaries and targeted keyword search usually matched full-context results at a fraction of the cost. The team even proposes a new class of models that works with short notes instead of long context. The article Nvidia researchers argue huge AI context windows are a dead end appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Silicon Valley's growing obsession with AI doomsday is turning parts of the tech industry toward cult-like devotion",
-  "url": "https://the-decoder.com/silicon-valleys-growing-obsession-with-ai-doomsday-is-turning-parts-of-the-tech-industry-toward-cult-like-devotion/",
-  "published": "2026-11-21T16:04:29+00:00",
-  "summary": "A Buddhist monastery in Vermont called Maple wants to establish itself as Silicon Valley's spiritual authority while creating its own AI god. According to a New Yorker report, leader Soryu Forall's group records every breath its members take to train an AI in his image. Former members report manipulation and psychological breakdowns. The article Silicon Valley's growing obsession with AI doomsday is turning parts of the tech industry toward cult-like devotion appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
-  "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
-  "published": "2026-11-21T16:00:00+00:00",
-  "summary": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "The UN fails to agree on rules regulating ‘killer robots’",
-  "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
-  "published": "2026-11-21T15:03:37-05:00",
-  "summary": "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations. According to NPR: Before the negotiations got underway, the […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions",
-  "url": "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/",
-  "published": "2026-11-21T13:32:35+00:00",
-  "summary": "OpenAI has released new prompt templates for GPT-6.2 Astra and Sol meant to fix common model behaviors such as overly brief answers, unnecessary follow-up questions, and excessive testing when coding. The API is changing as well, since editing a conversation's history can discard reasoning content and lower response quality. The article OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft",
-  "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
-  "published": "2026-11-21T11:19:49+00:00",
-  "summary": "Anthropic mathematician Levent Alpöge says he used Claude to prove the Riemann hypothesis, math's most famous open problem for 167 years, with a proof formalized in Lean that spans over 250,000 pages. Just hours later, Stanford researchers published an independent, entirely human competing proof, and mathematicians are now checking whether either one holds up. The article Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Can Anthropic afford to put safety first?",
-  "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
-  "published": "2026-11-21T10:00:00-05:00",
-  "summary": "Today, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the Anthropic IPO for the third and final episode in our series about AI in real life. The AI lab behind Claude went public on the Nasdaq last Thursday. The numbers are gigantic, but not really that important for this conversation, except to […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
-  "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
-  "published": "2026-11-21T09:00:00-05:00",
-  "summary": "Chess.com is ready to go a lot bigger than chess. After launching Gambit, a gambling-free poker site, earlier this year, the company is now adding 10 more games: backgammon, checkers, go, hearts, mahjong, shogi, sudoku, solitaire, xiangqi, and a Scrabble alternative called word. They're all part of Chess's new Classic Games platform, which is launching […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "[AINews] Riemann Hypothesis proved...twice independently",
-  "url": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
-  "published": "2026-11-21T05:02:13+00:00",
-  "summary": "November 20 2026 —",
-  "source": "Latent Space",
-  "tier": "T2"
- },
- {
-  "title": "New in AWS Quick: More capable flows, an updated web experience, and agents that work together",
-  "url": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
-  "published": "2026-11-21T01:06:42+00:00",
-  "summary": "AWS Quick is the AI workspace built only for work. Today we're releasing updates that help your team get more done: build and run business-process flows in chat, triage your day in the updated web app, get more complete answers from multiple agents at once, and connect new data sources like Meta ads and Amplitude.",
-  "source": "AWS Machine Learning Blog",
-  "tier": "T1"
  }
 ]
