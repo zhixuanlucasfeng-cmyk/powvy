@@ -158,7 +158,7 @@ section.dark{background:var(--tone-w),var(--ink);color:#fff}
 .card .cover svg{width:100%;height:100%}
 .project-art{width:100%;height:100%;object-fit:cover}
 .project-art.badminton-logo{object-fit:contain;background:#101810;padding:12px;box-sizing:border-box}
-.card .cover::after,#dCover::after,.m-art::after{content:"";position:absolute;inset:0;background:var(--tone);mix-blend-mode:multiply;pointer-events:none}
+.card .cover::after,#dCover::after{content:"";position:absolute;inset:0;background:var(--tone);mix-blend-mode:multiply;pointer-events:none}
 .card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
 .card h3{font-family:var(--cn);font-weight:400;font-size:25px;line-height:1.2}
 .card p{color:var(--muted);font-size:14.5px}
@@ -169,7 +169,6 @@ section.dark{background:var(--tone-w),var(--ink);color:#fff}
 .btn.ghost:hover{background:var(--red);color:#fff}
 
 #products .grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
-@media (min-width:980px){#products .card:first-child{grid-column:span 2}#products .card:first-child .cover{aspect-ratio:16/7.6}}
 
 .skill{position:relative}
 .card h3{overflow-wrap:anywhere}
@@ -202,10 +201,6 @@ section.dark{background:var(--tone-w),var(--ink);color:#fff}
 .job p{font-size:14.5px;color:var(--muted);margin-top:4px}
 @media (max-width:860px){.about{grid-template-columns:1fr}.about .intro{position:static}}
 @media (max-width:480px){.job{grid-template-columns:1fr}.job svg{max-width:240px}}
-
-.talk{cursor:pointer;text-align:left}
-.contact-status{font-weight:800;border-left:4px solid var(--red);padding-left:10px;margin-top:10px}
-#contact .grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
 
 /* =========================================================
    5. 页脚：整块血红
@@ -258,14 +253,6 @@ dialog{border:4px solid var(--ink);padding:0;width:min(520px,calc(100% - 32px));
 dialog::backdrop{background:rgba(13,13,13,.6)}
 dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
 @keyframes slam{from{transform:scale(1.15) rotate(-3deg);opacity:0}}
-.m-art{position:relative;background:var(--red);border-bottom:4px solid var(--ink)}
-.m-body{padding:22px 24px 24px}
-.m-body h3{font-family:var(--cn);font-weight:400;font-size:32px}
-.m-body p,.m-body li{color:var(--muted);font-size:15px}
-.m-body ul{padding-left:1.2em;margin:10px 0 18px}
-.m-body li::marker{color:var(--red)}
-.m-x{position:absolute;top:10px;right:10px;z-index:2;width:38px;height:38px;background:var(--ink);color:#fff;font-size:20px;font-weight:900}
-.m-x:hover{background:var(--red)}
 #toast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,20px);opacity:0;z-index:100;background:var(--red);color:#fff;border:3px solid var(--ink);padding:8px 20px;font-weight:800;pointer-events:none;transition:.25s}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 .splat{position:fixed;z-index:90;pointer-events:none;width:140px;height:140px;margin:-70px 0 0 -70px;animation:splat 1.1s forwards}
@@ -282,7 +269,7 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1;translate:none}
 }
-/* Deliberate poster lettering: three clean lines at every screen size. */
+/* Poster lettering. Responsive sizing lives in the homepage layout stylesheet. */
 .hero h1{font-size:clamp(64px,7.5vw,100px);line-height:1.04;letter-spacing:-.045em;transform:none}
 .hero h1 span,.hero h1 em{display:block}
 .hero h1 em{-webkit-text-stroke:1.5px var(--ink);text-shadow:4px 4px 0 var(--ink)}
@@ -293,11 +280,12 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
 @media(max-width:860px){.hero{padding-top:calc(var(--nav-h) + 36px)}.hero h1{font-size:clamp(58px,13vw,86px)}}
 @media(max-width:420px){.hero h1{font-size:clamp(54px,15vw,63px)}}
 </style>
-<link rel="stylesheet" href="assets/chat.css">
+<link rel="stylesheet" href="assets/chat.css?v=20261126-2">
 <link rel="stylesheet" href="assets/redesign.css">
-<link rel="stylesheet" href="assets/preview-layout.css">
+<link rel="stylesheet" href="assets/preview-layout.css?v=20261126-2">
 </head>
 <body>
+<a class="skip-link" href="en/#top" data-i18n="skipMain">Skip to content</a>
 
 <!-- ================= 导航 ================= -->
 <nav class="nav" id="nav">
@@ -320,39 +308,40 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
   </div>
 </nav>
 
-<main id="top">
+<main id="top" tabindex="-1">
 <!-- ================= 首屏 ================= -->
-<header class="hero" id="hero">
+<section class="hero" id="hero" data-enter>
   <div class="kana" aria-hidden="true">パウビー・メイクス・シングス</div>
   <div class="wrap">
-    <div>
-      <h1><span>Powvy</span><span>makes</span><em>things.</em></h1>
-      <p data-i18n="heroP">Hi, I'm Lucas, also known as Powvy. I'm a student in Dubai building useful tools with AI and exploring how technology and business can solve real problems.</p>
-      <div class="tags" data-i18n="heroTags"><span class="tag red">Student · Builder</span><span class="tag">AI &amp; Business</span><span class="tag">Dubai</span></div>
+    <div class="hero-copy">
+      <h1><span>Powvy makes</span><em>things.</em></h1>
+      <p data-i18n="heroP">Hi, I'm Lucas, also known as Powvy. I'm a student in Dubai building study tools, AI apps and open-source projects.</p>
       <div class="hero-actions">
-        <a class="service-cta" href="https://wa.me/8618707737002?text=Hi%20Lucas%2C%20I%27m%20interested%20in%20an%20AI%20customer%20service%20deployment." target="_blank" rel="noopener" data-i18n="heroServiceCta">Deploy AI customer service →</a>
-        <a class="scroll-hint" href="en/#products" data-i18n="heroHint"><b>▼</b>See what I've made</a>
+        <a class="service-cta" href="en/#products" data-i18n="heroHint">Browse projects ↓</a>
+        <a class="scroll-hint" href="en/#contact" data-i18n="heroServiceCta">AI support →</a>
       </div>
     </div>
 
-    <!-- 首屏透明插画：鼠标视差，点击或键盘激活震动与墨点 -->
+    <!-- 首屏透明插画：点击或按键加速电锯 -->
     <div class="art">
       <span class="sfx a" aria-hidden="true">ブゥゥン!!</span>
       <span class="sfx b" aria-hidden="true">ギャリ</span>
       <button id="heroArt" type="button" data-i18n="heroArtwork"><span class="saw-art"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="Chainsaw Man and Pochita fan art. Chainsaws running. Activate to rev them up."></span></button>
     </div>
   </div>
-</header>
+</section>
 
 <!-- ================= 产品 ================= -->
 <section id="products">
   <div class="wrap">
     <div class="sec-head reveal">
-      <h2 data-i18n="hProducts"><small>EP.01 · PRODUCTS</small>Things I've made</h2>
-      <p data-i18n="pProducts">Each one started as a fix for my own problem, then got shared.</p>
+      <h2 data-i18n="hProducts"><small>EP.01 · PRODUCTS</small>Projects</h2>
+      <p data-i18n="pProducts">From Cambridge pseudocode practice to school sports scoring.</p>
     </div>
+    <div class="chapter-rule" data-chapter-rule aria-hidden="true"></div>
     <!-- seo:productList -->
-<div class="grid" id="productList"><a class="card reveal in" href="en/projects/badminton/" data-product="badminton"><div class="cover"><img class="project-art badminton-logo" src="assets/projects/badminton-logo.png" width="1280" height="1280" alt="Powvy Badminton" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Badminton gear</span><h3 class="title">Powvy Badminton</h3><p>A racquet discovery tool for badminton players in the UAE, bringing together specs, player ratings, price comparisons and a second-hand marketplace.</p></div></a><a class="card reveal in" href="en/projects/jc-sports-day/" data-product="jc-sports-day"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/jc-sports-day.webp" srcset="assets/projects/screenshots/jc-sports-day-small.webp 640w, assets/projects/screenshots/jc-sports-day.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="JC Sports Day Scoring — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">School sports scoring</span><h3 class="title">JC Sports Day Scoring</h3><p>A full-stack scoring system built for Jumeirah College Sports Day, bringing events, participants, results and house points into one place.</p></div></a><a class="card reveal in" href="en/projects/trending/" data-product="trending"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/trending.webp" srcset="assets/projects/screenshots/trending-small.webp 640w, assets/projects/screenshots/trending.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Powvy 热榜 — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Daily GitHub trending</span><h3 class="title">Powvy Trending</h3><p>Scans GitHub Trending every day, drops collections and star-farmed repos, then reads the READMEs to score and sort 50 projects.</p></div></a><a class="card reveal in" href="en/projects/liangli/" data-product="liangli"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/liangli.webp" srcset="assets/projects/screenshots/liangli-small.webp 640w, assets/projects/screenshots/liangli.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Powvy Habit — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Personal growth PWA</span><h3 class="title">Powvy Habit</h3><p>A personal growth tool that challenges performative discipline, connecting task load, focus and everyday life.</p></div></a><a class="card reveal in" href="en/projects/philosophy/" data-product="philosophy"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/philosophy.webp" srcset="assets/projects/screenshots/philosophy-small.webp 640w, assets/projects/screenshots/philosophy.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Chainsaw Man Philosophy — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Characters &amp; philosophy</span><h3 class="title">Chainsaw Man Philosophy</h3><p>A Chinese-language character encyclopedia and philosophical reading of Chainsaw Man and Tatsuki Fujimoto’s work.</p></div></a><a class="card reveal in" href="en/projects/alevel/" data-product="alevel"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/alevel.webp" srcset="assets/projects/screenshots/alevel-small.webp 640w, assets/projects/screenshots/alevel.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="A-Level Survival Bureau — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">A-Level study tools</span><h3 class="title">A-Level Survival Bureau</h3><p>A local-first A-Level study workspace for recording practice evidence, planning study time and tracking reviews.</p></div></a><a class="card reveal in" href="en/projects/powvy-ai-agent/" data-product="powvy-ai-agent"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/powvy-ai-agent.webp" srcset="assets/projects/screenshots/powvy-ai-agent-small.webp 640w, assets/projects/screenshots/powvy-ai-agent.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Powvy AI Agent — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Local AI coding console</span><h3 class="title">Powvy AI Agent</h3><p>A local coding console built on Power: register a project, choose Claude Code or Codex, and run coding tasks with explicit acceptance criteria.</p></div></a><a class="card reveal in" href="en/projects/power/" data-product="power"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/power.webp" srcset="assets/projects/screenshots/power-small.webp 640w, assets/projects/screenshots/power.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Power — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Personal AI agent</span><h3 class="title">Power</h3><p>Claude Code, Codex, Hermes, opencode and every other agent CLI on my Mac in one desktop app — an AI crew that remembers and learns skills.</p></div></a><a class="card reveal in" href="en/projects/dryrun/" data-product="dryrun"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/dryrun.webp" srcset="assets/projects/screenshots/dryrun-small.webp 640w, assets/projects/screenshots/dryrun.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="DryRun — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">CIE CS revision</span><h3 class="title">DryRun</h3><p>A Cambridge Computer Science revision tool: trace tables, logic gates and pseudocode conversion. One file, zero dependencies, works offline.</p></div></a><a class="card reveal in" href="en/projects/restsolar/" data-product="restsolar"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/restsolar.webp" srcset="assets/projects/screenshots/restsolar-small.webp 640w, assets/projects/screenshots/restsolar.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Rest Solar Agent — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">AI customer service</span><h3 class="title">Rest Solar Agent</h3><p>A trilingual (EN / FR / ZH) AI support agent for a solar company in Cameroon. It answers stock and price questions and hands off to a human in one tap.</p></div></a><a class="card reveal in" href="en/projects/usage/" data-product="usage"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/usage.webp" srcset="assets/projects/screenshots/usage-small.webp 640w, assets/projects/screenshots/usage.webp 820w" sizes="(max-width: 820px) 100vw, 1000px" width="820" height="464" alt="Claude Usage — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Token dashboard</span><h3 class="title">Claude Usage</h3><p>See exactly how many tokens — and how much money — you spent today on Claude Code, Codex and DeepSeek.</p></div></a><a class="card reveal in" href="en/projects/powvynote/" data-product="powvynote"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/powvynote.webp" srcset="assets/projects/screenshots/powvynote-small.webp 640w, assets/projects/screenshots/powvynote.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Powvy Note — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Notch notes · timetable</span><h3 class="title">Powvy Note</h3><p>Hover the top of the screen and a note panel drops out of the Mac notch; on Windows it unfolds from a small pill. Write your timetable once and every week you get blank Monday–Friday class notes, with past weeks kept to look back on.</p></div></a><a class="card reveal in" href="en/projects/colorbook/" data-product="colorbook"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/colorbook.webp" srcset="assets/projects/screenshots/colorbook-small.webp 640w, assets/projects/screenshots/colorbook.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Colorbook — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">iPad color-by-number</span><h3 class="title">Colorbook</h3><p>An ad-free color-by-number app: turn any photo into a pixel paint-by-number picture.</p></div></a><a class="card reveal in" href="en/projects/contract/" data-product="contract"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/contract.webp" srcset="assets/projects/screenshots/contract-small.webp 640w, assets/projects/screenshots/contract.webp 1234w" sizes="(max-width: 820px) 100vw, 1000px" width="1234" height="854" alt="Contract — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Agent tool gateway</span><h3 class="title">Contract</h3><p>One master key for every agent tool — search, scraping, finance and social data — with automatic failover when a provider goes down.</p></div></a><a class="card reveal in" href="en/projects/vedundi/" data-product="vedundi"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/vedundi.webp" srcset="assets/projects/screenshots/vedundi-small.webp 640w, assets/projects/screenshots/vedundi.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Legend of 4P Vedundi — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Dark fiction</span><h3 class="title">Legend of 4P Vedundi</h3><p>My bilingual (EN / ZH) dark literary web novel, with its own reader site.</p></div></a><a class="card reveal in" href="en/projects/camaroom/" data-product="camaroom"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/camaroom.webp" srcset="assets/projects/screenshots/camaroom-small.webp 640w, assets/projects/screenshots/camaroom.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Camaroom Web — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Company website</span><h3 class="title">Camaroom Web</h3><p>Rest Solar Cameroon&#x27;s company site: products, project gallery and contacts.</p></div></a></div>
+<div class="grid" id="productList"><a class="card reveal in" href="en/projects/dryrun/" data-product="dryrun"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/dryrun.webp" srcset="assets/projects/screenshots/dryrun-small.webp 640w, assets/projects/screenshots/dryrun.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="DryRun — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">CIE CS revision</span><h3 class="title">DryRun</h3><p>A Cambridge Computer Science revision tool: trace tables, logic gates and pseudocode conversion. One file, zero dependencies, works offline.</p></div></a><a class="card reveal in" href="en/projects/badminton/" data-product="badminton"><div class="cover"><img class="project-art badminton-logo" src="assets/projects/badminton-logo.png" width="1280" height="1280" alt="Powvy Badminton" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Badminton gear</span><h3 class="title">Powvy Badminton</h3><p>A racquet discovery tool for badminton players in the UAE, bringing together specs, player ratings, price comparisons and a second-hand marketplace.</p></div></a><a class="card reveal in" href="en/projects/jc-sports-day/" data-product="jc-sports-day"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/jc-sports-day.webp" srcset="assets/projects/screenshots/jc-sports-day-small.webp 640w, assets/projects/screenshots/jc-sports-day.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="JC Sports Day Scoring — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">School sports scoring</span><h3 class="title">JC Sports Day Scoring</h3><p>A full-stack scoring system built for Jumeirah College Sports Day, bringing events, participants, results and house points into one place.</p></div></a><a class="card reveal in" href="en/projects/trending/" data-product="trending"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/trending.webp" srcset="assets/projects/screenshots/trending-small.webp 640w, assets/projects/screenshots/trending.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Powvy 热榜 — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Daily GitHub trending</span><h3 class="title">Powvy Trending</h3><p>Scans GitHub Trending every day, drops collections and star-farmed repos, then reads the READMEs to score and sort 50 projects.</p></div></a></div>
+<details class="more-projects"><summary>More projects</summary><div class="grid" id="moreProjectList"><a class="card reveal in" href="en/projects/liangli/" data-product="liangli"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/liangli.webp" srcset="assets/projects/screenshots/liangli-small.webp 640w, assets/projects/screenshots/liangli.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Powvy Habit — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Personal growth PWA</span><h3 class="title">Powvy Habit</h3><p>A personal growth tool that challenges performative discipline, connecting task load, focus and everyday life.</p></div></a><a class="card reveal in" href="en/projects/philosophy/" data-product="philosophy"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/philosophy.webp" srcset="assets/projects/screenshots/philosophy-small.webp 640w, assets/projects/screenshots/philosophy.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Chainsaw Man Philosophy — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Characters &amp; philosophy</span><h3 class="title">Chainsaw Man Philosophy</h3><p>A Chinese-language character encyclopedia and philosophical reading of Chainsaw Man and Tatsuki Fujimoto’s work.</p></div></a><a class="card reveal in" href="en/projects/alevel/" data-product="alevel"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/alevel.webp" srcset="assets/projects/screenshots/alevel-small.webp 640w, assets/projects/screenshots/alevel.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="A-Level Survival Bureau — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">A-Level study tools</span><h3 class="title">A-Level Survival Bureau</h3><p>A local-first A-Level study workspace for recording practice evidence, planning study time and tracking reviews.</p></div></a><a class="card reveal in" href="en/projects/powvy-ai-agent/" data-product="powvy-ai-agent"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/powvy-ai-agent.webp" srcset="assets/projects/screenshots/powvy-ai-agent-small.webp 640w, assets/projects/screenshots/powvy-ai-agent.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Powvy AI Agent — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Local AI coding console</span><h3 class="title">Powvy AI Agent</h3><p>A local coding console built on Power: register a project, choose Claude Code or Codex, and run coding tasks with explicit acceptance criteria.</p></div></a><a class="card reveal in" href="en/projects/power/" data-product="power"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/power.webp" srcset="assets/projects/screenshots/power-small.webp 640w, assets/projects/screenshots/power.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Power — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Personal AI agent</span><h3 class="title">Power</h3><p>Claude Code, Codex, Hermes, opencode and every other agent CLI on my Mac in one desktop app — an AI crew that remembers and learns skills.</p></div></a><a class="card reveal in" href="en/projects/restsolar/" data-product="restsolar"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/restsolar.webp" srcset="assets/projects/screenshots/restsolar-small.webp 640w, assets/projects/screenshots/restsolar.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Rest Solar Agent — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">AI customer service</span><h3 class="title">Rest Solar Agent</h3><p>A trilingual (EN / FR / ZH) AI support agent for a solar company in Cameroon. It answers stock and price questions and hands off to a human in one tap.</p></div></a><a class="card reveal in" href="en/projects/usage/" data-product="usage"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/usage.webp" srcset="assets/projects/screenshots/usage-small.webp 640w, assets/projects/screenshots/usage.webp 820w" sizes="(max-width: 820px) 100vw, 1000px" width="820" height="464" alt="Claude Usage — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Token dashboard</span><h3 class="title">Claude Usage</h3><p>See exactly how many tokens — and how much money — you spent today on Claude Code, Codex and DeepSeek.</p></div></a><a class="card reveal in" href="en/projects/powvynote/" data-product="powvynote"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/powvynote.webp" srcset="assets/projects/screenshots/powvynote-small.webp 640w, assets/projects/screenshots/powvynote.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Powvy Note — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Notch notes · timetable</span><h3 class="title">Powvy Note</h3><p>Hover the top of the screen and a note panel drops out of the Mac notch; on Windows it unfolds from a small pill. Write your timetable once and every week you get blank Monday–Friday class notes, with past weeks kept to look back on.</p></div></a><a class="card reveal in" href="en/projects/colorbook/" data-product="colorbook"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/colorbook.webp" srcset="assets/projects/screenshots/colorbook-small.webp 640w, assets/projects/screenshots/colorbook.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Colorbook — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">iPad color-by-number</span><h3 class="title">Colorbook</h3><p>An ad-free color-by-number app: turn any photo into a pixel paint-by-number picture.</p></div></a><a class="card reveal in" href="en/projects/contract/" data-product="contract"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/contract.webp" srcset="assets/projects/screenshots/contract-small.webp 640w, assets/projects/screenshots/contract.webp 1234w" sizes="(max-width: 820px) 100vw, 1000px" width="1234" height="854" alt="Contract — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Agent tool gateway</span><h3 class="title">Contract</h3><p>One master key for every agent tool — search, scraping, finance and social data — with automatic failover when a provider goes down.</p></div></a><a class="card reveal in" href="en/projects/vedundi/" data-product="vedundi"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/vedundi.webp" srcset="assets/projects/screenshots/vedundi-small.webp 640w, assets/projects/screenshots/vedundi.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Legend of 4P Vedundi — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Dark fiction</span><h3 class="title">Legend of 4P Vedundi</h3><p>My bilingual (EN / ZH) dark literary web novel, with its own reader site.</p></div></a><a class="card reveal in" href="en/projects/camaroom/" data-product="camaroom"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/camaroom.webp" srcset="assets/projects/screenshots/camaroom-small.webp 640w, assets/projects/screenshots/camaroom.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Camaroom Web — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Company website</span><h3 class="title">Camaroom Web</h3><p>Rest Solar Cameroon&#x27;s company site: products, project gallery and contacts.</p></div></a></div></details>
 <!-- /seo:productList -->
   </div>
 </section>
@@ -375,8 +364,10 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
       <h2 data-i18n="hArticles"><small>EP.03 · WRITING</small>Writing</h2>
       <p data-i18n="pArticles">Project features, design choices and current boundaries.</p>
     </div>
+    <div class="chapter-rule" data-chapter-rule aria-hidden="true"></div>
     <!-- seo:postList -->
 <div class="grid" id="postList"><a class="card reveal in" href="en/articles/power/" data-post="power"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/power.webp" srcset="assets/projects/screenshots/power-small.webp 640w, assets/projects/screenshots/power.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Power — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Project notes</span><h3 class="title">Power: a shared room for local AI agents</h3><p>One desktop workspace for agent CLIs, with group chat, persona packs and editable memory.</p></div></a><a class="card reveal in" href="en/articles/powy/" data-post="powy"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/liangli.webp" srcset="assets/projects/screenshots/liangli-small.webp 640w, assets/projects/screenshots/liangli.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Powvy Habit — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Project notes</span><h3 class="title">Powvy Habit: tasks, focus and everyday life</h3><p>A personal growth PWA that challenges performative discipline, with local-first storage and optional, limited sync.</p></div></a><a class="card reveal in" href="en/articles/restar-solar/" data-post="restar-solar"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/camaroom.webp" srcset="assets/projects/screenshots/camaroom-small.webp 640w, assets/projects/screenshots/camaroom.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="Camaroom Web — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Project notes</span><h3 class="title">Restar Solar: websites, support and product management</h3><p>A project for my family’s business serving African markets, with staff now using the admin tools to update products.</p></div></a><a class="card reveal in" href="en/articles/alevel/" data-post="alevel"><div class="cover"><img class="project-art real-screenshot" src="assets/projects/screenshots/alevel.webp" srcset="assets/projects/screenshots/alevel-small.webp 640w, assets/projects/screenshots/alevel.webp 1440w" sizes="(max-width: 820px) 100vw, 1000px" width="1440" height="855" alt="A-Level Survival Bureau — 界面截图 / Interface screenshot" loading="eager" decoding="async"></div><div class="body"><span class="tag red">Project notes</span><h3 class="title">A-Level: study plans grounded in practice records</h3><p>A-Level Survival Bureau organizes reviews and plans around practice evidence, distinguishing unknown topics from recorded performance.</p></div></a></div>
+
 <!-- /seo:postList -->
   </div>
 </section>
@@ -404,9 +395,23 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
   <div class="wrap">
     <div class="sec-head reveal">
       <h2 data-i18n="hContact"><small>EP.05 · SAY HI</small>Let's talk</h2>
-      <p data-i18n="pContact">Products, AI, or just a chat — all welcome.</p>
+      <p data-i18n="pContact">Questions about projects, feedback or collaboration.</p>
     </div>
-    <div class="grid" id="talkList"></div>
+    <div class="contact-panels">
+      <div class="contact-panel contact-ai">
+        <h3 data-i18n="contactAiTitle">Ask Powvy AI</h3>
+        <p data-i18n="contactAiText">Get help finding and using projects. Replies come from the AI assistant.</p>
+        <button class="btn" type="button" data-chat-open hidden data-i18n="contactAiAction">Open AI assistant</button>
+      </div>
+      <div class="contact-panel">
+        <h3 data-i18n="contactLucasTitle">Contact Lucas</h3>
+        <p data-i18n="contactLucasText">Share feedback or discuss a collaboration. Messages go straight to my inbox.</p>
+        <div class="contact-actions">
+          <button class="btn" type="button" data-chat-note hidden data-i18n="contactNoteAction">Leave Lucas a message</button>
+          <a href="https://wa.me/8618707737002?text=Hi%20Lucas%2C%20I%27m%20interested%20in%20an%20AI%20customer%20service%20deployment." data-i18n="contactWhatsApp" target="_blank" rel="noopener">Ask about deployment on WhatsApp ↗</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 </main>
@@ -414,9 +419,8 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
 <!-- ================= 页脚 ================= -->
 <footer>
   <div class="wrap">
-    <div class="big">Let's make<br>things together!</div>
     <div class="socials" id="socialList"></div>
-    <small>© <span id="year"></span> Powvy · Made with Vibe Coding · 次回に続く…</small>
+    <small>© <span id="year"></span> Powvy · 次回に続く…</small>
   </div>
 </footer>
 
@@ -439,12 +443,6 @@ dialog[open]{animation:slam .3s cubic-bezier(.2,.9,.3,1.4)}
   </article>
 </div>
 
-<!-- ================= 弹窗 ================= -->
-<dialog id="modal">
-  <button class="m-x" id="mClose" aria-label="关闭">×</button>
-  <div class="m-art" id="mArt"></div>
-  <div class="m-body" id="mBody"></div>
-</dialog>
 <div id="toast" role="status"></div>
 
 <script>
@@ -641,7 +639,11 @@ const ART = {
    url 为空（'#'）的项目还没有公开地址
    ========================================================= */
 const GH = 'https://github.com/zhixuanlucasfeng-cmyk/';
+const FEATURED_PROJECT_COUNT = 4;
 const products = [
+  { id:'dryrun', name:'DryRun', tag:'CIE 计算机复习', url:'https://dryruncs.com',
+    desc:'Cambridge 计算机科学复习工具：追踪表、逻辑门、伪代码转换，单文件、零依赖、可离线。',
+    features:['伪代码追踪表模拟器 + 逻辑门真值表与电路图','结构化英语 / 追踪表 / 流程图 → 伪代码','练习模式：自动出题、自动批改'] },
   { id:'badminton', name:'Powvy Badminton', tag:'羽毛球装备', url:'https://powvybadminton.com',
     desc:'面向阿联酋球友的羽毛球拍信息与选购工具，整合规格、球友评分、价格比较和二手市场。',
     features:['查看球拍规格与球友评分','比较阿联酋市场价格','浏览与发布二手球拍信息'] },
@@ -698,9 +700,6 @@ const products = [
   { id:'power', name:'Power', tag:'个人 AI Agent', url: GH + 'power',
     desc:'把 Claude Code、Codex、Hermes、opencode 等本机 Agent 放进同一个桌面 App，组成一支会记事、会学技能的 AI 小队。',
     features:['多角色小队 + 群聊，@ 谁谁回答，还能自动路由','记忆存进 Obsidian，跨会话自动回忆；技能自动沉淀','Mac App + Telegram 远程控制，发消息前先让我确认'] },
-  { id:'dryrun', name:'DryRun', tag:'CIE 计算机复习', url:'https://dryruncs.com',
-    desc:'Cambridge 计算机科学复习工具：追踪表、逻辑门、伪代码转换，单文件、零依赖、可离线。',
-    features:['伪代码追踪表模拟器 + 逻辑门真值表与电路图','结构化英语 / 追踪表 / 流程图 → 伪代码','练习模式：自动出题、自动批改'] },
   { id:'restsolar', name:'Rest Solar Agent', tag:'AI 客服', url:'https://solar-agent.powvy.org/mobile',
     desc:'给喀麦隆光伏公司做的中英法三语 AI 客服，能查库存报价，也能一键转人工。',
     links:[{name:'客服网站',url:'https://solar-agent.powvy.org/mobile'},{name:'GitHub · 项目源码',url:GH+'rest-solar-agent'}],
@@ -807,17 +806,6 @@ const jobs = [
   { name:'Restar Solar', prop:'chat', when:'项目实践', role:'网站与 AI 客服开发', desc:'为面向非洲市场的家族业务开发网站与管理工具，员工已开始使用后台更新产品。' }
 ];
 
-const talks = [
-  { id:'consult', name:'AI 客服部署', prop:'chat', desc:'为企业部署能查产品、收集线索并转人工的多语言 AI 客服。',
-    detail:['7 天内上线首个可用版本','中文、英文、法文客服','价格与库存护栏，必要时转人工'], cta:'WhatsApp 咨询部署', href:'https://wa.me/8618707737002?text=Hi%20Lucas%2C%20I%27m%20interested%20in%20an%20AI%20customer%20service%20deployment.' },
-  { id:'group',   name:'社群', prop:'group',  desc:'加入用户社群',
-    detail:['第一时间体验新产品','和同样爱折腾的人交流','不定期分享资源与模板'], cta:'申请加入', href:'' },
-  { id:'chat',    name:'唠嗑', prop:'coffee', desc:'日常交流板块',
-    detail:['不聊工作也可以','分享你最近在做的东西','随缘回复，但都会看'], cta:'去唠嗑', href:'' },
-  { id:'live',    name:'直播 / 线下分享', prop:'mic', desc:'合作邀请入口',
-    detail:['技术 / 产品主题直播','高校、社区线下分享','品牌合作请附上简介'], cta:'发送邀请', href:'' }
-];
-
 // 仅列出已确认的公开社交入口。
 const socials = [
   { name:'GitHub', href:'https://github.com/zhixuanlucasfeng-cmyk', icon:'<path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z" fill="currentColor"/>' }
@@ -830,14 +818,14 @@ const socials = [
    ========================================================= */
 const EN = {
   ui: {
+    skipMain: 'Skip to content',
     nav1: 'Products', nav2: 'Open Source', nav3: 'Writing', nav4: 'About', nav5: 'Contact', nav6: 'Trending', navTools: 'Tools',
-    heroP: "Hi, I'm Lucas, also known as Powvy. I'm a student in Dubai building useful tools with AI and exploring how technology and business can solve real problems.",
-    heroTags: '<span class="tag red">Student · Builder</span><span class="tag">AI &amp; Business</span><span class="tag">Dubai</span>',
+    heroP: "Hi, I'm Lucas, also known as Powvy. I'm a student in Dubai building study tools, AI apps and open-source projects.",
     heroArtwork: '<span class="saw-art"><img src="hero.png" width="1374" height="1145" fetchpriority="high" alt="Chainsaw Man and Pochita fan art. Chainsaws running. Activate to rev them up."></span>',
-    heroServiceCta: 'Deploy AI customer service →',
-    heroHint: "<b>▼</b>See what I've made",
-    hProducts: "<small>EP.01 · PRODUCTS</small>Things I've made",
-    pProducts: 'Each one started as a fix for my own problem, then got shared.',
+    heroServiceCta: 'AI support →',
+    heroHint: 'Browse projects ↓',
+    hProducts: '<small>EP.01 · PRODUCTS</small>Projects',
+    pProducts: 'From Cambridge pseudocode practice to school sports scoring.',
     hSkills: '<small>EP.02 · OPEN SOURCE</small>Open source',
     pSkills: 'My public repos on GitHub. Click a card to open it — stars update live.',
     hArticles: '<small>EP.03 · WRITING</small>Writing',
@@ -849,7 +837,15 @@ const EN = {
         <p>I enjoy applying AI to real problems. I developed a website for my family's business serving African markets, with AI support, human customer service and product management. Staff have started using the admin tools to update products.</p>
         <p>Outside my projects, I enjoy badminton, music and writing, and exploring where AI tools and business meet.</p>`,
     hContact: "<small>EP.05 · SAY HI</small>Let's talk",
-    pContact: 'Products, AI, or just a chat — all welcome.',
+    pContact: 'Questions about projects, feedback or collaboration.',
+    contactAiTitle: 'Ask Powvy AI',
+    contactAiText: 'Get help finding and using projects. Replies come from the AI assistant.',
+    contactAiAction: 'Open AI assistant',
+    contactLucasTitle: 'Contact Lucas',
+    contactLucasText: 'Share feedback or discuss a collaboration. Messages go straight to my inbox.',
+    contactNoteAction: 'Leave Lucas a message',
+    contactWhatsApp: 'Ask about deployment on WhatsApp ↗',
+    moreProjects: 'More projects',
     dBack: '← Back', dSave: 'Save', dShare: 'Share'
   },
   products: {
@@ -981,23 +977,13 @@ const EN = {
     'Jumeirah College': { when:'Now', role:'A-Level student', desc:'Studying Mathematics, Further Mathematics, Computer Science and Economics in Dubai.' },
     'Restar Solar': { when:'Project work', role:'Website & AI support development', desc:'Developed a website and admin tools for my family’s business serving African markets. Staff have started using the tools to update products.' }
   },
-  talks: {
-    consult: { name:'AI customer service deployment', desc:'Multilingual AI support that answers product questions, captures leads and hands off to your team.', cta:'Ask on WhatsApp',
-      detail:['A usable first version in 7 days','Chinese, English and French support','Price and inventory guardrails with human handoff'] },
-    group:   { name:'Community', desc:'Join the user community', cta:'Ask to join',
-      detail:['Try new products first','Meet people who love tinkering too','Resources and templates, now and then'] },
-    chat:    { name:'Hang out', desc:'Casual chat', cta:'Say hi',
-      detail:["Doesn't have to be about work","Tell me what you're building","I read everything, reply when I can"] },
-    live:    { name:'Talks & live streams', desc:'Invite me to collaborate', cta:'Send an invite',
-      detail:['Live streams on tech / product topics','Talks at schools and communities','For brand partnerships, include a short intro'] }
-  },
   socials: {}
 };
 
 // 界面上零散的提示文字
 const UI = {
-  zh: { enter:'进入 →', open:'进入', features:'核心功能', saved:'已保存到本地', copied:'链接已复制', copyFail:'复制失败，请手动复制地址栏', contactUnavailable:'暂未开放', contactPending:'联系方式尚未公开，请稍后再来。', close:'关闭', starsLoading:'加载中', starsUnavailable:'暂不可用', starsCached:'缓存', original:'原文链接', langBtn:'EN' },
-  en: { enter:'Enter →', open:'Open', features:'Key features', saved:'Saved to your device', copied:'Link copied', copyFail:"Couldn't copy — please copy the address bar", contactUnavailable:'Not available yet', contactPending:'Contact details are not available yet. Please check back later.', close:'Close', starsLoading:'Loading', starsUnavailable:'Unavailable', starsCached:'Cached', original:'Original link', langBtn:'中' }
+  zh: { enter:'进入 →', open:'进入', features:'核心功能', saved:'已保存到本地', copied:'链接已复制', copyFail:'复制失败，请手动复制地址栏', starsLoading:'加载中', starsUnavailable:'暂不可用', starsCached:'缓存', original:'原文链接', langBtn:'EN' },
+  en: { enter:'Enter →', open:'Open', features:'Key features', saved:'Saved to your device', copied:'Link copied', copyFail:"Couldn't copy — please copy the address bar", starsLoading:'Loading', starsUnavailable:'Unavailable', starsCached:'Cached', original:'Original link', langBtn:'中' }
 };
 
 const EN_ART = {
@@ -1006,12 +992,15 @@ const EN_ART = {
   restsolar: ART.restsolar.replace('转人工客服 →', 'Talk to an agent →')
 };
 const PROJECT_COVERS = {"powvynote": {"width": 1440, "height": 855}, "powvy-ai-agent": {"width": 1440, "height": 855}, "liangli": {"width": 1440, "height": 855}, "alevel": {"width": 1440, "height": 855}, "jc-sports-day": {"width": 1440, "height": 855}, "restsolar": {"width": 1440, "height": 855}, "power": {"width": 1440, "height": 855}, "dryrun": {"width": 1440, "height": 855}, "philosophy": {"width": 1440, "height": 855}, "camaroom": {"width": 1440, "height": 855}, "vedundi": {"width": 1440, "height": 855}, "usage": {"width": 820, "height": 464}, "trending": {"width": 1440, "height": 855}, "colorbook": {"width": 1440, "height": 855}, "contract": {"width": 1234, "height": 854}};
-const productArt = (id, detail = false) => {
+const productArt = (id, detail = false, featured = false) => {
   if (id === 'badminton') return `<img class="project-art badminton-logo" src="assets/projects/badminton-logo.png" width="1280" height="1280" alt="Powvy Badminton" loading="${detail ? 'eager' : 'lazy'}" decoding="async">`;
   const shot = PROJECT_COVERS[id];
   if (!shot) return '';
   const name = products.find(p => p.id === id)?.name || id;
-  return `<img class="project-art real-screenshot" src="assets/projects/screenshots/${id}.webp" srcset="assets/projects/screenshots/${id}-small.webp 640w, assets/projects/screenshots/${id}.webp ${shot.width}w" sizes="${detail ? '(max-width: 820px) 100vw, 1000px' : '(max-width: 600px) 100vw, 500px'}" width="${shot.width}" height="${shot.height}" alt="${name} — 界面截图 / Interface screenshot" loading="${detail ? 'eager' : 'lazy'}" decoding="async">`;
+  const sizes = detail ? '(max-width: 820px) 100vw, 1000px'
+    : featured ? '(max-width: 660px) calc(100vw - 32px), (max-width: 1200px) 61vw, 700px'
+    : '(max-width: 600px) 100vw, 500px';
+  return `<img class="project-art real-screenshot" src="assets/projects/screenshots/${id}.webp" srcset="assets/projects/screenshots/${id}-small.webp 640w, assets/projects/screenshots/${id}.webp ${shot.width}w" sizes="${sizes}" width="${shot.width}" height="${shot.height}" alt="${name} — 界面截图 / Interface screenshot" loading="${detail ? 'eager' : 'lazy'}" decoding="async">`;
 };
 const postArt = id => productArt(({power:'power',powy:'liangli','restar-solar':'camaroom',alevel:'alevel'})[id],true);
 const skillArt = s => {
@@ -1083,7 +1072,6 @@ function applyStatic() {
     el.innerHTML = (lang === 'en' ? EN.ui : ZH_UI)[el.dataset.i18n];
   });
   document.getElementById('langBtn').textContent = t('langBtn');
-  document.getElementById('mClose').setAttribute('aria-label', t('close'));
   addSawChains();
   if (document.getElementById('hero').classList.contains('rev')) setChainSpeed(4);
 }
@@ -1115,16 +1103,18 @@ function projectAccess(p) {
   return {badge: en ? 'Website' : '网站', note: ''};
 }
 function render() {
-$('#productList').innerHTML = products.map(x => tr('products', x.id, x)).map(p => `
+const projectCards = products.map(x => tr('products', x.id, x)).map(p => `
   <a class="card reveal" href="${pageURL('product', p.id)}" data-product="${p.id}">
-    <div class="cover">${productArt(p.id)}</div>
+    <div class="cover">${productArt(p.id, false, p.id === 'dryrun')}</div>
     <div class="body">
       <span class="tag red" style="align-self:flex-start">${p.tag}</span>
       <h3 class="title">${p.name}</h3>
       <p>${p.desc}</p>
       <div class="row"><span class="btn">${t('enter')}</span><small>${projectAccess(p).badge}</small></div>
     </div>
-  </a>`).join('');
+  </a>`);
+$('#productList').innerHTML = projectCards.slice(0, FEATURED_PROJECT_COUNT).join('');
+$('#moreProjectList').innerHTML = projectCards.slice(FEATURED_PROJECT_COUNT).join('');
 
 $('#skillList').innerHTML = skills.map(x => tr('skills', x.name, x)).map((s, i) => s.repos ? `
   <div class="card skill reveal">
@@ -1154,12 +1144,6 @@ $('#jobList').innerHTML = jobs.map(x => tr('jobs', x.name, x)).map((j, i) => `
     ${buddy(j.prop, i % 2 ? PAPER : RED)}
     <div><div class="when">${j.when} · ${j.role}</div><h4>${j.name}</h4><p>${j.desc}</p></div>
   </div>`).join('');
-
-$('#talkList').innerHTML = talks.map(x => tr('talks', x.id, x)).map((c, i) => `
-  <button class="card talk reveal" data-talk="${c.id}">
-    <div class="cover">${buddy(c.prop, i % 2 ? PAPER : RED)}</div>
-    <div class="body"><h3>${c.name}</h3><p>${c.desc}</p>${c.href ? '' : `<p class="contact-status">${t('contactUnavailable')}</p>`}</div>
-  </button>`).join('');
 
 $('#socialList').innerHTML = socials.map(x => tr('socials', x.name, x)).map(s => `
   <a href="${s.href}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true">${s.icon}</svg>${s.name}</a>`).join('');
@@ -1199,7 +1183,7 @@ const spy = new IntersectionObserver(entries => {
   for (const en of entries) if (en.isIntersecting)
     navLinks.forEach(a => a.classList.toggle('active', a.hash === '#' + en.target.id && en.target.id !== 'hero'));
 }, { rootMargin: '-45% 0px -50% 0px' });          // 视口中线所在的模块即“当前模块”
-document.querySelectorAll('main section, #hero').forEach(s => spy.observe(s));
+document.querySelectorAll('main > section').forEach(s => spy.observe(s));
 
 const rv = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); } }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => rv.observe(el));
@@ -1326,7 +1310,7 @@ $('#dBack').onclick = () => {
   if (fromList) { fromList = false; history.back(); }
   else { history.replaceState(null, '', location.pathname + location.search); closeDetail(); }
 };
-addEventListener('keydown', e => { if (e.key === 'Escape' && current && !$('#modal').open) $('#dBack').click(); });
+addEventListener('keydown', e => { if (e.key === 'Escape' && current && !document.querySelector('dialog[open]')) $('#dBack').click(); });
 
 // 保存：导出当前详情为独立 HTML 文件
 $('#dSave').onclick = () => {
@@ -1356,19 +1340,6 @@ $('#dShare').onclick = async () => {
 /* =========================================================
    H. 交流模块弹窗
    ========================================================= */
-const modal = $('#modal');
-$('#talkList').addEventListener('click', e => {
-  const btn = e.target.closest('[data-talk]'); if (!btn) return;
-  const c = tr('talks', btn.dataset.talk, talks.find(x => x.id === btn.dataset.talk));
-  $('#mArt').innerHTML = buddy(c.prop, RED);
-  $('#mBody').innerHTML = `<h3>${c.name}</h3><p>${c.desc}</p>
-    <ul>${c.detail.map(d => `<li>${d}</li>`).join('')}</ul>
-    ${c.href ? `<a class="btn" href="${c.href}">${c.cta} →</a>` : `<p class="contact-status">${t('contactUnavailable')}</p><p>${t('contactPending')}</p>`}`;
-  modal.showModal();
-});
-$('#mClose').onclick = () => modal.close();
-modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
-
 let toastTimer;
 function toast(msg) {
   const el = $('#toast'); el.textContent = msg; el.classList.add('show');
@@ -1387,7 +1358,7 @@ $('#langBtn').onclick = () => {
 route();   // 直接打开分享链接（带 #/post/xxx）时首屏就进入详情
 </script>
 <script src="assets/vendor/gsap.min.js" defer></script>
-<script src="assets/preview-motion.js" defer></script>
-<script src="assets/chat.js" defer></script>
+<script src="assets/preview-motion.js?v=20261126-2" defer></script>
+<script src="assets/chat.js?v=20261126-2" defer></script>
 </body>
 </html>

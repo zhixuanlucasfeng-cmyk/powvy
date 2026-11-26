@@ -83,7 +83,15 @@ def build_pages(root, zh_home, en_home, data):
                 target=root/path/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text('\n'.join(line.rstrip() for line in html.split('\n')))
                 add_url(path,alts)
                 cards.append(f'<a class="card reveal in" href="{path}" data-{"product" if kind=="projects" else "post"}="{key}"><div class="cover">{cover}</div><div class="body"><span class="tag red">{escape(item["tag"])}</span><h3 class="title">{escape(heading)}</h3><p>{escape(desc)}</p></div></a>')
-            block=f'<!-- seo:{container} -->\n<div class="grid" id="{container}">'+''.join(cards)+f'</div>\n<!-- /seo:{container} -->'
+            more = ''
+            if kind == 'projects':
+                limit = data['featuredCount']
+                label = data['ui']['moreProjects'] if english else '更多项目'
+                more = (f'<details class="more-projects"><summary>{escape(label)}</summary>'
+                        f'<div class="grid" id="moreProjectList">{"".join(cards[limit:])}</div></details>')
+                cards = cards[:limit]
+            block = (f'<!-- seo:{container} -->\n<div class="grid" id="{container}">'
+                     + ''.join(cards) + '</div>\n' + more + f'\n<!-- /seo:{container} -->')
             pattern=f'<!-- seo:{container} -->.*?<!-- /seo:{container} -->'
             if re.search(pattern,home,re.S):home=re.sub(pattern,lambda _:block,home,flags=re.S)
             else:home=home.replace(f'<div class="grid" id="{container}"></div>',block)
