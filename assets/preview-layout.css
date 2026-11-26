@@ -1,0 +1,58 @@
+/* Manga composition: aligned panels, deliberate motion, existing palette. */
+.hero{padding-bottom:64px;padding-top:calc(var(--nav-h) + 64px);min-height:min(900px,100svh)}
+.hero::before{opacity:.075}
+.hero .wrap{grid-template-columns:1fr 1.12fr;gap:40px}
+.hero h1{font-size:clamp(64px,7.6vw,108px);line-height:1.04;letter-spacing:-.045em;transform:none}
+.hero p{font-size:17px;line-height:1.8;margin-top:30px;max-width:32em;padding:16px 20px;box-shadow:4px 4px 0 var(--ink)}
+.hero .tags{gap:6px;margin-top:18px}
+.hero .art{align-self:center}
+#heroArt{max-width:600px;padding:0;will-change:auto;transition:none}
+.sfx.a,.scroll-hint b{animation:none!important}
+.hero.rev #heroArt,.hero.rev .saw-art{animation:none!important}
+.motion-toggle{display:block;margin:18px auto 0;border:1px solid var(--ink);padding:7px 12px;font-size:12px;font-weight:700;background:var(--paper);min-height:36px}
+.motion-toggle:hover{background:var(--ink);color:var(--paper)}
+section{padding:88px 0}
+.sec-head{gap:24px;margin-bottom:36px;align-items:end}
+.sec-head p{max-width:32em}
+html:lang(en) .sec-head h2{font-size:clamp(32px,4.4vw,54px);text-shadow:none;transform:none;line-height:1.15;letter-spacing:-.035em}
+html:lang(en) .sec-head h2 small{transform:none;letter-spacing:.08em}
+.grid,#products .grid{gap:24px}
+.card,.card:nth-child(2n),.card:nth-child(3n){transform:none;rotate:0deg;transition:transform .2s,box-shadow .2s}
+.card:hover,.card:focus-visible{transform:translateY(-3px);box-shadow:5px 5px 0 var(--red)}
+.card .body{padding:22px;gap:12px}
+.card .body p{line-height:1.75}
+.card .cover img,.card .cover svg{transition:transform .3s}
+.card:hover .cover img,.card:hover .cover svg{transform:scale(1.025)}
+html:lang(en) .card h3{font-size:20px;line-height:1.35;letter-spacing:-.025em}
+.reveal,.reveal.in{opacity:1;translate:none}
+.nav a:focus-visible,.nav button:focus-visible{outline-color:var(--paper)}
+@media(min-width:981px){#products .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1100px){
+ .nav{height:auto}.nav .wrap{display:grid;grid-template-columns:1fr auto;gap:8px;padding-top:10px;padding-bottom:8px}
+ .nav-r{display:contents}.nav ul{grid-column:1/-1;grid-row:2;flex-wrap:wrap;overflow:visible;gap:2px 4px}
+ .nav .lang{grid-column:2;grid-row:1}.nav ul a{font-size:17px;padding:4px 9px}
+}
+@media(max-width:860px){
+ .hero{padding-top:calc(var(--nav-h) + 40px);padding-bottom:40px;min-height:0}
+ .hero .wrap{grid-template-columns:1fr;gap:32px}.hero h1{font-size:clamp(62px,12vw,92px)}
+ .hero p{max-width:36em}.hero .art{width:min(100%,480px);margin:0 auto}
+ .kana{right:8px;font-size:11px}.sec-head{align-items:start;gap:16px}
+ section{padding:64px 0}
+}
+@media(max-width:480px){
+ .hero h1{font-size:clamp(54px,14vw,68px)}.hero p{font-size:15px;padding:14px 16px}
+ .hero .wrap{gap:24px}.nav ul{gap:2px}.nav ul a{font-size:15px;padding:4px 7px}
+ .card .body{padding:18px}.grid,#products .grid{grid-template-columns:minmax(0,1fr);gap:22px}
+ .sec-head h2{font-size:38px}.sfx{font-size:28px}.motion-toggle{margin-top:12px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}.card,.card .cover img,.card .cover svg{transition:none}
+ .card:hover,.card:hover .cover img,.card:hover .cover svg{transform:none}
+}
+@media(max-width:860px){.hero .art{margin-top:32px}}
+/* Product-specific legacy rotation must yield to aligned panel edges. */
+#products .card,#skills .card,#articles .card,#contact .card{rotate:0deg!important}
+/* Actual product interfaces stay complete; no zoom or illustrated overlays. */
+.cover:has(.real-screenshot)::after{display:none}
+.cover .real-screenshot{width:100%;height:100%;object-fit:contain;background:#191919;transform:none!important}
+.source-cover{display:grid;place-content:center;width:100%;height:100%;padding:24px;background:var(--ink);color:var(--paper);font:700 20px var(--font)}

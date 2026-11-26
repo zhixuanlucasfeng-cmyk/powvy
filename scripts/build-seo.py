@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 source = (ROOT / 'index.html').read_text()
 # The site already owns these translations; don't maintain a second copy.
 js = source[source.index('const INK ='):source.index("let lang = 'zh';") if "let lang = 'zh';" in source else source.index('let lang = document.documentElement.lang')]
-result = subprocess.run(['node', '-e', 'const vm=require(\'node:vm\');let s=\'\';process.stdin.on(\'data\',c=>s+=c);process.stdin.on(\'end\',()=>console.log(JSON.stringify(vm.runInNewContext(s+";let lang=\'zh\';({ui:EN.ui, EN, products, posts, covers:Object.fromEntries(products.map(p=>[p.id,productArt(p.id,true)])), postCovers:Object.fromEntries(posts.map(p=>[p.id,buddy(p.prop,p.bg)]))})",{}, {timeout:1000}))));'],input=js,text=True,capture_output=True,check=True)
+result = subprocess.run(['node', '-e', 'const vm=require(\'node:vm\');let s=\'\';process.stdin.on(\'data\',c=>s+=c);process.stdin.on(\'end\',()=>console.log(JSON.stringify(vm.runInNewContext(s+";let lang=\'zh\';({ui:EN.ui, EN, products, posts, covers:Object.fromEntries(products.map(p=>[p.id,productArt(p.id,true)])), postCovers:Object.fromEntries(posts.map(p=>[p.id,postArt(p.id)]))})",{}, {timeout:1000}))));'],input=js,text=True,capture_output=True,check=True)
 data = json.loads(result.stdout)
 translations = data['ui']
 

@@ -1,0 +1,21 @@
+{
+  "captured_or_imported": "2026-11-26",
+  "sources": {
+    "jc-sports-day": "https://jc.powvy.org/scoreboard",
+    "alevel": "https://alevel-survival-bureau.vercel.app",
+    "restsolar": "https://solar-agent.powvy.org/mobile",
+    "liangli": "https://zhixuanlucasfeng-cmyk.github.io/liangli/",
+    "dryrun": "https://dryruncs.com",
+    "philosophy": "https://zhixuanlucasfeng-cmyk.github.io/Chainsaw-man-philosophy/",
+    "trending": "http://127.0.0.1:8790/trending/index.html",
+    "colorbook": "https://zhixuanlucasfeng-cmyk.github.io/colorbook/",
+    "vedundi": "https://zhixuanlucasfeng-cmyk.github.io/legend-of-4p-vedundi/",
+    "camaroom": "https://restarsolar.net/",
+    "power": "Power local app: blank conversation, sidebar hidden",
+    "powvy-ai-agent": "Power local /control: collapsed task records",
+    "powvynote": "Powvy Note web login, local web/index.html",
+    "contract": "contract/docs/screenshots/user.jpg — existing README screenshot",
+    "usage": "https://raw.githubusercontent.com/zhixuanlucasfeng-cmyk/claude-usage/main/docs/widget-chainsaw.png"
+  },
+  "notes": "Actual UI captures. Existing repository screenshots are historical, not current operating metrics. Powvy Note shows its web login. Badminton artwork retained by request."
+}
