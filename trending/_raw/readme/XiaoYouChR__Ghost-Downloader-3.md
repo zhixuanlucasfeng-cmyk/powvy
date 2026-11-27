@@ -2,11 +2,32 @@
   <a href="README_zh.md">简体中文</a> | English
 </h4>
 
-> [!NOTE]
-> <p align="center"><a href="https://www.swiftproxy.net/?ref=GhostDownloader"><img width="550" alt="Swiftproxy AD" src=".github/assets/ad/Swiftproxy.webp" /></a></p>
->
-> [Swiftproxy](https://www.swiftproxy.net/?ref=GhostDownloader) – Premium Global Residential Proxy Network
-Swiftproxy provides 90M+ real residential IPs across 220+ locations worldwide, helping users access global content and manage location-specific network connections. With rotating and static residential proxies, flexible geo-targeting, and HTTP(S)/SOCKS5 support, Swiftproxy is ideal for cross-region downloads, network testing, and browser automation. Free testing available, with 10% off using code `PROXY90`.
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" align="left">Sponsor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle" width="346">
+        <a href="https://www.swiftproxy.net/?ref=GhostDownloader"><img width="320" alt="Swiftproxy AD" src=".github/assets/ad/Swiftproxy.webp" /></a>
+      </td>
+      <td valign="middle">
+        <a href="https://www.swiftproxy.net/?ref=GhostDownloader">Swiftproxy</a> – Premium Global Residential Proxy Network<br />
+        Swiftproxy provides 90M+ real residential IPs across 220+ locations worldwide, helping users access global content and manage location-specific network connections. With rotating and static residential proxies, flexible geo-targeting, and HTTP(S)/SOCKS5 support, Swiftproxy is ideal for cross-region downloads, network testing, and browser automation. Free testing available, with 10% off using code <code>PROXY90</code>.
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle" width="346">
+        <a href="https://ipstar.io/?referrer=ghost"><img width="320" alt="IPStar AD" src=".github/assets/ad/IPStar.webp" /></a>
+      </td>
+      <td valign="middle">
+        <a href="https://ipstar.io/?referrer=ghost">IPStar</a> is a professional provider of global residential IP proxy solutions. We own legally sourced, clean residential IP resources across more than 190 countries and regions worldwide, with a total pool of over 90 million IPs that is continuously updated. Our proxy IPs are 100% genuine residential IPs, delivering stable and reliable service with a request success rate above 99.9%, and supporting ultra-high concurrency. We are compatible with standard SOCKS5 and HTTP(S) protocols. With affordable pricing and traffic that never expires after purchase, IPStar is the ideal choice for big data scraping, large-scale cross-region downloading, e-commerce operations, and other automation tasks. Recharge now to enjoy an extra bonus of up to 8%.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- PROJECT LOGO -->
 <div align="center">
@@ -157,7 +178,7 @@ Thanks to all contributors who have participated in this project!
           <br />
           <sub><b>XiaoYouChR</b></sub></a>
         <br />
-        <sub><b>324042 words</b></sub>
+        <sub><b>324057 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/hzzmonet"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17541058/medium/6d2519b5176d5dc224526a18f945002e.jpeg" />
@@ -166,7 +187,7 @@ Thanks to all contributors who have participated in this project!
           <br />
           <sub><b>(hzzmonet)</b></sub></a>
         <br />
-        <sub><b>15061 words</b></sub>
+        <sub><b>15226 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/oocr"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/18002969/medium/8dc2d6ceade5dc57fd4fccc62d874db0.jpeg" />
@@ -184,7 +205,7 @@ Thanks to all contributors who have participated in this project!
           <br />
           <sub><b>(Havokdan)</b></sub></a>
         <br />
-        <sub><b>4481 words</b></sub>
+        <sub><b>4753 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/i0ntempest"><img alt="logo" style="width: 64px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17636930/medium/f6bf4e67c7b87221f2e7e04345f8c6b2.jpeg" />

@@ -1,6 +1,6 @@
 # /last30days
 
-English | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [العربية](README.ar.md) | [فارسی](README.fa.md) | [Türkçe](README.tr.md)
+English | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [العربية](README.ar.md) | [فارسی](README.fa.md) | [Türkçe](README.tr.md) | [Tiếng Việt](README.vi.md) | [Русский](README.ru.md)
 
 <p align="center">
   <img src="media/pr-assets/last30days-ad.gif" width="720" alt="last30days - an AI agent-led search engine that searches people, not editors" />
@@ -371,7 +371,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to open a PR, [CONTRIBUTORS.md](CONTRIBUT
 
 By default the skill runs entirely on your machine — no data leaves except to the search APIs you call (Reddit, ScrapeCreators, etc.).
 
-**Reranking.** When you configure a reasoning provider (`OPENAI_API_KEY`, `XAI_API_KEY`, `OPENROUTER_API_KEY`, `GOOGLE_API_KEY`, `GEMINI_API_KEY`, or `GOOGLE_GENAI_API_KEY`), the engine sends your research topic and retrieved content snippets to that provider for relevance scoring. This is opt-in: if you set no reasoning key, the engine falls back to a local scoring model and no external reranking call is made. See [CONFIGURATION.md](CONFIGURATION.md) for provider priority.
+**Reranking.** In the default `auto` mode, the engine uses available credentials to select a reasoning provider. This includes keys inherited from your shell (`OPENAI_API_KEY`, `XAI_API_KEY`, `OPENROUTER_API_KEY`, `GOOGLE_API_KEY`, `GEMINI_API_KEY`, or `GOOGLE_GENAI_API_KEY`), including keys you set for another tool. If a provider is selected, the engine sends your research topic and shortlisted snippets to it for relevance scoring. When no reasoning provider is available, scoring stays local. See [reasoning provider priority](CONFIGURATION.md#reasoning-provider-priority) for the selection order and how to keep reranking local.
 
 **Local store.** When `LAST30DAYS_STORE=1` is set, findings are persisted to a local SQLite database named `research.db` inside the effective save directory (`--save-dir` takes precedence over `LAST30DAYS_MEMORY_DIR`). If no save directory is in effect, the database is `~/.local/share/last30days/research.db`. Enabling the store does not upload its database to a remote service. See [CONFIGURATION.md](CONFIGURATION.md#--store-flag) for retention details and purge instructions, including stopping database users before deletion.
 
