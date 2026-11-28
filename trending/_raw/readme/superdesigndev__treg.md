@@ -178,7 +178,7 @@ treg topup            # add funds, or set up automatic top-ups
 ```
 
 Out of balance is an HTTP **402** `error: insufficient_balance` carrying `balance_micro`, `estimated_cost_micro` and a `topup_url`,
-so an agent can act on it without reading prose.
+so an agent can act on it without reading prose. Its `Retry-After` header says how long to wait before asking again.
 
 **No account at all?** When the operator switches agent payments on, an agent with a stablecoin
 wallet can pay for catalog calls one at a time over HTTP, with MPP (Tempo) or x402 (Base): a
@@ -412,6 +412,9 @@ Environment variables (prefix `TREG_`, read from `.env`):
 | `TREG_ADMIN_TOKEN`                        | *(empty)*                       | cross-tenant **super-admin** bearer; authorizes every `/admin/*` endpoint. Empty disables the env path (only `is_superadmin` users reach `/admin`). Keep it long + secret. |
 | `TREG_EMAIL_DEV_MODE`                     | `false`                         | when true, `/auth/email/start` returns the OTP in its response (no mail sender needed) — **dev/local only**, never in prod.                                                |
 | `TREG_KV_URL`                             | *(empty)*                       | shared key-value store (Redis protocol) for counters every worker must agree on, today the per-team review-invitation budget. Empty = an in-process fallback, fine for one worker |
+| `TREG_KV_MAX_CONNECTIONS`                 | `100`                           | connections each process may hold to the key-value store; an operation that finds them all busy waits, then treats the store as unavailable |
+| `TREG_KV_POOL_WAIT_S`                     | `0.5`                           | how long an operation waits for a free key-value connection, within its own deadline |
+| `TREG_KV_IDLE_CLOSE_S`                    | `60`                            | a key-value connection unused this long is closed, so connections opened for a peak do not stay open |
 
 
 No `.env` is needed for local dev — every setting has a working default (ephemeral key, sqlite).

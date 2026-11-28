@@ -1,5 +1,101 @@
 [
  {
+  "title": "datasette-charts 0.4a0",
+  "url": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+  "published": "2026-11-27T23:57:17+00:00",
+  "summary": "Release: datasette-charts 0.4a0 The new datasette-charts plugin has its own plugin hook to allow other plugins to define new chart types, but I hadn't actually used it for anything yet. I had Claude Opus 5.5 build an experimental plugins just to try out the hook and it came up with a bunch of friction points in the design. This release addresses those, which should make building additional chart plugins a whole lot more ergonomic. I've also added a website for the plugin, at charts.datasette.io . The new website includes a tutorial for plugin authors , and a gallery showing all of the core charts and annotations, each one linking to an interactive demo on Datasette Lite . Tags: datasette-cha",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "Inside the AI Training Data Market — Gabe Greenberg, G2i",
+  "url": "https://latent.space/p/inside_the_ai_training_data_market_gabe_greenberg_g2i/",
+  "published": "2026-11-27T22:19:18+00:00",
+  "summary": "A frontier lab can pay more for training data it gets to keep exclusive, or take a discount on data another lab can buy too. At AI Engineer CODE, G2i founder Gabe Greenberg tells swyx how labs make that decision, how small pilot orders turn into bigger...",
+  "source": "Latent Space",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI countersues Apple over trade secret theft and alleged coercion of shared suppliers",
+  "url": "https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/",
+  "published": "2026-11-27T19:38:37+00:00",
+  "summary": "OpenAI is suing Apple in a California court, accusing it of trade secret theft and of coercing shared suppliers. The countersuit follows Apple's own lawsuit from the summer. Just two years ago, the two companies teamed up to bring ChatGPT to the iPhone. Now OpenAI is building its own devices to compete directly with Apple. The article OpenAI countersues Apple over trade secret theft and alleged coercion of shared suppliers appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Banned Nvidia Blackwell chips turn up in a Shanghai data center linked to Alice Huang, Bloomberg reports",
+  "url": "https://the-decoder.com/banned-nvidia-blackwell-chips-turn-up-in-a-shanghai-data-center-linked-to-alice-huang-bloomberg-reports/",
+  "published": "2026-11-27T18:27:02+00:00",
+  "summary": "Two Chinese companies installed Nvidia's powerful Blackwell chips at a Shanghai data center linked to Alice Huang, according to a Bloomberg investigation. A serial number led Bloomberg to Taiwanese manufacturer Gigabyte. Exporting these chips to China without a US license is illegal. The article Banned Nvidia Blackwell chips turn up in a Shanghai data center linked to Alice Huang, Bloomberg reports appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Three studies from Meta and AMI Labs back Yann LeCun's bet on JEPA world models over large language models",
+  "url": "https://the-decoder.com/three-studies-from-meta-and-ami-labs-back-yann-lecuns-bet-on-jepa-world-models-over-large-language-models/",
+  "published": "2026-11-27T16:58:56+00:00",
+  "summary": "Yann LeCun is pushing forward with his alternative to language models through his startup AMI Labs. The JEPA architecture aims to give machines an internal world model that captures cause and effect. Three new studies show progress in robot planning, more efficient training, and error correction, though the pieces still need to grow together. The article Three studies from Meta and AMI Labs back Yann LeCun's bet on JEPA world models over large language models appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Hackers breached the US Air Force's flagship Cloud One platform, report says",
+  "url": "https://the-decoder.com/hackers-breached-the-us-air-forces-flagship-cloud-one-platform-report-says/",
+  "published": "2026-11-27T16:06:43+00:00",
+  "summary": "Hackers breached the US Air Force's flagship cloud platform. The article Hackers breached the US Air Force's flagship Cloud One platform, report says appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "OpenAI is building \"Athena\" data platform to cut down on AI agent guesswork",
+  "url": "https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/",
+  "published": "2026-11-27T16:05:23+00:00",
+  "summary": "OpenAI's data agent in ChatGPT Work still isn't accurate enough. Under the codename \"Athena,\" the company is building a semantic layer that gives agents standardized definitions for business metrics. The tool could also put OpenAI in direct competition with Snowflake and Databricks. The article OpenAI is building \"Athena\" data platform to cut down on AI agent guesswork appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Rockstar's AI dilemma: Can GTA 6's staggered release model survive coding agents?",
+  "url": "https://the-decoder.com/rockstars-ai-dilemma-can-gta-6s-staggered-release-model-survive-coding-agents/",
+  "published": "2026-11-27T15:37:47+00:00",
+  "summary": "More than 40 projects are working to bring a leaked Xbox build of GTA 6 to PC through reverse engineering just days after its $3.79 billion record console launch. AI coding agents like Claude Code are speeding up the process so much that an early unofficial multiplayer mode is already running. Rockstar's delayed PC business model is coming under pressure. The article Rockstar's AI dilemma: Can GTA 6's staggered release model survive coding agents? appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "SAP plans to cut at least 10,000 jobs as it pivots to AI",
+  "url": "https://the-decoder.com/sap-plans-to-cut-at-least-10000-jobs-as-it-pivots-to-ai/",
+  "published": "2026-11-27T14:57:25+00:00",
+  "summary": "SAP is preparing to eliminate at least 10,000 positions as part of a sweeping AI restructuring, Bloomberg reports, citing people familiar with the matter. The article SAP plans to cut at least 10,000 jobs as it pivots to AI appeared first on The Decoder .",
+  "source": "The Decoder",
+  "tier": "T2"
+ },
+ {
+  "title": "Android’s DIY widgets are a bit of vibe-coding fun",
+  "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+  "published": "2026-11-27T09:00:00-05:00",
+  "summary": "Aside from dealing with my calendar, there's one thing I want AI to do: tell me if I'm about to miss the bus. What I need is a widget. It needs to tell me real-time arrivals for the bus stop near my house. Tapping around on my phone screen to open the right app and […]",
+  "source": "The Verge · AI",
+  "tier": "T2"
+ },
+ {
+  "title": "datasette-mcp 0.4",
+  "url": "https://simonwillison.net/2026/Nov/27/datasette-mcp/",
+  "published": "2026-11-27T00:26:17+00:00",
+  "summary": "Release: datasette-mcp 0.4 Fixed for compatibility with Datasette 1.0a44 . Tags: model-context-protocol , datasette",
+  "source": "Simon Willison",
+  "tier": "T2"
+ },
+ {
+  "title": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+  "url": "https://huggingface.co/blog/video-trainium3",
+  "published": "2026-11-27T00:00:00+00:00",
+  "summary": "",
+  "source": "Hugging Face Blog",
+  "tier": "T1"
+ },
+ {
   "title": "How Clay Builds GTM Agents — Jeff Barg, Head of AI",
   "url": "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/",
   "published": "2026-11-26T23:02:48+00:00",
@@ -64,36 +160,12 @@
   "tier": "T1"
  },
  {
-  "title": "FCC clears SpaceX to deploy up to 1 million Starmind satellites for orbital AI data centers by 2040",
-  "url": "https://the-decoder.com/fcc-clears-spacex-to-deploy-up-to-1-million-starmind-satellites-for-orbital-ai-data-centers-by-2040/",
-  "published": "2026-11-26T13:41:07+00:00",
-  "summary": "The FCC has authorized SpaceX to deploy up to 1 million Starmind satellites to process AI data as orbital data centers. SpaceX is targeting its first launches in 2027, and the full constellation is set to be operating by 2040. Google and Blue Origin are also working on AI infrastructure in space, but Boston Consulting Group estimates costs will stay well above ground-based data centers for now. The article FCC clears SpaceX to deploy up to 1 million Starmind satellites for orbital AI data centers by 2040 appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
   "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
   "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
   "published": "2026-11-26T11:37:17+00:00",
   "summary": "",
   "source": "Hugging Face Blog",
   "tier": "T1"
- },
- {
-  "title": "Microsoft details how state-backed hackers use the ARTEX AI framework to automate cyberattacks",
-  "url": "https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks/",
-  "published": "2026-11-26T11:30:06+00:00",
-  "summary": "Microsoft has published the technical architecture of ARTEX, an AI framework in wide use since July 2026 that runs cyberattacks with specialized agents and almost no human involvement. State-backed groups from China and North Korea, along with criminal organizations, are already using the system. Microsoft recommends deception techniques like honeypots and faked success signals as defenses, but how long those will hold up against agents that learn and adapt remains an open question. The article Microsoft details how state-backed hackers use the ARTEX AI framework to automate cyberattacks appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Nvidia halts server shipments to Malaysia, Singapore, Thailand, and Indonesia after tighter US export controls",
-  "url": "https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls/",
-  "published": "2026-11-26T11:21:16+00:00",
-  "summary": "Nvidia has told partners such as Dell and Supermicro to stop shipping servers to Malaysia, Singapore, Thailand, and Indonesia. Following new US export controls targeting Chinese cloud access, dealers are already seeking buyers for thousands of B300 chips, while one cloud executive describes \"chaos\", Loans and major deals are now on the line for Southeast Asia's data centers. The article Nvidia halts server shipments to Malaysia, Singapore, Thailand, and Indonesia after tighter US export controls appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
  },
  {
   "title": "sqlite3_rsync: Database Remote-Copy Tool For SQLite",
@@ -125,254 +197,6 @@
   "published": "2026-11-26T04:54:40-05:00",
   "summary": "A coalition of 42 state attorneys general is trying to prevent Character.AI from selling off user data as it navigates Chapter 11 bankruptcy proceedings. In a deluge of nearly identical press releases, the various AGs accuse the company of planning to auction off \"the private chat histories of more than 21 million U.S. accounts - […]",
   "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
-  "url": "https://huggingface.co/blog/training-swarms",
-  "published": "2026-11-26T00:00:00+00:00",
-  "summary": "",
-  "source": "Hugging Face Blog",
-  "tier": "T1"
- },
- {
-  "title": "Quoting Scott Aaronson",
-  "url": "https://simonwillison.net/2026/Nov/25/scott-aaronson/",
-  "published": "2026-11-25T23:26:32+00:00",
-  "summary": "It’s now obvious that we’ll be getting, not one-off solutions to this or that complexity question, but a whole new continent of mathematical truth, one that we’d previously only glimpsed through fog. Picture van Leeuwenhoek first training a microscope on pondwater, or Galileo first training his telescope on the stars. That might give you some idea of how our resolution into the complexity-theoretic universe, and the whole universe of mathematical truth beyond it, has now improved. — Scott Aaronson Tags: mathematics , llms , ai , generative-ai",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "S&P considers Nvidia credit downgrade over governance and ‘key man’ risks",
-  "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
-  "published": "2026-11-25T22:44:32+00:00",
-  "summary": "The credit rating agency may lower Nvidia's credit rating to AA-, the fourth-highest rating.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "The Revolution vs The Renaissance — Thariq Shihipar, OpenAI",
-  "url": "https://latent.space/p/the_revolution_vs_the_renaissance_thariq_shihipar_openai/",
-  "published": "2026-11-25T22:28:01+00:00",
-  "summary": "AI can make software cheap enough to produce by the thousand and still give you more time to make one thing feel right. At AI Engineer CODE, Thariq Shihipar shows how those two futures can coexist. In his fighting game, he edits the size of a rock in t...",
-  "source": "Latent Space",
-  "tier": "T2"
- },
- {
-  "title": "[AINews] Math Proofs Are Landing Faster Than We Can Read Them",
-  "url": "https://latent.space/p/ainews-math-proofs-are-landing-faster-than-we-can-read-them/",
-  "published": "2026-11-25T22:23:41+00:00",
-  "summary": "November 25, 2026 — From Erdős problems to new bounds for matrix multiplication and Fourier transforms.",
-  "source": "Latent Space",
-  "tier": "T2"
- },
- {
-  "title": "US chip-access curbs and anti-distillation measures are reportedly already slowing Chinese AI labs",
-  "url": "https://the-decoder.com/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing-chinese-ai-labs/",
-  "published": "2026-11-25T20:51:02+00:00",
-  "summary": "Chip restrictions, anti-distillation measures, and shrinking access to Nvidia hardware abroad are putting growing pressure on Deepseek, Moonshot AI, and Alibaba, according to a report. Deepseek researchers internally estimate they're already up to nine months behind US models, and the gap is widening. The article US chip-access curbs and anti-distillation measures are reportedly already slowing Chinese AI labs appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic CEO Dario Amodei says letting AI govern society would be \"a bad idea\"",
-  "url": "https://the-decoder.com/anthropic-ceo-dario-amodei-says-letting-ai-govern-society-would-be-a-bad-idea/",
-  "published": "2026-11-25T20:15:50+00:00",
-  "summary": "Anthropic CEO Dario Amodei is pushing back on an Axios report saying some employees believe humanity will hand power to superintelligent systems. Amodei says \"turning over governance to AI is a bad idea.\" The article Anthropic CEO Dario Amodei says letting AI govern society would be \"a bad idea\" appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
-  "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
-  "published": "2026-11-25T20:03:27+00:00",
-  "summary": "OpenAI will introduce a single usage meter across ChatGPT as it combines the Chat and Work experiences.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it",
-  "url": "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it/",
-  "published": "2026-11-25T19:54:57+00:00",
-  "summary": "Most codes of conduct serve as a reflection of corporate culture. In Nvidia's case, that could have consequences.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
-  "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
-  "published": "2026-11-25T19:44:24+00:00",
-  "summary": "Anthropic CEO Dario Amodei pushes back against rivals’ accusations that he favors surrendering human agency to AI, even as leading AI companies increasingly automate their own research and model development.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Where scientists draw the line on AI agents",
-  "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
-  "published": "2026-11-25T18:52:55+00:00",
-  "summary": "",
-  "source": "Hugging Face Blog",
-  "tier": "T1"
- },
- {
-  "title": "OpenAI wants companies to trust it with sensitive work by promising not to look at their data",
-  "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/",
-  "published": "2026-11-25T18:22:02+00:00",
-  "summary": "OpenAI is testing a new feature called \"Private Inference\" that lets companies run queries on its most powerful models without OpenAI being able to access the data. The article OpenAI wants companies to trust it with sensitive work by promising not to look at their data appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "datasette-charts 0.3a0",
-  "url": "https://simonwillison.net/2026/Nov/25/datasette-charts/",
-  "published": "2026-11-25T18:16:50+00:00",
-  "summary": "Release: datasette-charts 0.3a0 I added chart annotations to datasette-charts ! You can now render a chart and then annotate it with lines, shaded areas, labels, or a combination of the three. A chart with annotations looks like this: Here's that same chart in Datasette Lite , where you can tweak the annotations using the chart builder UI: If you also install Datasette Agent the agent can build annotated charts for you. Here's what I got on the agent.datasette.io demo for this prompt: Show a chart comparing Simon's tagged content about LLMs with his tagged content about Datasette, with annotations Tags: datasette , visualization , datasette-charts",
-  "source": "Simon Willison",
-  "tier": "T2"
- },
- {
-  "title": "Want to buy your kid an AI toy this Christmas? Not in New York",
-  "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
-  "published": "2026-11-25T18:11:46+00:00",
-  "summary": "New York has banned AI chatbot toys for five years as new research from Common Sense Media reveals troubling safety failures, including exposure to inappropriate content and risks to emotional development.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Character.AI’s plan to auction off users’ private chats challenged by state AGs",
-  "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
-  "published": "2026-11-25T17:35:58+00:00",
-  "summary": "The proposed Character.ai bankruptcy sale includes sensitive personal data from more than 21 million U.S. accounts, including 2.1 million registered to minors, the state AGs said.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "Verifiable Social Reasoning for LLM Assistants",
-  "url": "https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/",
-  "published": "2026-11-25T17:10:27+00:00",
-  "summary": "Generative AI",
-  "source": "Google Research",
-  "tier": "T1"
- },
- {
-  "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
-  "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
-  "published": "2026-11-25T16:51:26-05:00",
-  "summary": "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users. The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Ars Live recap: Don’t expect military attacks on data centers to stop",
-  "url": "https://arstechnica.com/gadgets/2026/11/ars-live-recap-dont-expect-military-attacks-on-data-centers-to-stop/",
-  "published": "2026-11-25T16:47:14+00:00",
-  "summary": "Militaries have many reasons to target data centers and the cloud in wartime.",
-  "source": "Ars Technica · AI",
-  "tier": "T2"
- },
- {
-  "title": "Amazon and Meta are in talks to end the block on Meta's AI shopping agent Muse in Amazon's online store.",
-  "url": "https://the-decoder.com/amazon-and-meta-are-in-talks-to-end-the-block-on-metas-ai-shopping-agent-muse-in-amazons-online-store/",
-  "published": "2026-11-25T16:44:37+00:00",
-  "summary": "Amazon and Meta are in talks to bring back Muse, Meta's AI shopping agent that Amazon kicked off its platform in September. The two sides are stuck on ad revenue and who gets to control search results. That matters because Amazon's ad business generates $68.6 billion a year, and Muse already commands 51 percent of all agentic shopping orders. The article Amazon and Meta are in talks to end the block on Meta's AI shopping agent Muse in Amazon's online store. appeared first on The Decoder .",
-  "source": "The Decoder",
-  "tier": "T2"
- },
- {
-  "title": "AI data centers are becoming harder to build, and neoclouds are feeling it",
-  "url": "https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/",
-  "published": "2026-11-25T15:41:43+00:00",
-  "summary": "⁠Nvidia has made clear⁠ it won’t backstop an AI data center until it’s nearly ready to run, and that’s landing just as neoclouds report construction delays and more expensive debt. The message to developers is that land, power, and a finished building matter more than a pitch deck. ⁠Anita Verma-Lallian⁠ has been selling exactly that. […]",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "How to choose the next safe step in application modernization",
-  "url": "https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/",
-  "published": "2026-11-25T15:00:00+00:00",
-  "summary": "Learn how to assess a legacy application, choose a bounded modernization step, and reuse the method with a GitHub Copilot agent skill. The post How to choose the next safe step in application modernization appeared first on The GitHub Blog .",
-  "source": "GitHub Blog · AI & ML",
-  "tier": "T1"
- },
- {
-  "title": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
-  "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
-  "published": "2026-11-25T14:10:18+00:00",
-  "summary": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "The questions Jensen Huang and Nvidia will still have to answer about Megaspeed",
-  "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/",
-  "published": "2026-11-25T13:00:00+00:00",
-  "summary": "The central question for investigators is what Nvidia knew about where those chips ended up and whether Huang's affair with a Megaspeed executive gave the company reason to doubt Megaspeed's assurances.",
-  "source": "TechCrunch · AI",
-  "tier": "T2"
- },
- {
-  "title": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
-  "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
-  "published": "2026-11-25T12:44:51-05:00",
-  "summary": "In an announcement on Wednesday, the FCC says it authorized SpaceX to deploy up to 1 million AI chip-equipped satellites as part of the Elon Musk-owned company's \"Starmind\" initiative. With several others also pursuing the idea of putting AI data centers in space, including Google and Blue Origin, this is the first approval the agency […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "AI may soon change what it means to be a theoretical physicist",
-  "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next/",
-  "published": "2026-11-25T12:00:28+00:00",
-  "summary": "Frontier AI is already solving problems that once took top physicists a full day.",
-  "source": "Ars Technica · AI",
-  "tier": "T2"
- },
- {
-  "title": "Nothing offers a full look at its AI earbuds and charging case",
-  "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
-  "published": "2026-11-25T11:00:59-05:00",
-  "summary": "Nothing is showing off a much more detailed look at its upcoming AI earbuds ahead of their December 8th release. The Ear Note buds can record your calls, while their charging case can record, transcribe, and summarize your conversations. Like the Ear 3, the Ear Note's microphone-equipped case comes with a \"Talk\" button that you […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "An Indic Voice Agent with CUGA",
-  "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
-  "published": "2026-11-25T10:22:09+00:00",
-  "summary": "",
-  "source": "Hugging Face Blog",
-  "tier": "T1"
- },
- {
-  "title": "AI is straining America’s open records systems",
-  "url": "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/",
-  "published": "2026-11-25T10:00:00+00:00",
-  "summary": "In Panton, Vermont, population 660, town clerk Kyle Rowe did it all. He crafted budgets, paid vendors, handled property tax disputes, and served as the town’s zoning supervisor and presiding elections officer. During morning office hours at the town hall—a wood-frame structure built as a church in 1858—he also fielded public records requests. Recently, he…",
-  "source": "MIT Technology Review · AI",
-  "tier": "T2"
- },
- {
-  "title": "Amazon is reportedly in talks to end Muse AI shopping block",
-  "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
-  "published": "2026-11-25T09:12:33-05:00",
-  "summary": "Amazon has held talks about letting Meta's Muse AI agent shop on its online marketplace, according to a report from Fortune. The discussions, which could end Amazon's block on Muse, reportedly center on the kinds of products the AI agent recommends and the potential impact on the ecommerce giant's advertising revenue. As reported by Fortune, […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "Has vibe coding made open source the new normal for synths?",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1040081/vibe-coding-open-source-music-firmware",
-  "published": "2026-11-25T08:00:00-05:00",
-  "summary": "The emergence of powerful vibe-coding agents and tools like Reverse Engineer Anything has caused chaos in the music gear world, leaving companies scrambling to figure out how to respond. While some, like Roland, have remained silent for now, others have embraced the modding community. In the last several weeks, as it's become clear that no […]",
-  "source": "The Verge · AI",
-  "tier": "T2"
- },
- {
-  "title": "[AINews] Gemini 4 Neon marks GDM's full return as a Frontier Lab",
-  "url": "https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/",
-  "published": "2026-11-25T04:29:07+00:00",
-  "summary": "November 24, 2026 — Neon beats Astra and Fable on LiveBench and cuts Theo’s TS Rust benchmark runtime by 48.6%.",
-  "source": "Latent Space",
   "tier": "T2"
  }
 ]
